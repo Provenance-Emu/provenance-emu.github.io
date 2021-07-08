@@ -3,7 +3,6 @@ title = "Provenance Emu"
 theme = "hugo-universal-theme"
 themesDir = "themes"
 languageCode = "en-us"
-publishDir="docs"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
 # Enable comments by entering your Disqus shortname
