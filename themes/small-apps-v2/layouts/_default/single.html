@@ -1,0 +1,90 @@
+{{ define "main" }}
+
+{{ "<!-- Single Article -->" | safeHTML }}
+<section class="section blog-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 m-auto">
+        <article class="single-post">
+          <div class="post-title text-center">
+            <h1>{{ .Title }}</h1>
+            <ul class="list-inline post-tag">
+              <li class="list-inline-item">
+                <img src="{{ .Params.AuthorImage | absURL }}" alt="author-thumb">
+              </li>
+              <li class="list-inline-item">{{ .Params.Author }}</li>
+              <li class="list-inline-item">{{ .PublishDate.Format "January 02, 2006" }}</li>
+            </ul>
+          </div>
+          <div class="post-body">
+<!--
+            <div class="feature-image">
+              <img class="img-fluid" src="{{ .Params.Image | absURL }}" onerror="this.src='{{ .Params.ImageAlt | absURL }}'" alt="feature-image">
+            </div>
+-->
+            <div class="content">
+              {{ .Content }}
+            </div>
+        </article>
+        <div class="about-author">
+          <h2>About this author</h2>
+          <div class="media">
+            <div class="image">
+              <img class="d-flex justify-content-center align-self-center" src="{{ .Params.AuthorImage | absURL }}" alt="author-image">
+            </div>
+            <div class="media-body align-self-center">
+              <h3>{{ .Params.Author }}</h3>
+              <p>{{ .Params.AuthorDescription }}</p>
+              <ul class="list-inline social-links">
+                {{ range .Params.AuthorSocial }}
+                <li class="list-inline-item"><a href="{{ .URL }}"><i class="{{ .icon }}"></i></a></li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Single Article -->" | safeHTML }}
+
+{{ "<!-- Related Article -->" | safeHTML }}
+<section class="section related-articles bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 title">
+        <h2>Related Articles</h2>
+      </div>
+    </div>
+    <div class="row">
+      {{ range first 3 ( where .Site.Pages "Type" "post" )}}
+      <div class="col-lg-4 col-md-6">
+        <article class="post-sm">
+          <div class="post-thumb">
+            <a href="{{ .Permalink }}"><img class="img-fluid" src="{{ .Params.Image | absURL }}" onerror="this.src='{{ .Params.ImageAlt | absURL }}'" alt="Post-Image"></a>
+          </div>
+          <div class="post-title">
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          </div>
+          <div class="post-meta">
+            <ul class="list-inline post-tag">
+              <li class="list-inline-item">
+                <img src="{{ .Params.AuthorImage | absURL }}" alt="author-thumb">
+              </li>
+              <li class="list-inline-item">{{ .Params.Author }}</li>
+              <li class="list-inline-item">{{ .PublishDate.Format "January 02, 2006" }}</li>
+            </ul>
+          </div>
+          <div class="post-details">
+            <p>{{ .Summary }}</p>
+          </div>
+        </article>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Related Article -->" | safeHTML }}
+
+{{ end }}

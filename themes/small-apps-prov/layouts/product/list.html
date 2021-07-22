@@ -1,0 +1,150 @@
+{{ define "main" }}
+
+  </br></br></br>
+
+  {{ "<!-- Create Story -->" | safeHTML }}
+  <section class="section create-stories pt-0">
+    <div class="container">
+      <div class="row">
+        {{ range .Site.Data.product.createStory }}
+        <div class="col-lg-6">
+          <div class="block">
+            <img class="img-fluid" src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" alt="Story-Image">
+            <h3>{{ .title }}</h3>
+            <p>{{ .content }}</p>
+            <br>
+            <a href="{{ .URL }}" class="btn font-weight-bold btn-main-md">{{ .btnText }}</a>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ "<!-- End of Create Story -->" | safeHTML }}
+
+  {{ if .Site.Data.product.about.enable }}
+  {{ "<!-- Our Story -->" | safeHTML }}
+  <section class="section about p-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 align-self-center">
+          <div class="content">
+              {{ with .Site.Data.product.about }}
+            <h2>{{ .title }}</h2>
+            <p>{{ .content }}</p>
+            {{ end }}
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="about-slider owl-carousel owl-theme">
+            {{ range .Site.Data.product.about.imageSlider }}
+            <div class="item">
+              <img src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" alt="slider-image">
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ "<!-- End of Our Story -->" | safeHTML }}
+  {{ end }}
+  
+  {{ if .Site.Data.product.behindStory.enable }}
+  {{ "<!-- Behind Story -->" | safeHTML }}
+  {{ with .Site.Data.product.behindStory }}
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title mb-0">
+            <h2>{{ .title }}</h2>
+            <p>{{ .content }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ "<!-- End of Behind Story -->" | safeHTML }}
+  {{ end }}
+  {{ end }}
+  
+  
+  
+  {{ if .Site.Data.product.quoteSlider.enable }}
+  {{ "<!-- Quotes Slider -->" | safeHTML }}
+  <section class="section quotes pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 m-auto text-center">
+          <div class="quote-slider owl-carousel owl-theme">
+            {{ range .Site.Data.product.quoteSlider.sliderItem }}
+            <div class="item">
+              <h2>{{ .quote }}</h2>
+              <cite>{{ .quoteBy }}</cite>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ "<!-- End of Quotes Slider -->" | safeHTML }}
+  {{ end }}
+  
+  {{ if .Site.Data.product.clients.enable }}
+  {{ "<!-- Client Slider -->" | safeHTML }}
+  <section class="section clients bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 m-auto text-center">
+          <h3>{{ with .Site.Data.about.clients.title }}{{ . }}{{ end }}</h3>
+          <div class="client-slider owl-carousel owl-theme">
+            {{ range .Site.Data.about.clients.clientSlider }}
+            <div class="item">
+              <img src="{{ .clientsLogo | absURL }}" alt="client-logo">
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ "<!-- End of Client Slider -->" | safeHTML }}
+  {{ end }}
+  
+  {{ if .Site.Data.product.investors.enable }}
+  {{ "<!-- Investors -->" | safeHTML }}
+  <section class="section investors">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title">
+            {{ with .Site.Data.product.investors }}
+            <h2>{{ .title }}</h2>
+            <p>{{ .description }}</p>
+            {{ end }}
+          </div>
+        </div>
+        {{ range .Site.Data.product.investors.investor }}
+        <div class="col-lg-3 col-md-6">
+          <div class="block text-center">
+            <div class="image shadow hover-zoom">
+              <img src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" class="img-fluid" alt="investor">
+            </div>
+            <h3>{{ .name }}</h3>
+            <p>{{ .designation }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ "<!-- End of Investors -->" | safeHTML }}
+  {{ end }}
+  
+  {{ if .Site.Data.product.cta.enable }}
+  {{ partial "cta.html" . }}
+  {{ end }}
+  
+{{ end }}

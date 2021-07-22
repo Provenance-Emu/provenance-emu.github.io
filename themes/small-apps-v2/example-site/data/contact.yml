@@ -1,0 +1,13 @@
+address:
+  - icon : "tf-phone2"
+    addressList:
+      - listItem : "(00) 789 456 7890 (USA)"
+      - listItem : "(88) 016 725 0455 (UK)"
+      
+  - icon : "tf-map2"
+    addressList:
+      - listItem : "36. St Michael’s St, Oxford OX1, UK"
+      - listItem : "123, Pennsylvania, USA"
+
+form:
+  formAction : "#"
