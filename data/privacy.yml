@@ -1,0 +1,20 @@
+privacy:
+  privacyList:
+    - title : "User License"
+    - title : "Disclaimer"
+    - title : "Limitations"
+    - title : "Governing Law"
+
+
+  privacyDetails:
+    - for : "User License"
+      content : "Lorem Ipsum"
+
+    - for : "Disclaimer"
+      content : "Lorem Ipsum"
+
+    - for : "Limitations"
+      content : "Lorem Ipsum"
+
+    - for : "Governing Law"
+      content : "Lorem Ipsum"

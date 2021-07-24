@@ -1,0 +1,154 @@
+baseURL = "http://demo.themefisher.com/small-apps-hugo/"
+languageCode = "en-us"
+title = "Small Apps | App Landing Template"
+theme = "small-apps"
+summaryLength = "10"
+paginate = 6
+
+# Plugins
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "plugins/bootstrap/bootstrap.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/themefisher-font/style.css"
+  [[params.plugins.css]]
+  URL = "plugins/owl-carousel/assets/owl.carousel.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/owl-carousel/assets/owl.theme.green.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/fancybox/jquery.fancybox.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/aos/aos.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "plugins/jquery/jquery.js"
+  [[params.plugins.js]]
+  URL = "plugins/bootstrap/bootstrap.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/owl-carousel/owl.carousel.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/fancybox/jquery.fancybox.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/syotimer/jquery.syotimer.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/aos/aos.js"
+  [[params.plugins.js]]
+  URL = "plugins/google-map/gmap.js"
+
+
+# navigation
+[menu]
+    
+  [[menu.main]]
+  name = "About"
+  URL = "/about"
+  weight = 2
+  
+  [[menu.main]]
+  name = "team"
+  URL = "/team"
+  weight = 3
+  
+  [[menu.main]]
+  name = "Blog"
+  URL = "/blog"
+  weight = 4
+  
+  [[menu.main]]
+  name = "career"
+  URL = "/career"
+  weight = 6
+  
+  [[menu.main]]
+  name = "Contact"
+  URL = "/contact"
+  weight = 7
+
+  [[menu.main]]
+  weight = 8
+  name = "Pages"
+  hasChildren = true
+
+    [[menu.main]]
+    parent = "Pages"
+    name = "privacy"
+    URL = "/privacy"
+
+    [[menu.main]]
+    parent = "Pages"
+    name = "FAQ"
+    URL = "/faq"
+
+    [[menu.main]]
+    parent = "Pages"
+    name = "privacy"
+    URL = "/privacy"
+
+
+  # footer menu
+  [[menu.footer]]
+  name = "About"
+  URL = "/about"
+  
+  [[menu.footer]]
+  name = "Contact"
+  URL = "/contact"
+  
+  [[menu.footer]]
+  name = "Privacy"
+  URL = "/privacy"
+  
+  [[menu.footer]]
+  name = "Blog"
+  URL = "/blog"
+  
+  [[menu.footer]]
+  name = "FAQ"
+  URL = "/faq"
+
+
+[params]
+logo = "images/logo.png"
+logoAlt = "images/logo-alt.png"
+home = "Home"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# google map
+gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
+mapLatitude = "51.5223477"
+mapLongitude = "-0.1622023"
+mapMarker = "images/marker.png"
+# Google Analitycs
+googleAnalitycsID = "Your ID"
+
+  # Preloader
+  [params.preloader]
+  enable = true
+
+# footer
+  [params.footer]
+
+  # social icon
+  [[params.footer.socialIcon]]
+  icon = "tf-ion-social-facebook"
+  URL = "#"
+
+  [[params.footer.socialIcon]]
+  icon = "tf-ion-social-twitter"
+  URL = "#"
+  
+  [[params.footer.socialIcon]]
+  icon = "tf-ion-social-instagram"
+  URL = "#"
+
+  # call to action
+ [params.cta]
+  enable = true
+  title = "We are hunting Genius Developers"
+  content = "Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus."
+  btnText = "Join the team"
+  URL = "#"

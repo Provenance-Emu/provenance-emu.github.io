@@ -1,0 +1,91 @@
+# promo video
+promo:
+  enable : true
+  title : "Who we're looking for"
+  content : "Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed,convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat.Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis"
+  videoThumb : "images/thumbs/promo-video-thumbnail.webp"
+  videoThumbAlt : "images/thumbs/promo-video-thumbnail.jpg"
+  videoURL : "https://www.youtube.com/embed/g3-VxLQO7do?autoplay=1"
+
+# gallary
+gallary:
+  enable : true
+  gallaryItem:
+    - image : "images/gallery/gallery-01.webp"
+      imageAlt : "images/gallery/gallery-01.jpg"
+
+    - image : "images/gallery/gallery-02.webp"
+      imageAlt : "images/gallery/gallery-02.jpg"
+      
+    - image : "images/gallery/gallery-03.webp"
+      imageAlt : "images/gallery/gallery-03.jpg"
+
+# funfacts
+funfacts:
+  enable : true
+  title : "Some amenities for you to enjoy"
+  funfactItem:
+    - icon : "tf-ion-ios-stopwatch-outline"
+      title : "Flexible hours"
+      content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada."
+      
+    - icon : "tf-ion-ios-wineglass"
+      title : "Free Snacks & Drinks"
+      content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada."
+      
+    - icon : "tf-ion-ios-game-controller-b-outline"
+      title : "Gaming"
+      content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada."
+      
+    - icon : "tf-ion-ios-flask-outline"
+      title : "4 Working Days"
+      content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada."
+
+# job list
+job:
+  enable : true
+  title : "Job Opening"
+  jobList:
+    # job item
+    - title : "Andriod Developer"
+      location : "Hamburg, Germany"
+      details : "With experience in creating visual directions for tech products, you are able to set the standard and lead designers along the way. You are not only able to execute beautiful user experiences yourself but communicate those concepts to the team and clients."
+      experienceList:
+        - experience : "3+ years Development experience in a startup environment"
+        - experience : "Strong knowledge of iOS, Android & Web Platforms"
+        - experience : "Dynamic presentation and communication skills"
+        - experience : "Self-motivation: You manage your own milestones, deadlines, and priorities"
+      formAction : "#"
+      
+    # job item
+    - title : "DevOps Engineer"
+      location : "London, United Kingdom"
+      details : "With experience in creating visual directions for tech products, you are able to set the standard and lead designers along the way. You are not only able to execute beautiful user experiences yourself but communicate those concepts to the team and clients."
+      experienceList:
+        - experience : "3+ years Development experience in a startup environment"
+        - experience : "Strong knowledge of iOS, Android & Web Platforms"
+        - experience : "Dynamic presentation and communication skills"
+        - experience : "Self-motivation: You manage your own milestones, deadlines, and priorities"
+      formAction : "#"
+      
+    # job item
+    - title : "Operations Associate / Manager"
+      location : "New Jersey , USA"
+      details : "With experience in creating visual directions for tech products, you are able to set the standard and lead designers along the way. You are not only able to execute beautiful user experiences yourself but communicate those concepts to the team and clients."
+      experienceList:
+        - experience : "3+ years Development experience in a startup environment"
+        - experience : "Strong knowledge of iOS, Android & Web Platforms"
+        - experience : "Dynamic presentation and communication skills"
+        - experience : "Self-motivation: You manage your own milestones, deadlines, and priorities"
+      formAction : "#"
+      
+    # job item
+    - title : "International Compliance Officer"
+      location : "Hamburg, Germany"
+      details : "With experience in creating visual directions for tech products, you are able to set the standard and lead designers along the way. You are not only able to execute beautiful user experiences yourself but communicate those concepts to the team and clients."
+      experienceList:
+        - experience : "3+ years Development experience in a startup environment"
+        - experience : "Strong knowledge of iOS, Android & Web Platforms"
+        - experience : "Dynamic presentation and communication skills"
+        - experience : "Self-motivation: You manage your own milestones, deadlines, and priorities"
+      formAction : "#"

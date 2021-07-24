@@ -1,0 +1,7 @@
+title: "1.3.2"
+description: "Prebuilt IPA for Provenance 1.3.2 on iOS & tvOS. Install with Cydia Impactor or some other re-signing tool."
+github: "https://github.com/Provenance-Emu/Provenance/releases/tag/1.3.2"
+tag: 1.3.2
+ipas:
+  ios: "https://github.com/Provenance-Emu/Provenance/releases/download/1.3.2/Provenance-iOS-Release.ipa"
+  tvos: "https://github.com/Provenance-Emu/Provenance/releases/download/1.3.2/Provenance-tvOS-Release.ipa"
