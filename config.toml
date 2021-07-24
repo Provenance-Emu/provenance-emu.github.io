@@ -1,6 +1,6 @@
 baseurl = "https://provenance-emu.com"
 title = "Provenance Emu"
-theme = ["hugo-atom-feed", "small-apps-prov"]
+theme = ["hugo-social-metadata", "hugo-redirect", "hugo-cloak-email", "hugo-atom-feed", "small-apps-prov"]
 themesDir = "themes"
 languageCode = "en-us"
 summaryLength = "10"

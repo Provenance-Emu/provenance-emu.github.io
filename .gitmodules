@@ -1,3 +1,12 @@
 [submodule "themes/hugo-universal-theme"]
 	path = themes/hugo-universal-theme
 	url = https://github.com/devcows/hugo-universal-theme.git
+[submodule "themes/hugo-cloak-email"]
+	path = themes/hugo-cloak-email
+	url = https://github.com/martignoni/hugo-cloak-email.git
+[submodule "themes/hugo-redirect"]
+	path = themes/hugo-redirect
+	url = https://github.com/gcc42/hugo-redirect.git
+[submodule "themes/hugo-social-metadata"]
+	path = themes/hugo-social-metadata
+	url = https://github.com/msfjarvis/hugo-social-metadata.git
