@@ -1,28 +1,26 @@
 # banner
 banner:
-  title : "Showcase your app with Small Apps"
-  description : "Besides its beautiful design. Laapp is an incredibly rich core framework for you to showcase your App."
-  bgImage : "images/home-banner.webp"
-  bgImageAlt : "images/home-banner.png"
+  title : "Provenance EMU"
+  description : "iOS & tvOS multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems."
+  bgImage : "img/banner.jpg"
+  bgImageAlt : "img/banner.jpg"
   image : "images/mobile.webp"
   imageAlt : "images/mobile.png"
   button:
-    btnText : "Download Now"
-    URL : "#"
-    
+    btnText : "Download IPA"
+    URL : "https://github.com/Provenance-Emu/Provenance/releases"
+
 # banner-feature
 bannerFeature:
-  - icon: "tf-ion-paintbucket"
-    title: "themes made easy"
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam dignissimos molestias."
-    
-  - icon: "tf-ion-load-b"
-    title: "powerful design"
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam dignissimos molestias."
-    
-  - icon: "tf-ion-ios-lightbulb"
-    title: "creative content"
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam dignissimos molestias."
+  - icon: "tf-ion-social-apple"
+    title: "Native API Integration"
+    description: "3D Touch Shortcuts for Recent Games, Haptic Engine Button Feedback, Spotlight Searching, TopShelf Support (tvOS)"
+  - icon: "tf-ion-document-text"
+    title: "ROM Browser"
+    description: "Automatic ROM metadata downloading including release info, screenshots, case and manual artwork viewer (where available)"
+  - icon: "tf-ion-eject"
+    title: "Mutli-disc Support"
+    description: "Supports automatic BIN/CUE matching for multi-disc CD-ROM games with in-game disc swapping."
 
 # feature one
 featureOne:
