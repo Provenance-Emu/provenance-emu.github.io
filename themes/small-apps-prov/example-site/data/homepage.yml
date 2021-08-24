@@ -3,7 +3,7 @@ banner:
   title : "Showcase your app with Small Apps"
   description : "Besides its beautiful design. Laapp is an incredibly rich core framework for you to showcase your App."
   bgImage : "images/home-banner.webp"
-  bgImageAlt : "images/home-banner.png"
+  bgImageAlt : "images/home-banner.jpg"
   image : "images/mobile.webp"
   imageAlt : "images/mobile.png"
   button:

@@ -2,8 +2,8 @@
 banner:
   title : "Provenance EMU"
   description : "iOS & tvOS multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems."
-  bgImage : "img/banner.jpg"
-  bgImageAlt : "img/banner.jpg"
+  bgImage : "images/home-banner.webp"
+  bgImageAlt : "images/home-banner.jpg"
   image : "images/mobile.webp"
   imageAlt : "images/mobile.png"
   button:
@@ -25,28 +25,27 @@ bannerFeature:
 # feature one
 featureOne:
   enable : true
-  imageAlt : "images/feature/feature-new-01.jpg"
-  image : "images/feature/feature-new-01.webp"
-  title : "Increase your productivity with Small Apps"
-  content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-  comment : "InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one place."
-  clientImage : "images/testimonial/feature-testimonial-thumb.jpg"
-  clientName : "Jonathon Andrew , Themefisher"
+  imageAlt : "images/feature/feature-rom-metadata.webp"
+  image : "images/feature/feature-rom-metadata.png"
+  title : "ROM Library metadata browser and editor"
+  content : "Full page game metadata viewer with release data, box artwork and the ability to replace all text and images with custom data."
+  comment : ""
+
 
 # feature two
 featureTwo:
   enable : true
-  image : "images/feature/feature-new-02.webp"
-  imageAlt : "images/feature/feature-new-02.jpg"
-  title : "Increase your productivity with Small Apps"
-  content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-  comment : "InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one place."
-  clientImage : "images/testimonial/feature-testimonial-thumb.jpg"
-  clientName : "Jonathon Andrew , Themefisher"
+  image : "images/feature/feature-core-options.webp"
+  imageAlt : "images/feature/feature-core-options.png"
+  title : "Core Options"
+  content : "Real time (where supported) custom core options."
+  comment : ""
+  clientImage : ""
+  clientName : ""
 
 # service
 service:
-  enable : true
+  enable : false
   title : "An Interface For Lifestyle"
   description : "Small Apps makes it easy to stay on top of your Life Style. No late tasks. No gimmicks."
   image : "images/feature/iphone-ipad.webp"
@@ -70,7 +69,7 @@ service:
 
 # promo video
 promoVideo:
-  enable : true
+  enable : false
   bgImage : "images/background/promo-video-back.webp"
   bgImageAlt : "images/background/promo-video-back.jpg"
   title : "Watch Our Promo Video"
@@ -79,7 +78,7 @@ promoVideo:
 
 # testimonial
 testimonial:
-  enable : true
+  enable : false
   testimonialSlider:
     - name: "Abraham Linkon , Themefisher"
       image: "images/testimonial/feature-testimonial-thumb.jpg"
@@ -99,7 +98,7 @@ testimonial:
 
 # download
 download:
-  enable : true
+  enable : false
   title : "It's Time to change your mind"
   description : "Download over 2 million humans .Get Small Apps free forever! <br>We say you won’t look back."
   downloadButton :

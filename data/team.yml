@@ -52,9 +52,9 @@ developmentTeam:
     # team member
     - image : "images/team/marketing-team-01.webp"
       imageAlt : "images/team/marketing-team-01.jpg"
-      name : "Jonathon Andrew"
-      designation : "Head Of Marketing"
-      content : "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat."
+      name : "Joe Mattiello"
+      designation : "Lead Developer"
+      content : "f"
       socialIcon :
         - icon : "tf-ion-social-facebook"
           URL : "#"

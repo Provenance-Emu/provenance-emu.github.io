@@ -203,18 +203,18 @@ pygmentsStyle = "solarized-dark"
 
     # Enable and disable widgets for the right sidebar
     [params.widgets]
-        categories = true
+        categories = false
         tags = true
         search = true
 
     [params.carousel]
-        enable = true
+        enable = false
         # All carousel items are defined in their own files. You can find example items
         # at 'exampleSite/data/carousel'.
         # For more informtion take a look at the README.
 
     [params.features]
-        enable = true
+        enable = false
         # All features are defined in their own files. You can find example items
         # at 'exampleSite/data/features'.
         # For more informtion take a look at the README.
@@ -244,7 +244,7 @@ pygmentsStyle = "solarized-dark"
         subtitle = ""
 
     [params.recent_posts]
-        enable = true
+        enable = false
         title = "From our blog"
         subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
 
