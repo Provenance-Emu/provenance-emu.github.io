@@ -2,12 +2,17 @@
 title: "Welcome to the new Provenance homepage."
 date: "2021-07-20T03:44:53.356Z"
 tags: ["theme"]
-type : "featured-post"
-image : ""
-author: ["Joe Mattiello"]
+type: "featured-post"
+author: "Joe Mattiello"
+authorImage: "images/team/joe.jpg"
+authorSocial:
+  - icon : "tf-ion-social-github"
+    URL : "https://github.com/JoeMatt"
+  - icon : "tf-ion-social-twitter"
+    URL : "https://twitter.com/joemattiello"
 categories: ["starting"]
 description: "This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content."
-banner: "img/banners/banner-1.jpg"
+image: "images/banners/banner-1.jpg"
 ---
 
 ## Welcome
