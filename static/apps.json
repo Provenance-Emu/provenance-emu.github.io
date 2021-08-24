@@ -12,10 +12,14 @@
 "versionDescription": "Initial AltStore release!",
 "downloadURL": "https://provenance-emu.com/apps/2.0/Provenance-iOS.ipa",
 "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems",
-"iconURL": "https://camo.githubusercontent.com/28b1224bfcfbbe20b58b2d32117d0884fefe5b9ef8bf0035a0bc884003c684e7/68747470733a2f2f67626c6f627363646e2e676974626f6f6b2e636f6d2f7370616365732532462d4c6373736a547263503748574c6673595a434a2532466176617461722e706e67",
+"iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
 "tintColor": "#162434",
 "size": 57676086,
 "screenshotURLs": [
+    "https://provenance-emu.com/images/feature/game-library.png",
+    "https://provenance-emu.com/images/feature/force-touch.png",
+    "https://provenance-emu.com/images/feature/force-actions.png",
+    "https://provenance-emu.com/images/feature/n64-gameplay.png",
 ]
 }
 ],
