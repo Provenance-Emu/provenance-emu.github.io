@@ -9,6 +9,8 @@ banner:
   button:
     btnText : "Download IPA"
     URL : "https://github.com/Provenance-Emu/Provenance/releases"
+    btnText2: 'AltStore'
+    URL2: 'https://provenance-emu.com/apps.json'
 
 # banner-feature
 bannerFeature:

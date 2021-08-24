@@ -29,6 +29,9 @@
 				{{ with .button }}
 				<a href="{{ .URL }}" class="btn font-weight-bold btn-main-md">{{ .btnText }}</a>
 				{{ end }}
+				{{ with .button }}
+				<a href="{{ .URL2 }}" class="btn font-weight-bold btn-main-md">{{ .btnText2 }}</a>
+				{{ end }}
 			</div>
 			<div class="col-md-6 text-center order-1 order-md-2">
 				<img src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" class="img-fluid" alt="banner-image">
