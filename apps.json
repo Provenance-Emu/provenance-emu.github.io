@@ -7,7 +7,7 @@
 "name": "Provenance EMU",
 "bundleIdentifier": "org.provenance-emu.provenance",
 "developerName": "Joe Mattiello",
-"subtitle": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems",
+"subtitle": "Multi-emulator frontend for multiple systems.",
 "version": "2.0",
 "versionDate": "2021-08-03T12:00:00-00:00",
 "versionDescription": "Initial AltStore release!",
