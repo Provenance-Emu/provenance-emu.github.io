@@ -98,18 +98,13 @@ testimonial:
 
 # download
 download:
-  enable : false
-  title : "It's Time to change your mind"
-  description : "Download over 2 million humans .Get Small Apps free forever! <br>We say you won’t look back."
+  enable : true
+  title : "Start playing now"
+  description : "Downoad IPA to self sideload, or use our new official AltStore source."
   downloadButton :
-    - btnText : "Iphone"
+    - btnText : "IPA"
       icon : "tf-ion-social-apple"
-      URL : "#"
-      
-    - btnText : "Android"
-      icon : "tf-ion-social-android"
-      URL : "#"
-      
-    - btnText : "Windows"
-      icon : "tf-ion-social-windows"
-      URL : "#"
+      URL : "https://github.com/Provenance-Emu/Provenance/releases"
+    - btnText : "AltStore"
+      icon : "tf-ion-ios-cloud-download"
+      URL : "https://provenance-emu.com/apps.json"
