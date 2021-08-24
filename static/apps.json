@@ -15,6 +15,12 @@
 "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
 "tintColor": "#162434",
 "size": 57676086,
+"permissions": [
+    {
+        "type": "photos",
+        "usageDescription": "Allows Provenance to use images from your Photo Library as game artwork."
+    }
+],
 "screenshotURLs": [
     "https://provenance-emu.com/images/feature/game-library.png",
     "https://provenance-emu.com/images/feature/force-touch.png",
