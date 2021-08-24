@@ -12,4 +12,8 @@ banner: "img/banners/banner-1.jpg"
 
 ## Welcome
 
+Welcome to the new site. This is under construction.
+
 ## Alt-Store
+
+New Alt-Store source at [https://provenance-emu.com/apps.json](https://provenance-emu.com/apps.json)

@@ -55,11 +55,11 @@ pygmentsStyle = "solarized-dark"
         url  = "https://wiki.provenance-emu.com/faqs"
         weight = 5
 
-    [[menu.main]]
-        identifier = "contact"
-        name = "Contact"
-        url  = "/contact/"
-        weight = 6
+    # [[menu.main]]
+    #     identifier = "contact"
+    #     name = "Contact"
+    #     url  = "/contact/"
+    #     weight = 6
 
     # Top bar social links menu
 
