@@ -1,6 +1,7 @@
 {
 "name": "Provenance EMU",
 "identifier": "org.provenance-emu.AltStore",
+"sourceURL": "https://provenance-emu.com/apps.json",
 "apps": [
 {
 "name": "Provenance EMU",
