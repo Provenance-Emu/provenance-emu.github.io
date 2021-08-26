@@ -10,7 +10,7 @@ banner:
     btnText : "Download IPA"
     URL : "https://github.com/Provenance-Emu/Provenance/releases"
     btnText2: 'AltStore'
-    URL2: 'https://provenance-emu.com/apps.json'
+    URL2: 'altstore://source?url=https://provenance-emu.com/apps.json'
 
 # banner-feature
 bannerFeature:
@@ -85,15 +85,15 @@ testimonial:
     - name: "Abraham Linkon , Themefisher"
       image: "images/testimonial/feature-testimonial-thumb.jpg"
       content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
-      
+
     - name: "Abraham Linkon , Themefisher"
       image: "images/testimonial/feature-testimonial-thumb.jpg"
       content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
-      
+
     - name: "Abraham Linkon , Themefisher"
       image: "images/testimonial/feature-testimonial-thumb.jpg"
       content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
-      
+
     - name: "Abraham Linkon , Themefisher"
       image: "images/testimonial/feature-testimonial-thumb.jpg"
       content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
@@ -109,4 +109,4 @@ download:
       URL : "https://github.com/Provenance-Emu/Provenance/releases"
     - btnText : "AltStore"
       icon : "tf-ion-ios-cloud-download"
-      URL : "https://provenance-emu.com/apps.json"
+      URL : "altstore://source?url=https://provenance-emu.com/apps.json"
