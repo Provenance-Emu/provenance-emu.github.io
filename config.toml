@@ -55,6 +55,12 @@ pygmentsStyle = "solarized-dark"
         url  = "https://wiki.provenance-emu.com/faqs"
         weight = 5
 
+    [[menu.main]]
+        identifier = "patreon"
+        name = "Patreon"
+        url  = "https://www.patreon.com/provenance"
+        weight = 6
+
     # [[menu.main]]
     #     identifier = "contact"
     #     name = "Contact"
