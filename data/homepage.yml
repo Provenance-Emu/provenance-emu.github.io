@@ -10,7 +10,7 @@ banner:
     btnText : "Download IPA"
     URL : "https://github.com/Provenance-Emu/Provenance/releases"
     btnText2: 'AltStore'
-    URL2: "altstore://source?url=https%3A%2F%2Fprovenance-emu.com%2Fapps.json"
+    URL2: "altstore"
 
 # banner-feature
 bannerFeature:
@@ -109,4 +109,4 @@ download:
       URL : "https://github.com/Provenance-Emu/Provenance/releases"
     - btnText : "AltStore"
       icon : "tf-ion-ios-cloud-download"
-      URL : "altstore://source?url=https%3A%2F%2Fprovenance-emu.com%2Fapps.json"
+      URL : "altstore"

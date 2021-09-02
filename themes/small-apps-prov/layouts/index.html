@@ -232,7 +232,7 @@
 				<ul class="list-inline">
 					{{ range .Site.Data.homepage.download.downloadButton }}
 					<li class="list-inline-item">
-						<a href="{{ .URL | relURL }}" class="btn btn-rounded-icon">
+						<a href="{{ htmlEscape .URL }}" class="btn btn-rounded-icon">
 							<i class="{{ .icon }}"></i>
 							{{ .btnText }}
 						</a>

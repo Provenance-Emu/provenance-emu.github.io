@@ -284,9 +284,9 @@ pygmentsStyle = "solarized-dark"
 # https://github.com/kaushalmodi/hugo-atom-feed
 [outputs]
   # <domain>/atom.xml
-  home = ["HTML", "RSS", "ATOM"]     # default = ["HTML", "RSS"]
+  home = ["HTML", "RSS"]     # default = ["HTML", "RSS"]
   # <domain>/posts/atom.xml
-  section = ["HTML", "RSS", "ATOM"]  # default = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]  # default = ["HTML", "RSS"]
   # <domain>/tags/mytag/atom.xml, <domain>/categories/mycat/atom.xml
   #taxonomy = ["HTML", "RSS", "ATOM"] # default = ["HTML", "RSS"]
 
