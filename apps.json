@@ -1,36 +1,62 @@
 {
-"name": "Provenance EMU",
-"identifier": "org.provenance-emu.AltStore",
-"sourceURL": "https://provenance-emu.com/apps.json",
-"apps": [
-{
-"name": "Provenance EMU",
-"bundleIdentifier": "org.provenance-emu.provenance",
-"developerName": "Joe Mattiello",
-"subtitle": "Multi-emulator frontend for iOS & tvOS",
-"version": "2.0",
-"versionDate": "2021-08-03T12:00:00-00:00",
-"versionDescription": "Initial AltStore release!",
-"downloadURL": "https://provenance-emu.com/apps/2.0/Provenance-iOS.ipa",
-"localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems",
-"iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
-"tintColor": "#162434",
-"size": 57676086,
-"permissions": [
-    {
-        "type": "photos",
-        "usageDescription": "Allows Provenance to use images from your Photo Library as game artwork."
-    }
-],
-"screenshotURLs": [
-    "https://provenance-emu.com/images/feature/game-library.png",
-    "https://provenance-emu.com/images/feature/force-touch.png",
-    "https://provenance-emu.com/images/feature/force-actions.png",
-    "https://provenance-emu.com/images/feature/n64-gameplay.png"
-]
-}
-],
-"news": [
-],
-"userInfo": {}
+    "name": "Provenance EMU",
+    "identifier": "org.provenance-emu.AltStore",
+    "sourceURL": "https://provenance-emu.com/apps.json",
+    "apps": [
+        {
+            "name": "Provenance EMU",
+            "bundleIdentifier": "org.provenance-emu.provenance",
+            "developerName": "Joe Mattiello",
+            "subtitle": "Multi-emulator frontend for iOS & tvOS",
+            "version": "2.0.1",
+            "versionDate": "2021-09-09T12:00:00-00:00",
+            "versionDescription": "Bug fixes.",
+            "downloadURL": "https://provenance-emu.com/apps/2.0.1/Provenance-iOS.ipa",
+            "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems",
+            "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
+            "tintColor": "#162434",
+            "size": 34395389,
+            "permissions": [
+                {
+                    "type": "photos",
+                    "usageDescription": "Allows Provenance to use images from your Photo Library as game artwork."
+                }
+            ],
+            "screenshotURLs": [
+                "https://provenance-emu.com/images/feature/game-library.png",
+                "https://provenance-emu.com/images/feature/force-touch.png",
+                "https://provenance-emu.com/images/feature/force-actions.png",
+                "https://provenance-emu.com/images/feature/n64-gameplay.png"
+            ]
+        },
+        {
+            "name": "Provenance EMU",
+            "bundleIdentifier": "org.provenance-emu.provenance",
+            "developerName": "Joe Mattiello",
+            "subtitle": "Multi-emulator frontend for iOS & tvOS",
+            "version": "2.0",
+            "versionDate": "2021-08-03T12:00:00-00:00",
+            "versionDescription": "Initial AltStore release!",
+            "downloadURL": "https://provenance-emu.com/apps/2.0/Provenance-iOS.ipa",
+            "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems",
+            "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
+            "tintColor": "#162434",
+            "size": 57676086,
+            "permissions": [
+                {
+                    "type": "photos",
+                    "usageDescription": "Allows Provenance to use images from your Photo Library as game artwork."
+                }
+            ],
+            "screenshotURLs": [
+                "https://provenance-emu.com/images/feature/game-library.png",
+                "https://provenance-emu.com/images/feature/force-touch.png",
+                "https://provenance-emu.com/images/feature/force-actions.png",
+                "https://provenance-emu.com/images/feature/n64-gameplay.png"
+            ]
+        }
+    ],
+    "news": [
+    ],
+    "userInfo": {}
 }
