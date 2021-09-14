@@ -11,7 +11,7 @@
 	<key>manifest</key>
 	<dict>
 		<key>appURL</key>
-		<string>https://provenance-emu.com/apps/2.0.1/Provenance-iOS.ipa</string>
+		<string>https://provenance-emu.com/apps/2.0.2/Provenance-iOS.ipa</string>
 		<key>displayImageURL</key>
 		<string>https://provenance-emu.com/images/icon.57x57.png</string>
 		<key>fullSizeImageURL</key>
