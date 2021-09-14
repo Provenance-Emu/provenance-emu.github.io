@@ -2,7 +2,7 @@
 title: "Welcome to the new Provenance homepage."
 date: "2021-07-20T03:44:53.356Z"
 tags: ["theme"]
-type: "featured-post"
+type: "post"
 author: "Joe Mattiello"
 authorImage: "images/team/joe.jpg"
 authorSocial:
