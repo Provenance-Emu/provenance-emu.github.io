@@ -15,7 +15,7 @@
             "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems",
             "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
             "tintColor": "#162434",
-            "size": 34395389,
+            "size": 34399773,
             "permissions": [
                 {
                     "type": "photos",
@@ -83,6 +83,17 @@
         }
     ],
     "news": [
+        {
+        "title": "New website.",
+        "identifier": "new-website",
+        "caption": "New Website at https://provenance-emu.com",
+        "date": "2021-09-214",
+        "tintColor": "162434",
+        "imageURL": "https://provenance-emu.com/images/banners/banner-1.jpg",
+        "url": "https://provenance-emu.com",
+        "appID": "org.provenance-emu.provenance",
+        "notify": false
+        }
     ],
     "userInfo": {}
 }
