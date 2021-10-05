@@ -42,3 +42,17 @@
 
 @import 'pages/contact.scss';
 
+.ios-only {
+    display: none
+}
+
+.ios-disable {
+}
+@supports (-webkit-touch-callout: none) {
+   .ios-only {
+       display: inline;
+   }
+   .ios-disable {
+    display: none;
+ }
+}
