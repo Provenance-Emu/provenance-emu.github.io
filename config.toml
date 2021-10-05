@@ -61,6 +61,12 @@ pygmentsStyle = "solarized-dark"
         url  = "https://www.patreon.com/provenance"
         weight = 6
 
+    [[menu.main]]
+        identifier = "privacy"
+        name = "Privacy Policy"
+        url  = "/privacy/"
+        weight = 7
+
     # [[menu.main]]
     #     identifier = "contact"
     #     name = "Contact"
