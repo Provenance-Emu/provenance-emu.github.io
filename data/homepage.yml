@@ -50,27 +50,39 @@ featureTwo:
 
 # service
 service:
-  enable : false
-  title : "An Interface For Lifestyle"
-  description : "Small Apps makes it easy to stay on top of your Life Style. No late tasks. No gimmicks."
-  image : "images/feature/iphone-ipad.webp"
-  imageAlt : "images/feature/iphone-ipad.jpg"
+  enable : true
+  title : "Multiple systems support"
+  description : "Supporting as many systems as possible with more always in development."
+  image : "images/console_logos.jpg"
+  imageAlt : "images/console_logos.jpg"
   serviceItem :
     - icon : "tf-ribbon"
-      title : "Easy Prototyping"
-      content : "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui"
-      
+      title : "Atari"
+      content : "2600, 5200, 7800, Jaguar, Lynx"
+
     - icon : "tf-puzzle"
-      title : "Sensor Bridge"
-      content : "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui"
-      
+      title : "Bandia"
+      content : "WonderSwan, WonderSwan Color"
+
     - icon : "tf-bargraph"
-      title : "Strategist"
-      content : "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui"
-      
+      title : "NEC"
+      content : "PC Engine/TurboGrafx-16, PC Engine Super CD-ROM² System / TurboGrafx-CD, PC Engine SuperGrafx, PC-FX"
+
     - icon : "tf-adjustments"
-      title : "Art Direction"
-      content : "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui"
+      title : "Nintendo"
+      content : "Famicom / Nintendo Entertainment System, Famicom Disk System, Game Boy, Super Famicom / Super Nintendo Entertainment System, Game Boy Color, Virtual Boy, Nintendo 64, Game Boy Advance, Pokemon mini
+"
+    - icon: 'tf-puzzle'
+      title: 'Sega'
+      content: 'SG-1000, Master System, Mega Drive / Genesis, Game Gear, Mega-CD / CD, 32X, Saturn'
+
+    - icon: 'tf-puzzle'
+      title: 'SNK'
+      content: 'Neo Geo Pocket, Neo Geo Pocket Color'
+
+    - icon: 'tf-puzzle'
+      title: 'Sony'
+      content: 'PlayStation'
 
 # promo video
 promoVideo:
