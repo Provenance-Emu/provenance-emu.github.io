@@ -1,0 +1,11 @@
+<div class="videos">
+
+    {% for video in site.videos %}
+
+        <iframe class="video" type="text/html" width="640" height="360"
+      src="https://www.youtube.com/embed/{{ video }}?modestbranding=1"
+      frameborder="0"></iframe>
+
+    {% endfor %}
+
+</div>
