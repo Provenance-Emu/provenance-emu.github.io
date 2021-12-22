@@ -61,7 +61,7 @@ service:
       content : "2600, 5200, 7800, Jaguar, Lynx"
 
     - icon : "tf-puzzle"
-      title : "Bandia"
+      title : "Bandai"
       content : "WonderSwan, WonderSwan Color"
 
     - icon : "tf-bargraph"
