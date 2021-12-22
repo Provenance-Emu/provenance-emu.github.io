@@ -3,6 +3,32 @@
     "identifier": "org.provenance-emu.AltStore",
     "sourceURL": "https://provenance-emu.com/apps.json",
     "apps": [
+      {
+          "name": "Provenance EMU",
+          "bundleIdentifier": "org.provenance-emu.provenance",
+          "developerName": "Joe Mattiello",
+          "subtitle": "Multi-emulator frontend for iOS & tvOS",
+          "version": "2.0.3",
+          "versionDate": "2021-12-22T12:00:00-00:00",
+          "versionDescription": "Bug fixes. Updated cores. Changelog on GitHub",
+          "downloadURL": "https://provenance-emu.com/apps/2.0.3/Provenance-iOS.ipa",
+          "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems",
+          "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
+          "tintColor": "#162434",
+          "size": 34399773,
+          "permissions": [
+              {
+                  "type": "photos",
+                  "usageDescription": "Allows Provenance to use images from your Photo Library as game artwork."
+              }
+          ],
+          "screenshotURLs": [
+              "https://provenance-emu.com/images/feature/game-library.png",
+              "https://provenance-emu.com/images/feature/force-touch.png",
+              "https://provenance-emu.com/images/feature/force-actions.png",
+              "https://provenance-emu.com/images/feature/n64-gameplay.png"
+          ]
+      },
         {
             "name": "Provenance EMU",
             "bundleIdentifier": "org.provenance-emu.provenance",
@@ -83,6 +109,17 @@
         }
     ],
     "news": [
+      {
+       "title": "New cores in the works. 2.0.3 released.",
+       "identifier": "new-cores-1",
+       "caption": "2.0.3 release with fixes and core updates. Coming soon, new cores. PSP (PPSSPP), PS2 (Play!), Enhanced PS1 (Duckstation), Dreamcast (flycast), ColecoVision, IntelliVision, Dolphin and more are under active development and all closer to finished than not. Please support us on Patreaon to help move development forwards.",
+       "date": "2021-12-22",
+       "tintColor": "162434",
+       "imageURL": "https://provenance-emu.com/images/banners/banner-1.jpg",
+       "url": "https://www.patreon.com/provenance",
+       "appID": "org.provenance-emu.provenance",
+       "notify": true
+     },
        {
         "title": "New website.",
         "identifier": "new-website",
