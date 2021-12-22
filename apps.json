@@ -12,10 +12,10 @@
           "versionDate": "2021-12-22T12:00:00-00:00",
           "versionDescription": "Bug fixes. Updated cores. Changelog on GitHub",
           "downloadURL": "https://provenance-emu.com/apps/2.0.3/Provenance-iOS.ipa",
-          "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems",
+          "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems.",
           "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
           "tintColor": "#162434",
-          "size": 34399773,
+          "size": 38439031,
           "permissions": [
               {
                   "type": "photos",
