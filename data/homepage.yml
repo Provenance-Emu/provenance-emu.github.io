@@ -13,6 +13,8 @@ banner:
     URL2: "altstore"
     btnText3: 'Patreon'
     URL3: 'patreon'
+    btnText4: 'OTA'
+    URL4: 'ota'
 
 
 # banner-feature
