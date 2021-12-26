@@ -7,18 +7,18 @@
 	<key>destination</key>
 	<string>export</string>
 	<key>iCloudContainerEnvironment</key>
-	<string>Development</string>
+	<string>Production</string>
 	<key>manifest</key>
 	<dict>
 		<key>appURL</key>
-		<string>https://provenance-emu.com/apps/2.0.2/Provenance-iOS.ipa</string>
+		<string>https://provenance-emu.com/apps/2.0.4/Provenance-iOS.ipa</string>
 		<key>displayImageURL</key>
 		<string>https://provenance-emu.com/images/icon.57x57.png</string>
 		<key>fullSizeImageURL</key>
 		<string>https://provenance-emu.com/images/icon.512x512.png</string>
 	</dict>
 	<key>method</key>
-	<string>development</string>
+	<string>ad-hoc</string>
 	<key>signingStyle</key>
 	<string>automatic</string>
 	<key>stripSwiftSymbols</key>
