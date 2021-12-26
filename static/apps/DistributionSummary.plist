@@ -10,15 +10,15 @@
 				<string>arm64</string>
 			</array>
 			<key>buildNumber</key>
-			<string>2776</string>
+			<string>2779</string>
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
-				<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+				<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 				<key>dateExpires</key>
-				<string>7/28/22</string>
+				<string>12/16/22</string>
 				<key>type</key>
-				<string>Apple Development</string>
+				<string>Apple Distribution</string>
 			</dict>
 			<key>embeddedBinaries</key>
 			<array>
@@ -32,11 +32,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVAtari800.framework</string>
@@ -60,11 +60,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVFCEU.framework</string>
@@ -88,11 +88,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVGB.framework</string>
@@ -116,11 +116,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVGBA.framework</string>
@@ -144,11 +144,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVGenesis.framework</string>
@@ -168,16 +168,77 @@
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
-					<string>1</string>
+					<string>2779</string>
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
+					<key>embeddedBinaries</key>
+					<array>
+						<dict>
+							<key>architectures</key>
+							<array>
+								<string>armv7</string>
+								<string>arm64</string>
+							</array>
+							<key>buildNumber</key>
+							<string>1</string>
+							<key>certificate</key>
+							<dict>
+								<key>SHA1</key>
+								<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
+								<key>dateExpires</key>
+								<string>12/16/22</string>
+								<key>type</key>
+								<string>Apple Distribution</string>
+							</dict>
+							<key>name</key>
+							<string>PVLibrary.framework</string>
+							<key>team</key>
+							<dict>
+								<key>id</key>
+								<string>S32Z3HMYVQ</string>
+								<key>name</key>
+								<string>Joseph Mattiello</string>
+							</dict>
+							<key>versionNumber</key>
+							<string>1.0</string>
+						</dict>
+						<dict>
+							<key>architectures</key>
+							<array>
+								<string>armv7</string>
+								<string>arm64</string>
+							</array>
+							<key>buildNumber</key>
+							<string>1</string>
+							<key>certificate</key>
+							<dict>
+								<key>SHA1</key>
+								<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
+								<key>dateExpires</key>
+								<string>12/16/22</string>
+								<key>type</key>
+								<string>Apple Distribution</string>
+							</dict>
+							<key>name</key>
+							<string>PVLibrary.framework</string>
+							<key>team</key>
+							<dict>
+								<key>id</key>
+								<string>S32Z3HMYVQ</string>
+								<key>name</key>
+								<string>Joseph Mattiello</string>
+							</dict>
+							<key>versionNumber</key>
+							<string>1.0</string>
+						</dict>
+					</array>
 					<key>name</key>
 					<string>PVLibrary.framework</string>
 					<key>team</key>
@@ -188,7 +249,7 @@
 						<string>Joseph Mattiello</string>
 					</dict>
 					<key>versionNumber</key>
-					<string>1.0</string>
+					<string>2.0.4</string>
 				</dict>
 				<dict>
 					<key>architectures</key>
@@ -200,11 +261,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVMednafen.framework</string>
@@ -216,7 +277,7 @@
 						<string>Joseph Mattiello</string>
 					</dict>
 					<key>versionNumber</key>
-					<string>1.26.1</string>
+					<string>1.27.1</string>
 				</dict>
 				<dict>
 					<key>architectures</key>
@@ -228,11 +289,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVMupen64Plus.framework</string>
@@ -256,11 +317,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVMupen64PlusRspHLE.framework</string>
@@ -284,11 +345,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVMupen64PlusVideoGlideN64.framework</string>
@@ -312,11 +373,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVMupen64PlusVideoRice.framework</string>
@@ -340,11 +401,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVPokeMini.framework</string>
@@ -368,11 +429,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVRSPCXD4.framework</string>
@@ -396,39 +457,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
-					</dict>
-					<key>name</key>
-					<string>PVReicast.framework</string>
-					<key>team</key>
-					<dict>
-						<key>id</key>
-						<string>S32Z3HMYVQ</string>
-						<key>name</key>
-						<string>Joseph Mattiello</string>
-					</dict>
-					<key>versionNumber</key>
-					<string>1.0</string>
-				</dict>
-				<dict>
-					<key>architectures</key>
-					<array>
-						<string>arm64</string>
-					</array>
-					<key>buildNumber</key>
-					<string>1</string>
-					<key>certificate</key>
-					<dict>
-						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
-						<key>dateExpires</key>
-						<string>7/28/22</string>
-						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVSNES.framework</string>
@@ -452,11 +485,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVStella.framework</string>
@@ -476,15 +509,15 @@
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
-					<string>1</string>
+					<string>2779</string>
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVSupport.framework</string>
@@ -496,7 +529,7 @@
 						<string>Joseph Mattiello</string>
 					</dict>
 					<key>versionNumber</key>
-					<string>1.0</string>
+					<string>2.0.4</string>
 				</dict>
 				<dict>
 					<key>architectures</key>
@@ -508,11 +541,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVTGBDual.framework</string>
@@ -536,11 +569,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PVVirtualJaguar.framework</string>
@@ -564,11 +597,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>PicoDrive.framework</string>
@@ -592,11 +625,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>ProSystem.framework</string>
@@ -613,25 +646,83 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
-					<string>2775</string>
+					<string>1</string>
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>C27DA0F5C678815AD54178272C9E51980B0980C6</string>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>Apple Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>RxCocoa_38E61CAF42DDE0B6_PackageProduct.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>S32Z3HMYVQ</string>
+						<key>name</key>
+						<string>Joseph Mattiello</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
+						<key>dateExpires</key>
+						<string>12/16/22</string>
+						<key>type</key>
+						<string>Apple Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>RxSwift.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>S32Z3HMYVQ</string>
+						<key>name</key>
+						<string>Joseph Mattiello</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>2779</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>2934A81C22FB9B16B8DBA54D70743A3DCBCFCA7E</string>
+						<key>dateExpires</key>
+						<string>12/16/22</string>
+						<key>type</key>
+						<string>Apple Distribution</string>
 					</dict>
 					<key>entitlements</key>
 					<dict>
 						<key>application-identifier</key>
-						<string>S32Z3HMYVQ.org.provenance-emu.provenance.extension.spotlight</string>
+						<string>S32Z3HMYVQ.org.provenance-emu.provenance.spotlight</string>
 						<key>com.apple.developer.icloud-container-environment</key>
-						<string>Development</string>
+						<string>Production</string>
 						<key>com.apple.developer.icloud-container-identifiers</key>
 						<array>
 							<string>iCloud.org.provenance-emu.provenance</string>
@@ -647,24 +738,24 @@
 							<string>iCloud.org.provenance-emu.provenance</string>
 						</array>
 						<key>com.apple.developer.ubiquity-kvstore-identifier</key>
-						<string>S32Z3HMYVQ.org.provenance-emu.provenance.extension.spotlight</string>
+						<string>S32Z3HMYVQ.org.provenance-emu.provenance.spotlight</string>
 						<key>com.apple.security.application-groups</key>
 						<array>
 							<string>group.org.provenance-emu</string>
 						</array>
 						<key>get-task-allow</key>
-						<true/>
+						<false/>
 					</dict>
 					<key>name</key>
 					<string>Spotlight.appex</string>
 					<key>profile</key>
 					<dict>
 						<key>UUID</key>
-						<string>f0be30e9-4f35-40d9-b5b7-1383145f5f9e</string>
+						<string>fd0f42bc-5696-47a0-bcd3-b43f6fa8b60f</string>
 						<key>dateExpires</key>
-						<string>7/28/22</string>
+						<string>12/16/22</string>
 						<key>name</key>
-						<string>iOS Team Provisioning Profile: org.provenance-emu.provenance.extension.spotlight</string>
+						<string>iOS Team Ad Hoc Provisioning Profile: org.provenance-emu.provenance.spotlight</string>
 					</dict>
 					<key>team</key>
 					<dict>
@@ -674,17 +765,15 @@
 						<string>Joseph Mattiello</string>
 					</dict>
 					<key>versionNumber</key>
-					<string>1.5</string>
+					<string>2.0.4</string>
 				</dict>
 			</array>
 			<key>entitlements</key>
 			<dict>
 				<key>application-identifier</key>
 				<string>S32Z3HMYVQ.org.provenance-emu.provenance</string>
-				<key>aps-environment</key>
-				<string>development</string>
 				<key>com.apple.developer.icloud-container-environment</key>
-				<string>Development</string>
+				<string>Production</string>
 				<key>com.apple.developer.icloud-container-identifiers</key>
 				<array>
 					<string>iCloud.org.provenance-emu.provenance</string>
@@ -712,18 +801,18 @@
 					<string>group.org.provenance-emu</string>
 				</array>
 				<key>get-task-allow</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>name</key>
 			<string>Provenance.app</string>
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>2ced5ae0-aae2-47ba-8094-5a95ef05fb35</string>
+				<string>5fa3f844-f87f-423d-ba92-cb7d0fe7a32b</string>
 				<key>dateExpires</key>
-				<string>7/29/22</string>
+				<string>12/16/22</string>
 				<key>name</key>
-				<string>iOS Team Provisioning Profile: org.provenance-emu.provenance</string>
+				<string>iOS Team Ad Hoc Provisioning Profile: org.provenance-emu.provenance</string>
 			</dict>
 			<key>team</key>
 			<dict>
@@ -733,7 +822,7 @@
 				<string>Joseph Mattiello</string>
 			</dict>
 			<key>versionNumber</key>
-			<string>1.5</string>
+			<string>2.0.4</string>
 		</dict>
 	</array>
 </dict>
