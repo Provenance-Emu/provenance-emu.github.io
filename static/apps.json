@@ -3,6 +3,34 @@
     "identifier": "org.provenance-emu.AltStore",
     "sourceURL": "https://provenance-emu.com/apps.json",
     "apps": [
+            {
+          "name": "Provenance EMU",
+          "bundleIdentifier": "org.provenance-emu.provenance",
+          "developerName": "Joe Mattiello",
+          "subtitle": "Multi-emulator frontend for iOS & tvOS",
+          "version": "2.1.0",
+          "versionDate": "2022-02-16T12:00:00-05:00",
+          "versionDescription": "Updated UI, more core options, Metal support, and more.",
+          "downloadURL": "https://provenance-builds.s3-us-east-2.amazonaws.com/Provenance%202022-02-15%2023-07-51/Provenance.ipa",
+          "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems.",
+          "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
+          "tintColor": "#162434",
+          "size": 36120321,
+          "permissions": [
+              {
+                  "type": "photos",
+                  "usageDescription": "Allows Provenance to use images from your Photo Library as game artwork."
+              }
+          ],
+          "screenshotURLs": [
+              "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/images/ios-menu-icons.jpg",
+              "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/images/tvos-settings.jpg",
+              "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/images/ios-spotlight-mk.jpg",
+              "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/images/n64-ios-newlayout.jpg",
+              "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/images/ios-coreoptions-mednafen.jpg",
+              "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/images/ios-coreoptions-genesis.jpg"
+          ]
+      },
       {
           "name": "Provenance EMU",
           "bundleIdentifier": "org.provenance-emu.provenance",
@@ -31,6 +59,17 @@
       }
     ],
     "news": [
+        {
+       "title": "Provennace 2.1.0 released with many UI, configuration and controller improvements",
+       "identifier": "new-210",
+       "caption": "2.1.0 released with improved UI, many more core options, performance improvements, core updates and much more. Read the article for a full demo of changes.",
+       "date": "2022-02-16T12:00:00-05:00",
+       "tintColor": "162434",
+       "imageURL": "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/images/tvos-browser-options.jpg",
+       "url": "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/",
+       "appID": "org.provenance-emu.provenance",
+       "notify": true
+     },
       {
        "title": "New cores in the works. 2.0.3 released.",
        "identifier": "new-cores-1",

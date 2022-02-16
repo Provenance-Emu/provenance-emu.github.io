@@ -3,7 +3,7 @@
 # url to "/old_blog" and redirect_to to "/blog" below
 type = "redirect"
 url = "/ipa"
-redirect_to = "altstore://source?url=https://provenance-emu.com/apps/2.0.3/Provenance-iOS.ipa"
+redirect_to = "https://provenance-builds.s3-us-east-2.amazonaws.com/Provenance%202022-02-15%2023-07-51/Provenance.ipa"
 redirect_enabled = true
 private = false
 +++
