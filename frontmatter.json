@@ -8,5 +8,7 @@
     {
       "path": "[[workspace]]/content/blog/release-2.1.0/images"
     }
-  ]
+  ],
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.framework.id": "hugo"
 }
