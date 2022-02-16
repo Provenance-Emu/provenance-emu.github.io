@@ -13,7 +13,7 @@ authorSocial:
     URL : "https://twitter.com/joemattiello"
 categories: ["release"]
 description: "2.0.3 Release with bug fixes"
-image: "images/icons/icon.512x512.png"
+image: "images/banners/203banner.jpg"
 ---
 
 # Release 2.0.3
