@@ -9,7 +9,7 @@
       "developerName": "Joe Mattiello",
       "subtitle": "Multi-emulator frontend for iOS & tvOS",
       "version": "2.2.0",
-      "versionDate": "2022-12-09T00:00:00-05:00",
+      "versionDate": "2022-12-09T00:01:00-05:00",
       "versionDescription": "Many bug fixes, SwiftUI additions, new cores, new features and more. See GitHub changelog for more info.",
       "downloadURL": "https://provenance-builds.s3-us-east-2.amazonaws.com/apps/2.2.0/Provenance.ipa",
       "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems.",
