@@ -13,7 +13,7 @@ authorSocial:
     URL : "https://twitter.com/joemattiello"
 categories: ["release"]
 description: "2.2.0 Release with major importer fixes, movable buttons, core updates and more."
-image: "images/IMG_2307.jpg"
+image: "images/banners/220banner.jpg"
 lightgallery: true
 fontawesome: true
 linkToMarkdown: true
