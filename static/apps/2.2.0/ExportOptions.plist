@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>compileBitcode</key>
+	<false/>
+	<key>destination</key>
+	<string>export</string>
+	<key>iCloudContainerEnvironment</key>
+	<string>Production</string>
+	<key>manifest</key>
+	<dict>
+		<key>appURL</key>
+		<string>https://provenance-builds.s3-us-east-2.amazonaws.com/apps/2.2.0/Provenance.ipa</string>
+		<key>displayImageURL</key>
+		<string>https://provenance-emu.com/images/icon.57x57.png</string>
+		<key>fullSizeImageURL</key>
+		<string>https://provenance-emu.com/images/icon.512x512.png</string>
+	</dict>
+	<key>method</key>
+	<string>ad-hoc</string>
+	<key>signingStyle</key>
+	<string>automatic</string>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key>
+	<string>S32Z3HMYVQ</string>
+	<key>thinning</key>
+	<string>&lt;none&gt;</string>
+</dict>
+</plist>
