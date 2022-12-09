@@ -1,6 +1,6 @@
 ---
 title: "Release 2.2.0"
-date: 2022-12-00T00:00:12-04:00
+date: 2022-12-09T00:00:12-04:00
 draft: false
 tags: ["release"]
 type: "post"
