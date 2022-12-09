@@ -36,9 +36,9 @@
   "news": [
     {
       "title": "Provenance 2.2.0 released with major bug fixes, new features like movable buttons and more",
-      "identifier": "new-220",
+      "identifier": "new-220-1",
       "caption": "2.2.0 released. Onscreen controls fixes, movable buttons, core upgrades, new cores, new features and more. Read the article for a full demo of changes.",
-      "date": "2022-12-09T12:00:00-05:00",
+      "date": "2022-12-09T12:00:01-05:00",
       "tintColor": "162434",
       "imageURL": "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2307.jpg",
       "url": "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/",
