@@ -44,50 +44,6 @@
       "url": "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/",
       "appID": "org.provenance-emu.provenance",
       "notify": true
-    },
-    {
-      "title": "Provenance 2.1.1 released with minor but important UI fixes",
-      "identifier": "new-211",
-      "caption": "2.1.1 released PSX on screen joystick controller fix, fceux update, SwiftUI updates.",
-      "date": "2022-06-15T12:00:00-05:00",
-      "tintColor": "162434",
-      "imageURL": "https://provenance-emu.com/blog/2022/02/15/release-2.1.1/images/tvos-browser-options.jpg",
-      "url": "https://provenance-emu.com/blog/2022/02/15/release-2.1.1/",
-      "appID": "org.provenance-emu.provenance",
-      "notify": true
-    },
-    {
-      "title": "Provenance 2.1.0 released with many UI, configuration and controller improvements",
-      "identifier": "new-210",
-      "caption": "2.1.0 released with improved UI, many more core options, performance improvements, core updates and much more. Read the article for a full demo of changes.",
-      "date": "2022-02-17T12:00:00-05:00",
-      "tintColor": "162434",
-      "imageURL": "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/images/tvos-browser-options.jpg",
-      "url": "https://provenance-emu.com/blog/2022/02/15/release-2.1.0/",
-      "appID": "org.provenance-emu.provenance",
-      "notify": true
-    },
-    {
-      "title": "New cores in the works. 2.0.3 released.",
-      "identifier": "new-cores-1",
-      "caption": "2.0.3 release with fixes and core updates. Coming soon, new cores. PSP (PPSSPP), PS2 (Play!), Enhanced PS1 (Duckstation), Dreamcast (flycast), ColecoVision, IntelliVision, Dolphin and more are under active development and all closer to finished than not. Please support us on Patreaon to help move development forwards.",
-      "date": "2021-12-22",
-      "tintColor": "162434",
-      "imageURL": "https://provenance-emu.com/images/banners/banner-1.jpg",
-      "url": "https://www.patreon.com/provenance",
-      "appID": "org.provenance-emu.provenance",
-      "notify": true
-    },
-    {
-      "title": "New website.",
-      "identifier": "new-website",
-      "caption": "New Website at https://provenance-emu.com",
-      "date": "2021-09-14",
-      "tintColor": "162434",
-      "imageURL": "https://provenance-emu.com/images/banners/banner-1.jpg",
-      "url": "https://provenance-emu.com",
-      "appID": "org.provenance-emu.provenance",
-      "notify": false
     }
   ],
   "userInfo": {}
