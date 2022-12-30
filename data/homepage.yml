@@ -15,6 +15,8 @@ banner:
     URL3: 'patreon'
     btnText4: 'OTA'
     URL4: 'ota'
+    btnText5: 'OTA Beta'
+    URL5: 'ota-beta'
 
 
 # banner-feature
