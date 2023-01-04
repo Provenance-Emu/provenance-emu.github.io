@@ -62,10 +62,16 @@ pygmentsStyle = "solarized-dark"
         weight = 6
 
     [[menu.main]]
+        identifier = "discord"
+        name = "Discord"
+        url  = "https://discord.gg/4TK7PU5"
+        weight = 7
+
+    [[menu.main]]
         identifier = "privacy"
         name = "Privacy Policy"
         url  = "/privacy/"
-        weight = 7
+        weight = 8
 
     # [[menu.main]]
     #     identifier = "contact"
@@ -180,7 +186,7 @@ pygmentsStyle = "solarized-dark"
             URL = "https://github.com/Provenance-Emu/Provenance"
 
         [[params.footer.socialIcon]]
-            icon = "tf-ion-social-whatsapp"
+            icon = "tf-ion-social-discord"
             URL = "https://discord.gg/4TK7PU5"
 
         [[params.footer.socialIcon]]

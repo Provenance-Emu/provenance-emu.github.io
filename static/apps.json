@@ -8,10 +8,10 @@
       "bundleIdentifier": "org.provenance-emu.provenance",
       "developerName": "Joe Mattiello",
       "subtitle": "Multi-emulator frontend for iOS & tvOS",
-      "version": "2.2.0",
-      "versionDate": "2022-12-09T00:01:00-05:00",
-      "versionDescription": "Many bug fixes, SwiftUI additions, new cores, new features and more. See GitHub changelog for more info.",
-      "downloadURL": "https://provenance-builds.s3-us-east-2.amazonaws.com/apps/2.2.0/Provenance.ipa",
+      "version": "2.2.1.beta.1",
+      "versionDate": "2022-12-30T00:01:00-05:00",
+      "versionDescription": "Pre-release of Play!, Dolphin and PPSSPP. JIT Required or cores will crash.",
+      "downloadURL": "https://provenance-builds.s3-us-east-2.amazonaws.com/apps/2.2.1.beta1/Provenance.ipa",
       "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems.",
       "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
       "tintColor": "#162434",
@@ -34,6 +34,17 @@
     }
   ],
   "news": [
+    {
+      "title": "Provenance 2.2.1 Beta with PS2, GameCube, Wii and PSP available for early testing.",
+      "identifier": "new-220-1",
+      "caption": "2.2.0 released. Onscreen controls fixes, movable buttons, core upgrades, new cores, new features and more. Read the article for a full demo of changes.",
+      "date": "2022-12-09T12:00:01-05:00",
+      "tintColor": "162434",
+      "imageURL": "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2307.jpg",
+      "url": "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/",
+      "appID": "org.provenance-emu.provenance",
+      "notify": true
+    },
     {
       "title": "Provenance 2.2.0 released with major bug fixes, new features like movable buttons and more",
       "identifier": "new-220-1",
