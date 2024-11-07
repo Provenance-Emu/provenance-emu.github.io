@@ -54,7 +54,7 @@
           "currency": "USD",
           "frequency": "one-time",
           "channels": ["provenance-opencollective", "joematt-venmo", "provenance-patreon"]
-      }
+      },
       {
           "guid": "support-monthly",
           "status": "active",
