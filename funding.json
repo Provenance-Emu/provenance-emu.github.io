@@ -8,8 +8,7 @@
       "email": "funding@joemattiello.com",
       "description": "Joseph Mattiello is the developer of Provenance EMU, an open-source emulator for Apple platforms, and maintainer of various iOS, Swift and *nix open-source packages including Hero Transition, RxReachability, SideStore, SideKit and others",
       "webpageUrl": {
-          "url": "https://joemattiello.dev",
-          "wellKnown": "https://provenance-emu.com"
+          "url": "https://provenance-emu.com"
       }
   },
 
@@ -22,7 +21,6 @@
       },
       "repositoryUrl": {
           "url": "https://github.com/Provenance-EMU/Provenance",
-          "wellKnown": "https://github.com/Provenance-EMU/provenance-emu.github.io"
       },
       "licenses": ["spdx:GPL-3.0", "openemu"],
       "tags": ["ios", "tvOS", "swift", "mobile", "emulator", "apps", "audio", "video", "gaming"]
@@ -32,7 +30,7 @@
       "channels": [{
           "guid": "provenance-opencollective",
           "type": "payment-provider",
-          "address": "https://opencollective.com/provenanceemu",
+          "address": "https://opencollective.com/provenanceemu"
       },
       {
         "guid": "provenance-patreon",
