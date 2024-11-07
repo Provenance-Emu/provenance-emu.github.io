@@ -1,0 +1,82 @@
+{
+  "version": "v1.0.0",
+
+  "entity": {
+      "type": "individual",
+      "role": "owner",
+      "name": "Joseph Mattiello",
+      "email": "funding@joemattiello.com",
+      "description": "Joseph Mattiello is the developer of Provenance EMU, an open-source emulator for Apple platforms, and maintainer of various iOS, Swift and *nix open-source packages including Hero Transition, RxReachability, SideStore, SideKit and others",
+      "webpageUrl": {
+          "url": "https://joemattiello.dev",
+          "wellKnown": "https://provenance-emu.com"
+      }
+  },
+
+  "projects": [{
+      "guid": "provenance-emu",
+      "name": "Provenance EMU",
+      "description": "An open-source vintage video game console and arcade emulator for iOS, tvOS and macOS",
+      "webpageUrl": {
+          "url": "https://provenance-emu.com"
+      },
+      "repositoryUrl": {
+          "url": "https://github.com/Provenance-EMU/Provenance",
+          "wellKnown": "https://github.com/Provenance-EMU/provenance-emu.github.io"
+      },
+      "licenses": ["spdx:GPL-3.0", "openemu"],
+      "tags": ["ios", "tvOS", "swift", "mobile", "emulator", "apps", "audio", "video", "gaming"]
+  }],
+
+  "funding": {
+      "channels": [{
+          "guid": "provenance-opencollective",
+          "type": "payment-provider",
+          "address": "https://opencollective.com/provenanceemu",
+      },
+      {
+        "guid": "provenance-patreon",
+        "type": "payment-provider",
+        "address": "https://patreon.com/provenance"
+      },
+      {
+        "guid": "joematt-venmo",
+        "type": "payment-provider",
+        "address": "@Joe-Mattiello"
+      }
+      ],
+
+      "plans": [
+        {
+          "guid": "support-onetime",
+          "status": "active",
+          "name": "Onetime Supporter",
+          "description": "",
+          "amount": 0,
+          "currency": "USD",
+          "frequency": "one-time",
+          "channels": ["provenance-opencollective", "joematt-venmo", "provenance-patreon"]
+      }
+      {
+          "guid": "support-monthly",
+          "status": "active",
+          "name": "Monthly Supporter",
+          "description": "",
+          "amount": 0,
+          "currency": "USD",
+          "frequency": "monthly",
+          "channels": ["provenance-opencollective", "joematt-venmo", "provenance-patreon"]
+      },
+      {
+          "guid": "support-yearly",
+          "status": "active",
+          "name": "Yearly Supporter",
+          "description": "",
+          "amount": 0,
+          "currency": "USD",
+          "frequency": "yearly",
+          "channels": ["provenance-opencollective", "joematt-venmo", "provenance-patreon"]
+      }
+    ]
+  }
+}
