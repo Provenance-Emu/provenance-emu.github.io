@@ -20,7 +20,7 @@
           "url": "https://provenance-emu.com"
       },
       "repositoryUrl": {
-          "url": "https://github.com/Provenance-EMU/Provenance",
+          "url": "https://github.com/Provenance-EMU/Provenance"
       },
       "licenses": ["spdx:GPL-3.0", "openemu"],
       "tags": ["ios", "tvOS", "swift", "mobile", "emulator", "apps", "audio", "video", "gaming"]
