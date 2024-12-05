@@ -90,13 +90,13 @@ pygmentsStyle = "solarized-dark"
     [[menu.topbar]]
         weight = 2
         name = "Facebook"
-        url = "https://facebook.com/provenance.emu/"
+        url = "https://www.facebook.com/provenance.emu/"
         pre = "<i class='fab fa-2x fa-facebook'></i>"
 
     [[menu.topbar]]
         weight = 3
         name = "Twitter"
-        url = "https://twitter.com/provenanceapp"
+        url = "https://x.com/provenanceapp"
         pre = "<i class='fab fa-2x fa-twitter'></i>"
 
     [[menu.topbar]]
