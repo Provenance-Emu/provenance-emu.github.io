@@ -25,7 +25,7 @@ image: "images/icons/icon.512x512.png"
 - 📝 [GitHub](https://github.com/Provenance-Emu/Provenance/releases/tag/2.0.2)
 - 🏪 [AltStore](/altstore/)
 
-🥰 [Patreon](https://patreon.com/provenance/)
+<!-- 🥰 [Patreon](https://patreon.com/provenance/) -->
 
 ## Install Instructions
 

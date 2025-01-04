@@ -25,7 +25,7 @@ image: "images/banners/203banner.jpg"
 - 📝 [GitHub](https://github.com/Provenance-Emu/Provenance/releases/tag/2.0.3)
 - 🏪 [AltStore](/altstore/)
 
-🥰 [Patreon](https://patreon.com/provenance/)
+<!-- 🥰 [Patreon](https://patreon.com/provenance/) -->
 
 ## Install Instructions
 
@@ -112,4 +112,3 @@ https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/sid
 
 - Delete Romefile
 - dolphini remove used parent project
-

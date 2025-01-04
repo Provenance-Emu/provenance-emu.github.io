@@ -29,7 +29,7 @@ layout: photography
 - 📺 __[tvOS IPA](https://provenance-builds.s3-us-east-2.amazonaws.com/ProvenanceTV-Release%202022-02-15%2023-19-32/Provenance.ipa)__
 - 📝 __[GitHub](https://github.com/Provenance-Emu/Provenance/releases/tag/2.1.0)__
 - 🏪 __[AltStore](/altstore/)__
-- 🥰 __[Patreon](https://patreon.com/provenance/)__
+<!-- - 🥰 __[Patreon](https://patreon.com/provenance/)__ -->
 - ___[Installation Instructions](https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/sideloading)___
 
 ## Changes
