@@ -11,12 +11,12 @@ banner:
     URL : "https://github.com/Provenance-Emu/Provenance/releases"
     btnText2: 'AltStore'
     URL2: "altstore"
-    btnText3: 'Patreon'
-    URL3: 'patreon'
-    btnText4: 'OTA'
-    URL4: 'ota'
-    btnText5: 'OTA Beta'
-    URL5: 'ota-beta'
+    btnText3: 'OTA'
+    URL3: 'ota'
+    btnText4: 'OTA Beta'
+    URL4: 'ota-beta'
+    # btnText5: 'Patreon'
+    # URL5: 'patreon'
 
 
 # banner-feature
@@ -129,7 +129,6 @@ download:
     - btnText : "AltStore"
       icon : "tf-ion-ios-cloud-download"
       URL : "altstore"
-    - btnText: "Support on Patreon"
-      icon: "tf-ion-ios-body"
-      URL: "patreon"
-
+    # - btnText: "Support on Patreon"
+    #   icon: "tf-ion-ios-body"
+    #   URL: "patreon"
