@@ -10,3 +10,6 @@
 [submodule "themes/hugo-social-metadata"]
 	path = themes/hugo-social-metadata
 	url = https://github.com/msfjarvis/hugo-social-metadata.git
+[submodule "scripts/altstore-github"]
+	path = scripts/altstore-github
+	url = https://github.com/osy/altstore-github.git
