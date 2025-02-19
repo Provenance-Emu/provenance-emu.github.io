@@ -6,7 +6,7 @@ This repo is setup to automatically build and deploy to GitHug pages on the bran
 
 ## Building locally / developing
 
-1. [Install Hugo](https://gohugo.io/overview/installing/)
+1. [Install Hugo](https://gohugo.io/installation/)
 2. Clone this repository
 
 ```bash
