@@ -15,12 +15,12 @@ socialProof:
       description: "Most comprehensive"
     - number: "100%"
       text: "Free & Open"
-      description: "No subscriptions ever"
+      description: "Free when sideloaded"
 
 # banner
 banner:
   title : "Your Classic Games.\nReimagined for iOS & tvOS."
-  description : "The ultimate open-source, all-in-one emulator. Play your favorite retro games with native iOS features, beautiful metadata, and support for 38+ console systems. Free forever, no subscriptions."
+  description : "The ultimate open-source, all-in-one emulator. Play your favorite retro games with native iOS features, beautiful metadata, and support for 38+ console systems. Free when sideloaded or built from source."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
   image : "images/mobile.webp"
@@ -48,7 +48,7 @@ bannerFeature:
     description: "Automatic box art, screenshots, and game info. Browse your collection like a digital museum, complete with manuals."
   - icon: "tf-ion-monitor"
     title: "iPhone to Big Screen"
-    description: "Full tvOS support with TopShelf integration. The only emulator that brings retro gaming to your Apple TV natively."
+    description: "Full tvOS support with TopShelf integration. The premier emulator that brings retro gaming to your Apple TV natively."
 
 # why provenance
 whyProvenance:
@@ -60,14 +60,14 @@ whyProvenance:
       title: "100% Open Source"
       content: "Fully transparent code on GitHub. No hidden tracking, no data collection, no mystery code. Contribute, audit, or fork - it's your freedom."
     - icon: "tf-ion-social-apple-outline"
-      title: "Only Emulator on Apple TV"
+      title: "Premier Emulator on Apple TV"
       content: "Experience retro gaming on the big screen. Native tvOS support with TopShelf integration brings your games to the living room like no other app can."
     - icon: "tf-ion-android-apps"
       title: "38+ Systems in One App"
       content: "From Atari 2600 to PlayStation, including rare systems like PC-FX and Virtual Boy. The most comprehensive library support available."
     - icon: "tf-ion-locked"
-      title: "No Subscriptions. Ever."
-      content: "Not now. Not later. Not for 'premium' features. Everything is free, forever. No paywalls, no tiers, no upsells. Just gaming."
+      title: "Free Forever (Sideloaded)"
+      content: "When you sideload or build from source, everything is free. No subscriptions, no paywalls, no tiers. App Store builds include optional Provenance Plus features, but all core functionality remains free."
     - icon: "tf-ion-ios-people"
       title: "Community First"
       content: "9+ years of active development driven by passionate gamers, not corporations. Every feature requested by players, built by the community."
@@ -101,7 +101,7 @@ featureTwo:
 tvosShowcase:
   enable: true
   title: "Your Living Room. Your Arcade."
-  subtitle: "The Only Full-Featured Emulator for Apple TV"
+  subtitle: "The Premier Full-Featured Emulator for Apple TV"
   description: "While others stop at your phone, Provenance takes retro gaming to the big screen. Native tvOS support means your games look and play exactly as they should on your TV - with all the modern conveniences of Apple's ecosystem."
   image: "images/console_logos.jpg"
   imageAlt: "images/console_logos.jpg"
@@ -200,7 +200,7 @@ comparisonHighlights:
     - feature: "Subscription Required"
       provenance: false
       others: true
-      description: "Always free forever"
+      description: "Free when sideloaded or self-built (App Store has optional Plus)"
     - feature: "Game Artwork & Manuals"
       provenance: true
       others: "Limited"
