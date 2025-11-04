@@ -137,11 +137,10 @@ service:
 
     - icon : "tf-adjustments"
       title : "Nintendo"
-      content : "Famicom / Nintendo Entertainment System, Famicom Disk System, Game Boy, Super Famicom / Super Nintendo Entertainment System, Game Boy Color, Virtual Boy, Nintendo 64, Game Boy Advance, Pokemon mini
-"
+      content : "Famicom / Nintendo Entertainment System, Famicom Disk System, Game Boy, Super Famicom / Super Nintendo Entertainment System, Game Boy Color, Virtual Boy, Nintendo 64, Game Boy Advance, Pokemon mini"
     - icon: 'tf-puzzle'
       title: 'Sega'
-      content: 'SG-1000, Master System, Mega Drive / Genesis, Game Gear, Mega-CD / CD, 32X, Saturn'
+      content: 'Dreamcast, SG-1000, Master System, Mega Drive / Genesis, Game Gear, Mega-CD / CD, 32X, Saturn'
 
     - icon: 'tf-puzzle'
       title: 'SNK'
@@ -149,7 +148,7 @@ service:
 
     - icon: 'tf-puzzle'
       title: 'Sony'
-      content: 'PlayStation'
+      content: 'PlayStation, PlayStation 2, PSP'
 
 # promo video
 promoVideo:
