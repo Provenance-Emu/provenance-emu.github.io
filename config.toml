@@ -283,6 +283,8 @@ blog = "/blog/:year/:month/:day/:contentbasename/"
             URL = "plugins/fancybox/jquery.fancybox.min.css"
         [[params.plugins.css]]
             URL = "plugins/aos/aos.css"
+        [[params.plugins.css]]
+            URL = "css/provenance-custom.css"
 
         # JS Plugins
         [[params.plugins.js]]
