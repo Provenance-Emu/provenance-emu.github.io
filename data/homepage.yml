@@ -2,6 +2,7 @@
 socialProof:
   enable: true
   items:
+    # NOTE: Update the 'number' value below annually to reflect years since 2016.
     - number: "9+"
       text: "Years Strong"
       description: "Trusted since 2016"
