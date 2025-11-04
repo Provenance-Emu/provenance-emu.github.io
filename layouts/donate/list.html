@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+{{ "<!-- Donate Section -->" | safeHTML }}
+<section class="section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 m-auto">
+        <div class="block shadow">
+          <div class="content">
+            {{ .Content | safeHTML }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Donate Section -->" | safeHTML }}
+
+{{ end }}
