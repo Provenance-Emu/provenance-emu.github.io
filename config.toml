@@ -145,7 +145,7 @@ pygmentsStyle = "solarized-dark"
     contact_form_ajax = false
 
     about_us = "<p>.</p>"
-    copyright = "Copyright (c) 2018 - 2021, Provenance EMU; all rights reserved."
+    copyright = "Copyright (c) 2018 - 2025, Provenance EMU; all rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
@@ -200,10 +200,10 @@ pygmentsStyle = "solarized-dark"
     # call to action
     [params.cta]
         enable = true
-        title = "We are hunting Genius Developers"
-        content = ""
-        btnText = "Join the team"
-        URL = "https://github.com/Provenance-Emu/Provenance/issues"
+        title = "Open Source. Community Driven. Always Free."
+        content = "Join thousands of contributors and players keeping retro gaming alive. Star us on GitHub, report issues, or contribute code."
+        btnText = "View on GitHub"
+        URL = "https://github.com/Provenance-Emu/Provenance"
 
     [permalinks]
         blog = "/blog/:year/:month/:day/:filename/"

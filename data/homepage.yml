@@ -1,7 +1,26 @@
+# social proof
+socialProof:
+  enable: true
+  items:
+    # NOTE: Update the 'number' value below annually to reflect years since 2016.
+    - number: "9+"
+      text: "Years Strong"
+      description: "Trusted since 2016"
+    # NOTE: GitHub Stars count is hardcoded and must be updated manually to remain accurate.
+    - number: "6.2K+"
+      text: "GitHub Stars"
+      description: "Growing community"
+    - number: "38+"
+      text: "Systems Supported"
+      description: "Most comprehensive"
+    - number: "100%"
+      text: "Free & Open"
+      description: "No subscriptions ever"
+
 # banner
 banner:
-  title : "Provenance EMU"
-  description : "iOS & tvOS multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems."
+  title : "Your Classic Games.\nReimagined for iOS & tvOS."
+  description : "The ultimate open-source, all-in-one emulator. Play your favorite retro games with native iOS features, beautiful metadata, and support for 38+ console systems. Free forever, no subscriptions."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
   image : "images/mobile.webp"
@@ -9,11 +28,11 @@ banner:
   button:
     btnText : "Download IPA"
     URL : "https://github.com/Provenance-Emu/Provenance/releases"
-    btnText2: 'AltStore'
+    btnText2: 'Get on AltStore'
     URL2: "altstore"
-    btnText3: 'OTA'
+    btnText3: 'Install OTA'
     URL3: 'ota'
-    btnText4: 'OTA Beta'
+    btnText4: 'Try Beta'
     URL4: 'ota-beta'
     # btnText5: 'Patreon'
     # URL5: 'patreon'
@@ -22,23 +41,24 @@ banner:
 # banner-feature
 bannerFeature:
   - icon: "tf-ion-social-apple"
-    title: "Native API Integration"
-    description: "3D Touch Shortcuts for Recent Games, Haptic Engine Button Feedback, Spotlight Searching, TopShelf Support (tvOS)"
-  - icon: "tf-ion-document-text"
-    title: "ROM Browser"
-    description: "Automatic ROM metadata downloading including release info, screenshots, case and manual artwork viewer (where available)"
-  - icon: "tf-ion-eject"
-    title: "Mutli-disc Support"
-    description: "Supports automatic BIN/CUE matching for multi-disc CD-ROM games with in-game disc swapping."
+    title: "Feels Like Home on iOS"
+    description: "3D Touch shortcuts, Haptic feedback, Spotlight search, and iCloud sync. Built with native APIs for the smoothest experience."
+  - icon: "tf-ion-image"
+    title: "Beautiful Game Library"
+    description: "Automatic box art, screenshots, and game info. Browse your collection like a digital museum, complete with manuals."
+  - icon: "tf-ion-monitor"
+    title: "iPhone to Big Screen"
+    description: "Full tvOS support with TopShelf integration. The only emulator that brings retro gaming to your Apple TV natively."
 
 # feature one
 featureOne:
   enable : true
   imageAlt : "images/feature/feature-rom-metadata.webp"
   image : "images/feature/feature-rom-metadata.png"
-  title : "ROM Library metadata browser and editor"
-  content : "Full page game metadata viewer with release data, box artwork and the ability to replace all text and images with custom data."
+  title : "Your Games, Beautifully Presented"
+  content : "Every game gets the treatment it deserves. Automatic artwork downloads, release information, ratings, and even scanned manuals. Edit any detail to make your library truly yours."
   comment : ""
+  clientName : "Built for collectors and players alike"
 
 
 # feature two
@@ -46,17 +66,17 @@ featureTwo:
   enable : true
   image : "images/feature/feature-core-options.webp"
   imageAlt : "images/feature/feature-core-options.png"
-  title : "Core Options"
-  content : "Real time (where supported) custom core options."
+  title : "Fine-Tune Your Experience"
+  content : "Customize emulation settings in real-time. Adjust graphics filters, control layouts, audio settings, and core-specific options without ever leaving your game."
   comment : ""
   clientImage : ""
-  clientName : ""
+  clientName : "Power users and casual gamers covered"
 
 # service
 service:
   enable : true
-  title : "Multiple systems support"
-  description : "Supporting as many systems as possible with more always in development."
+  title : "38+ Game Systems. One App."
+  description : "From Atari to PlayStation, we've got you covered. The most comprehensive console support of any iOS emulator."
   image : "images/console_logos.jpg"
   imageAlt : "images/console_logos.jpg"
   serviceItem :
@@ -120,13 +140,13 @@ testimonial:
 # download
 download:
   enable : true
-  title : "Start playing now"
-  description : "Downoad IPA to self sideload, or use our new official AltStore source."
+  title : "Ready to Play?"
+  description : "Download the IPA for sideloading, install via AltStore, or use over-the-air installation. Choose what works best for you."
   downloadButton :
-    - btnText : "IPA"
+    - btnText : "Download IPA"
       icon : "tf-ion-social-apple"
       URL : "https://github.com/Provenance-Emu/Provenance/releases"
-    - btnText : "AltStore"
+    - btnText : "Get on AltStore"
       icon : "tf-ion-ios-cloud-download"
       URL : "altstore"
     # - btnText: "Support on Patreon"
