@@ -6,6 +6,7 @@ socialProof:
     - number: "9+"
       text: "Years Strong"
       description: "Trusted since 2016"
+    # NOTE: GitHub Stars count is hardcoded and must be updated manually to remain accurate.
     - number: "6.2K+"
       text: "GitHub Stars"
       description: "Growing community"
