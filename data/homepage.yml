@@ -41,7 +41,7 @@ bannerFeature:
   - icon: "tf-ion-social-apple"
     title: "Feels Like Home on iOS"
     description: "3D Touch shortcuts, Haptic feedback, Spotlight search, and iCloud sync. Built with native APIs for the smoothest experience."
-  - icon: "tf-ion-images"
+  - icon: "tf-ion-image"
     title: "Beautiful Game Library"
     description: "Automatic box art, screenshots, and game info. Browse your collection like a digital museum, complete with manuals."
   - icon: "tf-ion-monitor"
