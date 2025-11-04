@@ -6,6 +6,11 @@ languageCode = "en-us"
 summaryLength = "10"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 # Enable comments by entering your Disqus shortname
 disqusShortname = "provenance-emu"
 # Enable Google Analytics by entering your tracking code
@@ -56,11 +61,11 @@ pygmentsStyle = "solarized-dark"
         url  = "https://wiki.provenance-emu.com/faqs"
         weight = 5
 
-#    [[menu.main]]
-#        identifier = "patreon"
-#        name = "Patreon"
-#        url  = "https://www.patreon.com/provenance"
-#        weight = 6
+    [[menu.main]]
+        identifier = "donate"
+        name = "Donate"
+        url  = "/donate/"
+        weight = 6
 
     [[menu.main]]
         identifier = "discord"
