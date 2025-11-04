@@ -18,7 +18,7 @@ socialProof:
 
 # banner
 banner:
-  title : "Your Classic Games. <br/>Reimagined for iOS & tvOS."
+  title : "Your Classic Games.\nReimagined for iOS & tvOS."
   description : "The ultimate open-source, all-in-one emulator. Play your favorite retro games with native iOS features, beautiful metadata, and support for 38+ console systems. Free forever, no subscriptions."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
