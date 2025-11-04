@@ -12,7 +12,8 @@ disqusShortname = "provenance-emu"
 googleAnalytics = "UA-128934358-3"
 
 # Define the number of posts per page
-paginate = 6
+[pagination]
+    pagerSize = 6
 
 # Pygment Code
 tsCodefences = true
