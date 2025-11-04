@@ -12,7 +12,8 @@ disqusShortname = "provenance-emu"
 googleAnalytics = "UA-128934358-3"
 
 # Define the number of posts per page
-paginate = 6
+[pagination]
+    pagerSize = 6
 
 # Pygment Code
 tsCodefences = true
@@ -206,7 +207,7 @@ pygmentsStyle = "solarized-dark"
         URL = "https://github.com/Provenance-Emu/Provenance"
 
     [permalinks]
-        blog = "/blog/:year/:month/:day/:filename/"
+blog = "/blog/:year/:month/:day/:contentbasename/"
 
     # Enable or disable top bar with social icons
     [params.topbar]
