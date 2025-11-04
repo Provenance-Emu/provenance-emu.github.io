@@ -1,0 +1,509 @@
+/* Provenance Custom Styles - Phase 3: Visual Design & Polish */
+
+/* ========================================
+   Modern Color Enhancements
+   ======================================== */
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --success-color: #10b981;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  --border-radius: 12px;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   Enhanced Typography
+   ======================================== */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.7;
+}
+
+/* ========================================
+   Modern Button Styling
+   ======================================== */
+
+.btn {
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-main-md {
+  padding: 0.875rem 2rem;
+  font-size: 1.05rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem !important;
+  font-size: 1.15rem !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.btn-lg:hover {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* App Store Button Special Styling */
+.btn-main-md.btn-lg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  position: relative;
+}
+
+.btn-main-md.btn-lg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #7c8ff5 0%, #8a5bb5 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-main-md.btn-lg:hover::before {
+  opacity: 1;
+}
+
+.btn-main-md.btn-lg span {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   Social Proof Section Enhancements
+   ======================================== */
+
+.social-proof-item {
+  padding: 2rem 1rem;
+  transition: var(--transition-smooth);
+  border-radius: var(--border-radius);
+}
+
+.social-proof-item:hover {
+  transform: translateY(-4px);
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.social-proof-item h2 {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   Why Provenance Section
+   ======================================== */
+
+.why-provenance {
+  padding: 5rem 0;
+}
+
+.why-item {
+  padding: 1.5rem;
+  transition: var(--transition-smooth);
+  border-radius: var(--border-radius);
+  height: 100%;
+}
+
+.why-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  background: #ffffff;
+}
+
+.why-item .icon-box {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  transition: var(--transition-smooth);
+}
+
+.why-item:hover .icon-box {
+  background: var(--primary-gradient);
+}
+
+.why-item:hover .icon-box i {
+  color: white !important;
+}
+
+.why-item h4 {
+  color: #1a202c;
+  font-weight: 700;
+}
+
+/* ========================================
+   tvOS Showcase Section
+   ======================================== */
+
+.tvos-showcase {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tvos-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.tvos-feature-card {
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tvos-feature-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   Comparison Table Enhancements
+   ======================================== */
+
+.comparison-section {
+  padding: 5rem 0;
+}
+
+.comparison-table {
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.comparison-table table {
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.comparison-table th {
+  font-weight: 700;
+  padding: 1.25rem 1rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.comparison-table td {
+  padding: 1.25rem 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison-table tbody tr {
+  transition: var(--transition-smooth);
+}
+
+.comparison-table tbody tr:hover {
+  background-color: #f8f9ff !important;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ========================================
+   Banner Feature Cards
+   ======================================== */
+
+.rounded.shadow {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg) !important;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  transition: var(--transition-smooth);
+}
+
+.rounded.shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15) !important;
+}
+
+/* ========================================
+   Feature Sections
+   ======================================== */
+
+.feature-content h2 {
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.feature-content p {
+  color: #4a5568;
+  font-size: 1.125rem;
+}
+
+.testimonial .meta li {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ========================================
+   Service Section
+   ======================================== */
+
+.service-item {
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition-smooth);
+  background: white;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-item i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.service-item h3 {
+  color: #1a202c;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ========================================
+   Download Section
+   ======================================== */
+
+.call-to-action-app.bg-blue {
+  background: var(--primary-gradient) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.call-to-action-app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.btn-rounded-icon {
+  border-radius: var(--border-radius);
+  padding: 1rem 2rem;
+  transition: var(--transition-smooth);
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.btn-rounded-icon:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: #667eea !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btn-rounded-icon i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* ========================================
+   Gradient Banner Enhancements
+   ======================================== */
+
+.gradient-banner {
+  position: relative;
+  padding: 6rem 0;
+}
+
+.gradient-banner h1 {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-banner p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* ========================================
+   Image Enhancements
+   ======================================== */
+
+.image-content img {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-smooth);
+}
+
+.image-content:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   Mobile Responsiveness
+   ======================================== */
+
+@media (max-width: 768px) {
+  .why-provenance {
+    padding: 3rem 0;
+  }
+
+  .tvos-showcase {
+    padding: 3rem 0;
+  }
+
+  .comparison-section {
+    padding: 3rem 0;
+  }
+
+  .social-proof-item h2 {
+    font-size: 2.5rem;
+  }
+
+  .why-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  .gradient-banner {
+    padding: 4rem 0;
+  }
+
+  .comparison-table {
+    font-size: 0.875rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* ========================================
+   Accessibility & Focus States
+   ======================================== */
+
+.btn:focus,
+a:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================================
+   Loading Animation
+   ======================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ========================================
+   CTA Hover Effect
+   ======================================== */
+
+.params.cta {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+/* ========================================
+   Footer Enhancements
+   ======================================== */
+
+footer {
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+footer .socialIcon a {
+  transition: var(--transition-smooth);
+  display: inline-block;
+}
+
+footer .socialIcon a:hover {
+  transform: translateY(-3px);
+  color: #667eea !important;
+}
