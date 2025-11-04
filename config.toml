@@ -207,7 +207,7 @@ pygmentsStyle = "solarized-dark"
         URL = "https://github.com/Provenance-Emu/Provenance"
 
     [permalinks]
-blog = "/blog/:year/:month/:day/:contentbasename/"
+        blog = "/blog/:year/:month/:day/:slug/"
 
     # Enable or disable top bar with social icons
     [params.topbar]
