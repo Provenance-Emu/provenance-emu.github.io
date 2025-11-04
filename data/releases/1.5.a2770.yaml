@@ -1,0 +1,7 @@
+title: "1.5a r2770"
+description: "Prebuilt IPA for Provenance 1.5 alpha on iOS & tvOS. Install with AltStore, Cydia Impactor or some other re-signing tool."
+github: "https://github.com/Provenance-Emu/Provenance/releases/tag/untagged-fdb2d4940a54861f40c6"
+tag: ""
+ipas:
+  ios: "https://github.com/Provenance-Emu/Provenance/releases/download/untagged-fdb2d4940a54861f40c6/Provenance-ios-1.5-alpha-2770.ipa"
+  tvos: "https://github.com/Provenance-Emu/Provenance/releases/download/untagged-fdb2d4940a54861f40c6/Provenance-tvos-1.5-alpha-2770.ipa"

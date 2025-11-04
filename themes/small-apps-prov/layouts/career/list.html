@@ -1,0 +1,177 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+{{ if .Site.Data.career.promo.enable }}
+{{ "<!-- Career Promo -->" | safeHTML }}
+<section class="section career-featured pt-0">
+  <div class="container">
+    <div class="row">
+      {{ with .Site.Data.career.promo }}
+      <div class="col-md-12">
+        <div class="block">
+          <div class="content">
+            <h2>{{ .title }}</h2>
+            <p>{{.content }}</p>
+          </div>
+          <div class="video">
+            <img class="img-fluid shadow" src="{{ .videoThumb | absURL }}" onerror="this.src='{{ .videoThumbAlt | absURL }}'" alt="video-thumbnail">
+            <div class="video-button video-box">
+              <a href="javascript:void(0)">
+                <i class="tf-ion-play" data-video="{{ .videoURL }}"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Career Promo -->" | safeHTML }}
+{{ end }}
+
+{{ if .Site.Data.career.gallary.enable }}
+{{ "<!-- Gallery -->" | safeHTML }}
+<section class="gallery">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      {{ range .Site.Data.career.gallary.gallaryItem }}
+      <div class="col-md-4">
+        <div class="image">
+          <img data-fancybox="gallery" href="{{ .image | absURL }}" class="img-fluid" src="{{ .image | absURL }}" alt="gallary-image" onerror="this.src='{{ .imageAlt | absURL }}'">
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Gallery -->" | safeHTML }}
+{{ end }}
+
+{{ if .Site.Data.career.funfacts.enable }}
+{{"<!-- Fun Facts -->" | safeHTML }}
+<section class="company-fun-facts section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>{{ .Site.Data.career.funfacts.title }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      {{ range .Site.Data.career.funfacts.funfactItem }}
+      <div class="col-lg-3 col-md-6">
+        <div class="fun-fact">
+          <i class="{{ .icon }}"></i>
+          <h3>{{ .title }}</h3>
+          <p>{{ .content }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{"<!-- End of Fun Facts -->" | safeHTML }}
+{{ end }}
+
+{{ if .Site.Data.career.job.enable }}
+{{ "<!-- Job lists -->" | safeHTML }}
+<section class="job-list section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 m-auto">
+        <div class="block">
+          <div class="title text-center">
+            <h2>{{ .Site.Data.career.job.title }}</h2>
+          </div>
+          {{ $.Scratch.Set "counter" 0 }}
+          {{ range .Site.Data.career.job.jobList }}
+          {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+          <div class="job">
+            <div class="content">
+              <h3>{{ .title }}</h3>
+              <p>{{ .location }}</p>
+            </div>
+            <div class="apply-button">
+              <a href="#" class="btn btn-main-md" data-toggle="modal" data-target="#android-developer{{$.Scratch.Get `counter`}}">View Details</a>
+              {{ "<!-- Modal -->" | safeHTML }}
+              <div class="modal fade jd-modal" id="android-developer{{$.Scratch.Get `counter`}}" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">{{ .title }}</h5>
+                      <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="block-2">
+                        <div class="title">
+                          <p>Location</p>
+                        </div>
+                        <div class="details">
+                          <p>{{ .location }}</p>
+                        </div>
+                      </div>
+                      <div class="block-2">
+                        <div class="title">
+                          <p>About You</p>
+                        </div>
+                        <div class="details">
+                          <p>{{ .details }}</p>
+                        </div>
+                      </div>
+                      <div class="block-2">
+                        <div class="title">
+                          <p>You will need to Have</p>
+                        </div>
+                        <div class="details">
+                          <ul>
+                            {{ range .experienceList }}
+                            <li><span class="tf-ion-ios-arrow-forward"></span>{{ .experience }}</li>
+                            {{ end }}
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form-title">
+                        <h3>Apply Now</h3>
+                      </div>
+                      <form action="{{ .formAction }}">
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <input class="form-control main" type="text" placeholder="Name" required>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                            <input class="form-control main" type="email" placeholder="Email Address" required>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                            <input class="form-control main" type="text" placeholder="Portfolio Website Link" required>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                            <input class="form-control main" type="text" placeholder="Github/Stackoverflow Link"
+                              required>
+                          </div>
+                          <div class="col-md-12">
+                            <textarea class="form-control main" name="about" id="" rows="10" placeholder="Write Something About You"></textarea>
+                          </div>
+                          <div class="col-12 text-right">
+                            <button class="btn btn-main-md">Apply Now</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Job lists -->" | safeHTML }}
+{{ end }}
+
+{{ end }}
