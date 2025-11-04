@@ -27,7 +27,7 @@
 				<h1 class="text-white font-weight-bold mb-4">{{ .title | safeHTML }}</h1>
 				<p class="text-white mb-5">{{ .description | safeHTML }}</p>
 				{{ with .button }}
-				<a href="{{ .URL }}" class="btn font-weight-bold btn-main-md">{{ .btnText }}</a>
+				<a href="{{ .URL }}" class="btn font-weight-bold btn-main-md btn-lg" style="font-size: 1.1em; padding: 0.75rem 2rem;">{{ .btnText }}</a>
 				<a href="{{ .URL2 }}" class="btn font-weight-bold btn-main-md ios-only">{{ .btnText2 }}</a>
 				<a href="#" onClick="alert('Open this page from an iOS device.')" class="btn font-weight-bold btn-main-md ios-disable">{{ .btnText2 }}</a>
 				<a href="{{ .URL3 }}" class="btn font-weight-bold btn-main-md">{{ .btnText3 }}</a>
@@ -80,6 +80,34 @@
 	</div>
 </section>
 {{"<!-- /Social Proof -->" | safeHTML}}
+{{ end }}
+
+{{ if .Site.Data.homepage.whyProvenance.enable }}
+{{"<!-- Why Provenance -->" | safeHTML}}
+<section class="section why-provenance bg-white">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 text-center mb-5">
+				<h2 class="font-weight-bold">{{ .Site.Data.homepage.whyProvenance.title }}</h2>
+				<p class="text-muted">{{ .Site.Data.homepage.whyProvenance.description }}</p>
+			</div>
+		</div>
+		<div class="row">
+			{{ range .Site.Data.homepage.whyProvenance.items }}
+			<div class="col-lg-4 col-md-6 mb-5">
+				<div class="why-item">
+					<div class="icon-box mb-3">
+						<i class="{{ .icon }} text-primary" style="font-size: 2.5rem;"></i>
+					</div>
+					<h4 class="mb-3">{{ .title }}</h4>
+					<p class="text-muted">{{ .content }}</p>
+				</div>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</section>
+{{"<!-- /Why Provenance -->" | safeHTML}}
 {{ end }}
 
 {{ if .Site.Data.homepage.featureOne }}
@@ -152,6 +180,32 @@
 </section>
 {{ "<!-- End of Feature Grid -->" | safeHTML }}
 {{ end }}
+{{ end }}
+
+{{ if .Site.Data.homepage.tvosShowcase.enable }}
+{{"<!-- tvOS Showcase -->" | safeHTML}}
+<section class="section tvos-showcase gradient-banner">
+	<div class="container">
+		<div class="row justify-content-center text-center mb-5">
+			<div class="col-lg-10">
+				<h2 class="text-white font-weight-bold mb-3">{{ .Site.Data.homepage.tvosShowcase.title }}</h2>
+				<h4 class="text-white mb-4" style="opacity: 0.9;">{{ .Site.Data.homepage.tvosShowcase.subtitle }}</h4>
+				<p class="text-white" style="font-size: 1.1rem; opacity: 0.95;">{{ .Site.Data.homepage.tvosShowcase.description }}</p>
+			</div>
+		</div>
+		<div class="row">
+			{{ range .Site.Data.homepage.tvosShowcase.features }}
+			<div class="col-lg-6 mb-4">
+				<div class="tvos-feature-card p-4 rounded" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+					<h5 class="text-white font-weight-bold mb-2">{{ .title }}</h5>
+					<p class="text-white mb-0" style="opacity: 0.9;">{{ .description }}</p>
+				</div>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</section>
+{{"<!-- /tvOS Showcase -->" | safeHTML}}
 {{ end }}
 
 {{ if .Site.Data.homepage.service.enable }}
@@ -240,6 +294,64 @@
 	</div>
 </section>
 {{ "<!-- End of Testimonial -->" | safeHTML }}
+{{ end }}
+
+{{ if .Site.Data.homepage.comparisonHighlights.enable }}
+{{"<!-- Comparison Highlights -->" | safeHTML}}
+<section class="section comparison-section bg-white">
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-lg-8 text-center">
+				<h2 class="font-weight-bold mb-4">{{ .Site.Data.homepage.comparisonHighlights.title }}</h2>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-10">
+				<div class="comparison-table">
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead class="thead-light">
+								<tr>
+									<th style="width: 40%;">Feature</th>
+									<th class="text-center" style="width: 20%; background-color: #667eea; color: white;">Provenance</th>
+									<th class="text-center" style="width: 20%;">Others</th>
+									<th style="width: 20%;"></th>
+								</tr>
+							</thead>
+							<tbody>
+								{{ range .Site.Data.homepage.comparisonHighlights.items }}
+								<tr>
+									<td><strong>{{ .feature }}</strong></td>
+									<td class="text-center" style="background-color: #f8f9ff;">
+										{{ if eq .provenance true }}
+											<i class="tf-ion-checkmark-circled text-success" style="font-size: 1.5rem;"></i>
+										{{ else if eq .provenance false }}
+											<i class="tf-ion-close-circled text-danger" style="font-size: 1.5rem;"></i>
+										{{ else }}
+											<strong class="text-primary">{{ .provenance }}</strong>
+										{{ end }}
+									</td>
+									<td class="text-center">
+										{{ if eq .others true }}
+											<i class="tf-ion-checkmark-circled text-success" style="font-size: 1.5rem;"></i>
+										{{ else if eq .others false }}
+											<i class="tf-ion-close-circled text-muted" style="font-size: 1.5rem;"></i>
+										{{ else }}
+											<span class="text-muted">{{ .others }}</span>
+										{{ end }}
+									</td>
+									<td class="text-muted small">{{ .description }}</td>
+								</tr>
+								{{ end }}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{"<!-- /Comparison Highlights -->" | safeHTML}}
 {{ end }}
 
 {{ if .Site.Data.homepage.download.enable }}
