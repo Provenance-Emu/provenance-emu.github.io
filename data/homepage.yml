@@ -26,16 +26,16 @@ banner:
   image : "images/mobile.webp"
   imageAlt : "images/mobile.png"
   button:
-    btnText : "Download IPA"
-    URL : "https://github.com/Provenance-Emu/Provenance/releases"
+    btnText : "Get on App Store"
+    URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
     btnText2: 'Get on AltStore'
     URL2: "altstore"
-    btnText3: 'Install OTA'
-    URL3: 'ota'
-    btnText4: 'Try Beta'
-    URL4: 'ota-beta'
-    # btnText5: 'Patreon'
-    # URL5: 'patreon'
+    btnText3: 'Download IPA'
+    URL3: 'https://github.com/Provenance-Emu/Provenance/releases'
+    btnText4: 'Install OTA'
+    URL4: 'ota'
+    btnText5: 'Try Beta'
+    URL5: 'ota-beta'
 
 
 # banner-feature
@@ -49,6 +49,31 @@ bannerFeature:
   - icon: "tf-ion-monitor"
     title: "iPhone to Big Screen"
     description: "Full tvOS support with TopShelf integration. The only emulator that brings retro gaming to your Apple TV natively."
+
+# why provenance
+whyProvenance:
+  enable: true
+  title: "Why Choose Provenance?"
+  description: "Built different. Built better."
+  items:
+    - icon: "tf-ion-code"
+      title: "100% Open Source"
+      content: "Fully transparent code on GitHub. No hidden tracking, no data collection, no mystery code. Contribute, audit, or fork - it's your freedom."
+    - icon: "tf-ion-social-apple-outline"
+      title: "Only Emulator on Apple TV"
+      content: "Experience retro gaming on the big screen. Native tvOS support with TopShelf integration brings your games to the living room like no other app can."
+    - icon: "tf-ion-android-apps"
+      title: "38+ Systems in One App"
+      content: "From Atari 2600 to PlayStation, including rare systems like PC-FX and Virtual Boy. The most comprehensive library support available."
+    - icon: "tf-ion-locked"
+      title: "No Subscriptions. Ever."
+      content: "Not now. Not later. Not for 'premium' features. Everything is free, forever. No paywalls, no tiers, no upsells. Just gaming."
+    - icon: "tf-ion-ios-people"
+      title: "Community First"
+      content: "9+ years of active development driven by passionate gamers, not corporations. Every feature requested by players, built by the community."
+    - icon: "tf-ion-ios-book"
+      title: "Museum-Quality Library"
+      content: "Not just a game list - a digital collection. Automatic artwork, manuals, release info. Your ROMs deserve better presentation."
 
 # feature one
 featureOne:
@@ -71,6 +96,24 @@ featureTwo:
   comment : ""
   clientImage : ""
   clientName : "Power users and casual gamers covered"
+
+# tvOS showcase
+tvosShowcase:
+  enable: true
+  title: "Your Living Room. Your Arcade."
+  subtitle: "The Only Full-Featured Emulator for Apple TV"
+  description: "While others stop at your phone, Provenance takes retro gaming to the big screen. Native tvOS support means your games look and play exactly as they should on your TV - with all the modern conveniences of Apple's ecosystem."
+  image: "images/console_logos.jpg"
+  imageAlt: "images/console_logos.jpg"
+  features:
+    - title: "TopShelf Integration"
+      description: "Your recently played games appear right on your Apple TV home screen. Jump back in with one click."
+    - title: "Siri Remote Optimized"
+      description: "Full support for the Siri Remote, or connect any MFi, Xbox, or PlayStation controller for the authentic experience."
+    - title: "iCloud Game Sync"
+      description: "Start on iPhone, continue on Apple TV. Your saves sync seamlessly across all your devices."
+    - title: "4K Ready"
+      description: "Upscaled graphics that look stunning on modern displays, with customizable filters and settings."
 
 # service
 service:
@@ -137,18 +180,48 @@ testimonial:
       image: "images/testimonial/feature-testimonial-thumb.jpg"
       content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
 
+# comparison highlights
+comparisonHighlights:
+  enable: true
+  title: "What Makes Us Different"
+  items:
+    - feature: "Apple TV Support"
+      provenance: true
+      others: false
+      description: "Native tvOS app with TopShelf"
+    - feature: "Open Source Code"
+      provenance: true
+      others: false
+      description: "Fully auditable on GitHub"
+    - feature: "Number of Systems"
+      provenance: "38+"
+      others: "6-15"
+      description: "Most comprehensive support"
+    - feature: "Subscription Required"
+      provenance: false
+      others: true
+      description: "Always free forever"
+    - feature: "Game Artwork & Manuals"
+      provenance: true
+      others: "Limited"
+      description: "Full metadata library"
+    - feature: "Multi-disc CD Support"
+      provenance: true
+      others: "Varies"
+      description: "BIN/CUE with disc swapping"
+
 # download
 download:
   enable : true
   title : "Ready to Play?"
-  description : "Download the IPA for sideloading, install via AltStore, or use over-the-air installation. Choose what works best for you."
+  description : "Get it on the App Store for the easiest install, or choose from alternative installation methods."
   downloadButton :
-    - btnText : "Download IPA"
+    - btnText : "App Store"
       icon : "tf-ion-social-apple"
-      URL : "https://github.com/Provenance-Emu/Provenance/releases"
-    - btnText : "Get on AltStore"
+      URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
+    - btnText : "AltStore"
       icon : "tf-ion-ios-cloud-download"
       URL : "altstore"
-    # - btnText: "Support on Patreon"
-    #   icon: "tf-ion-ios-body"
-    #   URL: "patreon"
+    - btnText : "Download IPA"
+      icon : "tf-ion-android-download"
+      URL : "https://github.com/Provenance-Emu/Provenance/releases"
