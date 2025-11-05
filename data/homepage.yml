@@ -97,6 +97,26 @@ featureTwo:
   clientImage : ""
   clientName : "Power users and casual gamers covered"
 
+# mockup carousel
+mockupCarousel:
+  enable: true
+  title: "See It In Action"
+  subtitle: "Beautiful gameplay across multiple systems"
+  description: "Experience retro gaming at its finest with system-specific skins and optimized controls."
+  items:
+    - image: "images/mockups/iphone-saturn.webp"
+      imageAlt: "images/mockups/iphone-saturn.png"
+      title: "Sega Saturn"
+    - image: "images/mockups/iphone-psp.webp"
+      imageAlt: "images/mockups/iphone-psp.png"
+      title: "PlayStation Portable"
+    - image: "images/mockups/iphone-gba.webp"
+      imageAlt: "images/mockups/iphone-gba.png"
+      title: "Game Boy Advance"
+    - image: "images/mockups/iphone-3ds.webp"
+      imageAlt: "images/mockups/iphone-3ds.png"
+      title: "Nintendo 3DS"
+
 # tvOS showcase
 tvosShowcase:
   enable: true
