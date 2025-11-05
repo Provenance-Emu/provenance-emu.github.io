@@ -116,7 +116,12 @@ mockupCarousel:
     - image: "images/mockups/iphone-3ds.webp"
       imageAlt: "images/mockups/iphone-3ds.png"
       title: "Nintendo 3DS"
-
+    - image: "images/mockups/iphone-nes.webp"
+      imageAlt: "images/mockups/iphone-snes.png"
+      title: "Super Nintendo Entertainment System"
+    - image: "images/mockups/iphone-n64.webp"
+      imageAlt: "images/mockups/iphone-n64.png"
+      title: "Nintendo Entertainment System"
 # tvOS showcase
 tvosShowcase:
   enable: true
