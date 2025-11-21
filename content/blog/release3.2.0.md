@@ -39,6 +39,71 @@ The biggest news: **Full skin support is now available to all users—no Provena
 - **GameBoy Color Skins on GameBoy**: Use your favorite GBC skins on original GameBoy games
 - **Enhanced Skin Browser**: Faster, more responsive skin selection and preview
 
+<div class="section mockup-carousel bg-light" style="margin: 3rem 0;">
+	<div class="container">
+		<div class="row justify-content-center text-center mb-5">
+			<div class="col-lg-10">
+				<h2 class="font-weight-bold mb-3">See the New Skins in Action</h2>
+				<p class="text-muted">Beautiful system-specific skins bring your favorite retro games to life</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-10 m-auto">
+				<div class="mockup-slider owl-carousel owl-theme">
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-saturn.webp" onerror="this.src='/images/mockups/iphone-saturn.png'" alt="Sega Saturn">
+						<h5 class="mt-3">Sega Saturn</h5>
+					</div>
+          <div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-dreamcast.webp" onerror="this.src='/images/mockups/iphone-dreamcast.png'" alt="Sega Dreamcast">
+						<h5 class="mt-3">Sega Dreamcast</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-psp.webp" onerror="this.src='/images/mockups/iphone-psp.png'" alt="PlayStation Portable">
+						<h5 class="mt-3">PlayStation Portable</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-gb.webp" onerror="this.src='/images/mockups/iphone-gb.png'" alt="Nintendo Game Boy">
+						<h5 class="mt-3">Nintendo Game Boy</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-gbc.webp" onerror="this.src='/images/mockups/iphone-gbc.png'" alt="Nintendo Game Boy Color">
+						<h5 class="mt-3">Nintendo Game Boy Color</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-gba.webp" onerror="this.src='/images/mockups/iphone-gba.png'" alt="Nintendo Game Boy Advance">
+						<h5 class="mt-3">Nintendo Game Boy Advance</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-3ds.webp" onerror="this.src='/images/mockups/iphone-3ds.png'" alt="Nintendo 3DS">
+						<h5 class="mt-3">Nintendo 3DS</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-nes-crt.webp" onerror="this.src='/images/mockups/iphone-nes-crt.png'" alt="Nintendo Entertainment System">
+						<h5 class="mt-3">Nintendo Entertainment System</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-nes.webp" onerror="this.src='/images/mockups/iphone-snes.png'" alt="Super Nintendo Entertainment System">
+						<h5 class="mt-3">Super Nintendo Entertainment System</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-n64.webp" onerror="this.src='/images/mockups/iphone-n64.png'" alt="Nintendo 64">
+						<h5 class="mt-3">Nintendo 64</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-psx.webp" onerror="this.src='/images/mockups/iphone-psx.png'" alt="Sony PlayStation">
+						<h5 class="mt-3">Sony PlayStation</h5>
+					</div>
+					<div class="item text-center">
+						<img class="img-fluid" src="/images/mockups/iphone-32x-doom.webp" onerror="this.src='/images/mockups/iphone-32x-doom.png'" alt="Sega 32X">
+						<h5 class="mt-3">Sega 32X</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 ## ⚡ Performance Improvements
 
 ### Library & UI
