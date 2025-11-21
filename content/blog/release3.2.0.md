@@ -1,7 +1,7 @@
 ---
 title: "Release 3.2.0"
-date: 2025-11-20T00:00:00-05:00
-draft: true
+date: 2025-11-21T00:00:00-05:00
+draft: false
 tags: ["release"]
 type: "post"
 author: "Joe Mattiello"
@@ -14,6 +14,11 @@ authorSocial:
 categories: ["release"]
 description: "3.2.0 Release: Full skin support for everyone, major performance improvements, and quality of life enhancements."
 image: "images/banners/banner-1.jpg"
+lightgallery: true
+fontawesome: true
+linkToMarkdown: true
+rssFullText: false
+layout: photography
 ---
 
 # Release 3.2.0
