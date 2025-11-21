@@ -75,10 +75,6 @@ The biggest news: **Full skin support is now available to all users—no Provena
 						<h5 class="mt-3">Nintendo Game Boy Advance</h5>
 					</div>
 					<div class="item text-center">
-						<img class="img-fluid" src="/images/mockups/iphone-3ds.webp" onerror="this.src='/images/mockups/iphone-3ds.png'" alt="Nintendo 3DS">
-						<h5 class="mt-3">Nintendo 3DS</h5>
-					</div>
-					<div class="item text-center">
 						<img class="img-fluid" src="/images/mockups/iphone-nes-crt.webp" onerror="this.src='/images/mockups/iphone-nes-crt.png'" alt="Nintendo Entertainment System">
 						<h5 class="mt-3">Nintendo Entertainment System</h5>
 					</div>
