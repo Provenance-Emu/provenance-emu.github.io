@@ -173,7 +173,7 @@ pygmentsStyle = "solarized-dark"
 
     # Preloader
     [params.preloader]
-        enable = true
+        enable = false
 
         # footer
     [params.footer]
