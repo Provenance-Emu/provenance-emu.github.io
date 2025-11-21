@@ -214,7 +214,6 @@ Every contribution helps keep this project alive and thriving. Thank you!
 
 Get Provenance 3.2.0:
 - **App Store**: [Download from the App Store](https://apps.apple.com/us/app/provenance-app/id1596862805)
-- **AltStore**: [Install via AltStore](/altstore/)
 - **IPA Download**: [GitHub Releases](https://github.com/Provenance-Emu/Provenance/releases)
 - **Sideload**: [Installation Instructions](https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/sideloading)
 
