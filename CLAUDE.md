@@ -77,3 +77,26 @@ All in `themes/small-apps-prov/layouts/`:
 ### Submodules
 
 Clone with `--recursive` or run `git submodule update --init --recursive` after cloning. Required for themes to resolve.
+
+## GitHub Issues & PR Conventions
+
+### Epic Issues
+Issues labeled `epic` are parent tracking issues that group multiple related PRs. They must **never** be auto-closed by a PR merge.
+
+- **NEVER** use `Closes #N`, `Fixes #N`, or `Resolves #N` when referencing an epic issue in a PR description.
+- **ALWAYS** use `Part of #N` or `Related to #N` when a PR addresses work from an epic.
+- Child/sub-issues (individual tasks) CAN be closed by PRs using `Closes #N`.
+- If you create a PR that fully completes all tasks in an epic, manually close the epic after human review — do not rely on keyword auto-close.
+
+### PR Description Template
+```
+## Summary
+- Brief bullets of what changed
+
+## Part of
+- Part of #N (epic title)
+
+## Test plan
+- [ ] Hugo builds without errors
+- [ ] Page renders correctly at localhost:1313
+```
