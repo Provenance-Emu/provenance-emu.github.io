@@ -28,11 +28,15 @@
             {{ .btnText2 }}
           </a>
         </div>
+        {{ with .wiki }}
+        {{ if (default true .enable) }}
         <div class="mt-4" data-aos="fade-up" data-aos-delay="400">
-          <a href="https://wiki.provenance-emu.com" target="_blank" rel="noopener noreferrer" class="text-white" style="opacity: 0.85; font-size: 0.95rem; text-decoration: underline;">
-            <i class="tf-ion-ios-book-outline mr-1"></i>Full Documentation on the Provenance Wiki &rarr;
+          <a href="{{ default "https://wiki.provenance-emu.com" .url }}" target="_blank" rel="noopener noreferrer" class="text-white" style="opacity: 0.85; font-size: 0.95rem; text-decoration: underline;" aria-label="{{ default "Full Documentation on the Provenance Wiki" .text }} (opens in a new tab)">
+            <i class="tf-ion-ios-book-outline mr-1" aria-hidden="true"></i>{{ default "Full Documentation on the Provenance Wiki" .text }} &rarr;
           </a>
         </div>
+        {{ end }}
+        {{ end }}
       </div>
     </div>
   </div>
