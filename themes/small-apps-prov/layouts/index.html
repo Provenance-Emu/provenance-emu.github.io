@@ -79,10 +79,10 @@
 
 {{ if .Site.Data.homepage.socialProof.enable }}
 {{"<!-- Social Proof -->" | safeHTML}}
-{{- /* Fetch live GitHub star count at build time; fall back to data file value on error */ -}}
+{{- /* Fetch live GitHub star count at build time via getJSON; fall back to data file value on error */ -}}
 {{- $repoData := dict -}}
-{{- with resources.GetRemote "https://api.github.com/repos/Provenance-Emu/Provenance" -}}
-  {{- $repoData = . | transform.Unmarshal -}}
+{{- with getJSON "https://api.github.com/repos/Provenance-Emu/Provenance" -}}
+  {{- $repoData = . -}}
 {{- end -}}
 <section class="section pt-5 pb-5 bg-light">
 	<div class="container">
@@ -90,7 +90,7 @@
 			{{ range .Site.Data.homepage.socialProof.items }}
 			<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
 				<div class="social-proof-item">
-					{{ if and (eq .text "GitHub Stars") $repoData.stargazers_count }}
+					{{ if and (or (eq .id "github_stars") (eq .text "GitHub Stars")) (isset $repoData "stargazers_count") }}
 						{{- $stars := int $repoData.stargazers_count -}}
 						{{- $displayNumber := "" -}}
 						{{- if ge $stars 1000 -}}
