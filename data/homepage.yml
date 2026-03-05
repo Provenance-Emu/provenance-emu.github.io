@@ -3,7 +3,7 @@ socialProof:
   enable: true
   items:
     # NOTE: Update the 'number' value below annually to reflect years since 2016.
-    - number: "9+"
+    - number: "10+"
       text: "Years Strong"
       description: "Trusted since 2016"
     # NOTE: GitHub Stars count is hardcoded and must be updated manually to remain accurate.
