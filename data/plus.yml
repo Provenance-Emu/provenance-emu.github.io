@@ -1,0 +1,168 @@
+# Provenance Plus - Data File
+
+hero:
+  enable: true
+  title: "Provenance <span class='plus-highlight'>Plus</span>"
+  subtitle: "Support Development. Unlock Convenience."
+  description: "Provenance is fully functional and free — every emulation feature, every system, every controller. Plus adds cloud sync across all your Apple devices, early beta access, and priority support. Your subscription directly funds ongoing development."
+  btnText: "Get on App Store"
+  btnURL: "https://apps.apple.com/us/app/provenance-app/id1596862805"
+  btnText2: "Learn More"
+  btnURL2: "#features"
+
+features:
+  enable: true
+  title: "What Plus Unlocks"
+  subtitle: "Premium convenience features that enhance your experience"
+  feature:
+    - icon: "fas fa-cloud"
+      title: "iCloud Sync"
+      description: "Sync your entire library, saves, settings, skins, BIOS files, and cover art across iPhone, iPad, Mac, and Apple TV. Start a game on one device, pick up right where you left off on another."
+      highlight: true
+
+    - icon: "fas fa-flask"
+      title: "TestFlight Beta Access"
+      description: "Get early access to new features, upcoming system support, UI improvements, and bug fixes before they hit the App Store. Provide direct feedback on features in development."
+      highlight: true
+
+    - icon: "fas fa-headset"
+      title: "Priority Support"
+      description: "Get faster help from the Provenance team when you need it. Plus subscribers receive priority responses for troubleshooting and feature requests."
+      highlight: true
+
+    - icon: "fas fa-users"
+      title: "Family Sharing"
+      description: "One Provenance Plus subscription covers up to 6 family members through Apple Family Sharing. Everyone in your family gets cloud sync, beta access, and priority support."
+      highlight: false
+
+    - icon: "fas fa-tv"
+      title: "Free on Apple TV"
+      description: "iCloud sync is free on Apple TV by default. tvOS can reclaim app storage at any time, so CloudKit sync is enabled automatically to protect your data from unexpected deletion."
+      highlight: false
+
+    - icon: "fas fa-code-branch"
+      title: "Open Source Supported"
+      description: "Provenance is and always will be open source. Sideloaded builds include all features free. Plus subscriptions on the App Store fund development, infrastructure, and new system support."
+      highlight: false
+
+comparison:
+  enable: true
+  title: "Free vs Plus"
+  subtitle: "Every emulation feature is free. Plus adds convenience and early access."
+  rows:
+    - feature: "All 38+ Emulated Systems"
+      free: true
+      plus: true
+      category: "core"
+
+    - feature: "Full Emulation (Save States, Cheats, Fast Forward)"
+      free: true
+      plus: true
+      category: "core"
+
+    - feature: "Shaders & Visual Filters"
+      free: true
+      plus: true
+      category: "core"
+
+    - feature: "On-Screen Controls & Controller Support"
+      free: true
+      plus: true
+      category: "core"
+
+    - feature: "Controller Skins"
+      free: true
+      plus: true
+      category: "core"
+
+    - feature: "RetroAchievements"
+      free: true
+      plus: true
+      category: "core"
+
+    - feature: "Multiplayer"
+      free: true
+      plus: true
+      category: "core"
+
+    - feature: "Local Library Management"
+      free: true
+      plus: true
+      category: "core"
+
+    - feature: "iCloud Sync (Library, Saves, Settings, Skins, BIOS, Artwork)"
+      free: false
+      plus: true
+      category: "plus"
+
+    - feature: "TestFlight Beta Access"
+      free: false
+      plus: true
+      category: "plus"
+
+    - feature: "Priority Support"
+      free: false
+      plus: true
+      category: "plus"
+
+    - feature: "Family Sharing (up to 6 members)"
+      free: false
+      plus: true
+      category: "plus"
+
+pricing:
+  enable: true
+  title: "Simple, Transparent Pricing"
+  subtitle: "Choose the plan that works for you. Cancel anytime."
+  plans:
+    - name: "Monthly"
+      price: "$3.99"
+      period: "/month"
+      description: "Try it out"
+      highlight: false
+
+    - name: "Annual"
+      price: "$39.99"
+      period: "/year"
+      description: "Save 17% - best for regular users"
+      highlight: true
+      badge: "Most Popular"
+
+    - name: "Lifetime"
+      price: "$99.99"
+      period: "one-time"
+      description: "Pay once, keep forever"
+      highlight: false
+      badge: "Best Value"
+
+  note: "Subscribe from within the Provenance app: Settings > Provenance Plus. All plans include Family Sharing."
+  appStoreURL: "https://apps.apple.com/us/app/provenance-app/id1596862805"
+
+faq:
+  enable: true
+  title: "Frequently Asked Questions"
+  items:
+    - question: "Do I lose my data if I cancel Plus?"
+      answer: "No. All your local data (ROMs, saves, settings) stays on your device. You lose the ability to sync across devices, but previously synced data remains on each device where it was downloaded."
+
+    - question: "Can I use Plus on multiple devices?"
+      answer: "Yes. Your subscription is tied to your Apple ID. Sign in on any device and your Plus benefits follow you. Plus also supports Family Sharing for up to 6 family members."
+
+    - question: "Why is Apple TV sync free?"
+      answer: "tvOS aggressively reclaims storage from apps, which can delete your ROMs and saves without warning. To protect users from unexpected data loss, iCloud sync is included free and enabled by default on Apple TV."
+
+    - question: "Is sideloading free forever?"
+      answer: "Yes. If you sideload or build from source, all features (including those that are Plus-only on the App Store) are free. Provenance is open source — Plus subscriptions on the App Store support development."
+
+    - question: "What happens to my synced data if my subscription lapses?"
+      answer: "Your data stays on every device it was synced to. You just won't be able to sync new changes until you resubscribe. Nothing is deleted."
+
+    - question: "How do I restore my purchase on a new device?"
+      answer: "Your subscription restores automatically when you sign in with the same Apple ID. You can also go to Settings > Provenance Plus > Restore Purchases in the app."
+
+cta:
+  enable: true
+  title: "Ready to Go Plus?"
+  description: "Support Provenance development and unlock cloud sync across all your Apple devices."
+  btnText: "Download on the App Store"
+  btnURL: "https://apps.apple.com/us/app/provenance-app/id1596862805"
