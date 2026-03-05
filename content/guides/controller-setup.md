@@ -12,7 +12,7 @@ Provenance supports a wide range of physical game controllers on both iOS and tv
 Provenance works with any MFi (Made for iPhone) certified controller and most Bluetooth controllers, including:
 
 - **PlayStation DualSense and DualShock 4** — pair via Bluetooth
-- **Xbox Series X/S, Xbox One, and Xbox 360 controllers** — pair via Bluetooth
+- **Xbox Series X|S and Bluetooth-capable Xbox One controllers (e.g., Xbox One S)** — pair via Bluetooth
 - **8BitDo controllers** — pair via Bluetooth (use MFi mode)
 - **SteelSeries Nimbus+** and other MFi controllers
 - **Apple TV Siri Remote** — limited input, works for basic navigation
