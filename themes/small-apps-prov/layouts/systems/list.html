@@ -44,7 +44,7 @@
             {{ with .Params.shortName }}
             <p class="text-muted mb-2">{{ . }}</p>
             {{ end }}
-            <p class="card-text mb-2">{{ .Summary }}</p>
+            <div class="card-text mb-2">{{ .Summary }}</div>
             {{ with .Params.supportedFormats }}
             <p class="card-text mb-0">
               <small class="text-muted">Formats: <code>{{ . }}</code></small>
