@@ -42,3 +42,30 @@
 }
 </script>
 {{- end }}
+
+{{- /* FAQPage JSON-LD - FAQ section only */ -}}
+{{- if eq .Section "faq" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- $first := true -}}
+    {{- range .Site.Data.faq.faq -}}
+      {{- range .faqList -}}
+        {{- if not $first }},{{ end -}}
+        {{- $first = false }}
+    {
+      "@type": "Question",
+      "name": {{ .question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ .answer | jsonify }}
+      }
+    }
+      {{- end -}}
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
