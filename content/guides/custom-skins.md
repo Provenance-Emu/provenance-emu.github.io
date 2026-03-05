@@ -13,7 +13,7 @@ Controller skins are image-based themes for the on-screen button overlay that ap
 
 ## Steps
 
-1. **Find a skin to download.** The Provenance community shares skins on the official Discord server (`discord.gg/4TK7PU5`) and on GitHub. Look for files with the `.provenance-skin` extension.
+1. **Find a skin to download.** The Provenance community shares skins on the official Discord server ([discord.gg/4TK7PU5](https://discord.gg/4TK7PU5)) and on GitHub. Look for files with the `.provenance-skin` extension.
 
 2. **Download the skin file to your iPhone or iPad.** If you are downloading from Safari, the file will be saved to the Files app in your Downloads folder. If sent via Discord or another app, use the share sheet to save it to the Files app.
 
