@@ -1,0 +1,33 @@
+name: Update AltStore/SideStore Source
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'  # Weekly Monday 6am UTC
+  repository_dispatch:
+    types: [update-altstore]
+
+permissions:
+  contents: write
+
+jobs:
+  update-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate apps.json
+        run: ./scripts/generate-apps-json.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push if changed
+        run: |
+          git diff --quiet static/apps.json && echo "No changes" && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/apps.json
+          git commit -m "Update AltStore/SideStore source feed
+
+          Auto-generated from GitHub Releases."
+          git push

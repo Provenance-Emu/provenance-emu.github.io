@@ -1,0 +1,66 @@
+{
+  "name": "Provenance EMU",
+  "identifier": "org.provenance-emu.AltStore",
+  "sourceURL": "https://provenance-emu.com/apps.json",
+  "subtitle": "Multi-emulator frontend for iOS & tvOS",
+  "website": "https://provenance-emu.com",
+  "tintColor": "#162434",
+  "app": {
+    "name": "Provenance EMU",
+    "bundleIdentifier": "org.provenance-emu.provenance",
+    "developerName": "Joe Mattiello",
+    "subtitle": "Multi-emulator frontend for iOS & tvOS",
+    "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems.",
+    "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
+    "tintColor": "#162434",
+    "category": "games",
+    "appPermissions": {
+      "entitlements": [
+        "com.apple.developer.kernel.increased-memory-limit",
+        "com.apple.developer.kernel.extended-virtual-addressing",
+        "com.apple.security.application-groups",
+        "com.apple.security.cs.allow-jit",
+        "com.apple.security.cs.allow-unsigned-executable-memory",
+        "com.apple.security.cs.disable-executable-page-protection",
+        "com.apple.security.cs.disable-library-validation",
+        "com.apple.security.network.client",
+        "com.apple.security.network.server",
+        "com.apple.security.personal-information.photos-library",
+        "com.apple.security.device.bluetooth",
+        "com.apple.security.device.camera",
+        "com.apple.security.device.audio-input"
+      ],
+      "privacy": [
+        {
+          "name": "LocalNetwork",
+          "usageDescription": "Provenance uses the local network to find and communicate with AltServer."
+        },
+        {
+          "name": "PhotoLibrary",
+          "usageDescription": "Provenance can set custom artworks from your photos or save screenshots to the Photo Library."
+        },
+        {
+          "name": "Bluetooth",
+          "usageDescription": "Provenance uses Bluetooth to support game controllers."
+        },
+        {
+          "name": "Camera",
+          "usageDescription": "Used for album artwork."
+        },
+        {
+          "name": "Microphone",
+          "usageDescription": "Provenance uses the microphone for systems that support audio input (eg. Famicom)."
+        },
+        {
+          "name": "Motion",
+          "usageDescription": "Provenance uses your device's accelerometer and gyroscope to emulate portable consoles' built-in sensors."
+        }
+      ]
+    },
+    "screenshotURLs": [
+      "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2306.jpg",
+      "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2307.jpg",
+      "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2308.jpg"
+    ]
+  }
+}

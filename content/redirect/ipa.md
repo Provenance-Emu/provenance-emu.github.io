@@ -3,7 +3,7 @@
 # url to "/old_blog" and redirect_to to "/blog" below
 type = "redirect"
 url = "/ipa"
-redirect_to = "https://provenance-builds.s3-us-east-2.amazonaws.com/apps/2.2.0/Provenance.ipa"
+redirect_to = "https://github.com/Provenance-Emu/Provenance/releases/latest"
 redirect_enabled = true
 private = false
 +++

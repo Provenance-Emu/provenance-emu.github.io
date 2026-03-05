@@ -32,10 +32,8 @@ banner:
     URL2: "altstore"
     btnText3: 'Download IPA'
     URL3: 'https://github.com/Provenance-Emu/Provenance/releases'
-    btnText4: 'Install OTA'
-    URL4: 'ota'
-    btnText5: 'Try Beta'
-    URL5: 'ota-beta'
+    btnText4: 'Get on SideStore'
+    URL4: 'sidestore'
 
 
 # banner-feature
