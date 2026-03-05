@@ -48,67 +48,91 @@ features:
 comparison:
   enable: true
   title: "Free vs Plus"
-  subtitle: "Every emulation feature is free. Plus adds convenience and early access."
+  subtitle: "Every emulation feature is free. Plus adds cloud sync, beta access, and direct support for development."
   rows:
     - feature: "All 38+ Emulated Systems"
-      free: true
+      sideloaded: true
+      appstore: true
       plus: true
       category: "core"
 
     - feature: "Full Emulation (Save States, Cheats, Fast Forward)"
-      free: true
+      sideloaded: true
+      appstore: true
       plus: true
       category: "core"
 
     - feature: "Shaders & Visual Filters"
-      free: true
+      sideloaded: true
+      appstore: true
       plus: true
       category: "core"
 
     - feature: "On-Screen Controls & Controller Support"
-      free: true
+      sideloaded: true
+      appstore: true
       plus: true
       category: "core"
 
-    - feature: "Controller Skins"
-      free: true
+    - feature: "Controller Skins & Themes"
+      sideloaded: true
+      appstore: true
       plus: true
       category: "core"
 
     - feature: "RetroAchievements"
-      free: true
+      sideloaded: true
+      appstore: true
       plus: true
       category: "core"
 
     - feature: "Multiplayer"
-      free: true
+      sideloaded: true
+      appstore: true
       plus: true
       category: "core"
 
     - feature: "Local Library Management"
-      free: true
+      sideloaded: true
+      appstore: true
       plus: true
       category: "core"
 
     - feature: "iCloud Sync (Library, Saves, Settings, Skins, BIOS, Artwork)"
-      free: false
+      sideloaded: true
+      appstore: false
+      plus: true
+      category: "plus"
+
+    - feature: "Exclusive Plus Themes"
+      sideloaded: false
+      appstore: false
       plus: true
       category: "plus"
 
     - feature: "TestFlight Beta Access"
-      free: false
+      sideloaded: false
+      appstore: false
       plus: true
       category: "plus"
 
     - feature: "Priority Support"
-      free: false
+      sideloaded: false
+      appstore: false
       plus: true
       category: "plus"
 
     - feature: "Family Sharing (up to 6 members)"
-      free: false
+      sideloaded: false
+      appstore: false
       plus: true
       category: "plus"
+
+    - feature: "Supports Development"
+      sideloaded_label: "Community"
+      appstore_label: "Community"
+      plus_label: "Direct"
+      category: "core"
 
 pricing:
   enable: true

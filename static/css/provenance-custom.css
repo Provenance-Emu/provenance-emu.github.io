@@ -1092,6 +1092,32 @@ footer .socialIcon a:hover {
   background: linear-gradient(90deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%) !important;
 }
 
+.plus-text-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.plus-text-label-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+  color: #667eea;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 /* Plus Pricing */
 .plus-pricing {
   padding: 5rem 0;
@@ -1267,7 +1293,9 @@ footer .socialIcon a:hover {
   }
 
   .plus-comparison-table table {
-    min-width: 500px;
+    min-width: 640px;
+  }
+}
 
 .press-contact-card a {
   color: #667eea;

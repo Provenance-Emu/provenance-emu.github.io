@@ -81,31 +81,45 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-10 m-auto" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-12" data-aos="fade-up" data-aos-delay="200">
         <div class="plus-comparison-table comparison-table">
           <table class="table">
             <thead>
               <tr>
-                <th style="width: 60%;">Feature</th>
-                <th class="text-center" style="width: 20%;">Free</th>
-                <th class="text-center plus-column-header" style="width: 20%;">Plus</th>
+                <th style="width: 46%;">Feature</th>
+                <th class="text-center" style="width: 18%;">Free<br><small class="font-weight-normal text-muted" style="text-transform: none; letter-spacing: 0; font-size: 0.75rem;">Sideloaded</small></th>
+                <th class="text-center" style="width: 18%;">App Store<br><small class="font-weight-normal text-muted" style="text-transform: none; letter-spacing: 0; font-size: 0.75rem;">Free</small></th>
+                <th class="text-center plus-column-header" style="width: 18%;">Provenance<br><small class="font-weight-normal" style="text-transform: none; letter-spacing: 0; font-size: 0.75rem; opacity: 0.85;">Plus</small></th>
               </tr>
             </thead>
             <tbody>
               {{ range .rows }}
-              <tr class="{{ if eq .category "plus" }}plus-exclusive-row{{ end }}">
+              <tr class='{{ if eq .category "plus" }}plus-exclusive-row{{ end }}'>
                 <td>
                   <strong>{{ .feature }}</strong>
                 </td>
                 <td class="text-center">
-                  {{ if .free }}
+                  {{ if .sideloaded_label }}
+                  <span class="plus-text-label">{{ .sideloaded_label }}</span>
+                  {{ else if .sideloaded }}
                   <span class="plus-check"><i class="fas fa-check"></i></span>
                   {{ else }}
                   <span class="plus-dash"><i class="fas fa-minus"></i></span>
                   {{ end }}
                 </td>
                 <td class="text-center">
-                  {{ if .plus }}
+                  {{ if .appstore_label }}
+                  <span class="plus-text-label">{{ .appstore_label }}</span>
+                  {{ else if .appstore }}
+                  <span class="plus-check"><i class="fas fa-check"></i></span>
+                  {{ else }}
+                  <span class="plus-dash"><i class="fas fa-minus"></i></span>
+                  {{ end }}
+                </td>
+                <td class="text-center">
+                  {{ if .plus_label }}
+                  <span class="plus-text-label-gold">{{ .plus_label }}</span>
+                  {{ else if .plus }}
                   <span class="plus-check-gold"><i class="fas fa-check"></i></span>
                   {{ else }}
                   <span class="plus-dash"><i class="fas fa-minus"></i></span>
