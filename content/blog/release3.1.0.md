@@ -69,4 +69,10 @@ For a complete list of changes, please visit our [GitHub release page](https://g
 
 ---
 
+## Provenance Plus
+
+The new iCloud Sync feature in 3.1.0 is just the beginning. **[Provenance Plus](/plus/)** takes it further with full cross-device iCloud sync, TestFlight beta access so you get new features first, and priority support — all while directly funding the continued development of Provenance. Subscribe from within the app: *Settings > Provenance Plus*.
+
+---
+
 Thank you for being part of the Provenance community. Happy gaming!

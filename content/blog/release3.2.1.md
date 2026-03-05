@@ -54,4 +54,10 @@ For a complete list of changes, please visit our [GitHub release page](https://g
 
 ---
 
+## Provenance Plus
+
+Love what the team is building? **[Provenance Plus](/plus/)** gives you iCloud save sync across all your Apple devices, early access via TestFlight, and priority support — and every subscription goes directly toward sustaining Provenance's development. Subscribe from within the app: *Settings > Provenance Plus*.
+
+---
+
 Thank you for being part of the Provenance community. Happy gaming!
