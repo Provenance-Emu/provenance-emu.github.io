@@ -10,9 +10,10 @@ Both Provenance and Delta are free options for playing retro games on iPhone. Th
 
 | Feature | Provenance | Delta |
 |---|---|---|
-| **Price** | Free (sideload) / App Store $0 + Plus | Free |
+| **Price** | Free (sideload or App Store); Plus is optional | Free (App Store or sideload via AltStore) |
+| **Beta / early features** | Public releases | Early access via Patreon or AltStore+ subscription |
 | **Platforms** | iOS, iPadOS, tvOS (Apple TV) | iOS, iPadOS |
-| **Apple TV support** | Yes — native tvOS app | No |
+| **Apple TV support** | Yes — native tvOS app with full native UI | No |
 | **Systems supported** | 38+ (NES, SNES, N64, GBA, GBC, GB, DS, PS1, Saturn, Genesis, and many more) | 7 (NES, SNES, N64, GBA, GBC, GB, DS) |
 | **PlayStation 1** | Yes | No |
 | **Sega Genesis/Mega Drive** | Yes | No |
@@ -38,11 +39,11 @@ Provenance supports 38+ systems, covering platforms Delta does not: PlayStation 
 
 Provenance uses libretro cores that are actively maintained and updated from upstream, meaning you get newer emulation accuracy, broader compatibility, and more per-core configuration options. This translates to better game compatibility and more fine-grained control over emulation behavior versus bundled, less frequently updated cores.
 
-Provenance is also the only major iOS emulator with a native tvOS app, making it the practical choice for Apple TV gaming. Being open source under the MIT license means the community can contribute, audit the code, and build on it.
+Provenance is one of the very few emulators with a native tvOS app. RetroArch also supports tvOS, but uses a cross-platform non-native UI shared with desktop platforms — requiring manual menu navigation and file management for setup. Provenance provides a native Apple TV experience with Top Shelf extension, proper controller navigation, and no manual file wrangling. Being open source under the MIT license means the community can contribute, audit the code, and build on it.
 
 ## Summary
 
-If you only need Delta's seven Nintendo systems and want a simple setup, Delta is a functional choice. If you want broader system support — PlayStation, Sega, Atari, and 30+ more — Apple TV compatibility, frequently updated libretro cores with more configuration options, or open source code, Provenance is the stronger fit.
+If you only need Delta's seven Nintendo systems, Delta is a functional free choice — though note that beta features and early builds require a Patreon or AltStore+ subscription. If you want broader system support — PlayStation, Sega, Atari, and 30+ more — a true native Apple TV experience, frequently updated libretro cores with more configuration options, or open source code, Provenance is the stronger fit.
 
 There is no technical reason you cannot use both apps simultaneously.
 

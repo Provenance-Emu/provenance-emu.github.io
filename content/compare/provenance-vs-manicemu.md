@@ -10,7 +10,7 @@ ManicEmu is a newer iOS emulator that appeared on the App Store in 2024 alongsid
 
 | Feature | Provenance | ManicEmu |
 |---|---|---|
-| **Price** | Free (sideload) / App Store $0 + Plus | $0.99/month or $9.99 lifetime |
+| **Price** | Free (sideload or App Store); Plus is optional | Free on App Store (premium features included); free to sideload |
 | **Platforms** | iOS, iPadOS, tvOS (Apple TV) | iOS, iPadOS |
 | **Apple TV support** | Yes — native tvOS app | No |
 | **Systems supported** | 38+ systems | Multiple systems (Nintendo, SEGA, PlayStation) |
@@ -29,7 +29,7 @@ ManicEmu is a newer iOS emulator that appeared on the App Store in 2024 alongsid
 
 ## Where ManicEmu Stands Out
 
-ManicEmu is available directly on the App Store with a paid model that funds ongoing development. For users who want to pay for an app as a way to support a developer directly, ManicEmu's pricing model may appeal. It supports a range of Nintendo and SEGA platforms.
+ManicEmu is available directly on the App Store for free and can also be sideloaded at no cost. It supports a range of Nintendo and SEGA platforms and includes premium features without a paywall.
 
 ## Where Provenance Stands Out
 
@@ -37,16 +37,16 @@ Provenance supports 38+ systems including Atari platforms and several others tha
 
 Provenance uses libretro cores that are actively maintained and updated from upstream, giving you newer emulation accuracy, broader game compatibility, and extensive per-core configuration options. ManicEmu is closed source, so its core quality, update cadence, and compatibility coverage are not independently verifiable.
 
-Provenance is open source under the MIT license — the code is publicly auditable and community-contributed. The native Apple TV app is a significant differentiator; Provenance is one of the only emulators available for tvOS, making it the practical choice for couch gaming on a TV.
+Provenance is open source under the MIT license — the code is publicly auditable and community-contributed. Provenance is one of the few emulators with a native tvOS app. RetroArch also supports tvOS but uses a cross-platform non-native UI requiring manual menu diving and file management. Provenance provides a proper native Apple TV experience with Top Shelf extension and full controller navigation out of the box.
 
 ## Pricing Summary
 
 - **Provenance**: Free via sideloading (AltStore, Sideloadly, etc.); also available on the App Store for free with Provenance Plus as an optional in-app purchase
-- **ManicEmu**: Requires a subscription ($0.99/month or $9.99 as a one-time lifetime purchase)
+- **ManicEmu**: Free on the App Store with premium features included; also free to sideload
 
 ## Summary
 
-If you want the broadest system support, Apple TV compatibility, open source code, actively maintained libretro cores, and a zero-cost option, Provenance is the more capable choice. ManicEmu is a paid alternative that covers a narrower range of systems.
+If you want the broadest system support, a native Apple TV experience, open source code, and actively maintained libretro cores, Provenance is the more capable choice. ManicEmu is a free alternative for users who need a narrower set of systems and don't need Apple TV.
 
 ## Try Provenance
 
