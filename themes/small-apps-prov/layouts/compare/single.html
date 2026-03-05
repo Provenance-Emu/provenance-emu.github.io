@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+{{ "<!-- Compare Single -->" | safeHTML }}
+<section class="section compare-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 m-auto">
+        <div class="compare-header text-center mb-5">
+          <h1>{{ .Title }}</h1>
+          {{ with .Description }}
+          <p class="lead text-muted">{{ . }}</p>
+          {{ end }}
+        </div>
+        <div class="compare-content">
+          {{ .Content }}
+        </div>
+        <div class="compare-footer mt-5 pt-4 border-top">
+          <a href="{{ "/compare/" | absURL }}" class="btn btn-outline-secondary">&larr; Back to All Comparisons</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Compare Single -->" | safeHTML }}
+
+{{ partial "cta.html" . }}
+
+{{ end }}

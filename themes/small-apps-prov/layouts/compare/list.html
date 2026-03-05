@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+{{ "<!-- Compare List -->" | safeHTML }}
+<section class="section compare-list">
+  <div class="container">
+    <div class="row">
+      {{ range .Pages }}
+      <div class="col-lg-6 col-md-6 mb-4">
+        <div class="card h-100 compare-card">
+          <div class="card-body">
+            <h2 class="card-title h4"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p class="card-text">{{ .Description }}</p>
+            <a href="{{ .Permalink }}" class="btn btn-main-sm">Compare</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Compare List -->" | safeHTML }}
+
+{{ partial "cta.html" . }}
+
+{{ end }}
