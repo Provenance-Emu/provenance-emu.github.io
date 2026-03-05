@@ -33,7 +33,7 @@ Provenance includes a built-in WebDAV server that lets you transfer multiple ROM
 
 2. **Go to Settings > Import/Export > WebDAV Server** and tap **Start WebDAV Server**. Provenance will show you an IP address and port number.
 
-3. **On your Mac or PC**, open Finder (Mac) or Windows Explorer (Windows). On Mac, press `Cmd+K` in Finder and enter `http://[IP address shown in Provenance]`. On Windows, map a network drive to the same address.
+3. **On your Mac or PC**, open Finder (Mac) or Windows Explorer (Windows). On Mac, press `Cmd+K` in Finder and enter `http://[IP address shown in Provenance]:[port shown in Provenance]/`. On Windows, map a network drive to the same address, including the port.
 
 4. **Copy your ROM files** into the appropriate system folder in the WebDAV share.
 
