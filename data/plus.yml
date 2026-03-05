@@ -9,6 +9,10 @@ hero:
   btnURL: "https://apps.apple.com/us/app/provenance-app/id1596862805"
   btnText2: "Learn More"
   btnURL2: "#features"
+  wiki:
+    enable: true
+    url: "https://wiki.provenance-emu.com"
+    text: "Full Documentation on the Provenance Wiki"
 
 features:
   enable: true
