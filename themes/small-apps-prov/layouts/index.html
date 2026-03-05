@@ -79,13 +79,29 @@
 
 {{ if .Site.Data.homepage.socialProof.enable }}
 {{"<!-- Social Proof -->" | safeHTML}}
+{{- /* Fetch live GitHub star count at build time; fall back to data file value on error */ -}}
+{{- $repoData := dict -}}
+{{- with resources.GetRemote "https://api.github.com/repos/Provenance-Emu/Provenance" -}}
+  {{- $repoData = . | transform.Unmarshal -}}
+{{- end -}}
 <section class="section pt-5 pb-5 bg-light">
 	<div class="container">
 		<div class="row justify-content-center text-center">
 			{{ range .Site.Data.homepage.socialProof.items }}
 			<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
 				<div class="social-proof-item">
+					{{ if and (eq .text "GitHub Stars") $repoData.stargazers_count }}
+						{{- $stars := int $repoData.stargazers_count -}}
+						{{- $displayNumber := "" -}}
+						{{- if ge $stars 1000 -}}
+							{{- $displayNumber = printf "%.1fK+" (div (float $stars) 1000.0) -}}
+						{{- else -}}
+							{{- $displayNumber = printf "%d+" $stars -}}
+						{{- end -}}
+					<h2 class="font-weight-bold text-primary mb-2">{{ $displayNumber }}</h2>
+					{{ else }}
 					<h2 class="font-weight-bold text-primary mb-2">{{ .number }}</h2>
+					{{ end }}
 					<h5 class="mb-1">{{ .text }}</h5>
 					<p class="text-muted small">{{ .description }}</p>
 				</div>
