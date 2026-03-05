@@ -1,0 +1,44 @@
+{{- /* Organization JSON-LD - included on every page */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Provenance",
+  "url": {{ .Site.BaseURL | jsonify }},
+  "logo": {{ "img/logo.png" | absURL | jsonify }},
+  "sameAs": [
+    "https://github.com/Provenance-Emu/Provenance",
+    "https://discord.gg/4TK7PU5",
+    "https://x.com/provenanceapp",
+    "https://www.facebook.com/provenance.emu/"
+  ]
+}
+</script>
+
+{{- /* SoftwareApplication JSON-LD - homepage only */ -}}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Provenance",
+  "operatingSystem": "iOS, tvOS",
+  "applicationCategory": "GameApplication",
+  "description": {{ .Site.Params.description | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }},
+  "downloadUrl": "https://apps.apple.com/us/app/provenance-app/id1596862805",
+  "softwareVersion": "3.2.1", {{/* TODO: keep in sync with static/apps.json; consider moving to site params */}}
+  "author": {
+    "@type": "Organization",
+    "name": {{ .Site.Params.author | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }}
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "screenshot": {{ "blog/2022/12/09/release-2.2.0/images/IMG_2306.jpg" | absURL | jsonify }}
+}
+</script>
+{{- end }}
