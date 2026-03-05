@@ -83,7 +83,7 @@
 {{- $repoData := dict -}}
 {{- with try (resources.GetRemote "https://api.github.com/repos/Provenance-Emu/Provenance") -}}
   {{- with .Err -}}
-    {{- warnf "GitHub API fetch failed: %s" . -}}
+    {{- warnf "GitHub API fetch failed for https://api.github.com/repos/Provenance-Emu/Provenance (repo: Provenance-Emu/Provenance); falling back to YAML-configured social proof values. Error: %v" . -}}
   {{- else -}}
     {{- $repoData = .Value | transform.Unmarshal -}}
   {{- end -}}
