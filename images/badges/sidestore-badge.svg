@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" width="180" height="60">
+  <defs>
+    <linearGradient id="bg-side" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2b2b2b"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="60" rx="10" ry="10" fill="url(#bg-side)"/>
+  <rect width="180" height="60" rx="10" ry="10" fill="none" stroke="#a6a6a6" stroke-width="1"/>
+  <!-- SideStore icon - stylized S -->
+  <g transform="translate(14, 12)">
+    <circle cx="17" cy="17" r="16" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.9"/>
+    <path fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" d="M11 13c0-3 3-5 6-5s6 2 6 5-3 4-6 4-6 2-6 5 3 5 6 5 6-2 6-5"/>
+  </g>
+  <!-- Text -->
+  <text x="56" y="24" fill="#ffffff" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="0.02em">Get it on</text>
+  <text x="56" y="45" fill="#ffffff" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="-0.01em">SideStore</text>
+</svg>
