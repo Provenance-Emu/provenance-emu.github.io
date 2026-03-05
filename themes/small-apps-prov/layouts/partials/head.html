@@ -3,9 +3,13 @@
 
   {{ "<!-- mobile responsive meta -->" | safeHTML }}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+  {{- $desc := .Description | default .Summary | default .Site.Params.description -}}
+  <meta name="description" content="{{ $desc | plainify | htmlEscape | truncate 160 }}">
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ hugo.Generator }}
+
+  {{ "<!-- Canonical URL -->" | safeHTML }}
+  <link rel="canonical" href="{{ .Permalink }}">
 
   {{ "<!-- Page title -->" | safeHTML }}
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
