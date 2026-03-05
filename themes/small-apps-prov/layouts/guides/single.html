@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+{{ "<!-- Guide Single -->" | safeHTML }}
+<section class="section guide-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 m-auto">
+        <div class="guide-header text-center mb-5">
+          <h1>{{ .Title }}</h1>
+          {{ with .Description }}
+          <p class="lead text-muted">{{ . }}</p>
+          {{ end }}
+          {{ with .Params.tags }}
+          <ul class="list-inline mt-3">
+            {{ range . }}
+            <li class="list-inline-item"><span class="badge badge-secondary">{{ . }}</span></li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </div>
+        <div class="guide-content">
+          {{ .Content }}
+        </div>
+        <div class="guide-footer mt-5 pt-4 border-top">
+          <a href="{{ "/guides/" | absURL }}" class="btn btn-outline-secondary">&larr; Back to All Guides</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Guide Single -->" | safeHTML }}
+
+{{ partial "cta.html" . }}
+
+{{ end }}
