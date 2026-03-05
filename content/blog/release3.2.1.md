@@ -1,10 +1,10 @@
 ---
 title: "Release 3.2.1"
-date: 2025-11-23T18:54:37-00:00
+date: 2025-11-23T18:54:37-05:00
 draft: false
 tags: ["release"]
 type: "post"
-author: "Provenance Team"
+author: "Joe Mattiello"
 authorImage: "images/team/joe.jpg"
 authorSocial:
   - icon : "tf-ion-social-github"
