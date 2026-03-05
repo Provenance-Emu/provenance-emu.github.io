@@ -105,13 +105,15 @@
       // -----------------------------
       //  Count Down JS
       // -----------------------------
-      $('#simple-timer').syotimer({
-          year: 2019,
-          month: 9,
-          day: 1,
-          hour: 0,
-          minute: 0
-      });
+      if ($.fn.syotimer) {
+          $('#simple-timer').syotimer({
+              year: 2019,
+              month: 9,
+              day: 1,
+              hour: 0,
+              minute: 0
+          });
+      }
 
       // ----------------------------
       // AOS

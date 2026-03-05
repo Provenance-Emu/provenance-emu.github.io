@@ -121,7 +121,6 @@ pygmentsStyle = "solarized-dark"
     # Social media
     facebook_site = "provenance.emu" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
     twitter_site = "provenanceapp" # the Twitter handle of your site (without the '@')
-    default_sharing_image = "img/sharing-default.png"
     SocialImage = "img/sharing-default.png"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet

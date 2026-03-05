@@ -22,12 +22,7 @@
           {{ end }}
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="google-map">
-          {{ "<!-- Google Map -->" | safeHTML }}
-          <div id="map_canvas" data-latitude="{{ with .Site.Params.mapLatitude }} {{ . }} {{ end }}" data-longitude="{{ with .Site.Params.mapLongitude }} {{ . }} {{ end }}" data-marker="{{ with .Site.Params.mapMarker }} {{ . | absURL }} {{ end }} "></div>
-        </div>
-      </div>
+      {{/* Google Map removed - scripts were removed from config */}}
     </div>
   </div>
 </section>
