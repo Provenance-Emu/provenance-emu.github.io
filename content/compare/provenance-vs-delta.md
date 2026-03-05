@@ -13,7 +13,7 @@ Both Provenance and Delta are solid, free options for playing retro games on iPh
 | **Price** | Free (sideload) / App Store $0 + Plus | Free |
 | **Platforms** | iOS, iPadOS, tvOS (Apple TV) | iOS, iPadOS |
 | **Apple TV support** | Yes — native tvOS app | No |
-| **Systems supported** | 38+ (NES, SNES, N64, GBA, GBC, GB, GBA, DS, PS1, Saturn, Genesis, and many more) | ~10 (NES, SNES, N64, GBA, GBC, GB, DS, GBA) |
+| **Systems supported** | 38+ (NES, SNES, N64, GBA, GBC, GB, DS, PS1, Saturn, Genesis, and many more) | 7 (NES, SNES, N64, GBA, GBC, GB, DS) |
 | **PlayStation 1** | Yes | No |
 | **Sega Genesis/Mega Drive** | Yes | No |
 | **Atari systems** | Yes | No |
