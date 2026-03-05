@@ -80,6 +80,12 @@ pygmentsStyle = "solarized-dark"
         weight = 8
 
     [[menu.main]]
+        identifier = "press"
+        name = "Press"
+        url  = "/press/"
+        weight = 8
+
+    [[menu.main]]
         identifier = "privacy"
         name = "Privacy Policy"
         url  = "/privacy/"
