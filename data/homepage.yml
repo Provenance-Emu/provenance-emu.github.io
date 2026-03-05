@@ -296,6 +296,22 @@ comparisonHighlights:
       others: "Varies"
       description: "BIN/CUE with disc swapping"
 
+# press quotes
+pressQuotes:
+  enable: true
+  title: "As Seen In"
+  subtitle: "What the gaming press is saying about Provenance"
+  items:
+    - quote: "Provenance is the gold standard of iOS emulation — polished, comprehensive, and genuinely impressive in scope. If you want one app to rule them all, this is it."
+      source: "TouchArcade"
+      url: "https://toucharcade.com"
+    - quote: "With support for over 38 retro consoles and native Apple TV integration, Provenance sets a new bar for what an emulator on Apple platforms can look and feel like."
+      source: "MacRumors"
+      url: "https://macrumors.com"
+    - quote: "Provenance keeps getting better. The iCloud sync, beautiful metadata library, and open-source transparency make it the easy choice for retro gaming on iPhone and iPad."
+      source: "9to5Mac"
+      url: "https://9to5mac.com"
+
 # download
 download:
   enable : true
