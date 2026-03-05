@@ -1,6 +1,6 @@
 ---
 title: "Play PlayStation 1 Games on iPhone & iPad | Provenance"
-date: 2026-03-05T00:00:00-05:00
+date: 2024-03-05
 description: "PlayStation emulator for iOS — play PS1 and PSX games on iPhone, iPad, and Apple TV with Provenance. Free, open-source, supports disc-based PS1 titles."
 system: "PlayStation"
 shortName: "PS1 / PSX"

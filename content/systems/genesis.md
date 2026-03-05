@@ -1,6 +1,6 @@
 ---
 title: "Play Sega Genesis Games on iPhone & iPad | Provenance"
-date: 2026-03-05T00:00:00-05:00
+date: 2024-03-05
 description: "Sega Genesis emulator for iOS — play Sega Genesis and Mega Drive games on iPhone, iPad, and Apple TV with Provenance. Free, open-source, supports the full Genesis library."
 system: "Sega Genesis / Mega Drive"
 shortName: "Genesis / Mega Drive"

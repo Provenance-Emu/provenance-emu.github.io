@@ -1,6 +1,6 @@
 ---
 title: "Play Super Nintendo Games on iPhone & iPad | Provenance"
-date: 2026-03-05T00:00:00-05:00
+date: 2024-03-05
 description: "Super Nintendo emulator for iOS — play SNES games on iPhone, iPad, and Apple TV with Provenance. Free, open-source, supports hundreds of SNES titles."
 system: "Super Nintendo Entertainment System"
 shortName: "SNES / Super Famicom"

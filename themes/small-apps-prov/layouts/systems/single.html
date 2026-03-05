@@ -11,14 +11,14 @@
         <h1 class="text-white font-weight-bold mb-3" data-aos="fade-up" data-aos-delay="100">
           {{ with .Params.system }}{{ . }}{{ else }}{{ .Title }}{{ end }}
         </h1>
-        {{ with .Params.shortName }}
+        {{ with .Params.supportedFormats }}
         <p class="text-white mb-4" style="opacity: 0.85; font-size: 1.1rem;" data-aos="fade-up" data-aos-delay="150">
           ROM formats: <code style="background: rgba(255,255,255,0.15); padding: 2px 8px; border-radius: 4px; font-size: 0.95em;">{{ . }}</code>
-          {{ with $.Params.supportedFormats }} &nbsp;{{ . }}{{ end }}
+          {{ with $.Params.shortName }} &nbsp;({{ . }}){{ end }}
         </p>
         {{ end }}
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" class="btn font-weight-bold btn-main-md btn-lg mr-3 mb-2">
+          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" rel="noopener noreferrer" class="btn font-weight-bold btn-main-md btn-lg mr-3 mb-2">
             <span><i class="fab fa-app-store-ios mr-2"></i>Download Free</span>
           </a>
           <a href="/plus/" class="btn btn-outline-light font-weight-bold btn-lg mb-2">

@@ -1,6 +1,6 @@
 ---
 title: "Play Game Boy Advance Games on iPhone & iPad | Provenance"
-date: 2026-03-05T00:00:00-05:00
+date: 2024-03-05
 description: "Game Boy Advance emulator for iOS — play GBA games on iPhone, iPad, and Apple TV with Provenance. Free, open-source, supports the full GBA library."
 system: "Game Boy Advance"
 shortName: "GBA"

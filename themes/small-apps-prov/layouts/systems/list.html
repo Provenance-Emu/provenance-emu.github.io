@@ -12,7 +12,7 @@
           {{ with .Params.description }}{{ . }}{{ else }}{{ .Description }}{{ end }}
         </p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" class="btn font-weight-bold btn-main-md btn-lg mr-3 mb-2">
+          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" rel="noopener noreferrer" class="btn font-weight-bold btn-main-md btn-lg mr-3 mb-2">
             <span><i class="fab fa-app-store-ios mr-2"></i>Download Free</span>
           </a>
         </div>
@@ -36,21 +36,21 @@
     <div class="row">
       {{ range .Pages }}
       <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-        <div class="system-card">
-          <div class="system-card-body">
-            <h3 class="system-card-title">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 card-title">
               <a href="{{ .Permalink }}">{{ with .Params.system }}{{ . }}{{ else }}{{ .Title }}{{ end }}</a>
             </h3>
             {{ with .Params.shortName }}
-            <p class="system-card-short-name text-muted mb-2">{{ . }}</p>
+            <p class="text-muted mb-2">{{ . }}</p>
             {{ end }}
-            <p class="system-card-description">{{ .Summary }}</p>
+            <p class="card-text mb-2">{{ .Summary }}</p>
             {{ with .Params.supportedFormats }}
-            <p class="system-card-formats">
+            <p class="card-text mb-0">
               <small class="text-muted">Formats: <code>{{ . }}</code></small>
             </p>
             {{ end }}
-            <a href="{{ .Permalink }}" class="btn btn-main-sm mt-2">Learn More</a>
+            <a href="{{ .Permalink }}" class="btn btn-main-sm mt-2 mt-auto">Learn More</a>
           </div>
         </div>
       </div>

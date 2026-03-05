@@ -1,6 +1,6 @@
 ---
 title: "Play Nintendo DS Games on iPhone & iPad | Provenance"
-date: 2026-03-05T00:00:00-05:00
+date: 2024-03-05
 description: "Nintendo DS emulator for iOS — play NDS games on iPhone, iPad, and Apple TV with Provenance. Free, open-source, supports Nintendo DS titles."
 system: "Nintendo DS"
 shortName: "NDS"

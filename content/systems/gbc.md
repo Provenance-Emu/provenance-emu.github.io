@@ -1,6 +1,6 @@
 ---
 title: "Play Game Boy & Game Boy Color Games on iPhone | Provenance"
-date: 2026-03-05T00:00:00-05:00
+date: 2024-03-05
 description: "Game Boy and Game Boy Color emulator for iOS — play GB and GBC games on iPhone, iPad, and Apple TV with Provenance. Free, open-source, supports the full Game Boy library."
 system: "Game Boy Color / Game Boy"
 shortName: "GBC / GB"
