@@ -298,6 +298,17 @@ p {
    Service Section
    ======================================== */
 
+/* Service Thumb Image - responsive padding replacement for inline padding-left: 300px */
+.service-thumb-img {
+  padding-left: clamp(0px, 20vw, 300px);
+}
+
+@media (max-width: 991px) {
+  .service-thumb-img {
+    padding-left: 0;
+  }
+}
+
 .service-item {
   padding: 1.5rem;
   border-radius: var(--border-radius);
