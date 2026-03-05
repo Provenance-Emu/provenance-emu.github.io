@@ -17,6 +17,7 @@
             </li>
             {{ end }}
           </ul>
+          {{ with .Site.Params.copyright }}<p class="text-white-50 mt-3 mb-0">&copy; {{ . }}</p>{{ end }}
         </div>
       </div>
     </div>

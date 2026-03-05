@@ -190,7 +190,7 @@ pygmentsStyle = "solarized-dark"
 
         [[params.footer.socialIcon]]
             icon = "tf-ion-social-twitter"
-            URL = "https://twitter.com/provenanceapp"
+            URL = "https://x.com/provenanceapp"
 
         [[params.footer.socialIcon]]
             icon = "tf-ion-social-github"
@@ -211,10 +211,10 @@ pygmentsStyle = "solarized-dark"
     # call to action
     [params.cta]
         enable = true
-        title = "Open Source. Community Driven. Always Free."
-        content = "Join thousands of contributors and players keeping retro gaming alive. Star us on GitHub, report issues, or contribute code."
-        btnText = "View on GitHub"
-        URL = "https://github.com/Provenance-Emu/Provenance"
+        title = "Ready to Relive the Classics?"
+        content = "Download Provenance from the App Store and start playing your favorite retro games on iPhone, iPad, and Apple TV today."
+        btnText = "Get Provenance"
+        URL = "https://apps.apple.com/us/app/provenance-app/id1596862805"
 
     [permalinks]
         blog = "/blog/:year/:month/:day/:slug/"
