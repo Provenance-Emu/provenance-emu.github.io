@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+{{ "<!-- Guides List -->" | safeHTML }}
+<section class="section guides-list">
+  <div class="container">
+    <div class="row">
+      {{ range .Pages }}
+      <div class="col-lg-6 col-md-6 mb-4">
+        <div class="card h-100 guide-card">
+          <div class="card-body">
+            <h2 class="card-title h4"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p class="card-text">{{ .Description }}</p>
+            <a href="{{ .Permalink }}" class="btn btn-main-sm">Read Guide</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Guides List -->" | safeHTML }}
+
+{{ partial "cta.html" . }}
+
+{{ end }}
