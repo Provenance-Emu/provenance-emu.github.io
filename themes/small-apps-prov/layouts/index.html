@@ -97,7 +97,9 @@
 					{{ if and (or (eq (default "" .id) "github_stars") (eq .text "GitHub Stars")) (isset $repoData "stargazers_count") }}
 						{{- $stars := int $repoData.stargazers_count -}}
 						{{- $displayNumber := "" -}}
-						{{- if ge $stars 1000 -}}
+						{{- if ge $stars 1000000 -}}
+							{{- $displayNumber = printf "%.1fM+" (div (float $stars) 1000000.0) -}}
+						{{- else if ge $stars 1000 -}}
 							{{- $displayNumber = printf "%.1fK+" (div (float $stars) 1000.0) -}}
 						{{- else -}}
 							{{- $displayNumber = printf "%d+" $stars -}}
