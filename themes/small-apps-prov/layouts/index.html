@@ -28,12 +28,26 @@
 				<p class="text-white mb-5">{{ .description | safeHTML }}</p>
 				{{ with .button }}
 				{{ $btn := . }}
-				<a href="{{ .URL }}" class="btn font-weight-bold btn-main-md btn-lg" style="font-size: 1.1em; padding: 0.75rem 2rem;">{{ .btnText }}</a>
-				<a href="{{ .URL2 }}" class="btn font-weight-bold btn-main-md ios-only">{{ .btnText2 }}</a>
-				<a href="#" onClick="alert('Open this page from an iOS device.')" class="btn font-weight-bold btn-main-md ios-disable">{{ .btnText2 }}</a>
-				<a href="{{ .URL3 }}" class="btn font-weight-bold btn-main-md">{{ .btnText3 }}</a>
-				{{ with .URL4 }}<a href="{{ . }}" class="btn font-weight-bold btn-main-md ios-only">{{ $btn.btnText4 }}</a>{{ end }}
-				{{ with .URL5 }}<a href="{{ . }}" class="btn font-weight-bold btn-main-md ios-only">{{ $btn.btnText5 }}</a>{{ end }}
+				<div class="hero-badges">
+					<a href="{{ .URL }}" class="badge-link badge-link-hero" title="{{ .btnText }}">
+						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-hero">
+					</a>
+					<a href="{{ .URL2 }}" class="badge-link badge-link-hero ios-only" title="{{ .btnText2 }}">
+						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero">
+					</a>
+					<a href="#" onClick="alert('Open this page from an iOS device.')" class="badge-link badge-link-hero ios-disable" title="{{ .btnText2 }}">
+						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero">
+					</a>
+					<a href="{{ .URL3 }}" class="badge-link badge-link-hero" title="{{ .btnText3 }}">
+						<img src="{{ .badge3 | absURL }}" alt="{{ .btnText3 }}" class="download-badge download-badge-hero">
+					</a>
+					{{ with .URL4 }}<a href="{{ . }}" class="badge-link badge-link-hero ios-only" title="{{ $btn.btnText4 }}">
+						<img src="{{ $btn.badge4 | absURL }}" alt="{{ $btn.btnText4 }}" class="download-badge download-badge-hero">
+					</a>{{ end }}
+					{{ with .URL5 }}<a href="{{ . }}" class="badge-link badge-link-hero ios-only" title="{{ $btn.btnText5 }}">
+						<img src="{{ $btn.badge5 | absURL }}" alt="{{ $btn.btnText5 }}" class="download-badge download-badge-hero">
+					</a>{{ end }}
+				</div>
 				{{ end }}
 			</div>
 			<div class="col-md-6 text-center order-1 order-md-2">
@@ -387,21 +401,18 @@
 <section class="call-to-action-app section bg-blue">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-12 text-center">
 				{{ with .Site.Data.homepage.download }}
 				<h2>{{ .title }}</h2>
 				<p>{{ .description | safeHTML }}</p>
 				{{ end }}
-				<ul class="list-inline">
+				<div class="download-badges-row">
 					{{ range .Site.Data.homepage.download.downloadButton }}
-					<li class="list-inline-item">
-						<a href="{{ htmlEscape .URL }}" class="btn btn-rounded-icon">
-							<i class="{{ .icon }}"></i>
-							{{ .btnText }}
-						</a>
-					</li>
+					<a href="{{ htmlEscape .URL }}" class="badge-link badge-link-download" title="{{ .btnText }}">
+						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-section">
+					</a>
 					{{ end }}
-				</ul>
+				</div>
 			</div>
 		</div>
 	</div>

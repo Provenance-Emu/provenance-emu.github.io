@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" width="180" height="60">
+  <defs>
+    <linearGradient id="bg-alt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2b2b2b"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="60" rx="10" ry="10" fill="url(#bg-alt)"/>
+  <rect width="180" height="60" rx="10" ry="10" fill="none" stroke="#a6a6a6" stroke-width="1"/>
+  <!-- AltStore diamond icon -->
+  <g transform="translate(14, 12)">
+    <path fill="#ffffff" d="M17 0L34 17L17 34L0 17L17 0z" opacity="0.9"/>
+    <path fill="#1a1a1a" d="M17 6L28 17L17 28L6 17L17 6z"/>
+    <path fill="#ffffff" d="M17 10L24 17L17 24L10 17L17 10z" opacity="0.9"/>
+  </g>
+  <!-- Text -->
+  <text x="56" y="24" fill="#ffffff" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="0.02em">Get it on</text>
+  <text x="56" y="45" fill="#ffffff" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="-0.01em">AltStore</text>
+</svg>

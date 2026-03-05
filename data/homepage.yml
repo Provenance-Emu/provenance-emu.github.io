@@ -28,12 +28,16 @@ banner:
   button:
     btnText : "Get on App Store"
     URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
+    badge: "images/badges/app-store-badge.svg"
     btnText2: 'Get on AltStore'
     URL2: "altstore"
+    badge2: "images/badges/altstore-badge.svg"
     btnText3: 'Download IPA'
     URL3: 'https://github.com/Provenance-Emu/Provenance/releases'
+    badge3: "images/badges/github-badge.svg"
     btnText4: 'Get on SideStore'
     URL4: 'sidestore'
+    badge4: "images/badges/sidestore-badge.svg"
 
 
 # banner-feature
@@ -301,9 +305,12 @@ download:
     - btnText : "App Store"
       icon : "tf-ion-social-apple"
       URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
+      badge : "images/badges/app-store-badge.svg"
     - btnText : "AltStore"
       icon : "tf-ion-ios-cloud-download"
       URL : "altstore"
+      badge : "images/badges/altstore-badge.svg"
     - btnText : "Download IPA"
       icon : "tf-ion-android-download"
       URL : "https://github.com/Provenance-Emu/Provenance/releases"
+      badge : "images/badges/github-badge.svg"
