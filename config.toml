@@ -167,7 +167,7 @@ pygmentsStyle = "solarized-dark"
     address = ""
     home = "Home"
     # Meta data
-    description = "iOS & tvOS multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems."
+    description = "Provenance is a free iOS & tvOS retro game emulator supporting 38+ classic console systems — NES, SNES, N64, PlayStation, Sega, Atari, and more. Available on the App Store."
     # google map
     #gmapAPI = "https://maps.googleapis.com/maps/api/js?key=KEY&libraries=places"
     #mapLatitude = "51.5223477"

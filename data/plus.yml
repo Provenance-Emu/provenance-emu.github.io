@@ -1,5 +1,7 @@
 # Provenance Plus - Data File
 
+description: "Provenance Plus adds iCloud sync across all your Apple devices, early beta access via TestFlight, and priority support. Support open-source retro game emulation on iOS and tvOS."
+
 hero:
   enable: true
   title: "Provenance <span class='plus-highlight'>Plus</span>"

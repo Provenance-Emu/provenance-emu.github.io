@@ -3,7 +3,32 @@
 
   {{ "<!-- mobile responsive meta -->" | safeHTML }}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+  {{- $desc := "" -}}
+  {{- if .Description -}}
+    {{- $desc = .Description -}}
+  {{- else -}}
+    {{- /* Check section data file for a top-level description field */ -}}
+    {{- $section := .Section -}}
+    {{- if $section -}}
+      {{- $sectionData := index .Site.Data $section -}}
+      {{- if $sectionData -}}
+        {{- with index $sectionData "description" -}}
+          {{- $desc = . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- /* Fall back to auto-excerpt (useful for blog posts without explicit description) */ -}}
+    {{- if not $desc -}}
+      {{- with .Summary -}}
+        {{- $desc = . | plainify | truncate 160 -}}
+      {{- end -}}
+    {{- end -}}
+    {{- /* Final fallback: site-level description */ -}}
+    {{- if not $desc -}}
+      {{- $desc = .Site.Params.description -}}
+    {{- end -}}
+  {{- end -}}
+  <meta name="description" content="{{ $desc }}">
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ hugo.Generator }}
 
