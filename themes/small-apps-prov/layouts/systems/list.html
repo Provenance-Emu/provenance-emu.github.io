@@ -1,0 +1,67 @@
+{{ define "main" }}
+
+{{ "<!-- Systems Hero -->" | safeHTML }}
+<section class="section systems-hero gradient-banner">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="text-white font-weight-bold mb-3" data-aos="fade-up">
+          {{ .Title }}
+        </h1>
+        <p class="text-white mb-5" style="opacity: 0.9; font-size: 1.15rem; max-width: 600px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+          {{ with .Params.description }}{{ . }}{{ else }}{{ .Description }}{{ end }}
+        </p>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" rel="noopener noreferrer" class="btn font-weight-bold btn-main-md btn-lg mr-3 mb-2">
+            <span><i class="fab fa-app-store-ios mr-2" aria-hidden="true"></i>Download Free</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End Systems Hero -->" | safeHTML }}
+
+{{ "<!-- Systems Grid -->" | safeHTML }}
+<section class="section systems-grid">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="font-weight-bold" data-aos="fade-up">Browse by Console</h2>
+        <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
+          Select a system to learn more about playing those games on your iPhone, iPad, or Apple TV.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      {{ range .Pages.ByParam "system" }}
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 card-title">
+              <a href="{{ .RelPermalink }}">{{ with .Params.system }}{{ . }}{{ else }}{{ .Title }}{{ end }}</a>
+            </h3>
+            {{ with .Params.shortName }}
+            <p class="text-muted mb-2">{{ . }}</p>
+            {{ end }}
+            <div class="card-text mb-2">{{ .Summary }}</div>
+            {{ with .Params.supportedFormats }}
+            <p class="card-text mb-0">
+              <small class="text-muted">Formats: <code>{{ . }}</code></small>
+            </p>
+            {{ end }}
+            <a href="{{ .RelPermalink }}" class="btn btn-main-sm mt-auto">Learn More</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ "<!-- End Systems Grid -->" | safeHTML }}
+
+{{ "<!-- Systems CTA -->" | safeHTML }}
+{{ partial "cta.html" . }}
+{{ "<!-- End Systems CTA -->" | safeHTML }}
+
+{{ end }}
