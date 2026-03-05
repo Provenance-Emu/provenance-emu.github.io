@@ -4,7 +4,7 @@ date: 2026-03-05T00:00:00-05:00
 description: "Comparing Provenance and Delta — system support, platform compatibility, pricing, and features. Find the best iOS emulator for your needs."
 ---
 
-Both Provenance and Delta are solid, free options for playing retro games on iPhone. They serve different audiences, and the right choice depends on what systems you want to play and what devices you own. This page lays out the facts so you can decide for yourself.
+Both Provenance and Delta are free options for playing retro games on iPhone. They serve different audiences, and the right choice depends on what systems you want to play and what devices you own. This page lays out the facts so you can decide for yourself.
 
 ## Feature Comparison
 
@@ -22,25 +22,27 @@ Both Provenance and Delta are solid, free options for playing retro games on iPh
 | **Custom skins** | Yes | Yes |
 | **Cheats** | Yes | Yes |
 | **Save states** | Yes | Yes |
-| **RetroAchievements** | Yes | No |
+| **RetroAchievements** | Yes | Yes |
+| **Core updates** | Frequent — tracks libretro upstream | Infrequent — bundled cores |
+| **Per-core config options** | Extensive | Limited |
 | **Multiplayer (local)** | Yes | Yes |
 | **Active development** | Yes | Yes |
 
 ## Where Delta Stands Out
 
-Delta is widely recognized for its polished interface and focused approach. It launched officially on the App Store in 2024 and saw rapid adoption. Its game library management, custom skins ecosystem, and streamlined setup experience are well-regarded in the community. For users who primarily want to play Nintendo systems — especially GBA, DS, and SNES — Delta delivers a clean, approachable experience.
-
-Delta's deep integration with AltStore (which Delta's developer also created) can make sideloading and updates straightforward for users in that ecosystem.
+Delta is focused exclusively on Nintendo systems and launched on the App Store in 2024. Its developer also created AltStore, so Delta integrates well with that sideloading ecosystem. For users who only need those seven Nintendo platforms, Delta provides a straightforward setup experience.
 
 ## Where Provenance Stands Out
 
-Provenance covers significantly more ground in terms of system support. If you want to play PlayStation 1, Sega Genesis, Atari systems, or any of the other 38+ platforms Provenance supports, it is the more capable choice. Provenance is also the only major iOS emulator with a native tvOS app, making it the go-to option for Apple TV gaming.
+Provenance supports 38+ systems, covering platforms Delta does not: PlayStation 1, Sega Genesis, Saturn, Atari, and many more. If you want to play beyond Nintendo's library, Provenance is the only option of the two.
 
-Being open source under the MIT license means the community can contribute, audit the code, and fork the project. Provenance also supports RetroAchievements, which lets you earn trophies for completing in-game challenges on supported systems.
+Provenance uses libretro cores that are actively maintained and updated from upstream, meaning you get newer emulation accuracy, broader compatibility, and more per-core configuration options. This translates to better game compatibility and more fine-grained control over emulation behavior versus bundled, less frequently updated cores.
+
+Provenance is also the only major iOS emulator with a native tvOS app, making it the practical choice for Apple TV gaming. Being open source under the MIT license means the community can contribute, audit the code, and build on it.
 
 ## Summary
 
-If you mainly want Nintendo systems and care most about interface polish, Delta is worth trying. If you want broader system support, Apple TV compatibility, open source code, or RetroAchievements integration, Provenance is the stronger fit.
+If you only need Delta's seven Nintendo systems and want a simple setup, Delta is a functional choice. If you want broader system support — PlayStation, Sega, Atari, and 30+ more — Apple TV compatibility, frequently updated libretro cores with more configuration options, or open source code, Provenance is the stronger fit.
 
 There is no technical reason you cannot use both apps simultaneously.
 

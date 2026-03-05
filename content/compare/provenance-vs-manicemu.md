@@ -17,25 +17,27 @@ ManicEmu is a newer iOS emulator that appeared on the App Store in 2024 alongsid
 | **PlayStation 1** | Yes | Yes |
 | **Sega Genesis/Mega Drive** | Yes | Yes |
 | **Atari systems** | Yes | No |
-| **Open source** | Yes (MIT License) | No |
+| **Open source** | Yes (MIT License) | No (closed source) |
 | **Controller support** | MFi, Xbox, PlayStation, Bluetooth | MFi, Xbox, PlayStation, Bluetooth |
 | **Custom skins** | Yes | Yes |
 | **Cheats** | Yes | Yes |
 | **Save states** | Yes | Yes |
-| **RetroAchievements** | Yes | No |
+| **RetroAchievements** | Yes | Yes |
+| **Core updates** | Frequent — tracks libretro upstream | Unknown (closed source) |
+| **Per-core config options** | Extensive | Unknown (closed source) |
 | **Active development** | Yes | Yes |
 
 ## Where ManicEmu Stands Out
 
-ManicEmu has been noted for active updates and a clean, modern interface. It appeared on the App Store with a subscription model that funds ongoing development, and it supports a reasonable range of systems including Nintendo and SEGA platforms. For users who prefer paying for an app as a way to support the developer and get a supported product, ManicEmu's pricing model may appeal.
+ManicEmu is available directly on the App Store with a paid model that funds ongoing development. For users who want to pay for an app as a way to support a developer directly, ManicEmu's pricing model may appeal. It supports a range of Nintendo and SEGA platforms.
 
 ## Where Provenance Stands Out
 
-Provenance supports substantially more systems — over 38 at last count — including Atari platforms and several others that ManicEmu does not cover. Provenance is also free when sideloaded, and the App Store version has no mandatory subscription; Provenance Plus is an optional add-on for extra features.
+Provenance supports 38+ systems including Atari platforms and several others that ManicEmu does not cover. Provenance is free when sideloaded, and the App Store version has no mandatory subscription — Provenance Plus is an optional add-on for extra features, not a paywall for basic emulation.
 
-Provenance is open source under the MIT license, meaning its code is publicly auditable and community-contributed. The native Apple TV app is another significant differentiator — Provenance is one of the only emulators available for tvOS, making it the practical choice for couch gaming on a TV.
+Provenance uses libretro cores that are actively maintained and updated from upstream, giving you newer emulation accuracy, broader game compatibility, and extensive per-core configuration options. ManicEmu is closed source, so its core quality, update cadence, and compatibility coverage are not independently verifiable.
 
-RetroAchievements support in Provenance lets players earn achievements for in-game accomplishments on supported systems, which ManicEmu does not currently offer.
+Provenance is open source under the MIT license — the code is publicly auditable and community-contributed. The native Apple TV app is a significant differentiator; Provenance is one of the only emulators available for tvOS, making it the practical choice for couch gaming on a TV.
 
 ## Pricing Summary
 
@@ -44,7 +46,7 @@ RetroAchievements support in Provenance lets players earn achievements for in-ga
 
 ## Summary
 
-If you want the broadest system support, Apple TV compatibility, open source code, and a zero-cost option, Provenance is the more capable choice. If you prefer a subscription-funded app with an active update cycle and do not need Apple TV, ManicEmu is a reasonable alternative for the systems it supports.
+If you want the broadest system support, Apple TV compatibility, open source code, actively maintained libretro cores, and a zero-cost option, Provenance is the more capable choice. ManicEmu is a paid alternative that covers a narrower range of systems.
 
 ## Try Provenance
 
