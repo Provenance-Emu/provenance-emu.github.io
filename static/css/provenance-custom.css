@@ -507,3 +507,379 @@ footer .socialIcon a:hover {
   transform: translateY(-3px);
   color: #667eea !important;
 }
+
+/* ========================================
+   Provenance Plus Page
+   ======================================== */
+
+/* Plus Hero */
+.plus-hero {
+  padding: 7rem 0 5rem;
+  background: linear-gradient(135deg, #162434 0%, #1e3a5f 40%, #667eea 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.plus-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.plus-highlight {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.plus-hero .btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 0.9rem 2rem;
+  font-size: 1.05rem;
+  background: transparent;
+  box-shadow: none;
+}
+
+.plus-hero .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+}
+
+/* Plus Features */
+.plus-features {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.plus-feature-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  height: 100%;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.plus-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.plus-feature-highlight {
+  border-color: rgba(102, 126, 234, 0.3);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
+}
+
+.plus-feature-highlight:hover {
+  border-color: rgba(102, 126, 234, 0.5);
+}
+
+.plus-feature-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  margin-bottom: 1.25rem;
+  transition: var(--transition-smooth);
+}
+
+.plus-feature-card:hover .plus-feature-icon {
+  background: var(--primary-gradient);
+}
+
+.plus-feature-icon i {
+  font-size: 1.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: var(--transition-smooth);
+}
+
+.plus-feature-card:hover .plus-feature-icon i {
+  -webkit-text-fill-color: white;
+  background: none;
+}
+
+.plus-feature-card h4 {
+  font-size: 1.2rem;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+}
+
+.plus-feature-card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.plus-badge {
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+}
+
+/* Plus Comparison Table */
+.plus-comparison {
+  padding: 5rem 0;
+}
+
+.plus-comparison-table {
+  background: #fff;
+}
+
+.plus-comparison-table thead th {
+  background: #162434;
+  color: #fff;
+  border: none;
+}
+
+.plus-column-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  position: relative;
+}
+
+.plus-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+  font-size: 0.85rem;
+}
+
+.plus-check-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+  color: #667eea;
+  font-size: 0.85rem;
+}
+
+.plus-dash {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.plus-exclusive-row {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.04) 0%, rgba(118, 75, 162, 0.04) 100%);
+}
+
+.plus-exclusive-row:hover {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%) !important;
+}
+
+/* Plus Pricing */
+.plus-pricing {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.plus-pricing-card {
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  height: 100%;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.plus-pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.plus-pricing-highlight {
+  border-color: #667eea;
+  box-shadow: var(--shadow-md);
+}
+
+.plus-pricing-highlight:hover {
+  border-color: #764ba2;
+}
+
+.plus-pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.plus-pricing-name {
+  font-size: 1.25rem;
+  color: #1a202c;
+  margin-bottom: 1.25rem;
+}
+
+.plus-pricing-price {
+  margin-bottom: 1rem;
+}
+
+.plus-price-amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.plus-price-period {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.plus-pricing-description {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+/* Plus FAQ */
+.plus-faq {
+  padding: 5rem 0;
+}
+
+.plus-faq .block {
+  border-radius: var(--border-radius);
+}
+
+.plus-faq .item-link a {
+  font-weight: 600;
+  color: #1a202c;
+  padding: 1.25rem 0;
+  display: block;
+  border-bottom: 1px solid #e2e8f0;
+  transition: var(--transition-smooth);
+}
+
+.plus-faq .item-link a:hover {
+  color: #667eea;
+}
+
+.plus-faq .accordion-block p {
+  color: #4a5568;
+  padding: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Plus CTA */
+.plus-cta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #162434 0%, #1e3a5f 50%, #667eea 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.plus-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.plus-cta-btn {
+  padding: 1rem 2.5rem !important;
+  font-size: 1.1rem !important;
+  border-radius: var(--border-radius);
+  background: white;
+  color: #162434 !important;
+  border: none;
+  position: relative;
+  z-index: 1;
+}
+
+.plus-cta-btn:hover {
+  background: #f0f0f0;
+  color: #667eea !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Plus Page Mobile Responsiveness */
+@media (max-width: 768px) {
+  .plus-hero {
+    padding: 5rem 0 3rem;
+  }
+
+  .plus-features,
+  .plus-comparison,
+  .plus-pricing,
+  .plus-faq,
+  .plus-cta {
+    padding: 3rem 0;
+  }
+
+  .plus-pricing-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .plus-price-amount {
+    font-size: 2rem;
+  }
+
+  .plus-feature-card {
+    padding: 1.5rem;
+  }
+
+  .plus-comparison-table {
+    overflow-x: auto;
+  }
+
+  .plus-comparison-table table {
+    min-width: 500px;
+  }
+}

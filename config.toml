@@ -35,10 +35,16 @@ pygmentsStyle = "solarized-dark"
     #     weight = 1
 
     [[menu.main]]
+        identifier = "plus"
+        name = "Plus"
+        url  = "/plus/"
+        weight = 2
+
+    [[menu.main]]
         identifier="blog"
         name = "Blog"
         url  = "/blog/"
-        weight = 2
+        weight = 3
 
     [[menu.main]]
         identifier = "source"
@@ -47,37 +53,37 @@ pygmentsStyle = "solarized-dark"
         pre = "<i class='fab fa-2x fa-github'></i>"
         target = "_blank"
         hrefTargetBlank = true
-        weight = 3
+        weight = 4
 
     [[menu.main]]
         identifier = "docs"
         name = "Docs"
         url  = "https://wiki.provenance-emu.com/"
-        weight = 4
+        weight = 5
 
     [[menu.main]]
         identifier = "faq"
         name = "FAQ"
         url  = "https://wiki.provenance-emu.com/faqs"
-        weight = 5
+        weight = 6
 
     [[menu.main]]
         identifier = "donate"
         name = "Donate"
         url  = "/donate/"
-        weight = 6
+        weight = 7
 
     [[menu.main]]
         identifier = "discord"
         name = "Discord"
         url  = "https://discord.gg/4TK7PU5"
-        weight = 7
+        weight = 8
 
     [[menu.main]]
         identifier = "privacy"
         name = "Privacy Policy"
         url  = "/privacy/"
-        weight = 8
+        weight = 9
 
     # [[menu.main]]
     #     identifier = "contact"
