@@ -79,10 +79,14 @@
 
 {{ if .Site.Data.homepage.socialProof.enable }}
 {{"<!-- Social Proof -->" | safeHTML}}
-{{- /* Fetch live GitHub star count at build time via getJSON; fall back to data file value on error */ -}}
+{{- /* Fetch live GitHub star count at build time via resources.GetRemote; fall back to data file value on error */ -}}
 {{- $repoData := dict -}}
-{{- with getJSON "https://api.github.com/repos/Provenance-Emu/Provenance" -}}
-  {{- $repoData = . -}}
+{{- with resources.GetRemote "https://api.github.com/repos/Provenance-Emu/Provenance" -}}
+  {{- with .Err -}}
+    {{- warnf "GitHub API fetch failed: %s" . -}}
+  {{- else -}}
+    {{- $repoData = . | transform.Unmarshal -}}
+  {{- end -}}
 {{- end -}}
 <section class="section pt-5 pb-5 bg-light">
 	<div class="container">
