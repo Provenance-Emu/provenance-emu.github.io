@@ -79,13 +79,35 @@
 
 {{ if .Site.Data.homepage.socialProof.enable }}
 {{"<!-- Social Proof -->" | safeHTML}}
+{{- /* Fetch live GitHub star count at build time via resources.GetRemote; fall back to data file value on error */ -}}
+{{- $repoData := dict -}}
+{{- with try (resources.GetRemote "https://api.github.com/repos/Provenance-Emu/Provenance") -}}
+  {{- with .Err -}}
+    {{- warnf "GitHub API fetch failed for https://api.github.com/repos/Provenance-Emu/Provenance (repo: Provenance-Emu/Provenance); falling back to YAML-configured social proof values. Error: %v" . -}}
+  {{- else -}}
+    {{- $repoData = .Value | transform.Unmarshal -}}
+  {{- end -}}
+{{- end -}}
 <section class="section pt-5 pb-5 bg-light">
 	<div class="container">
 		<div class="row justify-content-center text-center">
 			{{ range .Site.Data.homepage.socialProof.items }}
 			<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
 				<div class="social-proof-item">
+					{{ if and (or (eq (default "" .id) "github_stars") (eq .text "GitHub Stars")) (isset $repoData "stargazers_count") }}
+						{{- $stars := int $repoData.stargazers_count -}}
+						{{- $displayNumber := "" -}}
+						{{- if ge $stars 1000000 -}}
+							{{- $displayNumber = printf "%.1fM+" (div (float $stars) 1000000.0) -}}
+						{{- else if ge $stars 1000 -}}
+							{{- $displayNumber = printf "%.1fK+" (div (float $stars) 1000.0) -}}
+						{{- else -}}
+							{{- $displayNumber = printf "%d+" $stars -}}
+						{{- end -}}
+					<h2 class="font-weight-bold text-primary mb-2">{{ $displayNumber }}</h2>
+					{{ else }}
 					<h2 class="font-weight-bold text-primary mb-2">{{ .number }}</h2>
+					{{ end }}
 					<h5 class="mb-1">{{ .text }}</h5>
 					<p class="text-muted small">{{ .description }}</p>
 				</div>

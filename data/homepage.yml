@@ -6,8 +6,11 @@ socialProof:
     - number: "10+"
       text: "Years Strong"
       description: "Trusted since 2016"
-    # NOTE: GitHub Stars count is hardcoded and must be updated manually to remain accurate.
-    - number: "6.2K+"
+    # NOTE: GitHub Stars count is fetched live at build time via the GitHub API (resources.GetRemote).
+    # The 'number' value below is used as a fallback if the API call fails (e.g. rate limiting).
+    # The 'id' field provides a stable key for this item; the template primarily uses 'id' but still includes a text-based fallback (e.g., matching "GitHub Stars").
+    - id: "github_stars"
+      number: "6.2K+"
       text: "GitHub Stars"
       description: "Growing community"
     - number: "38+"
