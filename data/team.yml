@@ -1,8 +1,8 @@
 teamLeaders:
   enable : true
   teamLeader:
-    - image : "images/team/featured-person-01.webp"
-      imageAlt : "images/team/featured-person-01.jpg"
+    - image : "images/team/joe.webp"
+      imageAlt : "images/team/joe.jpg"
       name : "Joe Mattiello"
       designation : "Lead Developer"
       content : ""
@@ -50,8 +50,8 @@ developmentTeam:
   description : "Small Apps makes it easy to stay on top of your Life Style. No late tasks. No gimmicks."
   teamMember :
     # team member
-    - image : "images/team/marketing-team-01.webp"
-      imageAlt : "images/team/marketing-team-01.jpg"
+    - image : "images/team/joe.webp"
+      imageAlt : "images/team/joe.jpg"
       name : "Joe Mattiello"
       designation : "Lead Developer"
       content : ""
