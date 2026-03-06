@@ -80,7 +80,7 @@ The biggest news: **Full skin support is now available to all users—no Provena
 						<h5 class="mt-3">Nintendo Entertainment System</h5>
 					</div>
 					<div class="item text-center">
-						<img class="img-fluid" src="/images/mockups/iphone-nes.webp" onerror="this.src='/images/mockups/iphone-snes.png'" alt="Super Nintendo Entertainment System">
+						<img class="img-fluid" src="/images/mockups/iphone-snes.webp" onerror="this.src='/images/mockups/iphone-snes.png'" alt="Super Nintendo Entertainment System">
 						<h5 class="mt-3">Super Nintendo Entertainment System</h5>
 					</div>
 					<div class="item text-center">

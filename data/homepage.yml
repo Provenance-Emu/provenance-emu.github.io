@@ -130,7 +130,7 @@ mockupCarousel:
     - image: "images/mockups/iphone-nes-crt.webp"
       imageAlt: "images/mockups/iphone-nes-crt.png"
       title: "Nintendo Entertainment System"
-    - image: "images/mockups/iphone-nes.webp"
+    - image: "images/mockups/iphone-snes.webp"
       imageAlt: "images/mockups/iphone-snes.png"
       title: "Super Nintendo Entertainment System"
     - image: "images/mockups/iphone-n64.webp"
