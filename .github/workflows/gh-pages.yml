@@ -32,6 +32,9 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: Write build SHA
+        run: echo "${{ github.sha }}" > ./public/build-sha.txt
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main' || github.event.workflow_run.head_branch == 'main'

@@ -139,6 +139,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Wait for CDN to serve this commit
+        if: github.event_name == 'push'
+        run: |
+          EXPECTED="${{ github.sha }}"
+          echo "Polling https://provenance-emu.com/build-sha.txt for commit $EXPECTED"
+          for i in $(seq 1 30); do
+            LIVE=$(curl -sf https://provenance-emu.com/build-sha.txt 2>/dev/null | tr -d '[:space:]' || echo "")
+            if [ "$LIVE" = "$EXPECTED" ]; then
+              echo "✅ CDN is serving commit $EXPECTED (attempt $i)"
+              exit 0
+            fi
+            echo "Attempt $i/30: live='$LIVE', want='$EXPECTED' — retrying in 20s"
+            sleep 20
+          done
+          echo "⚠️ Timed out after 10 min — proceeding with current live version"
+
       - name: Run Lighthouse CI
         id: lhci
         uses: treosh/lighthouse-ci-action@v11
