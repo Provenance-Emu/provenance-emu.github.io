@@ -42,9 +42,13 @@
   {{ end }}
   {{ end }}
 
-  {{ "<!-- Main Stylesheet -->" | safeHTML }}
+  {{ "<!-- Critical CSS: minimal above-the-fold styles inlined to prevent FOUC while main stylesheet loads asynchronously -->" | safeHTML }}
+  <style>body{overflow-x:hidden}.main-nav{background:#fff}.gradient-banner{position:relative;overflow:hidden}.ios-only{display:none}@supports (-webkit-touch-callout:none){.ios-only{display:inline}.ios-disable{display:none}}</style>
+
+  {{ "<!-- Main Stylesheet — deferred via media=print to eliminate render-blocking resource; critical styles inlined above -->" | safeHTML }}
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
 
   {{ "<!-- AOS CSS must be synchronous: async load races with AOS.init() causing elements to stay invisible -->" | safeHTML }}
   <link rel="stylesheet" href="{{ "plugins/aos/aos.css" | absURL }}">
