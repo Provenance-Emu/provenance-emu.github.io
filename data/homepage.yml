@@ -26,8 +26,8 @@ banner:
   description : "The ultimate open-source, all-in-one emulator. Play your favorite retro games with native iOS features, beautiful metadata, and support for 38+ console systems. Free when sideloaded or built from source."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
-  image : "images/mobile.png"
-  imageAlt : "images/mobile.webp"
+  image : "images/mockups/mockuuups-male-entrepreneur-with-an-iphone-mockup.webp"
+  imageAlt : "images/mobile.png"
   button:
     btnText : "Get on App Store"
     URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
@@ -94,8 +94,8 @@ featureOne:
 # feature two
 featureTwo:
   enable : true
-  image : "images/mockups/iphone-snes-mk3.webp"
-  imageAlt : "images/mockups/iphone-snes-mk3.png"
+  image : "images/feature/n64-core-options.png"
+  imageAlt : "images/feature/n64-core-options.png"
   title : "Fine-Tune Your Experience"
   content : "Customize emulation settings in real-time. Adjust graphics filters, control layouts, audio settings, and core-specific options without ever leaving your game."
   comment : ""

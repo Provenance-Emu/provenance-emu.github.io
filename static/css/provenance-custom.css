@@ -472,6 +472,13 @@ p {
   opacity: 0.95;
 }
 
+.gradient-banner .col-md-6 img {
+  max-height: 520px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ========================================
    Image Enhancements
    ======================================== */
@@ -480,6 +487,10 @@ p {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-lg);
   transition: var(--transition-smooth);
+  max-height: 520px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .image-content:hover img {
