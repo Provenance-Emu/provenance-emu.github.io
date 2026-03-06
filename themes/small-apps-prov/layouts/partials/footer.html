@@ -56,3 +56,21 @@
   window.dispatchEvent(new Event('resize'));
   });
 </script>
+
+{{ "<!-- QR Code library for App Store modal -->" | safeHTML }}
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+  $('#appStoreQRModal').on('show.bs.modal', function () {
+    var container = document.getElementById('appStoreQRCode');
+    if (container && !container.hasChildNodes()) {
+      new QRCode(container, {
+        text: 'https://apps.apple.com/us/app/provenance-app/id1596862805',
+        width: 200,
+        height: 200,
+        colorDark: '#000000',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    }
+  });
+</script>

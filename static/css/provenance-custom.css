@@ -1378,3 +1378,32 @@ footer .socialIcon a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ========================================
+   App Store QR Code Modal
+   ======================================== */
+
+#appStoreQRModal .modal-content {
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+#appStoreQRModal .modal-header {
+  padding-bottom: 0;
+}
+
+#appStoreQRModal h5 {
+  font-weight: 700;
+  color: #1a202c;
+}
+
+#appStoreQRCode {
+  padding: 0.5rem;
+}
+
+#appStoreQRCode img,
+#appStoreQRCode canvas {
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
