@@ -427,7 +427,7 @@ jobs:
               {
                 labels: ['audit', 'html-check'],
                 title:  '[Fix] HTML / link check failures',
-                failing: process.env.HTML_PASSED === 'false',
+                failing: process.env.HTML_PASSED === 'false' && num('HTML_ERRORS') > 0,
                 body: [
                   '## HTML & Link Check Failures',
                   `Found **${num('HTML_ERRORS')} error(s)**.`,
