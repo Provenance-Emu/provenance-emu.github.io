@@ -327,9 +327,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Save our generated file before potentially resetting state
+          cp data/status.json /tmp/status_generated.json
+          # Always reset to whatever is on remote HEAD to avoid rebase conflicts
+          # (both concurrent runs write status.json; rebase would conflict)
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/status_generated.json data/status.json
           git add data/status.json
           git diff --staged --quiet || git commit -m "chore: update site audit status [skip ci]"
-          git pull --rebase origin main
           git push
 
       - name: Ensure audit labels exist
