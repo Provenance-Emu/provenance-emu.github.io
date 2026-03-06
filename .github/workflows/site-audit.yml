@@ -61,7 +61,6 @@ jobs:
             --checks Links,Images,Scripts,OpenGraph \
             --ignore-urls "/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/login/" \
             --ignore-status-codes "0,429,999,403" \
-            --typhoeus-concurrency 5 \
             2>&1 | tee htmlproofer-output.txt
           echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
 
@@ -233,9 +232,7 @@ jobs:
       - name: Mozilla Observatory
         id: observatory
         run: |
-          curl -sX POST "https://http-observatory.security.mozilla.org/api/v1/analyze?host=provenance-emu.com" > /dev/null
-          sleep 15
-          RESULT=$(curl -s "https://http-observatory.security.mozilla.org/api/v1/analyze?host=provenance-emu.com")
+          RESULT=$(curl -s -X POST "https://observatory-api.mdn.mozilla.net/api/v2/scan?host=provenance-emu.com")
           GRADE=$(echo "$RESULT" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('grade','N/A'))" 2>/dev/null || echo "N/A")
           SCORE=$(echo "$RESULT" | python3 -c "import json,sys; d=json.load(sys.stdin); print(int(d.get('score',0)))" 2>/dev/null || echo "0")
           echo "grade=$GRADE" >> $GITHUB_OUTPUT
