@@ -69,7 +69,7 @@ whyProvenance:
       content: "Experience retro gaming on the big screen. Native tvOS support with TopShelf integration brings your games to the living room like no other app can."
     - icon: "tf-ion-android-apps"
       title: "38+ Systems in One App"
-      content: "From Atari 2600 to PlayStation, including rare systems like PC-FX and Virtual Boy. The most comprehensive library support available."
+      content: "From Atari 2600 to PlayStation 2, including rare systems like PC-FX and Virtual Boy. Supports CHD disc images for PS1, Saturn, and PC-Engine CD — the only Mednafen-based emulator on iOS with a custom CHD implementation."
     - icon: "tf-ion-locked"
       title: "Free Forever (Sideloaded)"
       content: "When you sideload or build from source, everything is free. No subscriptions, no paywalls, no tiers. App Store builds include optional Provenance Plus features, but all core functionality remains free."
