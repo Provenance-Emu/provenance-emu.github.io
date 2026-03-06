@@ -95,9 +95,11 @@ The reason to mention it now is to be transparent about where we're heading. The
 
 ## 💿 CHD Support (A Quiet Differentiator)
 
-This one already exists in Provenance but deserves more attention than it gets: **Provenance is the only Mednafen-based emulator with CHD support**, made possible through a custom implementation.
+This one already exists in Provenance but deserves more attention than it gets.
 
-CHD (Compressed Hunks of Data) is MAME's disc image format. It compresses multi-track disc images for PS1, Saturn, PC-Engine CD, and other disc-based systems dramatically compared to raw BIN/CUE or ISO. Standard Mednafen has no CHD support upstream — it's simply not there. Provenance's custom libchd integration brings this to iOS and tvOS for the first time in any Mednafen-derived emulator.
+CHD (Compressed Hunks of Data) is MAME's disc image format — it compresses multi-track disc images for PS1, Saturn, PC-Engine CD, and other disc-based systems dramatically compared to raw BIN/CUE or ISO. Nearly all CD-based cores in Provenance support CHD, so this isn't unusual across the board.
+
+What is unusual: **Provenance's native Mednafen core supports CHD via a custom implementation that doesn't exist in other standalone Mednafen forks**. Standard upstream Mednafen has no CHD support at all. Beetle (RetroArch's Mednafen-derived core) does — and Provenance includes Beetle too — but if you're running the native Mednafen core for PS1, Saturn, or PC-Engine CD, CHD just works here in a way it won't in other standalone Mednafen ports.
 
 The practical impact: your disc-based game library takes significantly less storage while preserving disc accuracy. If you're sitting on a pile of BIN/CUE rips, CHD is worth converting to.
 

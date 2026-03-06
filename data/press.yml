@@ -9,7 +9,7 @@ app:
 
     Unlike other emulators, Provenance is built with a collector's mindset. Every game in your library is presented with automatically downloaded box art, screenshots, release information, ratings, and even scanned manuals. The app feels native to Apple's ecosystem, with support for Haptic feedback, Spotlight search, Siri shortcuts, iCloud sync, and full Siri Remote integration on Apple TV.
 
-    Provenance is the premier full-featured emulator for tvOS, bringing retro gaming to the living room with TopShelf integration, controller support for MFi, Xbox, and PlayStation gamepads, and 4K-ready upscaled graphics. It is also the only Mednafen-based emulator on iOS with a custom CHD implementation, allowing disc-based game libraries (PS1, Saturn, PC-Engine CD) to be stored in the compact CHD format without any loss of accuracy.
+    Provenance is the premier full-featured emulator for tvOS, bringing retro gaming to the living room with TopShelf integration, controller support for MFi, Xbox, and PlayStation gamepads, and 4K-ready upscaled graphics. Nearly all CD-based cores support CHD disc images; notably, Provenance's native Mednafen core includes a custom CHD implementation not found in other standalone Mednafen forks, allowing PS1, Saturn, and PC-Engine CD libraries to use the compact CHD format without any loss of accuracy.
 
     The project is 100% open source on GitHub with over 6,200 stars and an active community of contributors. It is free when sideloaded or built from source. An App Store version is also available with optional Provenance Plus features, while all core emulation functionality remains free.
 
@@ -33,7 +33,7 @@ keyFacts:
 
 features:
   - title: "Most Comprehensive System Support"
-    description: "38+ console systems from Atari 2600 to PlayStation 2, including rare systems like PC-FX, Virtual Boy, 3DO, and Neo Geo Pocket. The only Mednafen-based emulator on iOS with a custom CHD disc image implementation."
+    description: "38+ console systems from Atari 2600 to PlayStation 2, including rare systems like PC-FX, Virtual Boy, 3DO, and Neo Geo Pocket. Nearly all CD-based cores support CHD, including a custom CHD implementation in Provenance's native Mednafen core not found in other standalone Mednafen forks."
   - title: "Premier Apple TV Emulator"
     description: "The only emulator with full native tvOS support, TopShelf integration, Siri Remote optimization, and 4K-ready output."
   - title: "Museum-Quality Game Library"
