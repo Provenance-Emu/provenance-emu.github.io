@@ -57,20 +57,40 @@
   });
 </script>
 
-{{ "<!-- QR Code library for App Store modal -->" | safeHTML }}
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+{{ if .IsHome }}
+{{ "<!-- QR Code library for App Store modal (homepage only) -->" | safeHTML }}
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" integrity="sha256-HbfMJhQ3GvMxvyMWlDIxgJgcKFTkibLCRtnBiH5Oc8=" crossorigin="anonymous"></script>
 <script>
   $('#appStoreQRModal').on('show.bs.modal', function () {
     var container = document.getElementById('appStoreQRCode');
+    var qrText = '{{ .Site.Params.cta.URL | safeJS }}';
     if (container && !container.hasChildNodes()) {
-      new QRCode(container, {
-        text: 'https://apps.apple.com/us/app/provenance-app/id1596862805',
-        width: 200,
-        height: 200,
-        colorDark: '#000000',
-        colorLight: '#ffffff',
-        correctLevel: QRCode.CorrectLevel.H
-      });
+      if (typeof QRCode === 'function') {
+        try {
+          new QRCode(container, {
+            text: qrText,
+            width: 200,
+            height: 200,
+            colorDark: '#000000',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.H
+          });
+        } catch (e) {
+          container.innerHTML = '<p>QR code unavailable. <a href="' + qrText + '">Open App Store directly &rarr;</a></p>';
+        }
+      } else {
+        container.innerHTML = '<p>QR code unavailable. <a href="' + qrText + '">Open App Store directly &rarr;</a></p>';
+      }
     }
   });
+
+  // iOS detection: show ios-only elements, hide ios-disable elements
+  (function () {
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      document.querySelectorAll('.ios-only').forEach(function (el) { el.style.display = ''; });
+      document.querySelectorAll('.ios-disable').forEach(function (el) { el.style.display = 'none'; });
+    }
+  })();
 </script>
+{{ end }}
