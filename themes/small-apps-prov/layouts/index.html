@@ -35,7 +35,7 @@
 					<a href="{{ .URL2 }}" class="badge-link badge-link-hero ios-only" title="{{ .btnText2 }}">
 						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero">
 					</a>
-					<a href="#" onClick="alert('Open this page from an iOS device.')" class="badge-link badge-link-hero ios-disable" title="{{ .btnText2 }}">
+					<a href="{{ $.Site.Params.cta.URL }}" data-toggle="modal" data-target="#appStoreQRModal" class="badge-link badge-link-hero ios-disable" title="Scan QR code to download on iPhone">
 						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero">
 					</a>
 					<a href="{{ .URL3 }}" class="badge-link badge-link-hero" title="{{ .btnText3 }}">
@@ -468,5 +468,25 @@
 	</div>
 </section>
 {{ end }}
+
+{{ "<!-- App Store QR Code Modal (shown to desktop users instead of alert) -->" | safeHTML }}
+<div class="modal fade" id="appStoreQRModal" tabindex="-1" role="dialog" aria-labelledby="appStoreQRModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+		<div class="modal-content text-center">
+			<div class="modal-header border-0 pb-0">
+				<button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body pt-0 px-4 pb-4">
+				<h5 class="mb-2" id="appStoreQRModalLabel">Download on iPhone</h5>
+				<p class="text-muted small mb-3">Scan with your iPhone camera to download Provenance from the App Store</p>
+				<div id="appStoreQRCode" class="d-flex justify-content-center mb-3" role="img" aria-describedby="appStoreQRInstructions"></div>
+				<p id="appStoreQRInstructions" class="text-muted" style="font-size: 0.75rem;">Open your iPhone Camera app and point it at the code above</p>
+				<p class="text-center mt-2" style="font-size: 0.8rem;"><a href="{{ $.Site.Params.cta.URL }}">Or open App Store directly &rarr;</a></p>
+			</div>
+		</div>
+	</div>
+</div>
 
 {{ end }}

@@ -1409,3 +1409,38 @@ footer .socialIcon a:hover {
     gap: 1rem;
   }
 }
+
+/* ========================================
+   App Store QR Code Modal
+   ======================================== */
+
+#appStoreQRModal .modal-content {
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+#appStoreQRModal .modal-header {
+  padding-bottom: 0;
+}
+
+#appStoreQRModal h5 {
+  font-weight: 700;
+  color: #1a202c;
+}
+
+/* iOS-conditional display: ios-only hidden by default (shown by JS on iOS);
+   ios-disable visible by default (hidden by JS on iOS) */
+.ios-only {
+  display: none;
+}
+
+#appStoreQRCode {
+  padding: 0.5rem;
+}
+
+#appStoreQRCode img,
+#appStoreQRCode canvas {
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
