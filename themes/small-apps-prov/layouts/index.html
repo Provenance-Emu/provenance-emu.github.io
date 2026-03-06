@@ -361,6 +361,52 @@
 {{ "<!-- End of Testimonial -->" | safeHTML }}
 {{ end }}
 
+{{ if .Site.Params.recent_posts.enable }}
+{{"<!-- Recent Blog Posts -->" | safeHTML}}
+<section class="section homepage-blog bg-gray">
+	<div class="container">
+		<div class="row justify-content-center text-center mb-5">
+			<div class="col-lg-8" data-aos="fade-up">
+				<h2 class="font-weight-bold mb-2">{{ .Site.Params.recent_posts.title }}</h2>
+				<p class="text-muted">{{ .Site.Params.recent_posts.subtitle }}</p>
+			</div>
+		</div>
+		<div class="row">
+			{{ range first 3 (where .Site.RegularPages "Type" "post") }}
+			<div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+				<article class="blog-card">
+					<a href="{{ .Permalink }}" class="blog-card-img-link">
+						<img class="blog-card-img" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+					</a>
+					<div class="blog-card-body">
+						{{ with .Params.tags }}
+						<div class="blog-tags mb-2">
+							{{ range first 1 . }}<span class="blog-tag">{{ . }}</span>{{ end }}
+						</div>
+						{{ end }}
+						<h3 class="blog-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+						<p class="blog-card-summary">{{ .Description | default .Summary }}</p>
+						<div class="blog-meta mt-auto">
+							<img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
+							<span class="blog-author-name">{{ .Params.Author }}</span>
+							<span class="blog-meta-sep">·</span>
+							<span>{{ .PublishDate.Format "Jan 2, 2006" }}</span>
+						</div>
+					</div>
+				</article>
+			</div>
+			{{ end }}
+		</div>
+		<div class="row">
+			<div class="col-12 text-center mt-3" data-aos="fade-up">
+				<a href="{{ .Site.Params.viewMorePostLink | absURL }}" class="btn btn-outline-primary font-weight-bold">View All Posts &rarr;</a>
+			</div>
+		</div>
+	</div>
+</section>
+{{"<!-- End Recent Blog Posts -->" | safeHTML}}
+{{ end }}
+
 {{ if .Site.Data.homepage.comparisonHighlights.enable }}
 {{"<!-- Comparison Highlights -->" | safeHTML}}
 <section class="section comparison-section bg-white">

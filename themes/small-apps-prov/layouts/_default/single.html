@@ -7,75 +7,89 @@
       <div class="col-md-10 m-auto">
         <article class="single-post">
           <div class="post-title text-center">
+            {{ with .Params.tags }}
+            <div class="blog-tags justify-content-center mb-3">
+              {{ range . }}<span class="blog-tag">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
             <h1>{{ .Title }}</h1>
-            <ul class="list-inline post-tag">
-              <li class="list-inline-item">
-                <img src="{{ .Params.AuthorImage | absURL }}" alt="author-thumb">
-              </li>
-              <li class="list-inline-item">{{ .Params.Author }}</li>
-              <li class="list-inline-item">{{ .PublishDate.Format "January 02, 2006" }}</li>
-            </ul>
+            <div class="blog-meta justify-content-center mt-3 mb-2">
+              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
+              <span class="blog-author-name">{{ .Params.Author }}</span>
+              <span class="blog-meta-sep">·</span>
+              <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
+              <span class="blog-meta-sep">·</span>
+              <span>{{ .ReadingTime }} min read</span>
+            </div>
           </div>
           <div class="post-body">
             <div class="feature-image">
-              <img class="img-fluid" src="{{ .Params.Image | absURL }}" onerror="this.src='{{ .Params.ImageAlt | absURL }}'" alt="feature-image">
+              <img class="img-fluid" src="{{ .Params.Image | absURL }}" onerror="this.src='{{ .Params.ImageAlt | absURL }}'" alt="{{ .Title }}">
             </div>
             <div class="content">
               {{ .Content }}
             </div>
+          </div>
         </article>
+
+        {{ with .Params.AuthorDescription }}
         <div class="about-author">
           <h2>About this author</h2>
           <div class="media">
             <div class="image">
-              <img class="d-flex justify-content-center align-self-center" src="{{ .Params.AuthorImage | absURL }}" alt="author-image">
+              <img class="d-flex align-self-center" src="{{ $.Params.AuthorImage | absURL }}" alt="author-image">
             </div>
             <div class="media-body align-self-center">
-              <h3>{{ .Params.Author }}</h3>
-              <p>{{ .Params.AuthorDescription }}</p>
+              <h3>{{ $.Params.Author }}</h3>
+              <p>{{ . }}</p>
               <ul class="list-inline social-links">
-                {{ range .Params.AuthorSocial }}
-                <li class="list-inline-item"><a href="{{ .URL }}"><i class="{{ .icon }}"></i></a></li>
+                {{ range $.Params.AuthorSocial }}
+                <li class="list-inline-item"><a href="{{ .URL }}" target="_blank" rel="noopener noreferrer"><i class="{{ .icon }}"></i></a></li>
                 {{ end }}
               </ul>
             </div>
           </div>
         </div>
+        {{ end }}
+
       </div>
     </div>
   </div>
 </section>
 {{ "<!-- End of Single Article -->" | safeHTML }}
 
-{{ "<!-- Related Article -->" | safeHTML }}
+{{ "<!-- Related Articles -->" | safeHTML }}
+{{ $currentPermalink := .Permalink }}
+{{ $related := first 3 (where (where .Site.Pages "Type" "post") "Permalink" "ne" $currentPermalink) }}
+{{ with $related }}
 <section class="section related-articles bg-gray">
   <div class="container">
-    <div class="row">
-      <div class="col-12 title">
-        <h2>Related Articles</h2>
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2 class="related-articles-title">More Posts</h2>
       </div>
     </div>
     <div class="row">
-      {{ range first 3 ( where .Site.Pages "Type" "post" )}}
-      <div class="col-lg-4 col-md-6">
-        <article class="post-sm">
-          <div class="post-thumb">
-            <a href="{{ .Permalink }}"><img class="img-fluid" src="{{ .Params.Image | absURL }}" onerror="this.src='{{ .Params.ImageAlt | absURL }}'" alt="Post-Image"></a>
-          </div>
-          <div class="post-title">
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-          </div>
-          <div class="post-meta">
-            <ul class="list-inline post-tag">
-              <li class="list-inline-item">
-                <img src="{{ .Params.AuthorImage | absURL }}" alt="author-thumb">
-              </li>
-              <li class="list-inline-item">{{ .Params.Author }}</li>
-              <li class="list-inline-item">{{ .PublishDate.Format "January 02, 2006" }}</li>
-            </ul>
-          </div>
-          <div class="post-details">
-            <p>{{ .Summary }}</p>
+      {{ range . }}
+      <div class="col-lg-4 col-md-6 mb-4">
+        <article class="blog-card">
+          <a href="{{ .Permalink }}" class="blog-card-img-link">
+            <img class="blog-card-img" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+          </a>
+          <div class="blog-card-body">
+            {{ with .Params.tags }}
+            <div class="blog-tags mb-2">
+              {{ range first 2 . }}<span class="blog-tag">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+            <h3 class="blog-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p class="blog-card-summary">{{ .Description | default .Summary }}</p>
+            <div class="blog-meta mt-auto">
+              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
+              <span class="blog-author-name">{{ .Params.Author }}</span>
+              <span class="blog-meta-sep">·</span>
+              <span>{{ .PublishDate.Format "Jan 2, 2006" }}</span>
+            </div>
           </div>
         </article>
       </div>
@@ -83,6 +97,7 @@
     </div>
   </div>
 </section>
-{{ "<!-- End of Related Article -->" | safeHTML }}
+{{ end }}
+{{ "<!-- End of Related Articles -->" | safeHTML }}
 
 {{ end }}

@@ -11,6 +11,7 @@ authorSocial:
     URL : "https://github.com/JoeMatt"
   - icon : "tf-ion-social-twitter"
     URL : "https://twitter.com/joemattiello"
+authorDescription: "Joe Mattiello is the lead developer of Provenance, an open-source multi-system emulator for iOS and tvOS with 10+ years of active development."
 categories: ["development"]
 description: "A look at what's coming next: a complete cheat code system with online lookup, configurable CRT shaders, full button remapping, DOSBox keyboard support, and the start of netplay."
 image: "images/banners/banner-1.jpg"
