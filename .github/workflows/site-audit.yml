@@ -338,53 +338,166 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: update site audit status"
           git push
 
-      - name: Ensure audit labels exist
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const labels = [
-              { name: 'audit', color: '0075ca', description: 'Site audit findings' },
-              { name: 'performance', color: 'e4e669', description: 'Performance issue' }
-            ];
-            for (const label of labels) {
-              try {
-                await github.rest.issues.createLabel({ owner: context.repo.owner, repo: context.repo.repo, ...label });
-              } catch (e) { /* already exists */ }
-            }
-
-      - name: Open issue on Lighthouse failures
+      - name: Open or close issues per audit check
         uses: actions/github-script@v7
         env:
-          PERF: ${{ needs.lighthouse.outputs.performance }}
-          A11Y: ${{ needs.lighthouse.outputs.accessibility }}
-          SEO: ${{ needs.lighthouse.outputs.seo }}
-          REPORT_URL: ${{ needs.lighthouse.outputs.report_url }}
+          PERF:        ${{ needs.lighthouse.outputs.performance }}
+          A11Y:        ${{ needs.lighthouse.outputs.accessibility }}
+          BP:          ${{ needs.lighthouse.outputs.best_practices }}
+          SEO:         ${{ needs.lighthouse.outputs.seo }}
+          REPORT_URL:  ${{ needs.lighthouse.outputs.report_url }}
+          OBS_GRADE:   ${{ needs.security-scan.outputs.observatory_grade }}
+          OBS_SCORE:   ${{ needs.security-scan.outputs.observatory_score }}
+          SSL_GRADE:   ${{ needs.security-scan.outputs.ssl_grade }}
+          HTML_PASSED: ${{ needs.html-check.outputs.passed }}
+          HTML_ERRORS: ${{ needs.html-check.outputs.error_count }}
         with:
           script: |
-            const perf = parseInt(process.env.PERF) || 100;
-            const a11y = parseInt(process.env.A11Y) || 100;
-            const seo  = parseInt(process.env.SEO)  || 100;
-            const thresholds = { Performance: [perf, 70], Accessibility: [a11y, 80], SEO: [seo, 90] };
-            const failures = Object.entries(thresholds)
-              .filter(([, [score, min]]) => score < min)
-              .map(([name, [score, min]]) => `- **${name}**: ${score}/100 _(threshold: ${min})_`);
-            if (failures.length === 0) { console.log('All scores above thresholds.'); return; }
-
-            // Avoid duplicate open issues
-            const existing = await github.rest.issues.listForRepo({
-              owner: context.repo.owner, repo: context.repo.repo,
-              labels: 'audit', state: 'open', per_page: 5
-            });
-            if (existing.data.length > 0) {
-              console.log('Open audit issue already exists, skipping.');
-              return;
+            // Ensure all needed labels exist
+            const allLabels = [
+              { name: 'audit',          color: '0075ca', description: 'Site audit findings' },
+              { name: 'performance',    color: 'e4e669', description: 'Performance issue' },
+              { name: 'accessibility',  color: '7057ff', description: 'Accessibility issue' },
+              { name: 'seo',            color: '008672', description: 'SEO issue' },
+              { name: 'best-practices', color: 'ffa500', description: 'Best practices issue' },
+              { name: 'security',       color: 'd73a4a', description: 'Security issue' },
+              { name: 'html-check',     color: 'bfd4f2', description: 'HTML / link check issue' },
+            ];
+            for (const lbl of allLabels) {
+              try {
+                await github.rest.issues.createLabel({ owner: context.repo.owner, repo: context.repo.repo, ...lbl });
+              } catch (_) { /* already exists */ }
             }
 
             const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            await github.rest.issues.create({
+            const reportUrl = process.env.REPORT_URL || '';
+            const num = (k) => parseInt(process.env[k]) || 0;
+            const str = (k) => process.env[k] || 'N/A';
+            const lhLine = reportUrl ? `**[View Lighthouse Report](${reportUrl})**` : null;
+
+            const checks = [
+              {
+                labels: ['audit', 'performance'],
+                title:  '[Fix] Lighthouse performance score below threshold',
+                failing: num('PERF') > 0 && num('PERF') < 70,
+                body: [
+                  '## Lighthouse Performance Score Below Threshold',
+                  `Current score: **${num('PERF')}/100** (threshold: 70)`,
+                  lhLine,
+                  '**Common fixes:**\n- Defer or remove render-blocking JavaScript\n- Optimize and lazy-load images (use WebP, set explicit dimensions)\n- Reduce unused CSS/JS\n- Improve server response time (TTFB)\n- Use efficient cache policies',
+                  `_Auto-opened by [Site Audit](${runUrl})_`,
+                ].filter(l => l !== null).join('\n\n'),
+              },
+              {
+                labels: ['audit', 'accessibility'],
+                title:  '[Fix] Lighthouse accessibility score below threshold',
+                failing: num('A11Y') > 0 && num('A11Y') < 80,
+                body: [
+                  '## Lighthouse Accessibility Score Below Threshold',
+                  `Current score: **${num('A11Y')}/100** (threshold: 80)`,
+                  lhLine,
+                  'Check the report for issues such as missing alt text, low colour contrast, or missing ARIA labels.',
+                  `_Auto-opened by [Site Audit](${runUrl})_`,
+                ].filter(l => l !== null).join('\n\n'),
+              },
+              {
+                labels: ['audit', 'best-practices'],
+                title:  '[Fix] Lighthouse best-practices score below threshold',
+                failing: num('BP') > 0 && num('BP') < 80,
+                body: [
+                  '## Lighthouse Best Practices Score Below Threshold',
+                  `Current score: **${num('BP')}/100** (threshold: 80)`,
+                  lhLine,
+                  'Check the report for deprecated APIs, mixed-content requests, or missing HTTPS.',
+                  `_Auto-opened by [Site Audit](${runUrl})_`,
+                ].filter(l => l !== null).join('\n\n'),
+              },
+              {
+                labels: ['audit', 'seo'],
+                title:  '[Fix] Lighthouse SEO score below threshold',
+                failing: num('SEO') > 0 && num('SEO') < 90,
+                body: [
+                  '## Lighthouse SEO Score Below Threshold',
+                  `Current score: **${num('SEO')}/100** (threshold: 90)`,
+                  lhLine,
+                  'Check the report for missing meta descriptions, invalid structured data, or crawlability issues.',
+                  `_Auto-opened by [Site Audit](${runUrl})_`,
+                ].filter(l => l !== null).join('\n\n'),
+              },
+              {
+                labels: ['audit', 'html-check'],
+                title:  '[Fix] HTML / link check failures',
+                failing: process.env.HTML_PASSED === 'false',
+                body: [
+                  '## HTML & Link Check Failures',
+                  `Found **${num('HTML_ERRORS')} error(s)**.`,
+                  `Download the \`htmlproofer-output\` artifact from the [audit run](${runUrl}) for the full list of broken links and HTML errors.`,
+                  `_Auto-opened by [Site Audit](${runUrl})_`,
+                ].join('\n\n'),
+              },
+              {
+                labels: ['audit', 'security'],
+                title:  '[Fix] SSL/TLS grade below A',
+                failing: !['A+', 'A', 'N/A'].includes(str('SSL_GRADE')),
+                body: [
+                  '## SSL/TLS Grade Below A',
+                  `Current SSL Labs grade: **${str('SSL_GRADE')}**`,
+                  '[View the full SSL Labs report](https://www.ssllabs.com/ssltest/analyze.html?d=provenance-emu.com)',
+                  '**Common fixes:**\n- Disable TLS 1.0 / 1.1\n- Add an HSTS header (`Strict-Transport-Security`)\n- Resolve certificate chain issues',
+                  `_Auto-opened by [Site Audit](${runUrl})_`,
+                ].join('\n\n'),
+              },
+              {
+                labels: ['audit', 'security'],
+                title:  '[Fix] Mozilla Observatory security score below grade B',
+                failing: !['A+', 'A', 'B', 'N/A'].includes(str('OBS_GRADE')),
+                body: [
+                  '## Mozilla Observatory Score Below Grade B',
+                  `Current grade: **${str('OBS_GRADE')}** (${num('OBS_SCORE')}/100)`,
+                  '[View the full Observatory report](https://observatory.mozilla.org/analyze/provenance-emu.com)',
+                  '**Common fixes:**\n- Add a `Content-Security-Policy` header\n- Add `X-Frame-Options` header\n- Add `X-Content-Type-Options: nosniff` header\n- Enable HSTS',
+                  `_Auto-opened by [Site Audit](${runUrl})_`,
+                ].join('\n\n'),
+              },
+            ];
+
+            // Fetch all open audit issues once
+            const openIssues = await github.paginate(github.rest.issues.listForRepo, {
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `[Audit] Lighthouse scores below threshold`,
-              body: `## Site Quality Alert\n\nThe following Lighthouse scores are below acceptable thresholds:\n\n${failures.join('\n')}\n\n**Lighthouse Report:** ${process.env.REPORT_URL || 'N/A'}\n**Actions Run:** ${runUrl}`,
-              labels: ['audit', 'performance']
+              labels: 'audit',
+              state: 'open',
+              per_page: 100,
             });
+
+            for (const check of checks) {
+              const existing = openIssues.find(iss => iss.title === check.title);
+              if (check.failing) {
+                if (existing) {
+                  console.log(`Already open: ${check.title}`);
+                } else {
+                  console.log(`Opening: ${check.title}`);
+                  await github.rest.issues.create({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    title: check.title,
+                    body:  check.body,
+                    labels: check.labels,
+                  });
+                }
+              } else if (existing) {
+                console.log(`Auto-closing resolved: ${check.title}`);
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existing.number,
+                  body: `✅ This check is now passing. Auto-closing.\n\n_Resolved by [Site Audit](${runUrl})_`,
+                });
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existing.number,
+                  state: 'closed',
+                });
+              }
+            }
