@@ -251,7 +251,7 @@ jobs:
         run: |
           curl -s "https://api.ssllabs.com/api/v3/analyze?host=provenance-emu.com&startNew=on&publish=off" > /dev/null
           GRADE="N/A"
-          for i in {1..9}; do
+          for i in {1..15}; do
             sleep 20
             RESULT=$(curl -s "https://api.ssllabs.com/api/v3/analyze?host=provenance-emu.com&publish=off")
             STATUS=$(echo "$RESULT" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('status',''))" 2>/dev/null || echo "")
