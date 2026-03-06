@@ -5,6 +5,10 @@ on:
     branches:
       - main
   pull_request:
+  workflow_run:
+    workflows: ["Site Audit"]
+    types: [completed]
+    branches: [main]
 
 concurrency:
   group: gh-pages-${{ github.ref }}
@@ -30,7 +34,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || github.event.workflow_run.head_branch == 'main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
