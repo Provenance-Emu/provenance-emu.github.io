@@ -1959,3 +1959,130 @@ footer .socialIcon a:hover {
 .dot-ok      { background: #d69e2e; }
 .dot-bad     { background: #e53e3e; }
 .dot-unknown { background: #cbd5e0; }
+
+
+/* ========================================
+   Compact page-title variant (status page etc.)
+   ======================================== */
+
+.page-title-compact {
+  padding: 28px 0 20px !important;
+}
+
+.page-title-compact h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
+
+
+/* ========================================
+   Mobile overflow & layout fixes
+   ======================================== */
+
+/* Prevent any element from causing horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Shapes are purely decorative — hide on mobile to prevent overflow */
+@media (max-width: 767px) {
+  .shapes-container {
+    display: none;
+  }
+}
+
+/* Gradient banner: tighten padding and keep pseudo-element contained */
+@media (max-width: 767px) {
+  .gradient-banner {
+    padding: 60px 0 100px;
+    overflow: hidden;
+  }
+
+  .gradient-banner::before {
+    width: 300%;
+    left: 50%;
+  }
+
+  /* Hero text + image stack cleanly */
+  .gradient-banner .col-md-6 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Hero image fills column without overflowing */
+  .gradient-banner img.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Pull-top section: reduce negative margin on mobile */
+@media (max-width: 767px) {
+  .pull-top {
+    margin-top: -40px;
+  }
+}
+
+/* General section padding: tighter on mobile */
+@media (max-width: 767px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+}
+
+/* Download badges: wrap and center on small screens */
+@media (max-width: 575px) {
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .download-badge-hero {
+    height: 44px;
+    width: auto;
+  }
+}
+
+/* Feature/service rows: ensure images don't overflow */
+@media (max-width: 767px) {
+  .left img,
+  .right img {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100%;
+  }
+}
+
+/* Testimonial / carousel: no overflow on narrow screens */
+@media (max-width: 575px) {
+  .owl-carousel .owl-item img {
+    max-width: 100%;
+  }
+}
+
+/* Blog cards: full width on mobile */
+@media (max-width: 575px) {
+  .blog-featured-card {
+    flex-direction: column;
+  }
+}
+
+/* Navbar: prevent overflow from long items */
+@media (max-width: 991px) {
+  .navbar-brand img {
+    max-height: 36px;
+    width: auto;
+  }
+}
