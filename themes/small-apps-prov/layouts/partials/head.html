@@ -29,12 +29,18 @@
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
 
-  {{ "<!-- plugins -->" | safeHTML }}
-  <noscript>
-    {{ range .Site.Params.plugins.css }}
-    <link rel="stylesheet" href="{{ .URL | absURL }} ">
-    {{ end }}
-  </noscript>
+  {{ "<!-- plugins CSS (async, non-render-blocking) -->" | safeHTML }}
+  {{ range .Site.Params.plugins.css }}
+  <link rel="preload" href="{{ .URL | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
+  {{ end }}
+  {{ if .IsHome }}
+  {{ "<!-- Homepage-only CSS (OWL Carousel, Fancybox) -->" | safeHTML }}
+  {{ range .Site.Params.plugins.css_homepage }}
+  <link rel="preload" href="{{ .URL | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
+  {{ end }}
+  {{ end }}
 
   {{ "<!-- Main Stylesheet -->" | safeHTML }}
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}

@@ -9,7 +9,7 @@
             <li class="list-inline-item mx-3"><a class="text-white" href="{{ .URL }}">{{ .Name }}</a></li>
             {{ end }}
           </ul>
-          <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logoAlt | absURL }}" alt="footer-logo"></a>
+          <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logoAlt | absURL }}" alt="footer-logo" loading="lazy" decoding="async"></a>
           <ul class="social-icon list-inline">
             {{ range .Site.Params.footer.socialIcon }}
             <li class="list-inline-item">
@@ -24,27 +24,17 @@
   </div>
 </footer>
 
-{{ $script:= "script" }}
-{{ $scriptTag:= "<" }}
-{{$scriptTag | safeHTML }}{{$script}} type="text/javascript">
-  
-  {{ $.Scratch.Set "counter" 0 }}
-  {{ range .Site.Params.plugins.css }}
-  {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
-  var css{{$.Scratch.Get `counter`}} = document.createElement('link');
-  css{{$.Scratch.Get `counter`}}.rel = 'stylesheet';
-  css{{$.Scratch.Get `counter`}}.href = '{{ .URL | absURL }}';
-  css{{$.Scratch.Get `counter`}}.type = 'text/css';
-  var fastCSS{{$.Scratch.Get `counter`}} = document.getElementsByTagName('link')[0];
-  fastCSS{{$.Scratch.Get `counter`}}.parentNode.insertBefore(css{{$.Scratch.Get `counter`}}, fastCSS{{$.Scratch.Get `counter`}});
-  {{ end }}
 
-</script>
 
-  
 {{ "<!-- JS Plugins (deferred — does not block rendering) -->" | safeHTML }}
 {{ range .Site.Params.plugins.js}}
 <script src="{{ .URL | absURL }}" defer></script>
+{{ end }}
+{{ if .IsHome }}
+{{ "<!-- Homepage-only JS plugins (OWL Carousel, Fancybox) -->" | safeHTML }}
+{{ range .Site.Params.plugins.js_homepage }}
+<script src="{{ .URL | absURL }}" defer></script>
+{{ end }}
 {{ end }}
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify}}

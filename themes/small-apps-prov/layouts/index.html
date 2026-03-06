@@ -51,7 +51,7 @@
 				{{ end }}
 			</div>
 			<div class="col-md-6 text-center order-1 order-md-2">
-				<img src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" class="img-fluid" alt="banner-image">
+				<img src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" class="img-fluid" alt="banner-image" fetchpriority="high" decoding="async">
 			</div>
 			{{ end }}
 		</div>
@@ -156,7 +156,7 @@
 			<div class="col-lg-6 ml-auto justify-content-center">
 				{{ "<!-- Feature Mockup -->" | safeHTML }}
 				<div class="image-content" data-aos="fade-right">
-					<img class="img-fluid" src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" alt="iphone">
+					<img class="img-fluid" src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" alt="iphone" loading="lazy" decoding="async">
 				</div>
 			</div>
 			<div class="col-lg-6 mr-auto align-self-center">
@@ -209,7 +209,7 @@
 			<div class="col-lg-6 mr-auto justify-content-center">
 				{{ "<!-- Feature mockup -->" | safeHTML }}
 				<div class="image-content" data-aos="fade-left">
-					<img class="img-fluid" src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" alt="ipad">
+					<img class="img-fluid" src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" alt="ipad" loading="lazy" decoding="async">
 				</div>
 			</div>
 		</div>
@@ -235,7 +235,7 @@
 				<div class="mockup-slider owl-carousel owl-theme">
 					{{ range .Site.Data.homepage.mockupCarousel.items }}
 					<div class="item text-center">
-						<img class="img-fluid" src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" alt="{{ .title }}">
+						<img class="img-fluid" src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" alt="{{ .title }}" loading="lazy" decoding="async">
 						<h5 class="mt-3">{{ .title }}</h5>
 					</div>
 					{{ end }}
@@ -290,7 +290,7 @@
 		<div class="row no-gutters">
 			<div class="col-lg-6 align-self-center">
 				<div class="service-thumb left" data-aos="fade-right">
-					<img class="img-fluid service-thumb-img" src="{{ .Site.Data.homepage.service.image | absURL }}" onerror="this.src='{{ .Site.Data.homepage.service.imageAlt | absURL }}'" alt="iphone-ipad">
+					<img class="img-fluid service-thumb-img" src="{{ .Site.Data.homepage.service.image | absURL }}" onerror="this.src='{{ .Site.Data.homepage.service.imageAlt | absURL }}'" alt="iphone-ipad" loading="lazy" decoding="async">
 				</div>
 			</div>
 			<div class="col-lg-5 mr-auto align-self-center">
@@ -347,7 +347,7 @@
 						<div class="block shadow">
 							<p>{{ .content }}</p>
 							<div class="image">
-								<img src="{{ .image | absURL }}" alt="image">
+								<img src="{{ .image | absURL }}" alt="image" loading="lazy" decoding="async">
 							</div>
 							<cite>{{ .name }}</cite>
 						</div>
@@ -387,7 +387,7 @@
 						<h3 class="blog-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 						<p class="blog-card-summary">{{ .Description | default .Summary }}</p>
 						<div class="blog-meta mt-auto">
-							<img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
+							<img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img" loading="lazy" decoding="async">
 							<span class="blog-author-name">{{ .Params.Author }}</span>
 							<span class="blog-meta-sep">·</span>
 							<span>{{ .PublishDate.Format "Jan 2, 2006" }}</span>
@@ -505,7 +505,7 @@
 				<div class="download-badges-row">
 					{{ range .Site.Data.homepage.download.downloadButton }}
 					<a href="{{ htmlEscape .URL }}" class="badge-link badge-link-download" title="{{ .btnText }}">
-						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-section">
+						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-section" loading="lazy" decoding="async">
 					</a>
 					{{ end }}
 				</div>
