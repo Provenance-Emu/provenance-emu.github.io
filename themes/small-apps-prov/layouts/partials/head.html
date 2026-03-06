@@ -24,7 +24,7 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
   {{ "<!-- Hero image preload (reduces LCP on homepage) -->" | safeHTML }}
-  {{ if .IsHome }}{{ with .Site.Data.homepage.banner }}<link rel="preload" as="image" href="{{ .image | absURL }}">{{ end }}{{ end }}
+  {{ if .IsHome }}{{ with .Site.Data.homepage.banner }}<link rel="preload" as="image" href="{{ .image | absURL }}" type="image/webp">{{ end }}{{ end }}
 
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
@@ -46,8 +46,9 @@
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
-  {{ "<!-- AOS — synchronous (must apply before AOS.init() reads initial states) -->" | safeHTML }}
-  <link rel="stylesheet" href="{{ "plugins/aos/aos.css" | absURL }}">
+  {{ "<!-- AOS — preloaded async (AOS.js is deferred so CSS will be applied before it runs) -->" | safeHTML }}
+  <link rel="preload" href="{{ "plugins/aos/aos.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ "plugins/aos/aos.css" | absURL }}"></noscript>
 
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }} " type="image/x-icon">
