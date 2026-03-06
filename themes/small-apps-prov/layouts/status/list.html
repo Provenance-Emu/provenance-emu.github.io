@@ -142,7 +142,7 @@
     </div>
 
     {{/* ── Legend ── */}}
-    <div class="row">
+    <div class="row mb-5">
       <div class="col-12">
         <div class="status-legend">
           <span class="legend-item"><span class="legend-dot dot-good"></span> 90–100 / Passing</span>
@@ -152,6 +152,78 @@
         </div>
       </div>
     </div>
+
+    {{/* ── Search Rankings ── */}}
+    {{ with .Site.Data.status.search_rankings }}
+    <div class="row mb-2">
+      <div class="col-12">
+        <h3 class="status-section-title">Search Rankings</h3>
+        {{ if .enabled }}
+        <p class="text-muted mb-4" style="font-size:0.875rem;">
+          Top queries driving impressions over the last 28 days ({{ .date_range }}).
+          Source: Google Search Console.
+        </p>
+        {{ else }}
+        <p class="text-muted mb-2" style="font-size:0.875rem;">
+          Connect Google Search Console to track organic search rankings.
+          Add a <code>GSC_SERVICE_ACCOUNT_JSON</code> secret to enable.
+        </p>
+        {{ end }}
+      </div>
+    </div>
+
+    {{ if .enabled }}
+    <div class="row mb-2">
+      <div class="col-md-3 mb-3">
+        <div class="status-score-card score-unknown">
+          <div class="status-score-number">{{ .impressions }}</div>
+          <div class="status-score-label">Impressions</div>
+          <div class="status-score-threshold">28 days</div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="status-score-card score-unknown">
+          <div class="status-score-number">{{ .clicks }}</div>
+          <div class="status-score-label">Clicks</div>
+          <div class="status-score-threshold">28 days</div>
+        </div>
+      </div>
+    </div>
+
+    {{ if .top_queries }}
+    <div class="row mb-5">
+      <div class="col-12">
+        <table class="table table-sm" style="font-size:0.85rem;">
+          <thead>
+            <tr>
+              <th>Query</th>
+              <th class="text-center">Position</th>
+              <th class="text-center">Impressions</th>
+              <th class="text-center">Clicks</th>
+              <th class="text-center">CTR</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range .top_queries }}
+            <tr>
+              <td>{{ .query }}</td>
+              <td class="text-center">
+                {{ if le .position 10.0 }}<strong style="color:#28a745;">{{ .position }}</strong>
+                {{ else if le .position 20.0 }}<span style="color:#ffc107;">{{ .position }}</span>
+                {{ else }}<span style="color:#dc3545;">{{ .position }}</span>{{ end }}
+              </td>
+              <td class="text-center">{{ .impressions }}</td>
+              <td class="text-center">{{ .clicks }}</td>
+              <td class="text-center">{{ .ctr }}%</td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    {{ end }}
 
     {{ else }}
 

@@ -304,12 +304,57 @@ jobs:
           HTML_PASSED: ${{ needs.html-check.outputs.passed }}
           HTML_ERRORS: ${{ needs.html-check.outputs.error_count }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
         run: |
+          pip install google-auth google-api-python-client --quiet -q 2>/dev/null || true
           python3 - <<'PYEOF'
-          import json, os
+          import json, os, sys
           def intval(key, default=0):
               try: return int(os.environ.get(key, '') or default)
               except: return default
+
+          # Google Search Console rankings (optional)
+          gsc = {"enabled": False, "impressions": 0, "clicks": 0, "top_queries": []}
+          gsc_json = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "").strip()
+          if gsc_json:
+              try:
+                  from datetime import date, timedelta
+                  from google.oauth2 import service_account
+                  import googleapiclient.discovery
+                  creds = service_account.Credentials.from_service_account_info(
+                      json.loads(gsc_json),
+                      scopes=["https://www.googleapis.com/auth/webmasters.readonly"]
+                  )
+                  svc = googleapiclient.discovery.build("searchconsole", "v1", credentials=creds, cache_discovery=False)
+                  end = date.today()
+                  start = end - timedelta(days=28)
+                  resp = svc.searchanalytics().query(
+                      siteUrl="sc-domain:provenance-emu.com",
+                      body={
+                          "startDate": start.isoformat(), "endDate": end.isoformat(),
+                          "dimensions": ["query"], "rowLimit": 15,
+                          "orderBy": [{"fieldName": "impressions", "sortOrder": "DESCENDING"}],
+                      }
+                  ).execute()
+                  rows = resp.get("rows", [])
+                  top_queries = [
+                      {"query": r.get("keys", [""])[0], "position": round(r.get("position", 0), 1),
+                       "impressions": int(r.get("impressions", 0)), "clicks": int(r.get("clicks", 0)),
+                       "ctr": round(r.get("ctr", 0) * 100, 1)}
+                      for r in rows[:10]
+                  ]
+                  gsc = {
+                      "enabled": True,
+                      "date_range": f"{start.isoformat()} to {end.isoformat()}",
+                      "impressions": int(sum(r.get("impressions", 0) for r in rows)),
+                      "clicks": int(sum(r.get("clicks", 0) for r in rows)),
+                      "top_queries": top_queries,
+                  }
+                  print(f"GSC: {gsc['impressions']} impressions, {gsc['clicks']} clicks", file=sys.stderr)
+              except Exception as e:
+                  print(f"GSC error: {e}", file=sys.stderr)
+                  gsc["error"] = str(e)
+
           data = {
               "last_updated": __import__('datetime').datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
               "run_url": os.environ.get("RUN_URL", ""),
@@ -330,7 +375,8 @@ jobs:
               },
               "ssl": {
                   "grade": os.environ.get("SSL_GRADE", "N/A") or "N/A"
-              }
+              },
+              "search_rankings": gsc,
           }
           with open("data/status.json", "w") as f:
               json.dump(data, f, indent=2)
