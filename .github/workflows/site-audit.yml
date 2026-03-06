@@ -73,9 +73,10 @@ jobs:
             echo "passed=true" >> $GITHUB_OUTPUT
             echo "error_count=0" >> $GITHUB_OUTPUT
           else
-            COUNT=$(grep -c "ERROR" htmlproofer-output.txt 2>/dev/null || echo "0")
+            COUNT=$(grep -c "ERROR" htmlproofer-output.txt 2>/dev/null | tr -d '[:space:]' || echo "0")
+            COUNT=$(printf '%d' "${COUNT:-0}" 2>/dev/null || echo "0")
             echo "passed=false" >> $GITHUB_OUTPUT
-            echo "error_count=$COUNT" >> $GITHUB_OUTPUT
+            printf 'error_count=%d\n' "$COUNT" >> $GITHUB_OUTPUT
           fi
 
       - name: Write job summary
@@ -163,10 +164,10 @@ jobs:
             echo "report_url=" >> $GITHUB_OUTPUT
             exit 0
           fi
-          PERF=$(jq '.categories.performance.score * 100 | round' < "$REPORT")
-          A11Y=$(jq '.categories.accessibility.score * 100 | round' < "$REPORT")
-          BP=$(jq '."categories"."best-practices".score * 100 | round' < "$REPORT")
-          SEO=$(jq '.categories.seo.score * 100 | round' < "$REPORT")
+          PERF=$(jq '(.categories.performance.score    // 0) * 100 | round' < "$REPORT")
+          A11Y=$(jq '(.categories.accessibility.score  // 0) * 100 | round' < "$REPORT")
+          BP=$(jq '(."categories"."best-practices".score // 0) * 100 | round' < "$REPORT")
+          SEO=$(jq '(.categories.seo.score             // 0) * 100 | round' < "$REPORT")
           echo "performance=$PERF" >> $GITHUB_OUTPUT
           echo "accessibility=$A11Y" >> $GITHUB_OUTPUT
           echo "best_practices=$BP" >> $GITHUB_OUTPUT
@@ -189,7 +190,7 @@ jobs:
           A="${{ steps.scores.outputs.accessibility }}"
           B="${{ steps.scores.outputs.best_practices }}"
           S="${{ steps.scores.outputs.seo }}"
-          score_icon() { [ "${1:-0}" -ge "${2}" ] && echo "✅" || echo "❌"; }
+          score_icon() { local s="${1:-0}"; [[ "$s" =~ ^[0-9]+$ ]] && [ "$s" -ge "$2" ] && echo "✅" || echo "❌"; }
           echo "## 🔦 Lighthouse Scores (Homepage)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Category | Score | Status |" >> $GITHUB_STEP_SUMMARY
@@ -328,6 +329,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/status.json
           git diff --staged --quiet || git commit -m "chore: update site audit status [skip ci]"
+          git pull --rebase origin main
           git push
 
       - name: Ensure audit labels exist
