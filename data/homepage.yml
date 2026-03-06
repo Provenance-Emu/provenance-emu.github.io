@@ -26,8 +26,8 @@ banner:
   description : "The ultimate open-source, all-in-one emulator. Play your favorite retro games with native iOS features, beautiful metadata, and support for 38+ console systems. Free when sideloaded or built from source."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
-  image : "images/mobile.png"
-  imageAlt : "images/mobile.webp"
+  image : "images/mobile.webp"
+  imageAlt : "images/mobile.png"
   button:
     btnText : "Get on App Store"
     URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
@@ -83,8 +83,8 @@ whyProvenance:
 # feature one
 featureOne:
   enable : true
-  imageAlt : "images/feature/feature-rom-metadata.webp"
-  image : "images/feature/feature-rom-metadata.png"
+  image : "images/feature/feature-rom-metadata.webp"
+  imageAlt : "images/feature/feature-rom-metadata.png"
   title : "Your Games, Beautifully Presented"
   content : "Every game gets the treatment it deserves. Automatic artwork downloads, release information, ratings, and even scanned manuals. Edit any detail to make your library truly yours."
   comment : ""
