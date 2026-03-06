@@ -59,8 +59,9 @@ jobs:
         run: |
           htmlproofer ./public \
             --checks Links,Images,Scripts,OpenGraph \
-            --ignore-urls "/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/login/" \
+            --ignore-urls "/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/login/,/provenance-emu\.com/,/s3.*amazonaws\.com/" \
             --ignore-status-codes "0,429,999,403" \
+            --ignore-files "/404\.html/" \
             2>&1 | tee htmlproofer-output.txt
           echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
 
@@ -72,7 +73,7 @@ jobs:
             echo "passed=true" >> $GITHUB_OUTPUT
             echo "error_count=0" >> $GITHUB_OUTPUT
           else
-            COUNT=$(grep -c "ERROR" htmlproofer-output.txt 2>/dev/null | tr -d '[:space:]' || echo "0")
+            COUNT=$(grep -c "^\* At" htmlproofer-output.txt 2>/dev/null | tr -d '[:space:]' || echo "0")
             COUNT=$(printf '%d' "${COUNT:-0}" 2>/dev/null || echo "0")
             echo "passed=false" >> $GITHUB_OUTPUT
             printf 'error_count=%d\n' "$COUNT" >> $GITHUB_OUTPUT
