@@ -78,6 +78,19 @@ All in `themes/small-apps-prov/layouts/`:
 
 Clone with `--recursive` or run `git submodule update --init --recursive` after cloning. Required for themes to resolve.
 
+## ⚠️ Hard Rules — Do Not Change Without Understanding Why
+
+### AOS CSS must be loaded synchronously
+`themes/small-apps-prov/layouts/partials/head.html` loads `plugins/aos/aos.css` with a plain `<link rel="stylesheet">` — **never change this to async/preload**.
+
+Why: AOS sets `opacity:0` on `[data-aos]` elements via CSS. If the CSS loads after `AOS.init()` runs (which happens when CSS is async), the opacity is never reset to 1 — elements become permanently invisible. This broke the status page and homepage multiple times. The Lighthouse performance gain from async-loading this one small CSS file (~3KB) is negligible.
+
+### All `<script>` tags must have `data-cfasync="false"`
+Every `<script>` in `footer.html` has `data-cfasync="false"`. This bypasses Cloudflare Rocket Loader, which rewrites script tags and breaks our deferred execution order. Do not remove these attributes.
+
+### Do not add `data-aos` to functional/dashboard pages
+The `/status/` page layout (`themes/small-apps-prov/layouts/status/list.html`) intentionally has no `data-aos` attributes. AOS animations are for marketing pages only — adding them to functional dashboards causes invisible content if timing is off.
+
 ## GitHub Issues & PR Conventions
 
 ### Epic Issues
