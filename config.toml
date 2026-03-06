@@ -293,12 +293,11 @@ pygmentsStyle = "solarized-dark"
             URL = "plugins/owl-carousel/assets/owl.carousel.min.css"
         [[params.plugins.css_homepage]]
             URL = "plugins/owl-carousel/assets/owl.theme.green.min.css"
-        [[params.plugins.css_homepage]]
-            URL = "plugins/fancybox/jquery.fancybox.min.css"
+        # Fancybox removed: promoVideo is disabled so data-fancybox never renders
 
         # JS Plugins (loaded on all pages)
         [[params.plugins.js]]
-            URL = "plugins/jquery/jquery.js"
+            URL = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         [[params.plugins.js]]
             URL = "plugins/bootstrap/bootstrap.min.js"
         [[params.plugins.js]]
@@ -307,8 +306,7 @@ pygmentsStyle = "solarized-dark"
         # JS Plugins (homepage-only — loaded conditionally in footer.html)
         [[params.plugins.js_homepage]]
             URL = "plugins/owl-carousel/owl.carousel.min.js"
-        [[params.plugins.js_homepage]]
-            URL = "plugins/fancybox/jquery.fancybox.min.js"
+        # Fancybox removed: promoVideo is disabled so data-fancybox never renders
 
 # https://github.com/kaushalmodi/hugo-atom-feed
 [outputs]
