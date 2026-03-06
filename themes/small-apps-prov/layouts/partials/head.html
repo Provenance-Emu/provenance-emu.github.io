@@ -46,9 +46,8 @@
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
-  {{ "<!-- AOS — preloaded async (AOS.js is deferred so CSS will be applied before it runs) -->" | safeHTML }}
-  <link rel="preload" href="{{ "plugins/aos/aos.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ "plugins/aos/aos.css" | absURL }}"></noscript>
+  {{ "<!-- AOS CSS must be synchronous: async load races with AOS.init() causing elements to stay invisible -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ "plugins/aos/aos.css" | absURL }}">
 
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ "images/icons/icon.512x512.png" | absURL }}" type="image/x-icon">
