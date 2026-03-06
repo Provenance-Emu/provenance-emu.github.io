@@ -171,10 +171,23 @@ jobs:
         run: |
           # treosh/lighthouse-ci-action stores results at resultsPath (default .lighthouseci/)
           RESULTS_PATH="${{ steps.lhci.outputs.resultsPath }}"
-          REPORT=$(find "${RESULTS_PATH:-.lighthouseci}" -name "lhr-*.json" 2>/dev/null | head -1)
-          # Fallback: search broader workspace if action changed its output dir
+          SEARCH_DIR="${RESULTS_PATH:-.lighthouseci}"
+          # Fallback: search broader workspace
+          if [ -z "$(find "$SEARCH_DIR" -name "lhr-*.json" 2>/dev/null | head -1)" ]; then
+            SEARCH_DIR="."
+          fi
+          # Pick the LHR for the homepage URL specifically (not /blog/ or /plus/)
+          REPORT=""
+          for f in $(find "$SEARCH_DIR" -maxdepth 6 -name "lhr-*.json" 2>/dev/null); do
+            URL_IN_LHR=$(jq -r '.requestedUrl // .finalUrl // ""' "$f" 2>/dev/null)
+            if [[ "$URL_IN_LHR" == "https://provenance-emu.com" || "$URL_IN_LHR" == "https://provenance-emu.com/" ]]; then
+              REPORT="$f"
+              break
+            fi
+          done
+          # Fallback to first available LHR if homepage not found
           if [ -z "$REPORT" ]; then
-            REPORT=$(find . -maxdepth 6 -name "lhr-*.json" 2>/dev/null | head -1)
+            REPORT=$(find "$SEARCH_DIR" -maxdepth 6 -name "lhr-*.json" 2>/dev/null | head -1)
           fi
           if [ -z "$REPORT" ]; then
             echo "No LHR file found, using zeros"
@@ -185,7 +198,7 @@ jobs:
             echo "report_url=" >> $GITHUB_OUTPUT
             exit 0
           fi
-          echo "Using LHR: $REPORT"
+          echo "Using LHR: $REPORT ($(jq -r '.requestedUrl' "$REPORT" 2>/dev/null))"
           PERF=$(jq '(.categories.performance.score    // 0) * 100 | round' < "$REPORT")
           A11Y=$(jq '(.categories.accessibility.score  // 0) * 100 | round' < "$REPORT")
           BP=$(jq '(."categories"."best-practices".score // 0) * 100 | round' < "$REPORT")
@@ -194,16 +207,20 @@ jobs:
           echo "accessibility=$A11Y" >> $GITHUB_OUTPUT
           echo "best_practices=$BP" >> $GITHUB_OUTPUT
           echo "seo=$SEO" >> $GITHUB_OUTPUT
-          # Parse report URL from links output (first value)
+          # Parse report URL for the homepage from links output
           LINKS='${{ steps.lhci.outputs.links }}'
-          URL=$(echo "$LINKS" | python3 -c "
+          REPORT_URL=$(echo "$LINKS" | python3 -c "
           import json, sys
           try:
             d = json.loads(sys.stdin.read())
+            # Prefer homepage URL key
+            for key in d:
+              if key.rstrip('/') == 'https://provenance-emu.com':
+                print(d[key]); sys.exit(0)
             print(list(d.values())[0] if d else '')
           except: print('')
           " 2>/dev/null || echo "")
-          echo "report_url=$URL" >> $GITHUB_OUTPUT
+          echo "report_url=$REPORT_URL" >> $GITHUB_OUTPUT
 
       - name: Write job summary
         if: always()

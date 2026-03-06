@@ -14,8 +14,8 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
-  {{ "<!-- Font Awesome — async (non-render-blocking) -->" | safeHTML }}
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'">
+  {{ "<!-- Font Awesome — deferred via media=print (does not compete with render-blocking CSS for bandwidth) -->" | safeHTML }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
 
   {{ "<!-- Canonical URL -->" | safeHTML }}
@@ -24,21 +24,20 @@
   {{ "<!-- Page title -->" | safeHTML }}
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
-  {{ "<!-- Hero image preload (reduces LCP on homepage) -->" | safeHTML }}
-  {{ if .IsHome }}{{ with .Site.Data.homepage.banner }}<link rel="preload" as="image" href="{{ .image | absURL }}" type="image/webp">{{ end }}{{ end }}
+  {{ "<!-- Hero image: fetchpriority=high on the img element is sufficient; preload removed to avoid bandwidth contention -->" | safeHTML }}
 
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
 
-  {{ "<!-- plugins CSS (async, non-render-blocking) -->" | safeHTML }}
+  {{ "<!-- plugins CSS — deferred via media=print (low priority so render-blocking CSS gets full bandwidth) -->" | safeHTML }}
   {{ range .Site.Params.plugins.css }}
-  <link rel="preload" href="{{ .URL | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
   {{ end }}
   {{ if .IsHome }}
-  {{ "<!-- Homepage-only CSS (OWL Carousel, Fancybox) -->" | safeHTML }}
+  {{ "<!-- Homepage-only CSS (OWL Carousel) -->" | safeHTML }}
   {{ range .Site.Params.plugins.css_homepage }}
-  <link rel="preload" href="{{ .URL | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
   {{ end }}
   {{ end }}
