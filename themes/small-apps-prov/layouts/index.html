@@ -51,7 +51,10 @@
 				{{ end }}
 			</div>
 			<div class="col-md-6 text-center order-1 order-md-2">
-				<img src="{{ .image | absURL }}" onerror="this.src='{{ .imageAlt | absURL }}'" class="img-fluid" alt="banner-image" fetchpriority="high" decoding="async">
+				<picture>
+					<source srcset="{{ .image | absURL }}" type="image/webp">
+					<img src="{{ .imageAlt | absURL }}" class="img-fluid" alt="banner-image" fetchpriority="high" decoding="async" width="464" height="960">
+				</picture>
 			</div>
 			{{ end }}
 		</div>
