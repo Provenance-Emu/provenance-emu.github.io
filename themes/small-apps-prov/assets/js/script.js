@@ -6,7 +6,7 @@
       $('.preloader').fadeOut(100);
   });
 
-  $(document).on('ready', function () {
+  $(function () {
       // -----------------------------
       //  Testimonial Slider
       // -----------------------------
