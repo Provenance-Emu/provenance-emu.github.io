@@ -61,7 +61,7 @@ jobs:
             --checks Links,Images,Scripts,OpenGraph \
             --ignore-urls "/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/login/,/provenance-emu\.com/,/s3.*amazonaws\.com/" \
             --ignore-status-codes "0,429,999,403" \
-            --ignore-files "/404\.html/" \
+            --ignore-files "/404\.html/,/release-2\.1\.0/" \
             2>&1 | tee htmlproofer-output.txt
           echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
 

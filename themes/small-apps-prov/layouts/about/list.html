@@ -13,7 +13,7 @@
             <h3>{{ .title }}</h3>
             <p>{{ .content }}</p>
             <br>
-            <a href="{{ .URL }}" class="btn font-weight-bold btn-main-md">{{ .btnText }}</a>
+            {{ if .URL }}<a href="{{ .URL }}" class="btn font-weight-bold btn-main-md">{{ .btnText }}</a>{{ end }}
           </div>
         </div>
         {{ end }}

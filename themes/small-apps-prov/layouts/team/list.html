@@ -16,7 +16,9 @@
             <p>{{ .content }}</p>
             {{ "<!-- Social Sites -->" | safeHTML }}
             <ul class="list-inline social-links">
+              {{ range .socialIcon }}
               <li class="list-inline-item"><a href="{{ .URL }}"><i class="{{ .icon }}"></i></a></li>
+              {{ end }}
             </ul>
           </div>
         </div>
