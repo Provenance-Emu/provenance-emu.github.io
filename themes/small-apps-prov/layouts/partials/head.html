@@ -46,6 +46,9 @@
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
+  {{ "<!-- AOS — synchronous (must apply before AOS.init() reads initial states) -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ "plugins/aos/aos.css" | absURL }}">
+
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }} " type="image/x-icon">
   <link rel="icon" href="{{ "images/favicon.png" | absURL }} " type="image/x-icon">
