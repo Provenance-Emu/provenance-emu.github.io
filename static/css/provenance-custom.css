@@ -733,7 +733,11 @@ footer .socialIcon a:hover {
 
 .plus-feature-card h4 {
   font-size: 1.2rem;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
 
+/* ========================================
    Press Kit Page
    ======================================== */
 
@@ -1198,6 +1202,19 @@ footer .socialIcon a:hover {
   padding: 0.5rem 0 1rem;
   font-size: 0.95rem;
   line-height: 1.7;
+}
+
+.plus-faq-chevron {
+  float: right;
+  transition: transform 0.25s ease;
+  color: #667eea;
+  font-size: 0.85rem;
+  margin-top: 0.15em;
+}
+
+.plus-faq .item-link a[aria-expanded="true"] .plus-faq-chevron,
+.plus-faq .item-link a:not(.collapsed) .plus-faq-chevron {
+  transform: rotate(180deg);
 }
 
 /* Plus CTA */

@@ -192,7 +192,10 @@
             {{ range $index, $item := .items }}
             <div class="item">
               <div class="item-link">
-                <a data-toggle="collapse" data-parent="#plus-accordions" href="#plus-faq-{{ $index }}">{{ .question }}</a>
+                <a data-toggle="collapse" data-parent="#plus-accordions" href="#plus-faq-{{ $index }}">
+                  {{ .question }}
+                  <i class="fas fa-chevron-down plus-faq-chevron"></i>
+                </a>
               </div>
               <div id="plus-faq-{{ $index }}" class="collapse accordion-block">
                 <p>{{ .answer }}</p>

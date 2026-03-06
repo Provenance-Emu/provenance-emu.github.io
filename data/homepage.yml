@@ -26,8 +26,8 @@ banner:
   description : "The ultimate open-source, all-in-one emulator. Play your favorite retro games with native iOS features, beautiful metadata, and support for 38+ console systems. Free when sideloaded or built from source."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
-  image : "images/mobile.webp"
-  imageAlt : "images/mobile.png"
+  image : "images/mobile.png"
+  imageAlt : "images/mobile.webp"
   button:
     btnText : "Get on App Store"
     URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
@@ -94,8 +94,8 @@ featureOne:
 # feature two
 featureTwo:
   enable : true
-  image : "images/feature/feature-core-options.webp"
-  imageAlt : "images/feature/feature-core-options.png"
+  image : "images/mockups/iphone-snes-mk3.webp"
+  imageAlt : "images/mockups/iphone-snes-mk3.png"
   title : "Fine-Tune Your Experience"
   content : "Customize emulation settings in real-time. Adjust graphics filters, control layouts, audio settings, and core-specific options without ever leaving your game."
   comment : ""
@@ -303,17 +303,17 @@ comparisonHighlights:
 pressQuotes:
   enable: true
   title: "As Seen In"
-  subtitle: "What the gaming press is saying about Provenance"
+  subtitle: "Coverage from the gaming and tech press"
   items:
-    - quote: "Provenance is the gold standard of iOS emulation — polished, comprehensive, and genuinely impressive in scope. If you want one app to rule them all, this is it."
-      source: "TouchArcade"
-      url: "https://toucharcade.com"
-    - quote: "With support for over 38 retro consoles and native Apple TV integration, Provenance sets a new bar for what an emulator on Apple platforms can look and feel like."
-      source: "MacRumors"
-      url: "https://macrumors.com"
-    - quote: "Provenance keeps getting better. The iCloud sync, beautiful metadata library, and open-source transparency make it the easy choice for retro gaming on iPhone and iPad."
+    - quote: "Great news for game emulation fans who will for the first time have the opportunity to run PlayStation games on iOS without relying on sideloading."
       source: "9to5Mac"
-      url: "https://9to5mac.com"
+      url: "https://9to5mac.com/2024/04/19/provenance-playstation-emulator-app-store/"
+    - quote: "An iOS and tvOS multi-emulator frontend to help you play your childhood faves from times long past — supporting Sega, Sony, Atari, Nintendo systems and more."
+      source: "Pocket Gamer"
+      url: "https://www.pocketgamer.com/provenance/launch/"
+    - quote: "The Provenance PlayStation, Nintendo, and Atari game emulator is now available for beta download on iPhone and iPad — and an Apple TV version is next."
+      source: "iMore"
+      url: "https://www.imore.com/gaming/the-provenance-playstation-nintendo-and-atari-game-emulator-is-now-available-for-beta-download-on-iphone-and-ipad-and-an-apple-tv-version-is-next"
 
 # download
 download:
