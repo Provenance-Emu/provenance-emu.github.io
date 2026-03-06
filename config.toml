@@ -297,8 +297,9 @@ pygmentsStyle = "solarized-dark"
             URL = "plugins/fancybox/jquery.fancybox.min.css"
 
         # JS Plugins (loaded on all pages)
+        # CDN-hosted minified jQuery 3.7.1 (~83KB vs 258KB unminified local build; Bootstrap 4 + Owl Carousel both support jQuery 3.x)
         [[params.plugins.js]]
-            URL = "plugins/jquery/jquery.js"
+            URL = "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"
         [[params.plugins.js]]
             URL = "plugins/bootstrap/bootstrap.min.js"
         [[params.plugins.js]]

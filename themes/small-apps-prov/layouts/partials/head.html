@@ -11,6 +11,7 @@
   {{ "<!-- DNS preconnects for external origins -->" | safeHTML }}
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
   {{ "<!-- Font Awesome — async (non-render-blocking) -->" | safeHTML }}
@@ -50,8 +51,11 @@
   <link rel="stylesheet" href="{{ "plugins/aos/aos.css" | absURL }}">
 
   {{ "<!--Favicon-->" | safeHTML }}
-  <link rel="shortcut icon" href="{{ "images/icons/icon.512x512.png" | absURL }}" type="image/x-icon">
-  <link rel="icon" href="{{ "images/icons/icon.512x512.png" | absURL }}" type="image/png">
+  {{ "<!-- Use 57x57 PNG for browser tab favicon (saves loading 45KB 512x512 PNG on every page) -->" | safeHTML }}
+  <link rel="shortcut icon" href="{{ "images/icons/icon.57x57.png" | absURL }}" type="image/png">
+  <link rel="icon" href="{{ "images/icons/icon.57x57.png" | absURL }}" type="image/png" sizes="57x57">
+  {{ "<!-- 512x512 is the correct size for Apple touch icon (add to home screen) -->" | safeHTML }}
+  <link rel="apple-touch-icon" href="{{ "images/icons/icon.512x512.png" | absURL }}">
 
   {{ "<!-- JSON-LD structured data -->" | safeHTML }}
   {{ partial "jsonld.html" . }}

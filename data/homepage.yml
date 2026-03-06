@@ -254,19 +254,19 @@ testimonial:
   enable : true
   testimonialSlider:
     - name: "JanBob654 — App Store Review"
-      image: "images/icons/icon.512x512.png"
+      image: "images/icons/icon.57x57.png"
       content : "I used Provenance for years and it was the best emulator of all. Its ease importing games, setting up controllers, and the fact it covered all the emulators I wanted made it a hands down winner. And when I saw I was able to play Colecovision I almost cried."
 
     - name: "Drivers455 — App Store Review"
-      image: "images/icons/icon.512x512.png"
+      image: "images/icons/icon.57x57.png"
       content : "Been using this app for various systems from the Atari consoles to the Game Boy series, and so far the games have performed very well. The UI is also very easy to use and cool looking."
 
     - name: "Dmytro Pankratov — hutko.dev"
-      image: "images/icons/icon.512x512.png"
+      image: "images/icons/icon.57x57.png"
       content : "Provenance is a top pick for users who care about accuracy and retro authenticity. It supports dozens of older systems — from Sega Genesis to Atari — and lets you tweak visuals using filters and custom scaling options."
 
     - name: "emulatorios.com"
-      image: "images/icons/icon.512x512.png"
+      image: "images/icons/icon.57x57.png"
       content : "Provenance still feels premium. The interface is beautiful, box art is auto-fetched, and your game library looks organized instead of messy. Provenance is a joy to use."
 
 # comparison highlights
