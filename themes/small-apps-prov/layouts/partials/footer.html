@@ -24,24 +24,22 @@
   </div>
 </footer>
 
-
-
-{{ "<!-- JS Plugins (deferred — does not block rendering) -->" | safeHTML }}
+{{ "<!-- JS Plugins (deferred — does not block rendering; data-cfasync=false bypasses Cloudflare Rocket Loader) -->" | safeHTML }}
 {{ range .Site.Params.plugins.js}}
-<script src="{{ .URL | absURL }}" defer></script>
+<script src="{{ .URL | absURL }}" defer data-cfasync="false"></script>
 {{ end }}
 {{ if .IsHome }}
 {{ "<!-- Homepage-only JS plugins (OWL Carousel, Fancybox) -->" | safeHTML }}
 {{ range .Site.Params.plugins.js_homepage }}
-<script src="{{ .URL | absURL }}" defer></script>
+<script src="{{ .URL | absURL }}" defer data-cfasync="false"></script>
 {{ end }}
 {{ end }}
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify}}
-<script src="{{ $script.Permalink }}" defer></script>
+<script src="{{ $script.Permalink }}" defer data-cfasync="false"></script>
 {{ "<!-- Analytics removed: Universal Analytics (UA) was sunset July 2023 -->" | safeHTML }}
 
-<script>
+<script data-cfasync="false">
   // Fire resize after all deferred scripts have run (replaces $(window).on('load'))
   window.addEventListener('load', function () {
     window.dispatchEvent(new Event('resize'));
@@ -50,8 +48,8 @@
 
 {{ if .IsHome }}
 {{ "<!-- QR Code library for App Store modal (homepage only) -->" | safeHTML }}
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" integrity="sha256-HbfMJhQ3GvMxvyMWlDIxgJgcKFTkibLCRtnBiH5Oc8=" crossorigin="anonymous" defer></script>
-<script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" integrity="sha256-HbfMJhQ3GvMxvyMWlDIxgJgcKFTkibLCRtnBiH5Oc8=" crossorigin="anonymous" defer data-cfasync="false"></script>
+<script data-cfasync="false">
   // Bootstrap modal event — uses native event listener, no jQuery dependency
   document.addEventListener('DOMContentLoaded', function () {
     var modal = document.getElementById('appStoreQRModal');
