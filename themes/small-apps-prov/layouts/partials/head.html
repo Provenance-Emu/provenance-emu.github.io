@@ -8,14 +8,23 @@
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ hugo.Generator }}
 
-  {{ "<!-- Font Awesome -->" | safeHTML }}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  {{ "<!-- DNS preconnects for external origins -->" | safeHTML }}
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  {{ "<!-- Font Awesome — async (non-render-blocking) -->" | safeHTML }}
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
 
   {{ "<!-- Canonical URL -->" | safeHTML }}
   <link rel="canonical" href="{{ .Permalink }}">
 
   {{ "<!-- Page title -->" | safeHTML }}
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+  {{ "<!-- Hero image preload (reduces LCP on homepage) -->" | safeHTML }}
+  {{ if .IsHome }}{{ with .Site.Data.homepage.banner }}<link rel="preload" as="image" href="{{ .image | absURL }}">{{ end }}{{ end }}
 
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
