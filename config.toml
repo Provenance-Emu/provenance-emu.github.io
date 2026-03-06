@@ -197,7 +197,7 @@ pygmentsStyle = "solarized-dark"
             URL = "https://github.com/Provenance-Emu/Provenance"
 
         [[params.footer.socialIcon]]
-            icon = "tf-ion-social-discord"
+            icon = "fab fa-discord"
             URL = "https://discord.gg/4TK7PU5"
 
         [[params.footer.socialIcon]]
