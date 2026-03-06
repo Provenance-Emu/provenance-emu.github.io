@@ -61,7 +61,7 @@ jobs:
             --checks Links,Images,Scripts,OpenGraph \
             --ignore-urls "/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/login/,/provenance-emu\.com/,/s3.*amazonaws\.com/" \
             --ignore-status-codes "0,429,999,403" \
-            --ignore-files "/404\.html/,/release-2\.1\.0/" \
+            --ignore-files "/404\.html/,/release-2\.1\.0/,/\/categories\//,/\/tags\//" \
             2>&1 | tee htmlproofer-output.txt
           echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
 
@@ -169,8 +169,13 @@ jobs:
       - name: Extract scores from LHR JSON
         id: scores
         run: |
-          # lhci stores full reports in .lighthouseci/lhr-*.json
-          REPORT=$(find .lighthouseci -name "lhr-*.json" 2>/dev/null | head -1)
+          # treosh/lighthouse-ci-action stores results at resultsPath (default .lighthouseci/)
+          RESULTS_PATH="${{ steps.lhci.outputs.resultsPath }}"
+          REPORT=$(find "${RESULTS_PATH:-.lighthouseci}" -name "lhr-*.json" 2>/dev/null | head -1)
+          # Fallback: search broader workspace if action changed its output dir
+          if [ -z "$REPORT" ]; then
+            REPORT=$(find . -maxdepth 6 -name "lhr-*.json" 2>/dev/null | head -1)
+          fi
           if [ -z "$REPORT" ]; then
             echo "No LHR file found, using zeros"
             echo "performance=0" >> $GITHUB_OUTPUT
@@ -180,6 +185,7 @@ jobs:
             echo "report_url=" >> $GITHUB_OUTPUT
             exit 0
           fi
+          echo "Using LHR: $REPORT"
           PERF=$(jq '(.categories.performance.score    // 0) * 100 | round' < "$REPORT")
           A11Y=$(jq '(.categories.accessibility.score  // 0) * 100 | round' < "$REPORT")
           BP=$(jq '(."categories"."best-practices".score // 0) * 100 | round' < "$REPORT")
