@@ -1,0 +1,22 @@
+{
+  "last_updated": "",
+  "run_url": "",
+  "html_check": {
+    "passed": true,
+    "error_count": 0
+  },
+  "lighthouse": {
+    "performance": 0,
+    "accessibility": 0,
+    "best_practices": 0,
+    "seo": 0,
+    "report_url": ""
+  },
+  "observatory": {
+    "grade": "N/A",
+    "score": 0
+  },
+  "ssl": {
+    "grade": "N/A"
+  }
+}

@@ -23,9 +23,6 @@
             </div>
           </div>
           <div class="post-body">
-            <div class="feature-image">
-              <img class="img-fluid" src="{{ .Params.Image | absURL }}" onerror="this.src='{{ .Params.ImageAlt | absURL }}'" alt="{{ .Title }}">
-            </div>
             <div class="content">
               {{ .Content }}
             </div>
@@ -71,11 +68,11 @@
     </div>
     <div class="row">
       {{ range . }}
+      {{ $accentClass := "blog-accent-release" }}
+      {{ range .Params.tags }}{{ if or (eq . "development") (eq . "preview") }}{{ $accentClass = "blog-accent-dev" }}{{ end }}{{ end }}
       <div class="col-lg-4 col-md-6 mb-4">
         <article class="blog-card">
-          <a href="{{ .Permalink }}" class="blog-card-img-link">
-            <img class="blog-card-img" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
-          </a>
+          <div class="blog-card-accent {{ $accentClass }}"></div>
           <div class="blog-card-body">
             {{ with .Params.tags }}
             <div class="blog-tags mb-2">

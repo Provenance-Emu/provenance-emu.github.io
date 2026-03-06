@@ -1,0 +1,166 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+<section class="section site-status">
+  <div class="container">
+
+    {{ with .Site.Data.status }}
+
+    {{/* ── Overall status banner ── */}}
+    {{ $lh := .lighthouse }}
+    {{ $allPassed := and
+        .html_check.passed
+        (ge $lh.performance 1)
+        (ge $lh.performance 70)
+        (ge $lh.accessibility 80)
+        (ge $lh.seo 90) }}
+    <div class="status-banner {{ if $allPassed }}status-banner-pass{{ else }}status-banner-warn{{ end }} mb-5" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col">
+          {{ if .last_updated }}
+          <p class="mb-0">
+            Last audited <strong>{{ .last_updated }}</strong>
+            {{ if .run_url }}· <a href="{{ .run_url }}" target="_blank" rel="noopener noreferrer" class="status-run-link">View Actions run →</a>{{ end }}
+          </p>
+          {{ else }}
+          <p class="mb-0 text-muted">No audit data yet — run the <strong>Site Audit</strong> workflow to populate this page.</p>
+          {{ end }}
+        </div>
+        <div class="col-auto">
+          {{ if $allPassed }}
+          <span class="status-badge status-badge-pass">All checks passing</span>
+          {{ else }}
+          <span class="status-badge status-badge-warn">Issues detected</span>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{/* ── Lighthouse scores ── */}}
+    <div class="row mb-2" data-aos="fade-up">
+      <div class="col-12">
+        <h3 class="status-section-title">Lighthouse Scores</h3>
+        <p class="text-muted mb-4" style="font-size:0.875rem;">Measured on the homepage. Scores of 0 indicate the audit has not run yet.</p>
+      </div>
+    </div>
+
+    {{ $scores := slice
+        (dict "label" "Performance"    "value" $lh.performance    "threshold" 70)
+        (dict "label" "Accessibility"  "value" $lh.accessibility  "threshold" 80)
+        (dict "label" "Best Practices" "value" $lh.best_practices "threshold" 80)
+        (dict "label" "SEO"            "value" $lh.seo            "threshold" 90)
+    }}
+
+    <div class="row mb-5">
+      {{ range $scores }}
+      {{ $cls := "score-bad" }}
+      {{ if ge .value 90 }}{{ $cls = "score-good" }}{{ else if ge .value .threshold }}{{ $cls = "score-ok" }}{{ end }}
+      {{ if eq .value 0 }}{{ $cls = "score-unknown" }}{{ end }}
+      <div class="col-6 col-md-3 mb-3" data-aos="fade-up">
+        <div class="status-score-card {{ $cls }}">
+          <div class="status-score-number">{{ if gt .value 0 }}{{ .value }}{{ else }}–{{ end }}</div>
+          <div class="status-score-label">{{ .label }}</div>
+          <div class="status-score-threshold">Min: {{ .threshold }}</div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    {{ if $lh.report_url }}
+    <div class="row mb-5" data-aos="fade-up">
+      <div class="col-12 text-center">
+        <a href="{{ $lh.report_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">
+          View Full Lighthouse Report &rarr;
+        </a>
+      </div>
+    </div>
+    {{ end }}
+
+    {{/* ── Quality checks ── */}}
+    <div class="row mb-2" data-aos="fade-up">
+      <div class="col-12">
+        <h3 class="status-section-title">Quality Checks</h3>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+
+      {{/* HTML & Links */}}
+      {{ $htmlCls := cond .html_check.passed "score-good" "score-bad" }}
+      <div class="col-md-4 mb-3" data-aos="fade-up">
+        <div class="status-check-card {{ $htmlCls }}">
+          <div class="status-check-icon">{{ if .html_check.passed }}✅{{ else }}❌{{ end }}</div>
+          <div class="status-check-title">HTML &amp; Links</div>
+          <div class="status-check-value">
+            {{ if .html_check.passed }}Passed{{ else }}{{ .html_check.error_count }} errors{{ end }}
+          </div>
+          <div class="status-check-sub">htmlproofer</div>
+        </div>
+      </div>
+
+      {{/* Observatory */}}
+      {{ $obsGrade := .observatory.grade }}
+      {{ $obsCls := "score-bad" }}
+      {{ if or (eq $obsGrade "A+") (eq $obsGrade "A") }}{{ $obsCls = "score-good" }}
+      {{ else if or (eq $obsGrade "B") (eq $obsGrade "C") }}{{ $obsCls = "score-ok" }}
+      {{ else if eq $obsGrade "N/A" }}{{ $obsCls = "score-unknown" }}{{ end }}
+      <div class="col-md-4 mb-3" data-aos="fade-up">
+        <div class="status-check-card {{ $obsCls }}">
+          <div class="status-check-icon">🔒</div>
+          <div class="status-check-title">Security Headers</div>
+          <div class="status-check-value">
+            {{ if eq $obsGrade "N/A" }}–{{ else }}{{ $obsGrade }} ({{ .observatory.score }}/100){{ end }}
+          </div>
+          <div class="status-check-sub">Mozilla Observatory</div>
+        </div>
+      </div>
+
+      {{/* SSL Labs */}}
+      {{ $sslGrade := .ssl.grade }}
+      {{ $sslCls := "score-bad" }}
+      {{ if or (eq $sslGrade "A+") (eq $sslGrade "A") }}{{ $sslCls = "score-good" }}
+      {{ else if eq $sslGrade "B" }}{{ $sslCls = "score-ok" }}
+      {{ else if eq $sslGrade "N/A" }}{{ $sslCls = "score-unknown" }}{{ end }}
+      <div class="col-md-4 mb-3" data-aos="fade-up">
+        <div class="status-check-card {{ $sslCls }}">
+          <div class="status-check-icon">🛡️</div>
+          <div class="status-check-title">SSL / TLS</div>
+          <div class="status-check-value">{{ if eq $sslGrade "N/A" }}–{{ else }}{{ $sslGrade }}{{ end }}</div>
+          <div class="status-check-sub">SSL Labs</div>
+        </div>
+      </div>
+
+    </div>
+
+    {{/* ── Legend ── */}}
+    <div class="row" data-aos="fade-up">
+      <div class="col-12">
+        <div class="status-legend">
+          <span class="legend-item"><span class="legend-dot dot-good"></span> 90–100 / Passing</span>
+          <span class="legend-item"><span class="legend-dot dot-ok"></span> At or above threshold</span>
+          <span class="legend-item"><span class="legend-dot dot-bad"></span> Below threshold</span>
+          <span class="legend-item"><span class="legend-dot dot-unknown"></span> Not yet measured</span>
+        </div>
+      </div>
+    </div>
+
+    {{ else }}
+
+    <div class="row">
+      <div class="col-12 text-center py-5">
+        <p class="text-muted">No audit data available yet.</p>
+        <p class="text-muted">Run the <strong>Site Audit</strong> workflow in GitHub Actions to populate this page.</p>
+        <a href="https://github.com/Provenance-Emu/provenance-emu.github.io/actions/workflows/site-audit.yml"
+           target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">
+          Open GitHub Actions &rarr;
+        </a>
+      </div>
+    </div>
+
+    {{ end }}
+
+  </div>
+</section>
+
+{{ end }}

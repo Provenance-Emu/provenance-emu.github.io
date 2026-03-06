@@ -1,0 +1,21 @@
+ci:
+  collect:
+    numberOfRuns: 1
+    settings:
+      chromeFlags: '--no-sandbox --disable-dev-shm-usage'
+  assert:
+    preset: lighthouse:no-pwa
+    assertions:
+      # Minimum thresholds — issues will be created below these
+      categories:performance:
+        minScore: 0.70
+        aggregationMethod: optimistic
+      categories:accessibility:
+        minScore: 0.80
+        aggregationMethod: optimistic
+      categories:best-practices:
+        minScore: 0.80
+        aggregationMethod: optimistic
+      categories:seo:
+        minScore: 0.90
+        aggregationMethod: optimistic

@@ -1,0 +1,382 @@
+name: Site Audit
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/status.json'   # Prevent loop when this workflow commits audit results
+  pull_request:
+  schedule:
+    - cron: '0 7 * * 1'     # Every Monday at 7am UTC
+  workflow_dispatch:
+
+concurrency:
+  group: site-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+
+  # ──────────────────────────────────────────────────────────
+  # HTML & Link Check — runs on every trigger
+  # ──────────────────────────────────────────────────────────
+  html-check:
+    name: HTML & Link Check
+    runs-on: ubuntu-latest
+    outputs:
+      passed: ${{ steps.result.outputs.passed }}
+      error_count: ${{ steps.result.outputs.error_count }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Install htmlproofer
+        run: gem install html-proofer
+
+      - name: Run htmlproofer
+        id: htmlproofer
+        continue-on-error: true
+        run: |
+          htmlproofer ./public \
+            --checks Links,Images,Scripts,OpenGraph \
+            --ignore-urls "/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/login/" \
+            --ignore-status-codes "0,429,999,403" \
+            --typhoeus-concurrency 5 \
+            2>&1 | tee htmlproofer-output.txt
+          echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
+
+      - name: Parse results
+        id: result
+        if: always()
+        run: |
+          if [ "${{ steps.htmlproofer.outputs.exit_code }}" = "0" ]; then
+            echo "passed=true" >> $GITHUB_OUTPUT
+            echo "error_count=0" >> $GITHUB_OUTPUT
+          else
+            COUNT=$(grep -c "ERROR" htmlproofer-output.txt 2>/dev/null || echo "0")
+            echo "passed=false" >> $GITHUB_OUTPUT
+            echo "error_count=$COUNT" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Write job summary
+        if: always()
+        run: |
+          if [ "${{ steps.htmlproofer.outputs.exit_code }}" = "0" ]; then
+            echo "## ✅ HTML & Link Check Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## ❌ HTML & Link Check Failed" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            grep "ERROR" htmlproofer-output.txt | head -30 >> $GITHUB_STEP_SUMMARY || true
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const passed = '${{ steps.htmlproofer.outputs.exit_code }}' === '0';
+            const icon = passed ? '✅' : '❌';
+            const fs = require('fs');
+            const output = fs.readFileSync('htmlproofer-output.txt', 'utf8');
+            const errors = output.split('\n')
+              .filter(l => l.includes('ERROR') || l.includes('  *'))
+              .slice(0, 25)
+              .join('\n');
+            const details = errors
+              ? `<details><summary>Errors</summary>\n\n\`\`\`\n${errors}\n\`\`\`\n</details>`
+              : 'No broken links or HTML errors found.';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## ${icon} HTML & Link Check ${passed ? 'Passed' : 'Failed'}\n\n${details}`
+            });
+
+      - name: Upload output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: htmlproofer-output
+          path: htmlproofer-output.txt
+          retention-days: 14
+
+  # ──────────────────────────────────────────────────────────
+  # Lighthouse Audit — main / schedule / dispatch only
+  # ──────────────────────────────────────────────────────────
+  lighthouse:
+    name: Lighthouse Audit
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    outputs:
+      performance: ${{ steps.scores.outputs.performance }}
+      accessibility: ${{ steps.scores.outputs.accessibility }}
+      best_practices: ${{ steps.scores.outputs.best_practices }}
+      seo: ${{ steps.scores.outputs.seo }}
+      report_url: ${{ steps.scores.outputs.report_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Lighthouse CI
+        id: lhci
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          urls: |
+            https://provenance-emu.com
+            https://provenance-emu.com/blog/
+            https://provenance-emu.com/plus/
+          configPath: .lighthouserc.yml
+          temporaryPublicStorage: true
+
+      - name: Extract scores from LHR JSON
+        id: scores
+        run: |
+          # lhci stores full reports in .lighthouseci/lhr-*.json
+          REPORT=$(find .lighthouseci -name "lhr-*.json" 2>/dev/null | head -1)
+          if [ -z "$REPORT" ]; then
+            echo "No LHR file found, using zeros"
+            echo "performance=0" >> $GITHUB_OUTPUT
+            echo "accessibility=0" >> $GITHUB_OUTPUT
+            echo "best_practices=0" >> $GITHUB_OUTPUT
+            echo "seo=0" >> $GITHUB_OUTPUT
+            echo "report_url=" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          PERF=$(jq '.categories.performance.score * 100 | round' < "$REPORT")
+          A11Y=$(jq '.categories.accessibility.score * 100 | round' < "$REPORT")
+          BP=$(jq '."categories"."best-practices".score * 100 | round' < "$REPORT")
+          SEO=$(jq '.categories.seo.score * 100 | round' < "$REPORT")
+          echo "performance=$PERF" >> $GITHUB_OUTPUT
+          echo "accessibility=$A11Y" >> $GITHUB_OUTPUT
+          echo "best_practices=$BP" >> $GITHUB_OUTPUT
+          echo "seo=$SEO" >> $GITHUB_OUTPUT
+          # Parse report URL from links output (first value)
+          LINKS='${{ steps.lhci.outputs.links }}'
+          URL=$(echo "$LINKS" | python3 -c "
+          import json, sys
+          try:
+            d = json.loads(sys.stdin.read())
+            print(list(d.values())[0] if d else '')
+          except: print('')
+          " 2>/dev/null || echo "")
+          echo "report_url=$URL" >> $GITHUB_OUTPUT
+
+      - name: Write job summary
+        if: always()
+        run: |
+          P="${{ steps.scores.outputs.performance }}"
+          A="${{ steps.scores.outputs.accessibility }}"
+          B="${{ steps.scores.outputs.best_practices }}"
+          S="${{ steps.scores.outputs.seo }}"
+          score_icon() { [ "${1:-0}" -ge "${2}" ] && echo "✅" || echo "❌"; }
+          echo "## 🔦 Lighthouse Scores (Homepage)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Category | Score | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|---|:---:|:---:|" >> $GITHUB_STEP_SUMMARY
+          echo "| Performance    | ${P:-–} | $(score_icon $P 70) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Accessibility  | ${A:-–} | $(score_icon $A 80) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Best Practices | ${B:-–} | $(score_icon $B 80) |" >> $GITHUB_STEP_SUMMARY
+          echo "| SEO            | ${S:-–} | $(score_icon $S 90) |" >> $GITHUB_STEP_SUMMARY
+          URL="${{ steps.scores.outputs.report_url }}"
+          [ -n "$URL" ] && echo "" >> $GITHUB_STEP_SUMMARY && echo "[View full Lighthouse report]($URL)" >> $GITHUB_STEP_SUMMARY
+
+  # ──────────────────────────────────────────────────────────
+  # Security Scan — main / schedule / dispatch only
+  # ──────────────────────────────────────────────────────────
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    outputs:
+      observatory_grade: ${{ steps.observatory.outputs.grade }}
+      observatory_score: ${{ steps.observatory.outputs.score }}
+      ssl_grade: ${{ steps.ssl.outputs.grade }}
+    steps:
+      - name: Mozilla Observatory
+        id: observatory
+        run: |
+          curl -sX POST "https://http-observatory.security.mozilla.org/api/v1/analyze?host=provenance-emu.com" > /dev/null
+          sleep 15
+          RESULT=$(curl -s "https://http-observatory.security.mozilla.org/api/v1/analyze?host=provenance-emu.com")
+          GRADE=$(echo "$RESULT" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('grade','N/A'))" 2>/dev/null || echo "N/A")
+          SCORE=$(echo "$RESULT" | python3 -c "import json,sys; d=json.load(sys.stdin); print(int(d.get('score',0)))" 2>/dev/null || echo "0")
+          echo "grade=$GRADE" >> $GITHUB_OUTPUT
+          echo "score=$SCORE" >> $GITHUB_OUTPUT
+          echo "Observatory: $GRADE ($SCORE/100)"
+
+      - name: SSL Labs
+        id: ssl
+        run: |
+          curl -s "https://api.ssllabs.com/api/v3/analyze?host=provenance-emu.com&startNew=on&publish=off" > /dev/null
+          GRADE="N/A"
+          for i in {1..9}; do
+            sleep 20
+            RESULT=$(curl -s "https://api.ssllabs.com/api/v3/analyze?host=provenance-emu.com&publish=off")
+            STATUS=$(echo "$RESULT" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('status',''))" 2>/dev/null || echo "")
+            echo "SSL Labs status: $STATUS (attempt $i)"
+            if [ "$STATUS" = "READY" ]; then
+              GRADE=$(echo "$RESULT" | python3 -c "
+          import json,sys
+          d=json.load(sys.stdin)
+          eps=d.get('endpoints',[])
+          print(eps[0].get('grade','N/A') if eps else 'N/A')
+              " 2>/dev/null || echo "N/A")
+              break
+            fi
+          done
+          echo "grade=$GRADE" >> $GITHUB_OUTPUT
+          echo "SSL Labs: $GRADE"
+
+      - name: Write job summary
+        if: always()
+        run: |
+          OBS="${{ steps.observatory.outputs.grade }}"
+          SSL="${{ steps.ssl.outputs.grade }}"
+          obs_icon() { [[ "$1" == "A+" || "$1" == "A" || "$1" == "B" ]] && echo "✅" || echo "❌"; }
+          ssl_icon() { [[ "$1" == "A+" || "$1" == "A" ]] && echo "✅" || [[ "$1" == "B" ]] && echo "⚠️" || echo "❌"; }
+          echo "## 🔒 Security Scan" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Result | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|---|:---:|:---:|" >> $GITHUB_STEP_SUMMARY
+          echo "| Mozilla Observatory | ${OBS:-N/A} (${{ steps.observatory.outputs.score }}/100) | $(obs_icon $OBS) |" >> $GITHUB_STEP_SUMMARY
+          echo "| SSL Labs | ${SSL:-N/A} | $(ssl_icon $SSL) |" >> $GITHUB_STEP_SUMMARY
+
+  # ──────────────────────────────────────────────────────────
+  # Update status page + open issues on failures
+  # ──────────────────────────────────────────────────────────
+  update-status:
+    name: Update Status & Alert
+    runs-on: ubuntu-latest
+    needs: [html-check, lighthouse, security-scan]
+    if: github.event_name != 'pull_request' && always()
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Generate data/status.json
+        env:
+          PERF: ${{ needs.lighthouse.outputs.performance }}
+          A11Y: ${{ needs.lighthouse.outputs.accessibility }}
+          BP: ${{ needs.lighthouse.outputs.best_practices }}
+          SEO: ${{ needs.lighthouse.outputs.seo }}
+          REPORT_URL: ${{ needs.lighthouse.outputs.report_url }}
+          OBS_GRADE: ${{ needs.security-scan.outputs.observatory_grade }}
+          OBS_SCORE: ${{ needs.security-scan.outputs.observatory_score }}
+          SSL_GRADE: ${{ needs.security-scan.outputs.ssl_grade }}
+          HTML_PASSED: ${{ needs.html-check.outputs.passed }}
+          HTML_ERRORS: ${{ needs.html-check.outputs.error_count }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python3 - <<'PYEOF'
+          import json, os
+          def intval(key, default=0):
+              try: return int(os.environ.get(key, '') or default)
+              except: return default
+          data = {
+              "last_updated": __import__('datetime').datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
+              "run_url": os.environ.get("RUN_URL", ""),
+              "html_check": {
+                  "passed": os.environ.get("HTML_PASSED", "true") == "true",
+                  "error_count": intval("HTML_ERRORS")
+              },
+              "lighthouse": {
+                  "performance":    intval("PERF"),
+                  "accessibility":  intval("A11Y"),
+                  "best_practices": intval("BP"),
+                  "seo":            intval("SEO"),
+                  "report_url":     os.environ.get("REPORT_URL", "")
+              },
+              "observatory": {
+                  "grade": os.environ.get("OBS_GRADE", "N/A") or "N/A",
+                  "score": intval("OBS_SCORE")
+              },
+              "ssl": {
+                  "grade": os.environ.get("SSL_GRADE", "N/A") or "N/A"
+              }
+          }
+          with open("data/status.json", "w") as f:
+              json.dump(data, f, indent=2)
+          print(json.dumps(data, indent=2))
+          PYEOF
+
+      - name: Commit status update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/status.json
+          git diff --staged --quiet || git commit -m "chore: update site audit status [skip ci]"
+          git push
+
+      - name: Ensure audit labels exist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = [
+              { name: 'audit', color: '0075ca', description: 'Site audit findings' },
+              { name: 'performance', color: 'e4e669', description: 'Performance issue' }
+            ];
+            for (const label of labels) {
+              try {
+                await github.rest.issues.createLabel({ owner: context.repo.owner, repo: context.repo.repo, ...label });
+              } catch (e) { /* already exists */ }
+            }
+
+      - name: Open issue on Lighthouse failures
+        uses: actions/github-script@v7
+        env:
+          PERF: ${{ needs.lighthouse.outputs.performance }}
+          A11Y: ${{ needs.lighthouse.outputs.accessibility }}
+          SEO: ${{ needs.lighthouse.outputs.seo }}
+          REPORT_URL: ${{ needs.lighthouse.outputs.report_url }}
+        with:
+          script: |
+            const perf = parseInt(process.env.PERF) || 100;
+            const a11y = parseInt(process.env.A11Y) || 100;
+            const seo  = parseInt(process.env.SEO)  || 100;
+            const thresholds = { Performance: [perf, 70], Accessibility: [a11y, 80], SEO: [seo, 90] };
+            const failures = Object.entries(thresholds)
+              .filter(([, [score, min]]) => score < min)
+              .map(([name, [score, min]]) => `- **${name}**: ${score}/100 _(threshold: ${min})_`);
+            if (failures.length === 0) { console.log('All scores above thresholds.'); return; }
+
+            // Avoid duplicate open issues
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              labels: 'audit', state: 'open', per_page: 5
+            });
+            if (existing.data.length > 0) {
+              console.log('Open audit issue already exists, skipping.');
+              return;
+            }
+
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Audit] Lighthouse scores below threshold`,
+              body: `## Site Quality Alert\n\nThe following Lighthouse scores are below acceptable thresholds:\n\n${failures.join('\n')}\n\n**Lighthouse Report:** ${process.env.REPORT_URL || 'N/A'}\n**Actions Run:** ${runUrl}`,
+              labels: ['audit', 'performance']
+            });

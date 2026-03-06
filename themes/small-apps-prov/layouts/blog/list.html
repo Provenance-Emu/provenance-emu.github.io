@@ -8,31 +8,36 @@
 {{ "<!-- Featured Post (page 1 only) -->" | safeHTML }}
 {{ if eq $paginator.PageNumber 1 }}
 {{ with index $allPosts 0 }}
-<section class="section blog-featured">
+{{ $accentClass := "blog-accent-release" }}
+{{ range .Params.tags }}{{ if or (eq . "development") (eq . "preview") }}{{ $accentClass = "blog-accent-dev" }}{{ end }}{{ end }}
+<section class="section blog-featured pt-0">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-        <a href="{{ .Permalink }}" class="blog-card-img-link">
-          <img class="img-fluid blog-featured-img" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
-        </a>
-      </div>
-      <div class="col-lg-6" data-aos="fade-left">
-        {{ with .Params.tags }}
-        <div class="blog-tags mb-3">
-          {{ range . }}<span class="blog-tag">{{ . }}</span>{{ end }}
+    <div class="blog-featured-card" data-aos="fade-up">
+      <div class="blog-card-accent {{ $accentClass }}"></div>
+      <div class="blog-featured-content">
+        <div class="row align-items-start">
+          <div class="col-lg-8">
+            {{ with .Params.tags }}
+            <div class="blog-tags mb-3">
+              {{ range . }}<span class="blog-tag">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+            <h2 class="blog-featured-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p class="blog-featured-summary">{{ .Description | default .Summary }}</p>
+            <a href="{{ .Permalink }}" class="btn btn-main-sm">Read More &rarr;</a>
+          </div>
+          <div class="col-lg-4 text-lg-right mt-3 mt-lg-0">
+            <div class="blog-meta">
+              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
+              <span class="blog-author-name">{{ .Params.Author }}</span>
+            </div>
+            <div class="blog-meta mt-1">
+              <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
+              <span class="blog-meta-sep">·</span>
+              <span>{{ .ReadingTime }} min read</span>
+            </div>
+          </div>
         </div>
-        {{ end }}
-        <h2 class="blog-featured-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div class="blog-meta mb-3">
-          <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
-          <span class="blog-author-name">{{ .Params.Author }}</span>
-          <span class="blog-meta-sep">·</span>
-          <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
-          <span class="blog-meta-sep">·</span>
-          <span>{{ .ReadingTime }} min read</span>
-        </div>
-        <p class="blog-featured-summary">{{ .Description | default .Summary }}</p>
-        <a href="{{ .Permalink }}" class="btn btn-main-sm">Read More &rarr;</a>
       </div>
     </div>
   </div>
@@ -42,12 +47,12 @@
 {{ "<!-- End Featured Post -->" | safeHTML }}
 
 {{ "<!-- Post Grid -->" | safeHTML }}
-<section class="section post-grid{{ if eq $paginator.PageNumber 1 }} pt-4{{ end }}">
+<section class="section post-grid pt-3">
   <div class="container">
     {{ if and (eq $paginator.PageNumber 1) (gt (len $allPosts) 1) }}
     <div class="row mb-4">
       <div class="col-12">
-        <h3 class="blog-grid-heading">More Posts</h3>
+        <h3 class="blog-grid-heading">All Posts</h3>
       </div>
     </div>
     {{ end }}
@@ -57,11 +62,11 @@
         {{ $gridPages = after 1 $paginator.Pages }}
       {{ end }}
       {{ range $gridPages }}
+      {{ $accentClass := "blog-accent-release" }}
+      {{ range .Params.tags }}{{ if or (eq . "development") (eq . "preview") }}{{ $accentClass = "blog-accent-dev" }}{{ end }}{{ end }}
       <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
         <article class="blog-card">
-          <a href="{{ .Permalink }}" class="blog-card-img-link">
-            <img class="blog-card-img" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
-          </a>
+          <div class="blog-card-accent {{ $accentClass }}"></div>
           <div class="blog-card-body">
             {{ with .Params.tags }}
             <div class="blog-tags mb-2">
@@ -96,43 +101,35 @@
         <nav aria-label="Page navigation" class="pagination-nav">
           <ul class="pagination justify-content-center">
             {{ if ne $paginator.PageNumber 1 }}
-            <li class="page-item">
-              <a class="page-link hover-ripple" href="{{ $paginator.First.URL }}">««</a>
-            </li>
+            <li class="page-item"><a class="page-link hover-ripple" href="{{ $paginator.First.URL }}">««</a></li>
             {{ end }}
             {{ if $paginator.HasPrev }}
-            <li class="page-item">
-              <a href="{{ $paginator.Prev.URL }}" class="page-link hover-ripple">«</a>
-            </li>
+            <li class="page-item"><a href="{{ $paginator.Prev.URL }}" class="page-link hover-ripple">«</a></li>
             {{ end }}
             {{ range $paginator.Pagers }}
-              {{ $.Scratch.Set "page_number_flag" false }}
+              {{ $.Scratch.Set "pnf" false }}
               {{ if gt $paginator.TotalPages $max_links }}
                 {{ if le $paginator.PageNumber $lower_limit }}
-                  {{ if le .PageNumber $max_links }}{{ $.Scratch.Set "page_number_flag" true }}{{ end }}
+                  {{ if le .PageNumber $max_links }}{{ $.Scratch.Set "pnf" true }}{{ end }}
                 {{ else if ge $paginator.PageNumber $upper_limit }}
-                  {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}{{ $.Scratch.Set "page_number_flag" true }}{{ end }}
+                  {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}{{ $.Scratch.Set "pnf" true }}{{ end }}
                 {{ else }}
-                  {{ if and (ge .PageNumber (sub $paginator.PageNumber $adjacent_links)) (le .PageNumber (add $paginator.PageNumber $adjacent_links)) }}{{ $.Scratch.Set "page_number_flag" true }}{{ end }}
+                  {{ if and (ge .PageNumber (sub $paginator.PageNumber $adjacent_links)) (le .PageNumber (add $paginator.PageNumber $adjacent_links)) }}{{ $.Scratch.Set "pnf" true }}{{ end }}
                 {{ end }}
               {{ else }}
-                {{ $.Scratch.Set "page_number_flag" true }}
+                {{ $.Scratch.Set "pnf" true }}
               {{ end }}
-              {{ if eq ($.Scratch.Get "page_number_flag") true }}
+              {{ if eq ($.Scratch.Get "pnf") true }}
               <li class="page-item{{ if eq . $paginator }} active{{ end }}">
                 <a href="{{ .URL }}" class="page-link hover-ripple">{{ .PageNumber }}</a>
               </li>
               {{ end }}
             {{ end }}
             {{ if $paginator.HasNext }}
-            <li class="page-item">
-              <a href="{{ $paginator.Next.URL }}" class="page-link hover-ripple">»</a>
-            </li>
+            <li class="page-item"><a href="{{ $paginator.Next.URL }}" class="page-link hover-ripple">»</a></li>
             {{ end }}
             {{ if ne $paginator.PageNumber $paginator.TotalPages }}
-            <li class="page-item">
-              <a class="page-link hover-ripple" href="{{ $paginator.Last.URL }}">»»</a>
-            </li>
+            <li class="page-item"><a class="page-link hover-ripple" href="{{ $paginator.Last.URL }}">»»</a></li>
             {{ end }}
           </ul>
         </nav>
@@ -140,7 +137,6 @@
       </div>
     </div>
     {{ "<!-- /Pagination -->" | safeHTML }}
-
   </div>
 </section>
 {{ "<!-- End Post Grid -->" | safeHTML }}
