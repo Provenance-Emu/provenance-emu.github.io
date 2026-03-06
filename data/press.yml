@@ -7,7 +7,7 @@ app:
   longDescription: |
     Provenance is a free, open-source multi-system emulator frontend for iOS and tvOS. Since its initial release in 2016, it has grown into the most comprehensive retro gaming solution available on Apple platforms, supporting over 38 console systems spanning six decades of gaming history.
 
-    Unlike other emulators, Provenance is built with a collector's mindset. Every game in your library is presented with automatically downloaded box art, screenshots, release information, ratings, and even scanned manuals. The app feels native to Apple's ecosystem, with support for 3D Touch shortcuts, Haptic feedback, Spotlight search, iCloud sync, and full Siri Remote integration on Apple TV.
+    Unlike other emulators, Provenance is built with a collector's mindset. Every game in your library is presented with automatically downloaded box art, screenshots, release information, ratings, and even scanned manuals. The app feels native to Apple's ecosystem, with support for Haptic feedback, Spotlight search, Siri shortcuts, iCloud sync, and full Siri Remote integration on Apple TV.
 
     Provenance is the premier full-featured emulator for tvOS, bringing retro gaming to the living room with TopShelf integration, controller support for MFi, Xbox, and PlayStation gamepads, and 4K-ready upscaled graphics.
 
@@ -40,8 +40,8 @@ features:
     description: "Automatic box art, screenshots, manuals, ratings, and release info for every game. A digital collection, not just a game list."
   - title: "100% Open Source"
     description: "Fully transparent code on GitHub. No hidden tracking, no data collection. Community-driven since 2016."
-  - title: "Native Apple Ecosystem Integration"
-    description: "3D Touch, Haptic feedback, Spotlight search, iCloud game saves, and seamless handoff between iPhone and Apple TV."
+  - title: "Actively Developed — New Features Regularly"
+    description: "Online cheat code lookup from the libretro database, an in-app controller guide, configurable CRT shaders, expanded cheat support across 10+ cores, and more landing continuously."
   - title: "Free Forever When Sideloaded"
     description: "All features are free when sideloaded or built from source. No subscriptions, no paywalls, no tiers."
 

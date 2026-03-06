@@ -19,13 +19,13 @@
           <!-- Dropdown list -->
           <div class="dropdown-menu">
             {{ range .Children }}
-            <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="dropdown-item" href="{{ .URL }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Name }}</a>
             {{ end }}
           </div>
         </li>
         {{ else }}
         <li class="nav-item">
-          <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="nav-link" href="{{ .URL }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Pre | safeHTML }}{{ .Name }}</a>
         </li>
         {{ end }}
         {{ end }}

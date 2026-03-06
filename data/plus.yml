@@ -3,8 +3,8 @@
 hero:
   enable: true
   title: "Provenance <span class='plus-highlight'>Plus</span>"
-  subtitle: "Early Access. Cloud Sync. Support the Project."
-  description: "Provenance is fully functional and free — every emulation feature, every system, every controller. Plus gives you early access to new features via TestFlight before they hit the App Store, cloud sync across all your Apple devices, and priority support. Your subscription directly funds ongoing development."
+  subtitle: "Cloud Sync. Priority Support. Fund Development."
+  description: "Provenance is fully functional and free — every emulation feature, every system, every controller. Plus adds cloud sync across all your Apple devices and priority support. Your subscription directly funds ongoing development and helps keep Provenance free for everyone."
   btnText: "Get on App Store"
   btnURL: "https://apps.apple.com/us/app/provenance-app/id1596862805"
   btnText2: "Learn More"
@@ -24,10 +24,10 @@ features:
       description: "Sync your entire library, saves, settings, skins, BIOS files, and cover art across iPhone, iPad, Mac, and Apple TV. Start a game on one device, pick up right where you left off on another."
       highlight: true
 
-    - icon: "fas fa-flask"
-      title: "Early Access via TestFlight"
-      description: "Be the first to play with new features, upcoming system support, and UI improvements before they hit the App Store. Shape what ships — Plus subscribers get early access and a direct line to the dev team."
-      highlight: true
+    - icon: "fas fa-rocket"
+      title: "Beta Access via Patreon"
+      description: "Provenance has a public TestFlight beta with limited slots. Patreon supporters get a dedicated invitation queue — more slots, sooner access, and a direct line to the dev team. Separate from Plus; support us on Patreon to join."
+      highlight: false
 
     - icon: "fas fa-headset"
       title: "Priority Support"
@@ -99,10 +99,10 @@ comparison:
       plus: true
       category: "plus"
 
-    - feature: "Early Access via TestFlight"
+    - feature: "Beta Access (via Patreon)"
       free: false
-      plus: true
-      category: "plus"
+      plus: false
+      category: "core"
 
     - feature: "Priority Support"
       free: false
@@ -146,8 +146,8 @@ faq:
   enable: true
   title: "Frequently Asked Questions"
   items:
-    - question: "What does early access mean?"
-      answer: "Plus subscribers get access to the TestFlight build of Provenance, which includes features and system support actively in development — weeks or months before the App Store release. You can try new emulation cores, UI changes, and experimental features early, and give direct feedback that shapes what ships."
+    - question: "How do I get beta access?"
+      answer: "Provenance has a public TestFlight beta with limited slots. Patreon supporters get their own dedicated invitation queue with more availability. Beta access is a Patreon benefit, separate from the Plus App Store subscription."
 
     - question: "Do I lose my data if I cancel Plus?"
       answer: "No. All your local data (ROMs, saves, settings) stays on your device. You lose the ability to sync across devices, but previously synced data remains on each device where it was downloaded."
@@ -170,6 +170,6 @@ faq:
 cta:
   enable: true
   title: "Ready to Go Plus?"
-  description: "Get early access to new features before they ship, sync your library across every Apple device, and directly support Provenance development."
+  description: "Sync your library across every Apple device, get priority support, and directly fund Provenance development."
   btnText: "Download on the App Store"
   btnURL: "https://apps.apple.com/us/app/provenance-app/id1596862805"
