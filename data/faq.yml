@@ -1,58 +1,67 @@
 faq:
-  - title : "Getting Started"
-    faqList :
-      - question : "What should I do if I want to see how a prototype created with ProtoPie runs on a mobile device?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "What devices are supported for Android Instant Apps?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "What countries are Android Instant Apps supported in?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "Do developers need to build two different Android apps now?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "What Android APIs and functionality can instant apps use?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "Can users choose to install the app permanently?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
+  - title: "Getting Started"
+    faqList:
+      - question: "What is Provenance?"
+        answer: "Provenance is a free, open-source multi-system emulator for iPhone, iPad, and Apple TV. It supports 38+ classic gaming consoles including SNES, PlayStation, Nintendo 64, Game Boy Advance, Sega Genesis, and many more. No jailbreak is required."
 
+      - question: "How do I install Provenance?"
+        answer: "Provenance is available on the App Store — search for 'Provenance Emulator'. You can also sideload it for free using tools like AltStore or Sideloadly. No jailbreak is required for either method."
 
-  
-  - title : "Account"
-    faqList :
-      - question : "What devices are supported for Android Instant Apps?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "What countries are Android Instant Apps supported in?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "Do developers need to build two different Android apps now?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "What Android APIs and functionality can instant apps use?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "Can users choose to install the app permanently?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
+      - question: "Is Provenance free?"
+        answer: "Yes. Provenance is free to download from the App Store and free to sideload. Provenance Plus is an optional in-app purchase that unlocks extra features, but the core emulation experience has no paywall or mandatory subscription."
 
-  
-  
-  - title : "Pricing & License"
-    faqList :
-      - question : "Where can I see the licenses that I bought?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "Am I unable to continue using if my license expires?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "How many websites can I tie to one license?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "Do you have volume purchase programs?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-        
-      - question : "Are there any educational pricing or discounts?"
-        answer : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
+      - question: "What devices does Provenance support?"
+        answer: "Provenance runs on iPhone, iPad, and Apple TV (tvOS). It provides a native tvOS experience with Top Shelf extension and full controller navigation — one of the very few emulators to offer this."
+
+      - question: "Do I need to jailbreak my device?"
+        answer: "No. Provenance works on standard, non-jailbroken devices. You can download it from the App Store or sideload it using AltStore or Sideloadly without any jailbreak."
+
+  - title: "Supported Systems"
+    faqList:
+      - question: "What consoles does Provenance support?"
+        answer: "Provenance supports 38+ systems including NES, SNES, Nintendo 64, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, PlayStation 1, Sega Genesis / Mega Drive, Sega Saturn, Sega Master System, Sega Game Gear, Atari 2600, Atari 5200, Atari 7800, Atari Jaguar, TurboGrafx-16, and more."
+
+      - question: "Does Provenance support PlayStation games?"
+        answer: "Yes. Provenance supports PlayStation 1 (PS1/PSX) games. You will need your own legally obtained ROM or disc image files to play."
+
+      - question: "Does Provenance support Nintendo DS?"
+        answer: "Yes. Provenance supports Nintendo DS (NDS) emulation on iPhone, iPad, and Apple TV."
+
+      - question: "Does Provenance support Sega Genesis?"
+        answer: "Yes. Provenance supports Sega Genesis and Mega Drive games, as well as Sega Master System and Sega Game Gear."
+
+      - question: "Will more systems be added in the future?"
+        answer: "Provenance is actively developed and new system support is added over time. Follow the project on GitHub and join the Discord community to stay up to date on new releases."
+
+  - title: "ROMs & Game Files"
+    faqList:
+      - question: "Where do I get ROMs?"
+        answer: "You must supply your own ROM files obtained from cartridges or discs you legally own. Provenance does not distribute or host ROM files."
+
+      - question: "What file formats does Provenance support?"
+        answer: "Provenance supports standard ROM formats for each system — for example, .smc and .sfc for SNES, .z64 for N64, .gba for Game Boy Advance, .bin/.cue or .iso for PlayStation, and .md/.gen for Sega Genesis. Compressed .zip files are also supported for most systems."
+
+      - question: "How do I add games to Provenance?"
+        answer: "You can import games via iTunes File Sharing, the Files app, a local Wi-Fi web server built into Provenance, or cloud storage services. On Apple TV, use the companion iOS app to transfer files."
+
+  - title: "Controllers & Input"
+    faqList:
+      - question: "What controllers work with Provenance?"
+        answer: "Provenance supports MFi (Made for iPhone) controllers, Xbox controllers, PlayStation (DualShock/DualSense) controllers, and other Bluetooth gamepads. On-screen controls are also available."
+
+      - question: "Can I use a keyboard or mouse?"
+        answer: "Keyboard input is supported on devices running iPadOS. Mouse and trackpad input support depends on the emulated system."
+
+      - question: "Does Provenance support multiplayer?"
+        answer: "Yes. Local multiplayer is supported for systems that offered it. Connect multiple controllers to play with friends."
+
+  - title: "Provenance Plus"
+    faqList:
+      - question: "What is Provenance Plus?"
+        answer: "Provenance Plus is an optional in-app purchase that unlocks additional features such as enhanced themes, advanced settings, and extra customization options. The core emulation experience is fully free without it."
+
+      - question: "Is Provenance Plus a subscription?"
+        answer: "No. Provenance Plus is a one-time purchase, not a recurring subscription. You pay once and keep access to the Plus features."
+
+      - question: "Do I need Provenance Plus to play games?"
+        answer: "No. All core emulation features — playing games, save states, controller support, all supported systems — are available for free. Provenance Plus is optional and adds extra features on top."
