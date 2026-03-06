@@ -26,8 +26,8 @@ banner:
   description : "The ultimate open-source, all-in-one emulator. Play your favorite retro games with native iOS features, beautiful metadata, and support for 38+ console systems. Free when sideloaded or built from source."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
-  image : "images/mockups/mockuuups-male-entrepreneur-with-an-iphone-mockup.webp"
-  imageAlt : "images/mobile.png"
+  image : "images/mockups/iphone-library-light.webp"
+  imageAlt : "images/mockups/iphone-library-light.png"
   button:
     btnText : "Get on App Store"
     URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
