@@ -251,23 +251,23 @@ promoVideo:
 
 # testimonial
 testimonial:
-  enable : false
+  enable : true
   testimonialSlider:
-    - name: "Abraham Linkon , Themefisher"
-      image: "images/testimonial/feature-testimonial-thumb.jpg"
-      content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+    - name: "JanBob654 — App Store Review"
+      image: "images/icons/icon.512x512.png"
+      content : "I used Provenance for years and it was the best emulator of all. Its ease importing games, setting up controllers, and the fact it covered all the emulators I wanted made it a hands down winner. And when I saw I was able to play Colecovision I almost cried."
 
-    - name: "Abraham Linkon , Themefisher"
-      image: "images/testimonial/feature-testimonial-thumb.jpg"
-      content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+    - name: "Drivers455 — App Store Review"
+      image: "images/icons/icon.512x512.png"
+      content : "Been using this app for various systems from the Atari consoles to the Game Boy series, and so far the games have performed very well. The UI is also very easy to use and cool looking."
 
-    - name: "Abraham Linkon , Themefisher"
-      image: "images/testimonial/feature-testimonial-thumb.jpg"
-      content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+    - name: "Dmytro Pankratov — hutko.dev"
+      image: "images/icons/icon.512x512.png"
+      content : "Provenance is a top pick for users who care about accuracy and retro authenticity. It supports dozens of older systems — from Sega Genesis to Atari — and lets you tweak visuals using filters and custom scaling options."
 
-    - name: "Abraham Linkon , Themefisher"
-      image: "images/testimonial/feature-testimonial-thumb.jpg"
-      content : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+    - name: "emulatorios.com"
+      image: "images/icons/icon.512x512.png"
+      content : "Provenance still feels premium. The interface is beautiful, box art is auto-fetched, and your game library looks organized instead of messy. Provenance is a joy to use."
 
 # comparison highlights
 comparisonHighlights:
