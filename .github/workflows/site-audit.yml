@@ -366,6 +366,7 @@ jobs:
           HTML_PASSED: ${{ needs.html-check.outputs.passed }}
           HTML_ERRORS: ${{ needs.html-check.outputs.error_count }}
         with:
+          github-token: ${{ secrets.GH_PAT_ISSUES }}
           script: |
             // Ensure all needed labels exist
             const allLabels = [
@@ -400,6 +401,7 @@ jobs:
                   lhLine,
                   '**Common fixes:**\n- Defer or remove render-blocking JavaScript\n- Optimize and lazy-load images (use WebP, set explicit dimensions)\n- Reduce unused CSS/JS\n- Improve server response time (TTFB)\n- Use efficient cache policies',
                   `_Auto-opened by [Site Audit](${runUrl})_`,
+                  `@claude Please investigate the Lighthouse performance regression. Review the report linked above, identify the top opportunities, and apply fixes to the codebase. Focus on render-blocking resources, image optimisation, and unused CSS/JS.`,
                 ].filter(l => l !== null).join('\n\n'),
               },
               {
@@ -412,6 +414,7 @@ jobs:
                   lhLine,
                   'Check the report for issues such as missing alt text, low colour contrast, or missing ARIA labels.',
                   `_Auto-opened by [Site Audit](${runUrl})_`,
+                  `@claude Please review the Lighthouse accessibility report linked above and fix the flagged issues (missing alt text, contrast, ARIA labels, etc.) in the codebase.`,
                 ].filter(l => l !== null).join('\n\n'),
               },
               {
@@ -424,6 +427,7 @@ jobs:
                   lhLine,
                   'Check the report for deprecated APIs, mixed-content requests, or missing HTTPS.',
                   `_Auto-opened by [Site Audit](${runUrl})_`,
+                  `@claude Please review the Lighthouse best-practices report linked above and fix the flagged issues in the codebase.`,
                 ].filter(l => l !== null).join('\n\n'),
               },
               {
@@ -436,6 +440,7 @@ jobs:
                   lhLine,
                   'Check the report for missing meta descriptions, invalid structured data, or crawlability issues.',
                   `_Auto-opened by [Site Audit](${runUrl})_`,
+                  `@claude Please review the Lighthouse SEO report linked above and fix the flagged issues (missing meta descriptions, structured data, crawlability) in the codebase.`,
                 ].filter(l => l !== null).join('\n\n'),
               },
               {
@@ -447,6 +452,7 @@ jobs:
                   `Found **${num('HTML_ERRORS')} error(s)**.`,
                   `Download the \`htmlproofer-output\` artifact from the [audit run](${runUrl}) for the full list of broken links and HTML errors.`,
                   `_Auto-opened by [Site Audit](${runUrl})_`,
+                  `@claude Please fix the HTML check failures. Run \`gh run download ${context.runId} --name htmlproofer-output --repo ${context.repo.owner}/${context.repo.repo} --dir /tmp/htmlproofer\` to get the full error list, then fix the issues in the codebase. Common issues: missing alt attributes on images, broken internal links.`,
                 ].join('\n\n'),
               },
               {
