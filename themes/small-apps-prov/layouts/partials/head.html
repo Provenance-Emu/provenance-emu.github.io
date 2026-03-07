@@ -42,16 +42,14 @@
   {{ end }}
   {{ end }}
 
-  {{ "<!-- Critical CSS: minimal above-the-fold styles inlined to prevent FOUC while main stylesheet loads asynchronously -->" | safeHTML }}
-  <style>body{overflow-x:hidden}.main-nav{background:#fff}.gradient-banner{position:relative;overflow:hidden}.ios-only{display:none}@supports (-webkit-touch-callout:none){.ios-only{display:inline}.ios-disable{display:none}}</style>
-
-  {{ "<!-- Main Stylesheet — deferred via media=print to eliminate render-blocking resource; critical styles inlined above -->" | safeHTML }}
+  {{ "<!-- Main Stylesheet (synchronous — provides layout/grid needed for hero LCP element) -->" | safeHTML }}
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
-  {{ "<!-- AOS CSS must be synchronous: async load races with AOS.init() causing elements to stay invisible -->" | safeHTML }}
-  <link rel="stylesheet" href="{{ "plugins/aos/aos.css" | absURL }}">
+  {{ "<!-- AOS: inline only the 3 animation types used on this site (fade-up/right/left). -->" | safeHTML }}
+  {{ "<!-- Replaces 25 KB aos.css with ~250 bytes; homepage-only since only index.html uses data-aos. -->" | safeHTML }}
+  {{ "<!-- Must stay synchronous: AOS CSS sets opacity:0 before AOS.init() runs; async would race. -->" | safeHTML }}
+  {{ if .IsHome }}<style>[data-aos^=fade]{opacity:0;transition-property:opacity,transform}[data-aos^=fade].aos-animate{opacity:1;transform:translateZ(0)}[data-aos=fade-up]{transform:translate3d(0,100px,0)}[data-aos=fade-right]{transform:translate3d(-100px,0,0)}[data-aos=fade-left]{transform:translate3d(100px,0,0)}</style>{{ end }}
 
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ "images/icons/icon.57x57.png" | absURL }}" type="image/x-icon">
