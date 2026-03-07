@@ -1,0 +1,96 @@
+name: Claude Review Loop
+
+# Triggered when any review is submitted on a PR.
+# For claude/* branches only:
+#   - CHANGES_REQUESTED → post an @claude comment (via PAT) asking it to fix the issues.
+#     The comment uses GH_PAT_ISSUES so it appears as the repo owner (OWNER association),
+#     which is required for claude.yml to pick it up.
+#   - APPROVED → enable auto-merge so the PR merges once all required checks pass.
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  handle-review:
+    name: Handle review on claude/ branch
+    # Only act on PRs originating from a claude/* branch
+    if: startsWith(github.event.pull_request.head.ref, 'claude/')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+      # ── CHANGES_REQUESTED ──────────────────────────────────────────────────
+      - name: Ask Claude to address review feedback
+        if: github.event.review.state == 'changes_requested'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT_ISSUES }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REVIEWER: ${{ github.event.review.user.login }}
+          REVIEW_BODY: ${{ github.event.review.body }}
+        run: |
+          # Build the comment body in Python so multi-line REVIEW_BODY is handled safely
+          python3 - <<'PYEOF'
+          import os, subprocess
+
+          reviewer = os.environ.get("REVIEWER", "reviewer")
+          review_body = os.environ.get("REVIEW_BODY", "").strip()
+          pr_number = os.environ.get("PR_NUMBER", "")
+          repo = os.environ.get("REPO", "")
+
+          body_section = review_body if review_body else "_(no review body — please check the inline review comments on this PR)_"
+
+          comment = f"""@claude The automated code review from **@{reviewer}** has requested changes on this PR. Please address all of the feedback below, then push your fixes to this branch — the review will run again automatically.
+
+          **Review feedback:**
+          ---
+          {body_section}
+          ---
+
+          > **Tip:** Also check for inline review comments on individual lines via `gh pr view {pr_number} --repo {repo} --comments`.
+          """
+
+          # Write to temp file to avoid shell quoting issues
+          with open("/tmp/claude-review-comment.md", "w") as f:
+              f.write(comment)
+          PYEOF
+
+          gh pr comment "$PR_NUMBER" \
+            --repo "$REPO" \
+            --body-file /tmp/claude-review-comment.md
+
+          echo "✅ Posted @claude comment on PR #$PR_NUMBER"
+
+      # ── APPROVED ───────────────────────────────────────────────────────────
+      - name: Enable auto-merge on approval
+        if: github.event.review.state == 'approved'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT_ISSUES }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          echo "✅ PR #$PR_NUMBER approved by @${{ github.event.review.user.login }}"
+
+          # Ensure the repo allows auto-merge
+          gh api repos/$REPO -X PATCH -f allow_auto_merge=true 2>/dev/null || true
+
+          # Enable auto-merge — merges when all required status checks pass.
+          # Falls back to direct squash-merge if auto-merge is unavailable.
+          if gh pr merge "$PR_NUMBER" \
+               --repo "$REPO" \
+               --auto \
+               --squash \
+               --delete-branch 2>/dev/null; then
+            echo "✅ Auto-merge enabled for PR #$PR_NUMBER"
+          else
+            echo "⚠️ Auto-merge unavailable — attempting direct merge"
+            gh pr merge "$PR_NUMBER" \
+              --repo "$REPO" \
+              --squash \
+              --delete-branch 2>/dev/null || \
+              echo "❌ Direct merge also failed — manual review required"
+          fi

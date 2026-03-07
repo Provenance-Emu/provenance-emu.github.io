@@ -1,0 +1,97 @@
+name: Claude Auto PR (Fallback)
+
+# Triggered when Claude pushes to a claude/* branch.
+# Waits 90 s for Claude to create its own PR; if none exists, creates one and
+# enables auto-merge so it merges automatically once required checks pass.
+
+on:
+  push:
+    branches:
+      - 'claude/**'
+
+concurrency:
+  group: claude-auto-pr-${{ github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  ensure-pr:
+    name: Ensure PR exists for claude/ branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable auto-merge in repo settings
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT_ISSUES }}
+          REPO: ${{ github.repository }}
+        run: |
+          # Ensure the repo allows auto-merge (required for gh pr merge --auto).
+          # Silently ignore failures (e.g. insufficient PAT scope).
+          gh api repos/$REPO -X PATCH -f allow_auto_merge=true 2>/dev/null || true
+
+      - name: Wait for Claude to create its own PR
+        run: |
+          echo "Waiting 90 s to let Claude create its own PR first…"
+          sleep 90
+
+      - name: Check for existing PR / create fallback
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT_ISSUES }}
+          BRANCH: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+          PR_BODY: |
+            ## Summary
+            Automated fix applied by Claude Code agent.
+
+            > This PR was created automatically as a fallback — no PR was detected
+            > for this branch within 90 seconds of the push.
+
+            ## Test plan
+            - [ ] Hugo builds without errors
+            - [ ] Site renders correctly at https://provenance-emu.com
+
+            🤖 Auto-created by the Claude Auto PR workflow
+        run: |
+          # Look for an open PR targeting this branch
+          PR_NUMBER=$(gh pr list \
+            --repo "$REPO" \
+            --head "$BRANCH" \
+            --state open \
+            --json number \
+            --jq '.[0].number' 2>/dev/null || echo "")
+
+          if [ -n "$PR_NUMBER" ]; then
+            echo "✅ PR #$PR_NUMBER already exists — ensuring auto-merge is enabled"
+            gh pr merge "$PR_NUMBER" --repo "$REPO" --auto --squash 2>/dev/null || true
+            exit 0
+          fi
+
+          echo "No PR found for branch $BRANCH — creating fallback PR"
+
+          # Derive a readable title from the branch name
+          # e.g. claude/fix-performance → "fix: fix performance"
+          TITLE=$(echo "$BRANCH" \
+            | sed 's|claude/||' \
+            | sed 's/-/ /g' \
+            | sed 's/^/fix: /')
+
+          # Write body to temp file (avoids shell quoting issues)
+          printf '%s\n' "$PR_BODY" > /tmp/fallback-pr-body.md
+
+          PR_NUMBER=$(gh pr create \
+            --repo "$REPO" \
+            --title "$TITLE" \
+            --body-file /tmp/fallback-pr-body.md \
+            --base main \
+            --head "$BRANCH" \
+            --json number \
+            --jq '.number' 2>/dev/null || echo "")
+
+          if [ -n "$PR_NUMBER" ]; then
+            echo "✅ Created PR #$PR_NUMBER"
+            gh pr merge "$PR_NUMBER" --repo "$REPO" --auto --squash 2>/dev/null || true
+          else
+            echo "❌ Failed to create PR (branch may not be ahead of main)"
+          fi

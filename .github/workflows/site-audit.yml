@@ -470,7 +470,7 @@ jobs:
                   lhLine,
                   '**Common fixes:**\n- Defer or remove render-blocking JavaScript\n- Optimize and lazy-load images (use WebP, set explicit dimensions)\n- Reduce unused CSS/JS\n- Improve server response time (TTFB)\n- Use efficient cache policies',
                   `_Auto-opened by [Site Audit](${runUrl})_`,
-                  `@claude Please investigate the Lighthouse performance regression. Review the report linked above, identify the top opportunities, and apply fixes to the codebase. Focus on render-blocking resources, image optimisation, and unused CSS/JS.`,
+                  `@claude Please fix the Lighthouse performance regression shown above.\n\n**Steps:**\n1. Review the Lighthouse report linked above — identify the top opportunities (render-blocking resources, LCP, CLS, image optimisation, unused CSS/JS)\n2. Create a working branch: \`git checkout -b claude/fix-performance\`\n3. Apply the necessary code fixes\n4. Push the branch: \`git push -u origin HEAD\`\n5. Create a PR: \`gh pr create --title "fix: improve Lighthouse performance score" --base main\`\n6. Enable auto-merge: \`gh pr merge --auto --squash\``,
                 ].filter(l => l !== null).join('\n\n'),
               },
               {
@@ -483,7 +483,7 @@ jobs:
                   lhLine,
                   'Check the report for issues such as missing alt text, low colour contrast, or missing ARIA labels.',
                   `_Auto-opened by [Site Audit](${runUrl})_`,
-                  `@claude Please review the Lighthouse accessibility report linked above and fix the flagged issues (missing alt text, contrast, ARIA labels, etc.) in the codebase.`,
+                  `@claude Please fix the Lighthouse accessibility issues shown above.\n\n**Steps:**\n1. Review the Lighthouse report linked above — identify flagged issues (missing alt text, contrast, ARIA labels, etc.)\n2. Create a working branch: \`git checkout -b claude/fix-accessibility\`\n3. Apply the necessary code fixes\n4. Push the branch: \`git push -u origin HEAD\`\n5. Create a PR: \`gh pr create --title "fix: improve Lighthouse accessibility score" --base main\`\n6. Enable auto-merge: \`gh pr merge --auto --squash\``,
                 ].filter(l => l !== null).join('\n\n'),
               },
               {
@@ -496,7 +496,7 @@ jobs:
                   lhLine,
                   'Check the report for deprecated APIs, mixed-content requests, or missing HTTPS.',
                   `_Auto-opened by [Site Audit](${runUrl})_`,
-                  `@claude Please review the Lighthouse best-practices report linked above and fix the flagged issues in the codebase.`,
+                  `@claude Please fix the Lighthouse best-practices issues shown above.\n\n**Steps:**\n1. Review the Lighthouse report linked above — identify deprecated APIs, mixed-content requests, or other flagged issues\n2. Create a working branch: \`git checkout -b claude/fix-best-practices\`\n3. Apply the necessary code fixes\n4. Push the branch: \`git push -u origin HEAD\`\n5. Create a PR: \`gh pr create --title "fix: improve Lighthouse best-practices score" --base main\`\n6. Enable auto-merge: \`gh pr merge --auto --squash\``,
                 ].filter(l => l !== null).join('\n\n'),
               },
               {
@@ -509,7 +509,7 @@ jobs:
                   lhLine,
                   'Check the report for missing meta descriptions, invalid structured data, or crawlability issues.',
                   `_Auto-opened by [Site Audit](${runUrl})_`,
-                  `@claude Please review the Lighthouse SEO report linked above and fix the flagged issues (missing meta descriptions, structured data, crawlability) in the codebase.`,
+                  `@claude Please fix the Lighthouse SEO issues shown above.\n\n**Steps:**\n1. Review the Lighthouse report linked above — identify missing meta descriptions, structured data issues, crawlability problems\n2. Create a working branch: \`git checkout -b claude/fix-seo\`\n3. Apply the necessary code fixes\n4. Push the branch: \`git push -u origin HEAD\`\n5. Create a PR: \`gh pr create --title "fix: improve Lighthouse SEO score" --base main\`\n6. Enable auto-merge: \`gh pr merge --auto --squash\``,
                 ].filter(l => l !== null).join('\n\n'),
               },
               {
@@ -521,7 +521,7 @@ jobs:
                   `Found **${num('HTML_ERRORS')} error(s)**.`,
                   `Download the \`htmlproofer-output\` artifact from the [audit run](${runUrl}) for the full list of broken links and HTML errors.`,
                   `_Auto-opened by [Site Audit](${runUrl})_`,
-                  `@claude Please fix the HTML check failures. Run \`gh run download ${context.runId} --name htmlproofer-output --repo ${context.repo.owner}/${context.repo.repo} --dir /tmp/htmlproofer\` to get the full error list, then fix the issues in the codebase. Common issues: missing alt attributes on images, broken internal links.`,
+                  `@claude Please fix the HTML check failures shown above.\n\n**Steps:**\n1. Download the error list: \`gh run download ${context.runId} --name htmlproofer-output --repo ${context.repo.owner}/${context.repo.repo} --dir /tmp/htmlproofer\`\n2. Review the errors (common causes: broken internal links, missing alt attributes on images)\n3. Create a working branch: \`git checkout -b claude/fix-html-errors\`\n4. Apply the necessary code fixes\n5. Push the branch: \`git push -u origin HEAD\`\n6. Create a PR: \`gh pr create --title "fix: resolve HTML and link check failures" --base main\`\n7. Enable auto-merge: \`gh pr merge --auto --squash\``,
                 ].join('\n\n'),
               },
               {
