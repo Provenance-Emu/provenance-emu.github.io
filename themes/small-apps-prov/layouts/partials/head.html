@@ -13,9 +13,15 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  {{ "<!-- Font Awesome — deferred via media=print (does not compete with render-blocking CSS for bandwidth) -->" | safeHTML }}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.media='all'">
+  {{ "<!-- Google Fonts — deferred via media=print; display=swap prevents FOIT; @import removed from SCSS -->" | safeHTML }}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap"></noscript>
+
+  {{ "<!-- Font Awesome — deferred via media=print -->" | safeHTML }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
 
   {{ "<!-- Canonical URL -->" | safeHTML }}
@@ -24,12 +30,13 @@
   {{ "<!-- Page title -->" | safeHTML }}
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
-  {{ "<!-- Hero image: fetchpriority=high on the img element is sufficient; preload removed to avoid bandwidth contention -->" | safeHTML }}
+  {{ "<!-- LCP image preload (homepage only): tells browser to fetch the hero image immediately, before layout is complete -->" | safeHTML }}
+  {{ if .IsHome }}<link rel="preload" as="image" href="{{ "/images/mobile.webp" | absURL }}" type="image/webp" fetchpriority="high">{{ end }}
 
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
 
-  {{ "<!-- plugins CSS — deferred via media=print (low priority so render-blocking CSS gets full bandwidth) -->" | safeHTML }}
+  {{ "<!-- plugins CSS — deferred via media=print -->" | safeHTML }}
   {{ range .Site.Params.plugins.css }}
   <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
@@ -42,13 +49,20 @@
   {{ end }}
   {{ end }}
 
-  {{ "<!-- Main Stylesheet (synchronous — provides layout/grid needed for hero LCP element) -->" | safeHTML }}
+  {{ "<!-- Critical CSS: minimal above-fold rules to prevent FOUC while all stylesheets load asynchronously." | safeHTML }}
+  {{ "     Covers: body overflow, navbar bg, hero gradient (::before circle), ios-only toggle, hero badge sizing. -->" | safeHTML }}
+  <style>body{overflow-x:hidden}.main-nav{background:#fff}.gradient-banner{padding:6rem 0;position:relative;overflow:hidden}.gradient-banner::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:200%;height:200%;border-radius:50%;background-image:linear-gradient(45deg,#009ec5 0%,#2e7eed 20%,#02225b 50%)}.pull-top{margin-top:-100px}.ios-only{display:none}.hero-badges{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.download-badge-hero{height:46px;width:auto}</style>
+
+  {{ "<!-- Main Stylesheet — deferred via media=print so it never blocks the render path." | safeHTML }}
+  {{ "     Above-fold critical styles are inlined above; noscript fallback loads synchronously for no-JS users. -->" | safeHTML }}
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
 
   {{ "<!-- AOS: inline only the 3 animation types used on this site (fade-up/right/left). -->" | safeHTML }}
-  {{ "<!-- Replaces 25 KB aos.css with ~250 bytes; homepage-only since only index.html uses data-aos. -->" | safeHTML }}
-  {{ "<!-- Must stay synchronous: AOS CSS sets opacity:0 before AOS.init() runs; async would race. -->" | safeHTML }}
+  {{ "<!-- Replaces 28 KB aos.css with ~250 bytes; homepage-only since only index.html uses data-aos. -->" | safeHTML }}
+  {{ "<!-- IMPORTANT: must stay synchronous — AOS CSS sets opacity:0 on [data-aos] before AOS.init() runs. -->" | safeHTML }}
+  {{ "<!-- If async, the opacity reset races with AOS.init() and elements can remain permanently invisible. -->" | safeHTML }}
   {{ if .IsHome }}<style>[data-aos^=fade]{opacity:0;transition-property:opacity,transform}[data-aos^=fade].aos-animate{opacity:1;transform:translateZ(0)}[data-aos=fade-up]{transform:translate3d(0,100px,0)}[data-aos=fade-right]{transform:translate3d(-100px,0,0)}[data-aos=fade-left]{transform:translate3d(100px,0,0)}</style>{{ end }}
 
   {{ "<!--Favicon-->" | safeHTML }}
