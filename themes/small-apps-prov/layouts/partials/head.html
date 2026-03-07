@@ -38,13 +38,13 @@
 
   {{ "<!-- plugins CSS — deferred via media=print -->" | safeHTML }}
   {{ range .Site.Params.plugins.css }}
-  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.onload=null;this.media='all'">
   <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
   {{ end }}
   {{ if .IsHome }}
   {{ "<!-- Homepage-only CSS (OWL Carousel) -->" | safeHTML }}
   {{ range .Site.Params.plugins.css_homepage }}
-  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.onload=null;this.media='all'">
   <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
   {{ end }}
   {{ end }}
