@@ -30,22 +30,22 @@
 				{{ $btn := . }}
 				<div class="hero-badges">
 					<a href="{{ .URL }}" class="badge-link badge-link-hero" title="{{ .btnText }}">
-						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-hero">
+						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-hero" width="138" height="46">
 					</a>
 					<a href="{{ .URL2 }}" class="badge-link badge-link-hero ios-only" title="{{ .btnText2 }}">
-						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero">
+						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero" width="138" height="46">
 					</a>
 					<a href="{{ $.Site.Params.cta.URL }}" data-toggle="modal" data-target="#appStoreQRModal" class="badge-link badge-link-hero ios-disable" title="Scan QR code to download on iPhone">
-						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero">
+						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero" width="138" height="46">
 					</a>
 					<a href="{{ .URL3 }}" class="badge-link badge-link-hero" title="{{ .btnText3 }}">
-						<img src="{{ .badge3 | absURL }}" alt="{{ .btnText3 }}" class="download-badge download-badge-hero">
+						<img src="{{ .badge3 | absURL }}" alt="{{ .btnText3 }}" class="download-badge download-badge-hero" width="138" height="46">
 					</a>
 					{{ with .URL4 }}<a href="{{ . }}" class="badge-link badge-link-hero ios-only" title="{{ $btn.btnText4 }}">
-						<img src="{{ $btn.badge4 | absURL }}" alt="{{ $btn.btnText4 }}" class="download-badge download-badge-hero">
+						<img src="{{ $btn.badge4 | absURL }}" alt="{{ $btn.btnText4 }}" class="download-badge download-badge-hero" width="138" height="46">
 					</a>{{ end }}
 					{{ with .URL5 }}<a href="{{ . }}" class="badge-link badge-link-hero ios-only" title="{{ $btn.btnText5 }}">
-						<img src="{{ $btn.badge5 | absURL }}" alt="{{ $btn.btnText5 }}" class="download-badge download-badge-hero">
+						<img src="{{ $btn.badge5 | absURL }}" alt="{{ $btn.btnText5 }}" class="download-badge download-badge-hero" width="138" height="46">
 					</a>{{ end }}
 				</div>
 				{{ end }}
@@ -508,7 +508,7 @@
 				<div class="download-badges-row">
 					{{ range .Site.Data.homepage.download.downloadButton }}
 					<a href="{{ htmlEscape .URL }}" class="badge-link badge-link-download" title="{{ .btnText }}">
-						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-section" loading="lazy" decoding="async">
+						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-section" width="168" height="56" loading="lazy" decoding="async">
 					</a>
 					{{ end }}
 				</div>

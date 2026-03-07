@@ -9,7 +9,7 @@
             <li class="list-inline-item mx-3"><a class="text-white" href="{{ .URL }}">{{ .Name }}</a></li>
             {{ end }}
           </ul>
-          <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logoAlt | absURL }}" alt="footer-logo" loading="lazy" decoding="async"></a>
+          <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logoAlt | absURL }}" alt="footer-logo" width="126" height="18" loading="lazy" decoding="async"></a>
           <ul class="social-icon list-inline">
             {{ range .Site.Params.footer.socialIcon }}
             <li class="list-inline-item">
