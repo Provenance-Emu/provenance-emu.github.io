@@ -300,10 +300,10 @@ pygmentsStyle = "solarized-dark"
             URL = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         [[params.plugins.js]]
             URL = "plugins/bootstrap/bootstrap.min.js"
-        [[params.plugins.js]]
-            URL = "plugins/aos/aos.js"
 
         # JS Plugins (homepage-only — loaded conditionally in footer.html)
+        [[params.plugins.js_homepage]]
+            URL = "plugins/aos/aos.js"
         [[params.plugins.js_homepage]]
             URL = "plugins/owl-carousel/owl.carousel.min.js"
         # Fancybox removed: promoVideo is disabled so data-fancybox never renders

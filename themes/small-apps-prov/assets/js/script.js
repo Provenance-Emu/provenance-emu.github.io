@@ -119,11 +119,13 @@
       }
 
       // ----------------------------
-      // AOS
+      // AOS (homepage-only; JS not loaded on other pages)
       // ----------------------------
-      AOS.init({
-          once: true
-      });
+      if (typeof AOS !== 'undefined') {
+          AOS.init({
+              once: true
+          });
+      }
 
   });
 
