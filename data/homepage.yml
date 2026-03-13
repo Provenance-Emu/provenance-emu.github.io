@@ -102,6 +102,21 @@ featureTwo:
   clientImage : ""
   clientName : "Power users and casual gamers covered"
 
+# feature three — skin catalog CTA
+featureThree:
+  enable : true
+  image : "images/feature/feature-rom-metadata.webp"
+  imageAlt : "images/feature/feature-rom-metadata.png"
+  title : "Personalize With Community Skins"
+  content : "Browse hundreds of community-made controller skins in the <a href=\"https://provenance-emu.com/skins/\">Skin Catalog</a> — searchable by system with live previews. Skin creators can submit directly via GitHub or a simple URL drop. Browse, install, or contribute your own designs."
+  button:
+    enable: true
+    btnText: "Browse Skin Catalog"
+    URL: "https://provenance-emu.com/skins/"
+  comment : ""
+  clientImage : ""
+  clientName : "Community-made skins for every system"
+
 # mockup carousel
 mockupCarousel:
   enable: true

@@ -225,6 +225,37 @@
 {{ end }}
 {{ end }}
 
+{{ if .Site.Data.homepage.featureThree }}
+{{ with .Site.Data.homepage.featureThree }}
+<section class="feature section pt-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 mr-auto justify-content-center">
+				{{ "<!-- Feature mockup -->" | safeHTML }}
+				<div class="image-content" data-aos="fade-right">
+					<img class="img-fluid" src="{{ .image | absURL }}" alt="skins" loading="lazy" decoding="async" width="677" height="1367">
+				</div>
+			</div>
+			<div class="col-lg-6 ml-auto align-self-center">
+				<div class="feature-content">
+					<h2>{{ .title }}</h2>
+					<p>{{ .content | safeHTML }}</p>
+					{{ if .button.enable }}
+					<a href="{{ .button.URL }}" class="btn btn-main btn-icon btn-round-full mt-3">{{ .button.btnText }} <i class="tf-ion-android-arrow-forward"></i></a>
+					{{ end }}
+				</div>
+				<div class="testimonial">
+					<ul class="list-inline meta">
+						<li class="list-inline-item">{{ .clientName }}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+
 {{ if .Site.Data.homepage.mockupCarousel.enable }}
 {{"<!-- Mockup Carousel -->" | safeHTML}}
 <section class="section mockup-carousel bg-light">

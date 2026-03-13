@@ -41,10 +41,16 @@ pygmentsStyle = "solarized-dark"
         weight = 2
 
     [[menu.main]]
+        identifier = "skins"
+        name = "Skins"
+        url  = "https://provenance-emu.com/skins/"
+        weight = 3
+
+    [[menu.main]]
         identifier="blog"
         name = "Blog"
         url  = "/blog/"
-        weight = 3
+        weight = 4
 
     [[menu.main]]
         identifier = "source"
