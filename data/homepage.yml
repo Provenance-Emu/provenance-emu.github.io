@@ -105,8 +105,8 @@ featureTwo:
 # feature three — skin catalog CTA
 featureThree:
   enable : true
-  image : "images/feature/feature-rom-metadata.webp"
-  imageAlt : "images/feature/feature-rom-metadata.png"
+  image : "images/mockups/iphone-snes-mk3.webp"
+  imageAlt : "images/mockups/iphone-snes-mk3.png"
   title : "Personalize With Community Skins"
   content : "Browse hundreds of community-made controller skins in the <a href=\"https://provenance-emu.com/skins/\">Skin Catalog</a> — searchable by system with live previews. Skin creators can submit directly via GitHub or a simple URL drop. Browse, install, or contribute your own designs."
   button:
