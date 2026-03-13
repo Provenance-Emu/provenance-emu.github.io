@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-03-13T06:23:09Z",
-  "run_url": "https://github.com/Provenance-Emu/provenance-emu.github.io/actions/runs/23038808204",
+  "last_updated": "2026-03-13T06:46:18Z",
+  "run_url": "https://github.com/Provenance-Emu/provenance-emu.github.io/actions/runs/23039456440",
   "html_check": {
     "passed": true,
     "error_count": 0
   },
   "lighthouse": {
-    "performance": 67,
+    "performance": 54,
     "accessibility": 88,
     "best_practices": 96,
     "seo": 100,
-    "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1773382763244-10698.report.html"
+    "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1773384207421-25480.report.html"
   },
   "observatory": {
     "grade": "B",
