@@ -28,80 +28,80 @@ pygmentsStyle = "solarized-dark"
 
 # Main menu
 
-    # [[menu.main]]
-    #     identifier="home"
-    #     name = "Home"
-    #     url  = "/"
-    #     weight = 1
-
     [[menu.main]]
         identifier = "plus"
         name = "Plus"
         url  = "/plus/"
-        weight = 2
+        weight = 10
 
     [[menu.main]]
         identifier = "skins"
         name = "Skins"
         url  = "https://provenance-emu.com/skins/"
-        weight = 3
+        weight = 20
 
     [[menu.main]]
-        identifier="blog"
+        identifier = "blog"
         name = "Blog"
         url  = "/blog/"
-        weight = 4
+        weight = 30
 
-    [[menu.main]]
-        identifier = "source"
-        name = "Source"
-        url = "https://github.com/Provenance-Emu/Provenance"
-        pre = "<i class='fab fa-2x fa-github'></i>"
-        target = "_blank"
-        hrefTargetBlank = true
-        weight = 4
-
+    # Docs dropdown
     [[menu.main]]
         identifier = "docs"
         name = "Docs"
         url  = "https://wiki.provenance-emu.com/"
-        weight = 5
+        weight = 40
 
     [[menu.main]]
-        identifier = "faq"
+        identifier = "docs-wiki"
+        name = "Wiki"
+        url  = "https://wiki.provenance-emu.com/"
+        parent = "docs"
+        weight = 1
+
+    [[menu.main]]
+        identifier = "docs-faq"
         name = "FAQ"
         url  = "https://wiki.provenance-emu.com/faqs"
-        weight = 6
+        parent = "docs"
+        weight = 2
+
+    # Community dropdown
+    [[menu.main]]
+        identifier = "community"
+        name = "Community"
+        url  = "#"
+        weight = 50
 
     [[menu.main]]
-        identifier = "donate"
-        name = "Donate"
-        url  = "/donate/"
-        weight = 7
-
-    [[menu.main]]
-        identifier = "discord"
+        identifier = "community-discord"
         name = "Discord"
         url  = "https://discord.gg/4TK7PU5"
-        weight = 8
+        parent = "community"
+        weight = 1
 
     [[menu.main]]
-        identifier = "press"
+        identifier = "community-donate"
+        name = "Donate"
+        url  = "/donate/"
+        parent = "community"
+        weight = 2
+
+    [[menu.main]]
+        identifier = "community-press"
         name = "Press"
         url  = "/press/"
-        weight = 8
+        parent = "community"
+        weight = 3
 
+    # GitHub icon (standalone, far right)
     [[menu.main]]
-        identifier = "privacy"
-        name = "Privacy Policy"
-        url  = "/privacy/"
-        weight = 9
-
-    # [[menu.main]]
-    #     identifier = "contact"
-    #     name = "Contact"
-    #     url  = "/contact/"
-    #     weight = 6
+        identifier = "source"
+        name = ""
+        url = "https://github.com/Provenance-Emu/Provenance"
+        pre = "<i class='fab fa-lg fa-github'></i>"
+        weight = 60
 
     # Top bar social links menu
 
