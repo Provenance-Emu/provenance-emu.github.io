@@ -1,6 +1,6 @@
 ---
 title: "Introducing the Provenance Skin Catalog"
-date: 2026-03-13T12:00:00-05:00
+date: 2026-03-13T00:00:00-05:00
 draft: false
 tags: ["skins", "community", "feature"]
 type: "post"
