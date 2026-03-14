@@ -50,11 +50,19 @@ The homepage and most static pages are **not built from Markdown content** — t
 
 - `data/homepage.yml` — Main homepage content (hero, features, systems list, download section, social proof, comparison table, carousel)
 - `data/faq.yml`, `data/about.yml`, `data/contact.yml`, `data/privacy.yml`, `data/team.yml` — Page-specific data
+- `data/plus.yml`, `data/press.yml` — Plus and Press page data
 - `data/carousel/`, `data/features/`, `data/releases/` — Structured data for homepage sections
 
 The homepage template that consumes this data is `themes/small-apps-prov/layouts/index.html` (~410 lines).
 
-Blog posts in `content/blog/` are the only traditional Markdown content. They use front matter with: title, date, tags, author, image.
+### Markdown Content Sections
+
+Several sections use traditional Markdown with front matter:
+
+- `content/blog/` — Blog posts (title, date, tags, author, image)
+- `content/guides/` — How-to guide pages with `single.html` layout
+- `content/compare/` — "Provenance vs" comparison pages with `single.html` layout
+- `content/systems/` — System-specific landing pages (NES, SNES, GBA, PSX, etc.) with `single.html` layout
 
 ### Custom Styling
 
@@ -67,7 +75,12 @@ All in `themes/small-apps-prov/layouts/`:
 - `index.html` — Homepage (complex, data-driven, most editing happens here)
 - `_default/baseof.html` — Base template wrapper
 - `partials/head.html`, `header.html`, `footer.html` — Shared page structure
+- `partials/jsonld.html` — JSON-LD structured data partial
 - Page-specific layouts: `about/`, `product/`, `faq/`, `privacy/`, `contact/`, `team/`
+- `plus/list.html`, `press/list.html` — Plus and Press pages (data-driven)
+- `guides/list.html`, `guides/single.html` — How-to guide index and individual pages
+- `compare/list.html`, `compare/single.html` — Comparison page index and individual pages
+- `systems/list.html`, `systems/single.html` — System-specific landing page index and individual pages
 - `layouts/donate/list.html` — Custom donate page (in root layouts dir, overrides theme)
 
 ### Configuration
@@ -77,6 +90,14 @@ All in `themes/small-apps-prov/layouts/`:
 ### Submodules
 
 Clone with `--recursive` or run `git submodule update --init --recursive` after cloning. Required for themes to resolve.
+
+### `_site/` Directory
+
+`_site/` is a separate git worktree or checkout of another branch (not the main source). Do not edit files there — changes will not affect the main site build. The actual source files are at the repo root.
+
+### `static/apps.json`
+
+Auto-updated weekly by `.github/workflows/update-altstore-source.yml`, which pulls from GitHub Releases. Do not manually edit this file; it will be overwritten.
 
 ## ⚠️ Hard Rules — Do Not Change Without Understanding Why
 
