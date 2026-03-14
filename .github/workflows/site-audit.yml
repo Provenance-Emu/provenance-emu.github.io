@@ -163,6 +163,7 @@ jobs:
             https://provenance-emu.com
             https://provenance-emu.com/blog/
             https://provenance-emu.com/plus/
+            https://provenance-emu.com/skins/
           configPath: .lighthouserc.yml
           temporaryPublicStorage: true
 
