@@ -17,6 +17,15 @@
             "comment": "Matches any URL whose path starts with /buy/"
           },
           {
+            "/": "/skins/install",
+            "?": { "url": "*" },
+            "comment": "Skin install universal link: provenance-emu.com/skins/install?url=<encoded-skin-url>"
+          },
+          {
+            "/": "/skins/*",
+            "comment": "Skin catalog pages — allows the app to handle skin-related deep links"
+          },
+          {
             "/": "/help/website/*",
             "exclude": true,
             "comment": "Matches any URL whose path starts with /help/website/ and instructs the system not to open it as a universal link"
