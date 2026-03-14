@@ -22,6 +22,11 @@
             "comment": "Skin install universal link: provenance-emu.com/skins/install?url=<encoded-skin-url>"
           },
           {
+            "/": "/skins/install",
+            "exclude": true,
+            "comment": "Exclude /skins/install without url query so only explicit install links open the app"
+          },
+          {
             "/": "/skins/*",
             "comment": "Skin catalog pages — allows the app to handle skin-related deep links"
           },
