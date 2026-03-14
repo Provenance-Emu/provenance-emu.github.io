@@ -94,7 +94,7 @@ featureOne:
 # feature two
 featureTwo:
   enable : true
-  image : "images/feature/n64-core-options.png"
+  image : "images/feature/n64-core-options.webp"
   imageAlt : "images/feature/n64-core-options.png"
   title : "Fine-Tune Your Experience"
   content : "Customize emulation settings in real-time. Dial in configurable CRT scanline and phosphor shaders, adjust audio, tweak per-core options, and look up cheat codes directly from the libretro database — all without leaving your game."
@@ -163,7 +163,7 @@ tvosShowcase:
   title: "Your Living Room. Your Arcade."
   subtitle: "The Premier Full-Featured Emulator for Apple TV"
   description: "While others stop at your phone, Provenance takes retro gaming to the big screen. Native tvOS support means your games look and play exactly as they should on your TV - with all the modern conveniences of Apple's ecosystem."
-  image: "images/console_logos.jpg"
+  image: "images/console_logos.webp"
   imageAlt: "images/console_logos.jpg"
   features:
     - title: "TopShelf Integration"
@@ -180,7 +180,7 @@ service:
   enable : true
   title : "38+ Game Systems. One App."
   description : "From Atari to PlayStation, we've got you covered. The most comprehensive console support of any iOS emulator."
-  image : "images/console_logos.jpg"
+  image : "images/console_logos.webp"
   imageAlt : "images/console_logos.jpg"
   serviceItem :
     - icon : "tf-ribbon"
