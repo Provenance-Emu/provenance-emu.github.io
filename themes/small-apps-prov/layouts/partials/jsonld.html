@@ -22,12 +22,15 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Provenance",
-  "operatingSystem": "iOS, tvOS",
+  "alternateName": "Provenance EMU",
+  "operatingSystem": "iOS, iPadOS, tvOS, macOS",
   "applicationCategory": "GameApplication",
+  "applicationSubCategory": "RetroGaming",
   "description": {{ .Site.Params.description | jsonify }},
+  "keywords": "iOS game emulator, retro game emulator, iPhone emulator, multi-system emulator, free emulator, SNES emulator, N64 emulator, PlayStation emulator, GBA emulator",
   "url": {{ .Site.BaseURL | jsonify }},
   "downloadUrl": "https://apps.apple.com/us/app/provenance-app/id1596862805",
-  "softwareVersion": "3.2.1", {{/* TODO: keep in sync with static/apps.json; consider moving to site params */}}
+  "softwareVersion": "3.3.0",
   "author": {
     "@type": "Organization",
     "name": {{ .Site.Params.author | jsonify }},
@@ -38,7 +41,7 @@
     "price": "0",
     "priceCurrency": "USD"
   },
-  "screenshot": {{ "blog/2022/12/09/release-2.2.0/images/IMG_2306.jpg" | absURL | jsonify }}
+  "screenshot": {{ "images/mobile.webp" | absURL | jsonify }}
 }
 </script>
 {{- end }}

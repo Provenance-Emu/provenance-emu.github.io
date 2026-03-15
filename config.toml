@@ -132,7 +132,8 @@ pygmentsStyle = "solarized-dark"
 [params]
     viewMorePostLink = "/blog/"
     author = "Provenance Team"
-    defaultKeywords = []
+    defaultKeywords = ["iOS game emulator", "retro game emulator", "iPhone emulator", "iPad emulator", "iOS emulator", "free emulator iOS", "SNES emulator", "N64 emulator", "PlayStation emulator", "GBA emulator", "retro gaming iOS", "multi-system emulator"]
+    Keywords = "iOS game emulator, retro game emulator, iPhone emulator, iPad emulator, free iOS emulator, SNES emulator, N64 emulator, PlayStation emulator, GBA emulator, multi-system emulator, retro gaming"
     mainSections = ["blog"]
     defaultDescription = ""
 

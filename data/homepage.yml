@@ -23,7 +23,7 @@ socialProof:
 # banner
 banner:
   title : "Your Classic Games.\nReimagined for iOS & tvOS."
-  description : "The ultimate open-source, all-in-one emulator. Play your favorite retro games with native iOS features, beautiful metadata, and support for 38+ console systems. Free when sideloaded or built from source."
+  description : "The best free, open-source iOS game emulator. Play retro games from 38+ consoles — SNES, N64, PlayStation, GBA, Dreamcast, and more — with native iOS features, beautiful metadata, and iCloud sync."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
   image : "images/mobile.webp"
