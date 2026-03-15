@@ -2,18 +2,18 @@
   "name": "Provenance EMU",
   "identifier": "org.provenance-emu.AltStore",
   "sourceURL": "https://provenance-emu.com/apps.json",
-  "subtitle": "Multi-emulator frontend for iOS & tvOS",
+  "subtitle": "Play 50+ retro systems. Free & open source.",
   "website": "https://provenance-emu.com",
-  "tintColor": "#162434",
+  "tintColor": "#FA3399",
   "apps": [
     {
       "name": "Provenance EMU",
       "bundleIdentifier": "org.provenance-emu.provenance",
       "developerName": "Joe Mattiello",
-      "subtitle": "Multi-emulator frontend for iOS & tvOS",
-      "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems.",
+      "subtitle": "Play 50+ retro systems. Free & open source.",
+      "localizedDescription": "Provenance is a free, open-source multi-system emulator for iPhone, iPad, and Apple TV. Play your favorite retro games across 50+ classic gaming systems.\n\nSUPPORTED SYSTEMS\nNES, SNES, Game Boy, GBA, Nintendo 64, Nintendo DS, 3DS, Sega Genesis, Dreamcast, Saturn, PlayStation, PSP, Atari, Neo Geo, and many more.\n\nFEATURES\n• Community Skins Catalog — hundreds of custom controller skins at provenance-emu.com/skins/\n• iCloud Sync (Provenance Plus) — sync ROMs, save states, BIOS files, and artwork across all your devices\n• RetroAchievements — earn achievements in hundreds of classic games\n• Video Filters — CRT, VHS, LCD, Game Boy, and more authentic display effects\n• Full Controller Support — MFi, PlayStation, Xbox, and more\n• Cheats — Game Genie, Action Replay, GameShark codes\n• Save States — save and restore your progress at any point\n• Fast Forward — speed through slow sections\n• ROM Metadata & Artwork — automatic game info and box art\n• RetroArch Integration — additional cores for even more systems\n• Apple TV — full tvOS UI with TopShelf, iCloud sync included free\n\nPROVENANCE PLUS (OPTIONAL)\nSupport development with an optional subscription ($3.99/mo). Unlocks iCloud sync for all devices, TestFlight beta access, and priority support.\n\nFREE & OPEN SOURCE\nProvenance is completely free and open source (EUPL-1.2). No ads, no tracking, no required account.",
       "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
-      "tintColor": "#162434",
+      "tintColor": "#FA3399",
       "category": "games",
       "appPermissions": {
         "entitlements": [
@@ -59,9 +59,12 @@
         ]
       },
       "screenshotURLs": [
-        "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2306.jpg",
-        "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2307.jpg",
-        "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2308.jpg"
+        "https://provenance-emu.com/images/mockups/iphone-library-light.png",
+        "https://provenance-emu.com/images/mockups/iphone-snes.png",
+        "https://provenance-emu.com/images/mockups/iphone-n64.png",
+        "https://provenance-emu.com/images/mockups/iphone-psx.png",
+        "https://provenance-emu.com/images/mockups/iphone-nes-crt.png",
+        "https://provenance-emu.com/images/mockups/iphone-psp.png"
       ],
       "versions": [
         {
@@ -77,7 +80,7 @@
           "date": "2025-11-23T18:54:37Z",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.2.1/Provenance-3.2.1-iOS.ipa",
           "size": 1068698720,
-          "localizedDescription": ": https://github.com/Provenance-Emu/Provenance/compare/3.2.0...3.2.1\n\nBug fixes:\n\n- iPad skins fixed\n- Joystick in default skin fixed in landscape\n- Atari Lynx Retroach controls fixed\n- RetroAchievements login fixed\n- Skin selection and import UIs fixed\n- Skin rotation issues fixed\n- Skin previews fixed"
+          "localizedDescription": "What's New in 3.2.1\n\nBug fixes:\n- iPad skins fixed\n- Joystick in default skin fixed in landscape\n- Atari Lynx RetroArch controls fixed\n- RetroAchievements login fixed\n- Skin selection and import UIs fixed\n- Skin rotation issues fixed\n- Skin previews fixed\n\nFull Changelog: https://github.com/Provenance-Emu/Provenance/compare/3.2.0...3.2.1"
         },
         {
           "version": "3.2.0",
@@ -114,7 +117,7 @@
       "identifier": "release-3.3.0",
       "caption": "iCloud sync, redesigned tvOS UI, video filters, and dozens of core fixes.",
       "date": "2026-03-14T02:17:44Z",
-      "tintColor": "162434",
+      "tintColor": "FA3399",
       "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.3.0",
       "appID": "org.provenance-emu.provenance",
       "notify": true
@@ -122,9 +125,9 @@
     {
       "title": "3.2.1 - iPad skin bug fixes",
       "identifier": "release-3.2.1",
-      "caption": ": https://github.com/Provenance-Emu/Provenance/compare/3.2.0...3.2.1 Bug fixes:",
+      "caption": "iPad skins, joystick, RetroAchievements, skin UI, and rotation fixes.",
       "date": "2025-11-23T18:54:37Z",
-      "tintColor": "162434",
+      "tintColor": "FA3399",
       "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.2.1",
       "appID": "org.provenance-emu.provenance",
       "notify": false
@@ -134,7 +137,7 @@
       "identifier": "release-3.2.0",
       "caption": "Release 3.2.0 We're excited to announce Provenance 3.2.0, a major update focused on performance, skins, and quality of life improvements. This release brings highly requested features and fixes tha...",
       "date": "2025-11-20T20:56:43Z",
-      "tintColor": "162434",
+      "tintColor": "FA3399",
       "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.2.0",
       "appID": "org.provenance-emu.provenance",
       "notify": false
@@ -144,7 +147,7 @@
       "identifier": "release-3.1.1",
       "caption": "What's Changed  Check if app group container is readable by @dnicolson in https://github.com/Provenance-Emu/Provenance/pull/2420",
       "date": "2025-11-08T20:03:01Z",
-      "tintColor": "162434",
+      "tintColor": "FA3399",
       "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.1.1",
       "appID": "org.provenance-emu.provenance",
       "notify": false
