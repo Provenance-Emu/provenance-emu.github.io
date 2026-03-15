@@ -65,6 +65,14 @@
       ],
       "versions": [
         {
+          "version": "3.3.0",
+          "date": "2026-03-14T02:17:44Z",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa",
+          "size": 1076407494,
+          "sha256": "2aaf7fe05cbe86a5d8c5c012c4b87a688d68fd160f53cca1f486d2e7d0f70f8c",
+          "localizedDescription": "What's New in 3.3.0\n\n☁️ iCloud / CloudKit Sync\n- ROMs, save states, BIOS files, and artwork now sync across devices via iCloud\n- Real-time download progress indicators when loading cloud save states\n- Auto BIOS sync on game load when available in iCloud\n\n📺 New tvOS UI (Default)\n- Completely redesigned tvOS interface now enabled by default\n- RetroWave-themed side menu with smooth animations\n- Save states browser, Cheats UI, Log viewer, and Import status view\n- TopShelf v2: recent games and save states with artwork\n\n🎨 Video Filters & Shaders\n- Unified filter pipeline across native and RetroArch cores\n- GB, VHS, and shader filters accessible from the pause menu\n- RetroArch GLES 3D cores now supported\n\n🎮 Core & Controller Fixes\n- RetroArch: fixed player index mapping for MFi, PS4, Xbox controllers\n- Mupen64Plus, Dolphin, GenPluGX, PicoDrive, FCEUmm, Mednafen fixes\n\n🐛 Bug Fixes & Stability\n- Fixed multiple app hangs from main-thread Realm access\n- Fixed crash in pause menu, audio ring buffer, share/import extension\n- Fixed artwork refresh, game importer, and Realm contentless core crash\n\nFull Changelog: https://github.com/Provenance-Emu/Provenance/compare/3.2.1...3.3.0"
+        },
+        {
           "version": "3.2.1",
           "date": "2025-11-23T18:54:37Z",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.2.1/Provenance-3.2.1-iOS.ipa",
@@ -93,14 +101,24 @@
           "localizedDescription": "What's Changed\n Fix custom textures option 3ds (forgot to bridge to CitraWrapper.mm) by @yippeeeyay in https://github.com/Provenance-Emu/Provenance/pull/2398\n Update PVMetalViewController.swift - Fix Rotation misalignment. by @mrjschulte in https://github.com/Provenance-Emu/Provenance/pull/2400\n Update megaTron.metal by @mrjschulte in https://github.com/Provenance-Emu/Provenance/pull/2402\n Update PVMetalViewController.swift - fix ulTron by @mrjschulte in https://github.com/Provenance-Emu/Prov..."
         }
       ],
-      "version": "3.2.1",
-      "versionDate": "2025-11-23T18:54:37Z",
-      "versionDescription": ": https://github.com/Provenance-Emu/Provenance/compare/3.2.0...3.2.1\n\nBug fixes:\n\n- iPad skins fixed\n- Joystick in default skin fixed in landscape\n- Atari Lynx Retroach controls fixed\n- RetroAchievements login fixed\n- Skin selection and import UIs fixed\n- Skin rotation issues fixed\n- Skin previews fixed",
-      "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.2.1/Provenance-3.2.1-iOS.ipa",
-      "size": 1068698720
+      "version": "3.3.0",
+      "versionDate": "2026-03-14T02:17:44Z",
+      "versionDescription": "What's New in 3.3.0\n\n☁️ iCloud / CloudKit Sync\n- ROMs, save states, BIOS files, and artwork now sync across devices via iCloud\n\n📺 New tvOS UI (Default)\n- Completely redesigned tvOS interface now enabled by default\n- RetroWave-themed side menu, Save states browser, Cheats UI, TopShelf v2\n\n🎨 Video Filters & Shaders\n- Unified filter pipeline across native and RetroArch cores\n\n🎮 Core & Controller Fixes\n- RetroArch, Mupen64Plus, Dolphin, GenPluGX, PicoDrive, FCEUmm, Mednafen fixes\n\n🐛 Bug Fixes & Stability\n- Fixed multiple app hangs, crashes, artwork refresh, and game importer\n\nFull Changelog: https://github.com/Provenance-Emu/Provenance/compare/3.2.1...3.3.0",
+      "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa",
+      "size": 1076407494
     }
   ],
   "news": [
+    {
+      "title": "3.3.0 — iCloud Sync, New tvOS UI & Video Filters",
+      "identifier": "release-3.3.0",
+      "caption": "iCloud sync, redesigned tvOS UI, video filters, and dozens of core fixes.",
+      "date": "2026-03-14T02:17:44Z",
+      "tintColor": "162434",
+      "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.3.0",
+      "appID": "org.provenance-emu.provenance",
+      "notify": true
+    },
     {
       "title": "3.2.1 - iPad skin bug fixes",
       "identifier": "release-3.2.1",
