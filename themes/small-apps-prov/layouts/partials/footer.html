@@ -29,7 +29,7 @@
 <script src="{{ .URL | absURL }}" defer data-cfasync="false"></script>
 {{ end }}
 {{ if .IsHome }}
-{{ "<!-- Homepage-only JS plugins (OWL Carousel, Fancybox) -->" | safeHTML }}
+{{ "<!-- Homepage-only JS plugins (OWL Carousel) -->" | safeHTML }}
 {{ range .Site.Params.plugins.js_homepage }}
 <script src="{{ .URL | absURL }}" defer data-cfasync="false"></script>
 {{ end }}
