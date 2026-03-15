@@ -8,6 +8,9 @@
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ hugo.Generator }}
 
+  {{ "<!-- Precompute main stylesheet resource early so it can be referenced in both the preload hint and the link tag below. -->" | safeHTML }}
+  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
+
   {{ "<!-- DNS preconnects for external origins -->" | safeHTML }}
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -15,6 +18,27 @@
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  {{ "<!-- CSS preloads: tell the browser to start fetching all local stylesheets at high priority" | safeHTML }}
+  {{ "     immediately when <head> is parsed, rather than waiting for the parser to reach the" | safeHTML }}
+  {{ "     deferred <link media=print> tags further down. Shaves ~100-200 ms off the time" | safeHTML }}
+  {{ "     until the main stylesheet fires its onload and sets opacity:1 on the page. -->" | safeHTML }}
+  {{ range .Site.Params.plugins.css }}
+  {{ if not (strings.HasPrefix .URL "http") }}<link rel="preload" as="style" href="{{ .URL | absURL }}">{{ end }}
+  {{ end }}
+  {{ if .IsHome }}
+  {{ range .Site.Params.plugins.css_homepage }}
+  {{ if not (strings.HasPrefix .URL "http") }}<link rel="preload" as="style" href="{{ .URL | absURL }}">{{ end }}
+  {{ end }}
+  {{ end }}
+  <link rel="preload" as="style" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+
+  {{ "<!-- jQuery preload: begin downloading jQuery immediately so it is ready (or nearly so) by the time" | safeHTML }}
+  {{ "     the deferred script tags in the footer are executed. This tightens the execution gap between" | safeHTML }}
+  {{ "     jQuery and the Bootstrap / AOS / Owl Carousel scripts that depend on it. -->" | safeHTML }}
+  {{ range .Site.Params.plugins.js }}
+  {{ if strings.HasSuffix .URL "jquery.min.js" }}<link rel="preload" as="script" href="{{ .URL | absURL }}" crossorigin>{{ end }}
+  {{ end }}
 
   {{ "<!-- Google Fonts — deferred via media=print; display=swap prevents FOIT; @import removed from SCSS -->" | safeHTML }}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap" media="print" onload="this.onload=null;this.media='all'">
@@ -58,8 +82,8 @@
 
   {{ "<!-- Main Stylesheet — deferred via media=print so it never blocks the render path." | safeHTML }}
   {{ "     onload also reveals the page (clears the opacity:0 set in critical CSS above)." | safeHTML }}
-  {{ "     noscript fallback loads synchronously for no-JS users (opacity reset is handled by the noscript style above). -->" | safeHTML }}
-  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
+  {{ "     noscript fallback loads synchronously for no-JS users (opacity reset is handled by the noscript style above)." | safeHTML }}
+  {{ "     $styles was computed at the top of this file so the preload hint above references the same fingerprinted URL. -->" | safeHTML }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all';document.documentElement.style.opacity='1'">
   <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
 
