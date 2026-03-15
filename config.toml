@@ -29,6 +29,12 @@ pygmentsStyle = "solarized-dark"
 # Main menu
 
     [[menu.main]]
+        identifier = "install"
+        name = "Install"
+        url  = "/install/"
+        weight = 5
+
+    [[menu.main]]
         identifier = "plus"
         name = "Plus"
         url  = "/plus/"
@@ -82,18 +88,17 @@ pygmentsStyle = "solarized-dark"
         weight = 1
 
     [[menu.main]]
-        identifier = "community-donate"
-        name = "Donate"
-        url  = "/donate/"
-        parent = "community"
-        weight = 2
-
-    [[menu.main]]
         identifier = "community-press"
         name = "Press"
         url  = "/press/"
         parent = "community"
         weight = 3
+
+    [[menu.main]]
+        identifier = "donate"
+        name = "Donate"
+        url  = "/donate/"
+        weight = 55
 
     # GitHub icon (standalone, far right)
     [[menu.main]]
