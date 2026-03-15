@@ -30,22 +30,22 @@
 				{{ $btn := . }}
 				<div class="hero-badges">
 					<a href="{{ .URL }}" class="badge-link badge-link-hero" title="{{ .btnText }}">
-						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-hero" width="138" height="46">
+						<img src="{{ .badge | absURL }}" alt="{{ .btnText }}" class="download-badge download-badge-hero" width="138" height="46" decoding="async">
 					</a>
 					<a href="{{ .URL2 }}" class="badge-link badge-link-hero ios-only" title="{{ .btnText2 }}">
-						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero" width="138" height="46">
+						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero" width="138" height="46" decoding="async">
 					</a>
 					<a href="{{ $.Site.Params.cta.URL }}" data-toggle="modal" data-target="#appStoreQRModal" class="badge-link badge-link-hero ios-disable" title="Scan QR code to download on iPhone">
-						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero" width="138" height="46">
+						<img src="{{ .badge2 | absURL }}" alt="{{ .btnText2 }}" class="download-badge download-badge-hero" width="138" height="46" decoding="async">
 					</a>
 					<a href="{{ .URL3 }}" class="badge-link badge-link-hero" title="{{ .btnText3 }}">
-						<img src="{{ .badge3 | absURL }}" alt="{{ .btnText3 }}" class="download-badge download-badge-hero" width="138" height="46">
+						<img src="{{ .badge3 | absURL }}" alt="{{ .btnText3 }}" class="download-badge download-badge-hero" width="138" height="46" decoding="async">
 					</a>
 					{{ with .URL4 }}<a href="{{ . }}" class="badge-link badge-link-hero ios-only" title="{{ $btn.btnText4 }}">
-						<img src="{{ $btn.badge4 | absURL }}" alt="{{ $btn.btnText4 }}" class="download-badge download-badge-hero" width="138" height="46">
+						<img src="{{ $btn.badge4 | absURL }}" alt="{{ $btn.btnText4 }}" class="download-badge download-badge-hero" width="138" height="46" decoding="async">
 					</a>{{ end }}
 					{{ with .URL5 }}<a href="{{ . }}" class="badge-link badge-link-hero ios-only" title="{{ $btn.btnText5 }}">
-						<img src="{{ $btn.badge5 | absURL }}" alt="{{ $btn.btnText5 }}" class="download-badge download-badge-hero" width="138" height="46">
+						<img src="{{ $btn.badge5 | absURL }}" alt="{{ $btn.btnText5 }}" class="download-badge download-badge-hero" width="138" height="46" decoding="async">
 					</a>{{ end }}
 				</div>
 				{{ end }}
@@ -577,7 +577,7 @@
 				<h5 class="mb-2" id="appStoreQRModalLabel">Download on iPhone</h5>
 				<p class="text-muted small mb-3">Scan with your iPhone camera to download Provenance from the App Store</p>
 				<div id="appStoreQRCode" class="d-flex justify-content-center mb-3">
-					<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ $.Site.Params.cta.URL }}" width="200" height="200" alt="QR code to download Provenance on the App Store" loading="lazy">
+					<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ $.Site.Params.cta.URL }}" width="200" height="200" alt="QR code to download Provenance on the App Store" loading="lazy" decoding="async">
 				</div>
 				<p id="appStoreQRInstructions" class="text-muted" style="font-size: 0.75rem;">Open your iPhone Camera app and point it at the code above</p>
 				<p class="text-center mt-2" style="font-size: 0.8rem;"><a href="{{ $.Site.Params.cta.URL }}">Or open App Store directly &rarr;</a></p>
