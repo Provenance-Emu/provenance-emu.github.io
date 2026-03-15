@@ -36,6 +36,9 @@
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
 
+  {{ "<!-- Bootstrap CSS preload: largest plugin stylesheet (138 KB); preloaded so layout is stable sooner -->" | safeHTML }}
+  <link rel="preload" href="{{ "/plugins/bootstrap/bootstrap.min.css" | absURL }}" as="style">
+
   {{ "<!-- plugins CSS — deferred via media=print -->" | safeHTML }}
   {{ range .Site.Params.plugins.css }}
   <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.onload=null;this.media='all'">
@@ -51,15 +54,17 @@
 
   {{ "<!-- Critical CSS: minimal above-fold rules to prevent FOUC while all stylesheets load asynchronously." | safeHTML }}
   {{ "     html opacity:0 hides the page until the main stylesheet is ready, preventing the broken-layout flash." | safeHTML }}
-  {{ "     The transition fades it in smoothly. noscript removes the opacity so no-JS users always see the page." | safeHTML }}
+  {{ "     No transition: instant reveal saves ~150ms from LCP. noscript removes the opacity so no-JS users always see the page." | safeHTML }}
   {{ "     Covers: body overflow, navbar bg, hero gradient (::before circle), ios-only toggle, hero badge sizing. -->" | safeHTML }}
-  <style>html{opacity:0;transition:opacity .15s ease}body{overflow-x:hidden}.main-nav{background:#fff}.gradient-banner{padding:6rem 0;position:relative;overflow:hidden}.gradient-banner::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:200%;height:200%;border-radius:50%;background-image:linear-gradient(45deg,#009ec5 0%,#2e7eed 20%,#02225b 50%)}.pull-top{margin-top:-100px}.ios-only{display:none}.hero-badges{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.download-badge-hero{height:46px;width:auto}</style>
+  <style>html{opacity:0}body{overflow-x:hidden}.main-nav{background:#fff}.gradient-banner{padding:6rem 0;position:relative;overflow:hidden}.gradient-banner::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:200%;height:200%;border-radius:50%;background-image:linear-gradient(45deg,#009ec5 0%,#2e7eed 20%,#02225b 50%)}.pull-top{margin-top:-100px}.ios-only{display:none}.hero-badges{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.download-badge-hero{height:46px;width:auto}</style>
   <noscript><style>html{opacity:1!important}</style></noscript>
 
-  {{ "<!-- Main Stylesheet — deferred via media=print so it never blocks the render path." | safeHTML }}
-  {{ "     onload also reveals the page (clears the opacity:0 set in critical CSS above)." | safeHTML }}
+  {{ "<!-- Main Stylesheet — preloaded at high priority so the opacity:1 reveal fires as soon as possible." | safeHTML }}
+  {{ "     Without preload, media=print causes the browser to assign low fetch priority, delaying LCP." | safeHTML }}
+  {{ "     onload reveals the page (clears opacity:0 set in critical CSS above)." | safeHTML }}
   {{ "     noscript fallback loads synchronously for no-JS users (opacity reset is handled by the noscript style above). -->" | safeHTML }}
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
+  <link rel="preload" href="{{ $styles.Permalink }}" as="style">
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all';document.documentElement.style.opacity='1'">
   <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
 
