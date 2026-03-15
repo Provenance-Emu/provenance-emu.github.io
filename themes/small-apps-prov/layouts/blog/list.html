@@ -28,7 +28,7 @@
           </div>
           <div class="col-lg-4 text-lg-right mt-3 mt-lg-0">
             <div class="blog-meta">
-              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
+              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img" loading="lazy" decoding="async" width="26" height="26">
               <span class="blog-author-name">{{ .Params.Author }}</span>
             </div>
             <div class="blog-meta mt-1">
@@ -76,7 +76,7 @@
             <h3 class="blog-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
             <p class="blog-card-summary">{{ .Description | default .Summary }}</p>
             <div class="blog-meta mt-auto">
-              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
+              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img" loading="lazy" decoding="async" width="26" height="26">
               <span class="blog-author-name">{{ .Params.Author }}</span>
               <span class="blog-meta-sep">·</span>
               <span>{{ .PublishDate.Format "Jan 2, 2006" }}</span>

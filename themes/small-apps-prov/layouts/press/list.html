@@ -22,7 +22,7 @@
     <div class="press-section" id="about">
       <div class="row align-items-start">
         <div class="col-lg-2 col-md-3 text-center mb-4 mb-md-0">
-          <img src="{{ "images/icons/icon.512x512.png" | absURL }}" alt="Provenance App Icon" class="press-app-icon">
+          <img src="{{ "images/icons/icon.512x512.png" | absURL }}" alt="Provenance App Icon" class="press-app-icon" loading="lazy" decoding="async" width="100" height="100">
           <div class="mt-3">
             <a href="{{ .Site.Data.press.links.appStore }}" target="_blank" class="btn btn-main-md press-btn mb-2">
               <i class="fab fa-apple mr-1"></i> App Store
@@ -98,7 +98,7 @@
           {{ range .items }}
           <a href="{{ .downloadPath | absURL }}" target="_blank" class="press-download-item">
             <div class="press-download-thumb">
-              <img src="{{ .image | absURL }}" alt="{{ .title }}" loading="lazy">
+              <img src="{{ .image | absURL }}" alt="{{ .title }}" loading="lazy" decoding="async" width="40" height="40">
             </div>
             <span class="press-download-name">{{ .title }}</span>
             <span class="press-download-action">
