@@ -14,7 +14,7 @@ authorSocial:
 authorDescription: "Joe Mattiello is the lead developer of Provenance, an open-source multi-system emulator for iOS and tvOS with 10+ years of active development."
 categories: ["feature", "community"]
 description: "Browse and submit community-made controller skins at provenance-emu.com/skins/ — searchable by system, with automatic thumbnail previews."
-image: "images/icons/icon.512x512.png"
+image: "images/blog/skin-catalog-launch.webp"
 ---
 
 # The Provenance Skin Catalog Is Live
