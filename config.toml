@@ -297,8 +297,6 @@ pygmentsStyle = "solarized-dark"
             URL = "plugins/bootstrap/bootstrap.min.css"
         [[params.plugins.css]]
             URL = "plugins/themefisher-font/style.css"
-        [[params.plugins.css]]
-            URL = "css/provenance-custom.css"
 
         # CSS Plugins (homepage-only — loaded conditionally in head.html)
         [[params.plugins.css_homepage]]

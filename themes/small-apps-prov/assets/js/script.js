@@ -9,33 +9,45 @@
   $(function () {
       // Owl Carousel is only loaded on the homepage; guard to avoid errors on other pages
       if ($.fn.owlCarousel) {
+          // Helper: initialise an owl carousel when its element enters the viewport.
+          // Using IntersectionObserver defers heavy carousel JS until actually needed,
+          // keeping the main thread free during initial load (reduces TBT).
+          function lazyOwl(selector, options) {
+              var el = document.querySelector(selector);
+              if (!el) return;
+              if ('IntersectionObserver' in window) {
+                  var obs = new IntersectionObserver(function (entries, observer) {
+                      if (entries[0].isIntersecting) {
+                          $(el).owlCarousel(options);
+                          observer.disconnect();
+                      }
+                  }, { rootMargin: '200px' });
+                  obs.observe(el);
+              } else {
+                  // Fallback for browsers without IntersectionObserver
+                  $(el).owlCarousel(options);
+              }
+          }
+
           // -----------------------------
           //  Testimonial Slider
           // -----------------------------
-          $('.testimonial-slider').owlCarousel({
+          lazyOwl('.testimonial-slider', {
               loop: true,
               margin: 20,
               dots: true,
               autoplay: true,
               responsive: {
-                  0: {
-                      items: 1
-                  },
-                  400: {
-                      items: 1
-                  },
-                  600: {
-                      items: 1
-                  },
-                  1000: {
-                      items: 2
-                  }
+                  0: { items: 1 },
+                  400: { items: 1 },
+                  600: { items: 1 },
+                  1000: { items: 2 }
               }
           });
           // -----------------------------
           //  Story Slider
           // -----------------------------
-          $('.about-slider').owlCarousel({
+          lazyOwl('.about-slider', {
               loop: true,
               margin: 20,
               dots: true,
@@ -45,7 +57,7 @@
           // -----------------------------
           //  Quote Slider
           // -----------------------------
-          $('.quote-slider').owlCarousel({
+          lazyOwl('.quote-slider', {
               loop: true,
               autoplay: true,
               items: 1
@@ -53,32 +65,21 @@
           // -----------------------------
           //  Client Slider
           // -----------------------------
-          $('.client-slider').owlCarousel({
+          lazyOwl('.client-slider', {
               loop: true,
               autoplay: true,
               margin: 50,
               responsive: {
-                  0: {
-                      items: 1,
-                      dots: false
-                  },
-                  400: {
-                      items: 2,
-                      dots: false
-                  },
-                  600: {
-                      items: 2,
-                      dots: false
-                  },
-                  1000: {
-                      items: 4
-                  }
+                  0: { items: 1, dots: false },
+                  400: { items: 2, dots: false },
+                  600: { items: 2, dots: false },
+                  1000: { items: 4 }
               }
           });
           // -----------------------------
           //  Mockup Slider
           // -----------------------------
-          $('.mockup-slider').owlCarousel({
+          lazyOwl('.mockup-slider', {
               loop: true,
               margin: 30,
               dots: true,
@@ -86,15 +87,9 @@
               autoplayTimeout: 4000,
               autoplayHoverPause: true,
               responsive: {
-                  0: {
-                      items: 1
-                  },
-                  600: {
-                      items: 2
-                  },
-                  1000: {
-                      items: 3
-                  }
+                  0: { items: 1 },
+                  600: { items: 2 },
+                  1000: { items: 3 }
               }
           });
       } // end if owlCarousel

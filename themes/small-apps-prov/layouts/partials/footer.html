@@ -54,5 +54,16 @@
       document.querySelectorAll('.ios-only').forEach(function (el) { el.style.display = ''; });
       document.querySelectorAll('.ios-disable').forEach(function (el) { el.style.display = 'none'; });
     }
+
+    // Lazy-load QR code image only when modal opens (avoids third-party request at page load)
+    var qrModal = document.getElementById('appStoreQRModal');
+    if (qrModal) {
+      qrModal.addEventListener('show.bs.modal', function () {
+        var img = document.getElementById('appStoreQRImg');
+        if (img && img.dataset.src && !img.src) {
+          img.src = img.dataset.src;
+        }
+      });
+    }
   });
 </script>

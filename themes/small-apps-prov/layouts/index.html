@@ -577,7 +577,7 @@
 				<h5 class="mb-2" id="appStoreQRModalLabel">Download on iPhone</h5>
 				<p class="text-muted small mb-3">Scan with your iPhone camera to download Provenance from the App Store</p>
 				<div id="appStoreQRCode" class="d-flex justify-content-center mb-3">
-					<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ $.Site.Params.cta.URL }}" width="200" height="200" alt="QR code to download Provenance on the App Store" loading="lazy" decoding="async">
+					<img id="appStoreQRImg" data-src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ $.Site.Params.cta.URL }}" width="200" height="200" alt="QR code to download Provenance on the App Store" decoding="async">
 				</div>
 				<p id="appStoreQRInstructions" class="text-muted" style="font-size: 0.75rem;">Open your iPhone Camera app and point it at the code above</p>
 				<p class="text-center mt-2" style="font-size: 0.8rem;"><a href="{{ $.Site.Params.cta.URL }}">Or open App Store directly &rarr;</a></p>

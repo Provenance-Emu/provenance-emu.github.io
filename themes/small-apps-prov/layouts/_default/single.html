@@ -14,7 +14,7 @@
             {{ end }}
             <h1>{{ .Title }}</h1>
             <div class="blog-meta justify-content-center mt-3 mb-2">
-              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
+              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img" width="26" height="26" loading="lazy" decoding="async">
               <span class="blog-author-name">{{ .Params.Author }}</span>
               <span class="blog-meta-sep">·</span>
               <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
@@ -34,7 +34,7 @@
           <h2>About this author</h2>
           <div class="media">
             <div class="image">
-              <img class="d-flex align-self-center" src="{{ $.Params.AuthorImage | absURL }}" alt="author-image">
+              <img class="d-flex align-self-center" src="{{ $.Params.AuthorImage | absURL }}" alt="author-image" width="80" height="80" loading="lazy" decoding="async">
             </div>
             <div class="media-body align-self-center">
               <h3>{{ $.Params.Author }}</h3>
@@ -82,7 +82,7 @@
             <h3 class="blog-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
             <p class="blog-card-summary">{{ .Description | default .Summary }}</p>
             <div class="blog-meta mt-auto">
-              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img">
+              <img src="{{ .Params.AuthorImage | absURL }}" alt="{{ .Params.Author }}" class="blog-author-img" width="26" height="26" loading="lazy" decoding="async">
               <span class="blog-author-name">{{ .Params.Author }}</span>
               <span class="blog-meta-sep">·</span>
               <span>{{ .PublishDate.Format "Jan 2, 2006" }}</span>

@@ -11,8 +11,6 @@
   {{ "<!-- DNS preconnects for external origins -->" | safeHTML }}
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -41,6 +39,10 @@
   <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.onload=null;this.media='all'">
   <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
   {{ end }}
+  {{ "<!-- Provenance custom CSS — processed through Hugo Pipes for minification and fingerprinting -->" | safeHTML }}
+  {{ $customCSS := resources.Get "css/provenance-custom.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $customCSS.Permalink }}" integrity="{{ $customCSS.Data.Integrity }}" crossorigin="anonymous" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ $customCSS.Permalink }}" integrity="{{ $customCSS.Data.Integrity }}" crossorigin="anonymous"></noscript>
   {{ if .IsHome }}
   {{ "<!-- Homepage-only CSS (OWL Carousel) -->" | safeHTML }}
   {{ range .Site.Params.plugins.css_homepage }}
