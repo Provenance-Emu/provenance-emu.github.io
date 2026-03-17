@@ -95,6 +95,13 @@ pygmentsStyle = "solarized-dark"
         weight = 3
 
     [[menu.main]]
+        identifier = "licenses"
+        name = "Open Source Licenses"
+        url  = "/licenses/"
+        parent = "community"
+        weight = 30
+
+    [[menu.main]]
         identifier = "donate"
         name = "Donate"
         url  = "/donate/"
@@ -107,6 +114,13 @@ pygmentsStyle = "solarized-dark"
         url = "https://github.com/Provenance-Emu/Provenance"
         pre = "<i class='fab fa-lg fa-github'></i>"
         weight = 60
+
+# Footer menu links
+
+    [[menu.footer]]
+        name = "Open Source Licenses"
+        url  = "/licenses/"
+        weight = 10
 
     # Top bar social links menu
 

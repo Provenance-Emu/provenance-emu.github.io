@@ -1,0 +1,363 @@
+{{ define "main" }}
+
+{{- $entries := .Site.Data.licenses.entries -}}
+{{- $native := slice -}}
+{{- $retroarch := slice -}}
+{{- range $entries -}}
+  {{- if .isRetroArch -}}
+    {{- $retroarch = $retroarch | append . -}}
+  {{- else -}}
+    {{- $native = $native | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $totalCount := len $entries -}}
+{{- $nativeCount := len $native -}}
+{{- $raCount := len $retroarch -}}
+
+{{ "<!-- Licenses Hero -->" | safeHTML }}
+<section class="section gradient-banner">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="text-white font-weight-bold mb-3">
+          Open Source Licenses
+        </h1>
+        <p class="text-white mb-4" style="opacity: 0.9; font-size: 1.15rem; max-width: 640px; margin: 0 auto;">
+          Provenance is built on the shoulders of giants. These are the open-source projects and emulator cores that power it.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End Licenses Hero -->" | safeHTML }}
+
+{{ "<!-- Stats Bar -->" | safeHTML }}
+<section class="py-4" style="background:#13131a; border-bottom: 1px solid rgba(255,255,255,0.07);">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-4">
+        <div class="text-white font-weight-bold" style="font-size:2rem;">{{ $totalCount }}</div>
+        <div class="text-white-50" style="font-size:0.85rem;">Total Projects</div>
+      </div>
+      <div class="col-4">
+        <div class="text-white font-weight-bold" style="font-size:2rem;">{{ $nativeCount }}</div>
+        <div class="text-white-50" style="font-size:0.85rem;">Native Cores</div>
+      </div>
+      <div class="col-4">
+        <div class="text-white font-weight-bold" style="font-size:2rem;">{{ $raCount }}</div>
+        <div class="text-white-50" style="font-size:0.85rem;">RetroArch Cores</div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End Stats Bar -->" | safeHTML }}
+
+{{ "<!-- Search and Filter Controls -->" | safeHTML }}
+<section class="py-4" style="background:#0d0d12; border-bottom: 1px solid rgba(255,255,255,0.07); position: sticky; top: 0; z-index: 100;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 col-md-5 mb-3 mb-md-0">
+        <input
+          type="search"
+          id="license-search"
+          class="form-control"
+          placeholder="Search projects..."
+          aria-label="Search open source projects"
+          style="background:#1a1a24; border-color: rgba(255,255,255,0.15); color:#fff;"
+        >
+      </div>
+      <div class="col-lg-8 col-md-7">
+        <div class="d-flex flex-wrap align-items-center gap-2">
+          <div class="btn-group mr-3 mb-2" role="group" aria-label="Filter by core type">
+            <button type="button" class="btn btn-sm btn-outline-light active" data-filter="all">All</button>
+            <button type="button" class="btn btn-sm btn-outline-light" data-filter="native">Native Cores</button>
+            <button type="button" class="btn btn-sm btn-outline-light" data-filter="retroarch">RetroArch Cores</button>
+          </div>
+          <div class="d-flex flex-wrap mb-2" role="group" aria-label="Filter by license type">
+            <button type="button" class="btn btn-sm mr-1 mb-1 active" data-license-type="all" style="background:#444;color:#fff;border:none;">All Licenses</button>
+            <button type="button" class="btn btn-sm mr-1 mb-1" data-license-type="gpl" style="background:#dc3545;color:#fff;border:none;">GPL</button>
+            <button type="button" class="btn btn-sm mr-1 mb-1" data-license-type="lgpl" style="background:#fd7e14;color:#fff;border:none;">LGPL</button>
+            <button type="button" class="btn btn-sm mr-1 mb-1" data-license-type="mit" style="background:#28a745;color:#fff;border:none;">MIT</button>
+            <button type="button" class="btn btn-sm mr-1 mb-1" data-license-type="bsd" style="background:#17a2b8;color:#fff;border:none;">BSD</button>
+            <button type="button" class="btn btn-sm mr-1 mb-1" data-license-type="mpl" style="background:#6f42c1;color:#fff;border:none;">MPL</button>
+            <button type="button" class="btn btn-sm mr-1 mb-1" data-license-type="other" style="background:#6c757d;color:#fff;border:none;">Custom</button>
+            <button type="button" class="btn btn-sm mr-1 mb-1" data-license-type="tbd" style="background:#856404;color:#ffc107;border:1px solid #856404;">TBD</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End Search and Filter Controls -->" | safeHTML }}
+
+{{ "<!-- License Tables -->" | safeHTML }}
+<section class="section pt-4 pb-5" style="background:#0d0d12; min-height: 60vh;">
+  <div class="container-fluid px-3 px-lg-4">
+
+    {{ "<!-- Native Cores Section -->" | safeHTML }}
+    <div class="license-section mb-5" id="section-native">
+      <h2 class="text-white font-weight-bold mb-1 px-2" style="font-size:1.3rem;">
+        <i class="fas fa-microchip mr-2" style="color:#2e7eed;" aria-hidden="true"></i>Native Emulator Cores
+        <span class="badge badge-secondary ml-2" style="font-size:0.75rem; vertical-align: middle;">{{ $nativeCount }}</span>
+      </h2>
+      <p class="text-white-50 mb-3 px-2" style="font-size:0.9rem;">Cores built directly into Provenance without RetroArch.</p>
+      <div class="table-responsive">
+        <table class="table table-dark table-hover table-sm" style="border-color: rgba(255,255,255,0.07);">
+          <thead style="background:#1a1a2e; position: sticky; top: 0;">
+            <tr>
+              <th scope="col" style="border-color: rgba(255,255,255,0.1); width:22%;">Project</th>
+              <th scope="col" style="border-color: rgba(255,255,255,0.1); width:14%;">License</th>
+              <th scope="col" style="border-color: rgba(255,255,255,0.1); width:12%;">Version</th>
+              <th scope="col" class="d-none d-md-table-cell" style="border-color: rgba(255,255,255,0.1); width:25%;">Copyright</th>
+              <th scope="col" style="border-color: rgba(255,255,255,0.1);">Systems</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{- range $native -}}
+            {{- $lic := .license | default "TBD" -}}
+            {{- $group := "other" -}}
+            {{- if hasPrefix $lic "GPL" }}{{- $group = "gpl" -}}{{- end -}}
+            {{- if hasPrefix $lic "MIT" }}{{- $group = "mit" -}}{{- end -}}
+            {{- if hasPrefix $lic "BSD" }}{{- $group = "bsd" -}}{{- end -}}
+            {{- if hasPrefix $lic "MPL" }}{{- $group = "mpl" -}}{{- end -}}
+            {{- if hasPrefix $lic "LGPL" }}{{- $group = "lgpl" -}}{{- end -}}
+            {{- if eq $lic "TBD" }}{{- $group = "tbd" -}}{{- end -}}
+            {{- $badgeColor := "#6c757d" -}}
+            {{- if eq $group "gpl" }}{{- $badgeColor = "#dc3545" -}}{{- end -}}
+            {{- if eq $group "mit" }}{{- $badgeColor = "#28a745" -}}{{- end -}}
+            {{- if eq $group "bsd" }}{{- $badgeColor = "#17a2b8" -}}{{- end -}}
+            {{- if eq $group "mpl" }}{{- $badgeColor = "#6f42c1" -}}{{- end -}}
+            {{- if eq $group "lgpl" }}{{- $badgeColor = "#fd7e14" -}}{{- end -}}
+            {{- if eq $group "tbd" }}{{- $badgeColor = "#856404" -}}{{- end -}}
+            {{- $nameLower := .name | lower -}}
+            {{- $systems := slice -}}
+            {{- range .supportedSystems -}}
+              {{- $stripped := . | replaceRE "^com\\.provenance\\." "" -}}
+              {{- $systems = $systems | append $stripped -}}
+            {{- end -}}
+            {{- $copyright := "" -}}
+            {{- with .copyrightHolder -}}
+              {{- if gt (len .) 0 -}}
+                {{- $copyright = index . 0 -}}
+              {{- end -}}
+            {{- end -}}
+            <tr
+              data-name="{{ $nameLower }}"
+              data-is-retroarch="false"
+              data-license-group="{{ $group }}"
+              style="border-color: rgba(255,255,255,0.05);"
+            >
+              <td style="border-color: rgba(255,255,255,0.05); vertical-align: middle;">
+                {{- if .projectURL -}}
+                <a href="{{ .projectURL }}" target="_blank" rel="noopener noreferrer" class="text-white font-weight-bold" style="text-decoration:none;">
+                  {{ .name }}<i class="fas fa-external-link-alt ml-1" style="font-size:0.65rem; opacity:0.5;" aria-hidden="true"></i>
+                </a>
+                {{- else -}}
+                <span class="text-white font-weight-bold">{{ .name }}</span>
+                {{- end -}}
+              </td>
+              <td style="border-color: rgba(255,255,255,0.05); vertical-align: middle;">
+                {{- if .licenseURL -}}
+                <a href="{{ .licenseURL }}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+                  <span class="badge" style="background:{{ $badgeColor }};color:#fff;font-size:0.72rem;padding:3px 7px;">{{ $lic }}</span>
+                </a>
+                {{- else -}}
+                <span class="badge" style="background:{{ $badgeColor }};color:#fff;font-size:0.72rem;padding:3px 7px;">{{ $lic }}</span>
+                {{- end -}}
+              </td>
+              <td style="border-color: rgba(255,255,255,0.05); vertical-align: middle; color: rgba(255,255,255,0.6); font-size:0.85rem;">
+                {{ .version | default "—" }}
+              </td>
+              <td class="d-none d-md-table-cell" style="border-color: rgba(255,255,255,0.05); vertical-align: middle; color: rgba(255,255,255,0.5); font-size:0.8rem; max-width:220px;">
+                <span style="display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="{{ $copyright }}">
+                  {{ $copyright | default "—" }}
+                </span>
+              </td>
+              <td style="border-color: rgba(255,255,255,0.05); vertical-align: middle;">
+                {{- range $i, $sys := $systems -}}
+                  {{- if gt $i 0 -}}<span class="text-white-50">, </span>{{- end -}}
+                  <code style="font-size:0.78rem; background:rgba(255,255,255,0.07); padding:1px 5px; border-radius:3px; color:#a8c5f0;">{{ $sys }}</code>
+                {{- end -}}
+              </td>
+            </tr>
+            {{- end -}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {{ "<!-- End Native Cores Section -->" | safeHTML }}
+
+    {{ "<!-- RetroArch Cores Section -->" | safeHTML }}
+    <div class="license-section mb-5" id="section-retroarch">
+      <h2 class="text-white font-weight-bold mb-1 px-2" style="font-size:1.3rem;">
+        <i class="fas fa-gamepad mr-2" style="color:#2e7eed;" aria-hidden="true"></i>RetroArch Cores
+        <span class="badge badge-secondary ml-2" style="font-size:0.75rem; vertical-align: middle;">{{ $raCount }}</span>
+      </h2>
+      <p class="text-white-50 mb-3 px-2" style="font-size:0.9rem;">
+        Cores powered by <a href="https://www.retroarch.com/" target="_blank" rel="noopener noreferrer" style="color:#2e7eed;">RetroArch</a> / <a href="https://www.libretro.com/" target="_blank" rel="noopener noreferrer" style="color:#2e7eed;">libretro</a>.
+      </p>
+      <div class="table-responsive">
+        <table class="table table-dark table-hover table-sm" style="border-color: rgba(255,255,255,0.07);">
+          <thead style="background:#1a1a2e; position: sticky; top: 0;">
+            <tr>
+              <th scope="col" style="border-color: rgba(255,255,255,0.1); width:30%;">Project</th>
+              <th scope="col" style="border-color: rgba(255,255,255,0.1); width:16%;">License</th>
+              <th scope="col" style="border-color: rgba(255,255,255,0.1); width:12%;">Version</th>
+              <th scope="col" class="d-none d-md-table-cell" style="border-color: rgba(255,255,255,0.1);">Copyright</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{- range $retroarch -}}
+            {{- $lic := .license | default "TBD" -}}
+            {{- $group := "other" -}}
+            {{- if hasPrefix $lic "GPL" }}{{- $group = "gpl" -}}{{- end -}}
+            {{- if hasPrefix $lic "MIT" }}{{- $group = "mit" -}}{{- end -}}
+            {{- if hasPrefix $lic "BSD" }}{{- $group = "bsd" -}}{{- end -}}
+            {{- if hasPrefix $lic "MPL" }}{{- $group = "mpl" -}}{{- end -}}
+            {{- if hasPrefix $lic "LGPL" }}{{- $group = "lgpl" -}}{{- end -}}
+            {{- if eq $lic "TBD" }}{{- $group = "tbd" -}}{{- end -}}
+            {{- $badgeColor := "#6c757d" -}}
+            {{- if eq $group "gpl" }}{{- $badgeColor = "#dc3545" -}}{{- end -}}
+            {{- if eq $group "mit" }}{{- $badgeColor = "#28a745" -}}{{- end -}}
+            {{- if eq $group "bsd" }}{{- $badgeColor = "#17a2b8" -}}{{- end -}}
+            {{- if eq $group "mpl" }}{{- $badgeColor = "#6f42c1" -}}{{- end -}}
+            {{- if eq $group "lgpl" }}{{- $badgeColor = "#fd7e14" -}}{{- end -}}
+            {{- if eq $group "tbd" }}{{- $badgeColor = "#856404" -}}{{- end -}}
+            {{- $nameLower := .name | lower -}}
+            {{- $copyright := "" -}}
+            {{- with .copyrightHolder -}}
+              {{- if gt (len .) 0 -}}
+                {{- $copyright = index . 0 -}}
+              {{- end -}}
+            {{- end -}}
+            <tr
+              data-name="{{ $nameLower }}"
+              data-is-retroarch="true"
+              data-license-group="{{ $group }}"
+              style="border-color: rgba(255,255,255,0.05);"
+            >
+              <td style="border-color: rgba(255,255,255,0.05); vertical-align: middle;">
+                {{- if .projectURL -}}
+                <a href="{{ .projectURL }}" target="_blank" rel="noopener noreferrer" class="text-white font-weight-bold" style="text-decoration:none;">
+                  {{ .name }}<i class="fas fa-external-link-alt ml-1" style="font-size:0.65rem; opacity:0.5;" aria-hidden="true"></i>
+                </a>
+                {{- else -}}
+                <span class="font-weight-bold" style="color:rgba(255,255,255,0.8);">{{ .name }}</span>
+                {{- end -}}
+              </td>
+              <td style="border-color: rgba(255,255,255,0.05); vertical-align: middle;">
+                {{- if .licenseURL -}}
+                <a href="{{ .licenseURL }}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+                  <span class="badge" style="background:{{ $badgeColor }};color:#fff;font-size:0.72rem;padding:3px 7px;">{{ $lic }}</span>
+                </a>
+                {{- else -}}
+                <span class="badge" style="background:{{ $badgeColor }};color:#fff;font-size:0.72rem;padding:3px 7px;">{{ $lic }}</span>
+                {{- end -}}
+              </td>
+              <td style="border-color: rgba(255,255,255,0.05); vertical-align: middle; color: rgba(255,255,255,0.6); font-size:0.85rem;">
+                {{ .version | default "—" }}
+              </td>
+              <td class="d-none d-md-table-cell" style="border-color: rgba(255,255,255,0.05); vertical-align: middle; color: rgba(255,255,255,0.5); font-size:0.8rem;">
+                <span style="display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:340px;" title="{{ $copyright }}">
+                  {{ $copyright | default "—" }}
+                </span>
+              </td>
+            </tr>
+            {{- end -}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {{ "<!-- End RetroArch Cores Section -->" | safeHTML }}
+
+    {{ "<!-- Empty state -->" | safeHTML }}
+    <div id="no-results" class="text-center py-5" style="display:none;">
+      <i class="fas fa-search fa-3x mb-3" style="color:rgba(255,255,255,0.2);" aria-hidden="true"></i>
+      <p class="text-white-50">No projects match your search. Try a different term or clear the filters.</p>
+    </div>
+
+  </div>
+</section>
+{{ "<!-- End License Tables -->" | safeHTML }}
+
+{{ "<!-- CTA -->" | safeHTML }}
+{{ partial "cta.html" . }}
+{{ "<!-- End CTA -->" | safeHTML }}
+
+<script data-cfasync="false">
+(function () {
+  var input = document.getElementById('license-search');
+  var filterBtns = document.querySelectorAll('[data-filter]');
+  var typePills = document.querySelectorAll('[data-license-type]');
+  var rows = document.querySelectorAll('tr[data-name]');
+  var noResults = document.getElementById('no-results');
+
+  var activeFilter = 'all';
+  var activeType = 'all';
+  var searchTerm = '';
+
+  function applyFilters() {
+    var totalVisible = 0;
+
+    rows.forEach(function (row) {
+      var name = row.dataset.name;
+      var isRA = row.dataset.isRetroarch === 'true';
+      var licType = row.dataset.licenseGroup;
+
+      var matchSearch = !searchTerm || name.indexOf(searchTerm) !== -1;
+      var matchFilter =
+        activeFilter === 'all' ||
+        (activeFilter === 'native' && !isRA) ||
+        (activeFilter === 'retroarch' && isRA);
+      var matchType = activeType === 'all' || licType === activeType;
+
+      var visible = matchSearch && matchFilter && matchType;
+      row.style.display = visible ? '' : 'none';
+      if (visible) totalVisible++;
+    });
+
+    // Hide section wrappers if all their rows are hidden
+    document.querySelectorAll('.license-section').forEach(function (section) {
+      var visibleRows = section.querySelectorAll('tr[data-name]:not([style*="display: none"])');
+      // Also check rows hidden via style=""
+      var anyVisible = false;
+      section.querySelectorAll('tr[data-name]').forEach(function (r) {
+        if (r.style.display !== 'none') anyVisible = true;
+      });
+      section.style.display = anyVisible ? '' : 'none';
+    });
+
+    if (noResults) {
+      noResults.style.display = totalVisible === 0 ? '' : 'none';
+    }
+  }
+
+  if (input) {
+    input.addEventListener('input', function (e) {
+      searchTerm = e.target.value.toLowerCase();
+      applyFilters();
+    });
+  }
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  typePills.forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      typePills.forEach(function (p) { p.classList.remove('active'); });
+      pill.classList.add('active');
+      activeType = pill.dataset.licenseType;
+      applyFilters();
+    });
+  });
+})();
+</script>
+
+{{ end }}
