@@ -6,3 +6,7 @@ _site/
 public/
 npm-debug.log
 /node_modules/*
+
+# Hugo build cache
+resources/_gen/
+.hugo_build.lock
