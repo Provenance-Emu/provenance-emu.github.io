@@ -3,6 +3,8 @@ name: Sync License Data
 on:
   schedule:
     - cron: '0 6 * * *'   # Daily at 6am UTC
+  repository_dispatch:
+    types: [licenses-updated]
   workflow_dispatch:
     inputs:
       ref:
@@ -22,7 +24,7 @@ jobs:
 
       - name: Fetch licenses.json
         run: |
-          REF="${{ github.event.inputs.ref || 'develop' }}"
+          REF="${{ github.event.client_payload.ref || github.event.inputs.ref || 'develop' }}"
           curl -fsSL \
             "https://raw.githubusercontent.com/Provenance-Emu/Provenance/${REF}/Scripts/licenses.json" \
             -o data/licenses.json
