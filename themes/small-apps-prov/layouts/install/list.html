@@ -44,7 +44,7 @@
     {{/* ── AltStore ── */}}
     <div class="row align-items-center mb-5 pb-5" style="border-bottom:1px solid #eee;">
       <div class="col-md-2 text-center mb-3 mb-md-0">
-        <img src="/img/altstore-icon.svg" width="64" height="64" alt="AltStore" style="border-radius:14px;">
+        <img src="/img/altstore-icon.svg" width="64" height="64" alt="AltStore" style="border-radius:14px;" onerror="this.style.display='none'">
       </div>
       <div class="col-md-7">
         <h2 class="font-weight-bold mb-1">AltStore</h2>
@@ -52,13 +52,19 @@
         <ul class="text-muted mb-0" style="padding-left:1.2rem;">
           <li>Requires AltStore on your iPhone/iPad and AltServer on your Mac or PC</li>
           <li>Refresh every 7 days (or use AltStore PAL on EU devices — no refresh needed)</li>
-          <li>Source URL: <code>https://provenance-emu.com/apps.json</code></li>
+          <li>Source URL: <a href="https://provenance-emu.com/apps.json" target="_blank" rel="noopener"><code>https://provenance-emu.com/apps.json</code></a></li>
         </ul>
       </div>
       <div class="col-md-3 text-center mt-3 mt-md-0">
-        <a href="altstore://source?url=https://provenance-emu.com/apps.json" class="btn btn-main btn-round-full mb-2 d-block">
+        {{/* On iOS: show deeplink button */}}
+        <a href="altstore://source?url=https://provenance-emu.com/apps.json" class="btn btn-main btn-round-full mb-2 d-block ios-only" style="display:none;">
           <i class="fas fa-plus mr-1"></i> Add to AltStore
         </a>
+        {{/* On desktop: show QR code to scan on iPhone */}}
+        <div class="ios-disable">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=altstore%3A%2F%2Fsource%3Furl%3Dhttps%3A%2F%2Fprovenance-emu.com%2Fapps.json" width="140" height="140" alt="QR code to add Provenance to AltStore" loading="lazy" style="border-radius:8px;">
+          <p class="text-muted mt-1 mb-2" style="font-size:0.75rem;">Scan with iPhone to add source</p>
+        </div>
         <a href="https://altstore.io" target="_blank" rel="noopener" class="text-muted small">Get AltStore →</a>
       </div>
     </div>
@@ -74,13 +80,19 @@
         <ul class="text-muted mb-0" style="padding-left:1.2rem;">
           <li>Fully on-device — no Mac or PC required after initial setup</li>
           <li>Refresh every 7 days using SideStore's built-in VPN trick</li>
-          <li>Source URL: <code>https://provenance-emu.com/apps.json</code></li>
+          <li>Source URL: <a href="https://provenance-emu.com/apps.json" target="_blank" rel="noopener"><code>https://provenance-emu.com/apps.json</code></a></li>
         </ul>
       </div>
       <div class="col-md-3 text-center mt-3 mt-md-0">
-        <a href="sidestore://source?url=https://provenance-emu.com/apps.json" class="btn btn-main btn-round-full mb-2 d-block">
+        {{/* On iOS: show deeplink button */}}
+        <a href="sidestore://source?url=https://provenance-emu.com/apps.json" class="btn btn-main btn-round-full mb-2 d-block ios-only" style="display:none;">
           <i class="fas fa-plus mr-1"></i> Add to SideStore
         </a>
+        {{/* On desktop: show QR code to scan on iPhone */}}
+        <div class="ios-disable">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=sidestore%3A%2F%2Fsource%3Furl%3Dhttps%3A%2F%2Fprovenance-emu.com%2Fapps.json" width="140" height="140" alt="QR code to add Provenance to SideStore" loading="lazy" style="border-radius:8px;">
+          <p class="text-muted mt-1 mb-2" style="font-size:0.75rem;">Scan with iPhone to add source</p>
+        </div>
         <a href="https://sidestore.io" target="_blank" rel="noopener" class="text-muted small">Get SideStore →</a>
       </div>
     </div>
