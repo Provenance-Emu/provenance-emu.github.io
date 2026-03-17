@@ -8,6 +8,9 @@
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ hugo.Generator }}
 
+  {{ "<!-- Compute main stylesheet early so we can preload it immediately -->" | safeHTML }}
+  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
+
   {{ "<!-- DNS preconnects for external origins -->" | safeHTML }}
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -15,6 +18,11 @@
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {{ if .IsHome }}<link rel="preconnect" href="https://api.qrserver.com">{{ end }}
+
+  {{ "<!-- Preload the main stylesheet so the browser fetches it at highest priority." | safeHTML }}
+  {{ "     Combined with the async media=print load below, this minimises the time the page stays at opacity:0. -->" | safeHTML }}
+  <link rel="preload" href="{{ $styles.Permalink }}" as="style">
 
   {{ "<!-- Google Fonts — deferred via media=print; display=swap prevents FOIT; @import removed from SCSS -->" | safeHTML }}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap" media="print" onload="this.onload=null;this.media='all'">
@@ -49,18 +57,21 @@
   {{ end }}
   {{ end }}
 
-  {{ "<!-- Critical CSS: minimal above-fold rules to prevent FOUC while all stylesheets load asynchronously." | safeHTML }}
-  {{ "     html opacity:0 hides the page until the main stylesheet is ready, preventing the broken-layout flash." | safeHTML }}
-  {{ "     The transition fades it in smoothly. noscript removes the opacity so no-JS users always see the page." | safeHTML }}
-  {{ "     Covers: body overflow, navbar bg, hero gradient (::before circle), ios-only toggle, hero badge sizing. -->" | safeHTML }}
-  <style>html{opacity:0;transition:opacity .15s ease}body{overflow-x:hidden}.main-nav{background:#fff}.gradient-banner{padding:6rem 0;position:relative;overflow:hidden}.gradient-banner::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:200%;height:200%;border-radius:50%;background-image:linear-gradient(45deg,#009ec5 0%,#2e7eed 20%,#02225b 50%)}.pull-top{margin-top:-100px}.ios-only{display:none}.hero-badges{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.download-badge-hero{height:46px;width:auto}</style>
-  <noscript><style>html{opacity:1!important}</style></noscript>
+  {{ "<!-- Critical CSS: above-fold rules to prevent FOUC while all stylesheets load asynchronously." | safeHTML }}
+  {{ "     Only the navbar is hidden (opacity:0) until the main stylesheet loads — the hero section is immediately" | safeHTML }}
+  {{ "     visible because the Bootstrap grid + hero styles are inlined here, giving better LCP/FCP." | safeHTML }}
+  {{ "     Includes: Bootstrap grid subset (container/row/col-md-6) + key utilities (.text-white, .img-fluid, etc.)" | safeHTML }}
+  {{ "     so the hero layout is correct before Bootstrap.css loads, preventing a major CLS." | safeHTML }}
+  {{ "     .collapse:not(.show) keeps the mobile nav collapsed before Bootstrap JS initialises." | safeHTML }}
+  {{ "     noscript removes the navbar opacity so no-JS users always see the nav. -->" | safeHTML }}
+  <style>body{overflow-x:hidden}.main-nav{background:#fff;opacity:0;transition:opacity .15s ease}.collapse:not(.show){display:none}.gradient-banner{padding:6rem 0;position:relative;overflow:hidden}.gradient-banner::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:200%;height:200%;border-radius:50%;background-image:linear-gradient(45deg,#009ec5 0%,#2e7eed 20%,#02225b 50%)}.pull-top{margin-top:-100px}.ios-only{display:none}.hero-badges{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.download-badge-hero{height:46px;width:auto}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media(min-width:576px){.container{max-width:540px}}@media(min-width:768px){.container{max-width:720px}}@media(min-width:992px){.container{max-width:960px}}@media(min-width:1200px){.container{max-width:1140px}}.row{display:flex;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-md-6{position:relative;width:100%;padding-right:15px;padding-left:15px}@media(min-width:768px){.col-md-6{flex:0 0 50%;max-width:50%}}.order-1{order:1}.order-2{order:2}@media(min-width:768px){.order-md-1{order:1}.order-md-2{order:2}}.align-items-center{align-items:center!important}.text-center{text-align:center!important}@media(min-width:768px){.text-md-left{text-align:left!important}}.img-fluid{max-width:100%;height:auto}.text-white{color:#fff!important}.font-weight-bold{font-weight:700!important}.mb-4{margin-bottom:1.5rem!important}.mb-5{margin-bottom:3rem!important}</style>
+  <noscript><style>.main-nav{opacity:1!important}</style></noscript>
 
   {{ "<!-- Main Stylesheet — deferred via media=print so it never blocks the render path." | safeHTML }}
-  {{ "     onload also reveals the page (clears the opacity:0 set in critical CSS above)." | safeHTML }}
-  {{ "     noscript fallback loads synchronously for no-JS users (opacity reset is handled by the noscript style above). -->" | safeHTML }}
-  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all';document.documentElement.style.opacity='1'">
+  {{ "     onload reveals the navbar (clears the opacity:0 set in critical CSS above)." | safeHTML }}
+  {{ "     noscript fallback loads synchronously for no-JS users (navbar opacity reset is handled by the noscript style above)." | safeHTML }}
+  {{ "     $styles was computed at the top of this file and is reused here (Hugo caches the pipeline result). -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all';var n=document.querySelector('.main-nav');if(n)n.style.opacity='1'">
   <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
 
   {{ "<!-- AOS: inline only the 3 animation types used on this site (fade-up/right/left). -->" | safeHTML }}
