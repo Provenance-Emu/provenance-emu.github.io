@@ -127,6 +127,18 @@
           });
       }
 
+      // ----------------------------
+      // Lazy-load App Store QR code
+      // Only fetch from api.qrserver.com when the modal is actually opened,
+      // avoiding a third-party request on every page load.
+      // ----------------------------
+      $('#appStoreQRModal').on('show.bs.modal', function () {
+          var $img = $(this).find('img[data-qr-url]');
+          if ($img.length && !$img.attr('src')) {
+              $img.attr('src', $img.data('qr-url'));
+          }
+      });
+
   });
 
 })(jQuery);

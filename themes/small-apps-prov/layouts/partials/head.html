@@ -33,6 +33,14 @@
   {{ "<!-- LCP image preload (homepage only): tells browser to fetch the hero image immediately, before layout is complete -->" | safeHTML }}
   {{ if .IsHome }}<link rel="preload" as="image" href="{{ "/images/mobile.webp" | absURL }}" type="image/webp" fetchpriority="high">{{ end }}
 
+  {{ "<!-- Preload the main compiled stylesheet early so the browser starts fetching it during HTML parsing." | safeHTML }}
+  {{ "     The page uses html{opacity:0} until this stylesheet loads, so fetching it sooner directly improves FCP/LCP." | safeHTML }}
+  {{ "     The deferred <link rel=stylesheet> below still controls when it is applied; this is just a fetch hint. -->" | safeHTML }}
+  {{- $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint -}}
+  <link rel="preload" as="style" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+  {{ "<!-- Preload Bootstrap CSS (140 KB): fetching it early reduces the time before layout is visible -->" | safeHTML }}
+  <link rel="preload" as="style" href="{{ "plugins/bootstrap/bootstrap.min.css" | absURL }}">
+
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
 
@@ -58,8 +66,8 @@
 
   {{ "<!-- Main Stylesheet — deferred via media=print so it never blocks the render path." | safeHTML }}
   {{ "     onload also reveals the page (clears the opacity:0 set in critical CSS above)." | safeHTML }}
-  {{ "     noscript fallback loads synchronously for no-JS users (opacity reset is handled by the noscript style above). -->" | safeHTML }}
-  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
+  {{ "     noscript fallback loads synchronously for no-JS users (opacity reset is handled by the noscript style above)." | safeHTML }}
+  {{ "     $styles is defined above (near the LCP preload) so the same fingerprinted URL is reused for the preload hint. -->" | safeHTML }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all';document.documentElement.style.opacity='1'">
   <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
 
