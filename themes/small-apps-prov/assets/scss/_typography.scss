@@ -44,6 +44,12 @@ cite{
 	font-family: $secondary-font;
 	font-style: italic;
 }
+.brand-name{
+	font-family: $secondary-font;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0.01em;
+}
 // Placeholder Color Change
 .form-control::-webkit-input-placeholder { 
 	color: $text-color; 
