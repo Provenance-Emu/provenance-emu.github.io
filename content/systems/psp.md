@@ -7,13 +7,13 @@ shortName: "PSP"
 supportedFormats: ".iso, .cso, .pbp"
 ---
 
-Sony's PlayStation Portable was a technical marvel when it launched in 2005, bringing near-PlayStation 2-quality gaming to a handheld. With Provenance, you can bring that library to your iPhone, iPad, or Apple TV — playing God of War: Chains of Olympus, Crisis Core: Final Fantasy VII, Monster Hunter Freedom Unite, Persona 3 Portable, and dozens of other standout PSP titles.
+Sony's PlayStation Portable was a technical marvel when it launched in 2005, bringing near-PlayStation 2-quality gaming to a handheld. With {{< brand >}}Provenance{{< /brand >}}, you can bring that library to your iPhone, iPad, or Apple TV — playing God of War: Chains of Olympus, Crisis Core: Final Fantasy VII, Monster Hunter Freedom Unite, Persona 3 Portable, and dozens of other standout PSP titles.
 
-Provenance is free, open-source, and available directly from the App Store with no jailbreak required.
+{{< brand >}}Provenance{{< /brand >}} is free, open-source, and available directly from the App Store with no jailbreak required.
 
 ## Supported File Formats
 
-PSP games are distributed as disc images or compressed archives. Provenance supports the primary PSP formats:
+PSP games are distributed as disc images or compressed archives. {{< brand >}}Provenance{{< /brand >}} supports the primary PSP formats:
 
 - `.iso` — Standard UMD disc image, the most common format for PSP backups
 - `.cso` — Compressed ISO format; reduces file sizes significantly while remaining broadly compatible
@@ -23,7 +23,7 @@ CSO compression is a practical choice for PSP games, which tend to be large and 
 
 ## Features
 
-Playing PSP games in Provenance gives you access to the full suite of emulator features:
+Playing PSP games in {{< brand >}}Provenance{{< /brand >}} gives you access to the full suite of emulator features:
 
 - **Save States** — Save at any moment, supplementing the PSP's own save system for extra flexibility
 - **Controller Support** — Full analog stick support via MFi, Xbox, and PlayStation controllers, closely matching the PSP's original control layout; on-screen touch controls also available
@@ -38,8 +38,8 @@ Playing PSP games in Provenance gives you access to the full suite of emulator f
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
-2. **Add your PSP game files** to Provenance using iTunes File Sharing, the Files app, or a web server import.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+2. **Add your PSP game files** to {{< brand >}}Provenance{{< /brand >}} using iTunes File Sharing, the Files app, or a web server import.
 3. **Start playing** — your PSP library appears automatically once files are imported.
 
 For detailed setup instructions, visit the [Provenance wiki](https://wiki.provenance-emu.com/).

@@ -19,7 +19,7 @@ image: "images/icons/icon.512x512.png"
 
 # Release 3.2.1 - iPad Skin Bug Fixes
 
-Provenance 3.2.1 is a quick follow-up to the 3.2.0 release, addressing several skin-related bugs on iPad, joystick issues, and other fixes reported by the community.
+{{< brand >}}Provenance{{< /brand >}} 3.2.1 is a quick follow-up to the 3.2.0 release, addressing several skin-related bugs on iPad, joystick issues, and other fixes reported by the community.
 
 ## Links
 
@@ -57,8 +57,8 @@ For a complete list of changes, please visit our [GitHub release page](https://g
 
 ## Provenance Plus
 
-Love what the team is building? **[Provenance Plus](/plus/)** gives you iCloud save sync across all your Apple devices, early access via TestFlight, and priority support — and every subscription goes directly toward sustaining Provenance's development. Subscribe from within the app: *Settings > Provenance Plus*.
+Love what the team is building? **[Provenance Plus](/plus/)** gives you iCloud save sync across all your Apple devices, early access via TestFlight, and priority support — and every subscription goes directly toward sustaining {{< brand >}}Provenance{{< /brand >}}'s development. Subscribe from within the app: *Settings > {{< brand >}}Provenance{{< /brand >}} Plus*.
 
 ---
 
-Thank you for being part of the Provenance community. Happy gaming!
+Thank you for being part of the {{< brand >}}Provenance{{< /brand >}} community. Happy gaming!

@@ -7,13 +7,13 @@ shortName: "PS2"
 supportedFormats: ".iso, .bin/.cue, .chd"
 ---
 
-The PlayStation 2 is the best-selling video game console ever made, and its library holds some of the greatest games ever created. Provenance brings PS2 emulation to iPhone, iPad, and Apple TV — letting you play Grand Theft Auto: San Andreas, Shadow of the Colossus, God of War, Kingdom Hearts, Final Fantasy X, and hundreds of other titles on your Apple device.
+The PlayStation 2 is the best-selling video game console ever made, and its library holds some of the greatest games ever created. {{< brand >}}Provenance{{< /brand >}} brings PS2 emulation to iPhone, iPad, and Apple TV — letting you play Grand Theft Auto: San Andreas, Shadow of the Colossus, God of War, Kingdom Hearts, Final Fantasy X, and hundreds of other titles on your Apple device.
 
-Provenance is free, open-source, and available directly from the App Store. No jailbreak required.
+{{< brand >}}Provenance{{< /brand >}} is free, open-source, and available directly from the App Store. No jailbreak required.
 
 ## Supported File Formats
 
-PlayStation 2 games were disc-based. Provenance supports the most common PS2 disc image formats:
+PlayStation 2 games were disc-based. {{< brand >}}Provenance{{< /brand >}} supports the most common PS2 disc image formats:
 
 - `.iso` — Standard disc image format, the most widely used format for PS2 backups
 - `.bin` / `.cue` — Common disc dump format; keep both files in the same directory
@@ -40,8 +40,8 @@ PS2 emulation is computationally demanding. For the best experience, an iPhone 1
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
 2. **Add your PS2 disc image files** via iTunes File Sharing, the Files app, or web import.
-3. **Start playing** — Provenance will detect your PlayStation 2 titles automatically.
+3. **Start playing** — {{< brand >}}Provenance{{< /brand >}} will detect your PlayStation 2 titles automatically.
 
 For detailed setup instructions, visit the [Provenance wiki](https://wiki.provenance-emu.com/).

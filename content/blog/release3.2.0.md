@@ -24,11 +24,11 @@ layout: photography
 
 # Release 3.2.0
 
-We're excited to announce Provenance 3.2.0, a major update focused on performance, skins, and quality of life improvements. This release brings highly requested features and fixes that make Provenance faster and more enjoyable than ever.
+We're excited to announce {{< brand >}}Provenance{{< /brand >}} 3.2.0, a major update focused on performance, skins, and quality of life improvements. This release brings highly requested features and fixes that make {{< brand >}}Provenance{{< /brand >}} faster and more enjoyable than ever.
 
 ## 🎨 Skins: Now Free for Everyone!
 
-The biggest news: **Full skin support is now available to all users—no Provenance Plus required!** We believe everyone should enjoy customizing their gaming experience. However, if you love what we're building, please consider supporting the project through [Provenance Plus](https://apps.apple.com/us/app/provenance-app/id1596862805) or [Patreon](https://www.patreon.com/provenance).
+The biggest news: **Full skin support is now available to all users—no {{< brand >}}Provenance{{< /brand >}} Plus required!** We believe everyone should enjoy customizing their gaming experience. However, if you love what we're building, please consider supporting the project through [Provenance Plus](https://apps.apple.com/us/app/provenance-app/id1596862805) or [Patreon](https://www.patreon.com/provenance).
 
 ### What's New with Skins
 
@@ -148,12 +148,12 @@ The biggest news: **Full skin support is now available to all users—no Provena
 - **Siri Search Bug**: Opening games from Siri search no longer causes games to reopen when closed
 - **Spotlight Database Corruption**: Fixed critical bug that could corrupt the database during Spotlight searches, requiring slow re-imports
 - **ROM System Migration**: Fixed bug where ROMs moved to different systems wouldn't actually move their files, causing incorrect re-imports
-- **Sideload Bundle ID**: Sideloaded apps with changed bundle IDs no longer think they're App Store builds—all Provenance Plus features now work when sideloading or building with Xcode!
+- **Sideload Bundle ID**: Sideloaded apps with changed bundle IDs no longer think they're App Store builds—all {{< brand >}}Provenance{{< /brand >}} Plus features now work when sideloading or building with Xcode!
 
 ## 📊 Development Tools
 
 ### FPS Indicator Improvements
-- **More Accurate Stats**: Works with native Provenance cores (3D accelerated)
+- **More Accurate Stats**: Works with native {{< brand >}}Provenance{{< /brand >}} cores (3D accelerated)
 - **Additional Information**: More detailed performance metrics
 - Note: Currently limited to native cores; RetroArch-based cores coming later
 
@@ -198,7 +198,7 @@ We're hard at work on exciting features for future releases:
 
 ## 💖 Support the Project
 
-Provenance is a labor of love, built by the community for the community. If you'd like to support continued development:
+{{< brand >}}Provenance{{< /brand >}} is a labor of love, built by the community for the community. If you'd like to support continued development:
 
 - **[Provenance Plus](https://apps.apple.com/us/app/provenance-app/id1596862805)**: Optional in-app purchase (App Store builds only)
 - **[Patreon](https://www.patreon.com/provenance)**: Monthly support with exclusive perks
@@ -209,11 +209,11 @@ Every contribution helps keep this project alive and thriving. Thank you!
 
 ## Installation
 
-Get Provenance 3.2.0:
+Get {{< brand >}}Provenance{{< /brand >}} 3.2.0:
 - **App Store**: [Download from the App Store](https://apps.apple.com/us/app/provenance-app/id1596862805)
 - **IPA Download**: [GitHub Releases](https://github.com/Provenance-Emu/Provenance/releases)
 - **Sideload**: [Installation Instructions](https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/sideloading)
 
 ---
 
-Thank you for being part of the Provenance community. Happy gaming! 🎮
+Thank you for being part of the {{< brand >}}Provenance{{< /brand >}} community. Happy gaming! 🎮

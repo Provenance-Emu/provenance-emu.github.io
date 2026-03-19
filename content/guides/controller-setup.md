@@ -5,11 +5,11 @@ description: "Step-by-step guide to connecting and using a Bluetooth or MFi cont
 tags: ["guide", "how-to"]
 ---
 
-Provenance supports a wide range of physical game controllers on both iOS and tvOS, giving you a much more authentic retro gaming experience. This guide walks you through connecting a controller and getting it working in Provenance.
+{{< brand >}}Provenance{{< /brand >}} supports a wide range of physical game controllers on both iOS and tvOS, giving you a much more authentic retro gaming experience. This guide walks you through connecting a controller and getting it working in {{< brand >}}Provenance{{< /brand >}}.
 
 ## Supported Controllers
 
-Provenance works with any MFi (Made for iPhone) certified controller and most Bluetooth controllers, including:
+{{< brand >}}Provenance{{< /brand >}} works with any MFi (Made for iPhone) certified controller and most Bluetooth controllers, including:
 
 - **PlayStation DualSense and DualShock 4** — pair via Bluetooth
 - **Xbox Series X|S and Bluetooth-capable Xbox One controllers (e.g., Xbox One S)** — pair via Bluetooth
@@ -25,11 +25,11 @@ Provenance works with any MFi (Made for iPhone) certified controller and most Bl
 
 3. **Select your controller from the device list.** It should appear under "Other Devices." Tap it to pair. Once connected, it will move to the "My Devices" section.
 
-4. **Open Provenance and launch a game.** Your controller should be detected automatically. You do not need to configure anything inside Provenance for standard button layouts.
+4. **Open {{< brand >}}Provenance{{< /brand >}} and launch a game.** Your controller should be detected automatically. You do not need to configure anything inside {{< brand >}}Provenance{{< /brand >}} for standard button layouts.
 
-5. **Access in-game settings if needed.** While a game is running, swipe down from the top of the screen (or press the Menu button on your controller) to access the Provenance overlay. From there you can adjust controller mappings under **Settings > Controllers**.
+5. **Access in-game settings if needed.** While a game is running, swipe down from the top of the screen (or press the Menu button on your controller) to access the {{< brand >}}Provenance{{< /brand >}} overlay. From there you can adjust controller mappings under **Settings > Controllers**.
 
-6. **Customize button mappings (optional).** In the Provenance settings, navigate to **Controllers** to remap buttons for individual systems or globally.
+6. **Customize button mappings (optional).** In the {{< brand >}}Provenance{{< /brand >}} settings, navigate to **Controllers** to remap buttons for individual systems or globally.
 
 ## Tips
 
@@ -40,4 +40,4 @@ Provenance works with any MFi (Made for iPhone) certified controller and most Bl
 
 ## Download Provenance
 
-Provenance is free to download from the App Store. [Get Provenance on the App Store](https://apps.apple.com/us/app/provenance-app/id1596862805). For additional features, check out [Provenance Plus](/plus/).
+{{< brand >}}Provenance{{< /brand >}} is free to download from the App Store. [Get Provenance on the App Store](https://apps.apple.com/us/app/provenance-app/id1596862805). For additional features, check out [Provenance Plus](/plus/).

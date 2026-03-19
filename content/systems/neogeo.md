@@ -9,7 +9,7 @@ supportedFormats: ".zip, .7z (MAME ROM sets)"
 
 The SNK Neo Geo was legendary for bringing true arcade hardware home in 1990. Its MVS (arcade) and AES (home) versions ran identical game ROMs, making it the gold standard for fighting games and run-and-guns. The library is dominated by SNK classics: Metal Slug 1–3, King of Fighters '98, Samurai Shodown II, and The Last Blade 2 — games that hold up beautifully decades later.
 
-Provenance runs Neo Geo games through the MAME core with excellent game compatibility.
+{{< brand >}}Provenance{{< /brand >}} runs Neo Geo games through the MAME core with excellent game compatibility.
 
 ## Supported File Formats
 
@@ -36,7 +36,7 @@ Neo Geo requires the Neo Geo BIOS (`neogeo.zip`) placed in the same folder as yo
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
 2. **Add your Neo Geo ROM sets** and `neogeo.zip` BIOS via the Files app or Wi-Fi import.
 3. **Start playing** — your Neo Geo games appear in your library automatically.
 

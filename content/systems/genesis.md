@@ -7,9 +7,9 @@ shortName: "Genesis / Mega Drive"
 supportedFormats: ".md, .bin, .gen, .smd"
 ---
 
-Provenance includes a Sega Genesis emulator for iPhone, iPad, and Apple TV, covering both the North American Genesis and the international Mega Drive. Sonic the Hedgehog, Streets of Rage, Mortal Kombat, Phantasy Star IV — the Genesis library is enormous and Provenance gives you access to all of it on your Apple device.
+{{< brand >}}Provenance{{< /brand >}} includes a Sega Genesis emulator for iPhone, iPad, and Apple TV, covering both the North American Genesis and the international Mega Drive. Sonic the Hedgehog, Streets of Rage, Mortal Kombat, Phantasy Star IV — the Genesis library is enormous and {{< brand >}}Provenance{{< /brand >}} gives you access to all of it on your Apple device.
 
-Available free on the App Store, Provenance requires no jailbreak and is fully open-source.
+Available free on the App Store, {{< brand >}}Provenance{{< /brand >}} requires no jailbreak and is fully open-source.
 
 ## Supported File Formats
 
@@ -32,8 +32,8 @@ Available free on the App Store, Provenance requires no jailbreak and is fully o
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
 2. **Add your Genesis / Mega Drive ROM files** via iTunes File Sharing, the Files app, or web import.
-3. **Start playing** — Provenance detects your Sega Genesis games and adds them to your library automatically.
+3. **Start playing** — {{< brand >}}Provenance{{< /brand >}} detects your Sega Genesis games and adds them to your library automatically.
 
 For detailed setup instructions, visit the [Provenance wiki](https://wiki.provenance-emu.com/).

@@ -89,6 +89,6 @@ https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/sid
 
 For a complete list of changes, please visit our [GitHub release page](https://github.com/Provenance-Emu/Provenance/releases/tag/3.0.4).
 
-We're continuously working to improve Provenance and bring you the best retro gaming experience possible. The WIP features in the non-App Store version represent our ongoing efforts to expand our emulation capabilities.
+We're continuously working to improve {{< brand >}}Provenance{{< /brand >}} and bring you the best retro gaming experience possible. The WIP features in the non-App Store version represent our ongoing efforts to expand our emulation capabilities.
 
 As always, we appreciate your support and feedback. Happy gaming!

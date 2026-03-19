@@ -19,7 +19,7 @@ image: "images/icons/icon.512x512.png"
 
 # Release 3.1.1 - Bug Fixes
 
-Provenance 3.1.1 is a bug fix release focused on UI and settings improvements, fixing issues reported by the community after the 3.1.0 release.
+{{< brand >}}Provenance{{< /brand >}} 3.1.1 is a bug fix release focused on UI and settings improvements, fixing issues reported by the community after the 3.1.0 release.
 
 ## Links
 
@@ -71,8 +71,8 @@ For a complete list of changes, please visit our [GitHub release page](https://g
 
 ## Provenance Plus
 
-Enjoying Provenance? **[Provenance Plus](/plus/)** adds iCloud sync across all your Apple devices, TestFlight beta access, and priority support — while directly funding ongoing development. Your subscription helps keep the fixes and improvements coming. Subscribe from within the app: *Settings > Provenance Plus*.
+Enjoying {{< brand >}}Provenance{{< /brand >}}? **[Provenance Plus](/plus/)** adds iCloud sync across all your Apple devices, TestFlight beta access, and priority support — while directly funding ongoing development. Your subscription helps keep the fixes and improvements coming. Subscribe from within the app: *Settings > {{< brand >}}Provenance{{< /brand >}} Plus*.
 
 ---
 
-Thank you for being part of the Provenance community. Happy gaming!
+Thank you for being part of the {{< brand >}}Provenance{{< /brand >}} community. Happy gaming!

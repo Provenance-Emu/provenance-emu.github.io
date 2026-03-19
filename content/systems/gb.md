@@ -7,22 +7,22 @@ shortName: "GB / DMG"
 supportedFormats: ".gb, .gbc"
 ---
 
-Nintendo's original Game Boy launched in 1989 and went on to become one of the best-selling consoles of all time. With Provenance, you can play the full Game Boy library — including Game Boy Color titles — on your iPhone, iPad, or Apple TV. Tetris, Pokémon Red and Blue, The Legend of Zelda: Link's Awakening, Kirby's Dream Land: all of it, in your pocket again.
+Nintendo's original Game Boy launched in 1989 and went on to become one of the best-selling consoles of all time. With {{< brand >}}Provenance{{< /brand >}}, you can play the full Game Boy library — including Game Boy Color titles — on your iPhone, iPad, or Apple TV. Tetris, Pokémon Red and Blue, The Legend of Zelda: Link's Awakening, Kirby's Dream Land: all of it, in your pocket again.
 
-Provenance is free, open-source, and available directly from the App Store with no jailbreak needed.
+{{< brand >}}Provenance{{< /brand >}} is free, open-source, and available directly from the App Store with no jailbreak needed.
 
 ## Supported File Formats
 
-Provenance supports both original Game Boy and Game Boy Color ROM formats:
+{{< brand >}}Provenance{{< /brand >}} supports both original Game Boy and Game Boy Color ROM formats:
 
 - `.gb` — Standard Game Boy ROM format, covering the original gray-cartridge library
 - `.gbc` — Game Boy Color ROMs, including titles that require the GBC and those with enhanced color support on GBC hardware
 
-The same emulator handles both formats seamlessly. If a game has GBC enhancements, Provenance will render them correctly.
+The same emulator handles both formats seamlessly. If a game has GBC enhancements, {{< brand >}}Provenance{{< /brand >}} will render them correctly.
 
 ## Features
 
-Playing Game Boy and Game Boy Color games in Provenance gives you access to the full suite of emulator features:
+Playing Game Boy and Game Boy Color games in {{< brand >}}Provenance{{< /brand >}} gives you access to the full suite of emulator features:
 
 - **Save States** — Save at any point, not just at in-game save prompts; essential for the original Game Boy's battery-save limitations
 - **Controller Support** — Full MFi, Xbox, and PlayStation controller compatibility; on-screen touch controls also available
@@ -37,8 +37,8 @@ Playing Game Boy and Game Boy Color games in Provenance gives you access to the 
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
-2. **Add your Game Boy ROM files** to Provenance using iTunes File Sharing, the Files app, or a web server import.
-3. **Start playing** — Provenance detects your Game Boy and GBC titles automatically.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+2. **Add your Game Boy ROM files** to {{< brand >}}Provenance{{< /brand >}} using iTunes File Sharing, the Files app, or a web server import.
+3. **Start playing** — {{< brand >}}Provenance{{< /brand >}} detects your Game Boy and GBC titles automatically.
 
 For detailed setup instructions, visit the [Provenance wiki](https://wiki.provenance-emu.com/).

@@ -9,7 +9,7 @@ supportedFormats: ".vb, .vboy"
 
 The Nintendo Virtual Boy was Nintendo's bold and ill-fated 1995 experiment with stereoscopic 3D — a table-top headset that displayed red monochrome graphics in two viewports to create depth. It sold poorly and was discontinued within a year, producing only 22 commercial games. That rarity makes the library a fascinating collector's target, and titles like Wario Land and Galactic Pinball hold up as genuinely good games.
 
-Provenance emulates the Virtual Boy through the Mednafen core, displaying the iconic red-on-black graphics on your iPhone screen.
+{{< brand >}}Provenance{{< /brand >}} emulates the Virtual Boy through the Mednafen core, displaying the iconic red-on-black graphics on your iPhone screen.
 
 ## Supported File Formats
 
@@ -29,7 +29,7 @@ Provenance emulates the Virtual Boy through the Mednafen core, displaying the ic
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
 2. **Add your Virtual Boy ROM files** via the Files app or Wi-Fi import.
 3. **Start playing** — your Virtual Boy games appear in your library automatically.
 

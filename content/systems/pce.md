@@ -7,7 +7,7 @@ shortName: "PCE / TG-16"
 supportedFormats: ".pce, .ccd, .cue, .chd, .iso, .img"
 ---
 
-Provenance emulates the NEC PC Engine (sold as TurboGrafx-16 in North America) and its CD-ROM² add-on through the Mednafen core. Released in 1987 in Japan, the PC Engine punched well above its weight class with arcade-perfect ports and its revolutionary CD-ROM format. Highlights include Bonk's Adventure, Castlevania: Rondo of Blood, Ys Book I & II, and Street Fighter II'.
+{{< brand >}}Provenance{{< /brand >}} emulates the NEC PC Engine (sold as TurboGrafx-16 in North America) and its CD-ROM² add-on through the Mednafen core. Released in 1987 in Japan, the PC Engine punched well above its weight class with arcade-perfect ports and its revolutionary CD-ROM format. Highlights include Bonk's Adventure, Castlevania: Rondo of Blood, Ys Book I & II, and Street Fighter II'.
 
 ## Supported Systems
 
@@ -40,7 +40,7 @@ PC Engine CD-ROM² games require a BIOS file. See [BIOS Requirements](https://wi
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
 2. **Add your PC Engine ROM files** via the Files app or Wi-Fi import.
 3. **For CD games**, add your BIOS file first — see [BIOS Requirements](https://wiki.provenance-emu.com/installation-and-usage/bios-requirements).
 4. **Start playing** — your PC Engine games appear in your library automatically.

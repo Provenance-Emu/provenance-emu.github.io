@@ -7,9 +7,9 @@ shortName: "GBA"
 supportedFormats: ".gba"
 ---
 
-Provenance includes a full Game Boy Advance emulator for iPhone, iPad, and Apple TV. The GBA had an outstanding lineup of games — Pokemon FireRed and LeafGreen, The Legend of Zelda: The Minish Cap, Metroid Fusion, Castlevania: Aria of Sorrow — and Provenance lets you play the entire library on your Apple device.
+{{< brand >}}Provenance{{< /brand >}} includes a full Game Boy Advance emulator for iPhone, iPad, and Apple TV. The GBA had an outstanding lineup of games — Pokemon FireRed and LeafGreen, The Legend of Zelda: The Minish Cap, Metroid Fusion, Castlevania: Aria of Sorrow — and {{< brand >}}Provenance{{< /brand >}} lets you play the entire library on your Apple device.
 
-Available free on the App Store with no jailbreak required, Provenance is one of the most capable GBA emulators available for iOS.
+Available free on the App Store with no jailbreak required, {{< brand >}}Provenance{{< /brand >}} is one of the most capable GBA emulators available for iOS.
 
 ## Supported File Formats
 
@@ -30,8 +30,8 @@ Available free on the App Store with no jailbreak required, Provenance is one of
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
-2. **Add your GBA ROM files** using iTunes File Sharing, the Files app, or Provenance's web import.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+2. **Add your GBA ROM files** using iTunes File Sharing, the Files app, or {{< brand >}}Provenance{{< /brand >}}'s web import.
 3. **Start playing** — your Game Boy Advance games appear in your library immediately.
 
 For detailed setup instructions, visit the [Provenance wiki](https://wiki.provenance-emu.com/).

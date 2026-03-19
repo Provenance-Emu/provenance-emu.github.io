@@ -19,17 +19,17 @@ image: "images/blog/skin-catalog-launch.webp"
 
 # The Provenance Skin Catalog Is Live
 
-We've launched a new community skin catalog at **[provenance-emu.com/skins/](https://provenance-emu.com/skins/)** — a searchable, browsable directory of controller skins for Provenance, updated automatically from community GitHub repos.
+We've launched a new community skin catalog at **[provenance-emu.com/skins/](https://provenance-emu.com/skins/)** — a searchable, browsable directory of controller skins for {{< brand >}}Provenance{{< /brand >}}, updated automatically from community GitHub repos.
 
 ## What It Is
 
-The [Skin Catalog](https://provenance-emu.com/skins/) is an open-source directory of `.deltaskin` and `.manicskin` files compatible with Provenance. Skins are indexed from the community automatically, with thumbnail previews extracted directly from the skin files themselves.
+The [Skin Catalog](https://provenance-emu.com/skins/) is an open-source directory of `.deltaskin` and `.manicskin` files compatible with {{< brand >}}Provenance{{< /brand >}}. Skins are indexed from the community automatically, with thumbnail previews extracted directly from the skin files themselves.
 
 - **Browse** skins by system — GBA, SNES, PSX, N64, and more
 - **Search** by name or author
 - **Submit** your own skin in under a minute
 
-The catalog powers the in-app skin browser (Settings → Skins → Browse Catalog), so anything you submit shows up right inside Provenance.
+The catalog powers the in-app skin browser (Settings → Skins → Browse Catalog), so anything you submit shows up right inside {{< brand >}}Provenance{{< /brand >}}.
 
 ## How to Submit a Skin
 
@@ -45,7 +45,7 @@ There are four ways to get your skin in the catalog:
 
 ## For Skin Creators
 
-If you've been hosting skins on DeltaStyles, a personal GitHub repo, or anywhere else — you can bring them into the Provenance catalog without moving any files. The catalog just links to your existing download URL.
+If you've been hosting skins on DeltaStyles, a personal GitHub repo, or anywhere else — you can bring them into the {{< brand >}}Provenance{{< /brand >}} catalog without moving any files. The catalog just links to your existing download URL.
 
 Want your whole repo crawled automatically? [Register it as a source](https://github.com/Provenance-Emu/skins/issues/new/choose).
 

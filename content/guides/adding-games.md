@@ -5,7 +5,7 @@ description: "Step-by-step guide to adding ROM files to Provenance, the free iOS
 tags: ["guide", "how-to"]
 ---
 
-Provenance supports games from 38+ retro systems, but you need to provide your own ROM files. This guide explains several methods for getting games into Provenance on iPhone, iPad, or Apple TV.
+{{< brand >}}Provenance{{< /brand >}} supports games from 38+ retro systems, but you need to provide your own ROM files. This guide explains several methods for getting games into {{< brand >}}Provenance{{< /brand >}} on iPhone, iPad, or Apple TV.
 
 ## What You Need
 
@@ -21,23 +21,23 @@ This is the most straightforward method on iOS 17+.
 
 3. **Long-press the ROM file** and tap **Share**.
 
-4. **Select Provenance** from the share sheet. Provenance will open and automatically import the game into your library.
+4. **Select {{< brand >}}Provenance{{< /brand >}}** from the share sheet. {{< brand >}}Provenance{{< /brand >}} will open and automatically import the game into your library.
 
-5. **Wait for the import to complete.** Provenance will scan the file, identify the system, and add the game to your library with artwork if available.
+5. **Wait for the import to complete.** {{< brand >}}Provenance{{< /brand >}} will scan the file, identify the system, and add the game to your library with artwork if available.
 
 ## Method 2: WebDAV (Recommended for Bulk Transfers)
 
-Provenance includes a built-in WebDAV server that lets you transfer multiple ROMs at once from a computer on the same network.
+{{< brand >}}Provenance{{< /brand >}} includes a built-in WebDAV server that lets you transfer multiple ROMs at once from a computer on the same network.
 
-1. **Open Provenance on your iPhone or iPad.**
+1. **Open {{< brand >}}Provenance{{< /brand >}} on your iPhone or iPad.**
 
-2. **Go to Settings > Import/Export > WebDAV Server** and tap **Start WebDAV Server**. Provenance will show you an IP address and port number.
+2. **Go to Settings > Import/Export > WebDAV Server** and tap **Start WebDAV Server**. {{< brand >}}Provenance{{< /brand >}} will show you an IP address and port number.
 
 3. **On your Mac or PC**, open Finder (Mac) or Windows Explorer (Windows). On Mac, press `Cmd+K` in Finder and enter `http://[IP address shown in Provenance]:[port shown in Provenance]/`. On Windows, map a network drive to the same address, including the port.
 
 4. **Copy your ROM files** into the appropriate system folder in the WebDAV share.
 
-5. **Stop the WebDAV server** in Provenance and return to the library. Provenance will scan and import the new files.
+5. **Stop the WebDAV server** in {{< brand >}}Provenance{{< /brand >}} and return to the library. {{< brand >}}Provenance{{< /brand >}} will scan and import the new files.
 
 ## Method 3: iTunes File Sharing
 
@@ -47,11 +47,11 @@ If you prefer a wired connection to a Mac or PC:
 
 2. **Open Finder on Mac** (or iTunes on Windows) and select your device.
 
-3. **Go to the Files tab** and find Provenance in the app list.
+3. **Go to the Files tab** and find {{< brand >}}Provenance{{< /brand >}} in the app list.
 
-4. **Drag your ROM files** into the Provenance documents folder.
+4. **Drag your ROM files** into the {{< brand >}}Provenance{{< /brand >}} documents folder.
 
-5. **Disconnect and open Provenance.** The app will detect and import the new files.
+5. **Disconnect and open {{< brand >}}Provenance{{< /brand >}}.** The app will detect and import the new files.
 
 ## Method 4: Adding Games to Apple TV
 
@@ -59,16 +59,16 @@ Apple TV has a more restricted filesystem, so game management works differently.
 
 1. **Add games using one of the methods above on your iPhone or iPad first.**
 
-2. **Use the Provenance WebDAV server on iPhone/iPad** and access it from Apple TV via the Provenance tvOS app, if you have a shared library configured.
+2. **Use the {{< brand >}}Provenance{{< /brand >}} WebDAV server on iPhone/iPad** and access it from Apple TV via the {{< brand >}}Provenance{{< /brand >}} tvOS app, if you have a shared library configured.
 
-3. Alternatively, check the Provenance wiki for the latest recommended approach for Apple TV, as options may expand with new app versions.
+3. Alternatively, check the {{< brand >}}Provenance{{< /brand >}} wiki for the latest recommended approach for Apple TV, as options may expand with new app versions.
 
 ## Tips
 
-- Provenance automatically identifies most ROMs and downloads artwork from an online database. If a game is not recognized, try renaming the file to match the official game title.
-- BIOS files for certain systems (PlayStation, Sega Saturn, etc.) must be added separately. See the Provenance wiki for the full list of required BIOS files and where to place them.
+- {{< brand >}}Provenance{{< /brand >}} automatically identifies most ROMs and downloads artwork from an online database. If a game is not recognized, try renaming the file to match the official game title.
+- BIOS files for certain systems (PlayStation, Sega Saturn, etc.) must be added separately. See the {{< brand >}}Provenance{{< /brand >}} wiki for the full list of required BIOS files and where to place them.
 - If a game does not appear after import, check that the file extension matches the expected format for that system.
 
 ## Download Provenance
 
-Provenance is free on the App Store and supports 38+ retro systems out of the box. [Get Provenance on the App Store](https://apps.apple.com/us/app/provenance-app/id1596862805). For advanced features, explore [Provenance Plus](/plus/).
+{{< brand >}}Provenance{{< /brand >}} is free on the App Store and supports 38+ retro systems out of the box. [Get Provenance on the App Store](https://apps.apple.com/us/app/provenance-app/id1596862805). For advanced features, explore [Provenance Plus](/plus/).

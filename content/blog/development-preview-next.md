@@ -29,7 +29,7 @@ If you want early access to these features, [Patreon supporters](https://www.pat
 
 This is the biggest new feature in active development, and it's shaping up to be something genuinely useful rather than just a checkbox.
 
-At the core is a **bundled 67MB libretro cheat database** shipped directly with the app — no internet required. Tap the search icon on any game and Provenance looks up cheats via **MD5 hash matching** for exact ROM identification, or falls back to a fuzzy title match. You get the right cheats for your exact ROM version, completely offline.
+At the core is a **bundled 67MB libretro cheat database** shipped directly with the app — no internet required. Tap the search icon on any game and {{< brand >}}Provenance{{< /brand >}} looks up cheats via **MD5 hash matching** for exact ROM identification, or falls back to a fuzzy title match. You get the right cheats for your exact ROM version, completely offline.
 
 For users who want the absolute latest codes, there's also **optional online lookup** from the libretro GitHub-hosted cheat database, with 24-hour disk caching and a globe icon to indicate when results are coming from the network vs. local storage. The online path is opt-in; the offline database works without any network access at all.
 
@@ -52,7 +52,7 @@ Supported formats include Game Genie, Game Shark, Pro Action Replay, Code Breake
 
 ## 📺 Configurable CRT Shader Parameters
 
-CRT shaders have been in Provenance for a while, but until now the settings were mostly fixed. A new settings UI with **sliders and toggles** lets you tune the visual effect in real time — adjustments feed directly into the Metal shaders as you move them, so you can dial things in visually instead of guessing.
+CRT shaders have been in {{< brand >}}Provenance{{< /brand >}} for a while, but until now the settings were mostly fixed. A new settings UI with **sliders and toggles** lets you tune the visual effect in real time — adjustments feed directly into the Metal shaders as you move them, so you can dial things in visually instead of guessing.
 
 **Simple CRT controls**: curvature, light boost, vignette, zoom, and brightness.
 
@@ -96,11 +96,11 @@ The reason to mention it now is to be transparent about where we're heading. The
 
 ## 💿 CHD Support (A Quiet Differentiator)
 
-This one already exists in Provenance but deserves more attention than it gets.
+This one already exists in {{< brand >}}Provenance{{< /brand >}} but deserves more attention than it gets.
 
-CHD (Compressed Hunks of Data) is MAME's disc image format — it compresses multi-track disc images for PS1, Saturn, PC-Engine CD, and other disc-based systems dramatically compared to raw BIN/CUE or ISO. Nearly all CD-based cores in Provenance support CHD, so this isn't unusual across the board.
+CHD (Compressed Hunks of Data) is MAME's disc image format — it compresses multi-track disc images for PS1, Saturn, PC-Engine CD, and other disc-based systems dramatically compared to raw BIN/CUE or ISO. Nearly all CD-based cores in {{< brand >}}Provenance{{< /brand >}} support CHD, so this isn't unusual across the board.
 
-What is unusual: **Provenance's native Mednafen core supports CHD via a custom implementation that doesn't exist in other standalone Mednafen forks**. Standard upstream Mednafen has no CHD support at all. Beetle (RetroArch's Mednafen-derived core) does — and Provenance includes Beetle too — but if you're running the native Mednafen core for PS1, Saturn, or PC-Engine CD, CHD just works here in a way it won't in other standalone Mednafen ports.
+What is unusual: **{{< brand >}}Provenance{{< /brand >}}'s native Mednafen core supports CHD via a custom implementation that doesn't exist in other standalone Mednafen forks**. Standard upstream Mednafen has no CHD support at all. Beetle (RetroArch's Mednafen-derived core) does — and {{< brand >}}Provenance{{< /brand >}} includes Beetle too — but if you're running the native Mednafen core for PS1, Saturn, or PC-Engine CD, CHD just works here in a way it won't in other standalone Mednafen ports.
 
 The practical impact: your disc-based game library takes significantly less storage while preserving disc accuracy. If you're sitting on a pile of BIN/CUE rips, CHD is worth converting to.
 

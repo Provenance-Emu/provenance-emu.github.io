@@ -7,7 +7,7 @@ shortName: "GameCube"
 supportedFormats: ".iso, .gcm, .gcz, .rvz, .wbfs, .ciso"
 ---
 
-Provenance brings the Nintendo GameCube to iPhone, iPad, and Apple TV through the Dolphin emulation core — the same battle-tested engine used on desktop platforms. The GameCube library is home to some of the greatest games ever made: The Legend of Zelda: The Wind Waker, Super Mario Sunshine, Metroid Prime, Resident Evil 4, and F-Zero GX.
+{{< brand >}}Provenance{{< /brand >}} brings the Nintendo GameCube to iPhone, iPad, and Apple TV through the Dolphin emulation core — the same battle-tested engine used on desktop platforms. The GameCube library is home to some of the greatest games ever made: The Legend of Zelda: The Wind Waker, Super Mario Sunshine, Metroid Prime, Resident Evil 4, and F-Zero GX.
 
 ## Supported File Formats
 
@@ -39,7 +39,7 @@ See the [wiki guide on formatting ROMs](https://wiki.provenance-emu.com/installa
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
 2. **Add your GameCube ROM files** via the Files app, Wi-Fi import, or iTunes File Sharing.
 3. **Start playing** — GameCube games appear in your library automatically.
 

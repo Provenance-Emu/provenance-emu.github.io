@@ -19,7 +19,7 @@ image: "images/icons/icon.512x512.png"
 
 # Release 3.1.0 - Flycast, Dolphin, RetroAchievements
 
-We're excited to announce Provenance 3.1.0, a major feature release bringing Flycast (Dreamcast), Dolphin (GameCube/Wii), RetroAchievements support, and iCloud Sync to Provenance.
+We're excited to announce {{< brand >}}Provenance{{< /brand >}} 3.1.0, a major feature release bringing Flycast (Dreamcast), Dolphin (GameCube/Wii), RetroAchievements support, and iCloud Sync to {{< brand >}}Provenance{{< /brand >}}.
 
 ## Links
 
@@ -41,7 +41,7 @@ https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/sid
 
 ### Flycast (Dreamcast) Support
 
-Flycast core integration brings Sega Dreamcast emulation to Provenance. Play your favorite Dreamcast titles on the go!
+Flycast core integration brings Sega Dreamcast emulation to {{< brand >}}Provenance{{< /brand >}}. Play your favorite Dreamcast titles on the go!
 
 ### Dolphin (GameCube/Wii) Support
 
@@ -72,8 +72,8 @@ For a complete list of changes, please visit our [GitHub release page](https://g
 
 ## Provenance Plus
 
-The new iCloud Sync feature in 3.1.0 is just the beginning. **[Provenance Plus](/plus/)** takes it further with full cross-device iCloud sync, TestFlight beta access so you get new features first, and priority support — all while directly funding the continued development of Provenance. Subscribe from within the app: *Settings > Provenance Plus*.
+The new iCloud Sync feature in 3.1.0 is just the beginning. **[Provenance Plus](/plus/)** takes it further with full cross-device iCloud sync, TestFlight beta access so you get new features first, and priority support — all while directly funding the continued development of {{< brand >}}Provenance{{< /brand >}}. Subscribe from within the app: *Settings > {{< brand >}}Provenance{{< /brand >}} Plus*.
 
 ---
 
-Thank you for being part of the Provenance community. Happy gaming!
+Thank you for being part of the {{< brand >}}Provenance{{< /brand >}} community. Happy gaming!

@@ -7,7 +7,7 @@ shortName: "3DS"
 supportedFormats: ".3ds, .cia, .cxi, .app, .ncsd, .ncch"
 ---
 
-Provenance brings the Nintendo 3DS to iPhone and iPad through the Azahar (formerly Citra) emulation core. The 3DS library spans nearly a decade of outstanding handheld gaming — Pokémon X/Y/Sun/Moon, The Legend of Zelda: A Link Between Worlds, Fire Emblem Fates, Monster Hunter 4 Ultimate, and hundreds more.
+{{< brand >}}Provenance{{< /brand >}} brings the Nintendo 3DS to iPhone and iPad through the Azahar (formerly Citra) emulation core. The 3DS library spans nearly a decade of outstanding handheld gaming — Pokémon X/Y/Sun/Moon, The Legend of Zelda: A Link Between Worlds, Fire Emblem Fates, Monster Hunter 4 Ultimate, and hundreds more.
 
 ## Supported File Formats
 
@@ -18,7 +18,7 @@ Provenance brings the Nintendo 3DS to iPhone and iPad through the Azahar (former
 
 ## Encryption Note
 
-Many 3DS ROMs are encrypted. Provenance requires decrypted ROMs or proper AES keys to run encrypted titles. See the [wiki](https://wiki.provenance-emu.com/info/system-guides/3ds) for setup details.
+Many 3DS ROMs are encrypted. {{< brand >}}Provenance{{< /brand >}} requires decrypted ROMs or proper AES keys to run encrypted titles. See the [wiki](https://wiki.provenance-emu.com/info/system-guides/3ds) for setup details.
 
 ## Features
 
@@ -34,7 +34,7 @@ Many 3DS ROMs are encrypted. Provenance requires decrypted ROMs or proper AES ke
 
 ## How to Get Started
 
-1. **Download Provenance** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
+1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
 2. **Add your decrypted 3DS ROM files** via the Files app or Wi-Fi import.
 3. **Start playing** — your 3DS games appear in your library automatically.
 

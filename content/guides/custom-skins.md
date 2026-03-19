@@ -5,11 +5,11 @@ description: "Step-by-step guide to browsing, downloading, and installing custom
 tags: ["guide", "how-to", "skins"]
 ---
 
-Provenance supports custom controller skins, letting you replace the default on-screen controls with community-created artwork that matches the original hardware. Hundreds of skins are available for free at the [Provenance Skin Catalog](https://provenance-emu.com/skins/).
+{{< brand >}}Provenance{{< /brand >}} supports custom controller skins, letting you replace the default on-screen controls with community-created artwork that matches the original hardware. Hundreds of skins are available for free at the [Provenance Skin Catalog](https://provenance-emu.com/skins/).
 
 ## What Are Controller Skins?
 
-Controller skins are themed overlays for the on-screen button layout that appears when playing without a physical controller. A skin defines the layout, button positions, and artwork for a specific system. Provenance uses the open `.deltaskin` and `.manicskin` file formats — the same formats used by Delta and Manic, so a large back-catalog of skins works out of the box.
+Controller skins are themed overlays for the on-screen button layout that appears when playing without a physical controller. A skin defines the layout, button positions, and artwork for a specific system. {{< brand >}}Provenance{{< /brand >}} uses the open `.deltaskin` and `.manicskin` file formats — the same formats used by Delta and Manic, so a large back-catalog of skins works out of the box.
 
 ## Find a Skin
 
@@ -18,7 +18,7 @@ Controller skins are themed overlays for the on-screen button layout that appear
 The catalog is searchable by system (GBA, SNES, PlayStation, etc.) with thumbnail previews. You can also find skins on:
 
 - The [Provenance Discord](https://discord.gg/4TK7PU5) — `#skins` channel
-- [DeltaStyles.com](https://deltastyles.com) — Delta skins are fully compatible with Provenance
+- [DeltaStyles.com](https://deltastyles.com) — Delta skins are fully compatible with {{< brand >}}Provenance{{< /brand >}}
 - GitHub repositories — search for `.deltaskin` or `.manicskin` files
 
 ## Install a Skin
@@ -27,24 +27,24 @@ The catalog is searchable by system (GBA, SNES, PlayStation, etc.) with thumbnai
 
 1. On your iPhone or iPad, open the [Skin Catalog](https://provenance-emu.com/skins/) in Safari.
 2. Tap any skin card, then tap **⬇ Download**.
-3. iOS will ask which app to open the file with — choose **Provenance**.
+3. iOS will ask which app to open the file with — choose {{< brand >}}Provenance{{< /brand >}}.
 4. The skin is imported automatically and ready to use.
 
 ### Option 2 — Import via the Files app
 
 1. Download the `.deltaskin` or `.manicskin` file to your Files app (Downloads folder).
-2. Open **Provenance** and go to **Settings → Skins**.
+2. Open {{< brand >}}Provenance{{< /brand >}} and go to **Settings → Skins**.
 3. Tap **Import Skin** (the `+` or import button) to open the Files picker.
 4. Navigate to your downloaded file and select it.
-5. Provenance imports and validates the skin.
+5. {{< brand >}}Provenance{{< /brand >}} imports and validates the skin.
 
 ### Option 3 — Share from another app
 
 If a skin was sent to you via Discord, Messages, or another app:
 
 1. Tap and hold the file, then tap **Share**.
-2. Select **Provenance** from the share sheet.
-3. Provenance opens and imports the skin immediately.
+2. Select {{< brand >}}Provenance{{< /brand >}} from the share sheet.
+3. {{< brand >}}Provenance{{< /brand >}} opens and imports the skin immediately.
 
 ## Activate a Skin
 
@@ -65,6 +65,6 @@ After importing, activate the skin for a system:
 
 ## Download Provenance
 
-Provenance is free on the App Store — no jailbreak required.
+{{< brand >}}Provenance{{< /brand >}} is free on the App Store — no jailbreak required.
 
 [Get Provenance on the App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) · [Provenance Plus](/plus/)
