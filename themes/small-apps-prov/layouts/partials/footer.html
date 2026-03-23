@@ -48,6 +48,10 @@
 
 <script data-cfasync="false">
   document.addEventListener('DOMContentLoaded', function () {
+    // Reveal page immediately on DOM ready — critical CSS already covers above-the-fold
+    // appearance, so we don't need to wait for the full stylesheet to avoid FOUC.
+    // This prevents the opacity:0 anti-LCP pattern where LCP is delayed by CSS load time.
+    document.documentElement.style.opacity = '1';
     // iOS detection: show ios-only elements, hide ios-disable elements
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (isIOS) {
