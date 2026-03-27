@@ -12,7 +12,7 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
   --border-radius: 12px;
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ========================================
@@ -366,7 +366,6 @@ p {
   transition: var(--transition-smooth);
   background: rgba(255, 255, 255, 0.15);
   border: 2px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
 }
 
 .btn-rounded-icon:hover {
@@ -395,7 +394,7 @@ p {
 
 .badge-link:hover {
   transform: translateY(-3px);
-  filter: brightness(1.15);
+  opacity: 0.9;
 }
 
 .badge-link:active {
@@ -592,24 +591,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ========================================
-   Loading Animation
-   ======================================== */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.section {
-  animation: fadeInUp 0.6s ease-out;
-}
+/* fadeInUp kept for future use but removed from .section — applying it to every
+   section element was creating multiple compositing layers on initial page load,
+   hurting LCP and TBT. Per-element AOS animations (data-aos) handle this instead. */
 
 /* ========================================
    CTA Hover Effect
