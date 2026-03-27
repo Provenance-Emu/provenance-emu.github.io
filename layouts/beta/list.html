@@ -1,0 +1,416 @@
+{{ define "main" }}
+
+<style>
+  /* ── Beta page overrides ─────────────────────────────────────────── */
+  .beta-hero {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a0033 45%, #0d001f 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0 4rem;
+  }
+
+  /* animated grid */
+  .beta-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(250,51,153,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(250,51,153,0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: gridDrift 20s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes gridDrift {
+    from { background-position: 0 0; }
+    to   { background-position: 40px 40px; }
+  }
+
+  /* floating glows */
+  .beta-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+  .beta-glow-1 {
+    width: 500px; height: 500px;
+    background: rgba(250,51,153,0.18);
+    top: -100px; right: -100px;
+    animation: floatGlow 8s ease-in-out infinite;
+  }
+  .beta-glow-2 {
+    width: 400px; height: 400px;
+    background: rgba(128,0,204,0.15);
+    bottom: -80px; left: -80px;
+    animation: floatGlow 11s ease-in-out infinite reverse;
+  }
+  @keyframes floatGlow {
+    0%,100% { transform: translate(0,0); }
+    50%      { transform: translate(30px,-30px); }
+  }
+
+  .beta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(250,51,153,0.15);
+    border: 1px solid rgba(250,51,153,0.4);
+    color: #FA3399;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .beta-badge::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #FA3399;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.5; transform: scale(1.5); }
+  }
+
+  .beta-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .beta-hero h1 span {
+    background: linear-gradient(90deg, #FA3399, #8000CC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .beta-hero .lead {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 520px;
+    margin: 0 auto 2.5rem;
+  }
+
+  /* ── TestFlight button ──────────────────────────────────────────── */
+  .tf-btn-wrap {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.25rem;
+  }
+  .tf-btn-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 60px;
+    background: linear-gradient(135deg, #FA3399, #8000CC, #0D96F6);
+    filter: blur(8px);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    z-index: 0;
+  }
+  .tf-btn-wrap:hover::before { opacity: 1; }
+
+  #tf-btn {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%);
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 0.9rem 2.4rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, filter 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  }
+  #tf-btn:hover  { transform: translateY(-2px) scale(1.02); filter: brightness(1.1); color: #fff; text-decoration: none; }
+  #tf-btn:active { transform: scale(0.98); }
+  #tf-btn .tf-icon { font-size: 1.5rem; line-height: 1; }
+
+  .tf-hint {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 0.5rem;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* ── Support section ────────────────────────────────────────────── */
+  .support-section {
+    background: #0d0d1c;
+    padding: 4rem 0;
+    border-top: 1px solid rgba(250,51,153,0.15);
+  }
+  .support-section h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  .support-section .sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .support-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    transition: border-color 0.25s, background 0.25s, transform 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .support-card:hover {
+    border-color: rgba(250,51,153,0.4);
+    background: rgba(250,51,153,0.06);
+    transform: translateY(-3px);
+  }
+  .support-card.featured {
+    border-color: #FA3399;
+    background: rgba(250,51,153,0.08);
+    position: relative;
+  }
+  .support-card.featured::after {
+    content: "BEST VALUE";
+    position: absolute;
+    top: -12px; left: 50%;
+    transform: translateX(-50%);
+    background: #FA3399;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 3px 12px;
+    border-radius: 20px;
+  }
+  .support-card i { font-size: 2.2rem; margin-bottom: 0.75rem; }
+  .support-card h5 { color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 0.25rem; }
+  .support-card .price { font-size: 1.6rem; font-weight: 800; color: #FA3399; line-height: 1.1; }
+  .support-card .price small { font-size: 0.75rem; font-weight: 400; color: rgba(255,255,255,0.45); }
+  .support-card p { color: rgba(255,255,255,0.5); font-size: 0.8rem; margin: 0.6rem 0 1.25rem; flex: 1; }
+
+  .btn-support-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #FA3399, #8000CC);
+    color: #fff;
+    padding: 0.55rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: filter 0.2s, transform 0.2s;
+    width: 100%;
+    text-align: center;
+  }
+  .btn-support-primary:hover { filter: brightness(1.15); transform: translateY(-1px); color: #fff; text-decoration: none; }
+
+  .btn-support-outline {
+    display: inline-block;
+    background: transparent;
+    color: #FA3399;
+    padding: 0.55rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #FA3399;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    width: 100%;
+    text-align: center;
+  }
+  .btn-support-outline:hover { background: #FA3399; color: #fff; transform: translateY(-1px); text-decoration: none; }
+
+  .alt-support-row { margin-top: 1.5rem; }
+  .alt-support-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    margin-bottom: 0.75rem;
+  }
+  .alt-support-link:hover { border-color: rgba(250,51,153,0.35); background: rgba(250,51,153,0.06); transform: translateX(3px); color: #fff; text-decoration: none; }
+  .alt-support-link i { width: 1.5rem; text-align: center; font-size: 1.1rem; flex-shrink: 0; }
+  .alt-support-link .arrow { margin-left: auto; opacity: 0.4; font-size: 0.75rem; }
+
+  /* no-select everywhere on page */
+  .no-select { user-select: none; -webkit-user-select: none; -moz-user-select: none; }
+</style>
+
+{{ "<!-- Beta Hero -->" | safeHTML }}
+<section class="beta-hero">
+  <div class="beta-glow beta-glow-1"></div>
+  <div class="beta-glow beta-glow-2"></div>
+
+  <div class="container position-relative">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+
+        <div class="beta-badge no-select">Early Access</div>
+
+        <h1>You Found the<br><span>Beta Link</span></h1>
+
+        <p class="lead no-select">
+          Get the latest Provenance beta before anyone else —
+          new features, fresh cores, and all the bugs we're still squashing.
+          Tap the button on your iPhone or iPad.
+        </p>
+
+        <div class="tf-btn-wrap">
+          <button id="tf-btn" type="button" aria-label="Join Provenance TestFlight beta"
+            oncontextmenu="return false">
+            <span class="tf-icon"><i class="fab fa-apple"></i></span>
+            Join TestFlight Beta
+          </button>
+        </div>
+        <div class="tf-hint no-select">Open on iPhone or iPad &nbsp;·&nbsp; Apple TestFlight required</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ "<!-- Support section -->" | safeHTML }}
+<section class="support-section">
+  <div class="container">
+
+    <div class="row justify-content-center text-center mb-2">
+      <div class="col-lg-8">
+        <h2>Keep the Betas Coming</h2>
+        <p class="sub">
+          Betas are free — but Provenance is built by volunteers on nights and weekends.
+          Your support keeps the builds flowing and the lights on.
+        </p>
+      </div>
+    </div>
+
+    {{/* Plus tiers */}}
+    <div class="row justify-content-center mb-3">
+
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="support-card">
+          <i class="fab fa-app-store-ios" style="color:#0D96F6;"></i>
+          <h5>Monthly</h5>
+          <div class="price">$3.99<small>/mo</small></div>
+          <p>Cancel anytime. Billed through the App Store.</p>
+          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" rel="noopener" class="btn-support-outline">Subscribe</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="support-card featured">
+          <i class="fab fa-app-store-ios" style="color:#FA3399;"></i>
+          <h5>Annual</h5>
+          <div class="price">$39.99<small>/yr</small></div>
+          <p>Save 17% vs monthly. Billed annually through the App Store.</p>
+          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" rel="noopener" class="btn-support-primary">Subscribe</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="support-card">
+          <i class="fas fa-infinity" style="color:#8000CC;"></i>
+          <h5>Lifetime</h5>
+          <div class="price">$99.99<small> once</small></div>
+          <p>One-time purchase. All future Plus features included forever.</p>
+          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" rel="noopener" class="btn-support-outline" style="border-color:#8000CC;color:#8000CC;">Get Lifetime</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-7">
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.35);">
+          Plus includes: iCloud sync for saves &amp; skins, beta access, priority support, and CloudKit sync on Apple TV.
+          <a href="/plus/" style="color:rgba(250,51,153,0.7);">Learn more →</a>
+        </p>
+      </div>
+    </div>
+
+    {{/* One-time */}}
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <p class="text-center mb-3" style="font-size:0.85rem;color:rgba(255,255,255,0.4);font-weight:600;letter-spacing:0.05em;text-transform:uppercase;">Or a one-time tip</p>
+        <div class="alt-support-row">
+          <a href="https://www.patreon.com/provenance" target="_blank" rel="noopener" class="alt-support-link">
+            <i class="fab fa-patreon" style="color:#F96854;"></i>
+            <div>
+              <div>Patreon</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);font-weight:400;">Monthly support with exclusive dev updates</div>
+            </div>
+            <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://github.com/sponsors/JoeMatt" target="_blank" rel="noopener" class="alt-support-link">
+            <i class="fab fa-github" style="color:#e6edf3;"></i>
+            <div>
+              <div>GitHub Sponsors</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);font-weight:400;">Monthly tiers with sponsor perks</div>
+            </div>
+            <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://buymeacoffee.com/joemattiello" target="_blank" rel="noopener" class="alt-support-link">
+            <i class="fas fa-mug-hot" style="color:#FFDD00;"></i>
+            <div>
+              <div>Buy Me a Coffee</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);font-weight:400;">Quick one-time tip</div>
+            </div>
+            <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script data-cfasync="false">
+(function () {
+  // Assemble the TF URL at runtime — never appears as plain text in the DOM
+  var _p = ["https://", "testflight", ".apple", ".com", "/join/", atob("TldmVVVtS2Y=")];
+  var _u = _p.join("");
+
+  var btn = document.getElementById("tf-btn");
+  if (!btn) return;
+
+  btn.addEventListener("click", function () {
+    window.location.href = _u;
+  });
+
+  // Block right-click & copy on the whole page
+  document.addEventListener("contextmenu", function (e) { e.preventDefault(); return false; });
+  document.addEventListener("copy",        function (e) { e.preventDefault(); return false; });
+  document.addEventListener("cut",         function (e) { e.preventDefault(); return false; });
+})();
+</script>
+
+{{ end }}
