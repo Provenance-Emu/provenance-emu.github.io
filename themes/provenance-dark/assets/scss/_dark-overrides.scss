@@ -18,7 +18,7 @@ body {
 
   .nav-item.active .nav-link {
     color: #FA3399 !important;
-    &::before { background: #FA3399 !important; }
+    &::before { display: none !important; } /* kill old underline; pill drawn in dark-theme.css */
   }
 
   .dropdown-menu {
