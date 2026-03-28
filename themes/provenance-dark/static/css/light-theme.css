@@ -11,6 +11,37 @@
   overflow-x: hidden;
 }
 
+/* ── Background utility class resets ─────────────────────────────────────── */
+/* dark-theme.css overrides all bg-* classes to dark; reset them here */
+[data-theme="light"] .bg-white  { background-color: #fff     !important; }
+[data-theme="light"] .bg-light  { background-color: #f9f9f9  !important; }
+[data-theme="light"] .bg-gray,
+[data-theme="light"] .bg-light-gray { background-color: #f5f5f5 !important; }
+[data-theme="light"] .bg-dark   { background-color: #1a202c  !important; }
+[data-theme="light"] .bg-blue   { background: linear-gradient(135deg, #e8f4fb 0%, #dbeeff 100%) !important; }
+
+/* ── All sections (bare + utility classes) ───────────────────────────────── */
+[data-theme="light"] section,
+[data-theme="light"] section.section,
+[data-theme="light"] .section {
+  background-color: #fff !important;
+  color: #555 !important;
+}
+
+/* Alternate row */
+[data-theme="light"] section:nth-child(even) { background-color: #f9f9f9 !important; }
+
+/* ── Text utility resets ─────────────────────────────────────────────────── */
+[data-theme="light"] .text-dark  { color: #333 !important; }
+[data-theme="light"] .text-color,
+[data-theme="light"] .text-body  { color: #555 !important; }
+
+/* ── Borders ─────────────────────────────────────────────────────────────── */
+[data-theme="light"] hr,
+[data-theme="light"] .border,
+[data-theme="light"] .border-top,
+[data-theme="light"] .border-bottom { border-color: #e5e7eb !important; }
+
 /* ── Navbar ───────────────────────────────────────────────────────────────── */
 [data-theme="light"] .main-nav {
   background: rgba(255,255,255,0.97) !important;
@@ -200,8 +231,8 @@
 }
 [data-theme="light"] .theme-opt {
   border-color: rgba(0,0,0,0.15);
-  background: rgba(0,0,0,0.03);
-  color: #666;
+  background: rgba(0,0,0,0.04);
+  color: #555;
 }
 [data-theme="light"] .theme-opt:hover,
 [data-theme="light"] .theme-opt.active {
