@@ -1,0 +1,18 @@
+{{- /* Animated theme selector: circular toggle → expands to ☀️ 💻 🌙 options */ -}}
+<div class="theme-selector" id="themeSelector">
+  <button class="theme-toggle-btn" id="themeToggleBtn"
+          aria-label="Select color theme" aria-expanded="false" aria-controls="themeOptions">
+    <i class="fas fa-moon theme-toggle-icon" aria-hidden="true"></i>
+  </button>
+  <div class="theme-options" id="themeOptions" role="group" aria-label="Theme options">
+    <button class="theme-opt" data-theme-opt="light" aria-label="Light theme" title="Light">
+      <i class="fas fa-sun" aria-hidden="true"></i>
+    </button>
+    <button class="theme-opt" data-theme-opt="auto" aria-label="System theme" title="Auto">
+      <i class="fas fa-circle-half-stroke" aria-hidden="true"></i>
+    </button>
+    <button class="theme-opt" data-theme-opt="dark" aria-label="Dark theme" title="Dark">
+      <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>

@@ -84,4 +84,70 @@
   {{ "<!-- JSON-LD structured data -->" | safeHTML }}
   {{ partial "jsonld.html" . }}
 
+  {{ "<!-- Theme system: sync FOUC-prevention + async UI logic -->" | safeHTML }}
+  {{ "<!-- Runs before paint to set data-theme on <html> from localStorage. -->" | safeHTML }}
+  {{ "<!-- Critical light overrides are inlined so light users never see a dark flash. -->" | safeHTML }}
+  <style id="theme-critical-light">
+    [data-theme="light"] body{background:#fff!important;color:#333!important}
+    [data-theme="light"] .main-nav{background:rgba(255,255,255,.97)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-bottom:1px solid #e8e8e8!important}
+    [data-theme="light"] .main-nav .nav-link{color:#555!important}
+    [data-theme="light"] .gradient-banner{background:linear-gradient(135deg,#1a0033 0%,#2d004d 50%,#0d001f 100%)!important}
+  </style>
+  <script data-cfasync="false">
+  /* prov-theme — FOUC prevention (sync) + UI (DOMContentLoaded) */
+  (function(){
+    var KEY='prov-theme',ICONS={light:'fa-sun',auto:'fa-circle-half-stroke',dark:'fa-moon'};
+    function sys(){return window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}
+    function resolve(p){return p==='auto'?sys():p;}
+    function applyTheme(p){document.documentElement.setAttribute('data-theme',resolve(p));}
+
+    /* ── Run sync: set data-theme before first paint ── */
+    applyTheme(localStorage.getItem(KEY)||'dark');
+
+    /* ── UI interactions: wait for DOM ── */
+    document.addEventListener('DOMContentLoaded',function(){
+      function updateUI(p){
+        document.querySelectorAll('.theme-opt').forEach(function(b){
+          b.classList.toggle('active',b.dataset.themeOpt===p);
+        });
+        var ic=document.querySelector('.theme-toggle-icon');
+        if(ic)ic.className='fas '+ICONS[p]+' theme-toggle-icon';
+      }
+      function save(p){localStorage.setItem(KEY,p);applyTheme(p);updateUI(p);}
+
+      var cur=localStorage.getItem(KEY)||'dark';
+      updateUI(cur);
+
+      /* Watch system pref changes when in auto mode */
+      window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(){
+        if((localStorage.getItem(KEY)||'dark')==='auto')applyTheme('auto');
+      });
+
+      var btn=document.getElementById('themeToggleBtn');
+      var opts=document.getElementById('themeOptions');
+      if(!btn||!opts)return;
+
+      btn.addEventListener('click',function(e){
+        e.stopPropagation();
+        var open=opts.classList.toggle('open');
+        btn.setAttribute('aria-expanded',String(open));
+      });
+
+      opts.querySelectorAll('.theme-opt').forEach(function(o){
+        o.addEventListener('click',function(e){
+          e.stopPropagation();
+          save(o.dataset.themeOpt);
+          opts.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+        });
+      });
+
+      document.addEventListener('click',function(){
+        opts.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      });
+    });
+  }());
+  </script>
+
 </head>

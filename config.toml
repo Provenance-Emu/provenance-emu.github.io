@@ -315,6 +315,8 @@ pygmentsStyle = "solarized-dark"
             URL = "css/provenance-custom.css"
         [[params.plugins.css]]
             URL = "css/dark-theme.css"
+        [[params.plugins.css]]
+            URL = "css/light-theme.css"
 
         # CSS Plugins (homepage-only — loaded conditionally in head.html)
         [[params.plugins.css_homepage]]

@@ -1,0 +1,220 @@
+/* ============================================================
+   PROVENANCE LIGHT THEME
+   Applied via [data-theme="light"] on <html>
+   Undoes dark overrides from compiled dark SCSS + dark-theme.css
+   ============================================================ */
+
+/* ── Body ─────────────────────────────────────────────────────────────────── */
+[data-theme="light"] body {
+  background-color: #fff !important;
+  color: #333 !important;
+  overflow-x: hidden;
+}
+
+/* ── Navbar ───────────────────────────────────────────────────────────────── */
+[data-theme="light"] .main-nav {
+  background: rgba(255,255,255,0.97) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06) !important;
+}
+
+[data-theme="light"] .main-nav .nav-link { color: #555 !important; }
+[data-theme="light"] .main-nav .nav-link:hover { color: #FA3399 !important; }
+
+[data-theme="light"] .navbar-brand img { filter: none !important; }
+
+[data-theme="light"] .main-nav .nav-item.active .nav-link {
+  color: #FA3399 !important;
+  background: rgba(250,51,153,0.08) !important;
+  border-color: rgba(250,51,153,0.30) !important;
+}
+
+/* Dropdown */
+[data-theme="light"] .dropdown-menu {
+  background: #fff !important;
+  border: 1px solid #ebebeb !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10) !important;
+}
+[data-theme="light"] .dropdown-item { color: #555 !important; }
+[data-theme="light"] .dropdown-item:hover {
+  background: rgba(250,51,153,0.06) !important;
+  color: #FA3399 !important;
+}
+
+/* ── Hero / gradient-banner — keep branded gradient ──────────────────────── */
+[data-theme="light"] .gradient-banner {
+  background: linear-gradient(135deg, #1a0033 0%, #2d004d 50%, #0d001f 100%) !important;
+}
+
+/* ── Typography ───────────────────────────────────────────────────────────── */
+[data-theme="light"] h1, [data-theme="light"] h2,
+[data-theme="light"] h3, [data-theme="light"] h4,
+[data-theme="light"] h5, [data-theme="light"] h6,
+[data-theme="light"] .title { color: #1a202c !important; }
+
+[data-theme="light"] p   { color: #555 !important; }
+[data-theme="light"] .desc,
+[data-theme="light"] .section-intro { color: #666 !important; }
+
+/* ── Sections ─────────────────────────────────────────────────────────────── */
+[data-theme="light"] section.section,
+[data-theme="light"] .section {
+  background-color: #fff !important;
+  color: #555 !important;
+}
+
+[data-theme="light"] section.section.gray-bg,
+[data-theme="light"] .gray-bg { background-color: #f9f9f9 !important; }
+
+/* ── Cards / blocks ───────────────────────────────────────────────────────── */
+[data-theme="light"] .card {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  color: #333 !important;
+}
+
+[data-theme="light"] .block,
+[data-theme="light"] a.block {
+  background: #fff !important;
+  color: #333 !important;
+  border-color: #e5e7eb !important;
+}
+
+/* ── Blog ─────────────────────────────────────────────────────────────────── */
+[data-theme="light"] .blog-card,
+[data-theme="light"] .blog-card-body {
+  background: #fff !important;
+  color: #555 !important;
+}
+[data-theme="light"] .blog-card h3,
+[data-theme="light"] .blog-card h4 { color: #1a202c !important; }
+[data-theme="light"] .blog-featured-card { background: #f9f9f9 !important; }
+[data-theme="light"] .blog-featured-title { color: #1a202c !important; }
+
+/* ── Feature / service ────────────────────────────────────────────────────── */
+[data-theme="light"] .service-item i  { color: #FA3399 !important; }
+[data-theme="light"] .service-item h3 { color: #1a202c !important; }
+[data-theme="light"] .service-item p  { color: #666 !important; }
+
+/* ── About author ─────────────────────────────────────────────────────────── */
+[data-theme="light"] .about-author {
+  background: #f9f9f9 !important;
+  border-color: #e5e7eb !important;
+}
+[data-theme="light"] .about-author h4 { color: #1a202c !important; }
+[data-theme="light"] .about-author p  { color: #666 !important; }
+
+/* ── FAQ ──────────────────────────────────────────────────────────────────── */
+[data-theme="light"] .faq-item,
+[data-theme="light"] .accordion-block {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+}
+[data-theme="light"] .item-link a,
+[data-theme="light"] .accordion-block p { color: #4a5568 !important; }
+[data-theme="light"] .item-link a:hover { color: #FA3399 !important; }
+
+/* ── Plus pricing ─────────────────────────────────────────────────────────── */
+[data-theme="light"] .plus-pricing-card {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  color: #1a202c !important;
+}
+[data-theme="light"] .plus-pricing-card h3,
+[data-theme="light"] .plus-pricing-card .price { color: #1a202c !important; }
+[data-theme="light"] .plus-pricing-card p,
+[data-theme="light"] .plus-pricing-card li { color: #555 !important; }
+[data-theme="light"] .plus-dash {
+  background: #f1f5f9 !important;
+  color: #9ca3af !important;
+}
+[data-theme="light"] .plus-check      { color: #FA3399 !important; }
+[data-theme="light"] .plus-check-gold { color: #f59e0b !important; }
+
+/* Plus features */
+[data-theme="light"] section.section.plus-features { background: #f9f9f9 !important; }
+[data-theme="light"] .plus-feature-card {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+}
+[data-theme="light"] .plus-feature-card h4 { color: #1a202c !important; }
+[data-theme="light"] .plus-feature-card p  { color: #666 !important; }
+
+/* ── Comparison table ─────────────────────────────────────────────────────── */
+[data-theme="light"] .comparison-table { background: #fff !important; color: #333 !important; }
+[data-theme="light"] .comparison-table th { background: #f9f9f9 !important; color: #1a202c !important; }
+[data-theme="light"] .comparison-table td,
+[data-theme="light"] .comparison-table td.text-center {
+  background: #fff !important;
+  color: #555 !important;
+  border-color: #e5e7eb !important;
+}
+
+/* ── Press quotes ─────────────────────────────────────────────────────────── */
+[data-theme="light"] .press-quote-card,
+[data-theme="light"] .press-quote-card.bg-white {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  color: #555 !important;
+}
+
+/* ── Forms ────────────────────────────────────────────────────────────────── */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background: #fff !important;
+  color: #333 !important;
+  border-color: #ccc !important;
+}
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder { color: #9ca3af !important; }
+
+/* ── Footer — keep dark (brand choice) ───────────────────────────────────── */
+[data-theme="light"] .site-footer,
+[data-theme="light"] footer {
+  background: #1a1a2e !important;
+  color: rgba(255,255,255,0.70) !important;
+}
+[data-theme="light"] .site-footer a { color: rgba(255,255,255,0.60) !important; }
+[data-theme="light"] .site-footer .footer-logo img { filter: invert(0) brightness(1) !important; }
+
+/* ── Links ────────────────────────────────────────────────────────────────── */
+[data-theme="light"] a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(.theme-opt):not(.theme-toggle-btn) {
+  color: #009ec5 !important;
+}
+[data-theme="light"] a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(.theme-opt):not(.theme-toggle-btn):hover {
+  color: #FA3399 !important;
+}
+
+/* ── Utilities ────────────────────────────────────────────────────────────── */
+[data-theme="light"] .text-muted  { color: #6c757d !important; }
+[data-theme="light"] .text-primary { color: #FA3399 !important; }
+
+/* ── Theme selector ───────────────────────────────────────────────────────── */
+[data-theme="light"] .theme-toggle-btn {
+  border-color: rgba(250,51,153,0.45);
+  background: rgba(250,51,153,0.08);
+  color: #FA3399;
+}
+[data-theme="light"] .theme-opt {
+  border-color: rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.03);
+  color: #666;
+}
+[data-theme="light"] .theme-opt:hover,
+[data-theme="light"] .theme-opt.active {
+  background: rgba(250,51,153,0.10) !important;
+  color: #FA3399 !important;
+  border-color: rgba(250,51,153,0.40) !important;
+}
+
+/* ── Image fixes in light mode ────────────────────────────────────────────── */
+/* QR codes: no invert needed in light mode */
+[data-theme="light"] img[src*="qrserver.com"] { filter: none !important; }
+
+/* Console logos: lighter shadow in light mode */
+[data-theme="light"] .service-thumb {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.06) !important;
+}
