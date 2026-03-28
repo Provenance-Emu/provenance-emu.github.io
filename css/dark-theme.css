@@ -1,0 +1,1065 @@
+/* ============================================================
+   PROVENANCE DARK THEME — CSS overrides
+   Loaded after provenance-custom.css via plugins.css in config-dark.toml.
+   Patches all hardcoded colors that SCSS variable swap can't reach.
+
+   Palette:
+     Background:   #0a0a1a / #0d0d1c / #111128
+     Cards:        #111128 / rgba(255,255,255,0.04)
+     Pink primary: #FA3399
+     Purple:       #8000CC
+     Brand blue:   #2e7eed / #0D96F6
+     Brand teal:   #009ec5
+     Border:       rgba(255,255,255,0.08)
+   ============================================================ */
+
+/* ── CSS Custom Properties ─────────────────────────────────────────────────── */
+:root {
+  --primary-gradient:    linear-gradient(135deg, #FA3399 0%, #8000CC 100%);
+  --secondary-gradient:  linear-gradient(135deg, #009ec5 0%, #2e7eed 100%);
+  --success-color:       #10b981;
+  --shadow-sm:           0 2px 8px  rgba(0,0,0,0.45);
+  --shadow-md:           0 4px 16px rgba(0,0,0,0.55);
+  --shadow-lg:           0 8px 32px rgba(0,0,0,0.65);
+  --border-radius:       12px;
+  --transition-smooth:   transform .3s cubic-bezier(.4,0,.2,1),
+                         box-shadow .3s cubic-bezier(.4,0,.2,1),
+                         background-color .3s cubic-bezier(.4,0,.2,1),
+                         opacity .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── Animated grid keyframe (used by hero and CTA) ────────────────────────── */
+@keyframes prov-grid-drift {
+  from { background-position: 0 0; }
+  to   { background-position: 40px 40px; }
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────────── */
+body {
+  background-color: #0a0a1a;
+  color: rgba(255,255,255,0.80);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 { color: #fff !important; }
+p { color: rgba(255,255,255,0.72); }
+
+a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item) {
+  color: #009ec5;
+}
+a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):hover {
+  color: #FA3399;
+}
+
+.text-dark   { color: #fff !important; }
+.text-muted  { color: rgba(255,255,255,0.38) !important; }
+.text-gray   { color: rgba(255,255,255,0.55) !important; }
+.text-color, .text-body { color: rgba(255,255,255,0.72) !important; }
+
+hr, .border, .border-top, .border-bottom {
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Navigation ──────────────────────────────────────────────────────────────── */
+.main-nav {
+  background: rgba(10,10,26,0.96) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* White logo → white (already white usually, but make sure) */
+.navbar-brand img {
+  filter: brightness(0) invert(1);
+}
+
+.navbar-toggler-icon,
+.navbar-toggler .tf-ion-android-menu {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* ── Hero / Banner ────────────────────────────────────────────────────────────── */
+.gradient-banner {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0033 50%, #0d001f 100%) !important;
+}
+
+/* Override the circular blob ::before with the animated grid */
+.gradient-banner::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  bottom: auto !important;
+  left: 0 !important;
+  transform: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  background-image:
+    linear-gradient(rgba(250,51,153,0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250,51,153,0.09) 1px, transparent 1px) !important;
+  background-size: 40px 40px !important;
+  animation: prov-grid-drift 22s linear infinite !important;
+}
+
+/* Radial glow top-right */
+.gradient-banner::after {
+  content: '';
+  position: absolute;
+  top: -180px; right: -180px;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250,51,153,0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.gradient-banner h1,
+.gradient-banner h2,
+.gradient-banner p,
+.gradient-banner .lead {
+  color: #fff !important;
+}
+
+/* ── Generic section backgrounds ─────────────────────────────────────────────── */
+section                   { background-color: #0d0d1c; }
+section:nth-child(even)   { background-color: #0a0a1a; }
+
+.bg-white  { background-color: #0a0a1a !important; }
+.bg-light  { background-color: #0d0d1c !important; }
+.bg-gray,
+.bg-light-gray { background-color: #111128 !important; }
+.bg-blue   { background: linear-gradient(135deg,#0f0020 0%,#1a0033 100%) !important; }
+.bg-dark   { background: #080814 !important; }
+
+/* ── Social Proof ───────────────────────────────────────────────────────────── */
+.social-proof-item {
+  padding: 2rem 1rem;
+  border-radius: 12px;
+}
+
+.social-proof-item:hover {
+  background: rgba(250,51,153,0.05) !important;
+  transform: translateY(-4px);
+}
+
+.social-proof-item h2 {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.social-proof-item p,
+.social-proof-item span {
+  color: rgba(255,255,255,0.55) !important;
+}
+
+/* ── Why Provenance / Feature Items ──────────────────────────────────────────── */
+.why-provenance { background-color: #0a0a1a; }
+
+.why-item:hover {
+  background: #111128 !important;
+  box-shadow: 0 8px 32px rgba(250,51,153,0.10) !important;
+}
+
+.why-item .icon-box {
+  background: linear-gradient(135deg,rgba(250,51,153,0.15) 0%,rgba(128,0,204,0.15) 100%) !important;
+}
+
+.why-item:hover .icon-box {
+  background: linear-gradient(135deg,#FA3399,#8000CC) !important;
+}
+
+.why-item h4       { color: #fff !important; }
+.why-item p        { color: rgba(255,255,255,0.60) !important; }
+
+/* ── Service Items ───────────────────────────────────────────────────────────── */
+.service-item {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  color: rgba(255,255,255,0.72);
+}
+
+.service-item:hover {
+  border-color: rgba(250,51,153,0.30) !important;
+  box-shadow: 0 8px 32px rgba(250,51,153,0.10) !important;
+}
+
+.service-item h4, .service-item h3 { color: #fff !important; }
+.service-item p { color: rgba(255,255,255,0.60) !important; }
+
+/* Service icons — keep gradient text */
+.service-item i,
+.icon-wrap i {
+  background: linear-gradient(135deg, #FA3399, #8000CC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── tvOS Showcase ───────────────────────────────────────────────────────────── */
+.tvos-showcase {
+  background-color: #111128 !important;
+}
+
+.tvos-feature-card {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(255,255,255,0.09) !important;
+}
+
+.tvos-feature-card:hover {
+  background: rgba(250,51,153,0.06) !important;
+  border-color: rgba(250,51,153,0.30) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4) !important;
+}
+
+/* ── Comparison Table ─────────────────────────────────────────────────────────── */
+.comparison-section { background-color: #0d0d1c; }
+
+.comparison-table {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.comparison-table th {
+  background: rgba(250,51,153,0.10) !important;
+  color: #fff !important;
+  border-bottom: 1px solid rgba(250,51,153,0.25) !important;
+}
+
+.comparison-table td {
+  color: rgba(255,255,255,0.72) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+.comparison-table tbody tr:hover {
+  background-color: rgba(250,51,153,0.05) !important;
+}
+
+/* ── Banner Feature Cards ─────────────────────────────────────────────────────── */
+.rounded.shadow {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.rounded.shadow:hover {
+  border-color: rgba(250,51,153,0.30) !important;
+  box-shadow: 0 12px 40px rgba(250,51,153,0.12) !important;
+}
+
+/* ── Feature Content Blocks ──────────────────────────────────────────────────── */
+.feature-content h2 { color: #fff !important; }
+.feature-content p  { color: rgba(255,255,255,0.65) !important; }
+
+.testimonial .meta li { color: #FA3399 !important; }
+
+/* ── Buttons — Retrowave Pill ─────────────────────────────────────────────────── */
+
+/* Primary: pink→purple gradient pill */
+.btn-main,
+.btn-main-md,
+a.btn-main, a.btn-main-md {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+  border: none !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+}
+
+.btn-main:hover,
+.btn-main-md:hover {
+  filter: brightness(1.12);
+  color: #fff !important;
+}
+
+/* The App Store CTA button uses these combined classes */
+.btn-main-md.btn-lg {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+  border-radius: 50px !important;
+}
+
+.btn-main-md.btn-lg::before {
+  background: linear-gradient(135deg, #ff56aa 0%, #9900e6 100%) !important;
+}
+
+/* Secondary / outline: brand teal pill */
+.btn-default,
+.btn-transparent,
+a.btn-default, a.btn-transparent {
+  background: transparent !important;
+  border: 1.5px solid #009ec5 !important;
+  color: #009ec5 !important;
+  border-radius: 50px !important;
+}
+
+.btn-default:hover,
+.btn-transparent:hover {
+  background: #009ec5 !important;
+  color: #fff !important;
+}
+
+/* Bootstrap btn-primary → pink gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+  border-color: transparent !important;
+  border-radius: 50px !important;
+}
+
+.btn-primary:hover { filter: brightness(1.12); }
+
+/* Bootstrap btn-outline-primary → teal */
+.btn-outline-primary {
+  border-color: #009ec5 !important;
+  color: #009ec5 !important;
+  border-radius: 50px !important;
+}
+
+.btn-outline-primary:hover {
+  background: #009ec5 !important;
+  color: #fff !important;
+  border-color: #009ec5 !important;
+}
+
+/* ── CTA Section ──────────────────────────────────────────────────────────────── */
+.call-to-action-app,
+.call-to-action-app.bg-blue {
+  background: linear-gradient(135deg, #0f0020 0%, #1a0033 100%) !important;
+  border-top: 1px solid rgba(250,51,153,0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.call-to-action-app::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(250,51,153,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250,51,153,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.call-to-action-app h2,
+.call-to-action-app h3,
+.call-to-action-app p    { color: #fff !important; }
+
+/* ── Footer ───────────────────────────────────────────────────────────────────── */
+footer, #footer {
+  background: #080814 !important;
+  border-top: 1px solid rgba(250,51,153,0.18) !important;
+}
+
+footer h3, footer h4, footer h5 { color: #fff !important; }
+footer p, footer li            { color: rgba(255,255,255,0.45) !important; }
+footer a                        { color: rgba(255,255,255,0.55) !important; }
+footer a:hover                  { color: #FA3399 !important; }
+
+/* Social icon circles */
+.footer-social-icon a {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.footer-social-icon a:hover {
+  background: #FA3399 !important;
+  border-color: #FA3399 !important;
+}
+
+/* ── Blog ─────────────────────────────────────────────────────────────────────── */
+.blog-item {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  transition: var(--transition-smooth);
+}
+
+.blog-item:hover {
+  border-color: rgba(250,51,153,0.30) !important;
+  box-shadow: 0 8px 32px rgba(250,51,153,0.08) !important;
+  transform: translateY(-3px);
+}
+
+.blog-item h3, .blog-item h4 { color: #fff !important; }
+.blog-item p                  { color: rgba(255,255,255,0.60) !important; }
+
+/* Blog sidebar */
+.widget-title       { color: #fff !important; }
+.widget             { background: #111128; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.25rem; }
+.tag-item a         { background: rgba(250,51,153,0.12); color: #FA3399; border-radius: 6px; border: 1px solid rgba(250,51,153,0.25); }
+.tag-item a:hover   { background: #FA3399; color: #fff; }
+
+/* Blog post page */
+article, .blog-post, .post-content {
+  background: #0d0d1c;
+  color: rgba(255,255,255,0.80);
+}
+
+blockquote {
+  border-left: 3px solid #FA3399 !important;
+  background: rgba(250,51,153,0.05) !important;
+  color: rgba(255,255,255,0.75) !important;
+  border-radius: 0 8px 8px 0;
+}
+
+code {
+  background: #1a1a33 !important;
+  color: #FA3399 !important;
+  border: 1px solid rgba(250,51,153,0.20) !important;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+pre {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 8px;
+}
+
+pre code {
+  background: transparent !important;
+  border: none !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* Disqus dark — best effort (loads in iframe) */
+#disqus_thread { filter: invert(0.9) hue-rotate(180deg); }
+
+/* ── Plus Page ────────────────────────────────────────────────────────────────── */
+.plus-hero {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0033 50%, #0a0a1a 100%) !important;
+}
+
+.plus-feature-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.plus-feature-card:hover {
+  border-color: rgba(250,51,153,0.35) !important;
+  box-shadow: 0 8px 32px rgba(250,51,153,0.10) !important;
+}
+
+/* Plus page tiers */
+.plus-tier-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Press Page ───────────────────────────────────────────────────────────────── */
+.press-hero    { background: linear-gradient(135deg,#0a0a1a,#1a0033) !important; }
+.press-section { background: #0d0d1c !important; }
+
+.press-asset-card,
+.press-fact-card,
+.press-quote-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.press-nav {
+  background: rgba(10,10,26,0.95) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── FAQ / Static Pages ───────────────────────────────────────────────────────── */
+.faq-item,
+.accordion-item {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.accordion-button,
+.faq-question {
+  background: #111128 !important;
+  color: #fff !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(250,51,153,0.08) !important;
+  color: #FA3399 !important;
+}
+
+.accordion-body,
+.faq-answer {
+  background: #0d0d1c !important;
+  color: rgba(255,255,255,0.72) !important;
+}
+
+/* ── Donate Page ──────────────────────────────────────────────────────────────── */
+.support-card {
+  background: rgba(255,255,255,0.03) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Guides / Compare / Systems pages ────────────────────────────────────────── */
+.guide-card,
+.compare-card,
+.system-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.guide-card:hover,
+.compare-card:hover,
+.system-card:hover {
+  border-color: rgba(250,51,153,0.30) !important;
+}
+
+/* ── Tables (generic) ────────────────────────────────────────────────────────── */
+table { color: rgba(255,255,255,0.80); }
+
+thead th {
+  background: rgba(250,51,153,0.08) !important;
+  color: #fff !important;
+  border-bottom: 2px solid rgba(250,51,153,0.25) !important;
+}
+
+tbody tr:nth-child(even) { background: rgba(255,255,255,0.02) !important; }
+tbody tr:hover            { background: rgba(250,51,153,0.05) !important; }
+
+td, th { border-color: rgba(255,255,255,0.07) !important; }
+
+/* ── Forms ───────────────────────────────────────────────────────────────────── */
+.form-control, input[type="text"], input[type="email"],
+input[type="search"], textarea, select {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  color: rgba(255,255,255,0.85) !important;
+  border-radius: 8px !important;
+}
+
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.28) !important;
+}
+
+.form-control:focus,
+input:focus,
+textarea:focus {
+  border-color: #FA3399 !important;
+  box-shadow: 0 0 0 3px rgba(250,51,153,0.15) !important;
+  background: #1a1a33 !important;
+}
+
+/* ── Badges / Tags ───────────────────────────────────────────────────────────── */
+.badge:not([class*='bg-']):not(.best-value):not(.badge-pill-featured) {
+  background: rgba(250,51,153,0.14) !important;
+  color: #FA3399 !important;
+  border: 1px solid rgba(250,51,153,0.28) !important;
+}
+
+/* ── Pagination ──────────────────────────────────────────────────────────────── */
+.pagination .page-link {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: rgba(255,255,255,0.75) !important;
+}
+
+.pagination .page-item.active .page-link {
+  background: #FA3399 !important;
+  border-color: #FA3399 !important;
+  color: #fff !important;
+}
+
+.pagination .page-link:hover {
+  background: rgba(250,51,153,0.10) !important;
+  color: #FA3399 !important;
+}
+
+/* ── Status page (keep functional, no fluff) ──────────────────────────────────── */
+/* Status page already has no data-aos; just darken the backgrounds */
+.status-section, .status-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Licenses page search ──────────────────────────────────────────────────────── */
+#licenseSearch {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.10) !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar              { width: 8px; }
+::-webkit-scrollbar-track        { background: #0a0a1a; }
+::-webkit-scrollbar-thumb        { background: rgba(250,51,153,0.35); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover  { background: #FA3399; }
+
+/* ============================================================
+   BUG FIXES — Round 2
+   ============================================================ */
+
+/* ── Active nav: compact pill — flex-centers a shorter nav-link within the full-height nav-item ── */
+.main-nav .nav-item.active {
+  display: flex !important;
+  align-items: center !important;      /* vertically centers the compact nav-link */
+}
+
+.main-nav .nav-item.active .nav-link {
+  background: rgba(250,51,153,0.14) !important;
+  color: #FA3399 !important;
+  border-radius: 22px !important;
+  border: 1px solid rgba(250,51,153,0.40) !important;
+  line-height: 22px !important;        /* ~50% of the 45px base line-height */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* ── Dropdown visibility fix (backdrop-filter stacking context) ───────────── */
+.main-nav,
+.navbar { overflow: visible !important; }
+
+.main-nav .container,
+.navbar .container { overflow: visible !important; }
+
+.navbar-nav .dropdown-menu {
+  position: absolute !important;
+  z-index: 9999 !important;
+}
+
+/* Force hover dropdown open — overrides any !important from other rules */
+.main-nav .dropdown-slide:hover .dropdown-menu {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ── .block — testimonials, footer wrapper, donate links ─────────────────── */
+/* Generic dark background; donate links have inline style="background:#fff"  */
+/* which only !important can override                                         */
+.block {
+  background: transparent;           /* footer block stays transparent */
+}
+
+/* Testimonial / carousel blocks specifically */
+.section.testimonial .block,
+.testimonial-slider .block {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+}
+
+.testimonial .block p,
+.testimonial-slider .block p  { color: rgba(255,255,255,0.85) !important; }
+.testimonial .block cite,
+.testimonial-slider .block cite { color: rgba(255,255,255,0.55) !important; font-style: normal; }
+
+/* Donate link rows (inline background:#fff) */
+a.block,
+.donate-links a.block {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+}
+
+a.block:hover {
+  background: rgba(250,51,153,0.07) !important;
+  border-color: rgba(250,51,153,0.30) !important;
+  color: #fff !important;
+}
+
+a.block .font-weight-bold { color: #fff !important; }
+a.block .text-muted       { color: rgba(255,255,255,0.45) !important; }
+a.block i                  { opacity: 0.85; }
+
+/* ── Blog preview cards (homepage recent posts) ──────────────────────────── */
+.blog-card {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.blog-card-body { background: transparent !important; }
+
+.blog-card-title a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.blog-card-title a:hover { color: #FA3399 !important; }
+
+.blog-card-summary {
+  color: rgba(255,255,255,0.60) !important;
+}
+
+.blog-author-name      { color: rgba(255,255,255,0.55) !important; }
+.blog-meta span        { color: rgba(255,255,255,0.45) !important; }
+.blog-meta-sep         { color: rgba(255,255,255,0.25) !important; }
+
+.blog-tag {
+  background: rgba(250,51,153,0.15) !important;
+  color: #FA3399 !important;
+  border: 1px solid rgba(250,51,153,0.28) !important;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* "View All Posts" outline button in blog section */
+.btn-outline-primary {
+  border-color: #FA3399 !important;
+  color: #FA3399 !important;
+  border-radius: 50px !important;
+}
+.btn-outline-primary:hover {
+  background: #FA3399 !important;
+  color: #fff !important;
+}
+
+/* ── Comparison table — override inline background on Provenance column ───── */
+/* td has style="background-color:#f8f9ff" — only !important wins             */
+.comparison-table td {
+  background-color: #111128 !important;
+  color: rgba(255,255,255,0.80) !important;
+}
+
+.comparison-table td.text-center {
+  background-color: rgba(250,51,153,0.05) !important;
+}
+
+.comparison-table tr td:first-child {
+  background-color: #111128 !important;
+}
+
+/* Provenance column header: keep pink accent instead of blue */
+.comparison-table th[style*="background-color"] {
+  background: rgba(250,51,153,0.25) !important;
+  color: #fff !important;
+}
+
+/* ── Press quotes (bg-white class + inline border-top:#eee) ─────────────── */
+.press-quote-card,
+.press-quote-card.bg-white {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.press-quote-icon { color: #FA3399 !important; }
+
+.press-quote-text {
+  color: rgba(255,255,255,0.72) !important;
+  font-style: italic;
+}
+
+/* Inline style="border-top:1px solid #eee" needs !important */
+.press-quote-source {
+  border-top: 1px solid rgba(255,255,255,0.10) !important;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+}
+
+.press-quote-source a { color: #FA3399 !important; font-weight: 700; }
+
+/* Bootstrap .text-primary override → pink */
+.text-primary { color: #FA3399 !important; }
+
+/* ── Footer logo (dark PNG → invert to white) ────────────────────────────── */
+footer img[alt="footer-logo"],
+.footer-main img[alt="footer-logo"] {
+  filter: brightness(0) invert(0.85) !important;
+}
+
+/* ── Section backgrounds — beat Bootstrap with !important ────────────────── */
+section.section,
+div.section {
+  background-color: #0d0d1c !important;
+}
+
+section.section.bg-white,
+section.section.bg-light,
+div.section.bg-white,
+div.section.bg-light {
+  background-color: #0a0a1a !important;
+}
+
+section.section.bg-gray,
+div.section.bg-gray {
+  background-color: #111128 !important;
+}
+
+section.section.gradient-banner,
+div.section.gradient-banner {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0033 50%, #0d001f 100%) !important;
+}
+
+section.section.why-provenance { background-color: #0a0a1a !important; }
+section.section.homepage-blog  { background-color: #111128 !important; }
+section.section.plus-features  { background-color: #0d0d1c !important; }
+section.section.comparison-section { background-color: #0d0d1c !important; }
+section.section.press-quotes   { background-color: #0a0a1a !important; }
+
+/* ── Service items — hardcoded heading/body colors ───────────────────────── */
+.service-item h3 { color: #fff !important; }
+.service-item p  { color: rgba(255,255,255,0.60) !important; }
+
+/* ── Blog single — author box ────────────────────────────────────────────── */
+.blog-single .about-author,
+.about-author {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+}
+
+.about-author h2 {
+  color: rgba(250,51,153,0.90) !important;
+  border-bottom-color: rgba(255,255,255,0.08) !important;
+}
+
+.about-author p { color: rgba(255,255,255,0.70) !important; }
+
+/* ── Social proof numbers — fix Bootstrap text-primary color ─────────────── */
+.social-proof-item .text-primary,
+.social-proof-item h2.text-primary {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.social-proof-item h5 { color: rgba(255,255,255,0.85) !important; }
+.social-proof-item .text-muted { color: rgba(255,255,255,0.42) !important; }
+
+/* ── Focus ring → pink ───────────────────────────────────────────────────── */
+.btn:focus, a:focus { outline-color: rgba(250,51,153,0.6) !important; }
+
+/* ============================================================
+   BUG FIXES — Round 3
+   ============================================================ */
+
+/* ── Plus pricing cards ─────────────────────────────────────────────────── */
+.plus-pricing,
+section.section.plus-pricing {
+  background: #0d0d1c !important;
+}
+
+.plus-pricing-card {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  border-radius: 12px !important;
+}
+
+.plus-pricing-card:hover {
+  border-color: rgba(250,51,153,0.35) !important;
+  box-shadow: 0 12px 40px rgba(250,51,153,0.12) !important;
+}
+
+.plus-pricing-highlight {
+  border-color: rgba(250,51,153,0.50) !important;
+  box-shadow: 0 4px 24px rgba(250,51,153,0.15) !important;
+}
+
+.plus-pricing-highlight:hover {
+  border-color: #FA3399 !important;
+}
+
+.plus-pricing-badge {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+}
+
+.plus-pricing-name        { color: #fff !important; }
+.plus-pricing-description { color: rgba(255,255,255,0.60) !important; }
+.plus-price-period        { color: rgba(255,255,255,0.45) !important; }
+
+/* Price amount: keep gradient text (--primary-gradient is now pink/purple) */
+.plus-price-amount {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Plus column header pill */
+.plus-column-header {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+}
+
+/* ── Plus comparison table — minus/check icons ──────────────────────────── */
+.plus-comparison-table { background: #111128 !important; }
+
+.plus-comparison-table thead th {
+  background: #1a1a33 !important;
+  color: #fff !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.plus-comparison-table tbody td {
+  background: transparent !important;
+  color: rgba(255,255,255,0.80) !important;
+  border-color: rgba(255,255,255,0.07) !important;
+}
+
+.plus-exclusive-row {
+  background: rgba(250,51,153,0.04) !important;
+}
+
+.plus-exclusive-row:hover {
+  background: rgba(250,51,153,0.08) !important;
+}
+
+/* Minus icon: dark circle, dim color */
+.plus-dash {
+  background: rgba(255,255,255,0.06) !important;
+  color: rgba(255,255,255,0.28) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+}
+
+/* Check (free tier): green tint */
+.plus-check {
+  background: rgba(16,185,129,0.12) !important;
+  color: #10b981 !important;
+}
+
+/* Check (plus tier): pink/purple */
+.plus-check-gold {
+  background: rgba(250,51,153,0.12) !important;
+  color: #FA3399 !important;
+}
+
+/* ── FAQ — question links + answer text ─────────────────────────────────── */
+/* Main FAQ page wraps in .block.shadow */
+.faq .block,
+section.faq .block {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+}
+
+.faq-item-title h2       { color: rgba(255,255,255,0.70) !important; font-size: 1rem; }
+
+/* Question link — hardcoded #1a202c in provenance-custom.css */
+.item-link a,
+.faq .item-link a,
+.plus-faq .item-link a {
+  color: #FA3399 !important;
+  border-bottom-color: rgba(255,255,255,0.07) !important;
+}
+
+.item-link a:hover,
+.faq .item-link a:hover,
+.plus-faq .item-link a:hover {
+  color: #fff !important;
+}
+
+/* Answer text — hardcoded #4a5568 */
+.accordion-block p,
+.faq .accordion-block p,
+.plus-faq .accordion-block p {
+  color: rgba(255,255,255,0.72) !important;
+}
+
+/* Plus FAQ block */
+.plus-faq .block,
+section.plus-faq .block {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+}
+
+/* ── Blog list — featured card ──────────────────────────────────────────── */
+.blog-featured,
+section.section.blog-featured {
+  background: #0a0a1a !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+.blog-featured-card {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
+}
+
+/* Title: override hardcoded #1a202c — h2 general rule has !important but
+   .blog-featured-title { color:#1a202c } has higher specificity */
+.blog-featured-title,
+h2.blog-featured-title      { color: #fff !important; }
+.blog-featured-title a      { color: #fff !important; }
+.blog-featured-title a:hover { color: #FA3399 !important; }
+
+.blog-featured-summary { color: rgba(255,255,255,0.65) !important; }
+
+.blog-grid-heading {
+  color: rgba(255,255,255,0.40) !important;
+  border-bottom-color: rgba(255,255,255,0.08) !important;
+}
+
+/* btn-main-sm (Read More button on featured post) */
+.btn-main-sm {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50px !important;
+}
+
+.btn-main-sm:hover { filter: brightness(1.12); color: #fff !important; }
+
+/* Blog accent bars: update release to pink/purple, keep dev as amber */
+.blog-accent-release {
+  background: linear-gradient(90deg, #FA3399 0%, #8000CC 100%) !important;
+}
+
+/* ── Plus feature section bg (hardcoded background:#fff) ───────────────── */
+.plus-features,
+section.section.plus-features {
+  background: #0d0d1c !important;
+}
+
+.plus-feature-card {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.plus-feature-highlight {
+  border-color: rgba(250,51,153,0.30) !important;
+  background: rgba(250,51,153,0.05) !important;
+}
+
+.plus-feature-card h4 { color: #fff !important; }
+.plus-feature-card p  { color: rgba(255,255,255,0.62) !important; }
+
+.plus-feature-icon {
+  background: linear-gradient(135deg,rgba(250,51,153,0.12) 0%,rgba(128,0,204,0.12) 100%) !important;
+}
+
+.plus-feature-card:hover .plus-feature-icon {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+}
+
+/* ============================================================
+   IMAGE FIXES — dark background compatibility
+   ============================================================ */
+
+/* QR codes (dynamically generated, always white-bg black code):
+   invert → white modules on black bg, black bg blends into dark site */
+img[src*="qrserver.com"] {
+  filter: invert(1) !important;
+  border-radius: 8px !important;
+}
+
+/* App Store / AltStore / SideStore badges: subtle border already in SVG,
+   just ensure no extra box-shadow from theme overrides */
+.hero-badges img,
+img[src*="badges/"] {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Console logos collage (white-bg JPG/WebP): style as an intentional
+   white card so it looks designed rather than broken */
+.service-thumb {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.07) !important;
+  display: inline-block !important;
+}
+
+.service-thumb-img {
+  display: block !important;
+}
