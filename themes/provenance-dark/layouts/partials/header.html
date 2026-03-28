@@ -1,0 +1,37 @@
+{{- $currentPage := . -}}
+<nav class="navbar main-nav navbar-expand-lg p-0">
+  <div class="container">
+    <a class="navbar-brand" href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo | absURL }}" alt="logo" width="126" height="18" decoding="async"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="tf-ion-android-menu"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{- $homeActive := $currentPage.IsHome -}}
+        <li class="nav-item{{ if $homeActive }} active{{ end }}">
+          <a class="nav-link" href="{{ .Site.BaseURL }}">{{ with .Site.Params.Home }} {{ . }} {{ end }}</a>
+        </li>
+        {{ range .Site.Menus.main }}
+        {{- $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
+        {{ if .HasChildren }}
+        <li class="nav-item dropdown dropdown-slide{{ if $isActive }} active{{ end }}">
+          <a class="nav-link" href="#" data-toggle="dropdown">{{ .Name }}
+            <span><i class="tf-ion-ios-arrow-down"></i></span>
+          </a>
+          <div class="dropdown-menu">
+            {{ range .Children }}
+            <a class="dropdown-item" href="{{ .URL }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Name }}</a>
+            {{ end }}
+          </div>
+        </li>
+        {{ else }}
+        <li class="nav-item{{ if $isActive }} active{{ end }}">
+          <a class="nav-link" href="{{ .URL }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Pre | safeHTML }}{{ .Name }}</a>
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -828,3 +828,205 @@ section.section.press-quotes   { background-color: #0a0a1a !important; }
 
 /* ── Focus ring → pink ───────────────────────────────────────────────────── */
 .btn:focus, a:focus { outline-color: rgba(250,51,153,0.6) !important; }
+
+/* ============================================================
+   BUG FIXES — Round 3
+   ============================================================ */
+
+/* ── Plus pricing cards ─────────────────────────────────────────────────── */
+.plus-pricing,
+section.section.plus-pricing {
+  background: #0d0d1c !important;
+}
+
+.plus-pricing-card {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  border-radius: 12px !important;
+}
+
+.plus-pricing-card:hover {
+  border-color: rgba(250,51,153,0.35) !important;
+  box-shadow: 0 12px 40px rgba(250,51,153,0.12) !important;
+}
+
+.plus-pricing-highlight {
+  border-color: rgba(250,51,153,0.50) !important;
+  box-shadow: 0 4px 24px rgba(250,51,153,0.15) !important;
+}
+
+.plus-pricing-highlight:hover {
+  border-color: #FA3399 !important;
+}
+
+.plus-pricing-badge {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+}
+
+.plus-pricing-name        { color: #fff !important; }
+.plus-pricing-description { color: rgba(255,255,255,0.60) !important; }
+.plus-price-period        { color: rgba(255,255,255,0.45) !important; }
+
+/* Price amount: keep gradient text (--primary-gradient is now pink/purple) */
+.plus-price-amount {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Plus column header pill */
+.plus-column-header {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+}
+
+/* ── Plus comparison table — minus/check icons ──────────────────────────── */
+.plus-comparison-table { background: #111128 !important; }
+
+.plus-comparison-table thead th {
+  background: #1a1a33 !important;
+  color: #fff !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.plus-comparison-table tbody td {
+  background: transparent !important;
+  color: rgba(255,255,255,0.80) !important;
+  border-color: rgba(255,255,255,0.07) !important;
+}
+
+.plus-exclusive-row {
+  background: rgba(250,51,153,0.04) !important;
+}
+
+.plus-exclusive-row:hover {
+  background: rgba(250,51,153,0.08) !important;
+}
+
+/* Minus icon: dark circle, dim color */
+.plus-dash {
+  background: rgba(255,255,255,0.06) !important;
+  color: rgba(255,255,255,0.28) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+}
+
+/* Check (free tier): green tint */
+.plus-check {
+  background: rgba(16,185,129,0.12) !important;
+  color: #10b981 !important;
+}
+
+/* Check (plus tier): pink/purple */
+.plus-check-gold {
+  background: rgba(250,51,153,0.12) !important;
+  color: #FA3399 !important;
+}
+
+/* ── FAQ — question links + answer text ─────────────────────────────────── */
+/* Main FAQ page wraps in .block.shadow */
+.faq .block,
+section.faq .block {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+}
+
+.faq-item-title h2       { color: rgba(255,255,255,0.70) !important; font-size: 1rem; }
+
+/* Question link — hardcoded #1a202c in provenance-custom.css */
+.item-link a,
+.faq .item-link a,
+.plus-faq .item-link a {
+  color: #FA3399 !important;
+  border-bottom-color: rgba(255,255,255,0.07) !important;
+}
+
+.item-link a:hover,
+.faq .item-link a:hover,
+.plus-faq .item-link a:hover {
+  color: #fff !important;
+}
+
+/* Answer text — hardcoded #4a5568 */
+.accordion-block p,
+.faq .accordion-block p,
+.plus-faq .accordion-block p {
+  color: rgba(255,255,255,0.72) !important;
+}
+
+/* Plus FAQ block */
+.plus-faq .block,
+section.plus-faq .block {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+}
+
+/* ── Blog list — featured card ──────────────────────────────────────────── */
+.blog-featured,
+section.section.blog-featured {
+  background: #0a0a1a !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+.blog-featured-card {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
+}
+
+/* Title: override hardcoded #1a202c — h2 general rule has !important but
+   .blog-featured-title { color:#1a202c } has higher specificity */
+.blog-featured-title,
+h2.blog-featured-title      { color: #fff !important; }
+.blog-featured-title a      { color: #fff !important; }
+.blog-featured-title a:hover { color: #FA3399 !important; }
+
+.blog-featured-summary { color: rgba(255,255,255,0.65) !important; }
+
+.blog-grid-heading {
+  color: rgba(255,255,255,0.40) !important;
+  border-bottom-color: rgba(255,255,255,0.08) !important;
+}
+
+/* btn-main-sm (Read More button on featured post) */
+.btn-main-sm {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50px !important;
+}
+
+.btn-main-sm:hover { filter: brightness(1.12); color: #fff !important; }
+
+/* Blog accent bars: update release to pink/purple, keep dev as amber */
+.blog-accent-release {
+  background: linear-gradient(90deg, #FA3399 0%, #8000CC 100%) !important;
+}
+
+/* ── Plus feature section bg (hardcoded background:#fff) ───────────────── */
+.plus-features,
+section.section.plus-features {
+  background: #0d0d1c !important;
+}
+
+.plus-feature-card {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.plus-feature-highlight {
+  border-color: rgba(250,51,153,0.30) !important;
+  background: rgba(250,51,153,0.05) !important;
+}
+
+.plus-feature-card h4 { color: #fff !important; }
+.plus-feature-card p  { color: rgba(255,255,255,0.62) !important; }
+
+.plus-feature-icon {
+  background: linear-gradient(135deg,rgba(250,51,153,0.12) 0%,rgba(128,0,204,0.12) 100%) !important;
+}
+
+.plus-feature-card:hover .plus-feature-icon {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+}
