@@ -34,29 +34,39 @@
   to   { background-position: 40px 40px; }
 }
 
-/* ── Base ────────────────────────────────────────────────────────────────────── */
-body {
+/* ── Base — gated so light mode can override cleanly ─────────────────────────── */
+html:not([data-theme="light"]) body {
   background-color: #0a0a1a;
   color: rgba(255,255,255,0.80);
   -webkit-font-smoothing: antialiased;
 }
 
-h1,h2,h3,h4,h5,h6 { color: #fff !important; }
-p { color: rgba(255,255,255,0.72); }
+html:not([data-theme="light"]) h1,
+html:not([data-theme="light"]) h2,
+html:not([data-theme="light"]) h3,
+html:not([data-theme="light"]) h4,
+html:not([data-theme="light"]) h5,
+html:not([data-theme="light"]) h6 { color: #fff !important; }
 
-a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item) {
+html:not([data-theme="light"]) p { color: rgba(255,255,255,0.72); }
+
+html:not([data-theme="light"]) a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item) {
   color: #009ec5;
 }
-a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):hover {
+html:not([data-theme="light"]) a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):hover {
   color: #FA3399;
 }
 
-.text-dark   { color: #fff !important; }
-.text-muted  { color: rgba(255,255,255,0.38) !important; }
-.text-gray   { color: rgba(255,255,255,0.55) !important; }
-.text-color, .text-body { color: rgba(255,255,255,0.72) !important; }
+html:not([data-theme="light"]) .text-dark   { color: #fff !important; }
+html:not([data-theme="light"]) .text-muted  { color: rgba(255,255,255,0.38) !important; }
+html:not([data-theme="light"]) .text-gray   { color: rgba(255,255,255,0.55) !important; }
+html:not([data-theme="light"]) .text-color,
+html:not([data-theme="light"]) .text-body   { color: rgba(255,255,255,0.72) !important; }
 
-hr, .border, .border-top, .border-bottom {
+html:not([data-theme="light"]) hr,
+html:not([data-theme="light"]) .border,
+html:not([data-theme="light"]) .border-top,
+html:not([data-theme="light"]) .border-bottom {
   border-color: rgba(255,255,255,0.08) !important;
 }
 
@@ -119,16 +129,16 @@ hr, .border, .border-top, .border-bottom {
   color: #fff !important;
 }
 
-/* ── Generic section backgrounds ─────────────────────────────────────────────── */
-section                   { background-color: #0d0d1c; }
-section:nth-child(even)   { background-color: #0a0a1a; }
+/* ── Generic section backgrounds — gated ─────────────────────────────────────── */
+html:not([data-theme="light"]) section                 { background-color: #0d0d1c; }
+html:not([data-theme="light"]) section:nth-child(even) { background-color: #0a0a1a; }
 
-.bg-white  { background-color: #0a0a1a !important; }
-.bg-light  { background-color: #0d0d1c !important; }
-.bg-gray,
-.bg-light-gray { background-color: #111128 !important; }
-.bg-blue   { background: linear-gradient(135deg,#0f0020 0%,#1a0033 100%) !important; }
-.bg-dark   { background: #080814 !important; }
+html:not([data-theme="light"]) .bg-white  { background-color: #0a0a1a !important; }
+html:not([data-theme="light"]) .bg-light  { background-color: #0d0d1c !important; }
+html:not([data-theme="light"]) .bg-gray,
+html:not([data-theme="light"]) .bg-light-gray { background-color: #111128 !important; }
+html:not([data-theme="light"]) .bg-blue   { background: linear-gradient(135deg,#0f0020 0%,#1a0033 100%) !important; }
+html:not([data-theme="light"]) .bg-dark   { background: #080814 !important; }
 
 /* ── Social Proof ───────────────────────────────────────────────────────────── */
 .social-proof-item {
@@ -1110,33 +1120,40 @@ img[src*="badges/"] {
 }
 
 .theme-options.open {
-  max-width: 120px;
+  max-width: 240px;   /* wider to fit labels */
   opacity: 1;
 }
 
 .theme-opt {
-  width: 28px;
   height: 28px;
-  border-radius: 50%;
+  border-radius: 14px;        /* pill shape to fit label */
   border: 1px solid rgba(255,255,255,0.15);
   background: rgba(255,255,255,0.05);
   color: rgba(255,255,255,0.55);
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 5px;
+  padding: 0 10px 0 8px;
   font-size: 11px;
   transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
   flex-shrink: 0;
-  padding: 0;
   line-height: 1;
+  white-space: nowrap;
+}
+
+.theme-opt-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .theme-opt:hover {
   background: rgba(250,51,153,0.15);
   color: #FA3399;
   border-color: rgba(250,51,153,0.40);
-  transform: scale(1.12);
+  transform: scale(1.04);
 }
 
 .theme-opt.active {
