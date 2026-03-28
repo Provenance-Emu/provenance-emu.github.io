@@ -1063,3 +1063,86 @@ img[src*="badges/"] {
 .service-thumb-img {
   display: block !important;
 }
+
+/* ============================================================
+   THEME SELECTOR — dark mode styles
+   Light mode overrides live in light-theme.css
+   ============================================================ */
+.theme-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+.theme-toggle-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(250,51,153,0.45);
+  background: rgba(250,51,153,0.10);
+  color: #FA3399;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: background 0.2s, transform 0.15s;
+  flex-shrink: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(250,51,153,0.22);
+  transform: scale(1.08);
+}
+
+.theme-toggle-btn:focus { outline: none; box-shadow: none; }
+
+.theme-options {
+  display: flex;
+  gap: 4px;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.30s cubic-bezier(.4,0,.2,1), opacity 0.20s ease;
+}
+
+.theme-options.open {
+  max-width: 120px;
+  opacity: 1;
+}
+
+.theme-opt {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
+  flex-shrink: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.theme-opt:hover {
+  background: rgba(250,51,153,0.15);
+  color: #FA3399;
+  border-color: rgba(250,51,153,0.40);
+  transform: scale(1.12);
+}
+
+.theme-opt.active {
+  background: rgba(250,51,153,0.20);
+  color: #FA3399;
+  border-color: rgba(250,51,153,0.55);
+}
+
+.theme-opt:focus { outline: none; box-shadow: none; }
