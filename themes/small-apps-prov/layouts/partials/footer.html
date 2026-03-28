@@ -60,3 +60,31 @@
     }
   });
 </script>
+
+{{ "<!-- Theme UI interactions (non-blocking — runs after body is parsed)." | safeHTML }}
+{{ "     The sync FOUC-prevention script in head.html already set data-theme;" | safeHTML }}
+{{ "     this script only wires up the toggle button and option click handlers. -->" | safeHTML }}
+<script data-cfasync="false">
+(function(){
+  var KEY='prov-theme',ICONS={light:'fa-sun',auto:'fa-circle-half-stroke',dark:'fa-moon'};
+  var MQ=window.matchMedia('(prefers-color-scheme:dark)');
+  function sys(){return MQ.matches?'dark':'light';}
+  function resolve(p){return p==='auto'?sys():p;}
+  function applyTheme(p){document.documentElement.setAttribute('data-theme',resolve(p));}
+  function updateUI(p){
+    document.querySelectorAll('.theme-opt').forEach(function(b){b.classList.toggle('active',b.dataset.themeOpt===p);});
+    var ic=document.querySelector('.theme-toggle-icon');
+    if(ic)ic.className='fas '+ICONS[p]+' theme-toggle-icon';
+  }
+  function save(p){localStorage.setItem(KEY,p);applyTheme(p);updateUI(p);}
+  var cur=localStorage.getItem(KEY)||'dark';
+  updateUI(cur);
+  MQ.addEventListener('change',function(){if((localStorage.getItem(KEY)||'dark')==='auto')applyTheme('auto');});
+  var btn=document.getElementById('themeToggleBtn');
+  var opts=document.getElementById('themeOptions');
+  if(!btn||!opts)return;
+  btn.addEventListener('click',function(e){e.stopPropagation();var open=opts.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));});
+  opts.querySelectorAll('.theme-opt').forEach(function(o){o.addEventListener('click',function(e){e.stopPropagation();save(o.dataset.themeOpt);opts.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
+  document.addEventListener('click',function(){opts.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+}());
+</script>

@@ -2070,3 +2070,43 @@ body {
     width: auto;
   }
 }
+
+/* ========================================
+   Content Visibility — off-screen sections
+   Defers layout/paint for sections below the fold until
+   they are close to the viewport, reducing initial render cost.
+   contain-intrinsic-size gives the browser an estimated height
+   so the scrollbar stays stable before sections render.
+   ======================================== */
+.why-provenance {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 550px;
+}
+.service {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+.tvos-showcase {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+.comparison-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+.press-quotes {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+.homepage-blog {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 550px;
+}
+.mockup-carousel {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 650px;
+}
+section.testimonial {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
+}

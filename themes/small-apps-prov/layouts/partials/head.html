@@ -11,14 +11,12 @@
   {{ "<!-- DNS preconnects for external origins -->" | safeHTML }}
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   {{ "<!-- Google Fonts — deferred via media=print; display=swap prevents FOIT; @import removed from SCSS -->" | safeHTML }}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700&display=swap"></noscript>
 
   {{ "<!-- Font Awesome — deferred via media=print -->" | safeHTML }}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.media='all'">
