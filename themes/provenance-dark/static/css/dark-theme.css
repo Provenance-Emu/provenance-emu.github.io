@@ -593,8 +593,9 @@ textarea:focus {
 /* ── Active nav: pill style — pseudo-element so pill height is independent of nav-link height ── */
 .main-nav .nav-item.active .nav-link {
   position: relative !important;
+  z-index: 0 !important;               /* creates stacking context so ::before z-index:-1 stays behind text */
   color: #FA3399 !important;
-  background: transparent !important;  /* pill drawn by ::before */
+  background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
 }
@@ -613,6 +614,7 @@ textarea:focus {
   border: 1px solid rgba(250,51,153,0.40) !important;
   width: auto !important;
   pointer-events: none !important;
+  z-index: -1 !important;              /* behind text (which is inline in this stacking context) */
 }
 
 /* ── Dropdown visibility fix (backdrop-filter stacking context) ───────────── */
