@@ -597,12 +597,10 @@ textarea:focus {
 
 .main-nav .nav-item.active .nav-link {
   background: rgba(250,51,153,0.14) !important;
-  color: #fff !important;
-  border-radius: 20px !important;
-  border: 1px solid rgba(250,51,153,0.38) !important;
-  line-height: 33px !important;
-  padding-top: 4px !important;
-  padding-bottom: 4px !important;
+  color: #FA3399 !important;
+  border-radius: 22px !important;
+  border: 1px solid rgba(250,51,153,0.40) !important;
+  /* no line-height or padding-top/bottom override — keeps 45px height matching other items */
 }
 
 /* ── Dropdown visibility fix (backdrop-filter stacking context) ───────────── */
