@@ -585,3 +585,246 @@ textarea:focus {
 ::-webkit-scrollbar-track        { background: #0a0a1a; }
 ::-webkit-scrollbar-thumb        { background: rgba(250,51,153,0.35); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover  { background: #FA3399; }
+
+/* ============================================================
+   BUG FIXES — Round 2
+   ============================================================ */
+
+/* ── Active nav: pill style (inspired by skins page) ─────────────────────── */
+.main-nav .nav-item.active .nav-link::before {
+  display: none !important;               /* kill the old top-underline */
+}
+
+.main-nav .nav-item.active .nav-link {
+  background: rgba(250,51,153,0.14) !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(250,51,153,0.38) !important;
+  line-height: 33px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+/* ── Dropdown visibility fix (backdrop-filter stacking context) ───────────── */
+.main-nav,
+.navbar { overflow: visible !important; }
+
+.main-nav .container,
+.navbar .container { overflow: visible !important; }
+
+.navbar-nav .dropdown-menu {
+  position: absolute !important;
+  z-index: 9999 !important;
+}
+
+/* Force hover dropdown open — overrides any !important from other rules */
+.main-nav .dropdown-slide:hover .dropdown-menu {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ── .block — testimonials, footer wrapper, donate links ─────────────────── */
+/* Generic dark background; donate links have inline style="background:#fff"  */
+/* which only !important can override                                         */
+.block {
+  background: transparent;           /* footer block stays transparent */
+}
+
+/* Testimonial / carousel blocks specifically */
+.section.testimonial .block,
+.testimonial-slider .block {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+}
+
+.testimonial .block p,
+.testimonial-slider .block p  { color: rgba(255,255,255,0.85) !important; }
+.testimonial .block cite,
+.testimonial-slider .block cite { color: rgba(255,255,255,0.55) !important; font-style: normal; }
+
+/* Donate link rows (inline background:#fff) */
+a.block,
+.donate-links a.block {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+}
+
+a.block:hover {
+  background: rgba(250,51,153,0.07) !important;
+  border-color: rgba(250,51,153,0.30) !important;
+  color: #fff !important;
+}
+
+a.block .font-weight-bold { color: #fff !important; }
+a.block .text-muted       { color: rgba(255,255,255,0.45) !important; }
+a.block i                  { opacity: 0.85; }
+
+/* ── Blog preview cards (homepage recent posts) ──────────────────────────── */
+.blog-card {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.blog-card-body { background: transparent !important; }
+
+.blog-card-title a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.blog-card-title a:hover { color: #FA3399 !important; }
+
+.blog-card-summary {
+  color: rgba(255,255,255,0.60) !important;
+}
+
+.blog-author-name      { color: rgba(255,255,255,0.55) !important; }
+.blog-meta span        { color: rgba(255,255,255,0.45) !important; }
+.blog-meta-sep         { color: rgba(255,255,255,0.25) !important; }
+
+.blog-tag {
+  background: rgba(250,51,153,0.15) !important;
+  color: #FA3399 !important;
+  border: 1px solid rgba(250,51,153,0.28) !important;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* "View All Posts" outline button in blog section */
+.btn-outline-primary {
+  border-color: #FA3399 !important;
+  color: #FA3399 !important;
+  border-radius: 50px !important;
+}
+.btn-outline-primary:hover {
+  background: #FA3399 !important;
+  color: #fff !important;
+}
+
+/* ── Comparison table — override inline background on Provenance column ───── */
+/* td has style="background-color:#f8f9ff" — only !important wins             */
+.comparison-table td {
+  background-color: #111128 !important;
+  color: rgba(255,255,255,0.80) !important;
+}
+
+.comparison-table td.text-center {
+  background-color: rgba(250,51,153,0.05) !important;
+}
+
+.comparison-table tr td:first-child {
+  background-color: #111128 !important;
+}
+
+/* Provenance column header: keep pink accent instead of blue */
+.comparison-table th[style*="background-color"] {
+  background: rgba(250,51,153,0.25) !important;
+  color: #fff !important;
+}
+
+/* ── Press quotes (bg-white class + inline border-top:#eee) ─────────────── */
+.press-quote-card,
+.press-quote-card.bg-white {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.press-quote-icon { color: #FA3399 !important; }
+
+.press-quote-text {
+  color: rgba(255,255,255,0.72) !important;
+  font-style: italic;
+}
+
+/* Inline style="border-top:1px solid #eee" needs !important */
+.press-quote-source {
+  border-top: 1px solid rgba(255,255,255,0.10) !important;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+}
+
+.press-quote-source a { color: #FA3399 !important; font-weight: 700; }
+
+/* Bootstrap .text-primary override → pink */
+.text-primary { color: #FA3399 !important; }
+
+/* ── Footer logo (dark PNG → invert to white) ────────────────────────────── */
+footer img[alt="footer-logo"],
+.footer-main img[alt="footer-logo"] {
+  filter: brightness(0) invert(0.85) !important;
+}
+
+/* ── Section backgrounds — beat Bootstrap with !important ────────────────── */
+section.section,
+div.section {
+  background-color: #0d0d1c !important;
+}
+
+section.section.bg-white,
+section.section.bg-light,
+div.section.bg-white,
+div.section.bg-light {
+  background-color: #0a0a1a !important;
+}
+
+section.section.bg-gray,
+div.section.bg-gray {
+  background-color: #111128 !important;
+}
+
+section.section.gradient-banner,
+div.section.gradient-banner {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0033 50%, #0d001f 100%) !important;
+}
+
+section.section.why-provenance { background-color: #0a0a1a !important; }
+section.section.homepage-blog  { background-color: #111128 !important; }
+section.section.plus-features  { background-color: #0d0d1c !important; }
+section.section.comparison-section { background-color: #0d0d1c !important; }
+section.section.press-quotes   { background-color: #0a0a1a !important; }
+
+/* ── Service items — hardcoded heading/body colors ───────────────────────── */
+.service-item h3 { color: #fff !important; }
+.service-item p  { color: rgba(255,255,255,0.60) !important; }
+
+/* ── Blog single — author box ────────────────────────────────────────────── */
+.blog-single .about-author,
+.about-author {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+}
+
+.about-author h2 {
+  color: rgba(250,51,153,0.90) !important;
+  border-bottom-color: rgba(255,255,255,0.08) !important;
+}
+
+.about-author p { color: rgba(255,255,255,0.70) !important; }
+
+/* ── Social proof numbers — fix Bootstrap text-primary color ─────────────── */
+.social-proof-item .text-primary,
+.social-proof-item h2.text-primary {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.social-proof-item h5 { color: rgba(255,255,255,0.85) !important; }
+.social-proof-item .text-muted { color: rgba(255,255,255,0.42) !important; }
+
+/* ── Focus ring → pink ───────────────────────────────────────────────────── */
+.btn:focus, a:focus { outline-color: rgba(250,51,153,0.6) !important; }
