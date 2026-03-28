@@ -1,0 +1,125 @@
+// ── Provenance Dark — SCSS Overrides ────────────────────────────────────────
+// These rules patch hardcoded values in the base theme SCSS that the
+// $variable swap alone can't reach.
+
+// ── Base ─────────────────────────────────────────────────────────────────────
+body {
+  background-color: #0a0a1a;
+  color: rgba(255,255,255,0.80);
+}
+
+// ── Nav backdrop-blur ─────────────────────────────────────────────────────────
+.main-nav {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+
+  .nav-link { color: rgba(255,255,255,0.85) !important; }
+
+  .nav-item.active .nav-link {
+    color: #FA3399 !important;
+    &::before { background: #FA3399 !important; }
+  }
+
+  .dropdown-menu {
+    background: #1a1a33;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+
+    .dropdown-item {
+      color: rgba(255,255,255,0.80);
+      &:hover {
+        background: rgba(250,51,153,0.1);
+        color: #FA3399;
+      }
+    }
+  }
+}
+
+// ── Hero ─────────────────────────────────────────────────────────────────────
+.gradient-banner {
+  // Base dark gradient — ::before grid is set in dark-theme.css via critical CSS
+  h1, h2, h3, p { color: #fff; }
+}
+
+// ── Section alternation ───────────────────────────────────────────────────────
+.bg-gray, .bg-light-gray { background-color: #111128 !important; }
+.bg-blue { background: linear-gradient(135deg,#0f0020 0%,#1a0033 100%) !important; }
+.bg-white, .bg-light { background-color: #0a0a1a !important; }
+
+// ── Typography ────────────────────────────────────────────────────────────────
+h1,h2,h3,h4,h5,h6 { color: #fff; }
+
+// ── Buttons (retrowave pill style) ────────────────────────────────────────────
+.btn-main, .btn-main-md {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+  border: none !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+
+  &::before {
+    background: linear-gradient(135deg, #ff56aa 0%, #9900e6 100%) !important;
+  }
+
+  &:hover { filter: brightness(1.12); color: #fff !important; }
+}
+
+.btn-default, .btn-transparent, .btn-outline {
+  background: transparent !important;
+  border: 1.5px solid #009ec5 !important;
+  color: #009ec5 !important;
+  border-radius: 50px !important;
+
+  &:hover {
+    background: #009ec5 !important;
+    color: #fff !important;
+  }
+}
+
+// ── CTA section ──────────────────────────────────────────────────────────────
+.call-to-action-app {
+  background: linear-gradient(135deg,#0f0020 0%,#1a0033 100%) !important;
+
+  &.bg-blue {
+    background: linear-gradient(135deg,#0f0020 0%,#1a0033 100%) !important;
+  }
+
+  h2, p, .cta-content, .block-title { color: #fff !important; }
+}
+
+// ── Footer ────────────────────────────────────────────────────────────────────
+footer, #footer {
+  background: #080814 !important;
+  border-top: 1px solid rgba(250,51,153,0.18) !important;
+
+  a { color: rgba(255,255,255,0.55); &:hover { color: #FA3399; } }
+
+  .footer-social-icon a {
+    background: rgba(255,255,255,0.05);
+    &:hover { background: #FA3399; }
+  }
+
+  h3, h4, h5 { color: #fff !important; }
+  p, li { color: rgba(255,255,255,0.45); }
+}
+
+// ── Blog / cards ──────────────────────────────────────────────────────────────
+.blog-item, .post-item {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  &:hover { border-color: rgba(250,51,153,0.3) !important; }
+}
+
+// ── Forms ─────────────────────────────────────────────────────────────────────
+.form-control, input, textarea, select {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.1) !important;
+  color: rgba(255,255,255,0.85) !important;
+
+  &:focus {
+    border-color: #FA3399 !important;
+    box-shadow: 0 0 0 3px rgba(250,51,153,0.15) !important;
+  }
+
+  &::placeholder { color: rgba(255,255,255,0.3) !important; }
+}

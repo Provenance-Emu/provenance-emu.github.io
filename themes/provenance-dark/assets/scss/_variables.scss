@@ -1,0 +1,17 @@
+// ── Provenance Dark Theme Variables ──────────────────────────────────────────
+// Overrides small-apps-prov/_variables.scss via Hugo theme chain merge.
+// Primary: hot pink #FA3399  Secondary: purple #8000CC  Blues: brand palette
+
+$body-color:       #0a0a1a;
+$primary-color:    #FA3399;          // hot pink replaces blue
+$secondary-color:  #0d0d1c;
+$border-color:     rgba(255,255,255,0.1);
+$primary-font:     'Open Sans', sans-serif;
+$secondary-font:   'Lora', serif;
+$text-color:       rgba(255,255,255,0.70);
+$title-color:      #ffffff;
+$gray:             rgba(255,255,255,0.45);
+$light-gray:       #111128;
+$dark:             #ffffff;          // inverted: used as nav link color
+$light:            #0d0d1c;         // inverted: used as nav bg / dropdown hover bg
+$black:            #ffffff;          // inverted: used as dark text

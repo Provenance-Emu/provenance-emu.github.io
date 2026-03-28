@@ -1,0 +1,296 @@
+## config-dark.toml — Provenance dark theme preview config
+## Usage: hugo server --config config-dark.toml
+## Production build: hugo --config config-dark.toml --minify
+
+baseurl = "https://provenance-emu.com"
+title = "Provenance - Free iOS & tvOS Retro Game Emulator"
+
+# provenance-dark sits first → its assets/layouts take precedence over small-apps-prov
+theme = ["provenance-dark", "hugo-social-metadata", "hugo-redirect", "hugo-cloak-email", "small-apps-prov"]
+
+themesDir = "themes"
+languageCode = "en-us"
+summaryLength = "10"
+defaultContentLanguage = "en"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+disqusShortname = "provenance-emu"
+
+[pagination]
+    pagerSize = 6
+
+tsCodefences = true
+pygmentsStyle = "solarized-dark"
+
+[menu]
+
+    [[menu.main]]
+        identifier = "install"
+        name = "Install"
+        url  = "/install/"
+        weight = 5
+
+    [[menu.main]]
+        identifier = "plus"
+        name = "Plus"
+        url  = "/plus/"
+        weight = 10
+
+    [[menu.main]]
+        identifier = "skins"
+        name = "Skins"
+        url  = "https://provenance-emu.com/skins/"
+        weight = 20
+
+    [[menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        url  = "/blog/"
+        weight = 30
+
+    [[menu.main]]
+        identifier = "docs"
+        name = "Docs"
+        url  = "https://wiki.provenance-emu.com/"
+        weight = 40
+
+    [[menu.main]]
+        identifier = "docs-wiki"
+        name = "Wiki"
+        url  = "https://wiki.provenance-emu.com/"
+        parent = "docs"
+        weight = 1
+
+    [[menu.main]]
+        identifier = "docs-faq"
+        name = "FAQ"
+        url  = "https://wiki.provenance-emu.com/faqs"
+        parent = "docs"
+        weight = 2
+
+    [[menu.main]]
+        identifier = "community"
+        name = "Community"
+        url  = "#"
+        weight = 50
+
+    [[menu.main]]
+        identifier = "community-discord"
+        name = "Discord"
+        url  = "https://discord.gg/4TK7PU5"
+        parent = "community"
+        weight = 1
+
+    [[menu.main]]
+        identifier = "community-press"
+        name = "Press"
+        url  = "/press/"
+        parent = "community"
+        weight = 3
+
+    [[menu.main]]
+        identifier = "licenses"
+        name = "Open Source Licenses"
+        url  = "/licenses/"
+        parent = "community"
+        weight = 30
+
+    [[menu.main]]
+        identifier = "donate"
+        name = "Donate"
+        url  = "/donate/"
+        weight = 55
+
+    [[menu.main]]
+        identifier = "source"
+        name = ""
+        url = "https://github.com/Provenance-Emu/Provenance"
+        pre = "<i class='fab fa-lg fa-github'></i>"
+        weight = 60
+
+    [[menu.footer]]
+        name = "Open Source Licenses"
+        url  = "/licenses/"
+        weight = 10
+
+    [[menu.topbar]]
+        weight = 1
+        name = "GitHub"
+        url = "https://github.com/Provenance-Emu/Provenance"
+        pre = "<i class='fab fa-2x fa-github'></i>"
+
+    [[menu.topbar]]
+        weight = 2
+        name = "Facebook"
+        url = "https://www.facebook.com/provenance.emu/"
+        pre = "<i class='fab fa-2x fa-facebook'></i>"
+
+    [[menu.topbar]]
+        weight = 3
+        name = "Twitter"
+        url = "https://x.com/provenanceapp"
+        pre = "<i class='fab fa-2x fa-twitter'></i>"
+
+    [[menu.topbar]]
+        weight = 4
+        name = "Email"
+        url = "mailto:help@provenance-emu.com"
+        pre = "<i class='fas fa-2x fa-envelope'></i>"
+
+[params]
+    viewMorePostLink = "/blog/"
+    author = "Provenance Team"
+    defaultKeywords = ["iOS game emulator", "retro game emulator", "iPhone emulator", "iPad emulator", "iOS emulator", "free emulator iOS", "SNES emulator", "N64 emulator", "PlayStation emulator", "GBA emulator", "retro gaming iOS", "multi-system emulator"]
+    Keywords = "iOS game emulator, retro game emulator, iPhone emulator, iPad emulator, free iOS emulator, SNES emulator, N64 emulator, PlayStation emulator, GBA emulator, multi-system emulator, retro gaming"
+    mainSections = ["blog"]
+    defaultDescription = ""
+
+    facebook_site = "provenance.emu"
+    twitter_site = "provenanceapp"
+    SocialImage = "img/sharing-default.png"
+
+    style = "blue"
+
+    formspree_action = "https://formspree.io/sample/of/endpoint"
+    contact_form_ajax = false
+
+    about_us = "<p>.</p>"
+    copyright = "Copyright (c) 2018 - 2026, Provenance EMU; all rights reserved."
+
+    date_format = "January 2, 2006"
+
+    logo = "img/logo.png"
+    logoAlt = "img/logo-small.png"
+    logo_small = "img/logo-small.png"
+    address = ""
+    home = "Home"
+    description = "Provenance is a free, open-source multi-system emulator for iPhone, iPad, and Apple TV. Play retro games from 38+ consoles — SNES, PlayStation, N64, GBA, and more. No jailbreak required."
+    mapMarker = "images/marker.png"
+
+    [params.preloader]
+        enable = false
+
+    [params.footer]
+
+        [[params.footer.socialIcon]]
+            icon = "tf-ion-social-facebook"
+            URL = "https://facebook.com/provenance.emu/"
+
+        [[params.footer.socialIcon]]
+            icon = "tf-ion-social-twitter"
+            URL = "https://x.com/provenanceapp"
+
+        [[params.footer.socialIcon]]
+            icon = "tf-ion-social-github"
+            URL = "https://github.com/Provenance-Emu/Provenance"
+
+        [[params.footer.socialIcon]]
+            icon = "fab fa-discord"
+            URL = "https://discord.gg/4TK7PU5"
+
+        [[params.footer.socialIcon]]
+            icon = "tf-ion-social-twitch"
+            URL = "https://twitch.tv/joemattiello/"
+
+        [[params.footer.socialIcon]]
+            icon = "tf-ion-social-youtube"
+            URL = "https://www.youtube.com/channel/UCKeN6unYKdayfgLWulXgB1w"
+
+    [params.cta]
+        enable = true
+        title = "Ready to Relive the Classics?"
+        content = "Download Provenance from the App Store and start playing your favorite retro games on iPhone, iPad, and Apple TV today."
+        btnText = "Get Provenance"
+        URL = "https://apps.apple.com/us/app/provenance-app/id1596862805"
+
+    [permalinks]
+        blog = "/blog/:year/:month/:day/:slug/"
+
+    [params.topbar]
+        enable = true
+        text = """
+        <p class="hidden-sm hidden-xs"></p>
+        <p class="hidden-md hidden-lg">
+          <a href="#" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+          <a href="#" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+        </p>
+        """
+
+    [params.widgets]
+        categories = false
+        tags = true
+        search = true
+
+    [params.carousel]
+        enable = false
+
+    [params.features]
+        enable = false
+
+    [params.testimonials]
+        enable = false
+        title = "Testimonials"
+        subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+
+    [params.see_more]
+        enable = false
+
+    [params.clients]
+        enable = false
+        title = "Our Clients"
+        subtitle = ""
+
+    [params.recent_posts]
+        enable = true
+        title = "From our blog"
+        subtitle = "Release notes, development updates, and news about Provenance."
+
+    # Plugins
+    [params.plugins]
+
+        # CSS Plugins (loaded on all pages)
+        [[params.plugins.css]]
+            URL = "plugins/bootstrap/bootstrap.min.css"
+        [[params.plugins.css]]
+            URL = "plugins/themefisher-font/style.css"
+        [[params.plugins.css]]
+            URL = "css/provenance-custom.css"
+        # Dark theme overrides — must come last to win the cascade
+        [[params.plugins.css]]
+            URL = "css/dark-theme.css"
+
+        # CSS Plugins (homepage-only)
+        [[params.plugins.css_homepage]]
+            URL = "plugins/owl-carousel/assets/owl.carousel.min.css"
+        [[params.plugins.css_homepage]]
+            URL = "plugins/owl-carousel/assets/owl.theme.green.min.css"
+
+        # JS Plugins (loaded on all pages)
+        [[params.plugins.js]]
+            URL = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        [[params.plugins.js]]
+            URL = "plugins/bootstrap/bootstrap.min.js"
+
+        # JS Plugins (homepage-only)
+        [[params.plugins.js_homepage]]
+            URL = "plugins/aos/aos.js"
+        [[params.plugins.js_homepage]]
+            URL = "plugins/owl-carousel/owl.carousel.min.js"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[mediaTypes]
+    [mediaTypes."application/atom"]
+            suffixes = ["xml"]
+
+[outputFormats]
+        [outputFormats.Atom]
+                mediaType = "application/atom"
+                baseName = "index"
+                isPlainText = false

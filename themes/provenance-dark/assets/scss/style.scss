@@ -1,0 +1,33 @@
+// Provenance Dark — SCSS entry point
+// Mirrors small-apps-prov/style.scss imports.
+// _variables.scss resolves to THIS theme's dark version via Hugo asset merge.
+
+@import 'variables.scss';
+@import 'media-queries.scss';
+@import 'typography.scss';
+@import 'tabs.scss';
+@import 'lists.scss';
+@import 'common.scss';
+@import 'button.scss';
+@import 'components/navigation.scss';
+@import 'components/footer.scss';
+@import 'components/call-to-action.scss';
+@import 'components/modal.scss';
+@import 'pages/home.scss';
+@import 'pages/team.scss';
+@import 'pages/blog.scss';
+@import 'pages/about.scss';
+@import 'pages/404.scss';
+@import 'pages/faq.scss';
+@import 'pages/privacy.scss';
+@import 'pages/contact.scss';
+
+.ios-only { display: none }
+.ios-disable {}
+@supports (-webkit-touch-callout: none) {
+  .ios-only  { display: inline; }
+  .ios-disable { display: none; }
+}
+
+// ── Dark theme overrides (things $variables alone can't fix) ──────────────
+@import 'dark-overrides';

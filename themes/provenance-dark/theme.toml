@@ -1,0 +1,10 @@
+name = "provenance-dark"
+license = "MIT"
+licenselink = ""
+description = "Provenance dark theme — hot pink + purple + brand blues on near-black"
+homepage = "https://provenance-emu.com"
+tags = ["dark", "gaming", "retro"]
+min_version = "0.110.0"
+
+[author]
+  name = "Provenance Team"

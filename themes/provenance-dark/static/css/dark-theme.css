@@ -1,0 +1,587 @@
+/* ============================================================
+   PROVENANCE DARK THEME — CSS overrides
+   Loaded after provenance-custom.css via plugins.css in config-dark.toml.
+   Patches all hardcoded colors that SCSS variable swap can't reach.
+
+   Palette:
+     Background:   #0a0a1a / #0d0d1c / #111128
+     Cards:        #111128 / rgba(255,255,255,0.04)
+     Pink primary: #FA3399
+     Purple:       #8000CC
+     Brand blue:   #2e7eed / #0D96F6
+     Brand teal:   #009ec5
+     Border:       rgba(255,255,255,0.08)
+   ============================================================ */
+
+/* ── CSS Custom Properties ─────────────────────────────────────────────────── */
+:root {
+  --primary-gradient:    linear-gradient(135deg, #FA3399 0%, #8000CC 100%);
+  --secondary-gradient:  linear-gradient(135deg, #009ec5 0%, #2e7eed 100%);
+  --success-color:       #10b981;
+  --shadow-sm:           0 2px 8px  rgba(0,0,0,0.45);
+  --shadow-md:           0 4px 16px rgba(0,0,0,0.55);
+  --shadow-lg:           0 8px 32px rgba(0,0,0,0.65);
+  --border-radius:       12px;
+  --transition-smooth:   transform .3s cubic-bezier(.4,0,.2,1),
+                         box-shadow .3s cubic-bezier(.4,0,.2,1),
+                         background-color .3s cubic-bezier(.4,0,.2,1),
+                         opacity .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── Animated grid keyframe (used by hero and CTA) ────────────────────────── */
+@keyframes prov-grid-drift {
+  from { background-position: 0 0; }
+  to   { background-position: 40px 40px; }
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────────── */
+body {
+  background-color: #0a0a1a;
+  color: rgba(255,255,255,0.80);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 { color: #fff !important; }
+p { color: rgba(255,255,255,0.72); }
+
+a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item) {
+  color: #009ec5;
+}
+a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):hover {
+  color: #FA3399;
+}
+
+.text-dark   { color: #fff !important; }
+.text-muted  { color: rgba(255,255,255,0.38) !important; }
+.text-gray   { color: rgba(255,255,255,0.55) !important; }
+.text-color, .text-body { color: rgba(255,255,255,0.72) !important; }
+
+hr, .border, .border-top, .border-bottom {
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Navigation ──────────────────────────────────────────────────────────────── */
+.main-nav {
+  background: rgba(10,10,26,0.96) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* White logo → white (already white usually, but make sure) */
+.navbar-brand img {
+  filter: brightness(0) invert(1);
+}
+
+.navbar-toggler-icon,
+.navbar-toggler .tf-ion-android-menu {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* ── Hero / Banner ────────────────────────────────────────────────────────────── */
+.gradient-banner {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0033 50%, #0d001f 100%) !important;
+}
+
+/* Override the circular blob ::before with the animated grid */
+.gradient-banner::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  bottom: auto !important;
+  left: 0 !important;
+  transform: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  background-image:
+    linear-gradient(rgba(250,51,153,0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250,51,153,0.09) 1px, transparent 1px) !important;
+  background-size: 40px 40px !important;
+  animation: prov-grid-drift 22s linear infinite !important;
+}
+
+/* Radial glow top-right */
+.gradient-banner::after {
+  content: '';
+  position: absolute;
+  top: -180px; right: -180px;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250,51,153,0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.gradient-banner h1,
+.gradient-banner h2,
+.gradient-banner p,
+.gradient-banner .lead {
+  color: #fff !important;
+}
+
+/* ── Generic section backgrounds ─────────────────────────────────────────────── */
+section                   { background-color: #0d0d1c; }
+section:nth-child(even)   { background-color: #0a0a1a; }
+
+.bg-white  { background-color: #0a0a1a !important; }
+.bg-light  { background-color: #0d0d1c !important; }
+.bg-gray,
+.bg-light-gray { background-color: #111128 !important; }
+.bg-blue   { background: linear-gradient(135deg,#0f0020 0%,#1a0033 100%) !important; }
+.bg-dark   { background: #080814 !important; }
+
+/* ── Social Proof ───────────────────────────────────────────────────────────── */
+.social-proof-item {
+  padding: 2rem 1rem;
+  border-radius: 12px;
+}
+
+.social-proof-item:hover {
+  background: rgba(250,51,153,0.05) !important;
+  transform: translateY(-4px);
+}
+
+.social-proof-item h2 {
+  background: linear-gradient(135deg, #FA3399, #8000CC) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.social-proof-item p,
+.social-proof-item span {
+  color: rgba(255,255,255,0.55) !important;
+}
+
+/* ── Why Provenance / Feature Items ──────────────────────────────────────────── */
+.why-provenance { background-color: #0a0a1a; }
+
+.why-item:hover {
+  background: #111128 !important;
+  box-shadow: 0 8px 32px rgba(250,51,153,0.10) !important;
+}
+
+.why-item .icon-box {
+  background: linear-gradient(135deg,rgba(250,51,153,0.15) 0%,rgba(128,0,204,0.15) 100%) !important;
+}
+
+.why-item:hover .icon-box {
+  background: linear-gradient(135deg,#FA3399,#8000CC) !important;
+}
+
+.why-item h4       { color: #fff !important; }
+.why-item p        { color: rgba(255,255,255,0.60) !important; }
+
+/* ── Service Items ───────────────────────────────────────────────────────────── */
+.service-item {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  color: rgba(255,255,255,0.72);
+}
+
+.service-item:hover {
+  border-color: rgba(250,51,153,0.30) !important;
+  box-shadow: 0 8px 32px rgba(250,51,153,0.10) !important;
+}
+
+.service-item h4, .service-item h3 { color: #fff !important; }
+.service-item p { color: rgba(255,255,255,0.60) !important; }
+
+/* Service icons — keep gradient text */
+.service-item i,
+.icon-wrap i {
+  background: linear-gradient(135deg, #FA3399, #8000CC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── tvOS Showcase ───────────────────────────────────────────────────────────── */
+.tvos-showcase {
+  background-color: #111128 !important;
+}
+
+.tvos-feature-card {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(255,255,255,0.09) !important;
+}
+
+.tvos-feature-card:hover {
+  background: rgba(250,51,153,0.06) !important;
+  border-color: rgba(250,51,153,0.30) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4) !important;
+}
+
+/* ── Comparison Table ─────────────────────────────────────────────────────────── */
+.comparison-section { background-color: #0d0d1c; }
+
+.comparison-table {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.comparison-table th {
+  background: rgba(250,51,153,0.10) !important;
+  color: #fff !important;
+  border-bottom: 1px solid rgba(250,51,153,0.25) !important;
+}
+
+.comparison-table td {
+  color: rgba(255,255,255,0.72) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+.comparison-table tbody tr:hover {
+  background-color: rgba(250,51,153,0.05) !important;
+}
+
+/* ── Banner Feature Cards ─────────────────────────────────────────────────────── */
+.rounded.shadow {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.rounded.shadow:hover {
+  border-color: rgba(250,51,153,0.30) !important;
+  box-shadow: 0 12px 40px rgba(250,51,153,0.12) !important;
+}
+
+/* ── Feature Content Blocks ──────────────────────────────────────────────────── */
+.feature-content h2 { color: #fff !important; }
+.feature-content p  { color: rgba(255,255,255,0.65) !important; }
+
+.testimonial .meta li { color: #FA3399 !important; }
+
+/* ── Buttons — Retrowave Pill ─────────────────────────────────────────────────── */
+
+/* Primary: pink→purple gradient pill */
+.btn-main,
+.btn-main-md,
+a.btn-main, a.btn-main-md {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+  border: none !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+}
+
+.btn-main:hover,
+.btn-main-md:hover {
+  filter: brightness(1.12);
+  color: #fff !important;
+}
+
+/* The App Store CTA button uses these combined classes */
+.btn-main-md.btn-lg {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+  border-radius: 50px !important;
+}
+
+.btn-main-md.btn-lg::before {
+  background: linear-gradient(135deg, #ff56aa 0%, #9900e6 100%) !important;
+}
+
+/* Secondary / outline: brand teal pill */
+.btn-default,
+.btn-transparent,
+a.btn-default, a.btn-transparent {
+  background: transparent !important;
+  border: 1.5px solid #009ec5 !important;
+  color: #009ec5 !important;
+  border-radius: 50px !important;
+}
+
+.btn-default:hover,
+.btn-transparent:hover {
+  background: #009ec5 !important;
+  color: #fff !important;
+}
+
+/* Bootstrap btn-primary → pink gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #FA3399 0%, #8000CC 100%) !important;
+  border-color: transparent !important;
+  border-radius: 50px !important;
+}
+
+.btn-primary:hover { filter: brightness(1.12); }
+
+/* Bootstrap btn-outline-primary → teal */
+.btn-outline-primary {
+  border-color: #009ec5 !important;
+  color: #009ec5 !important;
+  border-radius: 50px !important;
+}
+
+.btn-outline-primary:hover {
+  background: #009ec5 !important;
+  color: #fff !important;
+  border-color: #009ec5 !important;
+}
+
+/* ── CTA Section ──────────────────────────────────────────────────────────────── */
+.call-to-action-app,
+.call-to-action-app.bg-blue {
+  background: linear-gradient(135deg, #0f0020 0%, #1a0033 100%) !important;
+  border-top: 1px solid rgba(250,51,153,0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.call-to-action-app::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(250,51,153,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250,51,153,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.call-to-action-app h2,
+.call-to-action-app h3,
+.call-to-action-app p    { color: #fff !important; }
+
+/* ── Footer ───────────────────────────────────────────────────────────────────── */
+footer, #footer {
+  background: #080814 !important;
+  border-top: 1px solid rgba(250,51,153,0.18) !important;
+}
+
+footer h3, footer h4, footer h5 { color: #fff !important; }
+footer p, footer li            { color: rgba(255,255,255,0.45) !important; }
+footer a                        { color: rgba(255,255,255,0.55) !important; }
+footer a:hover                  { color: #FA3399 !important; }
+
+/* Social icon circles */
+.footer-social-icon a {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.footer-social-icon a:hover {
+  background: #FA3399 !important;
+  border-color: #FA3399 !important;
+}
+
+/* ── Blog ─────────────────────────────────────────────────────────────────────── */
+.blog-item {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  transition: var(--transition-smooth);
+}
+
+.blog-item:hover {
+  border-color: rgba(250,51,153,0.30) !important;
+  box-shadow: 0 8px 32px rgba(250,51,153,0.08) !important;
+  transform: translateY(-3px);
+}
+
+.blog-item h3, .blog-item h4 { color: #fff !important; }
+.blog-item p                  { color: rgba(255,255,255,0.60) !important; }
+
+/* Blog sidebar */
+.widget-title       { color: #fff !important; }
+.widget             { background: #111128; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.25rem; }
+.tag-item a         { background: rgba(250,51,153,0.12); color: #FA3399; border-radius: 6px; border: 1px solid rgba(250,51,153,0.25); }
+.tag-item a:hover   { background: #FA3399; color: #fff; }
+
+/* Blog post page */
+article, .blog-post, .post-content {
+  background: #0d0d1c;
+  color: rgba(255,255,255,0.80);
+}
+
+blockquote {
+  border-left: 3px solid #FA3399 !important;
+  background: rgba(250,51,153,0.05) !important;
+  color: rgba(255,255,255,0.75) !important;
+  border-radius: 0 8px 8px 0;
+}
+
+code {
+  background: #1a1a33 !important;
+  color: #FA3399 !important;
+  border: 1px solid rgba(250,51,153,0.20) !important;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+pre {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 8px;
+}
+
+pre code {
+  background: transparent !important;
+  border: none !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* Disqus dark — best effort (loads in iframe) */
+#disqus_thread { filter: invert(0.9) hue-rotate(180deg); }
+
+/* ── Plus Page ────────────────────────────────────────────────────────────────── */
+.plus-hero {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0033 50%, #0a0a1a 100%) !important;
+}
+
+.plus-feature-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.plus-feature-card:hover {
+  border-color: rgba(250,51,153,0.35) !important;
+  box-shadow: 0 8px 32px rgba(250,51,153,0.10) !important;
+}
+
+/* Plus page tiers */
+.plus-tier-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Press Page ───────────────────────────────────────────────────────────────── */
+.press-hero    { background: linear-gradient(135deg,#0a0a1a,#1a0033) !important; }
+.press-section { background: #0d0d1c !important; }
+
+.press-asset-card,
+.press-fact-card,
+.press-quote-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.press-nav {
+  background: rgba(10,10,26,0.95) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── FAQ / Static Pages ───────────────────────────────────────────────────────── */
+.faq-item,
+.accordion-item {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.accordion-button,
+.faq-question {
+  background: #111128 !important;
+  color: #fff !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(250,51,153,0.08) !important;
+  color: #FA3399 !important;
+}
+
+.accordion-body,
+.faq-answer {
+  background: #0d0d1c !important;
+  color: rgba(255,255,255,0.72) !important;
+}
+
+/* ── Donate Page ──────────────────────────────────────────────────────────────── */
+.support-card {
+  background: rgba(255,255,255,0.03) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Guides / Compare / Systems pages ────────────────────────────────────────── */
+.guide-card,
+.compare-card,
+.system-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+.guide-card:hover,
+.compare-card:hover,
+.system-card:hover {
+  border-color: rgba(250,51,153,0.30) !important;
+}
+
+/* ── Tables (generic) ────────────────────────────────────────────────────────── */
+table { color: rgba(255,255,255,0.80); }
+
+thead th {
+  background: rgba(250,51,153,0.08) !important;
+  color: #fff !important;
+  border-bottom: 2px solid rgba(250,51,153,0.25) !important;
+}
+
+tbody tr:nth-child(even) { background: rgba(255,255,255,0.02) !important; }
+tbody tr:hover            { background: rgba(250,51,153,0.05) !important; }
+
+td, th { border-color: rgba(255,255,255,0.07) !important; }
+
+/* ── Forms ───────────────────────────────────────────────────────────────────── */
+.form-control, input[type="text"], input[type="email"],
+input[type="search"], textarea, select {
+  background: #111128 !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  color: rgba(255,255,255,0.85) !important;
+  border-radius: 8px !important;
+}
+
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.28) !important;
+}
+
+.form-control:focus,
+input:focus,
+textarea:focus {
+  border-color: #FA3399 !important;
+  box-shadow: 0 0 0 3px rgba(250,51,153,0.15) !important;
+  background: #1a1a33 !important;
+}
+
+/* ── Badges / Tags ───────────────────────────────────────────────────────────── */
+.badge:not([class*='bg-']):not(.best-value):not(.badge-pill-featured) {
+  background: rgba(250,51,153,0.14) !important;
+  color: #FA3399 !important;
+  border: 1px solid rgba(250,51,153,0.28) !important;
+}
+
+/* ── Pagination ──────────────────────────────────────────────────────────────── */
+.pagination .page-link {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: rgba(255,255,255,0.75) !important;
+}
+
+.pagination .page-item.active .page-link {
+  background: #FA3399 !important;
+  border-color: #FA3399 !important;
+  color: #fff !important;
+}
+
+.pagination .page-link:hover {
+  background: rgba(250,51,153,0.10) !important;
+  color: #FA3399 !important;
+}
+
+/* ── Status page (keep functional, no fluff) ──────────────────────────────────── */
+/* Status page already has no data-aos; just darken the backgrounds */
+.status-section, .status-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Licenses page search ──────────────────────────────────────────────────────── */
+#licenseSearch {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.10) !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar              { width: 8px; }
+::-webkit-scrollbar-track        { background: #0a0a1a; }
+::-webkit-scrollbar-thumb        { background: rgba(250,51,153,0.35); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover  { background: #FA3399; }
