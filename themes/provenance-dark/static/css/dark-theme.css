@@ -1031,3 +1031,35 @@ section.section.plus-features {
 .plus-feature-card:hover .plus-feature-icon {
   background: linear-gradient(135deg, #FA3399, #8000CC) !important;
 }
+
+/* ============================================================
+   IMAGE FIXES — dark background compatibility
+   ============================================================ */
+
+/* QR codes (dynamically generated, always white-bg black code):
+   invert → white modules on black bg, black bg blends into dark site */
+img[src*="qrserver.com"] {
+  filter: invert(1) !important;
+  border-radius: 8px !important;
+}
+
+/* App Store / AltStore / SideStore badges: subtle border already in SVG,
+   just ensure no extra box-shadow from theme overrides */
+.hero-badges img,
+img[src*="badges/"] {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Console logos collage (white-bg JPG/WebP): style as an intentional
+   white card so it looks designed rather than broken */
+.service-thumb {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.07) !important;
+  display: inline-block !important;
+}
+
+.service-thumb-img {
+  display: block !important;
+}

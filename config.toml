@@ -1,6 +1,6 @@
 baseurl = "https://provenance-emu.com"
 title = "Provenance - Free iOS & tvOS Retro Game Emulator"
-theme = ["hugo-social-metadata", "hugo-redirect", "hugo-cloak-email", "small-apps-prov"]
+theme = ["provenance-dark", "hugo-social-metadata", "hugo-redirect", "hugo-cloak-email", "small-apps-prov"]
 themesDir = "themes"
 languageCode = "en-us"
 summaryLength = "10"
@@ -313,6 +313,8 @@ pygmentsStyle = "solarized-dark"
             URL = "plugins/themefisher-font/style.css"
         [[params.plugins.css]]
             URL = "css/provenance-custom.css"
+        [[params.plugins.css]]
+            URL = "css/dark-theme.css"
 
         # CSS Plugins (homepage-only — loaded conditionally in head.html)
         [[params.plugins.css_homepage]]
