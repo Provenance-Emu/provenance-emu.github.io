@@ -1,0 +1,238 @@
+{{ partial "head.html" . }}
+
+<body class="body-wrapper" id="top">
+{{ partial "header.html" . }}
+
+<!-- ============================================================
+     /game/<md5> handler — serves three modes:
+     1. ?shortcut  → "Add to Home Screen" instructions (Web Clip creation)
+     2. plain      → "Open in Provenance" fallback (app not installed)
+     3. non-game   → standard 404
+
+     iOS Universal Links intercept /game/* BEFORE this page loads
+     when the app is installed, so modes 1-2 are fallback only.
+     ============================================================ -->
+
+<!-- MODE 1: Shortcut creation (Add to Home Screen) -->
+<div id="game-shortcut" style="display: none;">
+<section class="section gradient-banner" style="min-height: 80vh;">
+  <div class="shapes-container">
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div>
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        <div class="shortcut-card">
+
+          <!-- Game icon (dynamic — set from ?icon param) -->
+          <div class="shortcut-icon-wrap mb-3" id="shortcut-icon-wrap">
+            <img id="shortcut-icon-img" src="" alt="" style="display:none; width:120px; height:120px; border-radius:22px; box-shadow: 0 8px 32px rgba(0,0,0,0.5);">
+            <div id="shortcut-icon-fallback" style="width:120px; height:120px; border-radius:22px; background: linear-gradient(135deg, rgba(250,51,153,0.2), rgba(128,0,204,0.2)); border: 1px solid rgba(250,51,153,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto;">
+              <i class="tf-ion-ios-game-controller-b" style="font-size:3.5rem; color:#FA3399;"></i>
+            </div>
+          </div>
+
+          <!-- Game title & system -->
+          <h2 class="text-white font-weight-bold mb-1" id="shortcut-title">Add to Home Screen</h2>
+          <p class="mb-4" id="shortcut-system" style="color: #FA3399; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;"></p>
+
+          <!-- Instructions -->
+          <div class="shortcut-steps">
+            <div class="shortcut-step">
+              <div class="step-number">1</div>
+              <p>Tap the <strong>Share</strong> button <span style="font-size:1.3em;">&#xFE0E;&#x2934;&#xFE0E;</span> in Safari's toolbar</p>
+            </div>
+            <div class="shortcut-step">
+              <div class="step-number">2</div>
+              <p>Scroll down and tap <strong>"Add to Home Screen"</strong></p>
+            </div>
+            <div class="shortcut-step">
+              <div class="step-number">3</div>
+              <p>Tap <strong>"Add"</strong> — the game shortcut appears on your Home Screen</p>
+            </div>
+          </div>
+
+          <p class="text-white-50 mt-4" style="font-size: 0.85rem;">
+            Tapping the shortcut launches the game directly in Provenance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- MODE 2: Game deep link fallback (app not installed) -->
+<div id="game-deeplink" style="display: none;">
+<section class="section gradient-banner" style="min-height: 60vh;">
+  <div class="shapes-container">
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div>
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <div class="deeplink-card">
+          <div style="width: 96px; height: 96px; border-radius: 22px; background: linear-gradient(135deg, rgba(250,51,153,0.15) 0%, rgba(128,0,204,0.15) 100%); border: 1px solid rgba(250,51,153,0.25); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+            <i class="tf-ion-ios-game-controller-b" style="font-size: 4rem; color: #FA3399;"></i>
+          </div>
+          <h1 class="text-white font-weight-bold mb-3">Open in Provenance</h1>
+          <p class="text-white mb-2" style="opacity: 0.85; font-size: 1.1rem;">
+            This link opens a game directly in the Provenance app.
+          </p>
+          <p class="text-white-50 mb-4" id="game-id-display" style="font-size: 0.9rem;">
+            Game ID: <code id="game-md5" style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; color: #FA3399;"></code>
+          </p>
+          <div class="mt-4">
+            <p class="text-white mb-3" style="opacity: 0.7;">Don't have the app?</p>
+            <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" class="badge-link" title="Download on the App Store">
+              <img src="{{ "images/badges/app-store-badge.svg" | absURL }}" alt="Download on the App Store" class="download-badge" width="168" height="56">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- MODE 3: Standard 404 -->
+<div id="standard-404">
+<section class="error-page">
+  <div class="center">
+    <div class="block text-center">
+      <h1>404</h1>
+      <h3>Page Not Found</h3>
+      <p>The link you clicked may be broken or the<br>page may have been removed.</p>
+      <a href="{{ .Site.BaseURL }}" class="btn btn-main">Visit Homepage</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<script data-cfasync="false">
+(function() {
+  var path = window.location.pathname.replace(/\/$/, '');
+  var match = path.match(/^\/game\/([a-fA-F0-9]{32})$/);
+  if (!match) return; // not a game URL — standard 404 stays visible
+
+  var md5 = match[1];
+  var params = new URLSearchParams(window.location.search);
+  var isShortcut = params.has('shortcut');
+
+  document.getElementById('standard-404').style.display = 'none';
+
+  if (isShortcut) {
+    // ── Shortcut mode: prepare Web Clip meta tags ──
+    var title = params.get('title') || 'Game';
+    var system = params.get('system') || '';
+    var iconUrl = params.get('icon') || '';
+
+    // Show shortcut UI
+    document.getElementById('game-shortcut').style.display = '';
+    document.getElementById('shortcut-title').textContent = title;
+    if (system) {
+      document.getElementById('shortcut-system').textContent = system;
+    }
+
+    // Dynamic icon: load box art into apple-touch-icon
+    if (iconUrl) {
+      var img = document.getElementById('shortcut-icon-img');
+      img.src = iconUrl;
+      img.alt = title;
+      img.style.display = '';
+      document.getElementById('shortcut-icon-fallback').style.display = 'none';
+
+      // Inject apple-touch-icon so "Add to Home Screen" uses the game art
+      var touchIcon = document.createElement('link');
+      touchIcon.rel = 'apple-touch-icon';
+      touchIcon.sizes = '180x180';
+      touchIcon.href = iconUrl;
+      document.head.appendChild(touchIcon);
+    }
+
+    // Set page title → becomes the default Web Clip name
+    document.title = title;
+
+    // Inject apple-mobile-web-app meta tags
+    var metaTitle = document.createElement('meta');
+    metaTitle.name = 'apple-mobile-web-app-title';
+    metaTitle.content = title;
+    document.head.appendChild(metaTitle);
+
+    var metaCapable = document.createElement('meta');
+    metaCapable.name = 'apple-mobile-web-app-capable';
+    metaCapable.content = 'yes';
+    document.head.appendChild(metaCapable);
+
+    var metaStatusBar = document.createElement('meta');
+    metaStatusBar.name = 'apple-mobile-web-app-status-bar-style';
+    metaStatusBar.content = 'black-translucent';
+    document.head.appendChild(metaStatusBar);
+
+    // Clean URL via replaceState so the Web Clip saves as /game/<md5>
+    // (a clean universal link, no query params)
+    history.replaceState(null, title, '/game/' + md5);
+
+  } else {
+    // ── Standard deep link fallback ──
+    document.getElementById('game-deeplink').style.display = '';
+    document.getElementById('game-md5').textContent = md5;
+  }
+})();
+</script>
+
+<style>
+.shortcut-card, .deeplink-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.shortcut-icon-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.shortcut-steps {
+  text-align: left;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.shortcut-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.shortcut-step p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FA3399, #8000CC);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+
+{{ partial "footer.html" . }}
+</body>
+</html>

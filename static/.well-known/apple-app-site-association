@@ -39,10 +39,18 @@
             "/": "/help/*",
             "?": { "articleNumber": "????" },
             "comment": "Matches any URL whose path starts with /help/ and that has a query item with name 'articleNumber' and a value of exactly 4 characters"
+          },
+          {
+            "/": "/game/*",
+            "comment": "Game deep links for Spotlight, Handoff, and Siri Shortcuts — provenance-emu.com/game/<md5>"
           }
         ]
       }
     ]
+  },
+
+  "activitycontinuation": {
+    "apps": ["S32Z3HMYVQ.org.provenance-emu.provenance"]
   },
 
   "webcredentials": {
