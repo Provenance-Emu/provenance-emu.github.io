@@ -55,9 +55,17 @@
 .main-nav .container,
 .navbar .container { overflow: visible !important; }
 
+/* navbar-collapse and navbar-nav must NOT clip the dropdown */
+.main-nav .navbar-collapse,
+.main-nav .navbar-nav { overflow: visible !important; }
+
+/* Ensure dropdown items can be positioned relative to their nav-item */
+.main-nav .nav-item.dropdown { position: relative !important; }
+
 .navbar-nav .dropdown-menu {
   position: absolute !important;
   z-index: 9999 !important;
+  pointer-events: auto !important;
 }
 
 .main-nav .dropdown-slide:hover .dropdown-menu {
@@ -65,10 +73,13 @@
   visibility: visible !important;
   opacity: 1 !important;
   transform: translateY(0) !important;
+  pointer-events: auto !important;
 }
 
-/* ── UN-GATED: Active nav pill — flex layout ─────────────────────────────────── */
-/* No height reduction — pill matches full nav-link height like the live site */
+/* ── UN-GATED: Active nav item positioning for pill pseudo-element ───────────── */
+.main-nav .nav-item.active {
+  position: relative;
+}
 
 /* ── UN-GATED: Hero always uses dark gradient (same in light and dark) ─────────── */
 .gradient-banner {
@@ -338,11 +349,28 @@ html:not([data-theme="light"]) .main-nav {
 html:not([data-theme="light"]) .main-nav .nav-link { color: rgba(255,255,255,0.85) !important; }
 html:not([data-theme="light"]) .main-nav .nav-link:hover { color: #FA3399 !important; }
 
+/* Active nav pill — ::before on the nav-item controls height independently of nav-link line-height */
+html:not([data-theme="light"]) .main-nav .nav-item.active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  right: 4px;
+  height: 34px;
+  transform: translateY(-50%);
+  background: rgba(250,51,153,0.14);
+  border: 1px solid rgba(250,51,153,0.40);
+  border-radius: 22px;
+  pointer-events: none;
+  z-index: 0;
+}
+
 html:not([data-theme="light"]) .main-nav .nav-item.active .nav-link {
-  background: rgba(250,51,153,0.14) !important;
   color: #FA3399 !important;
-  border-radius: 22px !important;
-  border: 1px solid rgba(250,51,153,0.40) !important;
+  background: transparent !important;
+  border: none !important;
+  position: relative;
+  z-index: 1;
 }
 
 html:not([data-theme="light"]) .navbar-toggler-icon,
@@ -649,6 +677,32 @@ html:not([data-theme="light"]) pre code {
 html:not([data-theme="light"]) #disqus_thread { filter: invert(0.9) hue-rotate(180deg); }
 
 /* ── Blog preview cards (homepage recent posts) ────────────────────────────────── */
+/* ── Featured blog post (wide card at top of blog list) ───────────────────────── */
+html:not([data-theme="light"]) .blog-featured {
+  background: #0d0d1c !important;
+  border-bottom-color: rgba(255,255,255,0.07) !important;
+}
+
+html:not([data-theme="light"]) .blog-featured-card {
+  background: #111128 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.45) !important;
+}
+
+html:not([data-theme="light"]) .blog-featured-title,
+html:not([data-theme="light"]) .blog-featured-title a {
+  color: #fff !important;
+}
+
+html:not([data-theme="light"]) .blog-featured-title a:hover { color: #FA3399 !important; }
+
+html:not([data-theme="light"]) .blog-featured-summary {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+html:not([data-theme="light"]) .blog-featured-content { background: transparent !important; }
+
+/* ── Blog preview cards (grid + homepage recent posts) ────────────────────────── */
 html:not([data-theme="light"]) .blog-card {
   background: #111128 !important;
   border: 1px solid rgba(255,255,255,0.08) !important;
