@@ -1,7 +1,6 @@
 /* ============================================================
    PROVENANCE LIGHT THEME
    Applied via [data-theme="light"] on <html>
-   Undoes dark overrides from compiled dark SCSS + dark-theme.css
    ============================================================ */
 
 /* ── Body ─────────────────────────────────────────────────────────────────── */
@@ -12,7 +11,6 @@
 }
 
 /* ── Background utility class resets ─────────────────────────────────────── */
-/* dark-theme.css overrides all bg-* classes to dark; reset them here */
 [data-theme="light"] .bg-white  { background-color: #fff     !important; }
 [data-theme="light"] .bg-light  { background-color: #f9f9f9  !important; }
 [data-theme="light"] .bg-gray,
@@ -20,7 +18,7 @@
 [data-theme="light"] .bg-dark   { background-color: #1a202c  !important; }
 [data-theme="light"] .bg-blue   { background: linear-gradient(135deg, #e8f4fb 0%, #dbeeff 100%) !important; }
 
-/* ── All sections (bare + utility classes) ───────────────────────────────── */
+/* ── Sections ─────────────────────────────────────────────────────────────── */
 [data-theme="light"] section,
 [data-theme="light"] section.section,
 [data-theme="light"] .section {
@@ -28,13 +26,24 @@
   color: #555 !important;
 }
 
-/* Alternate row */
 [data-theme="light"] section:nth-child(even) { background-color: #f9f9f9 !important; }
 
-/* ── Text utility resets ─────────────────────────────────────────────────── */
+[data-theme="light"] section.section.gray-bg,
+[data-theme="light"] .gray-bg { background-color: #f9f9f9 !important; }
+
+/* ── Rounded feature card (homepage) ─────────────────────────────────────── */
+[data-theme="light"] .rounded.shadow {
+  background: #fff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* ── Text utilities ───────────────────────────────────────────────────────── */
 [data-theme="light"] .text-dark  { color: #333 !important; }
 [data-theme="light"] .text-color,
 [data-theme="light"] .text-body  { color: #555 !important; }
+[data-theme="light"] .text-muted { color: #6c757d !important; }
+[data-theme="light"] .text-primary { color: #FA3399 !important; }
 
 /* ── Borders ─────────────────────────────────────────────────────────────── */
 [data-theme="light"] hr,
@@ -89,16 +98,6 @@
 [data-theme="light"] .desc,
 [data-theme="light"] .section-intro { color: #666 !important; }
 
-/* ── Sections ─────────────────────────────────────────────────────────────── */
-[data-theme="light"] section.section,
-[data-theme="light"] .section {
-  background-color: #fff !important;
-  color: #555 !important;
-}
-
-[data-theme="light"] section.section.gray-bg,
-[data-theme="light"] .gray-bg { background-color: #f9f9f9 !important; }
-
 /* ── Cards / blocks ───────────────────────────────────────────────────────── */
 [data-theme="light"] .card {
   background: #fff !important;
@@ -113,6 +112,43 @@
   border-color: #e5e7eb !important;
 }
 
+[data-theme="light"] a.block:hover {
+  background: rgba(250,51,153,0.04) !important;
+  border-color: rgba(250,51,153,0.25) !important;
+  color: #333 !important;
+}
+
+[data-theme="light"] .section.testimonial .block,
+[data-theme="light"] .testimonial-slider .block {
+  background: #f9f9f9 !important;
+  border-color: #e5e7eb !important;
+}
+
+/* ── Social proof ─────────────────────────────────────────────────────────── */
+[data-theme="light"] .social-proof-item p,
+[data-theme="light"] .social-proof-item span { color: #666 !important; }
+
+/* ── Why Provenance / feature items ──────────────────────────────────────── */
+[data-theme="light"] .why-item h4 { color: #1a202c !important; }
+[data-theme="light"] .why-item p  { color: #666 !important; }
+
+/* ── Service / feature items ──────────────────────────────────────────────── */
+[data-theme="light"] .service-item {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  color: #555 !important;
+}
+[data-theme="light"] .service-item i  { color: #FA3399 !important; }
+[data-theme="light"] .service-item h3 { color: #1a202c !important; }
+[data-theme="light"] .service-item p  { color: #666 !important; }
+
+/* ── tvOS showcase ────────────────────────────────────────────────────────── */
+[data-theme="light"] .tvos-showcase { background-color: #f9f9f9 !important; }
+[data-theme="light"] .tvos-feature-card {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+}
+
 /* ── Blog ─────────────────────────────────────────────────────────────────── */
 [data-theme="light"] .blog-card,
 [data-theme="light"] .blog-card-body {
@@ -121,13 +157,62 @@
 }
 [data-theme="light"] .blog-card h3,
 [data-theme="light"] .blog-card h4 { color: #1a202c !important; }
+[data-theme="light"] .blog-card-title a { color: #1a202c !important; }
+[data-theme="light"] .blog-card-title a:hover { color: #FA3399 !important; }
+[data-theme="light"] .blog-card-summary { color: #666 !important; }
+[data-theme="light"] .blog-author-name { color: #888 !important; }
+[data-theme="light"] .blog-meta span   { color: #999 !important; }
+[data-theme="light"] .blog-meta-sep    { color: #ccc !important; }
+
 [data-theme="light"] .blog-featured-card { background: #f9f9f9 !important; }
 [data-theme="light"] .blog-featured-title { color: #1a202c !important; }
 
-/* ── Feature / service ────────────────────────────────────────────────────── */
-[data-theme="light"] .service-item i  { color: #FA3399 !important; }
-[data-theme="light"] .service-item h3 { color: #1a202c !important; }
-[data-theme="light"] .service-item p  { color: #666 !important; }
+[data-theme="light"] .blog-item {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  color: #555 !important;
+}
+[data-theme="light"] .blog-item h3,
+[data-theme="light"] .blog-item h4 { color: #1a202c !important; }
+[data-theme="light"] .blog-item p  { color: #666 !important; }
+
+/* Blog sidebar */
+[data-theme="light"] .widget-title { color: #1a202c !important; }
+[data-theme="light"] .widget {
+  background: #f9f9f9 !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Blog post content */
+[data-theme="light"] article,
+[data-theme="light"] .blog-post,
+[data-theme="light"] .post-content {
+  background: #fff !important;
+  color: #333 !important;
+}
+
+[data-theme="light"] blockquote {
+  border-left-color: #FA3399 !important;
+  background: rgba(250,51,153,0.04) !important;
+  color: #555 !important;
+}
+
+[data-theme="light"] code {
+  background: #f5f5f5 !important;
+  color: #d63384 !important;
+  border-color: #e5e7eb !important;
+}
+
+[data-theme="light"] pre {
+  background: #f8f8f8 !important;
+  border-color: #e5e7eb !important;
+}
+
+[data-theme="light"] pre code {
+  background: transparent !important;
+  border: none !important;
+  color: #333 !important;
+}
 
 /* ── About author ─────────────────────────────────────────────────────────── */
 [data-theme="light"] .about-author {
@@ -139,9 +224,20 @@
 
 /* ── FAQ ──────────────────────────────────────────────────────────────────── */
 [data-theme="light"] .faq-item,
+[data-theme="light"] .accordion-item,
 [data-theme="light"] .accordion-block {
   background: #fff !important;
   border-color: #e5e7eb !important;
+}
+[data-theme="light"] .accordion-button,
+[data-theme="light"] .faq-question {
+  background: #fff !important;
+  color: #1a202c !important;
+}
+[data-theme="light"] .accordion-body,
+[data-theme="light"] .faq-answer {
+  background: #f9f9f9 !important;
+  color: #555 !important;
 }
 [data-theme="light"] .item-link a,
 [data-theme="light"] .accordion-block p { color: #4a5568 !important; }
@@ -164,9 +260,13 @@
 [data-theme="light"] .plus-check      { color: #FA3399 !important; }
 [data-theme="light"] .plus-check-gold { color: #f59e0b !important; }
 
-/* Plus features */
+/* Plus feature cards */
 [data-theme="light"] section.section.plus-features { background: #f9f9f9 !important; }
 [data-theme="light"] .plus-feature-card {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+}
+[data-theme="light"] .plus-tier-card {
   background: #fff !important;
   border-color: #e5e7eb !important;
 }
@@ -177,7 +277,8 @@
 [data-theme="light"] .comparison-table { background: #fff !important; color: #333 !important; }
 [data-theme="light"] .comparison-table th { background: #f9f9f9 !important; color: #1a202c !important; }
 [data-theme="light"] .comparison-table td,
-[data-theme="light"] .comparison-table td.text-center {
+[data-theme="light"] .comparison-table td.text-center,
+[data-theme="light"] .comparison-table tr td:first-child {
   background: #fff !important;
   color: #555 !important;
   border-color: #e5e7eb !important;
@@ -185,13 +286,42 @@
 
 /* ── Press quotes ─────────────────────────────────────────────────────────── */
 [data-theme="light"] .press-quote-card,
-[data-theme="light"] .press-quote-card.bg-white {
+[data-theme="light"] .press-quote-card.bg-white,
+[data-theme="light"] .press-asset-card,
+[data-theme="light"] .press-fact-card {
   background: #fff !important;
   border-color: #e5e7eb !important;
   color: #555 !important;
 }
 
+/* ── Guides / Compare / Systems ───────────────────────────────────────────── */
+[data-theme="light"] .guide-card,
+[data-theme="light"] .compare-card,
+[data-theme="light"] .system-card {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  color: #555 !important;
+}
+
+/* ── Donate / support ─────────────────────────────────────────────────────── */
+[data-theme="light"] .support-card {
+  background: #f9f9f9 !important;
+  border-color: #e5e7eb !important;
+}
+
+/* ── Tables (generic) ─────────────────────────────────────────────────────── */
+[data-theme="light"] table { color: #333 !important; }
+[data-theme="light"] thead th {
+  background: #f9f9f9 !important;
+  color: #1a202c !important;
+  border-bottom-color: #e5e7eb !important;
+}
+[data-theme="light"] tbody tr:nth-child(even) { background: #fafafa !important; }
+[data-theme="light"] tbody tr:hover { background: rgba(250,51,153,0.04) !important; }
+[data-theme="light"] td, [data-theme="light"] th { border-color: #e5e7eb !important; }
+
 /* ── Forms ────────────────────────────────────────────────────────────────── */
+[data-theme="light"] .form-control,
 [data-theme="light"] input,
 [data-theme="light"] textarea,
 [data-theme="light"] select {
@@ -202,13 +332,27 @@
 [data-theme="light"] input::placeholder,
 [data-theme="light"] textarea::placeholder { color: #9ca3af !important; }
 
+/* ── Pagination ───────────────────────────────────────────────────────────── */
+[data-theme="light"] .pagination .page-link {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  color: #555 !important;
+}
+[data-theme="light"] .pagination .page-item.active .page-link {
+  background: #FA3399 !important;
+  border-color: #FA3399 !important;
+  color: #fff !important;
+}
+
 /* ── Footer — keep dark (brand choice) ───────────────────────────────────── */
 [data-theme="light"] .site-footer,
-[data-theme="light"] footer {
+[data-theme="light"] footer,
+[data-theme="light"] #footer {
   background: #1a1a2e !important;
   color: rgba(255,255,255,0.70) !important;
 }
-[data-theme="light"] .site-footer a { color: rgba(255,255,255,0.60) !important; }
+[data-theme="light"] .site-footer a,
+[data-theme="light"] footer a { color: rgba(255,255,255,0.60) !important; }
 [data-theme="light"] .site-footer .footer-logo img { filter: invert(0) brightness(1) !important; }
 
 /* ── Links ────────────────────────────────────────────────────────────────── */
@@ -219,19 +363,20 @@
   color: #FA3399 !important;
 }
 
-/* ── Utilities ────────────────────────────────────────────────────────────── */
-[data-theme="light"] .text-muted  { color: #6c757d !important; }
-[data-theme="light"] .text-primary { color: #FA3399 !important; }
-
 /* ── Theme selector ───────────────────────────────────────────────────────── */
 [data-theme="light"] .theme-toggle-btn {
   border-color: rgba(250,51,153,0.45);
   background: rgba(250,51,153,0.08);
   color: #FA3399;
 }
+[data-theme="light"] .theme-options {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
 [data-theme="light"] .theme-opt {
-  border-color: rgba(0,0,0,0.15);
-  background: rgba(0,0,0,0.04);
+  border-color: rgba(0,0,0,0.10);
+  background: transparent;
   color: #555;
 }
 [data-theme="light"] .theme-opt:hover,
@@ -242,10 +387,14 @@
 }
 
 /* ── Image fixes in light mode ────────────────────────────────────────────── */
-/* QR codes: no invert needed in light mode */
 [data-theme="light"] img[src*="qrserver.com"] { filter: none !important; }
 
-/* Console logos: lighter shadow in light mode */
 [data-theme="light"] .service-thumb {
   box-shadow: 0 4px 20px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.06) !important;
 }
+
+/* ── Navbar brand logo: no invert in light mode ───────────────────────────── */
+[data-theme="light"] .navbar-brand img { filter: none !important; }
+
+/* ── CTA Section light override ───────────────────────────────────────────── */
+/* CTA keeps dark gradient in light mode (it's a hero-like element) */
