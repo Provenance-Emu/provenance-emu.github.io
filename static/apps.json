@@ -1,68 +1,12 @@
 {
-  "name": "Provenance EMU",
-  "identifier": "org.provenance-emu.AltStore",
-  "sourceURL": "https://provenance-emu.com/apps.json",
-  "subtitle": "Multi-emulator frontend for iOS & tvOS",
-  "website": "https://provenance-emu.com",
-  "tintColor": "#162434",
+  "name": "Provenance Emulator",
+  "identifier": "com.provenance-emu.provenance.altstore",
+  "sourceURL": "https://provenance-emu.com/altstore-source.json",
+  "subtitle": null,
+  "website": null,
+  "tintColor": null,
   "apps": [
     {
-      "name": "Provenance EMU",
-      "bundleIdentifier": "org.provenance-emu.provenance",
-      "developerName": "Joe Mattiello",
-      "subtitle": "Multi-emulator frontend for iOS & tvOS",
-      "localizedDescription": "Multi-emulator frontend, supporting various Atari, Bandai, NEC, Nintendo, Sega, SNK and Sony console systems.",
-      "iconURL": "https://provenance-emu.com/images/icons/icon.512x512.png",
-      "tintColor": "#162434",
-      "category": "games",
-      "appPermissions": {
-        "entitlements": [
-          "com.apple.developer.kernel.increased-memory-limit",
-          "com.apple.developer.kernel.extended-virtual-addressing",
-          "com.apple.security.application-groups",
-          "com.apple.security.cs.allow-jit",
-          "com.apple.security.cs.allow-unsigned-executable-memory",
-          "com.apple.security.cs.disable-executable-page-protection",
-          "com.apple.security.cs.disable-library-validation",
-          "com.apple.security.network.client",
-          "com.apple.security.network.server",
-          "com.apple.security.personal-information.photos-library",
-          "com.apple.security.device.bluetooth",
-          "com.apple.security.device.camera",
-          "com.apple.security.device.audio-input"
-        ],
-        "privacy": [
-          {
-            "name": "LocalNetwork",
-            "usageDescription": "Provenance uses the local network to find and communicate with AltServer."
-          },
-          {
-            "name": "PhotoLibrary",
-            "usageDescription": "Provenance can set custom artworks from your photos or save screenshots to the Photo Library."
-          },
-          {
-            "name": "Bluetooth",
-            "usageDescription": "Provenance uses Bluetooth to support game controllers."
-          },
-          {
-            "name": "Camera",
-            "usageDescription": "Used for album artwork."
-          },
-          {
-            "name": "Microphone",
-            "usageDescription": "Provenance uses the microphone for systems that support audio input (eg. Famicom)."
-          },
-          {
-            "name": "Motion",
-            "usageDescription": "Provenance uses your device's accelerometer and gyroscope to emulate portable consoles' built-in sensors."
-          }
-        ]
-      },
-      "screenshotURLs": [
-        "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2306.jpg",
-        "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2307.jpg",
-        "https://provenance-emu.com/blog/2022/12/09/release-2.2.0/images/IMG_2308.jpg"
-      ],
       "versions": [
         {
           "version": "3.3.0",
@@ -91,13 +35,6 @@
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.1.1/Provenance-iOS-3.1.1.ipa",
           "size": 1069600540,
           "localizedDescription": "What's Changed\n Check if app group container is readable by @dnicolson in https://github.com/Provenance-Emu/Provenance/pull/2420\n Replace “Wifi” with “Wi-Fi” by @dnicolson in https://github.com/Provenance-Emu/Provenance/pull/2427\n Fix search bar position by @dnicolson in https://github.com/Provenance-Emu/Provenance/pull/2430\n\n\n: https://github.com/Provenance-Emu/Provenance/compare/3.1.0...3.1.1"
-        },
-        {
-          "version": "3.0.5",
-          "date": "2025-03-13T02:45:06Z",
-          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.0.5/Provenance-3.0.5-iOS.ipa",
-          "size": 1052233932,
-          "localizedDescription": "What's Changed\n Fix custom textures option 3ds (forgot to bridge to CitraWrapper.mm) by @yippeeeyay in https://github.com/Provenance-Emu/Provenance/pull/2398\n Update PVMetalViewController.swift - Fix Rotation misalignment. by @mrjschulte in https://github.com/Provenance-Emu/Provenance/pull/2400\n Update megaTron.metal by @mrjschulte in https://github.com/Provenance-Emu/Provenance/pull/2402\n Update PVMetalViewController.swift - fix ulTron by @mrjschulte in https://github.com/Provenance-Emu/Prov..."
         }
       ],
       "version": "3.3.0",
@@ -108,6 +45,16 @@
     }
   ],
   "news": [
+    {
+      "title": "3.3.1 - Alpha",
+      "identifier": "release-3.3.1",
+      "caption": "Fixes some issues with 3.3.0 maybe, I'm skipping this release officially in favor for 3.4.0",
+      "date": "2026-03-30T03:20:16Z",
+      "tintColor": "162434",
+      "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.3.1",
+      "appID": "org.provenance-emu.provenance",
+      "notify": false
+    },
     {
       "title": "3.3.0 — iCloud Sync, New tvOS UI & Video Filters",
       "identifier": "release-3.3.0",
@@ -125,16 +72,6 @@
       "date": "2025-11-23T18:54:37Z",
       "tintColor": "162434",
       "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.2.1",
-      "appID": "org.provenance-emu.provenance",
-      "notify": false
-    },
-    {
-      "title": "3.2.0 - Skins, many bug fixes, speedups",
-      "identifier": "release-3.2.0",
-      "caption": "Release 3.2.0 We're excited to announce Provenance 3.2.0, a major update focused on performance, skins, and quality of life improvements. This release brings highly requested features and fixes tha...",
-      "date": "2025-11-20T20:56:43Z",
-      "tintColor": "162434",
-      "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.2.0",
       "appID": "org.provenance-emu.provenance",
       "notify": false
     }
