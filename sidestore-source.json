@@ -1,7 +1,7 @@
 {
   "name": "Provenance Emulator",
-  "identifier": "com.provenance-emu.provenance.altstore",
-  "sourceURL": "https://provenance-emu.com/altstore-source.json",
+  "identifier": "com.provenance-emu.provenance.sidestore",
+  "sourceURL": "https://provenance-emu.com/sidestore-source.json",
   "apps": [
     {
       "name": "Provenance",
