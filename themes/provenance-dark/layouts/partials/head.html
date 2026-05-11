@@ -53,7 +53,7 @@
   {{ "     Grid animation keyframe included here so hero grid is visible immediately. -->" | safeHTML }}
   <style>
     @keyframes prov-grid-drift{from{background-position:0 0}to{background-position:40px 40px}}
-    html{opacity:0;transition:opacity .15s ease}
+    html{opacity:0}
     body{background:#0a0a1a;color:rgba(255,255,255,.80);overflow-x:hidden}
     .main-nav{background:rgba(10,10,26,.96)!important;border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
     .gradient-banner{padding:6rem 0;position:relative;overflow:hidden;background:linear-gradient(135deg,#0a0a1a 0%,#1a0033 50%,#0d001f 100%)}
@@ -68,7 +68,8 @@
 
   {{ "<!-- Main Stylesheet (dark SCSS compiled) — deferred via media=print." | safeHTML }}
   {{ "     onload reveals the page. -->" | safeHTML }}
-  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
+  {{- $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint -}}
+  <link rel="preload" href="{{ $styles.Permalink }}" as="style">
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all';document.documentElement.style.opacity='1'">
   <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
 
