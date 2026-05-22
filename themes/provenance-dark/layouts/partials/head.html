@@ -69,7 +69,7 @@
   {{ "<!-- Main Stylesheet (dark SCSS compiled) — deferred via media=print." | safeHTML }}
   {{ "     onload reveals the page. -->" | safeHTML }}
   {{- $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint -}}
-  <link rel="preload" href="{{ $styles.Permalink }}" as="style">
+  <link rel="preload" href="{{ $styles.Permalink }}" as="style" integrity="{{ $styles.Data.Integrity }}">
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all';document.documentElement.style.opacity='1'">
   <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
 

@@ -62,9 +62,8 @@
   })();
 </script>
 <script data-cfasync="false">
-  // iOS detection runs on DOMContentLoaded (needs jQuery bootstrap to be present for
-  // display logic, but the classList show/hide here is plain DOM — keep separate so
-  // it doesn't gate the opacity reveal above).
+  // iOS detection runs on DOMContentLoaded using plain DOM APIs only.
+  // Keep it separate so it doesn't gate the opacity reveal above.
   document.addEventListener('DOMContentLoaded', function () {
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (isIOS) {
