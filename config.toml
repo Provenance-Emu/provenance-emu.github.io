@@ -327,7 +327,7 @@ pygmentsStyle = "solarized-dark"
 
         # JS Plugins (loaded on all pages)
         [[params.plugins.js]]
-            URL = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            URL = "plugins/jquery/jquery.js"
         [[params.plugins.js]]
             URL = "plugins/bootstrap/bootstrap.min.js"
 

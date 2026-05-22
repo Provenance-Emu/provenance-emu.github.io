@@ -47,12 +47,24 @@
 </script>
 
 <script data-cfasync="false">
+  // Reveal page at DOM-interactive (fires before deferred scripts execute, so the
+  // page is visible before jQuery/Bootstrap JS download — much earlier than DOMContentLoaded).
+  // If the main stylesheet onload fires even sooner, that wins (already sets opacity='1').
+  (function () {
+    function reveal() { document.documentElement.style.opacity = '1'; }
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      reveal();
+    } else {
+      document.addEventListener('readystatechange', function () {
+        if (document.readyState === 'interactive') reveal();
+      });
+    }
+  })();
+</script>
+<script data-cfasync="false">
+  // iOS detection runs on DOMContentLoaded using plain DOM APIs only.
+  // Keep it separate so it doesn't gate the opacity reveal above.
   document.addEventListener('DOMContentLoaded', function () {
-    // Reveal page immediately on DOM ready — critical CSS already covers above-the-fold
-    // appearance, so we don't need to wait for the full stylesheet to avoid FOUC.
-    // This prevents the opacity:0 anti-LCP pattern where LCP is delayed by CSS load time.
-    document.documentElement.style.opacity = '1';
-    // iOS detection: show ios-only elements, hide ios-disable elements
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (isIOS) {
       document.querySelectorAll('.ios-only').forEach(function (el) { el.style.display = ''; });
