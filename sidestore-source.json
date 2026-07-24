@@ -191,7 +191,24 @@
       "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Assets.xcassets/AppIcon.appiconset/appicon-1024.png",
       "tintColor": "FF6B35",
       "screenshotURLs": [],
-      "versions": [],
+      "versions": [
+        {
+          "version": "3.4.0-alpha.20260724.develop",
+          "date": "2026-07-24",
+          "localizedDescription": "## Alpha Build `1d78af3`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`1d78af3`](https://github.com/Provenance-Emu/Provenance/commit/1d78af386ffd6025d7e22e2c501121e07fee284d) |\n| **Built** | 2026-07-24 09:50 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/30077138530) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\n1d78af386 Revert \"[Agent] feat(thin-wrapper): stamp-based buildbot system-file auto-download\"\n0e068765d fix(release): use system git SCM so archive doesn't hang resolving packages\nf527caa19 fix(ci): alpha release IPA collection matches files, not artifact dirs\nc6bea8870 [Agent] feat(thin-wrapper): stamp-based buildbot system-file auto-download\n```\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) using the [sideload feed](https://provenance-emu.com/altstore-source.json).\n\n> This release is automatically updated on every successful develop push.",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS.ipa",
+          "size": 0,
+          "minOSVersion": "17.0"
+        },
+        {
+          "version": "3.4.0-alpha.20260724.develop",
+          "date": "2026-07-24",
+          "localizedDescription": "## Alpha Build `1d78af3`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`1d78af3`](https://github.com/Provenance-Emu/Provenance/commit/1d78af386ffd6025d7e22e2c501121e07fee284d) |\n| **Built** | 2026-07-24 09:50 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/30077138530) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\n1d78af386 Revert \"[Agent] feat(thin-wrapper): stamp-based buildbot system-file auto-download\"\n0e068765d fix(release): use system git SCM so archive doesn't hang resolving packages\nf527caa19 fix(ci): alpha release IPA collection matches files, not artifact dirs\nc6bea8870 [Agent] feat(thin-wrapper): stamp-based buildbot system-file auto-download\n```\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) using the [sideload feed](https://provenance-emu.com/altstore-source.json).\n\n> This release is automatically updated on every successful develop push.",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-tvOS.ipa",
+          "size": 0,
+          "minOSVersion": "17.0"
+        }
+      ],
       "appPermissions": {
         "entitlements": [
           {
