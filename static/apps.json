@@ -9,6 +9,20 @@
     {
       "versions": [
         {
+          "version": "alpha",
+          "date": "2026-07-27T05:49:59Z",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS.ipa",
+          "size": 1757514322,
+          "localizedDescription": "Alpha Build `16d39aa`\n\n\n\n| | |\n|---|---|\n|  |  |\n|  | 2026-07-27 05:48 UTC |\n|  |  |\n|  | `com.provenance-emu.provenance.alpha` |\n\n>  This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\nCommits since last alpha\n```\n16d39aa73 fix(mupen64plus): build real framework for tvOS Simulator\nf752ff7f2 ci(build): stop caching DerivedData, raise archive timeout to 180m\n9790e8a46 ci(build): mark Provenance-Lite-iOS optional so it can't gate develop\n557b90aa6 fe..."
+        },
+        {
+          "version": "alpha",
+          "date": "2026-07-27T05:49:59Z",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-Lite-iOS.ipa",
+          "size": 354275867,
+          "localizedDescription": "Alpha Build `16d39aa`\n\n\n\n| | |\n|---|---|\n|  |  |\n|  | 2026-07-27 05:48 UTC |\n|  |  |\n|  | `com.provenance-emu.provenance.alpha` |\n\n>  This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\nCommits since last alpha\n```\n16d39aa73 fix(mupen64plus): build real framework for tvOS Simulator\nf752ff7f2 ci(build): stop caching DerivedData, raise archive timeout to 180m\n9790e8a46 ci(build): mark Provenance-Lite-iOS optional so it can't gate develop\n557b90aa6 fe..."
+        },
+        {
           "version": "3.3.0",
           "date": "2026-03-14T02:17:44Z",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa",
@@ -37,14 +51,24 @@
           "localizedDescription": "What's Changed\n Check if app group container is readable by @dnicolson in https://github.com/Provenance-Emu/Provenance/pull/2420\n Replace “Wifi” with “Wi-Fi” by @dnicolson in https://github.com/Provenance-Emu/Provenance/pull/2427\n Fix search bar position by @dnicolson in https://github.com/Provenance-Emu/Provenance/pull/2430\n\n\n: https://github.com/Provenance-Emu/Provenance/compare/3.1.0...3.1.1"
         }
       ],
-      "version": "3.3.0",
-      "versionDate": "2026-03-14T02:17:44Z",
-      "versionDescription": "What's New in 3.3.0\n\nThis is a big one. Four months of work since 3.2.1 covering iCloud sync, a completely revamped tvOS interface, video filters, and a ton of core and stability fixes.\n\n☁️ iCloud / CloudKit Sync\n- ROMs, save states, BIOS files, and artwork now sync across devices via iCloud\n- Real-time download progress indicators when loading cloud save states\n- Auto BIOS sync on game load when available in iCloud\n- ROM metadata syncs alongside files\n- Artwork syncs after library updates\n- ...",
-      "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa",
-      "size": 1076407494
+      "version": "alpha",
+      "versionDate": "2026-07-27T05:49:59Z",
+      "versionDescription": "Alpha Build `16d39aa`\n\n\n\n| | |\n|---|---|\n|  |  |\n|  | 2026-07-27 05:48 UTC |\n|  |  |\n|  | `com.provenance-emu.provenance.alpha` |\n\n>  This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\nCommits since last alpha\n```\n16d39aa73 fix(mupen64plus): build real framework for tvOS Simulator\nf752ff7f2 ci(build): stop caching DerivedData, raise archive timeout to 180m\n9790e8a46 ci(build): mark Provenance-Lite-iOS optional so it can't gate develop\n557b90aa6 fe...",
+      "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS.ipa",
+      "size": 1757514322
     }
   ],
   "news": [
+    {
+      "title": "Provenance Alpha (16d39aa)",
+      "identifier": "release-alpha",
+      "caption": "Alpha Build `16d39aa` | | |",
+      "date": "2026-07-27T05:49:59Z",
+      "tintColor": "162434",
+      "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/alpha",
+      "appID": "org.provenance-emu.provenance",
+      "notify": false
+    },
     {
       "title": "3.3.1 - Alpha",
       "identifier": "release-3.3.1",
@@ -62,16 +86,6 @@
       "date": "2026-03-14T02:17:44Z",
       "tintColor": "162434",
       "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.3.0",
-      "appID": "org.provenance-emu.provenance",
-      "notify": false
-    },
-    {
-      "title": "3.2.1 - iPad skin bug fixes",
-      "identifier": "release-3.2.1",
-      "caption": ": https://github.com/Provenance-Emu/Provenance/compare/3.2.0...3.2.1 Bug fixes:",
-      "date": "2025-11-23T18:54:37Z",
-      "tintColor": "162434",
-      "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.2.1",
       "appID": "org.provenance-emu.provenance",
       "notify": false
     }
