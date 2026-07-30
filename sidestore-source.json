@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "9974",
-          "marketingVersion": "3.4.0-alpha.20260729.9434e8a",
-          "date": "2026-07-29",
-          "localizedDescription": "## Alpha Build `9434e8a`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`9434e8a`](https://github.com/Provenance-Emu/Provenance/commit/9434e8ab8a37c97f2bb688c4cd6ec5189f1f0146) |\n| **Built** | 2026-07-29 04:49 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/30419333340) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\n9434e8ab8 fix(build): stamp the archive's Info.plist via TARGET_BUILD_DIR\n0b7c9b1f2 ci(build): make tvOS a required job\nd2f3a3c05 ci(build): stop building Provenance-Lite\n```\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) using the [sideload feed](https://provenance-emu.com/altstore-source.json).\n\n> This release is automatically updated on every successful develop push.\n",
+          "buildVersion": "9978",
+          "marketingVersion": "3.4.0-alpha.20260730.9d06152",
+          "date": "2026-07-30",
+          "localizedDescription": "## Alpha Build `9d06152`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`9d06152`](https://github.com/Provenance-Emu/Provenance/commit/9d06152fa99f13b6562a6732f1a69bee14b96a45) |\n| **Built** | 2026-07-30 00:18 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/30497231377) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\n9d06152fa fix(controls): auto-hide on-screen controls for pre-connected controller\n47cad3f84 fix(retroarch): thin wrapper reports rotation as unsupported\n64c45c7c5 fix(release): survive an interrupted or wedged archive\n156a109f9 ci: draft signed TestFlight upload workflow\n```\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) using the [sideload feed](https://provenance-emu.com/altstore-source.json).\n\n> This release is automatically updated on every successful develop push.\n",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS.ipa",
-          "size": 1757596562,
+          "size": 1757478191,
           "minOSVersion": "17.0"
         }
       ],
