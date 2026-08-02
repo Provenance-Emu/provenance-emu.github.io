@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "9982",
-          "marketingVersion": "3.4.0-alpha.20260730.f058e06",
-          "date": "2026-07-30",
-          "localizedDescription": "## Alpha Build `f058e06`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`f058e06`](https://github.com/Provenance-Emu/Provenance/commit/f058e06c93f426d9e5c8369b196c7d0d09fb3e30) |\n| **Built** | 2026-07-30 05:17 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/30511261971) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\nf058e06c9 build(deps): bump the bundler group across 2 directories with 4 updates (#3631)\nc4295fd85 fix(ci): add the missing transitive submodules to Agent Validation (#3636)\nbe75dcb76 fix(release): stop leaking the ASC private key world-readable (#3635)\n4b7b9423f fix(ci): publish sideload feed to a URL that actually serves (#3633)\n```\n\n### Merged PRs\n- #3631: build(deps): bump the bundler group across 2 directories with 4 updates\n- #3633: fix(ci): publish sideload feed to a URL that actually serves\n- #3635: fix(release): stop leaking the ASC private key world-readable\n- #3636: fix(ci): add the missing transitive submodules to Agent Validation\n\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) by adding the\n[sideload feed](https://provenance-emu.com/apps.json) — or tap\n[Add to AltStore](https://provenance-emu.com/altstore) /\n[Add to SideStore](https://provenance-emu.com/sidestore) on your device to add it directly.\n\n> This release is automatically updated on every successful develop push.\n",
+          "buildVersion": "9983",
+          "marketingVersion": "3.4.0-alpha.20260802.4dab451",
+          "date": "2026-08-02",
+          "localizedDescription": "## Alpha Build `4dab451`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`4dab451`](https://github.com/Provenance-Emu/Provenance/commit/4dab451466e8b1bf42301ca97b0c180c762b3204) |\n| **Built** | 2026-08-02 01:32 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/30724680588) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\n4dab45146 fix(ci): generate + cache the libretro cheat DB for Agent Validation (#3637)\n```\n\n### Merged PRs\n- #3637: fix(ci): generate + cache the libretro cheat DB for Agent Validation\n\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) by adding the\n[sideload feed](https://provenance-emu.com/apps.json) — or tap\n[Add to AltStore](https://provenance-emu.com/altstore) /\n[Add to SideStore](https://provenance-emu.com/sidestore) on your device to add it directly.\n\n> This release is automatically updated on every successful develop push.\n",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS.ipa",
-          "size": 1757790386,
+          "size": 1757715223,
           "minOSVersion": "17.0"
         }
       ],
