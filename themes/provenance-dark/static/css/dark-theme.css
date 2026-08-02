@@ -29,9 +29,13 @@
 }
 
 /* ── Animated grid keyframe (used by hero and CTA) ────────────────────────── */
+/* Drives `transform` (GPU-compositable) rather than `background-position`
+   (which forces a main-thread repaint every frame). The pseudo-element below
+   is oversized by one grid cell (40px) on every edge so the translate never
+   reveals a gap — same visual drift, no continuous repaint cost. */
 @keyframes prov-grid-drift {
-  from { background-position: 0 0; }
-  to   { background-position: 40px 40px; }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(40px, 40px, 0); }
 }
 
 /* ── Base — gated so light mode can override cleanly ─────────────────────────── */
@@ -97,18 +101,19 @@ html:not([data-theme="light"]) .border-bottom {
 .gradient-banner::before {
   content: '' !important;
   position: absolute !important;
-  inset: 0 !important;
+  top: -40px !important;
+  left: -40px !important;
   bottom: auto !important;
-  left: 0 !important;
-  transform: none !important;
-  width: 100% !important;
-  height: 100% !important;
+  right: auto !important;
+  width: calc(100% + 80px) !important;
+  height: calc(100% + 80px) !important;
   border-radius: 0 !important;
   background-image:
     linear-gradient(rgba(250,51,153,0.09) 1px, transparent 1px),
     linear-gradient(90deg, rgba(250,51,153,0.09) 1px, transparent 1px) !important;
   background-size: 40px 40px !important;
   animation: prov-grid-drift 22s linear infinite !important;
+  will-change: transform;
 }
 
 /* Radial glow top-right */
