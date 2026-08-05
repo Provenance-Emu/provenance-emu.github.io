@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "9992",
-          "marketingVersion": "3.4.0-alpha.20260804.bcb7a60",
-          "date": "2026-08-04",
-          "localizedDescription": "## Alpha Build `bcb7a60`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`bcb7a60`](https://github.com/Provenance-Emu/Provenance/commit/bcb7a60b4e017b23dfdc82a4a2d79445e967726d) |\n| **Built** | 2026-08-04 08:44 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/30885415023) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\nbcb7a60b4 feat(metadata): 3.4 release notes, tvOS listing, deliver + media store\n```\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) by adding the\n[sideload feed](https://provenance-emu.com/apps.json) — or tap\n[Add to AltStore](https://provenance-emu.com/altstore) /\n[Add to SideStore](https://provenance-emu.com/sidestore) on your device to add it directly.\n\n> This release is automatically updated on every successful develop push.\n",
+          "buildVersion": "9993",
+          "marketingVersion": "3.4.0-alpha.20260805.ee564ca",
+          "date": "2026-08-05",
+          "localizedDescription": "## Alpha Build `ee564ca`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`ee564ca`](https://github.com/Provenance-Emu/Provenance/commit/ee564ca070ce8ee5b52f1e0cdb3ae3faa8ef8742) |\n| **Built** | 2026-08-05 00:02 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/30956714885) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\nee564ca07 feat(dev): .env loading, 1Password secret sync, CI secrets audit\n```\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) by adding the\n[sideload feed](https://provenance-emu.com/apps.json) — or tap\n[Add to AltStore](https://provenance-emu.com/altstore) /\n[Add to SideStore](https://provenance-emu.com/sidestore) on your device to add it directly.\n\n> This release is automatically updated on every successful develop push.\n",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS.ipa",
-          "size": 1816909622,
+          "size": 1816954092,
           "minOSVersion": "17.0"
         }
       ],
