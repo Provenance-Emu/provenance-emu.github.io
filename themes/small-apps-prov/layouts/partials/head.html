@@ -21,9 +21,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap" media="print" onload="this.onload=null;this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap"></noscript>
 
-  {{ "<!-- Font Awesome — deferred via media=print -->" | safeHTML }}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.media='all'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  {{ "<!-- Font Awesome — deferred via media=print. Only the base + solid + brands families are loaded (only fas/fab classes are used site-wide); this drops the unused regular/duotone families that all.min.css would otherwise ship. -->" | safeHTML }}
+  {{ range slice "css/fontawesome.min.css" "css/solid.min.css" "css/brands.min.css" }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/{{ . }}" media="print" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/{{ . }}" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  {{ end }}
 
   {{ "<!-- Canonical URL -->" | safeHTML }}
   <link rel="canonical" href="{{ .Permalink }}">
@@ -37,15 +39,23 @@
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
 
-  {{ "<!-- plugins CSS — preloaded (rel=preload as=style gives higher download priority than media=print) -->" | safeHTML }}
+  {{ "<!-- plugins CSS. bootstrap.min.css / themefisher-font are deferred via media=print (lower priority): the" | safeHTML }}
+  {{ "     critical inline CSS below already replicates the Bootstrap grid rules needed above the fold, so these" | safeHTML }}
+  {{ "     don't need to compete with the LCP hero image for bandwidth on throttled connections. provenance-custom.css" | safeHTML }}
+  {{ "     / dark-theme.css / light-theme.css stay on rel=preload as=style (higher priority) since they define the" | safeHTML }}
+  {{ "     page's visible colors and a slower load would widen the unstyled-flash window. -->" | safeHTML }}
   {{ range .Site.Params.plugins.css }}
+  {{ if or (in .URL "bootstrap") (in .URL "themefisher-font") }}
+  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.onload=null;this.media='all'">
+  {{ else }}
   <link rel="preload" as="style" href="{{ .URL | absURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  {{ end }}
   <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
   {{ end }}
   {{ if .IsHome }}
-  {{ "<!-- Homepage-only CSS (OWL Carousel) -->" | safeHTML }}
+  {{ "<!-- Homepage-only CSS (OWL Carousel) — deferred via media=print; only styles the below-the-fold carousels. -->" | safeHTML }}
   {{ range .Site.Params.plugins.css_homepage }}
-  <link rel="preload" as="style" href="{{ .URL | absURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.onload=null;this.media='all'">
   <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
   {{ end }}
   {{ end }}
