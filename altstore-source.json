@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10026",
-          "marketingVersion": "3.4.0-alpha.20260810.ff492e1",
-          "date": "2026-08-10",
-          "localizedDescription": "## Alpha Build `ff492e1`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`ff492e1`](https://github.com/Provenance-Emu/Provenance/commit/ff492e12ff5affa53b2ceb29c9e9aecdff53fbc7) |\n| **Built** | 2026-08-10 01:06 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/31342048479) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\nff492e12f chore(changelog): absorb 278 pending fragment(s) (#3665)\n6f0fa8ee7 [Agent] fix(ci): changelog automation has never landed a commit (#3663)\n168d31847 [Agent] fix(ci): health monitor never posted its report, and can't see weekly jobs (#3662)\n```\n\n### Merged PRs\n- #3662: [Agent] fix(ci): health monitor never posted its report, and can't see weekly jobs\n- #3663: [Agent] fix(ci): changelog automation has never landed a commit\n- #3665: chore(changelog): absorb 278 pending fragment(s)\n\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) by adding the\n[sideload feed](https://provenance-emu.com/apps.json) — or tap\n[Add to AltStore](https://provenance-emu.com/altstore) /\n[Add to SideStore](https://provenance-emu.com/sidestore) on your device to add it directly.\n\n> This release is automatically updated on every successful develop push.\n",
+          "buildVersion": "10028",
+          "marketingVersion": "3.4.0-alpha.20260813.88b026e",
+          "date": "2026-08-13",
+          "localizedDescription": "## Alpha Build `88b026e`\n\n**Automated alpha build from `develop` branch**\n\n| | |\n|---|---|\n| **Commit** | [`88b026e`](https://github.com/Provenance-Emu/Provenance/commit/88b026e02426375af04aedf585107834ac516654) |\n| **Built** | 2026-08-13 01:36 UTC |\n| **CI Run** | [View build log](https://github.com/Provenance-Emu/Provenance/actions/runs/31652677444) |\n| **Bundle ID** | `com.provenance-emu.provenance.alpha` |\n\n> **Note:** This alpha build uses a separate bundle ID so it can be installed alongside the stable release.\n\n### Commits since last alpha\n```\n88b026e02 build: bump 4DO to pick up RetroAchievements support\n0312e5f5b macOS desktop input: sign MoltenVK, drop touch skin on Mac, keyboard HUD, pointer hit targets (#3664)\n```\n\n### Merged PRs\n- #3664: macOS desktop input: sign MoltenVK, drop touch skin on Mac, keyboard HUD, pointer hit targets\n\n\n---\nThese builds are unsigned and intended for sideloading via AltStore/SideStore.\nInstall the **Provenance Alpha** app (separate from stable) by adding the\n[sideload feed](https://provenance-emu.com/apps.json) — or tap\n[Add to AltStore](https://provenance-emu.com/altstore) /\n[Add to SideStore](https://provenance-emu.com/sidestore) on your device to add it directly.\n\n> This release is automatically updated on every successful develop push.\n",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS.ipa",
-          "size": 1809579549,
+          "size": 1809472581,
           "minOSVersion": "17.0"
         }
       ],
