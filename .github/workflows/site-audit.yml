@@ -177,20 +177,20 @@ jobs:
           if [ -z "$(find "$SEARCH_DIR" -name "lhr-*.json" 2>/dev/null | head -1)" ]; then
             SEARCH_DIR="."
           fi
-          # Pick the LHR for the homepage URL specifically (not /blog/ or /plus/)
-          REPORT=""
+          # Collect all LHRs for the homepage URL (3 runs → 3 files)
+          HOMEPAGE_LHRS=()
           for f in $(find "$SEARCH_DIR" -maxdepth 6 -name "lhr-*.json" 2>/dev/null); do
             URL_IN_LHR=$(jq -r '.requestedUrl // .finalUrl // ""' "$f" 2>/dev/null)
             if [[ "$URL_IN_LHR" == "https://provenance-emu.com" || "$URL_IN_LHR" == "https://provenance-emu.com/" ]]; then
-              REPORT="$f"
-              break
+              HOMEPAGE_LHRS+=("$f")
             fi
           done
-          # Fallback to first available LHR if homepage not found
-          if [ -z "$REPORT" ]; then
-            REPORT=$(find "$SEARCH_DIR" -maxdepth 6 -name "lhr-*.json" 2>/dev/null | head -1)
+          # Fallback to all LHRs if homepage-specific ones not found
+          if [ "${#HOMEPAGE_LHRS[@]}" -eq 0 ]; then
+            while IFS= read -r line; do HOMEPAGE_LHRS+=("$line"); done \
+              < <(find "$SEARCH_DIR" -maxdepth 6 -name "lhr-*.json" 2>/dev/null)
           fi
-          if [ -z "$REPORT" ]; then
+          if [ "${#HOMEPAGE_LHRS[@]}" -eq 0 ]; then
             echo "No LHR file found, using zeros"
             echo "performance=0" >> $GITHUB_OUTPUT
             echo "accessibility=0" >> $GITHUB_OUTPUT
@@ -199,11 +199,47 @@ jobs:
             echo "report_url=" >> $GITHUB_OUTPUT
             exit 0
           fi
-          echo "Using LHR: $REPORT ($(jq -r '.requestedUrl' "$REPORT" 2>/dev/null))"
-          PERF=$(jq '(.categories.performance.score    // 0) * 100 | round' < "$REPORT")
-          A11Y=$(jq '(.categories.accessibility.score  // 0) * 100 | round' < "$REPORT")
-          BP=$(jq '(."categories"."best-practices".score // 0) * 100 | round' < "$REPORT")
-          SEO=$(jq '(.categories.seo.score             // 0) * 100 | round' < "$REPORT")
+          echo "Found ${#HOMEPAGE_LHRS[@]} homepage LHR(s): ${HOMEPAGE_LHRS[*]}"
+          # Compute median across runs, discarding outliers >2 std deviations from mean
+          median_filtered() {
+            local cat="$1"; shift
+            python3 - "$cat" "$@" <<'PYEOF'
+          import sys, json, math
+          cat = sys.argv[1]
+          files = sys.argv[2:]
+          scores = []
+          for f in files:
+            try:
+              with open(f) as fh:
+                d = json.load(fh)
+              v = d.get("categories", {}).get(cat, {}).get("score")
+              if v is not None:
+                scores.append(round(v * 100))
+            except Exception:
+              pass
+          if not scores:
+            print(0); sys.exit(0)
+          if len(scores) >= 3:
+            mean = sum(scores) / len(scores)
+            variance = sum((x - mean) ** 2 for x in scores) / len(scores)
+            std = math.sqrt(variance)
+            if std > 0:
+              filtered = [x for x in scores if abs(x - mean) <= 2 * std]
+              if filtered:
+                scores = filtered
+          scores.sort()
+          mid = len(scores) // 2
+          if len(scores) % 2 == 1:
+            print(scores[mid])
+          else:
+            print(round((scores[mid - 1] + scores[mid]) / 2))
+          PYEOF
+          }
+          PERF=$(median_filtered "performance"    "${HOMEPAGE_LHRS[@]}")
+          A11Y=$(median_filtered "accessibility"  "${HOMEPAGE_LHRS[@]}")
+          BP=$(median_filtered   "best-practices" "${HOMEPAGE_LHRS[@]}")
+          SEO=$(median_filtered  "seo"            "${HOMEPAGE_LHRS[@]}")
+          echo "Scores (median, outliers filtered): perf=$PERF a11y=$A11Y bp=$BP seo=$SEO"
           echo "performance=$PERF" >> $GITHUB_OUTPUT
           echo "accessibility=$A11Y" >> $GITHUB_OUTPUT
           echo "best_practices=$BP" >> $GITHUB_OUTPUT
