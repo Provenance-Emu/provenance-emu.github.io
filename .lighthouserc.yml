@@ -1,6 +1,10 @@
 ci:
   collect:
-    numberOfRuns: 1
+    # 3 runs + median aggregation smooths out the CPU/network variance that's
+    # common on shared GitHub Actions runners — a single run can easily swing
+    # 15-20 performance points from noise alone, causing false-positive
+    # regression issues to be opened against an unchanged site.
+    numberOfRuns: 3
     settings:
       chromeFlags: '--no-sandbox --disable-dev-shm-usage'
   assert:
@@ -9,7 +13,7 @@ ci:
       # Minimum thresholds — issues will be created below these
       categories:performance:
         minScore: 0.70
-        aggregationMethod: optimistic
+        aggregationMethod: median
       categories:accessibility:
         minScore: 0.80
         aggregationMethod: optimistic
