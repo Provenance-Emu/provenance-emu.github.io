@@ -56,11 +56,33 @@
     background: #2f6fed; color: #fff; text-decoration: none; font-weight: 600;
   }
   .hint { font-size: .9rem; opacity: .75; margin-top: 1.75rem; }
+  .copy-row {
+    display: flex; align-items: stretch; gap: .4rem;
+    margin: .5rem auto 0; max-width: 100%;
+  }
   code {
-    display: inline-block; margin-top: .4rem; padding: .45rem .6rem;
-    border-radius: 6px; background: rgba(127,127,127,.16);
+    flex: 1 1 auto; min-width: 0; text-align: left;
+    padding: .5rem .6rem; border-radius: 8px;
+    background: rgba(127,127,127,.16);
     font-size: .82rem; word-break: break-all;
   }
+  .copy-btn {
+    flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+    width: 2.5rem; border: 0; border-radius: 8px; cursor: pointer;
+    background: rgba(127,127,127,.16); color: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .copy-btn:hover { background: rgba(127,127,127,.28); }
+  .copy-btn svg { width: 1.05rem; height: 1.05rem; }
+  .copy-btn .check { display: none; }
+  .copy-btn.copied .check { display: block; }
+  .copy-btn.copied .clip { display: none; }
+  .copy-btn.copied { background: #2e9e5b; color: #fff; }
+  .copy-status {
+    font-size: .78rem; margin: .45rem 0 0; min-height: 1em;
+    opacity: 0; transition: opacity .15s;
+  }
+  .copy-status.show { opacity: .8; }
   @media (prefers-color-scheme: dark) {
     body { background: #14161a; color: #e8e8ea; }
   }
@@ -79,8 +101,78 @@
   <p class="hint">
     Nothing happened? The app may not be installed. You can add this
     source URL manually instead:
-    <code>{{ . }}</code>
   </p>
+  <div class="copy-row">
+    <code id="feed-url">{{ . }}</code>
+    <button type="button" class="copy-btn" id="copy-btn"
+            data-url="{{ . }}" aria-label="Copy source URL" title="Copy">
+      <svg class="clip" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true">
+        <rect x="9" y="9" width="12" height="12" rx="2"/>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+      </svg>
+      <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true">
+        <path d="M20 6 9 17l-5-5"/>
+      </svg>
+    </button>
+  </div>
+  <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+  <script>
+  (function () {
+    var btn = document.getElementById('copy-btn');
+    var status = document.getElementById('copy-status');
+    if (!btn) return;
+    var url = btn.getAttribute('data-url');
+
+    function flash(msg) {
+      btn.classList.add('copied');
+      status.textContent = msg;
+      status.classList.add('show');
+      setTimeout(function () {
+        btn.classList.remove('copied');
+        status.classList.remove('show');
+      }, 1800);
+    }
+
+    // Selects the <code> so a failed copy still leaves the URL ready to
+    // long-press → Copy, which is the manual path on older iOS anyway.
+    function selectCode() {
+      var code = document.getElementById('feed-url');
+      if (!code || !window.getSelection || !document.createRange) return;
+      var range = document.createRange();
+      range.selectNodeContents(code);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+
+    btn.addEventListener('click', function () {
+      // navigator.clipboard needs a secure context; the site is https, but
+      // keep the execCommand path for older iOS Safari and http previews.
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () {
+          flash('Copied to clipboard');
+        }, function () {
+          selectCode();
+          status.textContent = 'Press and hold to copy';
+          status.classList.add('show');
+        });
+        return;
+      }
+      selectCode();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      if (ok) { flash('Copied to clipboard'); }
+      else {
+        status.textContent = 'Press and hold to copy';
+        status.classList.add('show');
+      }
+    });
+  })();
+  </script>
   {{- end }}
 {{- else }}
   <h1>Open Provenance</h1>
