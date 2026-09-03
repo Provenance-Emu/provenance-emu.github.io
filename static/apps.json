@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10089",
-          "marketingVersion": "3.4.0-alpha.20260902.44f754f",
+          "buildVersion": "10093",
+          "marketingVersion": "3.4.0-alpha.20260902.4ed122c",
           "date": "2026-09-02",
-          "localizedDescription": "Alpha build 44f754f · 2026-09-02\n\nChanges in this build:\n• fix(feed): apostrophes in jq comments broke the generator\n• feat(feed): carry iFly and iCube in the combined sideload source\n• feat(sideload): publish an extension-free iOS IPA and serve it by default\n• fix(feed): readable release notes and a working icon in AltStore\n• [Auto] Update skin catalog seed data (#3676)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 4ed122c · 2026-09-02\n\nChanges in this build:\n• feat(feed): merge each companion's own feed instead of deriving one\n• fix(feed): iCube bundleIdentifier was invented, not the real one\n• fix(submodule): track the dolphin-ios default branch by its new name\n• build(dolphin): bump dolphin-ios to upstream-quickwins-2609 (6242829ec3)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 727005577,
+          "size": 727073169,
           "minOSVersion": "17.0"
         }
       ],
@@ -141,20 +141,56 @@
     },
     {
       "name": "iCube",
-      "bundleIdentifier": "com.provenance-emu.icube",
-      "developerName": "Provenance-EMU",
-      "subtitle": "GameCube & Wii emulator for iOS",
-      "localizedDescription": "iCube is a GameCube and Wii emulator for iOS based on Dolphin, with native controller support, save states, and hardware-accelerated rendering.",
+      "bundleIdentifier": "com.joemattiello.iCube",
+      "developerName": "Provenance Emu",
+      "subtitle": "GameCube & Wii Emulator for iOS & tvOS",
+      "localizedDescription": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation.\n\nFeatures:\n• Full GameCube and Wii emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\niCube is a fork of DolphiniOS, optimized for iOS and tvOS devices.",
       "iconURL": "https://icube-emu.com/icon-1024.png",
-      "tintColor": "5B8DEF",
-      "screenshotURLs": [],
+      "tintColor": "#3B82F6",
+      "category": "games",
+      "screenshots": [
+        "https://icube-emu.com/screenshots/iphone1-library.jpg",
+        "https://icube-emu.com/screenshots/iphone2-search.jpg",
+        "https://icube-emu.com/screenshots/iphone3-emu.webp",
+        "https://icube-emu.com/screenshots/iphone7-touchcontrols.jpg",
+        "https://icube-emu.com/screenshots/iphone8-pause.jpg"
+      ],
       "versions": [
         {
-          "version": "4.1.0beta5",
-          "date": "2025-09-14",
-          "localizedDescription": "**Full Changelog**: https://github.com/Provenance-Emu/dolphin-ios-jitless/commits/4.1.0beta5\n\nDolphiniOS 4.1.0 beta 5 (iOS & tvOS)\n\n�� What's new\n- Stunning GameCube/Wii theming ✨\n- Authentic game case covers with system-specific gradients (purple for GameCube, blue for Wii)\n- Realistic case reflections, spines, and Nintendo branding details\n- Award-winning focus glow effects with cyan/purple gradients on tvOS\n- Enhanced visual depth with shadows, highlights, and premium feel\n- \"GameCube Gradient\" background option in library settings\n\nSmarter controller setup\n- Clean, programmatic mapping UI on tvOS (no more storyboard crashes)\n- Friendly device names + auto-profile loading that actually works\n- Quick controller assignment from the pause menu\n- One-tap layout switching between Apple, GameCube, and Wii variants\n\nTouch controls that feel right\n- Optional high-contrast touchpad overlay with proper multi-touch\n- Motion sensitivity (gain), deadzone, smoothing: dial it in your way\n- Better visual feedback and cleaner UI while playing\n\n�� DSU Controller Features (Cross-Platform Gaming)\n- Complete DSU implementation - Turn your iOS device into a wireless controller for tvOS/PC\n- Multiple controller layouts - Apple Virtual, GameCube, Wii Remote, Classic, and Sideways\n- Smart motion controls - Choose between Gyro, Follow, or Drag for IR pointer\n- Flexible input routing - Map motion to Wiimote or Nunchuk, toggle Raw vs Telemetry\n- Real-time status HUD - See connection status, TX/RX counters, and client info\n- Targeted sending - Choose specific receivers or broadcast to all\n- Touch area overlay - Visual touchpad for precise cursor control\n- Tooltip system - Learn what each button does with helpful hints\n- Apple Virtual Controller - Native iOS touch controls with D-Pad/Stick toggle\n\n🖥️ tvOS Love\n- Full-screen pause menu - Auto-shows when app backgrounds, respects your flow\n- No keyboard nonsense - Mapping and settings built for the remote/controller\n- Clean visuals - Less clutter, more play\n- Enhanced focus effects - Beautiful cyan/purple glow animations\n\n🎨 Visual Polish\n- Enhanced fonts - Rounded system fonts with iOS 16+ compatibility\n- Smooth animations - EaseInOut transitions and haptic feedback\n- Better contrast - High-contrast touchpad overlay option\n- Premium feel - Inner highlights, shadows, and depth effects\n\n⚙️ Quality-of-life upgrades\n- Shader list search - Find what you need without scrolling\n- Quick graphics controls - Right from in-game overlays\n- Smarter defaults - iOS as controller, tvOS as console\n- Better discovery - Devices show up where you expect them\n- Motion customization - Fine-tune sticks with soft snap-to-center\n\n�� Known issues (beta)\n- DSU IR cursor - Still inconsistent in some setups (especially with mixed gyro/touch inputs). If your",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/4.1.0beta5/DolphiniOS-JoeMattiello-4.1.0-Beta5-iOS.ipa",
-          "size": 80718792
+          "version": "1.0.0-beta9-ios",
+          "buildVersion": "1.0.0-beta9-ios",
+          "date": "2026-08-04",
+          "localizedDescription": "iCube 1.0.0 Beta 9 for iOS",
+          "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
+          "size": 82799373,
+          "minOSVersion": "15.0",
+          "platform": "iOS",
+          "isBeta": true,
+          "betaNumber": 9
+        },
+        {
+          "version": "1.0.0-beta8-ios",
+          "buildVersion": "1.0.0-beta8-ios",
+          "date": "2026-08-04",
+          "localizedDescription": "iCube 1.0.0 Beta 8 for iOS",
+          "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
+          "size": 82893911,
+          "minOSVersion": "15.0",
+          "platform": "iOS",
+          "isBeta": true,
+          "betaNumber": 8
+        },
+        {
+          "version": "1.0.0-beta7-ios",
+          "buildVersion": "1.0.0-beta7-ios",
+          "date": "2026-08-04",
+          "localizedDescription": "iCube 1.0.0 Beta 7 for iOS",
+          "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
+          "size": 82893502,
+          "minOSVersion": "15.0",
+          "platform": "iOS",
+          "isBeta": true,
+          "betaNumber": 7
         }
       ]
     }
