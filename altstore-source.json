@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10096",
-          "marketingVersion": "3.4.0-alpha.20260903.928a9b9",
+          "buildVersion": "10097",
+          "marketingVersion": "3.4.0-alpha.20260903.10d3c46",
           "date": "2026-09-03",
-          "localizedDescription": "Alpha build 928a9b9 · 2026-09-03\n\nChanges in this build:\n• fix(feed): parenthesise the apps expression so jq accepts it\n• Revert \"build(dolphin): bump dolphin-ios to the rebased quick-wins (#3677)\"\n• build(dolphin): bump dolphin-ios to the rebased quick-wins (#3677)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 10d3c46 · 2026-09-03\n\nChanges in this build:\n• fix(release): don't block on an interactive prompt in CI\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 727684279,
+          "size": 727554596,
           "minOSVersion": "17.0"
         }
       ],
