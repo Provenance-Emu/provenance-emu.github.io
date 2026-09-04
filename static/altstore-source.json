@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10099",
-          "marketingVersion": "3.4.0-alpha.20260904.6a87c84",
+          "buildVersion": "10100",
+          "marketingVersion": "3.4.0-alpha.20260904.27c3aba",
           "date": "2026-09-04",
-          "localizedDescription": "Alpha build 6a87c84 · 2026-09-04\n\nChanges in this build:\n• feat(testflight): run nightly\n• fix(testflight): generate the libretro cheat database before archiving\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 27c3aba · 2026-09-04\n\nChanges in this build:\n• fix(release): allow provisioning updates on export, not just archive\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 727670370,
+          "size": 727624056,
           "minOSVersion": "17.0"
         }
       ],
