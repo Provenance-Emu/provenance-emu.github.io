@@ -157,9 +157,20 @@
       ],
       "versions": [
         {
+          "version": "1.0.0-ios",
+          "buildVersion": "1.0.0-ios",
+          "date": "2026-09-05",
+          "localizedDescription": "iCube 1.0.0 for iOS",
+          "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS/iCube.ipa",
+          "size": 90566866,
+          "minOSVersion": "15.0",
+          "platform": "iOS",
+          "isBeta": false
+        },
+        {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-08-04",
+          "date": "2026-09-05",
           "localizedDescription": "iCube 1.0.0 Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -171,7 +182,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-08-04",
+          "date": "2026-09-05",
           "localizedDescription": "iCube 1.0.0 Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -183,7 +194,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-08-04",
+          "date": "2026-09-05",
           "localizedDescription": "iCube 1.0.0 Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
