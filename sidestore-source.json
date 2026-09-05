@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10100",
-          "marketingVersion": "3.4.0-alpha.20260904.27c3aba",
-          "date": "2026-09-04",
-          "localizedDescription": "Alpha build 27c3aba · 2026-09-04\n\nChanges in this build:\n• fix(release): allow provisioning updates on export, not just archive\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10102",
+          "marketingVersion": "3.4.0-alpha.20260905.46749b7",
+          "date": "2026-09-05",
+          "localizedDescription": "Alpha build 46749b7 · 2026-09-05\n\nChanges in this build:\n• fix(testflight): one job per platform, matching build.yml\n• fix(testflight): scheduled runs are iOS-only until tvOS is fixed\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 727624056,
+          "size": 727536355,
           "minOSVersion": "17.0"
         }
       ],
