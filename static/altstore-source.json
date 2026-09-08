@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10106",
-          "marketingVersion": "3.4.0-alpha.20260906.c5c61d1",
-          "date": "2026-09-06",
-          "localizedDescription": "Alpha build c5c61d1 · 2026-09-06\n\nChanges in this build:\n• build(dolphin): point the dolphin-ios submodule at iCube.git\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10107",
+          "marketingVersion": "3.4.0-alpha.20260908.f0b3581",
+          "date": "2026-09-08",
+          "localizedDescription": "Alpha build f0b3581 · 2026-09-08\n\nChanges in this build:\n• build(dolphin): bump dolphin-ios to iCube develop (3b8a711b3a) — debug API + MCP\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 727826465,
+          "size": 727733000,
           "minOSVersion": "17.0"
         }
       ],
