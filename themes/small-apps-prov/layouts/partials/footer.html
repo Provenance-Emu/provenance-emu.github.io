@@ -10,6 +10,20 @@
             {{ end }}
           </ul>
           <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logoAlt | absURL }}" alt="footer-logo" width="126" height="18" loading="lazy" decoding="async"></a>
+          {{ with .Site.Data.family.family }}
+          <div class="more-from-provenance mt-3 mb-3">
+            <p class="text-white-50 mb-1" style="font-size:0.85rem;">More from Provenance</p>
+            <ul class="list-inline mb-0">
+              {{ range . }}
+              {{ if ne .key "provenance" }}
+              <li class="list-inline-item mx-2">
+                <a class="text-white-50" href="{{ .url }}" rel="noopener">{{ .name }}</a>
+              </li>
+              {{ end }}
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
           <ul class="social-icon list-inline">
             {{ range .Site.Params.footer.socialIcon }}
             <li class="list-inline-item">

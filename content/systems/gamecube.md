@@ -9,6 +9,8 @@ supportedFormats: ".iso, .gcm, .gcz, .rvz, .wbfs, .ciso"
 
 {{< brand >}}Provenance{{< /brand >}} brings the Nintendo GameCube to iPhone, iPad, and Apple TV through the Dolphin emulation core — the same battle-tested engine used on desktop platforms. The GameCube library is home to some of the greatest games ever made: The Legend of Zelda: The Wind Waker, Super Mario Sunshine, Metroid Prime, Resident Evil 4, and F-Zero GX.
 
+{{< family-app app="icube" text="Want a dedicated GameCube and Wii app? iCube is our standalone Dolphin-based emulator with the same team behind it." >}}
+
 ## Supported File Formats
 
 - `.iso` — Standard GameCube disc image

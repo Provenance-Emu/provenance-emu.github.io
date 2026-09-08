@@ -1,0 +1,35 @@
+# Canonical Provenance family list — this is the SOURCE OF TRUTH.
+# Other repos (icube-emu.github.io, ifly-emu.github.io, etc.) keep a hand-synced
+# copy of this file with a header comment pointing back here. If you edit this
+# list, update those copies too.
+#
+# Order is fixed — do not reorder without updating the sibling copies.
+family:
+  - key: provenance
+    name: "Provenance"
+    url: "https://provenance-emu.com/"
+    tagline: "Multi-system retro emulator for iOS, tvOS and macOS"
+  - key: icube
+    name: "iCube"
+    url: "https://icube-emu.com/"
+    tagline: "GameCube & Wii emulator for iOS and tvOS"
+  - key: ifly
+    name: "iFly"
+    url: "https://ifly-emu.com/"
+    tagline: "Dreamcast emulator for iOS and tvOS"
+  - key: jaguar
+    name: "Virtual Jaguar libretro"
+    url: "https://jaguar.provenance-emu.com/"
+    tagline: "Atari Jaguar core for RetroArch and Provenance"
+  - key: wiki
+    name: "Provenance Wiki"
+    url: "https://wiki.provenance-emu.com/"
+    tagline: "Guides, ROM ripping, BIOS help"
+  - key: github
+    name: "GitHub"
+    url: "https://github.com/Provenance-Emu"
+    tagline: "Source code for every app"
+  - key: discord
+    name: "Discord"
+    url: "https://discord.gg/4TK7PU5"
+    tagline: "Community chat"

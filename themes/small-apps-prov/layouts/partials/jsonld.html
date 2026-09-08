@@ -3,6 +3,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://provenance-emu.com/#organization",
   "name": "Provenance",
   "url": {{ .Site.BaseURL | jsonify }},
   "logo": {{ "img/logo.png" | absURL | jsonify }},
@@ -10,7 +11,11 @@
     "https://github.com/Provenance-Emu/Provenance",
     "https://discord.gg/4TK7PU5",
     "https://x.com/provenanceapp",
-    "https://www.facebook.com/provenance.emu/"
+    "https://www.facebook.com/provenance.emu/",
+    "https://icube-emu.com/",
+    "https://ifly-emu.com/",
+    "https://jaguar.provenance-emu.com/",
+    "https://wiki.provenance-emu.com/"
   ]
 }
 </script>
@@ -35,6 +40,9 @@
     "@type": "Organization",
     "name": {{ .Site.Params.author | jsonify }},
     "url": {{ .Site.BaseURL | jsonify }}
+  },
+  "publisher": {
+    "@id": "https://provenance-emu.com/#organization"
   },
   "offers": {
     "@type": "Offer",

@@ -11,6 +11,8 @@ Sega's Dreamcast was ahead of its time — online multiplayer, VMU memory cards,
 
 {{< brand >}}Provenance{{< /brand >}} is free, open-source, and available directly from the App Store. No jailbreak required.
 
+{{< family-app app="ifly" text="Want a dedicated Dreamcast app? iFly is our standalone Flycast-based emulator." >}}
+
 ## Supported File Formats
 
 Dreamcast games were GD-ROM disc-based. {{< brand >}}Provenance{{< /brand >}} supports the standard Dreamcast disc image formats:
