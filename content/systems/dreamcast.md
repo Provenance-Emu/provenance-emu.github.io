@@ -11,7 +11,7 @@ Sega's Dreamcast was ahead of its time — online multiplayer, VMU memory cards,
 
 {{< brand >}}Provenance{{< /brand >}} is free, open-source, and available directly from the App Store. No jailbreak required.
 
-{{< family-app app="ifly" text="Want a dedicated Dreamcast app? iFly is our standalone Flycast-based emulator." >}}
+{{< family-app app="ifly" text="Want a dedicated Dreamcast app? iFly is our standalone Flycast-based emulator." compare="https://ifly-emu.com/compare/ifly-vs-provenance/" >}}
 
 ## Supported File Formats
 

@@ -1,11 +1,12 @@
 {{- $key := .Get "app" -}}
 {{- $text := .Get "text" -}}
+{{- $compare := .Get "compare" -}}
 {{- with where .Site.Data.family.family "key" $key -}}
 {{- with index . 0 -}}
 {{- $link := printf "<strong><a href=\"%s\">%s</a></strong>" .url .name -}}
 {{- $body := replace $text .name $link -}}
 <div class="family-app-callout" style="border-left:3px solid #eee;padding:0.75rem 1rem;margin:1.5rem 0;background:#fafafa;">
-  <p class="mb-0">{{ $body | safeHTML }} <span class="text-muted">{{ .tagline }}.</span></p>
+  <p class="mb-0">{{ $body | safeHTML }} <span class="text-muted">{{ .tagline }}.</span>{{ with $compare }} <a href="{{ . }}">Compare the two</a>.{{ end }}</p>
 </div>
 {{- end -}}
 {{- end -}}

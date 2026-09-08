@@ -22,6 +22,20 @@
 </section>
 {{ "<!-- End of Compare List -->" | safeHTML }}
 
+{{ with .Content }}
+{{ "<!-- Compare Index Content -->" | safeHTML }}
+<section class="section compare-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        {{ . }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- End of Compare Index Content -->" | safeHTML }}
+{{ end }}
+
 {{ partial "cta.html" . }}
 
 {{ end }}
