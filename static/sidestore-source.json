@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10112",
-          "marketingVersion": "3.4.0-alpha.20260915.ca6ccfa",
-          "date": "2026-09-15",
-          "localizedDescription": "Alpha build ca6ccfa · 2026-09-15\n\nChanges in this build:\n• ci(testflight): distribute nightlies to external groups after upload\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10122",
+          "marketingVersion": "3.4.0-alpha.20260916.97c95f5",
+          "date": "2026-09-16",
+          "localizedDescription": "Alpha build 97c95f5 · 2026-09-16\n\nChanges in this build:\n• ci: stop failing the SPM job on build-only modules\n• ci: run the PVWebServer tests\n• fix(webserver): validate the source name on move and copy\n• fix(cheevos): store the RetroArch token, not the password\n• fix(webserver): stop serving retroarch.cfg and scrub it on logout\n• fix(webserver): escape directory names in the uploader breadcrumb\n• fix(webserver): escape all HTML metacharacters in error responses\n• fix(ecosystem): keep ecosystem-fetch downloads inside the import container\n• test(cheevos): unbreak PVCheevosTests compilation\n• [Auto] Update skin catalog seed data (#3686)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 728052318,
+          "size": 729176378,
           "minOSVersion": "17.0"
         }
       ],
@@ -162,7 +162,7 @@
         {
           "version": "alpha-ios",
           "buildVersion": "alpha-ios",
-          "date": "2026-09-15T02:25:13.084Z",
+          "date": "2026-09-15T07:49:35.794Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
           "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha/Non-Jailbroken.ipa",
           "size": 1,
@@ -176,7 +176,7 @@
           "date": "2026-09-15",
           "localizedDescription": "iCube 1.0.0 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS/iCube.ipa",
-          "size": 90622816,
+          "size": 90629737,
           "minOSVersion": "15.0",
           "platform": "iOS",
           "isBeta": false
