@@ -162,7 +162,7 @@
         {
           "version": "alpha-ios",
           "buildVersion": "alpha-ios",
-          "date": "2026-09-18T00:24:38.323Z",
+          "date": "2026-09-18T05:59:13.652Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
           "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha/Non-Jailbroken.ipa",
           "size": 1,
@@ -176,7 +176,7 @@
           "date": "2026-09-18",
           "localizedDescription": "iCube 1.0.0 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS/iCube.ipa",
-          "size": 91306690,
+          "size": 91351507,
           "minOSVersion": "15.0",
           "platform": "iOS",
           "isBeta": false
