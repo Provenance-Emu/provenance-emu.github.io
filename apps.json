@@ -95,51 +95,6 @@
       }
     },
     {
-      "name": "Provenance Alpha",
-      "bundleIdentifier": "com.provenance-emu.provenance.alpha",
-      "developerName": "Provenance-EMU",
-      "subtitle": "Latest dev builds - test new features early",
-      "localizedDescription": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the stable version to test new features without losing your stable install.\n\nSupports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more.",
-      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
-      "tintColor": "FF6B35",
-      "screenshotURLs": [],
-      "versions": [
-        {
-          "version": "3.4.0",
-          "buildVersion": "10191",
-          "marketingVersion": "3.4.0-alpha.20260926.89f166d",
-          "date": "2026-09-26",
-          "localizedDescription": "Alpha build 89f166d · 2026-09-26\n\nChanges in this build:\n• fix(topshelf): drop unused iCloud entitlements (ITMS-90575)\n• fix(controls): keep type_body_length disable adjacent to its class\n• fix(controls): move OSD timing constants out of the generic controller\n• fix(controls): classic OSD visibility, drag isolation, top bar, record stop\n• fix(cloudsync): stop blocking game launch on the battery-save restore\n• fix(dolphin): apply Metal screen filters to GameCube/Wii\n• fix(dolphin): declare audio visualizer unsupported for GC/Wii\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
-          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730480960,
-          "minOSVersion": "17.0"
-        }
-      ],
-      "appPermissions": {
-        "entitlements": [
-          {
-            "name": "com.apple.security.application-groups"
-          },
-          {
-            "name": "com.apple.developer.icloud-services"
-          },
-          {
-            "name": "com.apple.developer.icloud-container-identifiers"
-          }
-        ],
-        "privacy": [
-          {
-            "name": "LocalNetwork",
-            "usageDescription": "Used to discover and connect to local network game servers for netplay."
-          },
-          {
-            "name": "Camera",
-            "usageDescription": "Used to scan QR codes for importing game data."
-          }
-        ]
-      }
-    },
-    {
       "name": "iCube",
       "bundleIdentifier": "com.joemattiello.iCube",
       "developerName": "Provenance Emu",
