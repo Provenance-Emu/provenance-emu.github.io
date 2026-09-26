@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10222",
-          "marketingVersion": "3.4.0-alpha.20260926.d27b8be",
+          "buildVersion": "10223",
+          "marketingVersion": "3.4.0-alpha.20260926.50e52a6",
           "date": "2026-09-26",
-          "localizedDescription": "Alpha build d27b8be · 2026-09-26\n\nChanges in this build:\n• [Agent] Bound on-demand BIOS downloads in the launch path (#3700)\n• [Agent] Replace stale thin-wrapper BIOS copies atomically (#3699)\n• [Agent] fix(video): apply scaling mode in Dolphin, PPSSPP and RetroArch wrapper (#3695)\n• build(dolphin): bump dolphin-ios (bench loadStateSlot deadlock fix, perf matrix results)\n• [Agent] Show iCloud BIOS availability and download status in the BIOS list (#3698)\n• [Agent] Fix stale thin-wrapper BIOS copies and slow optional-BIOS launch check (#3697)\n• [Agent] test(pvui): get PVUI unit tests compiling and passing in CI (#3696)\n• update dolphin core\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 50e52a6 · 2026-09-26\n\nChanges in this build:\n• [Agent] Make the 60s cloud ROM download timeout actually fire (#3703)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730535894,
+          "size": 730448536,
           "minOSVersion": "17.0"
         }
       ],
