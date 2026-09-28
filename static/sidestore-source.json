@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10223",
-          "marketingVersion": "3.4.0-alpha.20260926.50e52a6",
-          "date": "2026-09-26",
-          "localizedDescription": "Alpha build 50e52a6 · 2026-09-26\n\nChanges in this build:\n• [Agent] Make the 60s cloud ROM download timeout actually fire (#3703)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10224",
+          "marketingVersion": "3.4.0-alpha.20260928.aeb1a03",
+          "date": "2026-09-28",
+          "localizedDescription": "Alpha build aeb1a03 · 2026-09-28\n\nChanges in this build:\n• [Agent] Register touch clicks and hardware keys on thin-wrapper cores (Atari ST) (#3704)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730448536,
+          "size": 730847376,
           "minOSVersion": "17.0"
         }
       ],
@@ -161,11 +161,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "169",
-          "date": "2026-09-26T17:37:45.977Z",
+          "buildVersion": "170",
+          "date": "2026-09-26T22:31:31.414Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-169/Non-Jailbroken.ipa",
-          "size": 93305526,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-170/Non-Jailbroken.ipa",
+          "size": 93306177,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
