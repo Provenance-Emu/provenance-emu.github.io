@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10224",
-          "marketingVersion": "3.4.0-alpha.20260928.aeb1a03",
-          "date": "2026-09-28",
-          "localizedDescription": "Alpha build aeb1a03 · 2026-09-28\n\nChanges in this build:\n• [Agent] Register touch clicks and hardware keys on thin-wrapper cores (Atari ST) (#3704)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10232",
+          "marketingVersion": "3.4.0-alpha.20260929.77c77e7",
+          "date": "2026-09-29",
+          "localizedDescription": "Alpha build 77c77e7 · 2026-09-29\n\nChanges in this build:\n• [Agent] fix(build): add RelativeMouseScaler.swift to PVCoreBridgeRetro project (#3710)\n• [Agent] MSX trackpad scale on the thin wrapper (blueMSX mouse) (#3711)\n• build(dolphin): bump dolphin-ios to 519ee560ff (refreshed prebuilts)\n• build(dolphin): bump dolphin-ios to 760e9e8e19\n• [Agent] MSX mouse on the touch trackpad (native fMSX) (#3709)\n• [Agent] Atari ST, DOS and Amiga mouse: range, speed, cursor overlay (#3708)\n• [Agent] Tap-then-drag on the touch trackpad (Atari ST window dragging) (#3707)\n• [Agent] feat(file-provider): add save state & screenshot enumeration (#3618)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730847376,
+          "size": 730896245,
           "minOSVersion": "17.0"
         }
       ],
@@ -161,11 +161,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "172",
-          "date": "2026-09-29T04:37:40.754Z",
+          "buildVersion": "174",
+          "date": "2026-09-29T07:29:03.715Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-172/Non-Jailbroken.ipa",
-          "size": 93317310,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-174/Non-Jailbroken.ipa",
+          "size": 93317628,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
