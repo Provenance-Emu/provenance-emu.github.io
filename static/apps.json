@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10232",
-          "marketingVersion": "3.4.0-alpha.20260929.77c77e7",
+          "buildVersion": "10233",
+          "marketingVersion": "3.4.0-alpha.20260929.52f8768",
           "date": "2026-09-29",
-          "localizedDescription": "Alpha build 77c77e7 · 2026-09-29\n\nChanges in this build:\n• [Agent] fix(build): add RelativeMouseScaler.swift to PVCoreBridgeRetro project (#3710)\n• [Agent] MSX trackpad scale on the thin wrapper (blueMSX mouse) (#3711)\n• build(dolphin): bump dolphin-ios to 519ee560ff (refreshed prebuilts)\n• build(dolphin): bump dolphin-ios to 760e9e8e19\n• [Agent] MSX mouse on the touch trackpad (native fMSX) (#3709)\n• [Agent] Atari ST, DOS and Amiga mouse: range, speed, cursor overlay (#3708)\n• [Agent] Tap-then-drag on the touch trackpad (Atari ST window dragging) (#3707)\n• [Agent] feat(file-provider): add save state & screenshot enumeration (#3618)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 52f8768 · 2026-09-29\n\nChanges in this build:\n• build(dolphin): bump dolphin-ios to 1ddddaac97\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730896245,
+          "size": 730891785,
           "minOSVersion": "17.0"
         }
       ],
