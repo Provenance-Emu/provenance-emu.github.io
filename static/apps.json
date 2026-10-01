@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10240",
-          "marketingVersion": "3.4.0-alpha.20260930.f8af46f",
-          "date": "2026-09-30",
-          "localizedDescription": "Alpha build f8af46f · 2026-09-30\n\nChanges in this build:\n• ci(testflight): build tvOS nightly too; wait 120 min for ASC processing\n• build(deps): Bump rubyzip from 2.3.2 to 3.4.0 in the bundler group across 1 directory (#3715)\n• [Auto] Update skin catalog seed data (#3705)\n• chore(changelog): absorb 12 pending fragment(s) (#3694)\n• [Agent] ci: alert on builds missing local dylibs (alpha + TestFlight) (#3716)\n• [Agent] Use the Provenance blueMSX fork (MSX mouse) (#3714)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10241",
+          "marketingVersion": "3.4.0-alpha.20261001.ff172d6",
+          "date": "2026-10-01",
+          "localizedDescription": "Alpha build ff172d6 · 2026-10-01\n\nChanges in this build:\n• build(dolphin): bump dolphin-ios to 28f0e24fb6 (Controller Hub phase 2)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730805578,
+          "size": 730794826,
           "minOSVersion": "17.0"
         }
       ],
@@ -161,11 +161,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "174",
-          "date": "2026-09-29T07:29:03.715Z",
+          "buildVersion": "176",
+          "date": "2026-10-01T00:22:53.007Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-174/Non-Jailbroken.ipa",
-          "size": 93317628,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-176/Non-Jailbroken.ipa",
+          "size": 93338293,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -173,7 +173,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-09-29",
+          "date": "2026-10-01",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -185,7 +185,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-09-29",
+          "date": "2026-10-01",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -197,7 +197,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-09-29",
+          "date": "2026-10-01",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
