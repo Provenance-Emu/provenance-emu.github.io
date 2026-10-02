@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10275",
-          "marketingVersion": "3.4.0-alpha.20261002.23cfa34",
+          "buildVersion": "10308",
+          "marketingVersion": "3.4.0-alpha.20261002.9fd1aa2",
           "date": "2026-10-02",
-          "localizedDescription": "Alpha build 23cfa34 · 2026-10-02\n\nChanges in this build:\n• chore: auto-update license manifest (#3717)\n• ci(licenses): fall back to a rolling PR when develop rejects the bot push\n• feat(library): size the grid to its width; unlink the UIKit and SwiftUI scales\n• test(pvui): make the PVUI unit suites build and run on iOS\n• docs(claude): correct stale thin-wrapper notes; add core-option and no-frame notes\n• fix(dolphin): import the logging macros PVDolphinCore.mm now uses\n• build(mupen): give the rice submodule a distinct name\n• build(mupen): move Mupen64Plus core, rice and RSP plugins to upstream submodules\n• build(picodrive): compile PicoDrive from the Provenance-Emu fork submodule\n• chore(flycast): remove the dead native PVFlycast core\n• build(dolphin): bump dolphin-ios to c508e6dad4 (new touch overlay default)\n• feat(settings): search, lighter rows and a less crowded layout\n• perf(library): cut per-cell and per-scroll work in the game library\n• fix(video): close two black-screen paths and log boots that show nothing\n• feat(core-options): grouped pause cells and a rebuilt options list\n• feat(skins): render DeltaSkins for GameCube/Wii on the Dolphin core (iOS)\n• fix(core-options): honor per-game overrides; persist thin-wrapper options\n• fix(pause): stop the tvOS pause menu closing itself\n• fix(artwork): replace dead artwork URLs instead of keeping them forever\n• fix(skins): map GameCube/Wii skin inputs and right thumbsticks correctly\n• build(stella): compile Stella 8.0_pre from the fork submodule\n• fix(skins): recognise Manic GameCube/Wii identifiers (public.aoshuang.game.ngc/.wii)\n• fix(lookup): keep dotted version tags in libretro artwork names\n• build(mednafen): compile Mednafen from the Provenance-Emu fork submodule\n• build(atari800): compile atari800 7.2.1 from the fork submodule\n• build(fceu): compile fceux from the fork submodule at upstream master\n• fix(genesis): apply user core options instead of resetting them\n• build(snes9x): compile snes9x from the Provenance-Emu fork submodule\n• build(genesis): compile Genesis Plus GX from the fork submodule\n• chore(dolphin): bump iCube to 6e4bebd011\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 9fd1aa2 · 2026-10-02\n\nChanges in this build:\n• fix(thin): map Jaguar A/B and Pause/Option to the right buttons\n• fix(thin): extract zipped games for cores that can't read zips\n• fix(cheevos): hash the extracted ROM for zipped console games\n• fix(mupen): pace PAL games at 50 fps instead of 60\n• fix(mednafen): map NES RAM mirrors, PPU and cart RAM for achievements\n• fix(vbam): expose GBA save RAM to achievements\n• test(pause): cover folding a core's Core category into CORE\n• fix(gb): expose the full rcheevos GB/GBC map on Gambatte and TGBDual\n• fix(mupen): use one bridge instead of an idle duplicate\n• fix(pause): one CORE header, submenus open at the top\n• fix(cheevos): hash .gcm GameCube discs as GameCube\n• fix(emu): keep a menu button on screen when skin controls aren't\n• chore(dolphin): bump iCube for the save-state stop race fix\n• fix(dolphin): use flat rcheevos addresses for GameCube/Wii achievements\n• chore: auto-update license manifest (#3718)\n• build(dolphin): bump dolphin-ios to dc03a5d3a0 (controller skins, top bar rework, zip-slip fix)\n• fix(cores): tick achievements every frame on VBA-M, Stella, Gambatte, TGBDual, Dolphin\n• fix(cores): tick achievements every frame on Atari800, PokeMini, ProSystem\n• build(mednafen): point the submodule at the new RA accessors (57198b7)\n• fix(mednafen): tick achievements every frame; map all Mednafen systems\n• fix(fceu): tick achievements every frame; map RAM mirrors, PPU, cart RAM\n• fix(snes9x): tick achievements every frame; add SA-1 I-RAM, gate on load\n• fix(picodrive): tick achievements every frame; add 32X/Sega CD/SMS maps\n• fix(mupen): tick achievements on every VI\n• fix(genesis): tick achievements every frame; add Sega CD/SMS/GG/SG maps\n• fix(mgba): run achievements through the shared session; fix audio pitch\n• test(thin-wrapper): run PVCoreBridgeRetro's tests via its xcodeproj\n• build: add the mGBA and VBA-M submodule gitlinks\n• build(vbam): compile VBA-M 2.2.3 from the Provenance-Emu fork submodule\n• build(mgba): compile native mGBA from the Provenance-Emu/mgba fork\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 731329153,
+          "size": 731370099,
           "minOSVersion": "17.0"
         }
       ],
@@ -161,11 +161,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "187",
-          "date": "2026-10-02T12:17:41.892Z",
+          "buildVersion": "188",
+          "date": "2026-10-02T13:58:46.316Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-187/Non-Jailbroken.ipa",
-          "size": 93637235,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-188/Non-Jailbroken.ipa",
+          "size": 93637141,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
