@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10241",
-          "marketingVersion": "3.4.0-alpha.20261001.ff172d6",
-          "date": "2026-10-01",
-          "localizedDescription": "Alpha build ff172d6 · 2026-10-01\n\nChanges in this build:\n• build(dolphin): bump dolphin-ios to 28f0e24fb6 (Controller Hub phase 2)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10275",
+          "marketingVersion": "3.4.0-alpha.20261002.23cfa34",
+          "date": "2026-10-02",
+          "localizedDescription": "Alpha build 23cfa34 · 2026-10-02\n\nChanges in this build:\n• chore: auto-update license manifest (#3717)\n• ci(licenses): fall back to a rolling PR when develop rejects the bot push\n• feat(library): size the grid to its width; unlink the UIKit and SwiftUI scales\n• test(pvui): make the PVUI unit suites build and run on iOS\n• docs(claude): correct stale thin-wrapper notes; add core-option and no-frame notes\n• fix(dolphin): import the logging macros PVDolphinCore.mm now uses\n• build(mupen): give the rice submodule a distinct name\n• build(mupen): move Mupen64Plus core, rice and RSP plugins to upstream submodules\n• build(picodrive): compile PicoDrive from the Provenance-Emu fork submodule\n• chore(flycast): remove the dead native PVFlycast core\n• build(dolphin): bump dolphin-ios to c508e6dad4 (new touch overlay default)\n• feat(settings): search, lighter rows and a less crowded layout\n• perf(library): cut per-cell and per-scroll work in the game library\n• fix(video): close two black-screen paths and log boots that show nothing\n• feat(core-options): grouped pause cells and a rebuilt options list\n• feat(skins): render DeltaSkins for GameCube/Wii on the Dolphin core (iOS)\n• fix(core-options): honor per-game overrides; persist thin-wrapper options\n• fix(pause): stop the tvOS pause menu closing itself\n• fix(artwork): replace dead artwork URLs instead of keeping them forever\n• fix(skins): map GameCube/Wii skin inputs and right thumbsticks correctly\n• build(stella): compile Stella 8.0_pre from the fork submodule\n• fix(skins): recognise Manic GameCube/Wii identifiers (public.aoshuang.game.ngc/.wii)\n• fix(lookup): keep dotted version tags in libretro artwork names\n• build(mednafen): compile Mednafen from the Provenance-Emu fork submodule\n• build(atari800): compile atari800 7.2.1 from the fork submodule\n• build(fceu): compile fceux from the fork submodule at upstream master\n• fix(genesis): apply user core options instead of resetting them\n• build(snes9x): compile snes9x from the Provenance-Emu fork submodule\n• build(genesis): compile Genesis Plus GX from the fork submodule\n• chore(dolphin): bump iCube to 6e4bebd011\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730794826,
+          "size": 731329153,
           "minOSVersion": "17.0"
         }
       ],
@@ -161,11 +161,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "177",
-          "date": "2026-10-01T04:59:01.557Z",
+          "buildVersion": "178",
+          "date": "2026-10-01T09:36:51.704Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-177/Non-Jailbroken.ipa",
-          "size": 93396534,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-178/Non-Jailbroken.ipa",
+          "size": 93401672,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
