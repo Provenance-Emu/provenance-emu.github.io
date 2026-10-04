@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10326",
-          "marketingVersion": "3.4.0-alpha.20261004.574dee0",
+          "buildVersion": "10328",
+          "marketingVersion": "3.4.0-alpha.20261004.9315e78",
           "date": "2026-10-04",
-          "localizedDescription": "Alpha build 574dee0 · 2026-10-04\n\nChanges in this build:\n• refactor(ui): remove UI that only worked with the thick wrapper\n• refactor(retro): delete the thick RetroArch wrapper\n• refactor(retro): move the libretro core list out of PVRetroArch/\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 9315e78 · 2026-10-04\n\nChanges in this build:\n• feat(thin): real MIDI on/off toggle; drop thick-only port picker and comments\n• chore(cores): track Core-VirtualJaguar provenance, core back on master\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 654292230,
+          "size": 654308023,
           "minOSVersion": "17.0"
         }
       ],
@@ -161,11 +161,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "213",
-          "date": "2026-10-04T19:24:43.714Z",
+          "buildVersion": "217",
+          "date": "2026-10-04T19:55:43.709Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-213/Non-Jailbroken.ipa",
-          "size": 93614151,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-217/Non-Jailbroken.ipa",
+          "size": 93614176,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
