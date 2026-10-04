@@ -162,7 +162,7 @@
         {
           "version": "1.0.0",
           "buildVersion": "213",
-          "date": "2026-10-04T11:22:47.078Z",
+          "date": "2026-10-04T19:24:43.714Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
           "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-213/Non-Jailbroken.ipa",
           "size": 93614151,
