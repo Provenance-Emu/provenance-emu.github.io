@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10322",
-          "marketingVersion": "3.4.0-alpha.20261004.7bd1586",
+          "buildVersion": "10323",
+          "marketingVersion": "3.4.0-alpha.20261004.5332dc5",
           "date": "2026-10-04",
-          "localizedDescription": "Alpha build 7bd1586 · 2026-10-04\n\nChanges in this build:\n• MAME CHD choppiness (#3721)\n• [Auto] Update skin catalog seed data (#3723)\n• build(deps): Bump sqlite3 from 1.4.2 to 2.9.6 in /Packages/RxRealm in the bundler group across 1 directory (#3722)\n• fix(importer): stop M3U imports throwing on an invalid Realm query\n• ci: run the PVLibrary tests on pushes to develop too\n• ci: run the PVLibrary tests on PRs that touch PVLibrary\n• test(library): fix the remaining PVLibraryTests failures\n• fix(webserver): don't read a game after hard-deleting it\n• fix(sync): track priority boosts explicitly so low tiers unboost\n• test(library): make PVLibraryTests compile again\n• feat(jaguar): retire the native core in favour of virtualjaguar libretro\n• refactor(retro): always run libretro cores on the thin wrapper\n• chore(cores): bump VirtualJaguar for the jagcrypt BIOS autodetect\n• fix: parse provisioning profiles as binary data (#3720)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 5332dc5 · 2026-10-04\n\nChanges in this build:\n• build(retro): stop shipping PVRetroArch.framework\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730995815,
+          "size": 654351908,
           "minOSVersion": "17.0"
         }
       ],
