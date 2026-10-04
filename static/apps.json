@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10308",
-          "marketingVersion": "3.4.0-alpha.20261002.9fd1aa2",
-          "date": "2026-10-02",
-          "localizedDescription": "Alpha build 9fd1aa2 · 2026-10-02\n\nChanges in this build:\n• fix(thin): map Jaguar A/B and Pause/Option to the right buttons\n• fix(thin): extract zipped games for cores that can't read zips\n• fix(cheevos): hash the extracted ROM for zipped console games\n• fix(mupen): pace PAL games at 50 fps instead of 60\n• fix(mednafen): map NES RAM mirrors, PPU and cart RAM for achievements\n• fix(vbam): expose GBA save RAM to achievements\n• test(pause): cover folding a core's Core category into CORE\n• fix(gb): expose the full rcheevos GB/GBC map on Gambatte and TGBDual\n• fix(mupen): use one bridge instead of an idle duplicate\n• fix(pause): one CORE header, submenus open at the top\n• fix(cheevos): hash .gcm GameCube discs as GameCube\n• fix(emu): keep a menu button on screen when skin controls aren't\n• chore(dolphin): bump iCube for the save-state stop race fix\n• fix(dolphin): use flat rcheevos addresses for GameCube/Wii achievements\n• chore: auto-update license manifest (#3718)\n• build(dolphin): bump dolphin-ios to dc03a5d3a0 (controller skins, top bar rework, zip-slip fix)\n• fix(cores): tick achievements every frame on VBA-M, Stella, Gambatte, TGBDual, Dolphin\n• fix(cores): tick achievements every frame on Atari800, PokeMini, ProSystem\n• build(mednafen): point the submodule at the new RA accessors (57198b7)\n• fix(mednafen): tick achievements every frame; map all Mednafen systems\n• fix(fceu): tick achievements every frame; map RAM mirrors, PPU, cart RAM\n• fix(snes9x): tick achievements every frame; add SA-1 I-RAM, gate on load\n• fix(picodrive): tick achievements every frame; add 32X/Sega CD/SMS maps\n• fix(mupen): tick achievements on every VI\n• fix(genesis): tick achievements every frame; add Sega CD/SMS/GG/SG maps\n• fix(mgba): run achievements through the shared session; fix audio pitch\n• test(thin-wrapper): run PVCoreBridgeRetro's tests via its xcodeproj\n• build: add the mGBA and VBA-M submodule gitlinks\n• build(vbam): compile VBA-M 2.2.3 from the Provenance-Emu fork submodule\n• build(mgba): compile native mGBA from the Provenance-Emu/mgba fork\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10322",
+          "marketingVersion": "3.4.0-alpha.20261004.7bd1586",
+          "date": "2026-10-04",
+          "localizedDescription": "Alpha build 7bd1586 · 2026-10-04\n\nChanges in this build:\n• MAME CHD choppiness (#3721)\n• [Auto] Update skin catalog seed data (#3723)\n• build(deps): Bump sqlite3 from 1.4.2 to 2.9.6 in /Packages/RxRealm in the bundler group across 1 directory (#3722)\n• fix(importer): stop M3U imports throwing on an invalid Realm query\n• ci: run the PVLibrary tests on pushes to develop too\n• ci: run the PVLibrary tests on PRs that touch PVLibrary\n• test(library): fix the remaining PVLibraryTests failures\n• fix(webserver): don't read a game after hard-deleting it\n• fix(sync): track priority boosts explicitly so low tiers unboost\n• test(library): make PVLibraryTests compile again\n• feat(jaguar): retire the native core in favour of virtualjaguar libretro\n• refactor(retro): always run libretro cores on the thin wrapper\n• chore(cores): bump VirtualJaguar for the jagcrypt BIOS autodetect\n• fix: parse provisioning profiles as binary data (#3720)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 731370099,
+          "size": 730995815,
           "minOSVersion": "17.0"
         }
       ],
@@ -161,11 +161,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "189",
-          "date": "2026-10-03T23:55:42.916Z",
+          "buildVersion": "191",
+          "date": "2026-10-04T02:14:42.498Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-189/Non-Jailbroken.ipa",
-          "size": 93581005,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-191/Non-Jailbroken.ipa",
+          "size": 93586425,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -173,7 +173,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-10-03",
+          "date": "2026-10-04",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -185,7 +185,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-10-03",
+          "date": "2026-10-04",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -197,7 +197,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-10-03",
+          "date": "2026-10-04",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
