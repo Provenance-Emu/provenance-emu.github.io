@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10328",
-          "marketingVersion": "3.4.0-alpha.20261004.9315e78",
-          "date": "2026-10-04",
-          "localizedDescription": "Alpha build 9315e78 · 2026-10-04\n\nChanges in this build:\n• feat(thin): real MIDI on/off toggle; drop thick-only port picker and comments\n• chore(cores): track Core-VirtualJaguar provenance, core back on master\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10357",
+          "marketingVersion": "3.4.0-alpha.20261006.2be44ff",
+          "date": "2026-10-06",
+          "localizedDescription": "Alpha build 2be44ff · 2026-10-06\n\nChanges in this build:\n• fix(testflight): retry transient network errors when distributing\n• fix(ci): don't split submodule paths on spaces in init verification\n• fix(ci): catch cloned-but-empty submodules after a failed init\n• feat(release): --notes-file for TestFlight \"What to Test\" text\n• ci(testflight): list the real changes in \"What to Test\" (#3728)\n• fix(netplay): make the bridge-state sink @Sendable for Xcode 26.3\n• fix(maint): re-launch under Python 3.11+ when started by an older one\n• fix(maint): terminal-only jobs, faster status, submodule-aware audit\n• fix(maint): order staleness by commit, not time; verify no-change runs\n• feat(scripts): add maint, a registry and dashboard for maintenance jobs\n• chore(scripts): sort Scripts/ into folders, drop dead scripts\n• update contributors\n• feat(dolphin): match iCube defaults, expose all CIR flags\n• dolphin core update\n• package resolved update\n• perf(library): drop per-entry package check from file index scan\n• fix(cloud): stop 0xDEAD10CC kills from sync work at suspension\n• feat(netplay): Dolphin boots every player into the game together\n• feat(launch): let the user unblock a stuck game launch\n• feat(netplay): mGBA link cable over the network with lockstep\n• fix(dolphin): keep the tvOS render view above the GPU view\n• build(dolphin): compile native netplay against this Dolphin revision\n• feat(netplay): Mednafen hosting with the embedded mednafen-server\n• feat(netplay): PPSSPP ad hoc for the native and libretro cores\n• feat(netplay): host start and restart-on-host steps for cores\n• docs: plan for native-core netplay (Mednafen, PPSSPP, Dolphin, mGBA)\n• fix(netplay): Game Center joins real addresses; relay off by default\n• fix(netplay): make thin-wrapper netplay actually exchange packets\n• chore: drop leftovers of the deleted RetroArch wrapper\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 654308023,
+          "size": 654455005,
           "minOSVersion": "17.0"
         }
       ],
@@ -161,11 +161,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "239",
-          "date": "2026-10-06T09:22:34.755Z",
+          "buildVersion": "251",
+          "date": "2026-10-06T11:24:32.190Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-239/Non-Jailbroken.ipa",
-          "size": 93643031,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-251/Non-Jailbroken.ipa",
+          "size": 93646112,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
