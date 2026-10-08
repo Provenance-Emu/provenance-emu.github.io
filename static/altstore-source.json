@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10374",
-          "marketingVersion": "3.4.0-alpha.20261007.975f004",
-          "date": "2026-10-07",
-          "localizedDescription": "Alpha build 975f004 · 2026-10-07\n\nChanges in this build:\n• fix(controllers): don't block UserDefaults posters on the main thread\n• fix(render): stop GLES bridge emu loop self-deadlocking on frontBufferLock\n• fix(retro): don't block the main thread on the emulation lock for cheevos setters\n• fix(3ds): don't touch CFG service before the system has booted\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10476",
+          "marketingVersion": "3.4.0-alpha.20261008.34df2e9",
+          "date": "2026-10-08",
+          "localizedDescription": "Alpha build 34df2e9 · 2026-10-08\n\nChanges in this build:\n• feat(azahar): skins drive the screen layout; live options; CIA boot\n• feat(skins): remove the yellow touch indicators\n• feat(dolphin): texture pack, graphics mod and OSD options\n• build: hide weak C++ exports in PVlibDolphin and PVEmuThree\n• docs: azahar weak-symbol and xcodegen gotchas\n• build(azahar): keep PVAzahar's C++ symbols private to the image\n• enable skins in 3ds\n• fix(azahar): run the emu thread on a 16 MB stack\n• update dolphin\n• fix(azahar): hand MoltenVK to Vulkan::Instance via the EmuWindow\n• feat(jit): pass pid in the StikDebug enable-jit URL\n• feat(jit): replace pre-launch JIT alert with in-game no-JIT toast\n• fix(azahar): populate lle_modules on iOS too; New 3DS mode off by default\n• update metadata\n• fix(maint): fall back to the next free port when 8765 is taken\n• fix(azahar): populate lle_modules before Load; valid audio session options\n• feat(dolphin): dual core on by default\n• fix(tests): use the real lowercase RetroArch scripts/ path\n• update dolphin core\n• ci(maint): run the script-tests job on PRs and develop pushes\n• dolphin SIMD paired-single arithmetic on ARM64 default on\n• azahar build fix\n• chore: auto-update license manifest (#3729)\n• fix(ci): list never-cloned submodules first in the init failure report\n• fix(azahar): bind self before the main-actor boot callback\n• refactor(ui): drop the GL presenter's lock on the Swift core\n• fix(core): join the emulation loop off the main thread when quitting\n• fix(stella): keep light-gun and trackball input off the emulation lock\n• fix(thin): make cheevos callback blocks atomic and snapshot before calling\n• fix(core): never block the main thread on the emulation lock when pausing\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 654438600,
+          "size": 663941362,
           "minOSVersion": "17.0"
         }
       ],
@@ -161,11 +161,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "275",
-          "date": "2026-10-08T09:14:06.968Z",
+          "buildVersion": "277",
+          "date": "2026-10-08T11:02:45.147Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-275/Non-Jailbroken.ipa",
-          "size": 93722852,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-277/Non-Jailbroken.ipa",
+          "size": 93534350,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
