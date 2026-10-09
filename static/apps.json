@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10478",
-          "marketingVersion": "3.4.0-alpha.20261009.588fc4d",
+          "buildVersion": "10479",
+          "marketingVersion": "3.4.0-alpha.20261009.15fc665",
           "date": "2026-10-09",
-          "localizedDescription": "Alpha build 588fc4d · 2026-10-09\n\nChanges in this build:\n• fix(skins): own-surface cores get both skin screens, not the smallest one\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 15fc665 · 2026-10-09\n\nChanges in this build:\n• fix(skins): look up the dual-screen pair with the renderer's traits\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 664357146,
+          "size": 664469500,
           "minOSVersion": "17.0"
         }
       ],
