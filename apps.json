@@ -140,6 +140,37 @@
       }
     },
     {
+      "name": "iFly",
+      "bundleIdentifier": "com.provenance.ifly",
+      "developerName": "Provenance Emu",
+      "subtitle": "Dreamcast Emulator for iOS & tvOS",
+      "localizedDescription": "Experience classic Sega Dreamcast games on your iOS devices and Apple TV.\n\nFeatures:\n• Full Dreamcast emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\nThis is an early build of iFly optimized for iOS and tvOS devices.",
+      "iconURL": "https://ifly-emu.com/icon-1024.png",
+      "tintColor": "#ff6900",
+      "category": "games",
+      "screenshots": [
+        "https://ifly-emu.com/screenshots/iphone/library.jpg",
+        "https://ifly-emu.com/screenshots/iphone/library-theme.jpg",
+        "https://ifly-emu.com/screenshots/iphone/search.jpg",
+        "https://ifly-emu.com/screenshots/iphone/settings-themes.jpg",
+        "https://ifly-emu.com/screenshots/iphone/cheats.jpg",
+        "https://ifly-emu.com/screenshots/iphone/import.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0+1791436698",
+          "buildVersion": "1791436698",
+          "date": "2026-10-09",
+          "localizedDescription": "iFly 1.0.0 (build 1791436698) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1791436698/iFly-1.0.0-1791436698.ipa",
+          "size": 131240690,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        }
+      ]
+    },
+    {
       "name": "iCube",
       "bundleIdentifier": "com.joemattiello.iCube",
       "developerName": "Provenance Emu",
