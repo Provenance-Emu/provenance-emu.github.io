@@ -42,6 +42,11 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Fetch release notes
+        run: node scripts/fetch-builds.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build site
         run: hugo --minify
 
@@ -59,7 +64,7 @@ jobs:
         run: |
           htmlproofer ./public \
             --checks Links,Images,Scripts,OpenGraph \
-            --ignore-urls "/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/login/,/provenance-emu\.com/,/s3.*amazonaws\.com/" \
+            --ignore-urls "/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/login/,/github\.com\/[^/]+\/[^/]+\/(releases\/download|commit|compare|pull|issues)\//,/objects\.githubusercontent\.com/,/provenance-emu\.com/,/s3.*amazonaws\.com/" \
             --ignore-status-codes "0,429,999,403" \
             --ignore-files "/404\.html/,/release-2\.1\.0/,/\/categories\//,/\/tags\//" \
             2>&1 | tee htmlproofer-output.txt

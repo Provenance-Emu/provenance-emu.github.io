@@ -115,10 +115,78 @@
         <a href="https://github.com/Provenance-Emu/Provenance/releases/latest" target="_blank" rel="noopener" class="btn btn-outline btn-round-full mb-2 d-block">
           <i class="fas fa-download mr-1"></i> Download IPA
         </a>
+        <a href="#downloads" class="text-muted small d-block mb-1">All builds &amp; release notes ↓</a>
         <a href="https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/building-from-source" target="_blank" rel="noopener" class="text-muted small">Build guide →</a>
       </div>
     </div>
 
+  </div>
+</section>
+
+{{ "<!-- Downloads and release notes -->" | safeHTML }}
+<section class="section bg-gray" id="downloads">
+  <style>
+    .release-product { background:#fff; border-radius:8px; padding:1.5rem; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+    .release-entry { border-top:1px solid #eee; padding:1rem 0; }
+    .release-entry:first-of-type { border-top:0; }
+    .release-notes summary { cursor:pointer; font-weight:600; color:#0D96F6; }
+    .release-notes > div { margin-top:.75rem; font-size:.9rem; overflow-wrap:anywhere; }
+    .release-notes > div h1, .release-notes > div h2, .release-notes > div h3, .release-notes > div h4 { font-size:1.05rem; font-weight:600; margin:1rem 0 .4rem; }
+    .release-notes > div ul, .release-notes > div ol { padding-left:1.25rem; }
+    .release-notes > div pre { overflow-x:auto; background:#f6f8fa; padding:.75rem; border-radius:6px; font-size:.8rem; }
+    .release-notes > div img { max-width:100%; height:auto; }
+    .release-notes > div table { display:block; overflow-x:auto; }
+  </style>
+  <div class="container">
+{{ with .Site.Data.builds }}
+    <div class="text-center mb-5">
+      <h2 class="font-weight-bold">Downloads &amp; release notes</h2>
+      <p class="text-muted mx-auto" style="max-width:640px;">Every build is published on GitHub. Expand a release to see what changed. These are also the emulators from the Provenance team: iCube for GameCube &amp; Wii, iFly for Dreamcast, and Virtual Jaguar.</p>
+    </div>
+    {{ range .products }}
+    <div class="release-product mb-4" id="dl-{{ .key }}">
+      <div class="d-flex flex-wrap align-items-baseline justify-content-between">
+        <h3 class="font-weight-bold mb-1">{{ .name }}</h3>
+        <div class="small"><a href="{{ .site }}">Website →</a> &nbsp;·&nbsp; <a href="{{ .releasesURL }}" target="_blank" rel="noopener">All releases on GitHub →</a></div>
+      </div>
+      <p class="text-muted mb-2">{{ .tagline }}</p>
+      {{ range .entries }}
+      <div class="release-entry">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+          <div class="mb-2 mb-md-0">
+            <strong>{{ .title }}</strong>
+            {{ if .latest }}<span class="badge badge-success">Latest</span>{{ else if .prerelease }}<span class="badge badge-warning">Pre-release</span>{{ end }}
+            <div class="text-muted small">{{ .date | dateFormat "Jan 2, 2006" }}</div>
+          </div>
+          <div>
+            {{ range .assets }}
+            <a href="{{ .url }}" class="btn btn-outline btn-sm mb-1" rel="noopener"><i class="fas fa-download mr-1"></i>{{ .name }}{{ if .size }} <span class="text-muted">({{ printf "%.0f" (div .size 1048576.0) }} MB)</span>{{ end }}</a>
+            {{ end }}
+            <a href="{{ .url }}" class="btn btn-sm mb-1" target="_blank" rel="noopener"><i class="fab fa-github mr-1"></i>GitHub release</a>
+          </div>
+        </div>
+        {{ if .notesHtml }}
+        <details class="release-notes mt-2">
+          <summary>What&rsquo;s new</summary>
+          <div>{{ .notesHtml | safeHTML }}</div>
+        </details>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+{{ else }}
+    <div class="text-center mb-4">
+      <h2 class="font-weight-bold">Downloads</h2>
+      <p class="text-muted">Builds and release notes for each app are on GitHub.</p>
+    </div>
+    <ul class="list-unstyled text-center">
+      <li class="mb-2"><a href="https://github.com/Provenance-Emu/Provenance/releases">Provenance releases</a></li>
+      <li class="mb-2"><a href="https://github.com/Provenance-Emu/iCube/releases">iCube releases</a></li>
+      <li class="mb-2"><a href="https://github.com/JoeMatt/iFly-releases/releases">iFly releases</a></li>
+      <li class="mb-2"><a href="https://github.com/libretro/virtualjaguar-libretro/releases">Virtual Jaguar releases</a></li>
+    </ul>
+{{ end }}
   </div>
 </section>
 
