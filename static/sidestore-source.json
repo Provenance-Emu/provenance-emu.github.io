@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10500",
-          "marketingVersion": "3.4.0-alpha.20261010.15795ce",
+          "buildVersion": "10553",
+          "marketingVersion": "3.4.0-alpha.20261010.4630fea",
           "date": "2026-10-10",
-          "localizedDescription": "Alpha build 15795ce · 2026-10-10\n\nChanges in this build:\n• docs: reviewer context no longer names the deleted default skin\n• refactor(skins): delete the generated default skin; built-in controls are the overlay\n• docs: scene consolidation, quick action bar and UIKit deletion scope\n• refactor(overlay): remove the programmaticOverlay setting; overlay is always on\n• feat(overlay): generic four-face binding for systems without one\n• docs: unified input surface design (keyboard, pointer, media in the overlay)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 4630fea · 2026-10-10\n\nChanges in this build:\n• fix(skins): keep native-resolution picture centred in the skin screen\n• fix(azahar): tvOS layout option applies without a skin\n• chore: track the repo's fast-iteration skill in git\n• docs: dev workspace guide, fast-iteration skill, roadmap A done\n• test(maint): skip registry paths in submodules CI never cloned\n• test(skins): selection tests discriminate session vs preference\n• fix(skins): a game pick clears the system-level session skin\n• fix(skins): ignore cancelled thumbnail loads\n• fix(azahar): relayout once the emu thread is running\n• fix(azahar): drop queued skin frames on render view teardown\n• fix(azahar): replay skin screen frames that arrive before the render view\n• fix(skins): cache downsampled preview thumbnails and reload on reappear\n• fix(skins): system and game picks are not shadowed by session skins\n• fix(skins): reload the selected skin when the scope changes\n• ci: link each IPA directly in the PR build comment\n• test(library): make FileStabilityChecker timeout test deterministic\n• chore(dolphin): bump iCube to d60805832e (unified menu UX)\n• test(ui): split the switch-descriptor concat so CI's compiler can type-check it\n• fix(cores): build_slice repacks Dolphin, keys dirty trees, normalises DOL_* inputs\n• chore(harness): bound the launch wait; honour SIM_DEVICE in the boot check; explicit includes\n• fix(mgba): keep frameInterval in FPS; guard a NULL core\n• build(cores): Azahar and Dolphin aggregates use the slice cache\n• fix(harness): read frameInterval >= 1 as a rate\n• fix(stella): answer GET_VFS_INTERFACE so libstella can open ROMs\n• feat(harness): GBA test ROM; success run on mGBA\n• docs(plan): detail the docs batch (task 21); all batches detailed\n• feat(harness): add make dev-harness and a 2600 test ROM\n• fix(dev): manifest check requires prebuilt artefacts only for used rows\n• ci(dev-workspace): authenticate mise tuist install; robust ProjectDescription lookup\n• docs(plan): detail the pruning batch (tasks 15-20)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 664304011,
+          "size": 664147218,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "286",
-          "date": "2026-10-10T10:14:14.713Z",
+          "buildVersion": "288",
+          "date": "2026-10-10T20:29:33.090Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-286/Non-Jailbroken.ipa",
-          "size": 93582072,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-288/Non-Jailbroken.ipa",
+          "size": 93583581,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
