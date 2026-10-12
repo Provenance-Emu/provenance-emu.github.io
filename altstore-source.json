@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10594",
-          "marketingVersion": "3.4.0-alpha.20261011.566a4d0",
-          "date": "2026-10-11",
-          "localizedDescription": "Alpha build 566a4d0 · 2026-10-11\n\nChanges in this build:\n• update dolphin core\n• fix build\n• update dolphin core\n• docs(diag): Spotlight is the only run-marker extension now\n• fix(spotlight): drop dead init run marker, pin batch map overload\n• fix(spotlight): sort by primary key so index batches are stable\n• test(support): cover ExtensionRunMarker jetsam heuristics\n• perf(extensions): bound Spotlight/TopShelf Realm reads, stop trapping\n• feat(diag): detect app-extension terminations via App Group markers\n• feat(diag): surface MetricKit jetsam and 0xdead10cc exit metrics\n• docs: design spec for Lost Files Scanner (library health)\n• docs: record local branch triage and unfinished work\n• fix(skins): apply pause picks live and refresh the selector\n• fix(patching): qualify SwiftUI List/Section in patch views\n• fix(mupen): give the video plugin a stable default framebuffer\n• fix(patching): unbreak PVUI and PVLibrary CI after #3734\n• feat: complete local game patching (import, variants, BPS/IPS create) (#3734)\n• fix(core): mmap CHD/disk images in thin VFS for MAME stutter (#3735)\n• update dolphin module\n• fix(webdav): answer Finder's Depth probes without stalling the mount\n• feat(thin): load zipped ROMs natively, in memory, or from the cache\n• fix(build): restore Dependencies and rcheevos submodule gitlinks\n• feat(skins): remove the pressed-button highlight shapes\n• fix(ci): pass --trust so the headless Cursor agent starts\n• docs(roadmap): 27 cores pruned, five kept deprecated\n• feat(ui): show the RetroArch mark on libretro cores\n• chore(cores): keep Bliss, CrabEMU and VBA-M as deprecated native cores\n• feat(cores): drop the \"(RetroArch)\" suffix from libretro core names\n• chore(cores): keep Atari800 and Gambatte as deprecated native cores\n• docs: retired cores run via the thin wrapper only where a replacement exists\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10601",
+          "marketingVersion": "3.4.0-alpha.20261012.3024067",
+          "date": "2026-10-12",
+          "localizedDescription": "Alpha build 3024067 · 2026-10-12\n\nChanges in this build:\n• feat(storage): LibraryLocation as the single source of the library root\n• fix(lookup): stop re-extracting bundled databases on every launch (#3737)\n• docs(spec): library storage locations and user-picked shared folder\n• fix(lite): own Realm file and no iCloud sync\n• fix(library): relink save states orphaned by Lite's core prune\n• fix(savestates): tolerate a save state whose core row was deleted\n• fix(cloudkit): don't crash uploading a save state with no core\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 660434141,
+          "size": 660218886,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "296",
-          "date": "2026-10-11T09:48:11.055Z",
+          "buildVersion": "297",
+          "date": "2026-10-11T21:26:52.959Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-296/Non-Jailbroken.ipa",
-          "size": 96932382,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-297/Non-Jailbroken.ipa",
+          "size": 96932399,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
