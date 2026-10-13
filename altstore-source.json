@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10601",
-          "marketingVersion": "3.4.0-alpha.20261012.3024067",
-          "date": "2026-10-12",
-          "localizedDescription": "Alpha build 3024067 · 2026-10-12\n\nChanges in this build:\n• feat(storage): LibraryLocation as the single source of the library root\n• fix(lookup): stop re-extracting bundled databases on every launch (#3737)\n• docs(spec): library storage locations and user-picked shared folder\n• fix(lite): own Realm file and no iCloud sync\n• fix(library): relink save states orphaned by Lite's core prune\n• fix(savestates): tolerate a save state whose core row was deleted\n• fix(cloudkit): don't crash uploading a save state with no core\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10703",
+          "marketingVersion": "3.4.0-alpha.20261013.d97682a",
+          "date": "2026-10-13",
+          "localizedDescription": "Alpha build d97682a · 2026-10-13\n\nChanges in this build:\n• fix(skins): draw skin CIFilters on the Metal renderer\n• fix(shaders): drop the 3DS LCD grid when screens leave the skin rects\n• feat(shaders): optional LCD look on DS and 3DS skin screens\n• fix(skins): key the representation cache by skin, not just traits\n• fix(skins): drop unknown Dreamcast skin tokens instead of pressing Up\n• docs(smoke): note the thin teardown duration log line\n• fix(thin): release HW context on main after a successful teardown wait\n• docs(smoke): thin HW-render core quit/teardown deadlock checks\n• fix(ui): stop the autosave timer before quit awaits anything\n• fix(thin): serialize core calls and tear down off the main thread\n• feat(thin): PVThinCoreCallGate serializes libretro core calls\n• fix(core-loader): pick libretro version adjacent to valid_extensions\n• fix(mupen): don't resolve zlib through pkg-config\n• docs(claude): shader and filter system notes\n• feat(shaders): LCDScreenFilter CIFilter for dual-screen handhelds\n• feat(shaders): library presets for Dolphin and native PPSSPP\n• build(cores): docs edits no longer bust the core slice cache key\n• docs(smoke): RetroArch state and battery-save fixes landed\n• fix(library): copy 3.3.x RetroArch battery saves to Battery States\n• fix(thin): load 3.3.x RetroArch rzip/RASTATE save states\n• feat(shaders): previews over the paused frame, display names, device checks\n• feat(shaders): isolated filter preview renderer and cache\n• feat(shaders): filter browser, parameter editor and pause-menu wiring\n• feat(video): non-linear stretch scaling mode (#639)\n• fix(mgba): don't read video size before the game has loaded\n• docs(smoke): upgrade-from-3.3.1 checklist for the App Store release\n• fix(settings): don't let iCloud KVS overwrite sync settings on upgrade\n• update dolphin core\n• feat(shaders): SlangFilterRenderer compiles presets off the main thread\n• build: ship native cores from their SwiftPM packages (#3742)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 660218886,
+          "size": 723205248,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "324",
-          "date": "2026-10-13T02:13:48.544Z",
+          "buildVersion": "325",
+          "date": "2026-10-13T04:52:46.488Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-324/Non-Jailbroken.ipa",
-          "size": 97275227,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-325/Non-Jailbroken.ipa",
+          "size": 97295372,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
