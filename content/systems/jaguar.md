@@ -11,6 +11,8 @@ Atari's Jaguar was the company's last home console, launched in 1993 and markete
 
 {{< family-app app="jaguar" text="Virtual Jaguar libretro is the core that powers this emulation, and it has its own site with detailed compatibility and performance data." >}}
 
+The same core also runs as a standalone desktop app on macOS, Windows and Linux, with a game library, shaders, RetroAchievements and link-cable netplay: [the Virtual Jaguar app](https://jaguar.provenance-emu.com/app.html).
+
 ## Supported File Formats
 
 - `.j64` — Standard Jaguar cartridge ROM format

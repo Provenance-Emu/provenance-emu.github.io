@@ -19,7 +19,7 @@ const IN_CI = !!process.env.CI;
 const MAX_NOTES_CHARS = 24000;
 
 /**
- * rolling:  tag of a CI release that is replaced in place (shown first, as "Latest alpha")
+ * rolling:  tag of a CI release that is replaced in place (shown first, titled rollingTitle)
  * skip:     tags that are CI noise rather than releases
  * assets:   which release assets get a download button
  * shown:    how many other releases to list
@@ -28,13 +28,13 @@ const PRODUCTS = [
   {
     key: 'provenance', name: 'Provenance', site: 'https://provenance-emu.com/',
     tagline: 'Multi-system retro emulator for iOS, tvOS and macOS',
-    repo: 'Provenance-Emu/Provenance', rolling: 'alpha', skip: /^alpha-\d+$/, shown: 3,
+    repo: 'Provenance-Emu/Provenance', rolling: 'alpha', rollingTitle: 'Latest alpha (rolling CI build)', skip: /^alpha-\d+$/, shown: 3,
     assets: /\.ipa$/i,
   },
   {
     key: 'icube', name: 'iCube', site: 'https://icube-emu.com/',
     tagline: 'GameCube & Wii emulator for iOS and tvOS',
-    repo: 'Provenance-Emu/iCube', rolling: 'alpha', skip: /^alpha-\d+$/, shown: 2,
+    repo: 'Provenance-Emu/iCube', rolling: 'alpha', rollingTitle: 'Latest alpha (rolling CI build)', skip: /^alpha-\d+$/, shown: 2,
     assets: /\.ipa$/i,
   },
   {
@@ -45,9 +45,13 @@ const PRODUCTS = [
   },
   {
     key: 'jaguar', name: 'Virtual Jaguar libretro', site: 'https://jaguar.provenance-emu.com/',
-    tagline: 'Atari Jaguar core for RetroArch and Provenance',
-    repo: 'libretro/virtualjaguar-libretro', skip: /^(nightly|prerelease)$/, shown: 3,
-    assets: /^virtualjaguar_libretro-(ios|tvos)-arm64\.dylib$/,
+    tagline: 'Atari Jaguar core for RetroArch and Provenance, plus a desktop app for macOS, Windows and Linux',
+    // The nightly carries the desktop app packages (VirtualJaguar-nightly-*); tagged
+    // releases list the iOS/tvOS core dylibs and, from the app's first tagged release, the
+    // same packages under the version number.
+    repo: 'libretro/virtualjaguar-libretro', rolling: 'nightly', rollingTitle: 'Latest nightly (rolling CI build)',
+    skip: /^prerelease$/, shown: 3,
+    assets: /^(VirtualJaguar-[^/]+\.(zip|exe|AppImage)|virtualjaguar_[^/]+\.deb|virtualjaguar_libretro-(ios|tvos)-arm64\.dylib)$/,
   },
 ];
 
@@ -117,7 +121,7 @@ for (const p of PRODUCTS) {
 
   const entries = [];
   const rolling = p.rolling && all.find((r) => r.tag_name === p.rolling);
-  if (rolling) entries.push(entry(rolling, { rolling: true, title: 'Latest alpha (rolling CI build)' }));
+  if (rolling) entries.push(entry(rolling, { rolling: true, title: p.rollingTitle || 'Latest CI build' }));
 
   const others = all
     .filter((r) => r.tag_name !== p.rolling && !(p.skip && p.skip.test(r.tag_name)))

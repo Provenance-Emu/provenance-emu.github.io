@@ -20,7 +20,7 @@ family:
   - key: jaguar
     name: "Virtual Jaguar libretro"
     url: "https://jaguar.provenance-emu.com/"
-    tagline: "Atari Jaguar core for RetroArch and Provenance"
+    tagline: "Atari Jaguar core for RetroArch and Provenance, plus a desktop app for macOS, Windows and Linux"
   - key: wiki
     name: "Provenance Wiki"
     url: "https://wiki.provenance-emu.com/"
