@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10703",
-          "marketingVersion": "3.4.0-alpha.20261013.d97682a",
-          "date": "2026-10-13",
-          "localizedDescription": "Alpha build d97682a · 2026-10-13\n\nChanges in this build:\n• fix(skins): draw skin CIFilters on the Metal renderer\n• fix(shaders): drop the 3DS LCD grid when screens leave the skin rects\n• feat(shaders): optional LCD look on DS and 3DS skin screens\n• fix(skins): key the representation cache by skin, not just traits\n• fix(skins): drop unknown Dreamcast skin tokens instead of pressing Up\n• docs(smoke): note the thin teardown duration log line\n• fix(thin): release HW context on main after a successful teardown wait\n• docs(smoke): thin HW-render core quit/teardown deadlock checks\n• fix(ui): stop the autosave timer before quit awaits anything\n• fix(thin): serialize core calls and tear down off the main thread\n• feat(thin): PVThinCoreCallGate serializes libretro core calls\n• fix(core-loader): pick libretro version adjacent to valid_extensions\n• fix(mupen): don't resolve zlib through pkg-config\n• docs(claude): shader and filter system notes\n• feat(shaders): LCDScreenFilter CIFilter for dual-screen handhelds\n• feat(shaders): library presets for Dolphin and native PPSSPP\n• build(cores): docs edits no longer bust the core slice cache key\n• docs(smoke): RetroArch state and battery-save fixes landed\n• fix(library): copy 3.3.x RetroArch battery saves to Battery States\n• fix(thin): load 3.3.x RetroArch rzip/RASTATE save states\n• feat(shaders): previews over the paused frame, display names, device checks\n• feat(shaders): isolated filter preview renderer and cache\n• feat(shaders): filter browser, parameter editor and pause-menu wiring\n• feat(video): non-linear stretch scaling mode (#639)\n• fix(mgba): don't read video size before the game has loaded\n• docs(smoke): upgrade-from-3.3.1 checklist for the App Store release\n• fix(settings): don't let iCloud KVS overwrite sync settings on upgrade\n• update dolphin core\n• feat(shaders): SlangFilterRenderer compiles presets off the main thread\n• build: ship native cores from their SwiftPM packages (#3742)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10717",
+          "marketingVersion": "3.4.0-alpha.20261014.db2a1a6",
+          "date": "2026-10-14",
+          "localizedDescription": "Alpha build db2a1a6 · 2026-10-14\n\nChanges in this build:\n• feat(input): synthesize an extended gamepad from a pad's physical profile\n• feat(input): log each connected controller's profile and element keys\n• [skipci] dolphin update no code\n• docs(dedup design): resolve grep-answerable unverified items\n• build: prune 347 dead sub-project references from Provenance.xcodeproj\n• build: shipping-vs-dev core package drift check (dedup phase 2)\n• build: weak-export audit gate + hide Stella's C++ surface (dedup phase 1)\n• docs: generated-project + dependency dedup design (audit, phased plan)\n• fix(emu): don't re-pause after Control Center once the menu is gone\n• chore(submodules): drop .gitmodules entries for vendored trees\n• update dolphin core\n• build(shaders): bump slang library to slang-shaders-metal 1.1.0\n• fix(shaders): validator survives GPU hangs\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 723205248,
+          "size": 767573234,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "327",
-          "date": "2026-10-13T23:58:04.336Z",
+          "buildVersion": "329",
+          "date": "2026-10-14T02:27:51.717Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-327/Non-Jailbroken.ipa",
-          "size": 97222956,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-329/Non-Jailbroken.ipa",
+          "size": 97222881,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -215,7 +215,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-10-13",
+          "date": "2026-10-14",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -227,7 +227,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-10-13",
+          "date": "2026-10-14",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -239,7 +239,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-10-13",
+          "date": "2026-10-14",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
