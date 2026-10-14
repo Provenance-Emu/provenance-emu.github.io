@@ -84,6 +84,9 @@ whyProvenance:
 featureOne:
   enable : true
   image : "images/feature/feature-rom-metadata.webp"
+  # .image-content img is capped at max-height 520px, so this renders at most ~411px wide
+  imageSrcset : "images/feature/feature-rom-metadata-720w.webp 720w, images/feature/feature-rom-metadata-1080w.webp 1080w, images/feature/feature-rom-metadata.webp 1440w"
+  imageSizes : "(max-width: 440px) calc(100vw - 30px), 411px"
   imageAlt : "images/feature/feature-rom-metadata.png"
   title : "Your Games, Beautifully Presented"
   content : "Every game gets the treatment it deserves. Automatic artwork downloads, release information, ratings, and even scanned manuals. Edit any detail to make your library truly yours."
@@ -95,6 +98,9 @@ featureOne:
 featureTwo:
   enable : true
   image : "images/feature/n64-core-options.webp"
+  # .image-content img is capped at max-height 520px, so this always renders ~258px wide
+  imageSrcset : "images/feature/n64-core-options-480w.webp 480w, images/feature/n64-core-options.webp 677w"
+  imageSizes : "258px"
   imageAlt : "images/feature/n64-core-options.png"
   title : "Fine-Tune Your Experience"
   content : "Customize emulation settings in real-time. Dial in configurable CRT scanline and phosphor shaders, adjust audio, tweak per-core options, and look up cheat codes directly from the libretro database — all without leaving your game."

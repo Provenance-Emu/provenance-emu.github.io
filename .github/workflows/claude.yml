@@ -84,5 +84,7 @@ jobs:
           # Optional: Add claude_args to customize behavior and configuration
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://code.claude.com/docs/en/cli-reference for available options
-          # claude_args: '--allowed-tools Bash(gh pr:*)'
+          # WebFetch lets Claude read linked Lighthouse reports and issue attachments (#116).
+          # Deliberately not Bash(curl:*): arbitrary curl could exfiltrate secrets via prompt injection.
+          claude_args: '--allowedTools WebFetch'
 
