@@ -5,7 +5,7 @@ description: "Step-by-step guide to adding ROM files to Provenance, the free iOS
 tags: ["guide", "how-to"]
 ---
 
-{{< brand >}}Provenance{{< /brand >}} supports games from 38+ retro systems, but you need to provide your own ROM files. This guide explains several methods for getting games into {{< brand >}}Provenance{{< /brand >}} on iPhone, iPad, or Apple TV.
+{{< brand >}}Provenance{{< /brand >}} supports games from 50+ retro systems, but you need to provide your own ROM files. This guide explains several methods for getting games into {{< brand >}}Provenance{{< /brand >}} on iPhone, iPad, or Apple TV.
 
 ## What You Need
 
@@ -71,4 +71,4 @@ Apple TV has a more restricted filesystem, so game management works differently.
 
 ## Download Provenance
 
-{{< brand >}}Provenance{{< /brand >}} is free on the App Store and supports 38+ retro systems out of the box. [Get Provenance on the App Store](https://apps.apple.com/us/app/provenance-app/id1596862805). For advanced features, explore [Provenance Plus](/plus/).
+{{< brand >}}Provenance{{< /brand >}} is free on the App Store and supports 50+ retro systems out of the box. [Get Provenance on the App Store](https://apps.apple.com/us/app/provenance-app/id1596862805). For advanced features, explore [Provenance Plus](/plus/).

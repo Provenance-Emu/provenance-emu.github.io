@@ -33,7 +33,7 @@ supportedFormats: ".iso, .gcm, .gcz, .rvz, .wbfs, .ciso"
 
 GameCube games are large (typically 1–1.5 GB per disc). RVZ format offers the best compression while maintaining full compatibility. Use Dolphin on your Mac to rip your own GameCube discs.
 
-See the [wiki guide on formatting ROMs](https://wiki.provenance-emu.com/installation-and-usage/roms/formatting-roms) for details on GameCube file organization.
+See the [wiki guide on formatting ROMs](https://wiki.provenance-emu.com/using-provenance/roms/formatting-roms) for details on GameCube file organization.
 
 ## iCloud Sync with Provenance Plus
 

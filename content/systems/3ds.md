@@ -18,7 +18,7 @@ supportedFormats: ".3ds, .cia, .cxi, .app, .ncsd, .ncch"
 
 ## Encryption Note
 
-Many 3DS ROMs are encrypted. {{< brand >}}Provenance{{< /brand >}} requires decrypted ROMs or proper AES keys to run encrypted titles. See the [wiki](https://wiki.provenance-emu.com/info/system-guides/3ds) for setup details.
+Many 3DS ROMs are encrypted. {{< brand >}}Provenance{{< /brand >}} requires decrypted ROMs or proper AES keys to run encrypted titles. See the [wiki](https://wiki.provenance-emu.com/platforms-and-performance/system-guides/3ds) for setup details.
 
 ## Features
 
@@ -38,4 +38,4 @@ Many 3DS ROMs are encrypted. {{< brand >}}Provenance{{< /brand >}} requires decr
 2. **Add your decrypted 3DS ROM files** via the Files app or Wi-Fi import.
 3. **Start playing** — your 3DS games appear in your library automatically.
 
-For detailed setup instructions and encryption key guidance, visit the [Provenance wiki](https://wiki.provenance-emu.com/info/system-guides/3ds).
+For detailed setup instructions and encryption key guidance, visit the [Provenance wiki](https://wiki.provenance-emu.com/platforms-and-performance/system-guides/3ds).

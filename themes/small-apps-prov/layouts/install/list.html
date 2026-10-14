@@ -11,115 +11,154 @@
       <div class="col-lg-8">
         <h1 class="text-white font-weight-bold mb-3">Install Provenance</h1>
         <p class="text-white mb-0" style="font-size:1.15rem;opacity:0.9;">Free iOS game emulator for iPhone, iPad, and Apple TV. Choose your install method below.</p>
+        <nav class="install-jump" aria-label="Jump to">
+          <a href="#app-store">App Store</a><a href="#altstore">AltStore</a><a href="#sidestore">SideStore</a><a href="#ipa">IPA / source</a><a href="#downloads" class="install-jump-dl"><i class="fas fa-download" aria-hidden="true"></i> Downloads &amp; release notes</a>
+        </nav>
       </div>
     </div>
   </div>
 </section>
 
+{{/* Light styles are the base; html:not([data-theme="light"]) overrides follow dark-theme.css
+     (dark is the site default). No hard-coded light-only colours: they vanish in one theme. */}}
+<style>
+  .install-jump { display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem; margin-top:1.5rem; }
+  .install-jump a { color:#fff !important; font-size:.9rem; font-weight:600; padding:.4rem .85rem; border-radius:999px; border:1px solid rgba(255,255,255,.35); background:rgba(255,255,255,.08); text-decoration:none; }
+  .install-jump a:hover, .install-jump a:focus { background:rgba(255,255,255,.18); border-color:rgba(255,255,255,.6); }
+  .install-jump a.install-jump-dl { background:rgba(250,51,153,.25); border-color:rgba(250,51,153,.6); }
+  [id] { scroll-margin-top:90px; } /* keep anchors clear of the fixed navbar */
+
+  .install-card { height:100%; display:flex; flex-direction:column; background:#fff; border:1px solid #e6e8ef; border-radius:12px; padding:1.5rem; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .install-card-head { display:flex; align-items:center; gap:1rem; margin-bottom:.75rem; }
+  .install-card-head h2 { font-size:1.5rem; margin:0; }
+  .install-card-icon { flex:0 0 56px; height:56px; display:flex; align-items:center; justify-content:center; font-size:2.6rem; line-height:1; }
+  .install-card-icon img { width:56px; height:56px; border-radius:13px; }
+  .install-card ul { padding-left:1.2rem; margin-bottom:1rem; }
+  .install-card li { font-size:.95rem; line-height:1.5; margin-bottom:.25rem; }
+  .install-card-actions { margin-top:auto; display:flex; flex-wrap:wrap; align-items:center; gap:.75rem 1.25rem; padding-top:.75rem; border-top:1px solid #eceef3; }
+  .install-card-actions .install-qr { display:flex; align-items:center; gap:.75rem; }
+  .install-card-actions .install-qr img { border-radius:8px; background:#fff; padding:4px; }
+  .install-card-actions .install-links { display:flex; flex-direction:column; gap:.2rem; font-size:.9rem; }
+  .install-card-actions .btn { margin:0; }
+  .install-icon-github { color:#24292f; }
+  .install-qr-caption { font-size:.8rem; color:#6b7080; max-width:9rem; }
+
+  html:not([data-theme="light"]) .install-card { background:rgba(255,255,255,.035); border-color:rgba(255,255,255,.08); box-shadow:none; }
+  html:not([data-theme="light"]) .install-card-actions { border-top-color:rgba(255,255,255,.07); }
+  html:not([data-theme="light"]) .install-icon-github { color:#fff; }
+  html:not([data-theme="light"]) .install-qr-caption { color:rgba(255,255,255,.55); }
+  html:not([data-theme="light"]) .install-card .text-muted { color:rgba(255,255,255,.6) !important; }
+  html:not([data-theme="light"]) .install-cta .text-muted { color:rgba(255,255,255,.6) !important; }
+  html:not([data-theme="light"]) .downloads-intro.text-muted { color:rgba(255,255,255,.6) !important; }
+</style>
+
 {{ "<!-- Install Methods -->" | safeHTML }}
 <section class="section bg-white">
   <div class="container">
+    <div class="row">
 
     {{/* ── App Store ── */}}
-    <div class="row align-items-center mb-5 pb-5" style="border-bottom:1px solid #eee;">
-      <div class="col-md-2 text-center mb-3 mb-md-0">
-        <i class="fab fa-app-store-ios" style="font-size:4rem;color:#0D96F6;"></i>
-      </div>
-      <div class="col-md-7">
-        <h2 class="font-weight-bold mb-1">App Store <span class="badge badge-success" style="font-size:0.7rem;vertical-align:middle;">Recommended</span></h2>
+    <div class="col-lg-6 mb-4" id="app-store">
+      <div class="install-card">
+        <div class="install-card-head">
+          <div class="install-card-icon"><i class="fab fa-app-store-ios" style="color:#0D96F6;" aria-hidden="true"></i></div>
+          <h2 class="font-weight-bold">App Store</h2>
+          <span class="rel-tag rel-tag-latest">Recommended</span>
+        </div>
         <p class="text-muted mb-2">The easiest way. Automatic updates, no computer needed. Provenance is 100% free on the App Store.</p>
-        <ul class="text-muted mb-0" style="padding-left:1.2rem;">
+        <ul class="text-muted">
           <li>Works on iPhone, iPad, and Apple TV</li>
           <li>Automatic updates via the App Store</li>
-          <li>Optional <a href="/plus/">Provenance Plus</a> for iCloud sync &amp; beta access</li>
+          <li>Optional <a href="/plus/">Provenance Plus</a> for iCloud sync &amp; priority support</li>
         </ul>
-      </div>
-      <div class="col-md-3 text-center mt-3 mt-md-0">
-        <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" rel="noopener">
-          <img src="{{ "images/badges/app-store-badge.svg" | absURL }}" height="50" alt="Download on the App Store">
-        </a>
+        <div class="install-card-actions">
+          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" rel="noopener">
+            <img src="{{ "images/badges/app-store-badge.svg" | absURL }}" height="50" alt="Download on the App Store">
+          </a>
+        </div>
       </div>
     </div>
 
     {{/* ── AltStore ── */}}
-    <div class="row align-items-center mb-5 pb-5" style="border-bottom:1px solid #eee;">
-      <div class="col-md-2 text-center mb-3 mb-md-0">
-        <img src="/img/altstore-icon.svg" width="64" height="64" alt="AltStore" style="border-radius:14px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-md-7">
-        <h2 class="font-weight-bold mb-1">AltStore</h2>
+    <div class="col-lg-6 mb-4" id="altstore">
+      <div class="install-card">
+        <div class="install-card-head">
+          <div class="install-card-icon"><img src="/img/altstore-icon.svg" alt="" onerror="this.style.display='none'"></div>
+          <h2 class="font-weight-bold">AltStore</h2>
+        </div>
         <p class="text-muted mb-2">Sideload directly via AltStore. Tap "Add Source" to add the Provenance source, then install from the Browse tab.</p>
-        <ul class="text-muted mb-0" style="padding-left:1.2rem;">
+        <ul class="text-muted">
           <li>Requires AltStore on your iPhone/iPad and AltServer on your Mac or PC</li>
           <li>Refresh every 7 days (or use AltStore PAL on EU devices — no refresh needed)</li>
           <li>Source URL: <a href="https://provenance-emu.com/apps.json" target="_blank" rel="noopener"><code>https://provenance-emu.com/apps.json</code></a></li>
         </ul>
-      </div>
-      <div class="col-md-3 text-center mt-3 mt-md-0">
-        {{/* On iOS: show deeplink button */}}
-        <a href="altstore://source?url=https://provenance-emu.com/apps.json" class="btn btn-main btn-round-full mb-2 d-block ios-only" style="display:none;">
-          <i class="fas fa-plus mr-1"></i> Add to AltStore
-        </a>
-        {{/* On desktop: show QR code to scan on iPhone */}}
-        <div class="ios-disable">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=altstore%3A%2F%2Fsource%3Furl%3Dhttps%3A%2F%2Fprovenance-emu.com%2Fapps.json" width="140" height="140" alt="QR code to add Provenance to AltStore" loading="lazy" style="border-radius:8px;">
-          <p class="text-muted mt-1 mb-2" style="font-size:0.75rem;">Scan with iPhone to add source</p>
+        <div class="install-card-actions">
+          {{/* On iOS: show deeplink button */}}
+          <a href="altstore://source?url=https://provenance-emu.com/apps.json" class="btn btn-main btn-round-full ios-only" style="display:none;">
+            <i class="fas fa-plus mr-1"></i> Add to AltStore
+          </a>
+          {{/* On desktop: show QR code to scan on iPhone */}}
+          <div class="install-qr ios-disable">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=altstore%3A%2F%2Fsource%3Furl%3Dhttps%3A%2F%2Fprovenance-emu.com%2Fapps.json" width="120" height="120" alt="QR code to add Provenance to AltStore" loading="lazy">
+            <span class="install-qr-caption">Scan with your iPhone to add the source</span>
+          </div>
+          <div class="install-links"><a href="https://altstore.io" target="_blank" rel="noopener">Get AltStore →</a></div>
         </div>
-        <a href="https://altstore.io" target="_blank" rel="noopener" class="text-muted small">Get AltStore →</a>
       </div>
     </div>
 
     {{/* ── SideStore ── */}}
-    <div class="row align-items-center mb-5 pb-5" style="border-bottom:1px solid #eee;">
-      <div class="col-md-2 text-center mb-3 mb-md-0">
-        <i class="fas fa-mobile-alt" style="font-size:4rem;color:#9B59B6;"></i>
-      </div>
-      <div class="col-md-7">
-        <h2 class="font-weight-bold mb-1">SideStore</h2>
+    <div class="col-lg-6 mb-4" id="sidestore">
+      <div class="install-card">
+        <div class="install-card-head">
+          <div class="install-card-icon"><i class="fas fa-mobile-alt" style="color:#9B59B6;" aria-hidden="true"></i></div>
+          <h2 class="font-weight-bold">SideStore</h2>
+        </div>
         <p class="text-muted mb-2">Sideload wirelessly without a computer using SideStore. Tap "Add Source" to add Provenance.</p>
-        <ul class="text-muted mb-0" style="padding-left:1.2rem;">
+        <ul class="text-muted">
           <li>Fully on-device — no Mac or PC required after initial setup</li>
           <li>Refresh every 7 days using SideStore's built-in VPN trick</li>
           <li>Source URL: <a href="https://provenance-emu.com/apps.json" target="_blank" rel="noopener"><code>https://provenance-emu.com/apps.json</code></a></li>
         </ul>
-      </div>
-      <div class="col-md-3 text-center mt-3 mt-md-0">
-        {{/* On iOS: show deeplink button */}}
-        <a href="sidestore://source?url=https://provenance-emu.com/apps.json" class="btn btn-main btn-round-full mb-2 d-block ios-only" style="display:none;">
-          <i class="fas fa-plus mr-1"></i> Add to SideStore
-        </a>
-        {{/* On desktop: show QR code to scan on iPhone */}}
-        <div class="ios-disable">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=sidestore%3A%2F%2Fsource%3Furl%3Dhttps%3A%2F%2Fprovenance-emu.com%2Fapps.json" width="140" height="140" alt="QR code to add Provenance to SideStore" loading="lazy" style="border-radius:8px;">
-          <p class="text-muted mt-1 mb-2" style="font-size:0.75rem;">Scan with iPhone to add source</p>
+        <div class="install-card-actions">
+          {{/* On iOS: show deeplink button */}}
+          <a href="sidestore://source?url=https://provenance-emu.com/apps.json" class="btn btn-main btn-round-full ios-only" style="display:none;">
+            <i class="fas fa-plus mr-1"></i> Add to SideStore
+          </a>
+          {{/* On desktop: show QR code to scan on iPhone */}}
+          <div class="install-qr ios-disable">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=sidestore%3A%2F%2Fsource%3Furl%3Dhttps%3A%2F%2Fprovenance-emu.com%2Fapps.json" width="120" height="120" alt="QR code to add Provenance to SideStore" loading="lazy">
+            <span class="install-qr-caption">Scan with your iPhone to add the source</span>
+          </div>
+          <div class="install-links"><a href="https://sidestore.io" target="_blank" rel="noopener">Get SideStore →</a></div>
         </div>
-        <a href="https://sidestore.io" target="_blank" rel="noopener" class="text-muted small">Get SideStore →</a>
       </div>
     </div>
 
     {{/* ── IPA / Build from Source ── */}}
-    <div class="row align-items-center">
-      <div class="col-md-2 text-center mb-3 mb-md-0">
-        <i class="fab fa-github" style="font-size:4rem;color:#333;"></i>
-      </div>
-      <div class="col-md-7">
-        <h2 class="font-weight-bold mb-1">IPA / Build from Source</h2>
+    <div class="col-lg-6 mb-4" id="ipa">
+      <div class="install-card">
+        <div class="install-card-head">
+          <div class="install-card-icon"><i class="fab fa-github install-icon-github" aria-hidden="true"></i></div>
+          <h2 class="font-weight-bold">IPA / Build from Source</h2>
+        </div>
         <p class="text-muted mb-2">Download the latest IPA and sideload manually, or build Provenance yourself from the open-source code.</p>
-        <ul class="text-muted mb-0" style="padding-left:1.2rem;">
+        <ul class="text-muted">
           <li>Requires Xcode 16+ and an Apple Developer account (free or paid)</li>
           <li>Full source available on GitHub under the Provenance License</li>
-          <li>See the <a href="https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/building-from-source" target="_blank">build guide</a> for step-by-step instructions</li>
+          <li>See the <a href="https://wiki.provenance-emu.com/getting-started/installing-provenance/advanced/building-from-source" target="_blank" rel="noopener">build guide</a> for step-by-step instructions</li>
         </ul>
-      </div>
-      <div class="col-md-3 text-center mt-3 mt-md-0">
-        <a href="https://github.com/Provenance-Emu/Provenance/releases/latest" target="_blank" rel="noopener" class="btn btn-outline btn-round-full mb-2 d-block">
-          <i class="fas fa-download mr-1"></i> Download IPA
-        </a>
-        <a href="#downloads" class="text-muted small d-block mb-1">All builds &amp; release notes ↓</a>
-        <a href="https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/building-from-source" target="_blank" rel="noopener" class="text-muted small">Build guide →</a>
+        <div class="install-card-actions">
+          <a href="#downloads" class="btn btn-main btn-round-full"><i class="fas fa-download mr-1"></i> All builds &amp; release notes</a>
+          <div class="install-links">
+            <a href="https://github.com/Provenance-Emu/Provenance/releases/latest" target="_blank" rel="noopener">Latest release on GitHub →</a>
+            <a href="https://wiki.provenance-emu.com/getting-started/installing-provenance/advanced/building-from-source" target="_blank" rel="noopener">Build guide →</a>
+          </div>
+        </div>
       </div>
     </div>
 
+    </div>
   </div>
 </section>
 
@@ -142,11 +181,19 @@
     .rel-tag-latest { color:#0b6e4c; background:rgba(16,185,129,.10); border-color:rgba(16,185,129,.35); }
     .rel-tag-pre    { color:#a35a00; background:rgba(245,158,11,.12); border-color:rgba(245,158,11,.40); }
     .release-assets { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .release-platforms { display:flex; flex-direction:column; gap:.6rem; }
+    .platform-row { display:grid; grid-template-columns:9.5rem 1fr; gap:.5rem 1rem; align-items:start; }
+    .platform-label { display:flex; align-items:center; gap:.5rem; min-height:2.2rem; font-weight:600; font-size:.9rem; color:#3b4050; }
+    .platform-label i { width:1.25rem; text-align:center; font-size:1.1rem; }
+    @media (max-width:575px) { .platform-row { grid-template-columns:1fr; gap:.35rem; } .platform-label { min-height:0; } .platform-row-github .platform-label { display:none; } }
     a.dl-asset { display:inline-flex; align-items:center; gap:.45rem; max-width:100%; padding:.45rem .75rem; border-radius:8px; border:1px solid #b9dcf7; background:#f2f8fe; --dl-fg:#0a6fb8; font-size:.85rem; font-weight:600; line-height:1.25; text-decoration:none; overflow-wrap:anywhere; transition:border-color .15s, background .15s, color .15s; }
     a.dl-asset:hover, a.dl-asset:focus { border-color:#0D96F6; background:#e3f1fd; --dl-fg:#075a96; text-decoration:none; }
     /* Colour lives on the children via --dl-fg: light-theme.css forces every non-.btn link teal with !important. */
     a.dl-asset > * { color:var(--dl-fg); }
     a.dl-asset .dl-size { font-weight:400; white-space:nowrap; }
+    a.dl-asset .dl-arch { display:inline-flex; align-items:center; gap:.3rem; font-size:.75rem; font-weight:700; padding:.15rem .45rem; border-radius:6px; background:rgba(13,150,246,.12); white-space:nowrap; }
+    a.dl-asset .dl-arch i { font-size:.7rem; }
+    a.dl-asset > .dl-arch { color:#064f85; } /* light: 4.5:1+ on the blue tint */
     a.dl-asset.dl-github { background:transparent; border-color:#d8dbe3; --dl-fg:#4a4f5c; }
     a.dl-asset.dl-github:hover, a.dl-asset.dl-github:focus { border-color:#9aa0ae; --dl-fg:#1a1a2e; }
     .release-notes { margin-top:.6rem; }
@@ -157,11 +204,22 @@
     .release-notes > div pre { overflow-x:auto; background:#f6f8fa; padding:.75rem; border-radius:6px; font-size:.8rem; }
     .release-notes > div img { max-width:100%; height:auto; }
     .release-notes > div table { display:block; overflow-x:auto; }
+    /* GitHub release HTML inherits marketing styles from the theme (30px blockquote p,
+       underlined headings, 18px clamp paragraphs); reset them to a readable doc style. */
+    .release-notes > div p, .release-notes > div li { font-size:.92rem; line-height:1.6; }
+    .release-notes > div h1::after, .release-notes > div h2::after, .release-notes > div h3::after { display:none; }
+    .release-notes > div h1, .release-notes > div h2 { padding-bottom:0; border:0; }
+    .release-notes > div blockquote { margin:.75rem 0; padding:.4rem 0 .4rem 1rem; border-left:3px solid #FA3399; font-size:.92rem; }
+    .release-notes > div blockquote p { font-size:.92rem; line-height:1.6; margin:0; font-style:normal; }
+    .release-notes > div table { margin:.5rem 0 1rem; border-collapse:collapse; font-size:.88rem; }
+    .release-notes > div th, .release-notes > div td { padding:.4rem .75rem; vertical-align:top; border-bottom:1px solid #eceef3; }
+    .release-notes > div td code { white-space:nowrap; }
+    .release-notes > div code { font-size:.85em; }
 
     html:not([data-theme="light"]) .release-product { background:rgba(255,255,255,.035); border-color:rgba(255,255,255,.08); box-shadow:none; }
     html:not([data-theme="light"]) .release-entry { border-top-color:rgba(255,255,255,.07); }
     html:not([data-theme="light"]) .release-title { color:#fff; }
-    html:not([data-theme="light"]) .release-date { color:rgba(255,255,255,.45); }
+    html:not([data-theme="light"]) .release-date { color:rgba(255,255,255,.55); }
     html:not([data-theme="light"]) .rel-tag-latest { color:#34d399; background:rgba(16,185,129,.12); border-color:rgba(16,185,129,.35); }
     html:not([data-theme="light"]) .rel-tag-pre    { color:#fbbf24; background:rgba(245,158,11,.12); border-color:rgba(245,158,11,.35); }
     html:not([data-theme="light"]) a.dl-asset { background:rgba(0,158,197,.10); border-color:rgba(0,158,197,.35); --dl-fg:#5fd0ec; }
@@ -171,18 +229,22 @@
     html:not([data-theme="light"]) .release-notes summary { color:#009ec5; }
     html:not([data-theme="light"]) .release-product > p.text-muted { color:rgba(255,255,255,.55) !important; }
     html:not([data-theme="light"]) .release-notes > div pre { background:rgba(255,255,255,.05); }
+    html:not([data-theme="light"]) .platform-label { color:rgba(255,255,255,.8); }
+    html:not([data-theme="light"]) a.dl-asset .dl-arch { background:rgba(255,255,255,.08); }
+    html:not([data-theme="light"]) a.dl-asset > .dl-arch { color:var(--dl-fg); }
+    html:not([data-theme="light"]) .release-notes > div th, html:not([data-theme="light"]) .release-notes > div td { border-bottom-color:rgba(255,255,255,.08); }
   </style>
   <div class="container">
 {{ with .Site.Data.builds }}
     <div class="text-center mb-5">
       <h2 class="font-weight-bold">Downloads &amp; release notes</h2>
-      <p class="text-muted mx-auto" style="max-width:640px;">Every build is published on GitHub. Expand a release to see what changed. These are also the emulators from the Provenance team: iCube for GameCube &amp; Wii, iFly for Dreamcast, and Virtual Jaguar as a RetroArch core and a desktop app for macOS, Windows and Linux.</p>
+      <p class="text-muted mx-auto downloads-intro" style="max-width:640px;">Every build is published on GitHub. Expand a release to see what changed. These are also the emulators from the Provenance team: iCube for GameCube &amp; Wii, iFly for Dreamcast, and Virtual Jaguar as a RetroArch core and a desktop app for macOS, Windows and Linux.</p>
     </div>
     {{ range .products }}
     <div class="release-product mb-4" id="dl-{{ .key }}">
       <div class="release-product-head">
         <h3 class="font-weight-bold">{{ .name }}</h3>
-        <div class="release-product-links"><a href="{{ .site }}">Website →</a> &nbsp;·&nbsp; <a href="{{ .releasesURL }}" target="_blank" rel="noopener">All releases on GitHub →</a></div>
+        <div class="release-product-links"><a href="{{ .site }}">Website →</a>{{ with .testflight }} &nbsp;·&nbsp; <a href="{{ . }}">TestFlight beta →</a>{{ end }} &nbsp;·&nbsp; <a href="{{ .releasesURL }}" target="_blank" rel="noopener">All releases on GitHub →</a></div>
       </div>
       <p class="text-muted mb-2">{{ .tagline }}</p>
       {{ range .entries }}
@@ -192,11 +254,29 @@
           {{ if .latest }}<span class="rel-tag rel-tag-latest">Latest</span>{{ else if .prerelease }}<span class="rel-tag rel-tag-pre">Pre-release</span>{{ end }}
           <span class="release-date">{{ .date | dateFormat "Jan 2, 2006" }}</span>
         </div>
-        <div class="release-assets">
-          {{ range .assets }}
-          <a href="{{ .url }}" class="dl-asset" rel="noopener"><i class="fas fa-download" aria-hidden="true"></i><span>{{ .name }}</span>{{ if .size }}<span class="dl-size">{{ printf "%.0f" (div .size 1048576.0) }} MB</span>{{ end }}</a>
-          {{ end }}
-          <a href="{{ .url }}" class="dl-asset dl-github" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>GitHub release</span></a>
+        {{- $assets := slice -}}
+        {{- range .assets }}{{ $assets = $assets | append (merge . (partial "asset-meta.html" .)) }}{{ end -}}
+        <div class="release-platforms">
+          {{- range $p := slice "ios" "tvos" "macos" "windows" "linux" "android" "other" }}
+          {{- with sort (where $assets "platform" $p) "order" }}
+          <div class="platform-row">
+            <div class="platform-label"><i class="{{ (index . 0).platformIcon }}" aria-hidden="true"></i>{{ (index . 0).platformLabel }}</div>
+            <div class="release-assets">
+              {{- range $a := . }}
+              <a href="{{ $a.url }}" class="dl-asset" rel="noopener" title="{{ $a.name }}" aria-label="Download {{ $a.name }}">
+                <i class="fas fa-download" aria-hidden="true"></i><span class="dl-kind">{{ $a.kind }}</span>
+                {{- with $a.arch }}<span class="dl-arch" title="{{ $a.archTitle }}"><i class="fas fa-microchip" aria-hidden="true"></i>{{ . }}</span>{{ end }}
+                {{- if $a.size }}<span class="dl-size">{{ printf "%.0f" (div $a.size 1048576.0) }} MB</span>{{ end }}
+              </a>
+              {{- end }}
+            </div>
+          </div>
+          {{- end }}
+          {{- end }}
+          <div class="platform-row platform-row-github">
+            <div class="platform-label"></div>
+            <div class="release-assets"><a href="{{ .url }}" class="dl-asset dl-github" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>GitHub release</span></a></div>
+          </div>
         </div>
         {{ if .notesHtml }}
         <details class="release-notes">
@@ -224,10 +304,10 @@
 </section>
 
 {{ "<!-- Install CTA -->" | safeHTML }}
-<section class="section bg-gray">
+<section class="section bg-gray install-cta">
   <div class="container text-center">
     <h3 class="font-weight-bold mb-3">Need help?</h3>
-    <p class="text-muted mb-4">Check the <a href="https://wiki.provenance-emu.com/installation-and-usage/installing-provenance">full installation guide</a> on the wiki, or ask in our Discord community.</p>
+    <p class="text-muted mb-4">Check the <a href="https://wiki.provenance-emu.com/getting-started/installing-provenance">full installation guide</a> on the wiki, or ask in our Discord community.</p>
     <a href="https://discord.gg/4TK7PU5" target="_blank" rel="noopener" class="btn btn-main btn-round-full">
       <i class="fab fa-discord mr-2"></i>Join Discord
     </a>

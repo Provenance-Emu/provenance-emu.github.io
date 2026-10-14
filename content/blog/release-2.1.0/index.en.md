@@ -25,12 +25,12 @@ layout: photography
 
 ## Links
 
-- 📲 __[iOS IPA](https://provenance-builds.s3-us-east-2.amazonaws.com/Provenance%202022-02-15%2023-07-51/Provenance.ipa)__
-- 📺 __[tvOS IPA](https://provenance-builds.s3-us-east-2.amazonaws.com/ProvenanceTV-Release%202022-02-15%2023-19-32/Provenance.ipa)__
+- 📲 __[iOS IPA](https://github.com/Provenance-Emu/Provenance/releases/tag/2.1.0)__
+- 📺 __[tvOS IPA](https://github.com/Provenance-Emu/Provenance/releases/tag/2.1.0)__
 - 📝 __[GitHub](https://github.com/Provenance-Emu/Provenance/releases/tag/2.1.0)__
 - 🏪 __[AltStore](/altstore/)__
 <!-- - 🥰 __[Patreon](https://patreon.com/provenance/)__ -->
-- ___[Installation Instructions](https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/sideloading)___
+- ___[Installation Instructions](https://wiki.provenance-emu.com/getting-started/installing-provenance/advanced/sideloading)___
 
 ## Changes
 
