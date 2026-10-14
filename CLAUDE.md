@@ -47,12 +47,13 @@ Automated via GitHub Actions (`.github/workflows/gh-pages.yml`). Pushing to `mai
 
 ### Theme System
 
-The site uses a **multi-theme chain** defined in `config.toml`:
+The site uses a **multi-theme chain** defined in `config.toml`. Earlier themes in the list win, so a file in `provenance-dark` overrides the same path in `small-apps-prov`:
 ```
-theme = ["hugo-social-metadata", "hugo-redirect", "hugo-cloak-email", "small-apps-prov"]
+theme = ["provenance-dark", "hugo-social-metadata", "hugo-redirect", "hugo-cloak-email", "small-apps-prov"]
 ```
 
-- **`small-apps-prov`** — The primary custom theme (in `themes/small-apps-prov/`). All site layouts, partials, and SCSS live here.
+- **`provenance-dark`** — Dark-default override theme (in `themes/provenance-dark/`, not a submodule). It provides `partials/head.html`, `partials/header.html`, `partials/theme-selector.html`, `static/css/{dark,light}-theme.css`, and the SCSS entry point `assets/scss/style.scss` plus `_variables.scss`/`_dark-overrides.scss` (the other SCSS partials still come from `small-apps-prov`). **Its `head.html` is the one that renders**; `themes/small-apps-prov/layouts/partials/head.html` is dead code, so edit the `provenance-dark` copy.
+- **`small-apps-prov`** — The primary custom theme (in `themes/small-apps-prov/`). Every other layout, partial (including `footer.html`), and the SCSS live here.
 - The other three themes are git submodules providing social metadata, URL redirects, and email obfuscation.
 - `hugo-universal-theme` is also a submodule but is not in the active theme chain; it serves as a reference/base.
 
@@ -79,14 +80,16 @@ Several sections use traditional Markdown with front matter:
 ### Custom Styling
 
 - `static/css/provenance-custom.css` — Site-wide custom CSS overrides (~510 lines), loaded as a plugin via `config.toml`
-- Theme SCSS files in `themes/small-apps-prov/assets/scss/` — Core theme styles compiled by Hugo Pipes
+- Theme SCSS — entry point `themes/provenance-dark/assets/scss/style.scss`, which imports partials from `themes/small-apps-prov/assets/scss/`; compiled by Hugo Pipes
 
 ### Key Layouts
 
-All in `themes/small-apps-prov/layouts/`:
+All in `themes/small-apps-prov/layouts/` unless noted:
 - `index.html` — Homepage (complex, data-driven, most editing happens here)
 - `_default/baseof.html` — Base template wrapper
-- `partials/head.html`, `header.html`, `footer.html` — Shared page structure
+- `partials/footer.html` — Shared footer and scripts
+- `partials/head.html`, `partials/header.html` — **in `themes/provenance-dark/layouts/`** (they override the `small-apps-prov` copies)
+- `partials/feature-webp-source.html` — WebP `<source>` for homepage feature mockups; uses `imageSrcset`/`imageSizes` from `data/homepage.yml` when present
 - `partials/jsonld.html` — JSON-LD structured data partial
 - Page-specific layouts: `about/`, `product/`, `faq/`, `privacy/`, `contact/`, `team/`
 - `plus/list.html`, `press/list.html` — Plus and Press pages (data-driven)
@@ -113,10 +116,23 @@ Auto-updated weekly by `.github/workflows/update-altstore-source.yml`, which pul
 
 ## ⚠️ Hard Rules — Do Not Change Without Understanding Why
 
-### AOS CSS must be loaded synchronously
-`themes/small-apps-prov/layouts/partials/head.html` loads `plugins/aos/aos.css` with a plain `<link rel="stylesheet">` — **never change this to async/preload**.
+### Layout CSS must stay render-blocking
+`themes/provenance-dark/layouts/partials/head.html` loads the layout stylesheets (`params.plugins.css`, the homepage OWL CSS, the main SCSS bundle) and the Font Awesome subset with plain `<link rel="stylesheet">`. **Do not convert them to `media="print"`/`rel="preload"`, and do not reintroduce an `html{opacity:0}` reveal gate.**
 
-Why: AOS sets `opacity:0` on `[data-aos]` elements via CSS. If the CSS loads after `AOS.init()` runs (which happens when CSS is async), the opacity is never reset to 1 — elements become permanently invisible. This broke the status page and homepage multiple times. The Lighthouse performance gain from async-loading this one small CSS file (~3KB) is negligible.
+Why: async CSS let the page paint unstyled and then reflow, which scored Lighthouse CLS 0.945 / LCP 7.6 s / performance 51 (#116). #104, #106 and #111 went back and forth on this. Only Google Fonts stays async (it uses `display=swap`).
+
+### AOS CSS must be inline and synchronous
+The AOS animation rules are inlined in a `<style>` block in `themes/provenance-dark/layouts/partials/head.html` (homepage only) — **never move them to an async stylesheet**.
+
+Why: AOS sets `opacity:0` on `[data-aos]` elements via CSS. If the CSS loads after `AOS.init()` runs (which happens when CSS is async), the opacity is never reset to 1 — elements become permanently invisible. This broke the status page and homepage multiple times.
+
+### Font Awesome is a generated subset — regenerate after adding icons
+Font Awesome is self-hosted from `static/plugins/fontawesome/`, containing only the icons the site uses (about 8 KB of fonts instead of ~270 KB from cdnjs). Adding or renaming any `fa-*` icon requires re-running the generator, or the icon renders as a blank box:
+```bash
+python3 -m venv .venv && .venv/bin/pip install fonttools brotli   # once
+.venv/bin/python scripts/build-fa-subset.py
+```
+Commit the regenerated CSS and webfonts. Don't hand-edit `fontawesome.min.css`.
 
 ### All `<script>` tags must have `data-cfasync="false"`
 Every `<script>` in `footer.html` has `data-cfasync="false"`. This bypasses Cloudflare Rocket Loader, which rewrites script tags and breaks our deferred execution order. Do not remove these attributes.

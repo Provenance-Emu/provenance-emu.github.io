@@ -9,8 +9,6 @@
   {{ hugo.Generator }}
 
   {{ "<!-- DNS preconnects for external origins -->" | safeHTML }}
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -18,9 +16,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap" media="print" onload="this.onload=null;this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Open+Sans:wght@300;400;600;700;800&display=swap"></noscript>
 
-  {{ "<!-- Font Awesome — deferred via media=print -->" | safeHTML }}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.media='all'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  {{ "<!-- Font Awesome — self-hosted subset of only the icons the site uses (~8 KB of fonts vs ~270 KB" | safeHTML }}
+  {{ "     from cdnjs). Render-blocking like the layout CSS so icons don't pop in and shift text." | safeHTML }}
+  {{ "     Adding an icon? Re-run scripts/build-fa-subset.py or it renders as a blank box. -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ "plugins/fontawesome/css/fontawesome.min.css" | absURL }}">
 
   {{ "<!-- Canonical URL -->" | safeHTML }}
   <link rel="canonical" href="{{ .Permalink }}">

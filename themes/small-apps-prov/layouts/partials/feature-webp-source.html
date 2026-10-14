@@ -1,0 +1,13 @@
+{{- /* WebP <source> for a homepage feature mockup. Context: a data/homepage.yml feature entry.
+     Optional fields: imageSrcset ("path 720w, path 1080w, ...", paths relative like .image)
+     and imageSizes (rendered CSS width). Without them, serves .image at full size. */ -}}
+{{- if .imageSrcset -}}
+{{- $set := slice -}}
+{{- range split .imageSrcset "," -}}
+{{- $parts := split (trim . " ") " " -}}
+{{- $set = $set | append (printf "%s %s" (index $parts 0 | absURL) (index $parts 1)) -}}
+{{- end -}}
+<source srcset="{{ delimit $set ", " }}"{{ with .imageSizes }} sizes="{{ . }}"{{ end }} type="image/webp">
+{{- else -}}
+<source srcset="{{ .image | absURL }}" type="image/webp">
+{{- end -}}

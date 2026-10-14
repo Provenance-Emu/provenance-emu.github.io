@@ -160,7 +160,7 @@
 				{{ "<!-- Feature Mockup -->" | safeHTML }}
 				<div class="image-content" data-aos="fade-right">
 					<picture>
-						<source srcset="{{ .image | absURL }}" type="image/webp">
+						{{ partial "feature-webp-source.html" . }}
 						<img class="img-fluid" src="{{ .imageAlt | absURL }}" alt="iphone" loading="lazy" decoding="async" width="1440" height="1823">
 					</picture>
 				</div>
@@ -216,7 +216,7 @@
 				{{ "<!-- Feature mockup -->" | safeHTML }}
 				<div class="image-content" data-aos="fade-left">
 					<picture>
-						<source srcset="{{ .image | absURL }}" type="image/webp">
+						{{ partial "feature-webp-source.html" . }}
 						<img class="img-fluid" src="{{ .imageAlt | absURL }}" alt="ipad" loading="lazy" decoding="async" width="677" height="1367">
 					</picture>
 				</div>
