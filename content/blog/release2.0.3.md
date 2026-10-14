@@ -29,7 +29,7 @@ image: "images/banners/203banner.jpg"
 
 ## Install Instructions
 
-https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/sideloading
+https://wiki.provenance-emu.com/getting-started/installing-provenance/advanced/sideloading
 
 ## Changes
 

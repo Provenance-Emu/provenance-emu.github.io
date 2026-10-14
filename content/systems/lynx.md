@@ -18,7 +18,7 @@ The Atari Lynx was the world's first color handheld gaming console, released in 
 
 ## BIOS
 
-The Atari Lynx requires a BIOS file for full compatibility. See [BIOS Requirements](https://wiki.provenance-emu.com/installation-and-usage/bios-requirements) for details.
+The Atari Lynx requires a BIOS file for full compatibility. See [BIOS Requirements](https://wiki.provenance-emu.com/getting-started/bios-requirements) for details.
 
 ## Features
 

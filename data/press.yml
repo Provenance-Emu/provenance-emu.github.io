@@ -3,21 +3,21 @@
 app:
   name: "Provenance"
   tagline: "Your Classic Games. Reimagined for iOS & tvOS."
-  shortDescription: "Provenance is the most comprehensive open-source retro game emulator for Apple platforms. Supporting 38+ console systems from Atari to PlayStation 2, it delivers a museum-quality game library experience with native iOS and tvOS integration."
+  shortDescription: "Provenance is the most comprehensive open-source retro game emulator for Apple platforms. Supporting 50+ console systems from Atari to PlayStation 2, it delivers a museum-quality game library experience with native iOS and tvOS integration."
   longDescription: |
-    Provenance is a free, open-source multi-system emulator frontend for iOS and tvOS. Since its initial release in 2016, it has grown into the most comprehensive retro gaming solution available on Apple platforms, supporting over 38 console systems spanning six decades of gaming history.
+    Provenance is a free, open-source multi-system emulator frontend for iOS and tvOS. Since its initial release in 2016, it has grown into the most comprehensive retro gaming solution available on Apple platforms, supporting over 50 console systems spanning six decades of gaming history.
 
     Unlike other emulators, Provenance is built with a collector's mindset. Every game in your library is presented with automatically downloaded box art, screenshots, release information, ratings, and even scanned manuals. The app feels native to Apple's ecosystem, with support for Haptic feedback, Spotlight search, Siri shortcuts, iCloud sync, and full Siri Remote integration on Apple TV.
 
     Provenance is the premier full-featured emulator for tvOS, bringing retro gaming to the living room with TopShelf integration, controller support for MFi, Xbox, and PlayStation gamepads, and 4K-ready upscaled graphics. Nearly all CD-based cores support CHD disc images; notably, Provenance's native Mednafen core includes a custom CHD implementation not found in other standalone Mednafen forks, allowing PS1, Saturn, and PC-Engine CD libraries to use the compact CHD format without any loss of accuracy.
 
-    The project is 100% open source on GitHub with over 6,200 stars and an active community of contributors. It is free when sideloaded or built from source. An App Store version is also available with optional Provenance Plus features, while all core emulation functionality remains free.
+    The project is 100% open source on GitHub with over 6,300 stars and an active community of contributors. It is free when sideloaded or built from source. An App Store version is also available with optional Provenance Plus features, while all core emulation functionality remains free.
 
 keyFacts:
   - label: "Initial Release"
     value: "2016"
   - label: "Systems Supported"
-    value: "38+"
+    value: "50+"
   - label: "Platforms"
     value: "iOS, tvOS"
   - label: "Price"
@@ -25,23 +25,23 @@ keyFacts:
   - label: "Developer"
     value: "Joe Mattiello"
   - label: "GitHub Stars"
-    value: "6,200+"
+    value: "6,300+"
   - label: "License"
-    value: "Open Source (BSD)"
+    value: "Open source (BSD-style Provenance License)"
   - label: "Languages"
     value: "Swift, Objective-C, C++"
 
 features:
   - title: "Most Comprehensive System Support"
-    description: "38+ console systems from Atari 2600 to PlayStation 2, including rare systems like PC-FX, Virtual Boy, 3DO, and Neo Geo Pocket. Nearly all CD-based cores support CHD, including a custom CHD implementation in Provenance's native Mednafen core not found in other standalone Mednafen forks."
+    description: "50+ console systems from Atari 2600 to PlayStation 2, including rare systems like PC-FX, Virtual Boy, 3DO, and Neo Geo Pocket. Nearly all CD-based cores support CHD, including a custom CHD implementation in Provenance's native Mednafen core not found in other standalone Mednafen forks."
   - title: "Premier Apple TV Emulator"
-    description: "The only emulator with full native tvOS support, TopShelf integration, Siri Remote optimization, and 4K-ready output."
+    description: "One of the few emulators with a full native tvOS app, including Top Shelf, Siri Remote optimization, and 4K-ready output."
   - title: "Museum-Quality Game Library"
     description: "Automatic box art, screenshots, manuals, ratings, and release info for every game. A digital collection, not just a game list."
   - title: "100% Open Source"
     description: "Fully transparent code on GitHub. No hidden tracking, no data collection. Community-driven since 2016."
   - title: "Actively Developed — New Features Regularly"
-    description: "Online cheat code lookup from the libretro database, an in-app controller guide, configurable CRT shaders, expanded cheat support across 10+ cores, and more landing continuously."
+    description: "Coming in Provenance 3.4: online cheat code lookup from the libretro database, an in-app controller guide, configurable CRT shaders, and expanded cheat support across 10+ cores."
   - title: "Free Forever When Sideloaded"
     description: "All features are free when sideloaded or built from source. No subscriptions, no paywalls, no tiers."
 

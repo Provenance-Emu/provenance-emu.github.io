@@ -5,7 +5,7 @@ description: "Step-by-step guide to playing retro games on Apple TV using Proven
 tags: ["guide", "how-to"]
 ---
 
-{{< brand >}}Provenance{{< /brand >}} is one of the only iOS emulators with native Apple TV support, letting you play 38+ retro game systems on your television. This guide covers both the native tvOS app and using AirPlay to mirror from your iPhone or iPad.
+{{< brand >}}Provenance{{< /brand >}} is one of the only iOS emulators with native Apple TV support, letting you play 50+ retro game systems on your television. This guide covers both the native tvOS app and using AirPlay to mirror from your iPhone or iPad.
 
 ## Option 1: Native tvOS App
 

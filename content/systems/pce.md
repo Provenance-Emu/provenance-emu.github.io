@@ -24,7 +24,7 @@ supportedFormats: ".pce, .ccd, .cue, .chd, .iso, .img"
 
 ## BIOS Requirements
 
-PC Engine CD-ROM² games require a BIOS file. See [BIOS Requirements](https://wiki.provenance-emu.com/installation-and-usage/bios-requirements) for the exact filename and placement instructions.
+PC Engine CD-ROM² games require a BIOS file. See [BIOS Requirements](https://wiki.provenance-emu.com/getting-started/bios-requirements) for the exact filename and placement instructions.
 
 ## Features
 
@@ -42,7 +42,7 @@ PC Engine CD-ROM² games require a BIOS file. See [BIOS Requirements](https://wi
 
 1. **Download {{< brand >}}Provenance{{< /brand >}}** from the [App Store](https://apps.apple.com/us/app/provenance-app/id1596862805) — it's free.
 2. **Add your PC Engine ROM files** via the Files app or Wi-Fi import.
-3. **For CD games**, add your BIOS file first — see [BIOS Requirements](https://wiki.provenance-emu.com/installation-and-usage/bios-requirements).
+3. **For CD games**, add your BIOS file first — see [BIOS Requirements](https://wiki.provenance-emu.com/getting-started/bios-requirements).
 4. **Start playing** — your PC Engine games appear in your library automatically.
 
 For detailed setup instructions, visit the [Provenance wiki](https://wiki.provenance-emu.com/).
