@@ -1,101 +1,50 @@
+# /about/ page. Facts here should match README.md upstream and data/press.yml.
+# The about/quote/client sliders use OWL Carousel, which only loads on the
+# homepage, so keep imageSlider to one image (extra slides would stack).
+
+# story cards (top of the page)
+createStory:
+  - image : "images/blog/skin-catalog-launch.webp"
+    imageAlt : "images/blog/skin-catalog-launch.png"
+    title : "What it runs"
+    content : "50+ systems, from the Atari 2600 to the PlayStation 2 (PS2 needs JIT), including rarer ones like the PC-FX, Virtual Boy, 3DO and Neo Geo Pocket. Nearly every CD-based core reads CHD."
+
+  - image : "images/banners/banner-1.jpg"
+    imageAlt : "images/banners/banner-1.jpg"
+    title : "The family"
+    content : "The same team builds iCube (GameCube and Wii), iFly (Dreamcast) and Virtual Jaguar, the Atari Jaguar core for RetroArch and Provenance, which now has its own desktop app for macOS, Windows and Linux."
+
 about:
   enable: true
-  title : "This is our story."
-  content : "Replay the past in the present."
+  title : "Retro games, native on Apple devices, since 2016."
+  content : "Provenance is a free, open-source multi-system emulator for iPhone, iPad, Apple TV and Mac. It puts emulator cores for 50+ systems behind one native app: a game library with artwork and metadata, controller and skin support, Top Shelf on Apple TV, and iCloud sync."
   imageSlider:
-    - image : "images/about/story-slider-01.webp"
-      imageAlt : "images/about/story-slider-01.jpg"
-
-    - image : "images/about/story-slider-01.webp"
-      imageAlt : "images/about/story-slider-01.jpg"
-
-    - image : "images/about/story-slider-01.webp"
-      imageAlt : "images/about/story-slider-01.jpg"
+    - image : "images/mockups/iphone-library-light.webp"
+      imageAlt : "images/mockups/iphone-library-light.png"
 
 # behind story
 behindStory:
   enable : true
-  title : "Why we created Small Apps"
-  content : "Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus. Proin eget tortor risus. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat."
+  title : "How the project works"
+  content : "Provenance is open source on GitHub (6,300+ stars, BSD-style Provenance License). It's free to sideload or build from source, and the App Store version is free too. Provenance Plus is an optional subscription for iCloud sync and priority support, and it pays for development. Work happens in the open on the develop branch: Patreon supporters get TestFlight builds, and anyone can sideload the rolling alpha."
 
-# create story
-createStory:
-  - image : "images/blog/post-01.webp"
-    imageAlt : "images/blog/post-01.jpg"
-    title : "Our Story"
-    content : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consequat massa.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu."
-    
-  - image : "images/blog/post-03.webp"
-    imageAlt : "images/blog/post-03.jpg"
-    title : "What we do"
-    content : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consequat massa.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu."
-
-# quote slider
+# quote slider (real coverage; same sources as homepage pressQuotes)
 quoteSlider:
   enable : true
-  sliderItem : 
-    - quote : "Behind every great product, there is a great mind."
-      quoteBy : "-TechCrunch"
-      
-    - quote : "Behind every great product, there is a great mind."
-      quoteBy : "-TechCrunch"
+  sliderItem :
+    - quote : "Great news for game emulation fans who will for the first time have the opportunity to run PlayStation games on iOS without relying on sideloading."
+      quoteBy : "9to5Mac"
 
-# clients slider
-clients: 
-  enable : true
-  title : "Featured In"
-  clientSlider :
-   - clientsLogo : "images/clients/business-finder.png"
-   - clientsLogo : "images/clients/forbes.png"
-   - clientsLogo : "images/clients/venture-beat.png"
-   - clientsLogo : "images/clients/tech-crunch-new.png"
+    - quote : "An iOS and tvOS multi-emulator frontend to help you play your childhood faves from times long past."
+      quoteBy : "Pocket Gamer"
 
-# investors
+# clients slider: disabled; the template logos (Forbes, TechCrunch...) weren't real coverage
+clients:
+  enable : false
+
+# investors: disabled; the template "Spider Web" investor cards were placeholders
 investors :
-  enable : true
-  title : "Our Angel Investors"
-  description : "Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat."
-  investor :
-    - image : "images/team/marketing-team-01.webp"
-      imageAlt : "images/team/marketing-team-01.jpg"
-      name : "Spider Web"
-      designation : "Investor"
-      
-    - image : "images/team/marketing-team-02.webp"
-      imageAlt : "images/team/marketing-team-02.jpg"
-      name : "Spider Web"
-      designation : "Investor"
-      
-    - image : "images/team/marketing-team-03.webp"
-      imageAlt : "images/team/marketing-team-03.jpg"
-      name : "Spider Web"
-      designation : "Investor"
-      
-    - image : "images/team/marketing-team-01.webp"
-      imageAlt : "images/team/marketing-team-01.jpg"
-      name : "Spider Web"
-      designation : "Investor"
-      
-    - image : "images/team/marketing-team-02.webp"
-      imageAlt : "images/team/marketing-team-02.jpg"
-      name : "Spider Web"
-      designation : "Investor"
-      
-    - image : "images/team/marketing-team-03.webp"
-      imageAlt : "images/team/marketing-team-03.jpg"
-      name : "Spider Web"
-      designation : "Investor"
-      
-    - image : "images/team/marketing-team-01.webp"
-      imageAlt : "images/team/marketing-team-01.jpg"
-      name : "Spider Web"
-      designation : "Investor"
-      
-    - image : "images/team/marketing-team-02.webp"
-      imageAlt : "images/team/marketing-team-02.jpg"
-      name : "Spider Web"
-      designation : "Investor"
+  enable : false
 
-# call to action
 cta :
   enable : true
