@@ -14,8 +14,8 @@
               <i class="{{ .icon }}"></i>
             </div>
             <div class="details">
-              {{ range .addressList }}
-              <h3>{{ .listItem }}</h3>
+              {{ range $item := .addressList }}
+              {{ with $item.url }}<h3><a href="{{ . }}"{{ if hasPrefix . "http" }} target="_blank" rel="noopener"{{ end }}>{{ $item.listItem }}</a></h3>{{ else }}<p class="text-muted mb-0">{{ $item.listItem }}</p>{{ end }}
               {{ end }}
             </div>
           </div>

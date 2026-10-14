@@ -26,7 +26,7 @@ The same core also runs as a standalone desktop app on macOS, Windows and Linux,
 
 ## BIOS
 
-Jaguar CD titles may require BIOS files for full compatibility. See [BIOS Requirements](https://wiki.provenance-emu.com/installation-and-usage/bios-requirements) for details.
+Jaguar CD titles may require BIOS files for full compatibility. See [BIOS Requirements](https://wiki.provenance-emu.com/getting-started/bios-requirements) for details.
 
 ## Features
 

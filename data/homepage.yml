@@ -13,7 +13,7 @@ socialProof:
       number: "6.2K+"
       text: "GitHub Stars"
       description: "Growing community"
-    - number: "38+"
+    - number: "50+"
       text: "Systems Supported"
       description: "Most comprehensive"
     - number: "100%"
@@ -23,7 +23,7 @@ socialProof:
 # banner
 banner:
   title : "Your Classic Games.\nReimagined for iOS & tvOS."
-  description : "The best free, open-source iOS game emulator. Play retro games from 38+ consoles — SNES, N64, PlayStation, GBA, Dreamcast, and more — with native iOS features, beautiful metadata, and iCloud sync."
+  description : "The best free, open-source iOS game emulator. Play retro games from 50+ consoles — SNES, N64, PlayStation, GBA, Dreamcast, and more — with native iOS features, beautiful metadata, and iCloud sync."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
   image : "images/mobile.webp"
@@ -68,14 +68,14 @@ whyProvenance:
       title: "Premier Emulator on Apple TV"
       content: "Experience retro gaming on the big screen. Native tvOS support with TopShelf integration brings your games to the living room like no other app can."
     - icon: "tf-ion-android-apps"
-      title: "38+ Systems in One App"
+      title: "50+ Systems in One App"
       content: "From Atari 2600 to PlayStation 2, including rare systems like PC-FX and Virtual Boy. Nearly all CD-based cores support CHD disc images, including a custom CHD implementation in our native Mednafen core not found in other standalone Mednafen forks."
     - icon: "tf-ion-locked"
       title: "Free Forever (Sideloaded)"
       content: "When you sideload or build from source, everything is free. No subscriptions, no paywalls, no tiers. App Store builds include optional Provenance Plus features, but all core functionality remains free."
     - icon: "tf-ion-ios-people"
       title: "Actively Developed"
-      content: "10+ years of active development with new features shipping regularly. Recent additions include online cheat code lookup from the libretro database, an in-app controller guide, expanded cheat support across 10+ cores, and configurable CRT shaders."
+      content: "10+ years of active development with new features shipping regularly. Coming in Provenance 3.4: online cheat code lookup from the libretro database, an in-app controller guide, expanded cheat support across 10+ cores, and configurable CRT shaders."
     - icon: "tf-ion-ios-book"
       title: "Museum-Quality Library"
       content: "Not just a game list - a digital collection. Automatic artwork, manuals, release info. Your ROMs deserve better presentation."
@@ -103,7 +103,7 @@ featureTwo:
   imageSizes : "258px"
   imageAlt : "images/feature/n64-core-options.png"
   title : "Fine-Tune Your Experience"
-  content : "Customize emulation settings in real-time. Dial in configurable CRT scanline and phosphor shaders, adjust audio, tweak per-core options, and look up cheat codes directly from the libretro database — all without leaving your game."
+  content : "Customize emulation settings in real-time. Adjust audio and tweak per-core options without leaving your game. Coming in Provenance 3.4: configurable CRT scanline and phosphor shaders, and cheat code lookup from the libretro database."
   comment : ""
   clientImage : ""
   clientName : "Power users and casual gamers covered"
@@ -184,7 +184,7 @@ tvosShowcase:
 # service
 service:
   enable : true
-  title : "38+ Game Systems. One App."
+  title : "50+ Game Systems. One App."
   description : "From Atari to PlayStation, we've got you covered. The most comprehensive console support of any iOS emulator."
   image : "images/console_logos.webp"
   imageAlt : "images/console_logos.jpg"
@@ -304,7 +304,7 @@ comparisonHighlights:
       others: false
       description: "Fully auditable on GitHub"
     - feature: "Number of Systems"
-      provenance: "38+"
+      provenance: "50+"
       others: "6-15"
       description: "Most comprehensive support"
     - feature: "Subscription Required"

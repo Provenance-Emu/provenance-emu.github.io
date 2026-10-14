@@ -1,13 +1,26 @@
+# /contact/ page: one block per channel. icon = Font Awesome classes (re-run
+# scripts/build-fa-subset.py if you add a new one); url is optional.
 address:
-  - icon : "tf-phone2"
+  - icon : "fab fa-discord"
     addressList:
-      - listItem : "(00) 789 456 7890 (USA)"
-      - listItem : "(88) 016 725 0455 (UK)"
-      
-  - icon : "tf-map2"
-    addressList:
-      - listItem : "36. St Michael’s St, Oxford OX1, UK"
-      - listItem : "123, Pennsylvania, USA"
+      - listItem : "Discord"
+        url : "https://discord.gg/4TK7PU5"
+      - listItem : "Questions, help and beta chat"
 
-form:
-  formAction : "#"
+  - icon : "fab fa-github"
+    addressList:
+      - listItem : "GitHub Issues"
+        url : "https://github.com/Provenance-Emu/Provenance/issues"
+      - listItem : "Bug reports and feature requests"
+
+  - icon : "fas fa-book"
+    addressList:
+      - listItem : "Wiki"
+        url : "https://wiki.provenance-emu.com/"
+      - listItem : "Install guides, BIOS files, system notes"
+
+  - icon : "fas fa-envelope"
+    addressList:
+      - listItem : "help@provenance-emu.com"
+        url : "mailto:help@provenance-emu.com"
+      - listItem : "Press and anything that isn't a bug"
