@@ -244,7 +244,7 @@
     <div class="release-product mb-4" id="dl-{{ .key }}">
       <div class="release-product-head">
         <h3 class="font-weight-bold">{{ .name }}</h3>
-        <div class="release-product-links"><a href="{{ .site }}">Website →</a> &nbsp;·&nbsp; <a href="{{ .releasesURL }}" target="_blank" rel="noopener">All releases on GitHub →</a></div>
+        <div class="release-product-links"><a href="{{ .site }}">Website →</a>{{ with .testflight }} &nbsp;·&nbsp; <a href="{{ . }}">TestFlight beta →</a>{{ end }} &nbsp;·&nbsp; <a href="{{ .releasesURL }}" target="_blank" rel="noopener">All releases on GitHub →</a></div>
       </div>
       <p class="text-muted mb-2">{{ .tagline }}</p>
       {{ range .entries }}
@@ -258,7 +258,7 @@
         {{- range .assets }}{{ $assets = $assets | append (merge . (partial "asset-meta.html" .)) }}{{ end -}}
         <div class="release-platforms">
           {{- range $p := slice "ios" "tvos" "macos" "windows" "linux" "android" "other" }}
-          {{- with where $assets "platform" $p }}
+          {{- with sort (where $assets "platform" $p) "order" }}
           <div class="platform-row">
             <div class="platform-label"><i class="{{ (index . 0).platformIcon }}" aria-hidden="true"></i>{{ (index . 0).platformLabel }}</div>
             <div class="release-assets">

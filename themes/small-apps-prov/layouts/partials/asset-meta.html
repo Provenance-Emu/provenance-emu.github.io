@@ -6,7 +6,7 @@
 
 {{- $platform := "other" -}}
 {{- if strings.Contains $n "tvos" -}}{{- $platform = "tvos" -}}
-{{- else if or (strings.HasSuffix $n ".ipa") (strings.Contains $n "ios") -}}{{- $platform = "ios" -}}
+{{- else if or (strings.HasSuffix $n ".ipa") (strings.HasSuffix $n ".tipa") (strings.Contains $n "ios") (strings.Contains $n "jailbroken") -}}{{- $platform = "ios" -}}
 {{- else if or (strings.Contains $n "macos") (strings.Contains $n "darwin") (strings.HasSuffix $n ".dmg") -}}{{- $platform = "macos" -}}
 {{- else if or (strings.Contains $n "windows") (strings.Contains $n "win64") (strings.Contains $n "win32") (strings.HasSuffix $n ".exe") (strings.HasSuffix $n ".msi") -}}{{- $platform = "windows" -}}
 {{- else if or (strings.Contains $n "linux") (strings.HasSuffix $n ".appimage") (strings.HasSuffix $n ".deb") (strings.HasSuffix $n ".rpm") -}}{{- $platform = "linux" -}}
@@ -33,7 +33,10 @@
 {{- end -}}
 
 {{- $kind := .name -}}
-{{- if and (strings.HasSuffix $n ".ipa") (strings.Contains $n "trollstore") -}}{{- $kind = "IPA · TrollStore" -}}
+{{- if or (strings.HasSuffix $n ".tipa") (and (strings.HasSuffix $n ".ipa") (strings.Contains $n "trollstore")) -}}{{- $kind = "TrollStore" -}}
+{{- else if and (strings.HasSuffix $n ".deb") (strings.Contains $n "rootless") -}}{{- $kind = "Jailbreak .deb · rootless" -}}
+{{- else if and (strings.HasSuffix $n ".deb") (strings.Contains $n "rootful") -}}{{- $kind = "Jailbreak .deb · rootful" -}}
+{{- else if and (strings.HasSuffix $n ".ipa") (strings.Contains $n "non-jailbroken") -}}{{- $kind = "IPA · sideload" -}}
 {{- else if strings.HasSuffix $n ".ipa" -}}{{- $kind = cond (strings.Contains $n "noextensions") "IPA · no extensions" "IPA" -}}
 {{- else if and (strings.Contains $n "libretro") (or (strings.HasSuffix $n ".dylib") (strings.HasSuffix $n ".so") (strings.HasSuffix $n ".dll")) -}}{{- $kind = "RetroArch core" -}}
 {{- else if strings.HasSuffix $n ".appimage" -}}{{- $kind = "AppImage" -}}
@@ -46,4 +49,11 @@
 {{- else if strings.HasSuffix $n ".zip" -}}{{- $kind = cond (eq $platform "windows") "Portable .zip" (cond (eq $platform "macos") "App (.zip)" ".zip") -}}
 {{- end -}}
 
-{{- return dict "platform" $platform "platformLabel" $p.label "platformIcon" $p.icon "arch" $arch "archTitle" $archTitle "kind" $kind -}}
+{{- /* Within a platform row: plain installs first, special-purpose builds last. */ -}}
+{{- $order := 5 -}}
+{{- if strings.HasSuffix $n ".ipa" -}}{{- $order = cond (strings.Contains $n "noextensions") 2 1 -}}
+{{- else if or (strings.HasSuffix $n ".tipa") (strings.Contains $n "trollstore") -}}{{- $order = 3 -}}
+{{- else if strings.Contains $n "jailbroken" -}}{{- $order = 4 -}}
+{{- end -}}
+
+{{- return dict "order" $order "platform" $platform "platformLabel" $p.label "platformIcon" $p.icon "arch" $arch "archTitle" $archTitle "kind" $kind -}}

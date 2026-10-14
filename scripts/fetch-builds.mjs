@@ -23,24 +23,31 @@ const MAX_NOTES_CHARS = 24000;
  * skip:     tags that are CI noise rather than releases
  * assets:   which release assets get a download button
  * shown:    how many other releases to list
+ * maxAgeDays: hide non-rolling releases older than this (a stale tagged beta next to a
+ *             daily alpha reads as abandoned)
+ * testflight: public TestFlight / beta page, linked in the product header
  */
 const PRODUCTS = [
   {
     key: 'provenance', name: 'Provenance', site: 'https://provenance-emu.com/',
     tagline: 'Multi-system retro emulator for iOS, tvOS and macOS',
     repo: 'Provenance-Emu/Provenance', rolling: 'alpha', rollingTitle: 'Latest alpha (rolling CI build)', skip: /^alpha-\d+$/, shown: 3,
+    testflight: 'https://provenance-emu.com/beta/',
     assets: /\.ipa$/i,
   },
   {
     key: 'icube', name: 'iCube', site: 'https://icube-emu.com/',
     tagline: 'GameCube & Wii emulator for iOS and tvOS',
     repo: 'Provenance-Emu/iCube', rolling: 'alpha', rollingTitle: 'Latest alpha (rolling CI build)', skip: /^alpha-\d+$/, shown: 2,
-    assets: /\.ipa$/i,
+    maxAgeDays: 180, testflight: 'https://icube-emu.com/testflight/',
+    // The alpha carries a TrollStore .tipa and jailbreak .debs alongside the IPA (iOS only;
+    // tvOS ships via TestFlight).
+    assets: /\.(ipa|tipa|deb)$/i,
   },
   {
     key: 'ifly', name: 'iFly', site: 'https://ifly-emu.com/',
     tagline: 'Dreamcast emulator for iOS and tvOS',
-    repo: 'JoeMatt/iFly-releases', shown: 3,
+    repo: 'JoeMatt/iFly-releases', shown: 3, testflight: 'https://ifly-emu.com/testflight/',
     assets: /\.ipa$/i,
   },
   {
@@ -128,6 +135,7 @@ for (const p of PRODUCTS) {
 
   const others = all
     .filter((r) => r.tag_name !== p.rolling && !(p.skip && p.skip.test(r.tag_name)))
+    .filter((r) => !p.maxAgeDays || Date.now() - Date.parse(r.published_at || r.created_at) < p.maxAgeDays * 86400000)
     .sort((a, b) => (b.published_at || '').localeCompare(a.published_at || ''))
     .slice(0, p.shown);
   for (const r of others) entries.push(entry(r));
@@ -138,7 +146,7 @@ for (const p of PRODUCTS) {
 
   if (!entries.length) fail(`no releases found for ${p.repo}`);
   products.push({
-    key: p.key, name: p.name, site: p.site, tagline: p.tagline,
+    key: p.key, name: p.name, site: p.site, tagline: p.tagline, testflight: p.testflight || '',
     repoURL: `https://github.com/${p.repo}`,
     releasesURL: `https://github.com/${p.repo}/releases`,
     entries,
