@@ -514,19 +514,19 @@ pre code {
   border-color: rgba(250,51,153,0.30) !important;
 }
 
-/* ── Tables (generic) ────────────────────────────────────────────────────────── */
-table { color: rgba(255,255,255,0.80); }
+/* ── Tables (generic) — gated: ungated, these made every table white-on-white in light mode */
+html:not([data-theme="light"]) table { color: rgba(255,255,255,0.80); }
 
-thead th {
+html:not([data-theme="light"]) thead th {
   background: rgba(250,51,153,0.08) !important;
   color: #fff !important;
   border-bottom: 2px solid rgba(250,51,153,0.25) !important;
 }
 
-tbody tr:nth-child(even) { background: rgba(255,255,255,0.02) !important; }
-tbody tr:hover            { background: rgba(250,51,153,0.05) !important; }
+html:not([data-theme="light"]) tbody tr:nth-child(even) { background: rgba(255,255,255,0.02) !important; }
+html:not([data-theme="light"]) tbody tr:hover { background: rgba(250,51,153,0.05) !important; }
 
-td, th { border-color: rgba(255,255,255,0.07) !important; }
+html:not([data-theme="light"]) td, html:not([data-theme="light"]) th { border-color: rgba(255,255,255,0.07) !important; }
 
 /* ── Forms ───────────────────────────────────────────────────────────────────── */
 .form-control, input[type="text"], input[type="email"],

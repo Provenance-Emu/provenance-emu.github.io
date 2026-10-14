@@ -88,6 +88,9 @@ async function releasesOf(repo) {
 function cleanNotes(html, releaseURL) {
   let out = (html || '')
     .replace(/<h[23][^>]*>\s*Install\s*<\/h[23]>[\s\S]*?(?=<h[123][\s>]|$)/gi, '')
+    // GitHub renders every newline in a release body as <br>, so hard-wrapped notes come out
+    // as ragged half-width lines with each link on its own line. Reflow them as prose.
+    .replace(/<br\s*\/?>\s*/gi, ' ')
     .trim();
   if (out.length > MAX_NOTES_CHARS) {
     // Cut between top-level headings so the HTML stays balanced.
