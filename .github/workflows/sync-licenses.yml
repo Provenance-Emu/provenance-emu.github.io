@@ -26,7 +26,7 @@ jobs:
         run: |
           REF="${{ github.event.client_payload.ref || github.event.inputs.ref || 'develop' }}"
           curl -fsSL \
-            "https://raw.githubusercontent.com/Provenance-Emu/Provenance/${REF}/Scripts/licenses.json" \
+            "https://raw.githubusercontent.com/Provenance-Emu/Provenance/${REF}/Scripts/generators/licenses.json" \
             -o data/licenses.json
           echo "Fetched $(python3 -c "import json; d=json.load(open('data/licenses.json')); print(len(d['entries']))" ) entries"
 
