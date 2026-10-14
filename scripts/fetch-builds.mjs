@@ -58,7 +58,7 @@ const PRODUCTS = [
     // same packages under the version number.
     repo: 'libretro/virtualjaguar-libretro', rolling: 'nightly', rollingTitle: 'Latest nightly (rolling CI build)',
     skip: /^prerelease$/, shown: 3,
-    assets: /^(VirtualJaguar-[^/]+\.(zip|exe|AppImage)|virtualjaguar_[^/]+\.deb|virtualjaguar_libretro-(ios|tvos)-arm64\.dylib)$/,
+    assets: /^(VirtualJaguar-[^/]+\.(zip|exe|AppImage|flatpak)|virtualjaguar_[^/]+\.deb|virtualjaguar_libretro-(ios|tvos)-arm64\.dylib)$/,
   },
 ];
 
