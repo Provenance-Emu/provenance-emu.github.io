@@ -20,7 +20,7 @@ Neo Geo games use MAME-style ROM sets — each game is a ZIP archive containing 
 
 ## BIOS Requirements
 
-Neo Geo requires the Neo Geo BIOS (`neogeo.zip`) placed in the same folder as your game ROMs. See [BIOS Requirements](https://wiki.provenance-emu.com/installation-and-usage/bios-requirements) for details.
+Neo Geo requires the Neo Geo BIOS (`neogeo.zip`) placed in the same folder as your game ROMs. See [BIOS Requirements](https://wiki.provenance-emu.com/getting-started/bios-requirements) for details.
 
 ## Features
 

@@ -9,7 +9,11 @@ supportedFormats: ".iso, .bin/.cue, .chd"
 
 The PlayStation 2 is the best-selling video game console ever made, and its library holds some of the greatest games ever created. {{< brand >}}Provenance{{< /brand >}} brings PS2 emulation to iPhone, iPad, and Apple TV — letting you play Grand Theft Auto: San Andreas, Shadow of the Colossus, God of War, Kingdom Hearts, Final Fantasy X, and hundreds of other titles on your Apple device.
 
-{{< brand >}}Provenance{{< /brand >}} is free, open-source, and available directly from the App Store. No jailbreak required.
+{{< brand >}}Provenance{{< /brand >}} is free, open-source, and available directly from the App Store. No jailbreak is required to install it.
+
+## JIT Requirement
+
+PlayStation 2 support (the Play! core) is included in {{< brand >}}Provenance{{< /brand >}}, but PS2 games only run with JIT enabled. That means a jailbroken device, or a sideloaded build run with a JIT enabler.
 
 ## Supported File Formats
 

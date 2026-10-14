@@ -35,7 +35,7 @@ Download from the App Store for iOS or macOS Catalyst!
 
 ### Side Load
 
-https://wiki.provenance-emu.com/installation-and-usage/installing-provenance/sideloading
+https://wiki.provenance-emu.com/getting-started/installing-provenance/advanced/sideloading
 
 ## What's New
 

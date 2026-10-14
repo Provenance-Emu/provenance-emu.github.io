@@ -168,7 +168,7 @@ pygmentsStyle = "solarized-dark"
     logo_small = "img/logo-small.png"
     address = ""
     home = "Home"
-    description = "Provenance is a free, open-source multi-system emulator for iPhone, iPad, and Apple TV. Play retro games from 38+ consoles — SNES, PlayStation, N64, GBA, and more. No jailbreak required."
+    description = "Provenance is a free, open-source multi-system emulator for iPhone, iPad, and Apple TV. Play retro games from 50+ consoles — SNES, PlayStation, N64, GBA, and more. No jailbreak required."
     mapMarker = "images/marker.png"
 
     [params.preloader]

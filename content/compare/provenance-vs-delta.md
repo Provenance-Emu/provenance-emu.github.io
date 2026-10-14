@@ -14,11 +14,11 @@ Both {{< brand >}}Provenance{{< /brand >}} and Delta are free options for playin
 | **Beta / early features** | Public releases | Early access via Patreon or AltStore+ subscription |
 | **Platforms** | iOS, iPadOS, tvOS (Apple TV) | iOS, iPadOS |
 | **Apple TV support** | Yes — native tvOS app with full native UI | No |
-| **Systems supported** | 38+ (NES, SNES, N64, GBA, GBC, GB, DS, PS1, Saturn, Genesis, and many more) | 7 (NES, SNES, N64, GBA, GBC, GB, DS) |
+| **Systems supported** | 50+ (NES, SNES, N64, GBA, GBC, GB, DS, PS1, Saturn, Genesis, and many more) | 7 (NES, SNES, N64, GBA, GBC, GB, DS) |
 | **PlayStation 1** | Yes | No |
 | **Sega Genesis/Mega Drive** | Yes | No |
 | **Atari systems** | Yes | No |
-| **Open source** | Yes (MIT License) | No |
+| **Open source** | Yes (BSD-style Provenance License) | No |
 | **Controller support** | MFi, Xbox, PlayStation, Bluetooth | MFi, Xbox, PlayStation, Bluetooth |
 | **Custom skins** | Yes | Yes |
 | **Cheats** | Yes | Yes |
@@ -35,11 +35,11 @@ Delta is focused exclusively on Nintendo systems and launched on the App Store i
 
 ## Where Provenance Stands Out
 
-{{< brand >}}Provenance{{< /brand >}} supports 38+ systems, covering platforms Delta does not: PlayStation 1, Sega Genesis, Saturn, Atari, and many more. If you want to play beyond Nintendo's library, {{< brand >}}Provenance{{< /brand >}} is the only option of the two.
+{{< brand >}}Provenance{{< /brand >}} supports 50+ systems, covering platforms Delta does not: PlayStation 1, Sega Genesis, Saturn, Atari, and many more. If you want to play beyond Nintendo's library, {{< brand >}}Provenance{{< /brand >}} is the only option of the two.
 
 {{< brand >}}Provenance{{< /brand >}} uses libretro cores that are actively maintained and updated from upstream, meaning you get newer emulation accuracy, broader compatibility, and more per-core configuration options. This translates to better game compatibility and more fine-grained control over emulation behavior versus bundled, less frequently updated cores.
 
-{{< brand >}}Provenance{{< /brand >}} is one of the very few emulators with a native tvOS app. RetroArch also supports tvOS, but uses a cross-platform non-native UI shared with desktop platforms — requiring manual menu navigation and file management for setup. {{< brand >}}Provenance{{< /brand >}} provides a native Apple TV experience with Top Shelf extension, proper controller navigation, and no manual file wrangling. Being open source under the MIT license means the community can contribute, audit the code, and build on it.
+{{< brand >}}Provenance{{< /brand >}} is one of the very few emulators with a native tvOS app. RetroArch also supports tvOS, but uses a cross-platform non-native UI shared with desktop platforms — requiring manual menu navigation and file management for setup. {{< brand >}}Provenance{{< /brand >}} provides a native Apple TV experience with Top Shelf extension, proper controller navigation, and no manual file wrangling. Being open source under the BSD-style Provenance License means the community can contribute, audit the code, and build on it.
 
 ## Summary
 

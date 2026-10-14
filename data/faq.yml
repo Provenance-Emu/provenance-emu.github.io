@@ -2,24 +2,24 @@ faq:
   - title: "Getting Started"
     faqList:
       - question: "What is Provenance?"
-        answer: "Provenance is a free, open-source multi-system emulator for iPhone, iPad, and Apple TV. It supports 38+ classic gaming consoles including SNES, PlayStation, Nintendo 64, Game Boy Advance, Sega Genesis, and many more. No jailbreak is required."
+        answer: "Provenance is a free, open-source multi-system emulator for iPhone, iPad, and Apple TV. It supports 50+ classic gaming consoles including SNES, PlayStation, Nintendo 64, Game Boy Advance, Sega Genesis, and many more. No jailbreak is required."
 
       - question: "How do I install Provenance?"
-        answer: "Provenance is available on the App Store — search for 'Provenance Emulator'. You can also sideload it for free using tools like AltStore or Sideloadly. No jailbreak is required for either method."
+        answer: "Provenance is available on the App Store — search for 'Provenance Emulator'. You can also sideload it for free using tools like AltStore, SideStore or Sideloadly. No jailbreak is required for either method."
 
       - question: "Is Provenance free?"
-        answer: "Yes. Provenance is free to download from the App Store and free to sideload. Provenance Plus is an optional in-app purchase that unlocks extra features, but the core emulation experience has no paywall or mandatory subscription."
+        answer: "Yes. Provenance is free to download from the App Store and free to sideload. Provenance Plus is an optional subscription that adds iCloud sync and priority support, but the core emulation experience has no paywall or mandatory subscription."
 
       - question: "What devices does Provenance support?"
         answer: "Provenance runs on iPhone, iPad, and Apple TV (tvOS). It provides a native tvOS experience with Top Shelf extension and full controller navigation — one of the very few emulators to offer this."
 
       - question: "Do I need to jailbreak my device?"
-        answer: "No. Provenance works on standard, non-jailbroken devices. You can download it from the App Store or sideload it using AltStore or Sideloadly without any jailbreak."
+        answer: "No. Provenance works on standard, non-jailbroken devices. You can download it from the App Store or sideload it using AltStore, SideStore or Sideloadly without any jailbreak."
 
   - title: "Supported Systems"
     faqList:
       - question: "What consoles does Provenance support?"
-        answer: "Provenance supports 38+ systems including NES, SNES, Nintendo 64, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, PlayStation 1, Sega Genesis / Mega Drive, Sega Saturn, Sega Master System, Sega Game Gear, Atari 2600, Atari 5200, Atari 7800, Atari Jaguar, TurboGrafx-16, and more."
+        answer: "Provenance supports 50+ systems including NES, SNES, Nintendo 64, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, PlayStation 1, Sega Genesis / Mega Drive, Sega Saturn, Sega Master System, Sega Game Gear, Atari 2600, Atari 5200, Atari 7800, Atari Jaguar, TurboGrafx-16, and more."
 
       - question: "Does Provenance support PlayStation games?"
         answer: "Yes. Provenance supports PlayStation 1 (PS1/PSX) games. You will need your own legally obtained ROM or disc image files to play."
@@ -58,10 +58,10 @@ faq:
   - title: "Provenance Plus"
     faqList:
       - question: "What is Provenance Plus?"
-        answer: "Provenance Plus is an optional in-app purchase that unlocks additional features such as enhanced themes, advanced settings, and extra customization options. The core emulation experience is fully free without it."
+        answer: "Provenance Plus is an optional subscription that adds iCloud sync across your devices and priority support. All emulation features, skins, and shaders are free without it."
 
       - question: "Is Provenance Plus a subscription?"
-        answer: "No. Provenance Plus is a one-time purchase, not a recurring subscription. You pay once and keep access to the Plus features."
+        answer: "Yes, optionally. Provenance Plus costs $3.99 per month or $39.99 per year, or you can pay $99.99 once for lifetime access. Plans are billed through the App Store."
 
       - question: "Do I need Provenance Plus to play games?"
         answer: "No. All core emulation features — playing games, save states, controller support, all supported systems — are available for free. Provenance Plus is optional and adds extra features on top."

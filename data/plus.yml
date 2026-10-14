@@ -36,7 +36,7 @@ features:
 
     - icon: "fas fa-users"
       title: "Family Sharing"
-      description: "One Provenance Plus subscription covers up to 6 family members through Apple Family Sharing. Everyone in your family gets cloud sync, beta access, and priority support."
+      description: "One Provenance Plus subscription covers up to 6 family members through Apple Family Sharing. Everyone in your family gets cloud sync and priority support."
       highlight: false
 
     - icon: "fas fa-tv"
@@ -52,9 +52,9 @@ features:
 comparison:
   enable: true
   title: "Free vs Plus"
-  subtitle: "Every emulation feature is free. Plus adds convenience and early access."
+  subtitle: "Every emulation feature is free. Plus adds iCloud sync and priority support."
   rows:
-    - feature: "All 38+ Emulated Systems"
+    - feature: "All 50+ Emulated Systems"
       free: true
       plus: true
       category: "core"

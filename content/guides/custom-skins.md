@@ -60,7 +60,7 @@ After importing, activate the skin for a system:
 - Skins are **system-specific** — a GBA skin won't work for SNES. Check the system tag before downloading.
 - **iPad skins** often have landscape-optimized layouts. Look for skins tagged `ipad` or `landscape`.
 - The **Skin Catalog** automatically extracts thumbnails from skin files, so what you see in the preview is what you get.
-- Want to **make your own skin**? The format is documented at [wiki.provenance-emu.com](https://wiki.provenance-emu.com/info/skins-guide).
+- Want to **make your own skin**? The format is documented at [wiki.provenance-emu.com](https://wiki.provenance-emu.com/using-provenance/skins-guide).
 - **Submit your skin** to the community catalog at [provenance-emu.com/skins/submit.html](https://provenance-emu.com/skins/submit.html).
 
 ## Download Provenance

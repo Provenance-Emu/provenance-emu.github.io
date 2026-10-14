@@ -193,7 +193,7 @@ pygmentsStyle = "solarized-dark"
     address = ""
     home = "Home"
     # Meta data
-    description = "Provenance is a free, open-source multi-system emulator for iPhone, iPad, and Apple TV. Play retro games from 38+ consoles — SNES, PlayStation, N64, GBA, and more. No jailbreak required."
+    description = "Provenance is a free, open-source multi-system emulator for iPhone, iPad, and Apple TV. Play retro games from 50+ consoles — SNES, PlayStation, N64, GBA, and more. No jailbreak required."
     # google map
     #gmapAPI = "https://maps.googleapis.com/maps/api/js?key=KEY&libraries=places"
     #mapLatitude = "51.5223477"
