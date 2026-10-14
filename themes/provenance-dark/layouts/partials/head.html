@@ -34,24 +34,24 @@
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
 
-  {{ "<!-- plugins CSS — deferred via media=print -->" | safeHTML }}
+  {{ "<!-- Layout CSS is render-blocking ON PURPOSE. Do not convert to media=print or rel=preload." | safeHTML }}
+  {{ "     Async-loading it let the page paint unstyled, then reflow when it arrived: Lighthouse" | safeHTML }}
+  {{ "     CLS 0.945 / LCP 7.6s / score 51 (issue #116; earlier attempts: #104, #106, #111)." | safeHTML }}
+  {{ "     It is ~58 KB compressed from our own origin; blocking on it costs far less than the reflow. -->" | safeHTML }}
   {{ range .Site.Params.plugins.css }}
-  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
+  <link rel="stylesheet" href="{{ .URL | absURL }}">
   {{ end }}
   {{ if .IsHome }}
   {{ "<!-- Homepage-only CSS (OWL Carousel) -->" | safeHTML }}
   {{ range .Site.Params.plugins.css_homepage }}
-  <link rel="stylesheet" href="{{ .URL | absURL }}" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link rel="stylesheet" href="{{ .URL | absURL }}"></noscript>
+  <link rel="stylesheet" href="{{ .URL | absURL }}">
   {{ end }}
   {{ end }}
 
-  {{ "<!-- DARK THEME Critical CSS — prevents FOUC on dark background/navbar while async stylesheets load." | safeHTML }}
-  {{ "     Grid animation keyframe included here so hero grid is visible immediately. -->" | safeHTML }}
+  {{ "<!-- DARK THEME Critical CSS — above-fold dark defaults and the hero grid keyframe." | safeHTML }}
+  {{ "     No html{opacity:0} gate: the page paints once the blocking CSS above is ready. -->" | safeHTML }}
   <style>
     @keyframes prov-grid-drift{from{background-position:0 0}to{background-position:40px 40px}}
-    html{opacity:0}
     body{background:#0a0a1a;color:rgba(255,255,255,.80);overflow-x:hidden}
     .main-nav{background:rgba(10,10,26,.96)!important;border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
     .gradient-banner{padding:6rem 0;position:relative;overflow:hidden;background:linear-gradient(135deg,#0a0a1a 0%,#1a0033 50%,#0d001f 100%)}
@@ -62,14 +62,10 @@
     .hero-badges{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
     .download-badge-hero{height:46px;width:auto}
   </style>
-  <noscript><style>html{opacity:1!important}</style></noscript>
 
-  {{ "<!-- Main Stylesheet (dark SCSS compiled) — deferred via media=print." | safeHTML }}
-  {{ "     onload reveals the page. -->" | safeHTML }}
+  {{ "<!-- Main Stylesheet (dark SCSS compiled) — render-blocking (see note above). -->" | safeHTML }}
   {{- $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint -}}
-  <link rel="preload" href="{{ $styles.Permalink }}" as="style" integrity="{{ $styles.Data.Integrity }}">
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="print" onload="this.onload=null;this.media='all';document.documentElement.style.opacity='1'">
-  <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"></noscript>
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
 
   {{ "<!-- AOS: inline only the 3 animation types used on this site (fade-up/right/left). -->" | safeHTML }}
   {{ "<!-- IMPORTANT: must stay synchronous — AOS CSS sets opacity:0 on [data-aos] before AOS.init() runs. -->" | safeHTML }}
