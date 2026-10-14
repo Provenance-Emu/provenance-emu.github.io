@@ -125,17 +125,52 @@
 
 {{ "<!-- Downloads and release notes -->" | safeHTML }}
 <section class="section bg-gray" id="downloads">
+  {{/* Light styles are the base; html:not([data-theme="light"]) overrides follow the
+       dark-theme.css convention (dark is the site default). Don't hard-code a white card:
+       the dark theme makes headings and <strong> white, which vanished on #fff (2026-10). */}}
   <style>
-    .release-product { background:#fff; border-radius:8px; padding:1.5rem; box-shadow:0 1px 4px rgba(0,0,0,.08); }
-    .release-entry { border-top:1px solid #eee; padding:1rem 0; }
+    .release-product { background:#fff; border:1px solid #e6e8ef; border-radius:12px; padding:1.5rem; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+    .release-product-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.25rem 1rem; }
+    .release-product-head h3 { margin:0; }
+    .release-product-links { font-size:.9rem; }
+    .release-entry { border-top:1px solid #eceef3; padding:1.1rem 0 .9rem; }
     .release-entry:first-of-type { border-top:0; }
-    .release-notes summary { cursor:pointer; font-weight:600; color:#0D96F6; }
+    .release-head { display:flex; flex-wrap:wrap; align-items:center; gap:.35rem .6rem; margin-bottom:.6rem; }
+    .release-title { font-weight:700; font-size:1.02rem; color:#1a1a2e; }
+    .release-date { font-size:.85rem; color:#6b7080; }
+    .rel-tag { display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.02em; line-height:1; padding:.3rem .5rem; border-radius:999px; border:1px solid; }
+    .rel-tag-latest { color:#0b6e4c; background:rgba(16,185,129,.10); border-color:rgba(16,185,129,.35); }
+    .rel-tag-pre    { color:#a35a00; background:rgba(245,158,11,.12); border-color:rgba(245,158,11,.40); }
+    .release-assets { display:flex; flex-wrap:wrap; gap:.5rem; }
+    a.dl-asset { display:inline-flex; align-items:center; gap:.45rem; max-width:100%; padding:.45rem .75rem; border-radius:8px; border:1px solid #b9dcf7; background:#f2f8fe; --dl-fg:#0a6fb8; font-size:.85rem; font-weight:600; line-height:1.25; text-decoration:none; overflow-wrap:anywhere; transition:border-color .15s, background .15s, color .15s; }
+    a.dl-asset:hover, a.dl-asset:focus { border-color:#0D96F6; background:#e3f1fd; --dl-fg:#075a96; text-decoration:none; }
+    /* Colour lives on the children via --dl-fg: light-theme.css forces every non-.btn link teal with !important. */
+    a.dl-asset > * { color:var(--dl-fg); }
+    a.dl-asset .dl-size { font-weight:400; white-space:nowrap; }
+    a.dl-asset.dl-github { background:transparent; border-color:#d8dbe3; --dl-fg:#4a4f5c; }
+    a.dl-asset.dl-github:hover, a.dl-asset.dl-github:focus { border-color:#9aa0ae; --dl-fg:#1a1a2e; }
+    .release-notes { margin-top:.6rem; }
+    .release-notes summary { cursor:pointer; font-weight:600; color:#0a6fb8; width:max-content; }
     .release-notes > div { margin-top:.75rem; font-size:.9rem; overflow-wrap:anywhere; }
     .release-notes > div h1, .release-notes > div h2, .release-notes > div h3, .release-notes > div h4 { font-size:1.05rem; font-weight:600; margin:1rem 0 .4rem; }
     .release-notes > div ul, .release-notes > div ol { padding-left:1.25rem; }
     .release-notes > div pre { overflow-x:auto; background:#f6f8fa; padding:.75rem; border-radius:6px; font-size:.8rem; }
     .release-notes > div img { max-width:100%; height:auto; }
     .release-notes > div table { display:block; overflow-x:auto; }
+
+    html:not([data-theme="light"]) .release-product { background:rgba(255,255,255,.035); border-color:rgba(255,255,255,.08); box-shadow:none; }
+    html:not([data-theme="light"]) .release-entry { border-top-color:rgba(255,255,255,.07); }
+    html:not([data-theme="light"]) .release-title { color:#fff; }
+    html:not([data-theme="light"]) .release-date { color:rgba(255,255,255,.45); }
+    html:not([data-theme="light"]) .rel-tag-latest { color:#34d399; background:rgba(16,185,129,.12); border-color:rgba(16,185,129,.35); }
+    html:not([data-theme="light"]) .rel-tag-pre    { color:#fbbf24; background:rgba(245,158,11,.12); border-color:rgba(245,158,11,.35); }
+    html:not([data-theme="light"]) a.dl-asset { background:rgba(0,158,197,.10); border-color:rgba(0,158,197,.35); --dl-fg:#5fd0ec; }
+    html:not([data-theme="light"]) a.dl-asset:hover, html:not([data-theme="light"]) a.dl-asset:focus { background:rgba(250,51,153,.12); border-color:rgba(250,51,153,.5); --dl-fg:#fff; }
+    html:not([data-theme="light"]) a.dl-asset.dl-github { background:transparent; border-color:rgba(255,255,255,.14); --dl-fg:rgba(255,255,255,.7); }
+    html:not([data-theme="light"]) a.dl-asset.dl-github:hover, html:not([data-theme="light"]) a.dl-asset.dl-github:focus { border-color:rgba(255,255,255,.35); --dl-fg:#fff; background:transparent; }
+    html:not([data-theme="light"]) .release-notes summary { color:#009ec5; }
+    html:not([data-theme="light"]) .release-product > p.text-muted { color:rgba(255,255,255,.55) !important; }
+    html:not([data-theme="light"]) .release-notes > div pre { background:rgba(255,255,255,.05); }
   </style>
   <div class="container">
 {{ with .Site.Data.builds }}
@@ -145,28 +180,26 @@
     </div>
     {{ range .products }}
     <div class="release-product mb-4" id="dl-{{ .key }}">
-      <div class="d-flex flex-wrap align-items-baseline justify-content-between">
-        <h3 class="font-weight-bold mb-1">{{ .name }}</h3>
-        <div class="small"><a href="{{ .site }}">Website →</a> &nbsp;·&nbsp; <a href="{{ .releasesURL }}" target="_blank" rel="noopener">All releases on GitHub →</a></div>
+      <div class="release-product-head">
+        <h3 class="font-weight-bold">{{ .name }}</h3>
+        <div class="release-product-links"><a href="{{ .site }}">Website →</a> &nbsp;·&nbsp; <a href="{{ .releasesURL }}" target="_blank" rel="noopener">All releases on GitHub →</a></div>
       </div>
       <p class="text-muted mb-2">{{ .tagline }}</p>
       {{ range .entries }}
       <div class="release-entry">
-        <div class="d-flex flex-wrap align-items-center justify-content-between">
-          <div class="mb-2 mb-md-0">
-            <strong>{{ .title }}</strong>
-            {{ if .latest }}<span class="badge badge-success">Latest</span>{{ else if .prerelease }}<span class="badge badge-warning">Pre-release</span>{{ end }}
-            <div class="text-muted small">{{ .date | dateFormat "Jan 2, 2006" }}</div>
-          </div>
-          <div>
-            {{ range .assets }}
-            <a href="{{ .url }}" class="btn btn-outline btn-sm mb-1" rel="noopener"><i class="fas fa-download mr-1"></i>{{ .name }}{{ if .size }} <span class="text-muted">({{ printf "%.0f" (div .size 1048576.0) }} MB)</span>{{ end }}</a>
-            {{ end }}
-            <a href="{{ .url }}" class="btn btn-sm mb-1" target="_blank" rel="noopener"><i class="fab fa-github mr-1"></i>GitHub release</a>
-          </div>
+        <div class="release-head">
+          <span class="release-title">{{ .title }}</span>
+          {{ if .latest }}<span class="rel-tag rel-tag-latest">Latest</span>{{ else if .prerelease }}<span class="rel-tag rel-tag-pre">Pre-release</span>{{ end }}
+          <span class="release-date">{{ .date | dateFormat "Jan 2, 2006" }}</span>
+        </div>
+        <div class="release-assets">
+          {{ range .assets }}
+          <a href="{{ .url }}" class="dl-asset" rel="noopener"><i class="fas fa-download" aria-hidden="true"></i><span>{{ .name }}</span>{{ if .size }}<span class="dl-size">{{ printf "%.0f" (div .size 1048576.0) }} MB</span>{{ end }}</a>
+          {{ end }}
+          <a href="{{ .url }}" class="dl-asset dl-github" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>GitHub release</span></a>
         </div>
         {{ if .notesHtml }}
-        <details class="release-notes mt-2">
+        <details class="release-notes">
           <summary>What&rsquo;s new</summary>
           <div>{{ .notesHtml | safeHTML }}</div>
         </details>
