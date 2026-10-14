@@ -86,6 +86,13 @@
 [data-theme="light"] .title { color: #1a202c !important; }
 
 [data-theme="light"] p   { color: #555 !important; }
+/* _typography.scss colours p, a, li, blockquote, label from the dark palette; only p was
+   reset above, so bullet lists rendered white-on-white in light mode. Sections that stay
+   dark in light mode (footer, hero banners, .bg-dark) keep light text. */
+[data-theme="light"] li,
+[data-theme="light"] blockquote,
+[data-theme="light"] label { color: #555; }
+[data-theme="light"] :is(footer, .site-footer, .gradient-banner, .bg-dark) :is(li, blockquote, label) { color: rgba(255,255,255,0.72); }
 [data-theme="light"] .desc,
 [data-theme="light"] .section-intro { color: #666 !important; }
 
@@ -213,10 +220,10 @@
 
 /* ── Links ────────────────────────────────────────────────────────────────── */
 [data-theme="light"] a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(.theme-opt):not(.theme-toggle-btn) {
-  color: #009ec5 !important;
+  color: #007a99 !important; /* #009ec5 was 3.1:1 on white; this is 4.95:1 */
 }
 [data-theme="light"] a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(.theme-opt):not(.theme-toggle-btn):hover {
-  color: #FA3399 !important;
+  color: #c2186f !important; /* darker brand pink: 5.75:1 on white */
 }
 
 /* ── Utilities ────────────────────────────────────────────────────────────── */
