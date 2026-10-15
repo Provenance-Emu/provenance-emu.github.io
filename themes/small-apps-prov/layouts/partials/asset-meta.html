@@ -9,7 +9,7 @@
 {{- else if or (strings.HasSuffix $n ".ipa") (strings.HasSuffix $n ".tipa") (strings.Contains $n "ios") (strings.Contains $n "jailbroken") -}}{{- $platform = "ios" -}}
 {{- else if or (strings.Contains $n "macos") (strings.Contains $n "darwin") (strings.HasSuffix $n ".dmg") -}}{{- $platform = "macos" -}}
 {{- else if or (strings.Contains $n "windows") (strings.Contains $n "win64") (strings.Contains $n "win32") (strings.HasSuffix $n ".exe") (strings.HasSuffix $n ".msi") -}}{{- $platform = "windows" -}}
-{{- else if or (strings.Contains $n "linux") (strings.HasSuffix $n ".appimage") (strings.HasSuffix $n ".deb") (strings.HasSuffix $n ".rpm") -}}{{- $platform = "linux" -}}
+{{- else if or (strings.Contains $n "linux") (strings.HasSuffix $n ".appimage") (strings.HasSuffix $n ".deb") (strings.HasSuffix $n ".rpm") (strings.HasSuffix $n ".flatpak") -}}{{- $platform = "linux" -}}
 {{- else if or (strings.Contains $n "android") (strings.HasSuffix $n ".apk") -}}{{- $platform = "android" -}}
 {{- end -}}
 
@@ -40,6 +40,7 @@
 {{- else if strings.HasSuffix $n ".ipa" -}}{{- $kind = cond (strings.Contains $n "noextensions") "IPA · no extensions" "IPA" -}}
 {{- else if and (strings.Contains $n "libretro") (or (strings.HasSuffix $n ".dylib") (strings.HasSuffix $n ".so") (strings.HasSuffix $n ".dll")) -}}{{- $kind = "RetroArch core" -}}
 {{- else if strings.HasSuffix $n ".appimage" -}}{{- $kind = "AppImage" -}}
+{{- else if strings.HasSuffix $n ".flatpak" -}}{{- $kind = "Flatpak" -}}
 {{- else if strings.HasSuffix $n ".deb" -}}{{- $kind = ".deb package" -}}
 {{- else if strings.HasSuffix $n ".rpm" -}}{{- $kind = ".rpm package" -}}
 {{- else if strings.HasSuffix $n ".msi" -}}{{- $kind = "Installer (.msi)" -}}
