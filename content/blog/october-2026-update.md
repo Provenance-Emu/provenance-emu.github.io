@@ -1,7 +1,7 @@
 ---
 title: "October Update: iCube and iFly on TestFlight, Provenance 3.4, and a Virtual Jaguar Desktop App"
-date: 2026-10-13T00:00:00-04:00
-draft: true
+date: 2026-10-14T00:00:00-04:00
+draft: false
 tags: ["development", "testflight", "icube", "ifly", "virtual-jaguar"]
 type: "post"
 author: "Joe Mattiello"
@@ -13,7 +13,7 @@ authorSocial:
     URL : "https://twitter.com/joemattiello"
 authorDescription: "Joe Mattiello is the lead developer of Provenance, an open-source multi-system emulator for iOS and tvOS with 10+ years of active development."
 categories: ["development"]
-description: "Provenance 3.4.0 is in TestFlight, iCube and iFly have public TestFlight builds, and Virtual Jaguar 3.8.1 adds a desktop app for macOS, Windows and Linux."
+description: "Provenance 3.4.0 is in TestFlight, iCube and iFly have public TestFlight builds, and Virtual Jaguar 3.9.0 ships a desktop app for macOS, Windows and Linux."
 image: "images/banners/banner-1.jpg"
 ---
 
@@ -72,15 +72,17 @@ In the current TestFlight builds (still in testing, so report what breaks):
 
 Earlier October builds fixed crashes when pausing or leaving a game, made pause-button remaps stick, and stopped emulator settings from syncing over iCloud unless you opt in (Settings > Saves & Sync).
 
-## Virtual Jaguar 3.8.1 and the desktop app
+## Virtual Jaguar 3.9.0 and the desktop app
 
-Virtual Jaguar is the Atari Jaguar core we maintain for RetroArch and {{< brand >}}Provenance{{< /brand >}} ([libretro/virtualjaguar-libretro](https://github.com/libretro/virtualjaguar-libretro)). 3.8.0 went out on 2026-10-13: Flip Out runs, Fight For Your Life boots on the real BIOS, Club Drive has audio under HLE, 2-player Doom holds 60 fps over netplay, and all 28 discs in the Jaguar CD test set reach game code. (Some of those are verified headless only, not yet in a RetroArch build. Jaguar CD itself has been in the core since 3.0.0 in August, and Adrien Beudin, [@beudbeud](https://github.com/beudbeud), did much of the CD work in 3.7.0.)
+Virtual Jaguar is the Atari Jaguar core we maintain for RetroArch and {{< brand >}}Provenance{{< /brand >}} ([libretro/virtualjaguar-libretro](https://github.com/libretro/virtualjaguar-libretro)). Two releases this week. 3.8.0 (2026-10-13): Flip Out runs, Fight For Your Life boots on the real BIOS, Club Drive has audio under HLE, 2-player Doom holds 60 fps over netplay, and all 28 discs in the Jaguar CD test set reach game code. (Some of those are verified headless only, not yet in a RetroArch build. Jaguar CD itself has been in the core since 3.0.0 in August, and Adrien Beudin, [@beudbeud](https://github.com/beudbeud), did much of the CD work in 3.7.0.)
 
-3.8.1 is next, and it adds a standalone desktop app for macOS, Windows and Linux. About 120 commits since 3.8.0, almost all in `app/`. The core is linked statically and driven through the same `retro_*` API RetroArch uses, with SDL3, Dear ImGui and OpenGL 3.3 on top:
+[3.9.0](https://github.com/libretro/virtualjaguar-libretro/releases/tag/v3.9.0) (2026-10-14) ships the standalone desktop app for macOS, Windows and Linux. The core is linked statically and driven through the same `retro_*` API RetroArch uses, with SDL3, Dear ImGui and OpenGL 3.3 on top:
 
 - A game library: point it at folders and it identifies games by CRC32 against the libretro databases, fetches box art on demand, and splits cartridges, Jaguar CD and BIOS files into tabs.
-- RetroArch `.slangp` shader presets through librashader.
-- Remapping for every Jaguar controller type, the 12-key keypad, rotary, driving, paddle, light gun and Team Tap among them.
-- Cheats, RetroAchievements (rcheevos), save states, and a netplay window for link-cable games.
+- RetroArch `.slangp` shader presets through librashader, with CRT, scanline and sharp-bilinear presets bundled, plus integer scaling.
+- Remapping for every Jaguar controller type, the 12-key keypad, rotary, driving, paddle, light gun and Team Tap among them, plus an on-screen keypad.
+- Cheats from the bundled libretro cheat database, RetroAchievements, save states with thumbnails and resume-where-you-left-off, and a netplay window for the link-cable games (Doom, BattleSphere, AirCars, Ultra Vortek) with LAN discovery.
 
-Packages: a macOS universal zip, a Windows x64 installer or portable zip, and Linux AppImage and `.deb` builds for x86_64 and aarch64. They're unsigned for now, so on macOS right-click > Open the first time, and Windows shows a SmartScreen warning. On Intel Macs shaders may not load yet (the librashader in the universal build is arm64-only). Nightly builds of the app are up at [jaguar.provenance-emu.com/app.html](https://jaguar.provenance-emu.com/app.html) and on [/install/](/install/#downloads), and 3.8.1 will carry the same packages under its version number.
+For RetroArch and Provenance users the core change is a RISC overclock fix: at 2x, Alien vs Predator went from 71 to 204 fps in the headless harness. With default settings the core is byte-identical to 3.8.0.
+
+Packages: a macOS universal zip (macOS 11+, signed and notarized), Windows x64 and ARM64 installers or portable zips, Linux AppImage and `.deb` builds for x86_64 and aarch64, and an x86_64 Flatpak. Windows builds aren't signed yet, so SmartScreen may warn. Shaders may not load on Intel Macs (the bundled librashader is arm64-only), and on Linux they need librashader installed separately (the Flatpak has none yet). Downloads are on the [release page](https://github.com/libretro/virtualjaguar-libretro/releases/tag/v3.9.0) and [jaguar.provenance-emu.com/app.html](https://jaguar.provenance-emu.com/app.html).
