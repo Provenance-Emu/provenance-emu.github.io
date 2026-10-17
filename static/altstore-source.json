@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10834",
-          "marketingVersion": "3.4.0-alpha.20261016.8a0c470",
-          "date": "2026-10-16",
-          "localizedDescription": "Alpha build 8a0c470 · 2026-10-16\n\nChanges in this build:\n• fix(build): clear the remaining Xcode 27 archive errors (Realm, MarkdownView, PPSSPP, PVUI) (#3751)\n• fix(ui): side menu arrow navigation counts Nearby and Network Play\n• docs: note the tvOS picker focus fix in the settings plan\n• fix(settings): menu picker rows focus as one row on tvOS\n• docs: settings UI pass status and follow-ups\n• style(settings): menu pickers keep their row title and description\n• style(settings): slider rows use SettingsRow; drop dead code\n• style(settings): one Advanced title; head the debug rows\n• feat(settings): set the timed auto-save interval on tvOS\n• fix(haptics): drop the dead Haptic Feedback toggle; Rumble tile works\n• fix(settings): search index matches the rows; no Beta wording\n• fix(settings): tvOS Menu goes back from Patches and Session Logs\n• docs: settings UI pass plan (2026-10-15)\n• fix(netplay): skip unchanged room republishes; warn when a core lacks netplay\n• feat(netplay): browse, join and host rooms from the library\n• fix(netplay): publish Dolphin and other non-netpacket rooms on the LAN\n• ci(testflight): tolerate a WWDR cert the runner already has\n• ci(testflight): run TestFlight on a GUI-session runner\n• build: point schemes at Provenance-Dev.app\n• build: make develop archive on the Studio's Xcode 27\n• fix(ui): plainer Nearby list building; menu ignores the pad under the sheet\n• docs(changelog): Nearby Libraries entry points and flag fixes\n• test(sharing): cover which nearby peers a device lists\n• feat(ui): Nearby Libraries in the library side menu and TV sidebar\n• fix(sharing): Share This Library follows the nearbyLibraries flag\n• fix(flags): remote features.json keeps bundled flags it omits\n• fix(azahar): set the user directory in init; per-load setup via bridge hook\n• ci: build with Xcode 27 on the Studio runner (XCODE_PATH override) (#3750)\n• ci: run TestFlight/build on the Studio self-hosted runner (toggleable) (#3749)\n• [Agent] Patches: Replace the Original overwrites the ROM and re-keys the game (#3748)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10836",
+          "marketingVersion": "3.4.0-alpha.20261017.3520a91",
+          "date": "2026-10-17",
+          "localizedDescription": "Alpha build 3520a91 · 2026-10-17\n\nChanges in this build:\n• fix(build): drop duplicate Provenance-Dev keys left by the develop merge\n• fix(build): archive Provenance (AppStore) with Xcode 27\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 774706080,
+          "size": 774605188,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "347",
-          "date": "2026-10-16T17:26:40.477Z",
+          "buildVersion": "348",
+          "date": "2026-10-17T00:02:00.393Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-347/Non-Jailbroken.ipa",
-          "size": 97848858,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-348/Non-Jailbroken.ipa",
+          "size": 97849228,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -215,7 +215,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-10-16",
+          "date": "2026-10-17",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -227,7 +227,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-10-16",
+          "date": "2026-10-17",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -239,7 +239,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-10-16",
+          "date": "2026-10-17",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
