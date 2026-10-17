@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10848",
-          "marketingVersion": "3.4.0-alpha.20261017.8ea3dd5",
+          "buildVersion": "10850",
+          "marketingVersion": "3.4.0-alpha.20261017.cc11d09",
           "date": "2026-10-17",
-          "localizedDescription": "Alpha build 8ea3dd5 · 2026-10-17\n\nChanges in this build:\n• feat(icloud): per-type pending counts in Cloud Sync; drop CloudSyncStatusView\n• docs: settings UI pass batch 2 status\n• style(icloud): Cloud Sync panels use the retrowave card and tile look\n• style(settings): group Library Management under four subheadings\n• feat(settings): Gameplay Features section under Emulation\n• refactor(haptics): drop HapticFeedbackService's unreachable switch\n• feat(settings): bring back the Volume HUD toggle (iOS)\n• refactor(settings): pause menu and Settings share auto-save presets\n• refactor(settings): back the DualSense mic action with an enum\n• refactor(settings): Advanced uses AppState's App Store check\n• fix(settings): drop Advanced › iCloud Sync, a copy of Cloud Sync's switch\n• fix(settings): version reads \"3.4.0 (build)\" with no channel suffix\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build cc11d09 · 2026-10-17\n\nChanges in this build:\n• package.resolved update\n• update dolphin core\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 774571372,
+          "size": 774676289,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "349",
-          "date": "2026-10-17T05:29:16.913Z",
+          "buildVersion": "350",
+          "date": "2026-10-17T19:40:32.894Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-349/Non-Jailbroken.ipa",
-          "size": 97848947,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-350/Non-Jailbroken.ipa",
+          "size": 97842830,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
