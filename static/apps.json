@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10855",
-          "marketingVersion": "3.4.0-alpha.20261018.c9b747b",
+          "buildVersion": "10862",
+          "marketingVersion": "3.4.0-alpha.20261018.7c56706",
           "date": "2026-10-18",
-          "localizedDescription": "Alpha build c9b747b · 2026-10-18\n\nChanges in this build:\n• docs: point SystemIdentifier docs at the PVSystems repo\n• build: depend on PVSystems by URL, drop PVPrimitives' PVSystems target\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 7c56706 · 2026-10-18\n\nChanges in this build:\n• docs: PVLookup is a URL package; databases come from a lock file\n• ci: fetch PVLookup databases by lock file, not the cheatdb generator\n• build: bundle the PVLookup databases from a pinned release\n• build: depend on PVLookup by URL, drop the in-tree PVLookup\n• build(help): depend on PVHelp by URL, move wiki config to PVUIBase\n• chore(dolphin): bump iCube to c198d6cb81\n• fix(dolphin): faster iOS/tvOS defaults; Texture Cache Accuracy set the wrong key\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 774579953,
+          "size": 776715549,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "353",
-          "date": "2026-10-18T02:14:03.132Z",
+          "buildVersion": "354",
+          "date": "2026-10-18T02:38:56.353Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-353/Non-Jailbroken.ipa",
-          "size": 97845301,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-354/Non-Jailbroken.ipa",
+          "size": 97848295,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
