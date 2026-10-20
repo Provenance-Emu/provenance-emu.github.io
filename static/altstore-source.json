@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10862",
-          "marketingVersion": "3.4.0-alpha.20261018.7c56706",
-          "date": "2026-10-18",
-          "localizedDescription": "Alpha build 7c56706 · 2026-10-18\n\nChanges in this build:\n• docs: PVLookup is a URL package; databases come from a lock file\n• ci: fetch PVLookup databases by lock file, not the cheatdb generator\n• build: bundle the PVLookup databases from a pinned release\n• build: depend on PVLookup by URL, drop the in-tree PVLookup\n• build(help): depend on PVHelp by URL, move wiki config to PVUIBase\n• chore(dolphin): bump iCube to c198d6cb81\n• fix(dolphin): faster iOS/tvOS defaults; Texture Cache Accuracy set the wrong key\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10879",
+          "marketingVersion": "3.4.0-alpha.20261020.0472cfa",
+          "date": "2026-10-20",
+          "localizedDescription": "Alpha build 0472cfa · 2026-10-20\n\nChanges in this build:\n• fix(vulkan): import standard types outside nested C linkage\n• fix(retro): match Swift callback exception specifications\n• fix(retro): export C callbacks and repair modular Vulkan headers\n• fix(ci): register project audit test scripts\n• fix(tvos): refresh library focus after games load\n• fix(azahar): discard relocated CMake build trees\n• fix(ci): configure Git LFS before submodule checkout\n• fix(patching): present the selected game in the home patch manager\n• chore: auto-update license manifest (#3752)\n• fix(ui): preserve localization of patch creation guidance\n• docs: assess remaining native core SwiftPM migrations\n• build: migrate libretro bridge and ep128 to SwiftPM\n• fix(dev): omit libretro from the coreless UI target\n• test(patching): locate search fixture in copied resources\n• fix(patching): preserve input ROMs and existing patches on creation\n• codex and skills\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 776715549,
+          "size": 776746082,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "362",
-          "date": "2026-10-20T20:19:42.046Z",
+          "buildVersion": "363",
+          "date": "2026-10-20T20:47:29.255Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-362/Non-Jailbroken.ipa",
-          "size": 98129940,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-363/Non-Jailbroken.ipa",
+          "size": 98130227,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
