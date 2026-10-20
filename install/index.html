@@ -42,10 +42,20 @@
 <span class=release-date>Mar 14, 2026</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa class=dl-asset rel=noopener title=Provenance-3.3.0-iOS.ipa aria-label="Download Provenance-3.3.0-iOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>1027 MB</span></a></div></div><div class=platform-row><div class=platform-label><i class="fas fa-tv" aria-hidden=true></i>tvOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-tvOS.ipa class=dl-asset rel=noopener title=Provenance-3.3.0-tvOS.ipa aria-label="Download Provenance-3.3.0-tvOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>745 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/tag/3.3.0 class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h2>What's New in 3.3.0</h2><p>This is a big one. Four months of work since 3.2.1 covering iCloud sync, a completely revamped tvOS interface, video filters, and a ton of core and stability fixes.</p><h3>☁️ iCloud / CloudKit Sync</h3><ul><li>ROMs, save states, BIOS files, and artwork now sync across devices via iCloud</li><li>Real-time download progress indicators when loading cloud save states</li><li>Auto BIOS sync on game load when available in iCloud</li><li>ROM metadata syncs alongside files</li><li>Artwork syncs after library updates</li><li>CloudKit records management tab in Settings</li><li>iCloud upsell UI for new users with empty libraries</li><li>Sync queue pauses during emulation and resumes after</li></ul><h3>📺 New tvOS UI (Default)</h3><ul><li>Completely redesigned tvOS interface now enabled by default</li><li>RetroWave-themed side menu with smooth animations</li><li>Save states browser accessible from the main UI with artwork and core name</li><li>"View All" saves section with per-system filtering</li><li>TopShelf v2: recent games and save states with artwork and timestamps</li><li>Cheats UI in the pause menu</li><li>Game "More Info" panel</li><li>Log viewer tab</li><li>Import status view in side menu</li><li>Search with persistent history</li><li>Dozens of focus, navigation, and theming fixes throughout</li></ul><h3>🎨 Video Filters & Shaders</h3><ul><li>Unified filter pipeline works across native and RetroArch cores</li><li>GB and VHS filters improved</li><li>Filters accessible from the pause menu</li><li>RetroArch GLES 3D cores now supported (Vecx/GLiden, etc.)</li><li>Dolphin shader/filter support</li><li>PPSSPP filter support</li></ul><h3>🎮 Core & Controller Fixes</h3><ul><li><strong>RetroArch</strong>: Fixed player index mapping for MFi, PS4, and Xbox controllers; PS4 start/select fixed; 32x controls added; GameCube controller responder added</li><li><strong>Mupen64Plus</strong>: Fixed PS4 start button; fixed tvOS scaling and placement; better save error messages</li><li><strong>Dolphin</strong>: Fixed Vulkan landscape rendering</li><li><strong>GenPluGX</strong>: Added CHD support; added wide-screen GameGear core</li><li><strong>PicoDrive</strong>: Fixed crash on unload; fixed 32x controller mapping</li><li><strong>FCEUmm</strong>: Fixed start/select button mapping</li><li><strong>Mednafen</strong>: Fixed DualShock/DualSense pause/play button mapping</li><li><strong>GameBatte / TGDB Dual</strong>: Fixed PSX/Xbox pause/select button mapping</li></ul><h3>🐛 Bug Fixes & Stability</h3><ul><li>Fixed multiple app hangs from main-thread Realm access (moved to background)</li><li>Fixed crash in pause menu when closing core</li><li>Fixed potential crash if audio ring buffer init fails</li><li>Fixed crash in share/import extension</li><li>Fixed aspect ratio issues in Stella and some other cores</li><li>Fixed FPS label appearing in screenshots</li><li>Fixed artwork not refreshing in game library after sync</li><li>Fixed game importer re-queuing already-imported items</li><li>Fixed Realm contentless core crash</li><li>Fixed "Continue" carousel metadata mismatch</li><li>Skin selector refreshes orientation previews on rotation change</li><li>ManicSkin/DeltaSkin files can now be opened directly from Safari</li><li>iPad import status modal clipped layout fixed</li><li>DSP audio engine fixes</li></ul><h3>⚡ Performance</h3><ul><li>Artwork loading significantly faster</li><li>Game library UI rendering optimizations (removed unnecessary Observable wrappers)</li><li>Async tab bar icon loading</li><li>CloudKit sync deduplication and repeat-lookup fixes</li><li>Game importer skips MD5 hashing for large non-BIOS files</li></ul><p><strong>Full Changelog</strong>: <a class=commit-link href=https://github.com/Provenance-Emu/Provenance/compare/3.2.1...3.3.0><tt>3.2.1...3.3.0</tt></a></p></div></details></div><div class=release-entry><div class=release-head><span class=release-title>3.2.1 - iPad skin bug fixes</span>
 <span class=release-date>Nov 23, 2025</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/download/3.2.1/Provenance-3.2.1-iOS.ipa class=dl-asset rel=noopener title=Provenance-3.2.1-iOS.ipa aria-label="Download Provenance-3.2.1-iOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>1019 MB</span></a></div></div><div class=platform-row><div class=platform-label><i class="fas fa-tv" aria-hidden=true></i>tvOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/download/3.2.1/Provenance-3.2.1-tvOS.ipa class=dl-asset rel=noopener title=Provenance-3.2.1-tvOS.ipa aria-label="Download Provenance-3.2.1-tvOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>580 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/tag/3.2.1 class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><p><strong>Full Changelog</strong>: <a class=commit-link href=https://github.com/Provenance-Emu/Provenance/compare/3.2.0...3.2.1><tt>3.2.0...3.2.1</tt></a></p><p>Bug fixes:</p><ul><li>iPad skins fixed</li><li>Joystick in default skin fixed in landscape</li><li>Atari Lynx Retroach controls fixed</li><li>RetroAchievements login fixed</li><li>Skin selection and import UIs fixed</li><li>Skin rotation issues fixed</li><li>Skin previews fixed</li></ul></div></details></div></div><div class="release-product mb-4" id=dl-icube><div class=release-product-head><h3 class=font-weight-bold>iCube</h3><div class=release-product-links><a href=https://icube-emu.com/>Website →</a> &nbsp;·&nbsp; <a href=https://icube-emu.com/testflight/>TestFlight beta →</a> &nbsp;·&nbsp; <a href=https://github.com/Provenance-Emu/iCube/releases target=_blank rel=noopener>All releases on GitHub →</a></div></div><p class="text-muted mb-2">GameCube & Wii emulator for iOS and tvOS</p><div class=release-entry><div class=release-head><span class=release-title>Latest alpha (rolling CI build)</span>
 <span class="rel-tag rel-tag-pre">Pre-release</span>
-<span class=release-date>Oct 20, 2026</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Non-Jailbroken.ipa class=dl-asset rel=noopener title=Non-Jailbroken.ipa aria-label="Download Non-Jailbroken.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA · sideload</span><span class=dl-size>93 MB</span>
-</a><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/TrollStore.tipa class=dl-asset rel=noopener title=TrollStore.tipa aria-label="Download TrollStore.tipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>TrollStore</span><span class=dl-size>93 MB</span>
+<span class=release-date>Oct 20, 2026</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Non-Jailbroken.ipa class=dl-asset rel=noopener title=Non-Jailbroken.ipa aria-label="Download Non-Jailbroken.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA · sideload</span><span class=dl-size>94 MB</span>
+</a><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/TrollStore.tipa class=dl-asset rel=noopener title=TrollStore.tipa aria-label="Download TrollStore.tipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>TrollStore</span><span class=dl-size>94 MB</span>
 </a><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Jailbroken-Rootful.deb class=dl-asset rel=noopener title=Jailbroken-Rootful.deb aria-label="Download Jailbroken-Rootful.deb"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>Jailbreak .deb · rootful</span><span class=dl-size>47 MB</span>
-</a><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Jailbroken-Rootless.deb class=dl-asset rel=noopener title=Jailbroken-Rootless.deb aria-label="Download Jailbroken-Rootless.deb"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>Jailbreak .deb · rootless</span><span class=dl-size>47 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/Provenance-Emu/iCube/releases/tag/alpha class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h2>Alpha Build <code>87b3d34</code></h2><p><strong>Automated alpha build from <code>develop</code></strong></p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Commit</strong></td><td><a href=https://github.com/Provenance-Emu/iCube/commit/87b3d34ee1a6a66e72b7cc3648e22df66822fb5b><code>87b3d34</code></a></td></tr><tr><td><strong>Built</strong></td><td>2026-10-20 05:27 UTC</td></tr><tr><td><strong>CI Run</strong></td><td><a href=https://github.com/Provenance-Emu/iCube/actions/runs/39373736472>View build log</a></td></tr></tbody></table><blockquote><p>Unsigned sideload builds. Replaced on every successful push to the default branch or <code>develop</code>. For a stable build use the <a href=https://github.com/Provenance-Emu/iCube/releases/latest>latest release</a>.</p></blockquote><h3>Commits since last alpha</h3><div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="87b3d34ee1 fix: checkpoint iCube release blockers and mobile cores"><pre class=notranslate><code>87b3d34ee1 fix: checkpoint iCube release blockers and mobile cores
+</a><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Jailbroken-Rootless.deb class=dl-asset rel=noopener title=Jailbroken-Rootless.deb aria-label="Download Jailbroken-Rootless.deb"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>Jailbreak .deb · rootless</span><span class=dl-size>47 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/Provenance-Emu/iCube/releases/tag/alpha class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h2>Alpha Build <code>c131cca</code></h2><p><strong>Automated alpha build from <code>develop</code></strong></p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Commit</strong></td><td><a href=https://github.com/Provenance-Emu/iCube/commit/c131ccae3ae7e94674fbcfe4ec03484f24822b65><code>c131cca</code></a></td></tr><tr><td><strong>Built</strong></td><td>2026-10-20 20:18 UTC</td></tr><tr><td><strong>CI Run</strong></td><td><a href=https://github.com/Provenance-Emu/iCube/actions/runs/39488721110>View build log</a></td></tr></tbody></table><blockquote><p>Unsigned sideload builds. Replaced on every successful push to the default branch or <code>develop</code>. For a stable build use the <a href=https://github.com/Provenance-Emu/iCube/releases/latest>latest release</a>.</p></blockquote><h3>Commits since last alpha</h3><div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="c131ccae3a fix: verify library editing and preserve small custom covers
+d8bcdee056 ci: check core build disk capacity and preserve sync compatibility evidence
+e1b860e956 fix(library): bound metadata caches and preserve evicted edits
+9ef37f11e9 feat(library): add editable metadata and verified nearby mirroring
+775757b88c fix(library): preserve edit targets and report deletion failures
+89becee52e docs: record verified iOS and tvOS TestFlight uploads"><pre class=notranslate><code>c131ccae3a fix: verify library editing and preserve small custom covers
+d8bcdee056 ci: check core build disk capacity and preserve sync compatibility evidence
+e1b860e956 fix(library): bound metadata caches and preserve evicted edits
+9ef37f11e9 feat(library): add editable metadata and verified nearby mirroring
+775757b88c fix(library): preserve edit targets and report deletion failures
+89becee52e docs: record verified iOS and tvOS TestFlight uploads
 </code></pre></div><h3>Artifacts</h3><ul><li><code>Non-Jailbroken.ipa</code> — SideStore / AltStore / Sideloadly</li><li><code>TrollStore.tipa</code> — TrollStore</li><li><code>Jailbroken-Rootful.deb</code> / <code>Jailbroken-Rootless.deb</code> — jailbroken devices</li></ul><blockquote><p>This release is automatically updated on every successful default-branch / <code>develop</code> CI run.</p></blockquote></div></details></div></div><div class="release-product mb-4" id=dl-ifly><div class=release-product-head><h3 class=font-weight-bold>iFly</h3><div class=release-product-links><a href=https://ifly-emu.com/>Website →</a> &nbsp;·&nbsp; <a href=https://ifly-emu.com/testflight/>TestFlight beta →</a> &nbsp;·&nbsp; <a href=https://github.com/JoeMatt/iFly-releases/releases target=_blank rel=noopener>All releases on GitHub →</a></div></div><p class="text-muted mb-2">Dreamcast emulator for iOS and tvOS</p><div class=release-entry><div class=release-head><span class=release-title>iFly EMU 1.0.0 (build 1791610021)</span>
 <span class="rel-tag rel-tag-pre">Pre-release</span>
 <span class=release-date>Oct 10, 2026</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1791610021/iFly-1.0.0-1791610021.ipa class=dl-asset rel=noopener title=iFly-1.0.0-1791610021.ipa aria-label="Download iFly-1.0.0-1791610021.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>125 MB</span></a></div></div><div class=platform-row><div class=platform-label><i class="fas fa-tv" aria-hidden=true></i>tvOS</div><div class=release-assets><a href=https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1791610021/iFly-1.0.0-1791610021-tvOS.ipa class=dl-asset rel=noopener title=iFly-1.0.0-1791610021-tvOS.ipa aria-label="Download iFly-1.0.0-1791610021-tvOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>123 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/JoeMatt/iFly-releases/releases/tag/v1.0.0%2B1791610021 class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h2>iFly EMU 1.0.0 (build 1791610021)</h2><p>Pre-release beta.</p><h3>Changes</h3><p>iFly 1.0.0 build 1791610021 (4d47c4516, changes since 3017389e7)</p><ul><li>core → 27f83d606 (lightgun aim-from-picture-start A/B option)</li><li>lightgun: SVC/TEST on the gun overlay, bigger buttons lifted off the edge; Reset Arcade NVRAM; aim-from-picture-start A/B toggle</li></ul><h2>iFly EMU 1.0.0 (build 1791610021) for Apple TV</h2><p>Pre-release beta.</p><h3>Changes</h3><p>iFly 1.0.0 build 1791610021 (Apple TV) (4d47c4516, changes since 4d47c4516)</p><ul><li>no user-facing changes since the last build</li></ul></div></details></div><div class=release-entry><div class=release-head><span class=release-title>iFly EMU 1.0.0 (build 1791441341) for Apple TV</span>
@@ -61,7 +71,7 @@
 </a><a href=https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.AppImage class=dl-asset rel=noopener title=VirtualJaguar-nightly-linux-x86_64.AppImage aria-label="Download VirtualJaguar-nightly-linux-x86_64.AppImage"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>AppImage</span><span class=dl-arch title="64-bit Intel / AMD"><i class="fas fa-microchip" aria-hidden=true></i>x64</span><span class=dl-size>27 MB</span>
 </a><a href=https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/VirtualJaguar-nightly-linux-x86_64.flatpak class=dl-asset rel=noopener title=VirtualJaguar-nightly-linux-x86_64.flatpak aria-label="Download VirtualJaguar-nightly-linux-x86_64.flatpak"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>Flatpak</span><span class=dl-arch title="64-bit Intel / AMD"><i class="fas fa-microchip" aria-hidden=true></i>x64</span><span class=dl-size>19 MB</span>
 </a><a href=https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_amd64.deb class=dl-asset rel=noopener title=virtualjaguar_nightly_amd64.deb aria-label="Download virtualjaguar_nightly_amd64.deb"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>.deb package</span><span class=dl-arch title="64-bit Intel / AMD"><i class="fas fa-microchip" aria-hidden=true></i>x64</span><span class=dl-size>19 MB</span>
-</a><a href=https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb class=dl-asset rel=noopener title=virtualjaguar_nightly_arm64.deb aria-label="Download virtualjaguar_nightly_arm64.deb"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>.deb package</span><span class=dl-arch title="64-bit ARM (Apple silicon, Snapdragon, Raspberry Pi 4/5…)"><i class="fas fa-microchip" aria-hidden=true></i>ARM64</span><span class=dl-size>18 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h3>Nightly <code>8287d41</code> — <code>v3.9.1</code> (<code>develop</code>)</h3><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Commit</strong></td><td><a href=https://github.com/libretro/virtualjaguar-libretro/commit/8287d416766e7f2e068ba550153b40a33f9005d5><code>8287d41</code></a></td></tr><tr><td><strong>Built</strong></td><td>2026-10-20 08:45 UTC</td></tr><tr><td><strong>CI run</strong></td><td><a href=https://github.com/libretro/virtualjaguar-libretro/actions/runs/39391919837>build log</a></td></tr><tr><td><strong>Branch</strong></td><td><code>develop</code></td></tr></tbody></table><blockquote><p>Automatic build of the <code>develop</code> tip, replaced on every push. It compiled on all 24 targets; it has <strong>not</strong> been through the test suite or any manual QA. For a stable build use the <a href=https://github.com/libretro/virtualjaguar-libretro/releases/latest>latest release</a>.</p></blockquote><p>The core logs its identity as <code>v3.9.1 8287d41</code> at startup — quote that line when reporting a bug against this build.</p><h3>Changes since the previous nightly</h3><div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="8287d416 fix(tom): expose live PIT counters and hardware register readback (#1047)"><pre class=notranslate><code>8287d416 fix(tom): expose live PIT counters and hardware register readback (#1047)
+</a><a href=https://github.com/libretro/virtualjaguar-libretro/releases/download/nightly/virtualjaguar_nightly_arm64.deb class=dl-asset rel=noopener title=virtualjaguar_nightly_arm64.deb aria-label="Download virtualjaguar_nightly_arm64.deb"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>.deb package</span><span class=dl-arch title="64-bit ARM (Apple silicon, Snapdragon, Raspberry Pi 4/5…)"><i class="fas fa-microchip" aria-hidden=true></i>ARM64</span><span class=dl-size>18 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/libretro/virtualjaguar-libretro/releases/tag/nightly class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h3>Nightly <code>3cfe437</code> — <code>v3.9.1</code> (<code>develop</code>)</h3><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Commit</strong></td><td><a href=https://github.com/libretro/virtualjaguar-libretro/commit/3cfe437271f9aa90fbf55487d4dff5c88a671d19><code>3cfe437</code></a></td></tr><tr><td><strong>Built</strong></td><td>2026-10-20 18:46 UTC</td></tr><tr><td><strong>CI run</strong></td><td><a href=https://github.com/libretro/virtualjaguar-libretro/actions/runs/39464794613>build log</a></td></tr><tr><td><strong>Branch</strong></td><td><code>develop</code></td></tr></tbody></table><blockquote><p>Automatic build of the <code>develop</code> tip, replaced on every push. It compiled on all 24 targets; it has <strong>not</strong> been through the test suite or any manual QA. For a stable build use the <a href=https://github.com/libretro/virtualjaguar-libretro/releases/latest>latest release</a>.</p></blockquote><p>The core logs its identity as <code>v3.9.1 3cfe437</code> at startup — quote that line when reporting a bug against this build.</p><h3>Changes since the previous nightly</h3><div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="3cfe4372 fix(risc): persist and wrap the MMULT matrix address counter (#1048)"><pre class=notranslate><code>3cfe4372 fix(risc): persist and wrap the MMULT matrix address counter (#1048)
 </code></pre></div><h3>Artifacts</h3><div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="SHA256SUMS.txt
 VirtualJaguar-nightly-linux-aarch64.AppImage
 VirtualJaguar-nightly-linux-x86_64.AppImage
@@ -193,135 +203,135 @@ virtualjaguar_libretro-windows-x86_64.dll
 virtualjaguar_libretro.info
 virtualjaguar_nightly_amd64.deb
 virtualjaguar_nightly_arm64.deb
-</code></pre></div><p>Each platform ships alongside a <code>-debug.tar.gz</code> of its split debug symbols; extract it next to the binary to get symbolised backtraces.</p><h3>SHA-256 checksums</h3><p>Verify with <code>sha256sum --check SHA256SUMS.txt</code> (Linux) or <code>shasum -a 256 --check SHA256SUMS.txt</code> (macOS). See <a href=https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md>SECURITY.md</a>.</p><div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="b326f2bc363f0a264de75a6e3bb8f1dabf8f92834b3487c4f09b749193a285c1  VirtualJaguar-nightly-linux-aarch64.AppImage
-996e1a6e2e82ceb8917fcd940cdaf846e46196fc4e0c7b1a665a18b4994bbc7b  VirtualJaguar-nightly-linux-x86_64.AppImage
-84df9f3a3dc055bcad9c60c7d5d3ac869b3d72b3d136104162f209acfd6df6b4  VirtualJaguar-nightly-linux-x86_64.flatpak
-6063710ec43cbc3c9151507351669337c4f13fc6b7d55d0088b0b2d1b3c6c271  VirtualJaguar-nightly-macos-universal.zip
-b727f95f53899d5523c5e844f2ca3bcb3998903891385ab455719ae5f6bf28ae  VirtualJaguar-nightly-windows-arm64-setup.exe
-b328032ee394f8aca2a5c0d2de3711281c12368c799447ad23c02b4c8f670aad  VirtualJaguar-nightly-windows-arm64.zip
-7c3e62bfcfad659ac18a4394a26396e66faf130030da53d7a8c5cc9acf438c57  VirtualJaguar-nightly-windows-x64-setup.exe
-798131b4e1d4cc2499665086db1f20996ff7ca74086bc6a8596b640e2e2cce4e  VirtualJaguar-nightly-windows-x64.zip
+</code></pre></div><p>Each platform ships alongside a <code>-debug.tar.gz</code> of its split debug symbols; extract it next to the binary to get symbolised backtraces.</p><h3>SHA-256 checksums</h3><p>Verify with <code>sha256sum --check SHA256SUMS.txt</code> (Linux) or <code>shasum -a 256 --check SHA256SUMS.txt</code> (macOS). See <a href=https://github.com/libretro/virtualjaguar-libretro/blob/master/SECURITY.md>SECURITY.md</a>.</p><div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="510318c8b3d92c8ba3fa278d441ba750e292248d4400f5b40c93c79cc119cdc0  VirtualJaguar-nightly-linux-aarch64.AppImage
+9d57d1a8678f2247687cf736e47cc7087edd8348e3f9b10965a50ea663c8505d  VirtualJaguar-nightly-linux-x86_64.AppImage
+2f38c7c35bdcadd0518f648fd88d5d8d4221f49cd5d404fe10293e3fcd7681a5  VirtualJaguar-nightly-linux-x86_64.flatpak
+58f4d32dc2985175c84fb8ca00c58e4a64dc9d8945de1b337e72416115bf1f01  VirtualJaguar-nightly-macos-universal.zip
+d8a1e03fe038eeb7d9ee54a57b3bc0685bf3a3566d11a46727a4c0ad5ef56aa6  VirtualJaguar-nightly-windows-arm64-setup.exe
+bfd376c43c2dc6f050dc9b9fe6a7653f45e774ff8260a7a6e8f4abf092a1b4b0  VirtualJaguar-nightly-windows-arm64.zip
+61f9e9bc0af4a41498c487862dd80d9932eeeccbbbf9cf97f42a2815250b70e8  VirtualJaguar-nightly-windows-x64-setup.exe
+3ee3065d3bca8e8e620977c21eb23c90b53ca58689450de260b6591be7919de6  VirtualJaguar-nightly-windows-x64.zip
 b926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64
-18c80ae3095e64928dacde7c74a79690cebcec1a7048a8a9730904075de8a932  cue2cdi-macos-universal
-e8476707a78ae32a822dd931c866875c856e5940ebcab04cd590aea26c8ee20d  cue2cdi-windows-x86_64.exe
-a45914cabc4f5c3bd99e210f12286e061e45b08e84afea78ee2a4d7e3b7e9419  jagcd-tools-linux-x64.zip
-7295a50ca014fd7533aa633e49e6e1d55fd1a81677e5a4f9ab3bfd38051cb92b  jagcd-tools-macos.zip
-d1f0d538530f237c5cb72c2445b0afa39fe2a30727f1c562337b223b87cbccb7  jagcd-tools-windows-x64.zip
-3d7f790b68442dc3d9f559c2504d2684f905353cb3d7960e3df1a779eedbc7ca  virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz
-52bd961e2e6c7cd0286c0c30875b367a333fc96c3102168ab37cba15f087b527  virtualjaguar_libretro-android-arm64-v8a.so
-bcbb0bda3523bbeaa5866fe8b8bccc01ae188e56c5a40a5b88420b0053d205c0  virtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz
-69bc112e14cf00e8843c3ad6d44464688a7a28f390e1ca0483569438d876dd39  virtualjaguar_libretro-android-armeabi-v7a.so
-0febd02725962786aea7238a075d2fc34df97f55201a85633baefe036c3a5ac4  virtualjaguar_libretro-android-x86-debug.tar.gz
-3e3eb5c683169a08d9059da1d0873207cd0b4f2d454ec0e045b385cbc0c85e59  virtualjaguar_libretro-android-x86.so
-51794739555359f5d42f905789f93fcc98dc1d80eed594d3a531b523d47e969e  virtualjaguar_libretro-android-x86_64-debug.tar.gz
-d5ea21f6f9d664d0f09ae5004063ee4d4610d8bacd231ac8dcf81180e06a5833  virtualjaguar_libretro-android-x86_64.so
-6812712de9528fb5e1522cb9198a8e4f1097a5b18a52250291fc31c0d0db2ffd  virtualjaguar_libretro-emscripten-wasm-debug.tar.gz
-ae4b67d4a92e68170d1147196e5318c56a48a09f38b4f604bf5d2bf06ec20694  virtualjaguar_libretro-emscripten-wasm.bc
-b6fea628f58de07696a15e27f82ca848fdb8467098bdb695603e6891c20ae608  virtualjaguar_libretro-ios-arm64-debug.tar.gz
-cf8b0d89689c24858824dd0b677bf274d85a648628434c83cb16d7e133d31836  virtualjaguar_libretro-ios-arm64.dylib
-78cd233ef84b9203cee270195ddbec4f751a3169d7e4bd2f6f784754d1df31a3  virtualjaguar_libretro-linux-aarch64-debug.tar.gz
-7824afa68f1c375ec35f156d22a27b1baa4081ae49e00fadc9e97b7569da0b83  virtualjaguar_libretro-linux-aarch64.so
-376fada0c1f3753a54eb75545a3e5c8a6adb35a53c3f5e7d01fe1098358ff152  virtualjaguar_libretro-linux-i686-debug.tar.gz
-69beefc30635c7f58a00fdc029ec62d98a84f6a5421260a22531cfea42df8473  virtualjaguar_libretro-linux-i686.so
-120d9a11f45dc07a6359f418143930f077c746942ec62859d1b0640d95ef2e23  virtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz
-e1502481cde6ebce4668a8e447c55083ef8ebb8c1c396a3213da0bfde07325e6  virtualjaguar_libretro-linux-rpi1-armv6.so
-67990d8cd0b65b2d4d7e9fdd828b0559829caead6960baec334ef3ab9d3757f8  virtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz
-f92117beadc1aac3c9a1661ee569a5085b84dabd0fd66b9d3577613820cf8482  virtualjaguar_libretro-linux-rpi2-cortex-a7.so
-fbf24ba7bcac7528bbedc74831fdf758132a314efada60b7e22651464acdafdb  virtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz
-2bff64ab98e60c5e42569e83f7ccfe3e22e16778fe991749a2161ee74ba38cda  virtualjaguar_libretro-linux-rpi3-cortex-a53.so
-30ec32cdbb59c95f833487d4d4de64c77501654dd4a92f61a607caf19e98dc57  virtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz
-21accbdca0308a4c386908cae20b533a0ab037901e1c87fb3661c0dd109ef63a  virtualjaguar_libretro-linux-rpi3_64-cortex-a53.so
-af7af71bcab5715a3bd208fed97ae3dbef67ebd8c34a3c5cefeba7dbf71d3374  virtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz
-cdf7ed9ea8f45ac1b3b08ae07168f42c1370134455338455fa007b85be7e611e  virtualjaguar_libretro-linux-rpi4-cortex-a72.so
-3bc6244cb00610cbdb82a83900d93042c57b38c876006f2d8b68bf7297f9a244  virtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz
-5fbc99d2c461a0edb072493b5f406d2450b0ad0b79ca3a4f19b43d1758f29c22  virtualjaguar_libretro-linux-rpi4_64-cortex-a72.so
-e64c64c1726f8111557ea50491b597eb916265a83fb4c982d7025f247a1561ec  virtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz
-2d320f05bbe910d23f14254c18e7b3d3b500da6750dd07b491374be51bfd3ccf  virtualjaguar_libretro-linux-rpi5-cortex-a76.so
-485dd2342decdc32878fe94d9ce9a35703407113777be27cf41952ffe6715420  virtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz
-5a044463b88339bdf3683edb16405e8412a68daec3b296c2c3e152aa52e81d41  virtualjaguar_libretro-linux-rpi5_64-cortex-a76.so
-98b2bedbd2f7c919958cc428e295d590d2b491e64ab4743dcb472ab2bf726395  virtualjaguar_libretro-linux-x86_64-debug.tar.gz
-ad92519f7599f312ec7c2c81dd35fda5ea917459de6b3765a4d64c2995123f0d  virtualjaguar_libretro-linux-x86_64.so
-4a1dc4259c1c73d0a54557091f362c616f86f00321f6f6c54d9fee1fcabfc3f5  virtualjaguar_libretro-macos-arm64-debug.tar.gz
-ed2c1904de98f2f9d58c7a3fa3089182cb4cb80eaa824c680ea087b4dfe5170d  virtualjaguar_libretro-macos-arm64.dylib
-52aabc28ed3cee295b97ea86125fcf5b7c765732bf666d5317c492e299efe399  virtualjaguar_libretro-macos-x86_64-debug.tar.gz
-f98375808caec409759021dc0597095f76d1a9da27e5438df315195c6fb079f0  virtualjaguar_libretro-macos-x86_64.dylib
-71dafd84e884a9f5c72ffdd59445403b6af49ed58c02f816ebb4ab6ff0913f15  virtualjaguar_libretro-switch-debug.tar.gz
-ca79a94e9e60ecf68ac5b711e89e432e5cac2432517f23b30b706d757f64ba54  virtualjaguar_libretro-switch.a
-aaaa18450b9b9109072395ffd6cc81885d4551ac63ebcdcd346ffff5574e5ca5  virtualjaguar_libretro-tvos-arm64-debug.tar.gz
-3017f4c9e77893d81a2a46d470f6529d45c6051c51b903544bea0eebe713ea61  virtualjaguar_libretro-tvos-arm64.dylib
-28559bfe15da0ea2241d4120d4634176387320d971b72f3567169ca4f8dee644  virtualjaguar_libretro-vita-debug.tar.gz
-9cc49b0ab89dcff4cb6e21c95d6dd0c759f386c93f7365dd6ad252f3c3e115d0  virtualjaguar_libretro-vita.a
-51b5bebf77df57b7ce82219e2955035caf26114c52fd6c8ba93c05c6bd5b4359  virtualjaguar_libretro-windows-i686-debug.tar.gz
-a18d578859a3be2792c974215230810350a28dc6e94601a6e211cc61a8583bdf  virtualjaguar_libretro-windows-i686.dll
-00e78750c2808bafd4a38d6941e360ab79bba5ea231a64081bf710e79be7e54a  virtualjaguar_libretro-windows-x86_64-debug.tar.gz
-482742c547fce9456022ac6c5096f27af41a2f2b9df0a3fce8fc06af9fe04dbb  virtualjaguar_libretro-windows-x86_64.dll
-15fc62fa4b33078df3e76c7a79517fceeeb351524eb794f3037ff4f5857d2404  virtualjaguar_libretro.info
-2f5c1df969c6e6646f200381487179f09270c967b20f63698ec470341d1b8f7f  virtualjaguar_nightly_amd64.deb
-5b1e5de9783ce297fb8787e373327e604f5e06ed2d9f845b711e8206e7abdb9f  virtualjaguar_nightly_arm64.deb"><pre class=notranslate><code>b326f2bc363f0a264de75a6e3bb8f1dabf8f92834b3487c4f09b749193a285c1  VirtualJaguar-nightly-linux-aarch64.AppImage
-996e1a6e2e82ceb8917fcd940cdaf846e46196fc4e0c7b1a665a18b4994bbc7b  VirtualJaguar-nightly-linux-x86_64.AppImage
-84df9f3a3dc055bcad9c60c7d5d3ac869b3d72b3d136104162f209acfd6df6b4  VirtualJaguar-nightly-linux-x86_64.flatpak
-6063710ec43cbc3c9151507351669337c4f13fc6b7d55d0088b0b2d1b3c6c271  VirtualJaguar-nightly-macos-universal.zip
-b727f95f53899d5523c5e844f2ca3bcb3998903891385ab455719ae5f6bf28ae  VirtualJaguar-nightly-windows-arm64-setup.exe
-b328032ee394f8aca2a5c0d2de3711281c12368c799447ad23c02b4c8f670aad  VirtualJaguar-nightly-windows-arm64.zip
-7c3e62bfcfad659ac18a4394a26396e66faf130030da53d7a8c5cc9acf438c57  VirtualJaguar-nightly-windows-x64-setup.exe
-798131b4e1d4cc2499665086db1f20996ff7ca74086bc6a8596b640e2e2cce4e  VirtualJaguar-nightly-windows-x64.zip
+7fba603dd72da230296159c0ef111a4294b51a10b0277e05eed8b3d339c0ce39  cue2cdi-macos-universal
+8e97efdea135093a3f7c1e5e3eda99ae878bf014dd9d2a0f59cd1f8482571efa  cue2cdi-windows-x86_64.exe
+9419f6325ed8d1f315c029fb7e8a62d7593d2e38b15366cbb23cfc16c2d63128  jagcd-tools-linux-x64.zip
+a3a48b476b5a9bf34b51f5bcc4d010a29b6117060b62277a27b07b928731b55a  jagcd-tools-macos.zip
+81130a21e5279ae85547c45902418cba4953f00d5ed750aa9b44d267440663a4  jagcd-tools-windows-x64.zip
+4598cd88e387f2d466a6042a17dfb4787b5dbc5e365ca4c273fb76dbd53493d0  virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz
+a2a32d14fcc01d4cf9823de70e392178dde60bc477e5c16bab2e608270cce653  virtualjaguar_libretro-android-arm64-v8a.so
+51398c6a19a06a028300fd1d07ea6383259afa9073f973fe3326f7ae4fefb22f  virtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz
+66bee425f491fa8f431ac7f29f84d92eb2384bf6d4c7c46deebaa0a8797e6222  virtualjaguar_libretro-android-armeabi-v7a.so
+97654a2276a2cd561c525a01ee63e48c59a5ab5b35aa5e15b45384c821637bd8  virtualjaguar_libretro-android-x86-debug.tar.gz
+209c8fb141d6f63d125bb78804437ed6318dcd82b043cb9956be3b5df8d9dc9b  virtualjaguar_libretro-android-x86.so
+1bf91b5cd492c64065b0fb37c129dfe19e950cff590b55d7f9182b9621f66f29  virtualjaguar_libretro-android-x86_64-debug.tar.gz
+ff11ce14598489c8c383c9c68718c1d6fc13ca84eb9c8f32e8ba0e4ada7b8b0b  virtualjaguar_libretro-android-x86_64.so
+6febacb6dbb102b38b6b92087fd9e3746317bcc7a33b83a5a087d0182bcb1721  virtualjaguar_libretro-emscripten-wasm-debug.tar.gz
+9ba41ed030acebad2f6e68d521981f57b8bd24d9205b2ac2e2a862b12fc6b846  virtualjaguar_libretro-emscripten-wasm.bc
+79398de6f9a2107efc1d601c4d1cecb2cdfc09c9171c9109f9b11c51341b1fce  virtualjaguar_libretro-ios-arm64-debug.tar.gz
+31c1bbb8d50ef2b9ecd7926bd053613e3d2f566e22026a64d8b74ccbb43c4c35  virtualjaguar_libretro-ios-arm64.dylib
+017c4b5d5b909d0ab2fe98aca1e82e66982aff310040565342ee65822cec4450  virtualjaguar_libretro-linux-aarch64-debug.tar.gz
+85439411efd8e448d70cedc0baf8882b5efbcacf7e22ff0b5c4e834d8b0c1bde  virtualjaguar_libretro-linux-aarch64.so
+35b3c7e8ec113921a4522aede4d31e363e8f79c793cf3a2b95beb0d3ad2d2df9  virtualjaguar_libretro-linux-i686-debug.tar.gz
+51082edcc37d8859da64c7aec1ef5faea74d0087c07370eb8651561aa8f8d6a9  virtualjaguar_libretro-linux-i686.so
+3e0cde55213ccd09f093a615cc47bff23702fd317059854d79b617a7dddac6d6  virtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz
+9f67a4593fd4a8925369b9a553c486782749f80239a518034b07913cdc753fff  virtualjaguar_libretro-linux-rpi1-armv6.so
+a6662f3cb9b978bcfc1a450efbf61a407bcb9bddaf0b045f3a60fae24749bc7b  virtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz
+890189ac659f3b2e22ca602531fcdf7b85286f805aa0d4266b8e3c64684b74da  virtualjaguar_libretro-linux-rpi2-cortex-a7.so
+cde31d50f873ca50096e06e7abe71b1b947a2e6e504abb194147ae3864ba3f04  virtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz
+136f26b562df3995838ad45a3d57eed1216cbd2aedcfe1e6783f3922ab7f34fd  virtualjaguar_libretro-linux-rpi3-cortex-a53.so
+63fa24022ce20279bb2137563ccbb2aba996f022a6059cdc3508d79c475ce7ee  virtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz
+4462e926b23ac066a13436d9baf7586d0e06d28c548f048d1b9b25b6105bc5ff  virtualjaguar_libretro-linux-rpi3_64-cortex-a53.so
+82b34d22692c807790b0c6ec966a36f1c065ae597d01de297384fa5b1ccfa89c  virtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz
+672e277bb3d5b8411bdbf8ef50b635b01d0a851ccde7ef69cf51cb5be1b60cc7  virtualjaguar_libretro-linux-rpi4-cortex-a72.so
+0b78cc6ac14e8bad857929091135ab0c19341529b70a464cec31fb7a857e872c  virtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz
+042f1cdc4b91f2820ad9c43a41910a13a5017a6061b045e8a559fe09a5ec421a  virtualjaguar_libretro-linux-rpi4_64-cortex-a72.so
+40b741a1bb8a526c4c256524429d02f171758e223afe141e477911fd098299bf  virtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz
+ca337a3b0fd229229f723799166ff6722223fa3e765fd67f7f6896d1df55b8f0  virtualjaguar_libretro-linux-rpi5-cortex-a76.so
+b227b3863b3e72f7346ad52aa73bfdb802f507af47a3d5131b9f4b12af53663f  virtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz
+1614033f240c3223348e4042ba4f62e6d5d016ee12d6b58c9f9b19285f51093a  virtualjaguar_libretro-linux-rpi5_64-cortex-a76.so
+907954f88b792928afa44bb6d7e535563c7e23986484167622785de624803517  virtualjaguar_libretro-linux-x86_64-debug.tar.gz
+07ed9434fdbf52043fb2716c67b88af5429bfc21b1384bdfcb9aa3735d21533c  virtualjaguar_libretro-linux-x86_64.so
+e42ad0a70834fbddd28914cd8f44f7553b64af18e967aeffd96ee2d193e75228  virtualjaguar_libretro-macos-arm64-debug.tar.gz
+0c0a5094df4ae6e08c059439b8e76e3ce583a2e2bfe3dd1e8c3e4a9aa0c388c7  virtualjaguar_libretro-macos-arm64.dylib
+388225609565648ab45a55f33ccfb270d3a2bf3bcda13c930ed0001819d47059  virtualjaguar_libretro-macos-x86_64-debug.tar.gz
+18cffaa6a12b70c788f94925e9041b2b894c8e41bc9555c02adea9b816570a04  virtualjaguar_libretro-macos-x86_64.dylib
+0c2be9ce5ad40a8b91e0d93e34e38083d94a8a00fd9b26b8c639adb83d9d9e5b  virtualjaguar_libretro-switch-debug.tar.gz
+656442fde7a5fb40e319fb3f78373b7d560644cd0b2590256f293407323c6d06  virtualjaguar_libretro-switch.a
+496c3a6821a821abe01f6777f49e44f93c17c1569a14d527913b14088b511634  virtualjaguar_libretro-tvos-arm64-debug.tar.gz
+8391084a463f8dd5e685d5033ea21acfa5b79dc1dcfe012949a5d7a98fcc0936  virtualjaguar_libretro-tvos-arm64.dylib
+f5fc4e54fa969744bb0fe4d5e6b1180cd028fd1bd4e4c4716e82dc789d13845a  virtualjaguar_libretro-vita-debug.tar.gz
+4c1c29be99308022f355de8c68812bff1a274bd8e7216de15b2d9bf60def7d04  virtualjaguar_libretro-vita.a
+9311d5802d75d1b262f636ddb63f148b081f3175c2594965fb29199987c96ec9  virtualjaguar_libretro-windows-i686-debug.tar.gz
+0e8d2e53216bd087c927d79bed2c412fce5e8cadcdd15043fcc0ab6a08529e43  virtualjaguar_libretro-windows-i686.dll
+fee1020751f48954c659155252176367dbdbb69891c3506142c1e383b348b8ef  virtualjaguar_libretro-windows-x86_64-debug.tar.gz
+38bd00fea943e9c3f632b3bd56913339412bcf3c39634182a50028bdc147cd27  virtualjaguar_libretro-windows-x86_64.dll
+a4d851a6a3a798352593db11dad445161bd09495b77f1d2cb13212c0fd6f4f6c  virtualjaguar_libretro.info
+85a1d15734bf70549fff95ffb09060b7327200560486b987806f8a5241dbd0c2  virtualjaguar_nightly_amd64.deb
+75fd5e820c3c1069e547b78403cba4143ae18217b673a621a1041c34e0af52ad  virtualjaguar_nightly_arm64.deb"><pre class=notranslate><code>510318c8b3d92c8ba3fa278d441ba750e292248d4400f5b40c93c79cc119cdc0  VirtualJaguar-nightly-linux-aarch64.AppImage
+9d57d1a8678f2247687cf736e47cc7087edd8348e3f9b10965a50ea663c8505d  VirtualJaguar-nightly-linux-x86_64.AppImage
+2f38c7c35bdcadd0518f648fd88d5d8d4221f49cd5d404fe10293e3fcd7681a5  VirtualJaguar-nightly-linux-x86_64.flatpak
+58f4d32dc2985175c84fb8ca00c58e4a64dc9d8945de1b337e72416115bf1f01  VirtualJaguar-nightly-macos-universal.zip
+d8a1e03fe038eeb7d9ee54a57b3bc0685bf3a3566d11a46727a4c0ad5ef56aa6  VirtualJaguar-nightly-windows-arm64-setup.exe
+bfd376c43c2dc6f050dc9b9fe6a7653f45e774ff8260a7a6e8f4abf092a1b4b0  VirtualJaguar-nightly-windows-arm64.zip
+61f9e9bc0af4a41498c487862dd80d9932eeeccbbbf9cf97f42a2815250b70e8  VirtualJaguar-nightly-windows-x64-setup.exe
+3ee3065d3bca8e8e620977c21eb23c90b53ca58689450de260b6591be7919de6  VirtualJaguar-nightly-windows-x64.zip
 b926e41185057ee9204aaa0aaafff53ceec2cbb6d4f37e478edf7a7ddb353332  cue2cdi-linux-x86_64
-18c80ae3095e64928dacde7c74a79690cebcec1a7048a8a9730904075de8a932  cue2cdi-macos-universal
-e8476707a78ae32a822dd931c866875c856e5940ebcab04cd590aea26c8ee20d  cue2cdi-windows-x86_64.exe
-a45914cabc4f5c3bd99e210f12286e061e45b08e84afea78ee2a4d7e3b7e9419  jagcd-tools-linux-x64.zip
-7295a50ca014fd7533aa633e49e6e1d55fd1a81677e5a4f9ab3bfd38051cb92b  jagcd-tools-macos.zip
-d1f0d538530f237c5cb72c2445b0afa39fe2a30727f1c562337b223b87cbccb7  jagcd-tools-windows-x64.zip
-3d7f790b68442dc3d9f559c2504d2684f905353cb3d7960e3df1a779eedbc7ca  virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz
-52bd961e2e6c7cd0286c0c30875b367a333fc96c3102168ab37cba15f087b527  virtualjaguar_libretro-android-arm64-v8a.so
-bcbb0bda3523bbeaa5866fe8b8bccc01ae188e56c5a40a5b88420b0053d205c0  virtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz
-69bc112e14cf00e8843c3ad6d44464688a7a28f390e1ca0483569438d876dd39  virtualjaguar_libretro-android-armeabi-v7a.so
-0febd02725962786aea7238a075d2fc34df97f55201a85633baefe036c3a5ac4  virtualjaguar_libretro-android-x86-debug.tar.gz
-3e3eb5c683169a08d9059da1d0873207cd0b4f2d454ec0e045b385cbc0c85e59  virtualjaguar_libretro-android-x86.so
-51794739555359f5d42f905789f93fcc98dc1d80eed594d3a531b523d47e969e  virtualjaguar_libretro-android-x86_64-debug.tar.gz
-d5ea21f6f9d664d0f09ae5004063ee4d4610d8bacd231ac8dcf81180e06a5833  virtualjaguar_libretro-android-x86_64.so
-6812712de9528fb5e1522cb9198a8e4f1097a5b18a52250291fc31c0d0db2ffd  virtualjaguar_libretro-emscripten-wasm-debug.tar.gz
-ae4b67d4a92e68170d1147196e5318c56a48a09f38b4f604bf5d2bf06ec20694  virtualjaguar_libretro-emscripten-wasm.bc
-b6fea628f58de07696a15e27f82ca848fdb8467098bdb695603e6891c20ae608  virtualjaguar_libretro-ios-arm64-debug.tar.gz
-cf8b0d89689c24858824dd0b677bf274d85a648628434c83cb16d7e133d31836  virtualjaguar_libretro-ios-arm64.dylib
-78cd233ef84b9203cee270195ddbec4f751a3169d7e4bd2f6f784754d1df31a3  virtualjaguar_libretro-linux-aarch64-debug.tar.gz
-7824afa68f1c375ec35f156d22a27b1baa4081ae49e00fadc9e97b7569da0b83  virtualjaguar_libretro-linux-aarch64.so
-376fada0c1f3753a54eb75545a3e5c8a6adb35a53c3f5e7d01fe1098358ff152  virtualjaguar_libretro-linux-i686-debug.tar.gz
-69beefc30635c7f58a00fdc029ec62d98a84f6a5421260a22531cfea42df8473  virtualjaguar_libretro-linux-i686.so
-120d9a11f45dc07a6359f418143930f077c746942ec62859d1b0640d95ef2e23  virtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz
-e1502481cde6ebce4668a8e447c55083ef8ebb8c1c396a3213da0bfde07325e6  virtualjaguar_libretro-linux-rpi1-armv6.so
-67990d8cd0b65b2d4d7e9fdd828b0559829caead6960baec334ef3ab9d3757f8  virtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz
-f92117beadc1aac3c9a1661ee569a5085b84dabd0fd66b9d3577613820cf8482  virtualjaguar_libretro-linux-rpi2-cortex-a7.so
-fbf24ba7bcac7528bbedc74831fdf758132a314efada60b7e22651464acdafdb  virtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz
-2bff64ab98e60c5e42569e83f7ccfe3e22e16778fe991749a2161ee74ba38cda  virtualjaguar_libretro-linux-rpi3-cortex-a53.so
-30ec32cdbb59c95f833487d4d4de64c77501654dd4a92f61a607caf19e98dc57  virtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz
-21accbdca0308a4c386908cae20b533a0ab037901e1c87fb3661c0dd109ef63a  virtualjaguar_libretro-linux-rpi3_64-cortex-a53.so
-af7af71bcab5715a3bd208fed97ae3dbef67ebd8c34a3c5cefeba7dbf71d3374  virtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz
-cdf7ed9ea8f45ac1b3b08ae07168f42c1370134455338455fa007b85be7e611e  virtualjaguar_libretro-linux-rpi4-cortex-a72.so
-3bc6244cb00610cbdb82a83900d93042c57b38c876006f2d8b68bf7297f9a244  virtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz
-5fbc99d2c461a0edb072493b5f406d2450b0ad0b79ca3a4f19b43d1758f29c22  virtualjaguar_libretro-linux-rpi4_64-cortex-a72.so
-e64c64c1726f8111557ea50491b597eb916265a83fb4c982d7025f247a1561ec  virtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz
-2d320f05bbe910d23f14254c18e7b3d3b500da6750dd07b491374be51bfd3ccf  virtualjaguar_libretro-linux-rpi5-cortex-a76.so
-485dd2342decdc32878fe94d9ce9a35703407113777be27cf41952ffe6715420  virtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz
-5a044463b88339bdf3683edb16405e8412a68daec3b296c2c3e152aa52e81d41  virtualjaguar_libretro-linux-rpi5_64-cortex-a76.so
-98b2bedbd2f7c919958cc428e295d590d2b491e64ab4743dcb472ab2bf726395  virtualjaguar_libretro-linux-x86_64-debug.tar.gz
-ad92519f7599f312ec7c2c81dd35fda5ea917459de6b3765a4d64c2995123f0d  virtualjaguar_libretro-linux-x86_64.so
-4a1dc4259c1c73d0a54557091f362c616f86f00321f6f6c54d9fee1fcabfc3f5  virtualjaguar_libretro-macos-arm64-debug.tar.gz
-ed2c1904de98f2f9d58c7a3fa3089182cb4cb80eaa824c680ea087b4dfe5170d  virtualjaguar_libretro-macos-arm64.dylib
-52aabc28ed3cee295b97ea86125fcf5b7c765732bf666d5317c492e299efe399  virtualjaguar_libretro-macos-x86_64-debug.tar.gz
-f98375808caec409759021dc0597095f76d1a9da27e5438df315195c6fb079f0  virtualjaguar_libretro-macos-x86_64.dylib
-71dafd84e884a9f5c72ffdd59445403b6af49ed58c02f816ebb4ab6ff0913f15  virtualjaguar_libretro-switch-debug.tar.gz
-ca79a94e9e60ecf68ac5b711e89e432e5cac2432517f23b30b706d757f64ba54  virtualjaguar_libretro-switch.a
-aaaa18450b9b9109072395ffd6cc81885d4551ac63ebcdcd346ffff5574e5ca5  virtualjaguar_libretro-tvos-arm64-debug.tar.gz
-3017f4c9e77893d81a2a46d470f6529d45c6051c51b903544bea0eebe713ea61  virtualjaguar_libretro-tvos-arm64.dylib
-28559bfe15da0ea2241d4120d4634176387320d971b72f3567169ca4f8dee644  virtualjaguar_libretro-vita-debug.tar.gz
-9cc49b0ab89dcff4cb6e21c95d6dd0c759f386c93f7365dd6ad252f3c3e115d0  virtualjaguar_libretro-vita.a
-51b5bebf77df57b7ce82219e2955035caf26114c52fd6c8ba93c05c6bd5b4359  virtualjaguar_libretro-windows-i686-debug.tar.gz
-a18d578859a3be2792c974215230810350a28dc6e94601a6e211cc61a8583bdf  virtualjaguar_libretro-windows-i686.dll
-00e78750c2808bafd4a38d6941e360ab79bba5ea231a64081bf710e79be7e54a  virtualjaguar_libretro-windows-x86_64-debug.tar.gz
-482742c547fce9456022ac6c5096f27af41a2f2b9df0a3fce8fc06af9fe04dbb  virtualjaguar_libretro-windows-x86_64.dll
-15fc62fa4b33078df3e76c7a79517fceeeb351524eb794f3037ff4f5857d2404  virtualjaguar_libretro.info
-2f5c1df969c6e6646f200381487179f09270c967b20f63698ec470341d1b8f7f  virtualjaguar_nightly_amd64.deb
-5b1e5de9783ce297fb8787e373327e604f5e06ed2d9f845b711e8206e7abdb9f  virtualjaguar_nightly_arm64.deb
+7fba603dd72da230296159c0ef111a4294b51a10b0277e05eed8b3d339c0ce39  cue2cdi-macos-universal
+8e97efdea135093a3f7c1e5e3eda99ae878bf014dd9d2a0f59cd1f8482571efa  cue2cdi-windows-x86_64.exe
+9419f6325ed8d1f315c029fb7e8a62d7593d2e38b15366cbb23cfc16c2d63128  jagcd-tools-linux-x64.zip
+a3a48b476b5a9bf34b51f5bcc4d010a29b6117060b62277a27b07b928731b55a  jagcd-tools-macos.zip
+81130a21e5279ae85547c45902418cba4953f00d5ed750aa9b44d267440663a4  jagcd-tools-windows-x64.zip
+4598cd88e387f2d466a6042a17dfb4787b5dbc5e365ca4c273fb76dbd53493d0  virtualjaguar_libretro-android-arm64-v8a-debug.tar.gz
+a2a32d14fcc01d4cf9823de70e392178dde60bc477e5c16bab2e608270cce653  virtualjaguar_libretro-android-arm64-v8a.so
+51398c6a19a06a028300fd1d07ea6383259afa9073f973fe3326f7ae4fefb22f  virtualjaguar_libretro-android-armeabi-v7a-debug.tar.gz
+66bee425f491fa8f431ac7f29f84d92eb2384bf6d4c7c46deebaa0a8797e6222  virtualjaguar_libretro-android-armeabi-v7a.so
+97654a2276a2cd561c525a01ee63e48c59a5ab5b35aa5e15b45384c821637bd8  virtualjaguar_libretro-android-x86-debug.tar.gz
+209c8fb141d6f63d125bb78804437ed6318dcd82b043cb9956be3b5df8d9dc9b  virtualjaguar_libretro-android-x86.so
+1bf91b5cd492c64065b0fb37c129dfe19e950cff590b55d7f9182b9621f66f29  virtualjaguar_libretro-android-x86_64-debug.tar.gz
+ff11ce14598489c8c383c9c68718c1d6fc13ca84eb9c8f32e8ba0e4ada7b8b0b  virtualjaguar_libretro-android-x86_64.so
+6febacb6dbb102b38b6b92087fd9e3746317bcc7a33b83a5a087d0182bcb1721  virtualjaguar_libretro-emscripten-wasm-debug.tar.gz
+9ba41ed030acebad2f6e68d521981f57b8bd24d9205b2ac2e2a862b12fc6b846  virtualjaguar_libretro-emscripten-wasm.bc
+79398de6f9a2107efc1d601c4d1cecb2cdfc09c9171c9109f9b11c51341b1fce  virtualjaguar_libretro-ios-arm64-debug.tar.gz
+31c1bbb8d50ef2b9ecd7926bd053613e3d2f566e22026a64d8b74ccbb43c4c35  virtualjaguar_libretro-ios-arm64.dylib
+017c4b5d5b909d0ab2fe98aca1e82e66982aff310040565342ee65822cec4450  virtualjaguar_libretro-linux-aarch64-debug.tar.gz
+85439411efd8e448d70cedc0baf8882b5efbcacf7e22ff0b5c4e834d8b0c1bde  virtualjaguar_libretro-linux-aarch64.so
+35b3c7e8ec113921a4522aede4d31e363e8f79c793cf3a2b95beb0d3ad2d2df9  virtualjaguar_libretro-linux-i686-debug.tar.gz
+51082edcc37d8859da64c7aec1ef5faea74d0087c07370eb8651561aa8f8d6a9  virtualjaguar_libretro-linux-i686.so
+3e0cde55213ccd09f093a615cc47bff23702fd317059854d79b617a7dddac6d6  virtualjaguar_libretro-linux-rpi1-armv6-debug.tar.gz
+9f67a4593fd4a8925369b9a553c486782749f80239a518034b07913cdc753fff  virtualjaguar_libretro-linux-rpi1-armv6.so
+a6662f3cb9b978bcfc1a450efbf61a407bcb9bddaf0b045f3a60fae24749bc7b  virtualjaguar_libretro-linux-rpi2-cortex-a7-debug.tar.gz
+890189ac659f3b2e22ca602531fcdf7b85286f805aa0d4266b8e3c64684b74da  virtualjaguar_libretro-linux-rpi2-cortex-a7.so
+cde31d50f873ca50096e06e7abe71b1b947a2e6e504abb194147ae3864ba3f04  virtualjaguar_libretro-linux-rpi3-cortex-a53-debug.tar.gz
+136f26b562df3995838ad45a3d57eed1216cbd2aedcfe1e6783f3922ab7f34fd  virtualjaguar_libretro-linux-rpi3-cortex-a53.so
+63fa24022ce20279bb2137563ccbb2aba996f022a6059cdc3508d79c475ce7ee  virtualjaguar_libretro-linux-rpi3_64-cortex-a53-debug.tar.gz
+4462e926b23ac066a13436d9baf7586d0e06d28c548f048d1b9b25b6105bc5ff  virtualjaguar_libretro-linux-rpi3_64-cortex-a53.so
+82b34d22692c807790b0c6ec966a36f1c065ae597d01de297384fa5b1ccfa89c  virtualjaguar_libretro-linux-rpi4-cortex-a72-debug.tar.gz
+672e277bb3d5b8411bdbf8ef50b635b01d0a851ccde7ef69cf51cb5be1b60cc7  virtualjaguar_libretro-linux-rpi4-cortex-a72.so
+0b78cc6ac14e8bad857929091135ab0c19341529b70a464cec31fb7a857e872c  virtualjaguar_libretro-linux-rpi4_64-cortex-a72-debug.tar.gz
+042f1cdc4b91f2820ad9c43a41910a13a5017a6061b045e8a559fe09a5ec421a  virtualjaguar_libretro-linux-rpi4_64-cortex-a72.so
+40b741a1bb8a526c4c256524429d02f171758e223afe141e477911fd098299bf  virtualjaguar_libretro-linux-rpi5-cortex-a76-debug.tar.gz
+ca337a3b0fd229229f723799166ff6722223fa3e765fd67f7f6896d1df55b8f0  virtualjaguar_libretro-linux-rpi5-cortex-a76.so
+b227b3863b3e72f7346ad52aa73bfdb802f507af47a3d5131b9f4b12af53663f  virtualjaguar_libretro-linux-rpi5_64-cortex-a76-debug.tar.gz
+1614033f240c3223348e4042ba4f62e6d5d016ee12d6b58c9f9b19285f51093a  virtualjaguar_libretro-linux-rpi5_64-cortex-a76.so
+907954f88b792928afa44bb6d7e535563c7e23986484167622785de624803517  virtualjaguar_libretro-linux-x86_64-debug.tar.gz
+07ed9434fdbf52043fb2716c67b88af5429bfc21b1384bdfcb9aa3735d21533c  virtualjaguar_libretro-linux-x86_64.so
+e42ad0a70834fbddd28914cd8f44f7553b64af18e967aeffd96ee2d193e75228  virtualjaguar_libretro-macos-arm64-debug.tar.gz
+0c0a5094df4ae6e08c059439b8e76e3ce583a2e2bfe3dd1e8c3e4a9aa0c388c7  virtualjaguar_libretro-macos-arm64.dylib
+388225609565648ab45a55f33ccfb270d3a2bf3bcda13c930ed0001819d47059  virtualjaguar_libretro-macos-x86_64-debug.tar.gz
+18cffaa6a12b70c788f94925e9041b2b894c8e41bc9555c02adea9b816570a04  virtualjaguar_libretro-macos-x86_64.dylib
+0c2be9ce5ad40a8b91e0d93e34e38083d94a8a00fd9b26b8c639adb83d9d9e5b  virtualjaguar_libretro-switch-debug.tar.gz
+656442fde7a5fb40e319fb3f78373b7d560644cd0b2590256f293407323c6d06  virtualjaguar_libretro-switch.a
+496c3a6821a821abe01f6777f49e44f93c17c1569a14d527913b14088b511634  virtualjaguar_libretro-tvos-arm64-debug.tar.gz
+8391084a463f8dd5e685d5033ea21acfa5b79dc1dcfe012949a5d7a98fcc0936  virtualjaguar_libretro-tvos-arm64.dylib
+f5fc4e54fa969744bb0fe4d5e6b1180cd028fd1bd4e4c4716e82dc789d13845a  virtualjaguar_libretro-vita-debug.tar.gz
+4c1c29be99308022f355de8c68812bff1a274bd8e7216de15b2d9bf60def7d04  virtualjaguar_libretro-vita.a
+9311d5802d75d1b262f636ddb63f148b081f3175c2594965fb29199987c96ec9  virtualjaguar_libretro-windows-i686-debug.tar.gz
+0e8d2e53216bd087c927d79bed2c412fce5e8cadcdd15043fcc0ab6a08529e43  virtualjaguar_libretro-windows-i686.dll
+fee1020751f48954c659155252176367dbdbb69891c3506142c1e383b348b8ef  virtualjaguar_libretro-windows-x86_64-debug.tar.gz
+38bd00fea943e9c3f632b3bd56913339412bcf3c39634182a50028bdc147cd27  virtualjaguar_libretro-windows-x86_64.dll
+a4d851a6a3a798352593db11dad445161bd09495b77f1d2cb13212c0fd6f4f6c  virtualjaguar_libretro.info
+85a1d15734bf70549fff95ffb09060b7327200560486b987806f8a5241dbd0c2  virtualjaguar_nightly_amd64.deb
+75fd5e820c3c1069e547b78403cba4143ae18217b673a621a1041c34e0af52ad  virtualjaguar_nightly_arm64.deb
 </code></pre></div></div></details></div><div class=release-entry><div class=release-head><span class=release-title>v3.9.1</span>
 <span class="rel-tag rel-tag-latest">Latest</span>
 <span class=release-date>Oct 17, 2026</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/libretro/virtualjaguar-libretro/releases/download/v3.9.1/virtualjaguar_libretro-ios-arm64.dylib class=dl-asset rel=noopener title=virtualjaguar_libretro-ios-arm64.dylib aria-label="Download virtualjaguar_libretro-ios-arm64.dylib"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>RetroArch core</span><span class=dl-arch title="64-bit ARM (Apple silicon, Snapdragon, Raspberry Pi 4/5…)"><i class="fas fa-microchip" aria-hidden=true></i>ARM64</span><span class=dl-size>2 MB</span></a></div></div><div class=platform-row><div class=platform-label><i class="fas fa-tv" aria-hidden=true></i>tvOS</div><div class=release-assets><a href=https://github.com/libretro/virtualjaguar-libretro/releases/download/v3.9.1/virtualjaguar_libretro-tvos-arm64.dylib class=dl-asset rel=noopener title=virtualjaguar_libretro-tvos-arm64.dylib aria-label="Download virtualjaguar_libretro-tvos-arm64.dylib"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>RetroArch core</span><span class=dl-arch title="64-bit ARM (Apple silicon, Snapdragon, Raspberry Pi 4/5…)"><i class="fas fa-microchip" aria-hidden=true></i>ARM64</span><span class=dl-size>2 MB</span></a></div></div><div class=platform-row><div class=platform-label><i class="fab fa-apple" aria-hidden=true></i>macOS</div><div class=release-assets><a href=https://github.com/libretro/virtualjaguar-libretro/releases/download/v3.9.1/VirtualJaguar-3.9.1-macos-universal.zip class=dl-asset rel=noopener title=VirtualJaguar-3.9.1-macos-universal.zip aria-label="Download VirtualJaguar-3.9.1-macos-universal.zip"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>App (.zip)</span><span class=dl-arch title="Apple silicon and Intel"><i class="fas fa-microchip" aria-hidden=true></i>Universal</span><span class=dl-size>30 MB</span></a></div></div><div class=platform-row><div class=platform-label><i class="fab fa-windows" aria-hidden=true></i>Windows</div><div class=release-assets><a href=https://github.com/libretro/virtualjaguar-libretro/releases/download/v3.9.1/VirtualJaguar-3.9.1-windows-arm64-setup.exe class=dl-asset rel=noopener title=VirtualJaguar-3.9.1-windows-arm64-setup.exe aria-label="Download VirtualJaguar-3.9.1-windows-arm64-setup.exe"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>Installer</span><span class=dl-arch title="64-bit ARM (Apple silicon, Snapdragon, Raspberry Pi 4/5…)"><i class="fas fa-microchip" aria-hidden=true></i>ARM64</span><span class=dl-size>20 MB</span>
