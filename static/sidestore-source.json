@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10879",
-          "marketingVersion": "3.4.0-alpha.20261020.0472cfa",
-          "date": "2026-10-20",
-          "localizedDescription": "Alpha build 0472cfa · 2026-10-20\n\nChanges in this build:\n• fix(vulkan): import standard types outside nested C linkage\n• fix(retro): match Swift callback exception specifications\n• fix(retro): export C callbacks and repair modular Vulkan headers\n• fix(ci): register project audit test scripts\n• fix(tvos): refresh library focus after games load\n• fix(azahar): discard relocated CMake build trees\n• fix(ci): configure Git LFS before submodule checkout\n• fix(patching): present the selected game in the home patch manager\n• chore: auto-update license manifest (#3752)\n• fix(ui): preserve localization of patch creation guidance\n• docs: assess remaining native core SwiftPM migrations\n• build: migrate libretro bridge and ep128 to SwiftPM\n• fix(dev): omit libretro from the coreless UI target\n• test(patching): locate search fixture in copied resources\n• fix(patching): preserve input ROMs and existing patches on creation\n• codex and skills\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10896",
+          "marketingVersion": "3.4.0-alpha.20261021.fdf582b",
+          "date": "2026-10-21",
+          "localizedDescription": "Alpha build fdf582b · 2026-10-21\n\nChanges in this build:\n• fix(ci): stream IPA packaging without a duplicate app bundle\n• fix(ci): sign processed MoltenVK before package tests\n• fix(ci): run libretro tests from the SwiftPM package workspace\n• fix: isolate native core headers and bound manifest type checking\n• fix(ci): prepare native source audits and compatible lint runner\n• refactor(ui): move library lifecycle and navigation to SwiftUI scenes\n• fix(ci): preserve project audit registrations after core migration\n• build: migrate native emulator cores to SwiftPM with simulator support\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 776746082,
+          "size": 778780656,
           "minOSVersion": "17.0"
         }
       ],
