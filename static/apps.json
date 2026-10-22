@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10896",
-          "marketingVersion": "3.4.0-alpha.20261021.fdf582b",
-          "date": "2026-10-21",
-          "localizedDescription": "Alpha build fdf582b · 2026-10-21\n\nChanges in this build:\n• fix(ci): stream IPA packaging without a duplicate app bundle\n• fix(ci): sign processed MoltenVK before package tests\n• fix(ci): run libretro tests from the SwiftPM package workspace\n• fix: isolate native core headers and bound manifest type checking\n• fix(ci): prepare native source audits and compatible lint runner\n• refactor(ui): move library lifecycle and navigation to SwiftUI scenes\n• fix(ci): preserve project audit registrations after core migration\n• build: migrate native emulator cores to SwiftPM with simulator support\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10914",
+          "marketingVersion": "3.4.0-alpha.20261022.7aa07d5",
+          "date": "2026-10-22",
+          "localizedDescription": "Alpha build 7aa07d5 · 2026-10-22\n\nChanges in this build:\n• fix(skins): clear a game's md5/crc picks too when picking at System\n• fix(skins): drop cached skin representations on rescan and import\n• perf(skins): scan installed skins in the background at launch\n• perf(skins): skip full-size visibility sampling on skin cache hits\n• perf(skins): route button art through the cached thumbstick loader\n• fix(skins): make the skin representation cache thread-safe\n• fix(skins): keep skin previews small so their cache stops thrashing\n• fix(skins): keep a System skin pick from being shadowed by game picks\n• fix(skins): open the pause-menu skin picker on System scope\n• chore(skins): log the view stack once a dual-screen core runs\n• fix(skins): keep the GPU view shown when a core draws inside it\n• chore(overlay): log where each overlay group lands\n• fix(azahar): place both screens once the core runs, inside the safe area\n• fix(skins): keep the host GPU view hidden over own-surface cores\n• build(cores): key Dolphin slices on engine trees, not iCube HEAD\n• build(cores): skip the slice key's tree scan when nothing cheap changed\n• fix(topshelf): read the shared PVLibrarySnapshot with local covers\n• refactor(snapshot): rename local module to PVLibrarySnapshotLegacy\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 778780656,
+          "size": 778964986,
           "minOSVersion": "17.0"
         }
       ],
