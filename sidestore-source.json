@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10914",
-          "marketingVersion": "3.4.0-alpha.20261022.7aa07d5",
+          "buildVersion": "10917",
+          "marketingVersion": "3.4.0-alpha.20261022.0ff5251",
           "date": "2026-10-22",
-          "localizedDescription": "Alpha build 7aa07d5 · 2026-10-22\n\nChanges in this build:\n• fix(skins): clear a game's md5/crc picks too when picking at System\n• fix(skins): drop cached skin representations on rescan and import\n• perf(skins): scan installed skins in the background at launch\n• perf(skins): skip full-size visibility sampling on skin cache hits\n• perf(skins): route button art through the cached thumbstick loader\n• fix(skins): make the skin representation cache thread-safe\n• fix(skins): keep skin previews small so their cache stops thrashing\n• fix(skins): keep a System skin pick from being shadowed by game picks\n• fix(skins): open the pause-menu skin picker on System scope\n• chore(skins): log the view stack once a dual-screen core runs\n• fix(skins): keep the GPU view shown when a core draws inside it\n• chore(overlay): log where each overlay group lands\n• fix(azahar): place both screens once the core runs, inside the safe area\n• fix(skins): keep the host GPU view hidden over own-surface cores\n• build(cores): key Dolphin slices on engine trees, not iCube HEAD\n• build(cores): skip the slice key's tree scan when nothing cheap changed\n• fix(topshelf): read the shared PVLibrarySnapshot with local covers\n• refactor(snapshot): rename local module to PVLibrarySnapshotLegacy\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 0ff5251 · 2026-10-22\n\nChanges in this build:\n• fix(input): don't treat Switch Online pads as remotes on iOS\n• fix(input): keep generic pause binding for pads with no trigger\n• fix(input): map the Switch Online SNES pad; pause on Select+Start\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 778964986,
+          "size": 778865995,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "363",
-          "date": "2026-10-20T20:47:29.255Z",
+          "buildVersion": "388",
+          "date": "2026-10-22T21:57:40.698Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-363/Non-Jailbroken.ipa",
-          "size": 98130227,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-388/Non-Jailbroken.ipa",
+          "size": 98369738,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -215,7 +215,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-10-20",
+          "date": "2026-10-22",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -227,7 +227,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-10-20",
+          "date": "2026-10-22",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -239,7 +239,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-10-20",
+          "date": "2026-10-22",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
