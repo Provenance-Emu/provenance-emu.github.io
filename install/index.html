@@ -36,88 +36,60 @@
 <span class=release-date>Mar 14, 2026</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa class=dl-asset rel=noopener title=Provenance-3.3.0-iOS.ipa aria-label="Download Provenance-3.3.0-iOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>1027 MB</span></a></div></div><div class=platform-row><div class=platform-label><i class="fas fa-tv" aria-hidden=true></i>tvOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-tvOS.ipa class=dl-asset rel=noopener title=Provenance-3.3.0-tvOS.ipa aria-label="Download Provenance-3.3.0-tvOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>745 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/tag/3.3.0 class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h2>What's New in 3.3.0</h2><p>This is a big one. Four months of work since 3.2.1 covering iCloud sync, a completely revamped tvOS interface, video filters, and a ton of core and stability fixes.</p><h3>☁️ iCloud / CloudKit Sync</h3><ul><li>ROMs, save states, BIOS files, and artwork now sync across devices via iCloud</li><li>Real-time download progress indicators when loading cloud save states</li><li>Auto BIOS sync on game load when available in iCloud</li><li>ROM metadata syncs alongside files</li><li>Artwork syncs after library updates</li><li>CloudKit records management tab in Settings</li><li>iCloud upsell UI for new users with empty libraries</li><li>Sync queue pauses during emulation and resumes after</li></ul><h3>📺 New tvOS UI (Default)</h3><ul><li>Completely redesigned tvOS interface now enabled by default</li><li>RetroWave-themed side menu with smooth animations</li><li>Save states browser accessible from the main UI with artwork and core name</li><li>"View All" saves section with per-system filtering</li><li>TopShelf v2: recent games and save states with artwork and timestamps</li><li>Cheats UI in the pause menu</li><li>Game "More Info" panel</li><li>Log viewer tab</li><li>Import status view in side menu</li><li>Search with persistent history</li><li>Dozens of focus, navigation, and theming fixes throughout</li></ul><h3>🎨 Video Filters & Shaders</h3><ul><li>Unified filter pipeline works across native and RetroArch cores</li><li>GB and VHS filters improved</li><li>Filters accessible from the pause menu</li><li>RetroArch GLES 3D cores now supported (Vecx/GLiden, etc.)</li><li>Dolphin shader/filter support</li><li>PPSSPP filter support</li></ul><h3>🎮 Core & Controller Fixes</h3><ul><li><strong>RetroArch</strong>: Fixed player index mapping for MFi, PS4, and Xbox controllers; PS4 start/select fixed; 32x controls added; GameCube controller responder added</li><li><strong>Mupen64Plus</strong>: Fixed PS4 start button; fixed tvOS scaling and placement; better save error messages</li><li><strong>Dolphin</strong>: Fixed Vulkan landscape rendering</li><li><strong>GenPluGX</strong>: Added CHD support; added wide-screen GameGear core</li><li><strong>PicoDrive</strong>: Fixed crash on unload; fixed 32x controller mapping</li><li><strong>FCEUmm</strong>: Fixed start/select button mapping</li><li><strong>Mednafen</strong>: Fixed DualShock/DualSense pause/play button mapping</li><li><strong>GameBatte / TGDB Dual</strong>: Fixed PSX/Xbox pause/select button mapping</li></ul><h3>🐛 Bug Fixes & Stability</h3><ul><li>Fixed multiple app hangs from main-thread Realm access (moved to background)</li><li>Fixed crash in pause menu when closing core</li><li>Fixed potential crash if audio ring buffer init fails</li><li>Fixed crash in share/import extension</li><li>Fixed aspect ratio issues in Stella and some other cores</li><li>Fixed FPS label appearing in screenshots</li><li>Fixed artwork not refreshing in game library after sync</li><li>Fixed game importer re-queuing already-imported items</li><li>Fixed Realm contentless core crash</li><li>Fixed "Continue" carousel metadata mismatch</li><li>Skin selector refreshes orientation previews on rotation change</li><li>ManicSkin/DeltaSkin files can now be opened directly from Safari</li><li>iPad import status modal clipped layout fixed</li><li>DSP audio engine fixes</li></ul><h3>⚡ Performance</h3><ul><li>Artwork loading significantly faster</li><li>Game library UI rendering optimizations (removed unnecessary Observable wrappers)</li><li>Async tab bar icon loading</li><li>CloudKit sync deduplication and repeat-lookup fixes</li><li>Game importer skips MD5 hashing for large non-BIOS files</li></ul><p><strong>Full Changelog</strong>: <a class=commit-link href=https://github.com/Provenance-Emu/Provenance/compare/3.2.1...3.3.0><tt>3.2.1...3.3.0</tt></a></p></div></details></div><div class=release-entry><div class=release-head><span class=release-title>3.2.1 - iPad skin bug fixes</span>
 <span class=release-date>Nov 23, 2025</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/download/3.2.1/Provenance-3.2.1-iOS.ipa class=dl-asset rel=noopener title=Provenance-3.2.1-iOS.ipa aria-label="Download Provenance-3.2.1-iOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>1019 MB</span></a></div></div><div class=platform-row><div class=platform-label><i class="fas fa-tv" aria-hidden=true></i>tvOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/download/3.2.1/Provenance-3.2.1-tvOS.ipa class=dl-asset rel=noopener title=Provenance-3.2.1-tvOS.ipa aria-label="Download Provenance-3.2.1-tvOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>580 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/Provenance-Emu/Provenance/releases/tag/3.2.1 class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><p><strong>Full Changelog</strong>: <a class=commit-link href=https://github.com/Provenance-Emu/Provenance/compare/3.2.0...3.2.1><tt>3.2.0...3.2.1</tt></a></p><p>Bug fixes:</p><ul><li>iPad skins fixed</li><li>Joystick in default skin fixed in landscape</li><li>Atari Lynx Retroach controls fixed</li><li>RetroAchievements login fixed</li><li>Skin selection and import UIs fixed</li><li>Skin rotation issues fixed</li><li>Skin previews fixed</li></ul></div></details></div></div><div class="release-product mb-4" id=dl-icube><div class=release-product-head><h3 class=font-weight-bold>iCube</h3><div class=release-product-links><a href=https://icube-emu.com/>Website →</a> &nbsp;·&nbsp; <a href=https://icube-emu.com/testflight/>TestFlight beta →</a> &nbsp;·&nbsp; <a href=https://github.com/Provenance-Emu/iCube/releases target=_blank rel=noopener>All releases on GitHub →</a></div></div><p class="text-muted mb-2">GameCube & Wii emulator for iOS and tvOS</p><div class=release-entry><div class=release-head><span class=release-title>Latest alpha (rolling CI build)</span>
 <span class="rel-tag rel-tag-pre">Pre-release</span>
-<span class=release-date>Oct 22, 2026</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Non-Jailbroken.ipa class=dl-asset rel=noopener title=Non-Jailbroken.ipa aria-label="Download Non-Jailbroken.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA · sideload</span><span class=dl-size>94 MB</span>
+<span class=release-date>Oct 24, 2026</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Non-Jailbroken.ipa class=dl-asset rel=noopener title=Non-Jailbroken.ipa aria-label="Download Non-Jailbroken.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA · sideload</span><span class=dl-size>94 MB</span>
 </a><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/TrollStore.tipa class=dl-asset rel=noopener title=TrollStore.tipa aria-label="Download TrollStore.tipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>TrollStore</span><span class=dl-size>94 MB</span>
 </a><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Jailbroken-Rootful.deb class=dl-asset rel=noopener title=Jailbroken-Rootful.deb aria-label="Download Jailbroken-Rootful.deb"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>Jailbreak .deb · rootful</span><span class=dl-size>48 MB</span>
-</a><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Jailbroken-Rootless.deb class=dl-asset rel=noopener title=Jailbroken-Rootless.deb aria-label="Download Jailbroken-Rootless.deb"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>Jailbreak .deb · rootless</span><span class=dl-size>48 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/Provenance-Emu/iCube/releases/tag/alpha class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h2>Alpha Build <code>8fc454c</code></h2><p><strong>Automated alpha build from <code>develop</code></strong></p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Commit</strong></td><td><a href=https://github.com/Provenance-Emu/iCube/commit/8fc454c260b6d1153a1f85d6bd733b0546f9c9c8><code>8fc454c</code></a></td></tr><tr><td><strong>Built</strong></td><td>2026-10-22 21:56 UTC</td></tr><tr><td><strong>CI Run</strong></td><td><a href=https://github.com/Provenance-Emu/iCube/actions/runs/39859205140>View build log</a></td></tr></tbody></table><blockquote><p>Unsigned sideload builds. Replaced on every successful push to the default branch or <code>develop</code>. For a stable build use the <a href=https://github.com/Provenance-Emu/iCube/releases/latest>latest release</a>.</p></blockquote><h3>Commits since last alpha</h3><div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="8fc454c260 fix(controllers): keep the Switch Online SNES pad a player, not a remote
-a9415cba50 test(tvos): point the HUD long-press audit at the Performance pane
-5d7e3c8bc3 feat(controllers): log each controller's pointer capabilities on connect
-6a89d54c7a fix(tvos): clear the remote pointer binding from Wii Remotes 2-4
-3669926b04 feat(tvos): tell the player when no controller is connected
-98e9362d3a feat(tvos): Siri Remote motion drives the Wii pointer
-dc15f00582 feat(controllers): resolve and label the Wii pointer source
-c40e355d2c docs: record the verified Wii IR binding mechanism in the plan
-f501ede01f feat(controllers): the Siri Remote is a menu device, never a player
-aada194b2e docs: plan for the Siri Remote menu device and pointer sources
-2b6f7735f5 fix(l10n): add 52 missing English keys to Core.strings
-be5964653d fix(tvos): design tokens in the Live Performance overlay
-8fd8068f44 chore(app): route deprecated Sentry hang and GCController pause APIs through one ObjC shim
-8b26082d40 fix(ui): use design tokens in the new pause sub-pane header and cheats search
-bc6882b7ff docs: record the Performance/locale TestFlight delivery and handoff
-673422a229 chore(app): clear Xcode 27 deprecation and concurrency warnings
-36bbaa7eb9 fix(core): silence three Xcode 27 warnings in shared headers
-d1757f9544 docs: record both processed TestFlight candidates
-4b05ac37fd docs: design for Siri Remote as a menu device and adaptive pointer sources
-4ae5dac5ff feat(pause): one Audio tile opening a tile sub-grid
-b531779f2b feat(tvos): Continue Elsewhere on the menu engine
-6c1ca6cf56 fix(tvos): cheats pane no longer clips; search and filter lead the list
-2d1508e9d8 fix(tvos): make each library shelf a focus section so Down always lands below
-0270e6c658 docs: record receiver repairs and metadata compatibility evidence
-bf3c32e2d7 docs: record reviewed metadata extraction and safe integration order
-cbc8ee450f docs: track approved metadata scope and pending delivery gates
-a3eaefd693 docs: plan approved cross-app library edit synchronization
-24ce80dd78 ci: rebuild only the matching TestFlight device core
-7d7ca91373 docs: define shared library edits across paired apps
-fff79a54ef Verify persisted TestFlight distribution after API requests
-3ddef3d7bd chore(core): checkpoint portable workspace framework artifacts
-e391157f3d fix(locale): derive console defaults from system preferences
-b74137b029 Fix quick-state pause handoff and add shared Performance controls
-a8987fb1a9 Record fast DEV loop delivery and targeted acceptance results
-39ccb64f89 Add cached DEV build and native UI interaction loop
-d31f6dcf94 chore: record tvOS settings release and normalize catalog spacing [skip ci]
-d32c105479 fix(tvOS): make settings choices and pause HUD remote friendly
-5a06ac5680 docs: record approved iOS and tvOS TestFlight release
-76d443d03d test: stabilize physical no-JIT prompt audit and record acceptance
-a0fbc29b80 fix: separate compact save selection from timestamps"><pre class=notranslate><code>8fc454c260 fix(controllers): keep the Switch Online SNES pad a player, not a remote
-a9415cba50 test(tvos): point the HUD long-press audit at the Performance pane
-5d7e3c8bc3 feat(controllers): log each controller's pointer capabilities on connect
-6a89d54c7a fix(tvos): clear the remote pointer binding from Wii Remotes 2-4
-3669926b04 feat(tvos): tell the player when no controller is connected
-98e9362d3a feat(tvos): Siri Remote motion drives the Wii pointer
-dc15f00582 feat(controllers): resolve and label the Wii pointer source
-c40e355d2c docs: record the verified Wii IR binding mechanism in the plan
-f501ede01f feat(controllers): the Siri Remote is a menu device, never a player
-aada194b2e docs: plan for the Siri Remote menu device and pointer sources
-2b6f7735f5 fix(l10n): add 52 missing English keys to Core.strings
-be5964653d fix(tvos): design tokens in the Live Performance overlay
-8fd8068f44 chore(app): route deprecated Sentry hang and GCController pause APIs through one ObjC shim
-8b26082d40 fix(ui): use design tokens in the new pause sub-pane header and cheats search
-bc6882b7ff docs: record the Performance/locale TestFlight delivery and handoff
-673422a229 chore(app): clear Xcode 27 deprecation and concurrency warnings
-36bbaa7eb9 fix(core): silence three Xcode 27 warnings in shared headers
-d1757f9544 docs: record both processed TestFlight candidates
-4b05ac37fd docs: design for Siri Remote as a menu device and adaptive pointer sources
-4ae5dac5ff feat(pause): one Audio tile opening a tile sub-grid
-b531779f2b feat(tvos): Continue Elsewhere on the menu engine
-6c1ca6cf56 fix(tvos): cheats pane no longer clips; search and filter lead the list
-2d1508e9d8 fix(tvos): make each library shelf a focus section so Down always lands below
-0270e6c658 docs: record receiver repairs and metadata compatibility evidence
-bf3c32e2d7 docs: record reviewed metadata extraction and safe integration order
-cbc8ee450f docs: track approved metadata scope and pending delivery gates
-a3eaefd693 docs: plan approved cross-app library edit synchronization
-24ce80dd78 ci: rebuild only the matching TestFlight device core
-7d7ca91373 docs: define shared library edits across paired apps
-fff79a54ef Verify persisted TestFlight distribution after API requests
-3ddef3d7bd chore(core): checkpoint portable workspace framework artifacts
-e391157f3d fix(locale): derive console defaults from system preferences
-b74137b029 Fix quick-state pause handoff and add shared Performance controls
-a8987fb1a9 Record fast DEV loop delivery and targeted acceptance results
-39ccb64f89 Add cached DEV build and native UI interaction loop
-d31f6dcf94 chore: record tvOS settings release and normalize catalog spacing [skip ci]
-d32c105479 fix(tvOS): make settings choices and pause HUD remote friendly
-5a06ac5680 docs: record approved iOS and tvOS TestFlight release
-76d443d03d test: stabilize physical no-JIT prompt audit and record acceptance
-a0fbc29b80 fix: separate compact save selection from timestamps
+</a><a href=https://github.com/Provenance-Emu/iCube/releases/download/alpha/Jailbroken-Rootless.deb class=dl-asset rel=noopener title=Jailbroken-Rootless.deb aria-label="Download Jailbroken-Rootless.deb"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>Jailbreak .deb · rootless</span><span class=dl-size>48 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/Provenance-Emu/iCube/releases/tag/alpha class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h2>Alpha Build <code>086907f</code></h2><p><strong>Automated alpha build from <code>develop</code></strong></p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Commit</strong></td><td><a href=https://github.com/Provenance-Emu/iCube/commit/086907fbff1b4f7573f87ac84ab0701ea51481f1><code>086907f</code></a></td></tr><tr><td><strong>Built</strong></td><td>2026-10-24 04:15 UTC</td></tr><tr><td><strong>CI Run</strong></td><td><a href=https://github.com/Provenance-Emu/iCube/actions/runs/40060472200>View build log</a></td></tr></tbody></table><blockquote><p>Unsigned sideload builds. Replaced on every successful push to the default branch or <code>develop</code>. For a stable build use the <a href=https://github.com/Provenance-Emu/iCube/releases/latest>latest release</a>.</p></blockquote><h3>Commits since last alpha</h3><div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="086907fbff test(sync): a tie that keeps the remote value uploads nothing
+67878cd6c0 chore(core): rebuild Release slices for the Switch Online SNES pad
+8596f12d77 feat(sources): restyle the remote Sources screen in the iCube design language
+14b23ebfd3 docs: keep the iPhone-as-Wii-Remote build ledger and deferred minors
+d21e0e9879 fix(tvos): watch each phone's DSU record once and never re-resolve in a loop
+2d887df9ed fix(dsu): follow the app lifecycle through UIApplication notifications
+d05484adeb fix(tvos): never give a hand-added phone a second DSU row
+eca1ca4a39 fix(dsu): leaving the one-tap session stops the server it started
+d17f708225 feat(tvos): offer the iPhone from the no-controller notice and the hub
+8ff77cd004 feat(controllers): label the Wii pointer with the phone driving it
+e9877757c7 fix(ios): keep the one-tap controller session approvals and settings per session
+690ea55be6 feat(ios): one tap turns the iPhone into a controller for Apple TV
+8dcfaa5c7f fix(tvos): ask the next waiting phone when the one being asked leaves
+8d37425453 feat(library): redesign the first-run welcome in the iCube design language
+4d909b7f0f feat(tvos): confirm and connect a nearby iPhone as a controller
+5e2cebfcb2 feat(dsu): decide when the TV adds, refreshes and removes a phone controller
+b6172e5f51 feat(dsu): advertise the phone's identity in the DSU Bonjour record
+1f0b52b509 fix(dsu): ref-count the controller's keep-awake and restart the session view's server
+5033ec21b2 fix(dsu): keep the phone controller awake and restart it after the background
+ddc0cafb7d feat(continuity): an editable device name for nearby devices and DSU
+a8e95be972 fix(dsu): declare the DSU Bonjour type so discovery works on device
+d0f8f9cfcb docs: owner decisions and the Phase 0-1 plan for iPhone as the Wii Remote
+4b62aa59d7 docs: design for one-tap iPhone as the Wii Remote on Apple TV
+f00cba042c docs: record which Siri Remotes report motion, from GameController
+9f31ab3a62 fix(controllers): give the Switch Online SNES pad Start and Select
+9cc321abc8 feat: consume canonical shared library metadata transactions"><pre class=notranslate><code>086907fbff test(sync): a tie that keeps the remote value uploads nothing
+67878cd6c0 chore(core): rebuild Release slices for the Switch Online SNES pad
+8596f12d77 feat(sources): restyle the remote Sources screen in the iCube design language
+14b23ebfd3 docs: keep the iPhone-as-Wii-Remote build ledger and deferred minors
+d21e0e9879 fix(tvos): watch each phone's DSU record once and never re-resolve in a loop
+2d887df9ed fix(dsu): follow the app lifecycle through UIApplication notifications
+d05484adeb fix(tvos): never give a hand-added phone a second DSU row
+eca1ca4a39 fix(dsu): leaving the one-tap session stops the server it started
+d17f708225 feat(tvos): offer the iPhone from the no-controller notice and the hub
+8ff77cd004 feat(controllers): label the Wii pointer with the phone driving it
+e9877757c7 fix(ios): keep the one-tap controller session approvals and settings per session
+690ea55be6 feat(ios): one tap turns the iPhone into a controller for Apple TV
+8dcfaa5c7f fix(tvos): ask the next waiting phone when the one being asked leaves
+8d37425453 feat(library): redesign the first-run welcome in the iCube design language
+4d909b7f0f feat(tvos): confirm and connect a nearby iPhone as a controller
+5e2cebfcb2 feat(dsu): decide when the TV adds, refreshes and removes a phone controller
+b6172e5f51 feat(dsu): advertise the phone's identity in the DSU Bonjour record
+1f0b52b509 fix(dsu): ref-count the controller's keep-awake and restart the session view's server
+5033ec21b2 fix(dsu): keep the phone controller awake and restart it after the background
+ddc0cafb7d feat(continuity): an editable device name for nearby devices and DSU
+a8e95be972 fix(dsu): declare the DSU Bonjour type so discovery works on device
+d0f8f9cfcb docs: owner decisions and the Phase 0-1 plan for iPhone as the Wii Remote
+4b62aa59d7 docs: design for one-tap iPhone as the Wii Remote on Apple TV
+f00cba042c docs: record which Siri Remotes report motion, from GameController
+9f31ab3a62 fix(controllers): give the Switch Online SNES pad Start and Select
+9cc321abc8 feat: consume canonical shared library metadata transactions
 </code></pre></div><h3>Artifacts</h3><ul><li><code>Non-Jailbroken.ipa</code> — SideStore / AltStore / Sideloadly</li><li><code>TrollStore.tipa</code> — TrollStore</li><li><code>Jailbroken-Rootful.deb</code> / <code>Jailbroken-Rootless.deb</code> — jailbroken devices</li></ul><blockquote><p>This release is automatically updated on every successful default-branch / <code>develop</code> CI run.</p></blockquote></div></details></div></div><div class="release-product mb-4" id=dl-ifly><div class=release-product-head><h3 class=font-weight-bold>iFly</h3><div class=release-product-links><a href=https://ifly-emu.com/>Website →</a> &nbsp;·&nbsp; <a href=https://ifly-emu.com/testflight/>TestFlight beta →</a> &nbsp;·&nbsp; <a href=https://github.com/JoeMatt/iFly-releases/releases target=_blank rel=noopener>All releases on GitHub →</a></div></div><p class="text-muted mb-2">Dreamcast emulator for iOS and tvOS</p><div class=release-entry><div class=release-head><span class=release-title>iFly EMU 1.0.0 (build 1791610021)</span>
 <span class="rel-tag rel-tag-pre">Pre-release</span>
 <span class=release-date>Oct 10, 2026</span></div><div class=release-platforms><div class=platform-row><div class=platform-label><i class="fas fa-mobile-alt" aria-hidden=true></i>iOS / iPadOS</div><div class=release-assets><a href=https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1791610021/iFly-1.0.0-1791610021.ipa class=dl-asset rel=noopener title=iFly-1.0.0-1791610021.ipa aria-label="Download iFly-1.0.0-1791610021.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>125 MB</span></a></div></div><div class=platform-row><div class=platform-label><i class="fas fa-tv" aria-hidden=true></i>tvOS</div><div class=release-assets><a href=https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1791610021/iFly-1.0.0-1791610021-tvOS.ipa class=dl-asset rel=noopener title=iFly-1.0.0-1791610021-tvOS.ipa aria-label="Download iFly-1.0.0-1791610021-tvOS.ipa"><i class="fas fa-download" aria-hidden=true></i><span class=dl-kind>IPA</span><span class=dl-size>123 MB</span></a></div></div><div class="platform-row platform-row-github"><div class=platform-label></div><div class=release-assets><a href=https://github.com/JoeMatt/iFly-releases/releases/tag/v1.0.0%2B1791610021 class="dl-asset dl-github" target=_blank rel=noopener><i class="fab fa-github" aria-hidden=true></i><span>GitHub release</span></a></div></div></div><details class=release-notes><summary>What&rsquo;s new</summary><div><h2>iFly EMU 1.0.0 (build 1791610021)</h2><p>Pre-release beta.</p><h3>Changes</h3><p>iFly 1.0.0 build 1791610021 (4d47c4516, changes since 3017389e7)</p><ul><li>core → 27f83d606 (lightgun aim-from-picture-start A/B option)</li><li>lightgun: SVC/TEST on the gun overlay, bigger buttons lifted off the edge; Reset Arcade NVRAM; aim-from-picture-start A/B toggle</li></ul><h2>iFly EMU 1.0.0 (build 1791610021) for Apple TV</h2><p>Pre-release beta.</p><h3>Changes</h3><p>iFly 1.0.0 build 1791610021 (Apple TV) (4d47c4516, changes since 4d47c4516)</p><ul><li>no user-facing changes since the last build</li></ul></div></details></div><div class=release-entry><div class=release-head><span class=release-title>iFly EMU 1.0.0 (build 1791441341) for Apple TV</span>
