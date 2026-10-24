@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10918",
-          "marketingVersion": "3.4.0-alpha.20261023.6a889b4",
-          "date": "2026-10-23",
-          "localizedDescription": "Alpha build 6a889b4 · 2026-10-23\n\nChanges in this build:\n• fix(ppsspp): build native target flags without chained `+`\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10922",
+          "marketingVersion": "3.4.0-alpha.20261024.1a5cea4",
+          "date": "2026-10-24",
+          "localizedDescription": "Alpha build 1a5cea4 · 2026-10-24\n\nChanges in this build:\n• fix(tvos): consistent retro settings pages and working focus highlight\n• feat(video): working Image Smoothing modes, drop placebo video settings\n• build(moltenvk): update vendored MoltenVK to 1.4.2\n• fix(core): convert real-time thread constraints to mach ticks correctly\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 778889291,
+          "size": 778390694,
           "minOSVersion": "17.0"
         }
       ],
