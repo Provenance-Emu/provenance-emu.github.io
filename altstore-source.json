@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10922",
-          "marketingVersion": "3.4.0-alpha.20261024.1a5cea4",
-          "date": "2026-10-24",
-          "localizedDescription": "Alpha build 1a5cea4 · 2026-10-24\n\nChanges in this build:\n• fix(tvos): consistent retro settings pages and working focus highlight\n• feat(video): working Image Smoothing modes, drop placebo video settings\n• build(moltenvk): update vendored MoltenVK to 1.4.2\n• fix(core): convert real-time thread constraints to mach ticks correctly\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10937",
+          "marketingVersion": "3.4.0-alpha.20261027.585a3f3",
+          "date": "2026-10-27",
+          "localizedDescription": "Alpha build 585a3f3 · 2026-10-27\n\nChanges in this build:\n• ci: run PVCoreBridge tests on PRs that touch it\n• test(corebridge): make PVCoreBridgeTests compile and pass again\n• chore: silence the existing type_body_length error on DeltaSkinInputHandler (#3770)\n• refactor(skins): finish SkinKit adoption (pin SkinKit#35, drop workarounds, build UITesting and EmuSkins) (#3769)\n• [Auto] Maintenance: regenerate stale outputs (#3768)\n• fix: remove dangling PVJIT DebuggerUtils.h and Mupen libpng config.h symlinks (#3767)\n• feat(input): native cores honor controller button remaps\n• fix(input): Switch Online SNES pad A/B and X/Y swapped in cores\n• feat(cores): build core slices on the Studio with --remote\n• feat(cloudsync): Automatic sync frequency + power/network-aware background work (#3766)\n• [Agent] Receive and automatically mirror nearby iCube libraries (#3753)\n• [Agent] refactor(skins): build against SkinKit, no behavior change (#3764)\n• [Agent] fix(thin): game-launch crash from stale perf counters; forward MetricKit crashes to Sentry (#3762)\n• [Agent] fix(thin): re-pace the emulation loop when a core changes fps (#3761) (#3763)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 778390694,
+          "size": 781405258,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "395",
-          "date": "2026-10-26T07:55:31.270Z",
+          "buildVersion": "399",
+          "date": "2026-10-26T22:49:01.369Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-395/Non-Jailbroken.ipa",
-          "size": 98839241,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-399/Non-Jailbroken.ipa",
+          "size": 98842553,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
