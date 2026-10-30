@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10957",
-          "marketingVersion": "3.4.0-alpha.20261030.d064efa",
+          "buildVersion": "10973",
+          "marketingVersion": "3.4.0-alpha.20261030.bb7a451",
           "date": "2026-10-30",
-          "localizedDescription": "Alpha build d064efa · 2026-10-30\n\nChanges in this build:\n• Debug API + pixelated covers for on-device App Store screenshots (#3773)\n• [Agent] docs: Realm to SwiftData migration scope and plan (#3772)\n• Keep the game picture on the new skin's screen after a skin change (#3776)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build bb7a451 · 2026-10-30\n\nChanges in this build:\n• test(ui): compare resolved SkinKit palette colors across theme changes\n• build: checkpoint resolved SkinKit game-screen selection fix\n• fix(topshelf): preserve cover aspect and refresh rendered caches\n• docs: preserve debug API evidence paths for consolidated testing\n• refactor(ui): replace remaining UIKit alerts and storyboards with PVAlert\n• docs: record netplay simulator validation and develop integration checklist\n• fix(netplay): connect tvOS filter focus to the game grid\n• fix(netplay): keep tvOS library controls readable across focus changes\n• fix(themes): apply palette and focus styling across shared UI\n• feat(netplay): add library-first hub and verified multiplayer eligibility\n• refactor(ui): keep bundle localization outside alert controllers\n• build: allow Xcode 27 dev workspace generation\n• fix(ui): preserve localization helpers after alert cleanup\n• docs: record deferred controller remap checks\n• fix(themes): refine premium palettes and persist RetroWave\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780351105,
+          "size": 780609659,
           "minOSVersion": "17.0"
         }
       ],
