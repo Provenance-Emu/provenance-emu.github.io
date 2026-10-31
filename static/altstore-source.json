@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10983",
-          "marketingVersion": "3.4.0-alpha.20261031.d98b92d",
+          "buildVersion": "10984",
+          "marketingVersion": "3.4.0-alpha.20261031.54176c6",
           "date": "2026-10-31",
-          "localizedDescription": "Alpha build d98b92d · 2026-10-31\n\nChanges in this build:\n• fix(ci): upload unfiltered TestFlight archive logs\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 54176c6 · 2026-10-31\n\nChanges in this build:\n• fix(ci): register TestFlight log tooling with maintenance\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780879654,
+          "size": 780858877,
           "minOSVersion": "17.0"
         }
       ],
