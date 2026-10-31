@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10982",
-          "marketingVersion": "3.4.0-alpha.20261031.2413ca2",
+          "buildVersion": "10983",
+          "marketingVersion": "3.4.0-alpha.20261031.d98b92d",
           "date": "2026-10-31",
-          "localizedDescription": "Alpha build 2413ca2 · 2026-10-31\n\nChanges in this build:\n• [Agent] fix: integrate upload import and settings/shader UI updates (#3782)\n• fix(skins): preserve Azahar video and restore saved picks\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build d98b92d · 2026-10-31\n\nChanges in this build:\n• fix(ci): upload unfiltered TestFlight archive logs\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780755551,
+          "size": 780879654,
           "minOSVersion": "17.0"
         }
       ],
@@ -157,6 +157,17 @@
         "https://ifly-emu.com/screenshots/iphone/import.jpg"
       ],
       "versions": [
+        {
+          "version": "1.0.0+1793473481",
+          "buildVersion": "1793473481",
+          "date": "2026-10-31",
+          "localizedDescription": "iFly 1.0.0 (build 1793473481) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1793473481/iFly-1.0.0-1793473481.ipa",
+          "size": 132855028,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
         {
           "version": "1.0.0+1793428381",
           "buildVersion": "1793428381",
