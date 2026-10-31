@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10980",
-          "marketingVersion": "3.4.0-alpha.20261031.13fcf3c",
+          "buildVersion": "10982",
+          "marketingVersion": "3.4.0-alpha.20261031.2413ca2",
           "date": "2026-10-31",
-          "localizedDescription": "Alpha build 13fcf3c · 2026-10-31\n\nChanges in this build:\n• refactor(ui): drop TVAlertController and the UIKit alert shims\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 2413ca2 · 2026-10-31\n\nChanges in this build:\n• [Agent] fix: integrate upload import and settings/shader UI updates (#3782)\n• fix(skins): preserve Azahar video and restore saved picks\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780656858,
+          "size": 780755551,
           "minOSVersion": "17.0"
         }
       ],
