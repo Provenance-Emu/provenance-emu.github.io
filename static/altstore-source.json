@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10973",
-          "marketingVersion": "3.4.0-alpha.20261030.bb7a451",
-          "date": "2026-10-30",
-          "localizedDescription": "Alpha build bb7a451 · 2026-10-30\n\nChanges in this build:\n• test(ui): compare resolved SkinKit palette colors across theme changes\n• build: checkpoint resolved SkinKit game-screen selection fix\n• fix(topshelf): preserve cover aspect and refresh rendered caches\n• docs: preserve debug API evidence paths for consolidated testing\n• refactor(ui): replace remaining UIKit alerts and storyboards with PVAlert\n• docs: record netplay simulator validation and develop integration checklist\n• fix(netplay): connect tvOS filter focus to the game grid\n• fix(netplay): keep tvOS library controls readable across focus changes\n• fix(themes): apply palette and focus styling across shared UI\n• feat(netplay): add library-first hub and verified multiplayer eligibility\n• refactor(ui): keep bundle localization outside alert controllers\n• build: allow Xcode 27 dev workspace generation\n• fix(ui): preserve localization helpers after alert cleanup\n• docs: record deferred controller remap checks\n• fix(themes): refine premium palettes and persist RetroWave\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10979",
+          "marketingVersion": "3.4.0-alpha.20261031.91fdc73",
+          "date": "2026-10-31",
+          "localizedDescription": "Alpha build 91fdc73 · 2026-10-31\n\nChanges in this build:\n• build: adopt SkinKit 0.1.0 release\n• docs: record SkinKit three-app release signoff\n• [Agent] fix: align SkinKit consumers for the initial release (#3777)\n• test: record combined develop validation and fixture selection [skip ci]\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780609659,
+          "size": 780673954,
           "minOSVersion": "17.0"
         }
       ],
@@ -203,11 +203,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "409",
-          "date": "2026-10-31T01:30:05.334Z",
+          "buildVersion": "411",
+          "date": "2026-10-31T03:29:42.284Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-409/Non-Jailbroken.ipa",
-          "size": 98875144,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-411/Non-Jailbroken.ipa",
+          "size": 98875146,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
