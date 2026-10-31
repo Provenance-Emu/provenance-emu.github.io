@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10979",
-          "marketingVersion": "3.4.0-alpha.20261031.91fdc73",
+          "buildVersion": "10980",
+          "marketingVersion": "3.4.0-alpha.20261031.13fcf3c",
           "date": "2026-10-31",
-          "localizedDescription": "Alpha build 91fdc73 · 2026-10-31\n\nChanges in this build:\n• build: adopt SkinKit 0.1.0 release\n• docs: record SkinKit three-app release signoff\n• [Agent] fix: align SkinKit consumers for the initial release (#3777)\n• test: record combined develop validation and fixture selection [skip ci]\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 13fcf3c · 2026-10-31\n\nChanges in this build:\n• refactor(ui): drop TVAlertController and the UIKit alert shims\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780673954,
+          "size": 780656858,
           "minOSVersion": "17.0"
         }
       ],
