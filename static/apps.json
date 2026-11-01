@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10984",
-          "marketingVersion": "3.4.0-alpha.20261031.54176c6",
-          "date": "2026-10-31",
-          "localizedDescription": "Alpha build 54176c6 · 2026-10-31\n\nChanges in this build:\n• fix(ci): register TestFlight log tooling with maintenance\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10987",
+          "marketingVersion": "3.4.0-alpha.20261101.5415f2d",
+          "date": "2026-11-01",
+          "localizedDescription": "Alpha build 5415f2d · 2026-11-01\n\nChanges in this build:\n• [Agent] fix: prevent EmuThree crash on quit (#3784)\n• build(deps): bump the swift group across 2 directories with 3 updates (#3783)\n• fix(screenshots): restore settings on capture failures (#3781)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780858877,
+          "size": 780690134,
           "minOSVersion": "17.0"
         }
       ],
