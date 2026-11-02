@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10990",
-          "marketingVersion": "3.4.0-alpha.20261101.efe1572",
-          "date": "2026-11-01",
-          "localizedDescription": "Alpha build efe1572 · 2026-11-01\n\nChanges in this build:\n• feat(controls): use the touch overlay for Classic mode and skinless cores\n• refactor(input): send skin, keyboard and switch input straight to the core\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10998",
+          "marketingVersion": "3.4.0-alpha.20261102.b6069a2",
+          "date": "2026-11-02",
+          "localizedDescription": "Alpha build b6069a2 · 2026-11-02\n\nChanges in this build:\n• test: isolate UI core fixtures from native bridges\n• test: verify SkinKit follows coordinated theme accents\n• build: align PVUI lockfile with resolved dependency graph\n• build: isolate PVUI package test workspace and state\n• fix: retain library input ownership and clear hidden search\n• fix: address Copilot review — sidebar close, free ROMs host, search reset, tvOS test guard\n• feat: redesign library navigation and pause chrome\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780892252,
+          "size": 780937406,
           "minOSVersion": "17.0"
         }
       ],
@@ -157,6 +157,17 @@
         "https://ifly-emu.com/screenshots/iphone/import.jpg"
       ],
       "versions": [
+        {
+          "version": "1.0.0+1793561974",
+          "buildVersion": "1793561974",
+          "date": "2026-11-01",
+          "localizedDescription": "iFly 1.0.0 (build 1793561974) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1793561974/iFly-1.0.0-1793561974.ipa",
+          "size": 133121337,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
         {
           "version": "1.0.0+1793507282",
           "buildVersion": "1793507282",
