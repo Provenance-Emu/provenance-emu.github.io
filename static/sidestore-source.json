@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11038",
-          "marketingVersion": "3.4.0-alpha.20261103.e9a6383",
+          "buildVersion": "11039",
+          "marketingVersion": "3.4.0-alpha.20261103.7554b48",
           "date": "2026-11-03",
-          "localizedDescription": "Alpha build e9a6383 · 2026-11-03\n\nChanges in this build:\n• test: observe web-event no-match decisions instead of timers (#3793)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 7554b48 · 2026-11-03\n\nChanges in this build:\n• fix: compact library controls and keep filtering on the current page (#3792)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780943421,
+          "size": 780964943,
           "minOSVersion": "17.0"
         }
       ],
@@ -157,6 +157,72 @@
         "https://ifly-emu.com/screenshots/iphone/import.jpg"
       ],
       "versions": [
+        {
+          "version": "1.0.0+1793689605",
+          "buildVersion": "1793689605",
+          "date": "2026-11-03",
+          "localizedDescription": "iFly 1.0.0 (build 1793689605) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1793689605/iFly-1.0.0-1793689605.ipa",
+          "size": 133316915,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1793686697",
+          "buildVersion": "1793686697",
+          "date": "2026-11-03",
+          "localizedDescription": "iFly 1.0.0 (build 1793686697) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1793686697/iFly-1.0.0-1793686697.ipa",
+          "size": 133317115,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1793684508",
+          "buildVersion": "1793684508",
+          "date": "2026-11-03",
+          "localizedDescription": "iFly 1.0.0 (build 1793684508) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1793684508/iFly-1.0.0-1793684508.ipa",
+          "size": 133312388,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1793682823",
+          "buildVersion": "1793682823",
+          "date": "2026-11-03",
+          "localizedDescription": "iFly 1.0.0 (build 1793682823) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1793682823/iFly-1.0.0-1793682823.ipa",
+          "size": 133309212,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1793671207",
+          "buildVersion": "1793671207",
+          "date": "2026-11-03",
+          "localizedDescription": "iFly 1.0.0 (build 1793671207) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1793671207/iFly-1.0.0-1793671207.ipa",
+          "size": 133145298,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1793669514",
+          "buildVersion": "1793669514",
+          "date": "2026-11-03",
+          "localizedDescription": "iFly 1.0.0 (build 1793669514) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1793669514/iFly-1.0.0-1793669514.ipa",
+          "size": 133145282,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
         {
           "version": "1.0.0+1793663689",
           "buildVersion": "1793663689",
