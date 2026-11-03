@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11037",
-          "marketingVersion": "3.4.0-alpha.20261103.5111a15",
+          "buildVersion": "11038",
+          "marketingVersion": "3.4.0-alpha.20261103.e9a6383",
           "date": "2026-11-03",
-          "localizedDescription": "Alpha build 5111a15 · 2026-11-03\n\nChanges in this build:\n• fix: preserve free save access and reconcile shared Plus ownership (#3787)\n• chore(skins): pin SkinKit to 0.2.0\n• chore(skins): pin SkinKit to 0.2.0\n• chore(skins): pin SkinKit to 0.2.0\n• [Agent] fix(skins): match gameOverrides by md5, crc, filename, then title\n• chore(skins): bump the SkinKit pin to the variant-families review fixes\n• chore(skins): point resolved SkinKit pins at the variant-families revision\n• feat(skins): variant families in the store and picker\n• fix: address review — keep unrelated UITesting pins\n• build: adopt SkinKit 0.1.1\n• feat(debug): screenshot-mode chrome, NES input pulse, safer boot\n• fix(importer): bound artwork lookup and mirror off the import path\n• fix(webserver): keep first-chunk body bytes in streaming uploads\n• test(emulator): cover which quick actions desktop mode shows\n• docs(atari800): update responder-conformance note after OSD removal\n• refactor(controls): delete the classic on-screen controller\n• refactor(emulator): stop installing the classic on-screen controller\n• Pin SkinKit core/alt-representations at 278115e\n• fix: address Copilot review — alt layout screen identity and external display\n• feat(skins): Ignited altRepresentations toggle with dual-screen relayout\n• fix: address review — keep unrelated UITesting pins\n• [Agent] fix(skins): match gameOverrides by md5, crc, filename, then title\n• build: adopt SkinKit 0.1.1\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build e9a6383 · 2026-11-03\n\nChanges in this build:\n• test: observe web-event no-match decisions instead of timers (#3793)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780937183,
+          "size": 780943421,
           "minOSVersion": "17.0"
         }
       ],
