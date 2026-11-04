@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11049",
-          "marketingVersion": "3.4.0-alpha.20261104.223e029",
+          "buildVersion": "11053",
+          "marketingVersion": "3.4.0-alpha.20261104.d7e5d74",
           "date": "2026-11-04",
-          "localizedDescription": "Alpha build 223e029 · 2026-11-04\n\nChanges in this build:\n• build(dolphin): bump dolphin-ios to iCube develop 49b114f18c (#3794)\n• fix(skins): skin `reset` presses console Reset on 2600/5200/7800\n• fix(thin): set melonDS defaults per core, drop bogus melondsds_ keys\n• fix(settings): fill the iPad window from the pause menu and ⌘, too\n• fix(input): Switch Online N64 pad B drove C-Down instead of N64 B\n• chore: fill PVCopyright for 31 libretro cores missing copyright holders\n• package.resovled update\n• fix(settings): present Settings full screen on iPad\n• fix(pause): let the core sample Start/Select tile presses\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build d7e5d74 · 2026-11-04\n\nChanges in this build:\n• fix(tvos): resolve Move to System targets by primary key in the write realm (#3726)\n• fix(tvos): import queue row actions and system picker not activating (#3724)\n• feat(logs): open exported log bundles from Files in the log viewer\n• docs(emulator): phase 4 host thinning design spec\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780995304,
+          "size": 781009761,
           "minOSVersion": "17.0"
         }
       ],
