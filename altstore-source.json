@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11053",
-          "marketingVersion": "3.4.0-alpha.20261104.d7e5d74",
-          "date": "2026-11-04",
-          "localizedDescription": "Alpha build d7e5d74 · 2026-11-04\n\nChanges in this build:\n• fix(tvos): resolve Move to System targets by primary key in the write realm (#3726)\n• fix(tvos): import queue row actions and system picker not activating (#3724)\n• feat(logs): open exported log bundles from Files in the log viewer\n• docs(emulator): phase 4 host thinning design spec\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "11056",
+          "marketingVersion": "3.4.0-alpha.20261106.01eadd7",
+          "date": "2026-11-06",
+          "localizedDescription": "Alpha build 01eadd7 · 2026-11-06\n\nChanges in this build:\n• fix mednafen warnings\n• dolphin bump\n• update dolphin core\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 781009761,
+          "size": 781205173,
           "minOSVersion": "17.0"
         }
       ],
