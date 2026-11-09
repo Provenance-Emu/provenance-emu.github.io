@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11065",
-          "marketingVersion": "3.4.0-alpha.20261107.db21dd4",
-          "date": "2026-11-07",
-          "localizedDescription": "Alpha build db21dd4 · 2026-11-07\n\nChanges in this build:\n• chore: bump SkinKit to 0.3.0 (#3804)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "11075",
+          "marketingVersion": "3.4.0-alpha.20261109.f009aad",
+          "date": "2026-11-09",
+          "localizedDescription": "Alpha build f009aad · 2026-11-09\n\nChanges in this build:\n• fix: await Realm opening after content server import\n• feat: add opt-in content server game browsing and playback\n• fix(maint): commit unattended, without submodule pointers\n• fix(skins): default to built-in controls and apply explicit resets\n• MetalAPIValidationSettings\n• chore(ci): declare least-privilege workflow token permissions (#3806)\n• Point the iCube submodule at develop\n• fix(ci): keep uploaded local dylibs instead of a cached copy\n• fix(webserver): follow the ecosystem port map, report the bound port, recover from dead listeners (#3805)\n• bump dolphin\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 781386826,
+          "size": 782884748,
           "minOSVersion": "17.0"
         }
       ],
@@ -731,11 +731,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "469",
-          "date": "2026-11-09T02:49:26.842Z",
+          "buildVersion": "470",
+          "date": "2026-11-09T03:55:04.599Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-469/Non-Jailbroken.ipa",
-          "size": 104761909,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-470/Non-Jailbroken.ipa",
+          "size": 104861596,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
