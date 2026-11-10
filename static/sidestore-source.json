@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11090",
-          "marketingVersion": "3.4.0-alpha.20261110.de64c9b",
+          "buildVersion": "11093",
+          "marketingVersion": "3.4.0-alpha.20261110.c13e6b5",
           "date": "2026-11-10",
-          "localizedDescription": "Alpha build de64c9b · 2026-11-10\n\nChanges in this build:\n• feat(skins): unfolded iPhone draws a skin's iPad layout\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build c13e6b5 · 2026-11-10\n\nChanges in this build:\n• refactor(pause): delete the unused RetroMenuView\n• fix(overlay): keep built-in controls clear of the home indicator\n• build(skins): move to SkinKit 0.4.0\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 780979324,
+          "size": 782074301,
           "minOSVersion": "17.0"
         }
       ],
