@@ -39,6 +39,12 @@ What's in it so far, from the TestFlight notes and the rolling alpha:
 
 Two ways to try it now. [Patreon supporters](https://www.patreon.com/provenance) get TestFlight builds through the [beta page](/beta/). The sideload build installs as a separate app, Provenance Alpha, from the AltStore/SideStore source `https://provenance-emu.com/apps.json`, or as a plain IPA from [/install/](/install/#downloads).
 
+### Self-hosted libraries (development preview)
+
+We're adding two ways to import games from a server you run. [Emulation Server (ECS)](https://github.com/Provenance-Emu/emulator-content-server) appears in Nearby Libraries. If you already run [RomM](https://romm.app/), open RomM in Settings and enter its address. Browse the catalog, choose a supported game, and download it into your local Provenance library.
+
+This is development work. Check the notes for your build before looking for these settings.
+
 ## iCube
 
 iCube is the GameCube and Wii emulator for iOS and tvOS (Dolphin underneath).
