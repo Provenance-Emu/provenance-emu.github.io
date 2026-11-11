@@ -852,11 +852,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "485",
-          "date": "2026-11-11T04:34:01.642Z",
+          "buildVersion": "497",
+          "date": "2026-11-11T04:46:36.700Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-485/Non-Jailbroken.ipa",
-          "size": 105307512,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-497/Non-Jailbroken.ipa",
+          "size": 123620964,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
