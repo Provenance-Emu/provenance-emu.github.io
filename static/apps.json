@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11108",
-          "marketingVersion": "3.4.0-alpha.20261111.0cb2f26",
+          "buildVersion": "11109",
+          "marketingVersion": "3.4.0-alpha.20261111.0affd70",
           "date": "2026-11-11",
-          "localizedDescription": "Alpha build 0cb2f26 · 2026-11-11\n\nChanges in this build:\n• dolphin\n• feat: browse and import games from RomM\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 0affd70 · 2026-11-11\n\nChanges in this build:\n• Render Provenance default overlays from bundled Format 2 artwork (#3811)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 782042110,
+          "size": 782442659,
           "minOSVersion": "17.0"
         }
       ],
@@ -157,6 +157,28 @@
         "https://ifly-emu.com/screenshots/iphone/import.jpg"
       ],
       "versions": [
+        {
+          "version": "1.0.0+1794380700",
+          "buildVersion": "1794380700",
+          "date": "2026-11-11",
+          "localizedDescription": "iFly 1.0.0 (build 1794380700) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1794380700/iFly-1.0.0-1794380700.ipa",
+          "size": 135188123,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1794377660",
+          "buildVersion": "1794377660",
+          "date": "2026-11-11",
+          "localizedDescription": "iFly 1.0.0 (build 1794377660) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1794377660/iFly-1.0.0-1794377660.ipa",
+          "size": 135103994,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
         {
           "version": "1.0.0+1794365272",
           "buildVersion": "1794365272",
