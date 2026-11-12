@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11109",
-          "marketingVersion": "3.4.0-alpha.20261111.0affd70",
-          "date": "2026-11-11",
-          "localizedDescription": "Alpha build 0affd70 · 2026-11-11\n\nChanges in this build:\n• Render Provenance default overlays from bundled Format 2 artwork (#3811)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "11113",
+          "marketingVersion": "3.4.0-alpha.20261112.fb8b8a2",
+          "date": "2026-11-12",
+          "localizedDescription": "Alpha build fb8b8a2 · 2026-11-12\n\nChanges in this build:\n• Fit gameplay behind controls and show Atari switch positions (#3812)\n• feat(display): draw the skin around the picture on an external display\n• feat(display): controls switch in the external display options\n• fix(display): show the game alone on an external display\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 782442659,
+          "size": 782517553,
           "minOSVersion": "17.0"
         }
       ],
