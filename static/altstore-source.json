@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11127",
-          "marketingVersion": "3.4.0-alpha.20261112.62c0512",
+          "buildVersion": "11152",
+          "marketingVersion": "3.4.0-alpha.20261112.526bea8",
           "date": "2026-11-12",
-          "localizedDescription": "Alpha build 62c0512 · 2026-11-12\n\nChanges in this build:\n• docs(input): add Wii shake and GameCube triggers to the design; plan for steps 0-2\n• feat(display): rules for imported and per-game bezels\n• docs(input): design for controller touchpad and gyro as pause, mouse, pointer and gun\n• docs(display): design for bring-your-own bezels on the external display\n• fix(tvmedia): controller navigation in the tvOS-style layout on iOS\n• fix(settings): honor showsDoneButton; let a host hide Help\n• fix(ui): keep the controller cursor in alerts on iOS\n• feat(display): TVs around the picture on an external display\n• fix(input): read the pad's Start button in the native Sega and SNES cores\n• fix(input): open and drive the pause menu from a controller\n• feat(shaders): bezel preset values, texture overrides and scene geometry for TVs\n• Configure and synchronize built-in console switches (#3813)\n• feat(display): settings and rules for a TV around the external picture\n• docs(display): design for TVs around the picture on an external display\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 526bea8 · 2026-11-12\n\nChanges in this build:\n• feat(controller): aim with the controller gyro, live pointer settings\n• feat(controller): a pad's touchpad is the light gun\n• resolved\n• dilphon\n• fix(ui): keep the TV layout while the keyboard is up on iOS\n• feat(controller): touchpad aims the Wii pointer, pad shake shakes the Wiimote\n• feat(controller): shake detector and Wii pointer/motion protocols\n• build(deps): take the content-server clients from the shared package\n• chore(deps): pin SkinKit to main ab9dbb0\n• fix(pause): float the info text outside the panel\n• fix(netplay): scroll choice chips instead of truncating them\n• feat(nearby): drive Nearby Libraries with a controller and the TV remote\n• fix(netplay): drive Network Play with a controller on iOS\n• refactor(ui): move controller cursor math to PVUIBase\n• feat(display): imported bezels and The Bezel Project's game art on an external display\n• feat(pause): pages, save row and exit buttons in a themed pause menu\n• feat(input): touchpad click opens the pause menu; touchpad is the mouse\n• feat(settings): controller input test screen\n• feat(input): thin wrapper and snes9x take normalized mouse deltas\n• feat(input): normalized mouse delta and per-game pointer settings\n• fix(input): Create is Select on PlayStation pads in native cores\n• feat(input): pointer cursor, role policy and touchpad session\n• feat(input): touchpad sample and gesture recognizer\n• feat: show curated recommendations in the core picker\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 782738992,
+          "size": 783139387,
           "minOSVersion": "17.0"
         }
       ],
@@ -874,11 +874,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "501",
-          "date": "2026-11-12T03:12:11.866Z",
+          "buildVersion": "503",
+          "date": "2026-11-12T07:24:01.488Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-501/Non-Jailbroken.ipa",
-          "size": 123771232,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-503/Non-Jailbroken.ipa",
+          "size": 123773645,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
