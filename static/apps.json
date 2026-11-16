@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11209",
-          "marketingVersion": "3.4.0-alpha.20261116.09af364",
+          "buildVersion": "11210",
+          "marketingVersion": "3.4.0-alpha.20261116.cb30d61",
           "date": "2026-11-16",
-          "localizedDescription": "Alpha build 09af364 · 2026-11-16\n\nChanges in this build:\n• fix(ci): remove stale git locks before initializing submodules\n• test: run the pause settings cell test on the main actor\n• docs: close the Swift lock cleanup after reviewing the remaining files\n• refactor: scoped and state-owning locks in five more files\n• refactor: keep PVLogging channel and publisher state inside its lock\n• refactor: keep PVCoreBridge registry state inside its lock\n• refactor: keep mouse registry and entity store state inside its lock\n• docs: link the posted internet netplay scope\n• docs: scope the first internet netplay milestone\n• docs: record the first core capability pass\n• feat(cores): link cable capability; recommend cores for Sega systems\n• fix(fceu): restore the audio session when the mic engine fails\n• fix(fceu): save/restore AVAudioSession on Famicom mic start/stop\n• docs: triage remote branches (Nov 14)\n• build(deps): bump sqlite3 from 2.9.6 to 2.10.2 in /Packages/RxRealm in the bundler group across 1 directory (#3816)\n• fix(dolphin): build against ShaderPostProcessor's new initializer\n• docs: record the netplay screen fixes\n• fix(netplay): give the hub's search field its own row on phones\n• fix(netplay): return to the game after Start Game or a join\n• dolphin bump\n• docs: record that mGBA link data crosses, and the mid-game link fix\n• feat(dev): host and join netplay through the debug API\n• fix(mgba): make the host the link parent when linking mid-game\n• build(deps): bump the bundler group across 2 directories with 1 update (#3815)\n• docs: record the mGBA LAN netplay simulator run\n• feat(dev): press GBA buttons through the debug input route\n• fix(netplay): show joined players to the host; plain port numbers\n• fix(emulation): report the current state on the first isOn read\n• fix(pause): stop the menu rebuilding itself without end\n• docs: record the native Snes9x mouse smoke run\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build cb30d61 · 2026-11-16\n\nChanges in this build:\n• test: fix three PVUI tests that failed once the target compiled again\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 783612783,
+          "size": 783711029,
           "minOSVersion": "17.0"
         }
       ],
