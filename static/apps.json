@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11228",
-          "marketingVersion": "3.4.0-alpha.20261117.5ac25b0",
+          "buildVersion": "11241",
+          "marketingVersion": "3.4.0-alpha.20261117.16bf45c",
           "date": "2026-11-17",
-          "localizedDescription": "Alpha build 5ac25b0 · 2026-11-17\n\nChanges in this build:\n• docs: what the libretro NES cores lack against FCEUX on the thin wrapper\n• docs: core capability coverage, second pass\n• feat(picker): recommend cores for NES, FDS, N64, PlayStation and Dreamcast\n• feat(picker): recommend the native PSP and Dolphin cores; drop pruned cores\n• test(PVPrimitives): make the test target build and pass on the host\n• docs: maintenance reports task done\n• fix(ci): the health monitor's orphan check reads linked pull requests\n• fix(maint): compare the controller audit instead of trusting commit order\n• docs: PVLookup's Jaguar CD pull request is merged\n• build(deps): PVSystems 1.0.1 and the libretrodb with Jaguar CD\n• docs: PVLookup now requires PVSystems 1.0.1 for Jaguar CD\n• docs: Jaguar CD libretrodb release published; record what is left\n• feat(importer): identify an all-audio cue by its session 2 track\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 16bf45c · 2026-11-17\n\nChanges in this build:\n• search ui fixes\n• docs: diagnostic export smoke test, iOS half\n• build(thin): list the FDS disk actions file in the package; record the result\n• feat(thin): Famicom Disk System disk actions in the pause menu\n• test: tolerate simulator stalls in artwork timeout tests\n• fix: retry timed-out content server catalog reads\n• fix: browse and launch games from saved content servers\n• test: expect the Scan Server QR row in the add-server fields on iOS\n• feat: browse, add and play from emulation servers in the library\n• feat: request ECS access from Nearby Libraries\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 784077657,
+          "size": 784258054,
           "minOSVersion": "17.0"
         }
       ],
@@ -896,11 +896,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "525",
-          "date": "2026-11-17T05:43:56.139Z",
+          "buildVersion": "527",
+          "date": "2026-11-17T06:48:02.448Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-525/Non-Jailbroken.ipa",
-          "size": 124268027,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-527/Non-Jailbroken.ipa",
+          "size": 124285967,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
