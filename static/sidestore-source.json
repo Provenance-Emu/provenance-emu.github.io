@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11241",
-          "marketingVersion": "3.4.0-alpha.20261117.16bf45c",
+          "buildVersion": "11242",
+          "marketingVersion": "3.4.0-alpha.20261117.bb54d8a",
           "date": "2026-11-17",
-          "localizedDescription": "Alpha build 16bf45c · 2026-11-17\n\nChanges in this build:\n• search ui fixes\n• docs: diagnostic export smoke test, iOS half\n• build(thin): list the FDS disk actions file in the package; record the result\n• feat(thin): Famicom Disk System disk actions in the pause menu\n• test: tolerate simulator stalls in artwork timeout tests\n• fix: retry timed-out content server catalog reads\n• fix: browse and launch games from saved content servers\n• test: expect the Scan Server QR row in the add-server fields on iOS\n• feat: browse, add and play from emulation servers in the library\n• feat: request ECS access from Nearby Libraries\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build bb54d8a · 2026-11-17\n\nChanges in this build:\n• feat(ecosystem): receive game hand-offs from the App Group drop box\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 784258054,
+          "size": 784342844,
           "minOSVersion": "17.0"
         }
       ],
@@ -896,11 +896,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "527",
-          "date": "2026-11-17T06:48:02.448Z",
+          "buildVersion": "528",
+          "date": "2026-11-17T08:14:18.376Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-527/Non-Jailbroken.ipa",
-          "size": 124285967,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-528/Non-Jailbroken.ipa",
+          "size": 124302311,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
