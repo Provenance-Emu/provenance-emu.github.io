@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11242",
-          "marketingVersion": "3.4.0-alpha.20261117.bb54d8a",
+          "buildVersion": "11243",
+          "marketingVersion": "3.4.0-alpha.20261117.e410df8",
           "date": "2026-11-17",
-          "localizedDescription": "Alpha build bb54d8a · 2026-11-17\n\nChanges in this build:\n• feat(ecosystem): receive game hand-offs from the App Group drop box\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build e410df8 · 2026-11-17\n\nChanges in this build:\n• feat(ecosystem): send GameCube and Wii games to iCube via the drop box (#3819)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 784342844,
+          "size": 784359514,
           "minOSVersion": "17.0"
         }
       ],
@@ -896,11 +896,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "528",
-          "date": "2026-11-17T08:14:18.376Z",
+          "buildVersion": "531",
+          "date": "2026-11-17T09:23:44.286Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-528/Non-Jailbroken.ipa",
-          "size": 124302311,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-531/Non-Jailbroken.ipa",
+          "size": 124339365,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
