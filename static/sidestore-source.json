@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11215",
-          "marketingVersion": "3.4.0-alpha.20261117.e2c0167",
+          "buildVersion": "11228",
+          "marketingVersion": "3.4.0-alpha.20261117.5ac25b0",
           "date": "2026-11-17",
-          "localizedDescription": "Alpha build e2c0167 · 2026-11-17\n\nChanges in this build:\n• docs: Jaguar CD stays mapped; record the upstream libretrodb state\n• [Auto] Maintenance: regenerate stale outputs (#3818)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 5ac25b0 · 2026-11-17\n\nChanges in this build:\n• docs: what the libretro NES cores lack against FCEUX on the thin wrapper\n• docs: core capability coverage, second pass\n• feat(picker): recommend cores for NES, FDS, N64, PlayStation and Dreamcast\n• feat(picker): recommend the native PSP and Dolphin cores; drop pruned cores\n• test(PVPrimitives): make the test target build and pass on the host\n• docs: maintenance reports task done\n• fix(ci): the health monitor's orphan check reads linked pull requests\n• fix(maint): compare the controller audit instead of trusting commit order\n• docs: PVLookup's Jaguar CD pull request is merged\n• build(deps): PVSystems 1.0.1 and the libretrodb with Jaguar CD\n• docs: PVLookup now requires PVSystems 1.0.1 for Jaguar CD\n• docs: Jaguar CD libretrodb release published; record what is left\n• feat(importer): identify an all-audio cue by its session 2 track\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 783735197,
+          "size": 784077657,
           "minOSVersion": "17.0"
         }
       ],
@@ -896,11 +896,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "516",
-          "date": "2026-11-17T03:00:10.532Z",
+          "buildVersion": "521",
+          "date": "2026-11-17T04:30:56.450Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-516/Non-Jailbroken.ipa",
-          "size": 124213392,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-521/Non-Jailbroken.ipa",
+          "size": 124216900,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
