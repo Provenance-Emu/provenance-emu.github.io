@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11243",
-          "marketingVersion": "3.4.0-alpha.20261117.e410df8",
-          "date": "2026-11-17",
-          "localizedDescription": "Alpha build e410df8 · 2026-11-17\n\nChanges in this build:\n• feat(ecosystem): send GameCube and Wii games to iCube via the drop box (#3819)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "11252",
+          "marketingVersion": "3.4.0-alpha.20261119.282cac8",
+          "date": "2026-11-19",
+          "localizedDescription": "Alpha build 282cac8 · 2026-11-19\n\nChanges in this build:\n• feat(display): a TV around the game by default in landscape\n• feat(display): room light defaults by GPU generation\n• feat(display): model for the pause-menu TV switcher\n• feat(display): rule for where the device shows a TV\n• feat(display): an Automatic TV choice, now the default\n• docs: build plan for TV bezels on by default\n• docs: design for TV bezels on by default and a pause-menu switcher\n• fix(display): draw the plain picture while a TV loads\n• fix(display): ask iOS 27 for the external display's scene\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 784359514,
+          "size": 784637879,
           "minOSVersion": "17.0"
         }
       ],
