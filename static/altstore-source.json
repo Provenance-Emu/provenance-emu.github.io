@@ -149,14 +149,27 @@
       "tintColor": "#ff6900",
       "category": "games",
       "screenshots": [
+        "https://ifly-emu.com/screenshots/2026-11/iphone/play.jpg",
+        "https://ifly-emu.com/screenshots/2026-11/iphone/library.jpg",
+        "https://ifly-emu.com/screenshots/2026-11/iphone/themes.jpg",
         "https://ifly-emu.com/screenshots/iphone/library.jpg",
         "https://ifly-emu.com/screenshots/iphone/library-theme.jpg",
         "https://ifly-emu.com/screenshots/iphone/search.jpg",
         "https://ifly-emu.com/screenshots/iphone/settings-themes.jpg",
-        "https://ifly-emu.com/screenshots/iphone/cheats.jpg",
-        "https://ifly-emu.com/screenshots/iphone/import.jpg"
+        "https://ifly-emu.com/screenshots/iphone/cheats.jpg"
       ],
       "versions": [
+        {
+          "version": "1.0.0+1795158816",
+          "buildVersion": "1795158816",
+          "date": "2026-11-20",
+          "localizedDescription": "iFly 1.0.0 (build 1795158816) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795158816/iFly-1.0.0-1795158816.ipa",
+          "size": 136685811,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
         {
           "version": "1.0.0+1795156932",
           "buildVersion": "1795156932",
@@ -928,20 +941,20 @@
       "tintColor": "#3B82F6",
       "category": "games",
       "screenshots": [
+        "https://icube-emu.com/screenshots/2026-11/iphone/play.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/library.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/trinitron.jpg",
         "https://icube-emu.com/screenshots/iphone/library-light.jpg",
         "https://icube-emu.com/screenshots/iphone/search.jpg",
         "https://icube-emu.com/screenshots/iphone/emulation.jpg",
         "https://icube-emu.com/screenshots/iphone/library-dark.jpg",
-        "https://icube-emu.com/screenshots/iphone/shaders.jpg",
-        "https://icube-emu.com/screenshots/iphone/settings-graphics.jpg",
-        "https://icube-emu.com/screenshots/iphone/settings-controllers.jpg",
-        "https://icube-emu.com/screenshots/iphone/emulation-shader.jpg"
+        "https://icube-emu.com/screenshots/iphone/shaders.jpg"
       ],
       "versions": [
         {
           "version": "1.0.0",
           "buildVersion": "543",
-          "date": "2026-11-20T07:02:08.066Z",
+          "date": "2026-11-20T08:05:31.655Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
           "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-543/Non-Jailbroken.ipa",
           "size": 124744159,
