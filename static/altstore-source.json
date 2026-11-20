@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11259",
-          "marketingVersion": "3.4.0-alpha.20261119.994a60d",
-          "date": "2026-11-19",
-          "localizedDescription": "Alpha build 994a60d · 2026-11-19\n\nChanges in this build:\n• fix(display): review fixes for TVs on by default\n• docs: note the log viewer, export sheet and search polish fixes\n• fix(logs): close the export sheet once the share completes\n• feat(settings): a Bezels page, and docs for TVs on by default\n• fix(display): drop a TV the GPU cannot draw, and say when iOS has cut drawing off\n• feat(display): preview and switch TVs from a strip in the pause menu\n• perf(display): cache TV scenes and swap them without a flash\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "11264",
+          "marketingVersion": "3.4.0-alpha.20261120.5b1b668",
+          "date": "2026-11-20",
+          "localizedDescription": "Alpha build 5b1b668 · 2026-11-20\n\nChanges in this build:\n• test(overlay): wait for the console release in turns, not by a deadline\n• refactor(display): take TV bezels from the shared SkinKitBezels package\n• docs: design for a shared TV bezel module in SkinKit\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 784790185,
+          "size": 784709168,
           "minOSVersion": "17.0"
         }
       ],
