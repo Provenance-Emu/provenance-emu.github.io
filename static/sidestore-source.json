@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11274",
-          "marketingVersion": "3.4.0-alpha.20261120.b8fe8ef",
+          "buildVersion": "11279",
+          "marketingVersion": "3.4.0-alpha.20261120.bedf493",
           "date": "2026-11-20",
-          "localizedDescription": "Alpha build b8fe8ef · 2026-11-20\n\nChanges in this build:\n• bump dolphin\n• fix(library): recovery prompts always answer; skip iCloud placeholders\n• docs: list the device checks owed for missing ROM recovery\n• feat(library): recover a missing ROM from nearby libraries at launch\n• feat(sharing): search known sources and restore a missing game's files\n• feat(sharing): match a missing game and remember its source\n• docs: plan missing ROM recovery\n• docs: design missing ROM recovery from nearby libraries\n• build(dolphin): bump iCube to 9d75b499f8\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build bedf493 · 2026-11-20\n\nChanges in this build:\n• fix(library): missing ROM recovery works end to end between two devices\n• build(deps): bump mustache from 1.1.1 to 1.1.3 in /Packages/RxRealm in the bundler group across 1 directory (#3821)\n• feat(widgets): add a Continue list of games with a save state\n• fix(metal): keep the main thread free when the layer has no drawable\n• fix(uti): stop claiming pictures and archives as Provenance's own\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 785175213,
+          "size": 785067349,
           "minOSVersion": "17.0"
         }
       ],
@@ -964,11 +964,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "543",
-          "date": "2026-11-20T08:05:31.655Z",
+          "buildVersion": "545",
+          "date": "2026-11-20T10:02:09.180Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-543/Non-Jailbroken.ipa",
-          "size": 124744159,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-545/Non-Jailbroken.ipa",
+          "size": 124781056,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
