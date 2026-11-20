@@ -896,11 +896,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "531",
-          "date": "2026-11-17T09:23:44.286Z",
+          "buildVersion": "539",
+          "date": "2026-11-20T04:53:59.866Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-531/Non-Jailbroken.ipa",
-          "size": 124339365,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-539/Non-Jailbroken.ipa",
+          "size": 124658692,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -908,7 +908,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-11-17",
+          "date": "2026-11-20",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -920,7 +920,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-11-17",
+          "date": "2026-11-20",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -932,7 +932,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-11-17",
+          "date": "2026-11-20",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
