@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11265",
-          "marketingVersion": "3.4.0-alpha.20261120.9683a32",
+          "buildVersion": "11274",
+          "marketingVersion": "3.4.0-alpha.20261120.b8fe8ef",
           "date": "2026-11-20",
-          "localizedDescription": "Alpha build 9683a32 · 2026-11-20\n\nChanges in this build:\n• feat(widgets): draw game list widgets with shared PVWidgets\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build b8fe8ef · 2026-11-20\n\nChanges in this build:\n• bump dolphin\n• fix(library): recovery prompts always answer; skip iCloud placeholders\n• docs: list the device checks owed for missing ROM recovery\n• feat(library): recover a missing ROM from nearby libraries at launch\n• feat(sharing): search known sources and restore a missing game's files\n• feat(sharing): match a missing game and remember its source\n• docs: plan missing ROM recovery\n• docs: design missing ROM recovery from nearby libraries\n• build(dolphin): bump iCube to 9d75b499f8\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 777694271,
+          "size": 785175213,
           "minOSVersion": "17.0"
         }
       ],
