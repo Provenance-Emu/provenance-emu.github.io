@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11264",
-          "marketingVersion": "3.4.0-alpha.20261120.5b1b668",
+          "buildVersion": "11265",
+          "marketingVersion": "3.4.0-alpha.20261120.9683a32",
           "date": "2026-11-20",
-          "localizedDescription": "Alpha build 5b1b668 · 2026-11-20\n\nChanges in this build:\n• test(overlay): wait for the console release in turns, not by a deadline\n• refactor(display): take TV bezels from the shared SkinKitBezels package\n• docs: design for a shared TV bezel module in SkinKit\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 9683a32 · 2026-11-20\n\nChanges in this build:\n• feat(widgets): draw game list widgets with shared PVWidgets\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 784709168,
+          "size": 777694271,
           "minOSVersion": "17.0"
         }
       ],
