@@ -26,7 +26,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.169.0'  # 0.170 dropped the extended build the theme's Sass needs
           extended: true
 
       # Writes data/builds.json for the /install/ download list. In CI a failed
