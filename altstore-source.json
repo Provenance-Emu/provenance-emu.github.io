@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11154",
-          "marketingVersion": "3.4.0-alpha.20261113.45eca85",
-          "date": "2026-11-13",
-          "localizedDescription": "Alpha build 45eca85 · 2026-11-13\n\nChanges in this build:\n• feat(input): route controller tilt to Dolphin Wii Remote\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "11279",
+          "marketingVersion": "3.4.0-alpha.20261120.bedf493",
+          "date": "2026-11-20",
+          "localizedDescription": "Alpha build bedf493 · 2026-11-20\n\nChanges in this build:\n• fix(library): missing ROM recovery works end to end between two devices\n• build(deps): bump mustache from 1.1.1 to 1.1.3 in /Packages/RxRealm in the bundler group across 1 directory (#3821)\n• feat(widgets): add a Continue list of games with a save state\n• fix(metal): keep the main thread free when the layer has no drawable\n• fix(uti): stop claiming pictures and archives as Provenance's own\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 783048569,
+          "size": 785067349,
           "minOSVersion": "17.0"
         }
       ],
@@ -149,14 +149,82 @@
       "tintColor": "#ff6900",
       "category": "games",
       "screenshots": [
+        "https://ifly-emu.com/screenshots/2026-11/iphone/play.jpg",
+        "https://ifly-emu.com/screenshots/2026-11/iphone/library.jpg",
+        "https://ifly-emu.com/screenshots/2026-11/iphone/themes.jpg",
         "https://ifly-emu.com/screenshots/iphone/library.jpg",
         "https://ifly-emu.com/screenshots/iphone/library-theme.jpg",
         "https://ifly-emu.com/screenshots/iphone/search.jpg",
         "https://ifly-emu.com/screenshots/iphone/settings-themes.jpg",
-        "https://ifly-emu.com/screenshots/iphone/cheats.jpg",
-        "https://ifly-emu.com/screenshots/iphone/import.jpg"
+        "https://ifly-emu.com/screenshots/iphone/cheats.jpg"
       ],
       "versions": [
+        {
+          "version": "1.0.0+1795163016",
+          "buildVersion": "1795163016",
+          "date": "2026-11-20",
+          "localizedDescription": "iFly 1.0.0 (build 1795163016) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795163016/iFly-1.0.0-1795163016.ipa",
+          "size": 136974214,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795158816",
+          "buildVersion": "1795158816",
+          "date": "2026-11-20",
+          "localizedDescription": "iFly 1.0.0 (build 1795158816) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795158816/iFly-1.0.0-1795158816.ipa",
+          "size": 136685811,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795156932",
+          "buildVersion": "1795156932",
+          "date": "2026-11-20",
+          "localizedDescription": "iFly 1.0.0 (build 1795156932) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795156932/iFly-1.0.0-1795156932.ipa",
+          "size": 136593040,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795156210",
+          "buildVersion": "1795156210",
+          "date": "2026-11-20",
+          "localizedDescription": "iFly 1.0.0 (build 1795156210) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795156210/iFly-1.0.0-1795156210.ipa",
+          "size": 136592814,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795155398",
+          "buildVersion": "1795155398",
+          "date": "2026-11-20",
+          "localizedDescription": "iFly 1.0.0 (build 1795155398) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795155398/iFly-1.0.0-1795155398.ipa",
+          "size": 136592825,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795154718",
+          "buildVersion": "1795154718",
+          "date": "2026-11-20",
+          "localizedDescription": "iFly 1.0.0 (build 1795154718) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795154718/iFly-1.0.0-1795154718.ipa",
+          "size": 136577963,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
         {
           "version": "1.0.0+1794465576",
           "buildVersion": "1794465576",
@@ -884,23 +952,23 @@
       "tintColor": "#3B82F6",
       "category": "games",
       "screenshots": [
+        "https://icube-emu.com/screenshots/2026-11/iphone/play.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/library.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/trinitron.jpg",
         "https://icube-emu.com/screenshots/iphone/library-light.jpg",
         "https://icube-emu.com/screenshots/iphone/search.jpg",
         "https://icube-emu.com/screenshots/iphone/emulation.jpg",
         "https://icube-emu.com/screenshots/iphone/library-dark.jpg",
-        "https://icube-emu.com/screenshots/iphone/shaders.jpg",
-        "https://icube-emu.com/screenshots/iphone/settings-graphics.jpg",
-        "https://icube-emu.com/screenshots/iphone/settings-controllers.jpg",
-        "https://icube-emu.com/screenshots/iphone/emulation-shader.jpg"
+        "https://icube-emu.com/screenshots/iphone/shaders.jpg"
       ],
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "514",
-          "date": "2026-11-13T05:43:32.297Z",
+          "buildVersion": "545",
+          "date": "2026-11-20T10:02:09.180Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-514/Non-Jailbroken.ipa",
-          "size": 123996636,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-545/Non-Jailbroken.ipa",
+          "size": 124781056,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -908,7 +976,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-11-13",
+          "date": "2026-11-20",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -920,7 +988,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-11-13",
+          "date": "2026-11-20",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -932,7 +1000,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-11-13",
+          "date": "2026-11-20",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
