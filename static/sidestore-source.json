@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11284",
-          "marketingVersion": "3.4.0-alpha.20261121.259aba4",
+          "buildVersion": "11285",
+          "marketingVersion": "3.4.0-alpha.20261121.e0f5945",
           "date": "2026-11-21",
-          "localizedDescription": "Alpha build 259aba4 · 2026-11-21\n\nChanges in this build:\n• feat(sharing): libraries in the tvOS sidebar, cloud-only games can be copied\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build e0f5945 · 2026-11-21\n\nChanges in this build:\n• feat(sharing): a library's games are a cover grid\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 785297406,
+          "size": 785330665,
           "minOSVersion": "17.0"
         }
       ],
@@ -975,11 +975,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "545",
-          "date": "2026-11-20T10:02:09.180Z",
+          "buildVersion": "546",
+          "date": "2026-11-21T07:01:24.859Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-545/Non-Jailbroken.ipa",
-          "size": 124781056,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-546/Non-Jailbroken.ipa",
+          "size": 124780512,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -987,7 +987,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-11-20",
+          "date": "2026-11-21",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -999,7 +999,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-11-20",
+          "date": "2026-11-21",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -1011,7 +1011,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-11-20",
+          "date": "2026-11-21",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
