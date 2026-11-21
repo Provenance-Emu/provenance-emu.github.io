@@ -5,7 +5,7 @@
   "apps": [
     {
       "name": "Provenance",
-      "bundleIdentifier": "com.provenance-emu.provenance",
+      "bundleIdentifier": "org.provenance-emu.provenance",
       "developerName": "Provenance-EMU",
       "subtitle": "Multi-system retro emulator for iOS & tvOS",
       "localizedDescription": "Provenance supports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more. Features iCloud sync, controller skins, RetroAchievements, and a beautiful native UI.",
@@ -96,7 +96,7 @@
     },
     {
       "name": "Provenance Alpha",
-      "bundleIdentifier": "com.provenance-emu.provenance.alpha",
+      "bundleIdentifier": "org.provenance-emu.provenance.alpha",
       "developerName": "Provenance-EMU",
       "subtitle": "Latest dev builds - test new features early",
       "localizedDescription": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the stable version to test new features without losing your stable install.\n\nSupports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more.",
@@ -159,6 +159,17 @@
         "https://ifly-emu.com/screenshots/iphone/cheats.jpg"
       ],
       "versions": [
+        {
+          "version": "1.0.0+1795170836",
+          "buildVersion": "1795170836",
+          "date": "2026-11-20",
+          "localizedDescription": "iFly 1.0.0 (build 1795170836) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795170836/iFly-1.0.0-1795170836.ipa",
+          "size": 137000688,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
         {
           "version": "1.0.0+1795163016",
           "buildVersion": "1795163016",
@@ -1020,7 +1031,7 @@
       "date": "2026-03-14T02:17:44Z",
       "tintColor": "8A2BE2",
       "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.3.0",
-      "appID": "com.provenance-emu.provenance",
+      "appID": "org.provenance-emu.provenance",
       "notify": false
     },
     {
@@ -1030,7 +1041,7 @@
       "date": "2025-11-23T18:54:37Z",
       "tintColor": "8A2BE2",
       "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.2.1",
-      "appID": "com.provenance-emu.provenance",
+      "appID": "org.provenance-emu.provenance",
       "notify": false
     },
     {
@@ -1040,7 +1051,7 @@
       "date": "2025-11-20T20:56:43Z",
       "tintColor": "8A2BE2",
       "url": "https://github.com/Provenance-Emu/Provenance/releases/tag/3.2.0",
-      "appID": "com.provenance-emu.provenance",
+      "appID": "org.provenance-emu.provenance",
       "notify": false
     }
   ]
