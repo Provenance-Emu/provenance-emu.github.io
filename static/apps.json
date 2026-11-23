@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11285",
-          "marketingVersion": "3.4.0-alpha.20261121.e0f5945",
-          "date": "2026-11-21",
-          "localizedDescription": "Alpha build e0f5945 · 2026-11-21\n\nChanges in this build:\n• feat(sharing): a library's games are a cover grid\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "11291",
+          "marketingVersion": "3.4.0-alpha.20261123.29fae78",
+          "date": "2026-11-23",
+          "localizedDescription": "Alpha build 29fae78 · 2026-11-23\n\nChanges in this build:\n• test fix\n• bump dolphin core\n• docs(release): device checks for the sidebar libraries and cover grid\n• docs: TV bezels are in TestFlight and live in the shared SkinKit package\n• docs(widgets): record the Continue list, the app switches and the device checks owed\n• docs: note the sideload feed's id, fakesign and deploy rules\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 785330665,
+          "size": 785718513,
           "minOSVersion": "17.0"
         }
       ],
