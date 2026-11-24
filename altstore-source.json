@@ -160,6 +160,61 @@
       ],
       "versions": [
         {
+          "version": "1.0.0+1795506073",
+          "buildVersion": "1795506073",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795506073) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795506073/iFly-1.0.0-1795506073.ipa",
+          "size": 96534586,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795505392",
+          "buildVersion": "1795505392",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795505392) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795505392/iFly-1.0.0-1795505392.ipa",
+          "size": 138073964,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795493898",
+          "buildVersion": "1795493898",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795493898) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795493898/iFly-1.0.0-1795493898.ipa",
+          "size": 138062126,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795491787",
+          "buildVersion": "1795491787",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795491787) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795491787/iFly-1.0.0-1795491787.ipa",
+          "size": 138045447,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795489899",
+          "buildVersion": "1795489899",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795489899) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795489899/iFly-1.0.0-1795489899.ipa",
+          "size": 138028032,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
           "version": "1.0.0+1795433347",
           "buildVersion": "1795433347",
           "date": "2026-11-23",
@@ -1031,7 +1086,7 @@
         {
           "version": "1.0.0",
           "buildVersion": "561",
-          "date": "2026-11-24T07:35:25.135Z",
+          "date": "2026-11-24T09:06:07.316Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
           "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-561/Non-Jailbroken.ipa",
           "size": 124846162,
