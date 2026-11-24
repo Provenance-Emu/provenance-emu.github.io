@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11305",
-          "marketingVersion": "3.4.0-alpha.20261124.3a00197",
+          "buildVersion": "11309",
+          "marketingVersion": "3.4.0-alpha.20261124.155c5b7",
           "date": "2026-11-24",
-          "localizedDescription": "Alpha build 3a00197 · 2026-11-24\n\nChanges in this build:\n• Recognize iCube Lifetime in Provenance Plus (#3824)\n• [Agent] feat(sharing): server games in the library's own cells, free-space check, PVRemoteLibrary (#3827)\n• [Agent] docs(spec): shared remote-library browser design (#3826)\n• [Agent] fix(nearby): opaque tvOS server sheets, number keyboard for pairing PINs (#3825)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 155c5b7 · 2026-11-24\n\nChanges in this build:\n• build(deps): bump iCube to SkinKit 0.7.0 pin\n• build(deps): SkinKit 0.7.0\n• bump dolphin\n• [Agent] fix(tvos): the bezel strip works with the Siri Remote (#3828)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 786041546,
+          "size": 786197447,
           "minOSVersion": "17.0"
         }
       ],
@@ -1085,11 +1085,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "561",
-          "date": "2026-11-24T09:06:07.316Z",
+          "buildVersion": "572",
+          "date": "2026-11-24T10:16:17.524Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-561/Non-Jailbroken.ipa",
-          "size": 124846162,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-572/Non-Jailbroken.ipa",
+          "size": 125003184,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
