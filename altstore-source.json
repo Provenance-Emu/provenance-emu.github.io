@@ -160,6 +160,50 @@
       ],
       "versions": [
         {
+          "version": "1.0.0+1795555942",
+          "buildVersion": "1795555942",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795555942) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795555942/iFly-1.0.0-1795555942.ipa",
+          "size": 99593786,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795555348",
+          "buildVersion": "1795555348",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795555348) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795555348/iFly-1.0.0-1795555348.ipa",
+          "size": 99591343,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795553949",
+          "buildVersion": "1795553949",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795553949) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795553949/iFly-1.0.0-1795553949.ipa",
+          "size": 99591703,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795513073",
+          "buildVersion": "1795513073",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795513073) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795513073/iFly-1.0.0-1795513073.ipa",
+          "size": 96534362,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
           "version": "1.0.0+1795506073",
           "buildVersion": "1795506073",
           "date": "2026-11-24",
