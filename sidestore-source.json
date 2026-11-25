@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11313",
-          "marketingVersion": "3.4.0-alpha.20261125.ed97977",
+          "buildVersion": "11315",
+          "marketingVersion": "3.4.0-alpha.20261125.1592e26",
           "date": "2026-11-25",
-          "localizedDescription": "Alpha build ed97977 · 2026-11-25\n\nChanges in this build:\n• [Agent] build(deps): PVLookup and SkinKit as binaries; SQLite and ZIPFoundation from PVDependencies (#3833)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 1592e26 · 2026-11-25\n\nChanges in this build:\n• feat(library): add RomM recovery and fast source lookup\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 786781570,
+          "size": 786926587,
           "minOSVersion": "17.0"
         }
       ],
@@ -1184,11 +1184,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "594",
-          "date": "2026-11-25T10:04:48.174Z",
+          "buildVersion": "596",
+          "date": "2026-11-25T10:52:35.469Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-594/Non-Jailbroken.ipa",
-          "size": 125679551,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-596/Non-Jailbroken.ipa",
+          "size": 125680388,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
