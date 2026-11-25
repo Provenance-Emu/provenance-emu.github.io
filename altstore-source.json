@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11310",
-          "marketingVersion": "3.4.0-alpha.20261125.8187a2a",
+          "buildVersion": "11311",
+          "marketingVersion": "3.4.0-alpha.20261125.c28f698",
           "date": "2026-11-25",
-          "localizedDescription": "Alpha build 8187a2a · 2026-11-25\n\nChanges in this build:\n• [Agent] feat(input): generic HID pads, stick clicks and trigger axes on synthesized pads (#3830)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build c28f698 · 2026-11-25\n\nChanges in this build:\n• [Agent] build(deps): shared packages at their prebuilt XCFramework releases (#3831)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 786234758,
+          "size": 786311719,
           "minOSVersion": "17.0"
         }
       ],
@@ -1129,11 +1129,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "580",
-          "date": "2026-11-25T04:17:49.052Z",
+          "buildVersion": "585",
+          "date": "2026-11-25T07:15:21.522Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-580/Non-Jailbroken.ipa",
-          "size": 125020989,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-585/Non-Jailbroken.ipa",
+          "size": 125107472,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
