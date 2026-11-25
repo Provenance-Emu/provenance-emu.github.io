@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11312",
-          "marketingVersion": "3.4.0-alpha.20261125.7d68b44",
+          "buildVersion": "11313",
+          "marketingVersion": "3.4.0-alpha.20261125.ed97977",
           "date": "2026-11-25",
-          "localizedDescription": "Alpha build 7d68b44 · 2026-11-25\n\nChanges in this build:\n• [Agent] fix(tvos): declare LSSupportsGameMode in the tvOS Info.plists (#3832)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build ed97977 · 2026-11-25\n\nChanges in this build:\n• [Agent] build(deps): PVLookup and SkinKit as binaries; SQLite and ZIPFoundation from PVDependencies (#3833)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 786440074,
+          "size": 786781570,
           "minOSVersion": "17.0"
         }
       ],
@@ -1184,11 +1184,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "585",
-          "date": "2026-11-25T07:15:21.522Z",
+          "buildVersion": "594",
+          "date": "2026-11-25T10:04:48.174Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-585/Non-Jailbroken.ipa",
-          "size": 125107472,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-594/Non-Jailbroken.ipa",
+          "size": 125679551,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
