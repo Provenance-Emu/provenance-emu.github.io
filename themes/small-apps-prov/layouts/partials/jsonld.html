@@ -49,7 +49,7 @@
     "price": "0",
     "priceCurrency": "USD"
   },
-  "screenshot": {{ "images/mobile.webp" | absURL | jsonify }}
+  "screenshot": {{ .Site.Data.homepage.banner.image | default "images/mobile.webp" | absURL | jsonify }}
 }
 </script>
 {{- end }}

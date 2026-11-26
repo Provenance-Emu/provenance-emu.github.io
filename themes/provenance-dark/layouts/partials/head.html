@@ -28,7 +28,7 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
   {{ "<!-- LCP image preload (homepage only): tells browser to fetch the hero image immediately, before layout is complete -->" | safeHTML }}
-  {{ if .IsHome }}<link rel="preload" as="image" href="{{ "/images/mobile.webp" | absURL }}" type="image/webp" fetchpriority="high">{{ end }}
+  {{ if .IsHome }}{{ with .Site.Data.homepage.banner.image }}<link rel="preload" as="image" href="{{ . | absURL }}" type="image/webp" fetchpriority="high">{{ end }}{{ end }}
 
   {{ "<!-- Social metadata (Open Graph, Twitter Cards) -->" | safeHTML }}
   {{ partial "social_metadata.html" . }}
