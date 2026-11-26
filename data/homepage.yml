@@ -26,8 +26,11 @@ banner:
   description : "The best free, open-source iOS game emulator. Play retro games from 50+ consoles — SNES, N64, PlayStation, GBA, Dreamcast, and more — with native iOS features, beautiful metadata, and iCloud sync."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
-  image : "images/mobile.webp"
-  imageAlt : "images/mobile.png"
+  image : "images/provenance-homepage-hero.webp"
+  imageAlt : "images/provenance-homepage-hero.png"
+  imageWidth : 1360
+  imageHeight : 2506
+  imageDescription : "Provenance running a retro racing game with on-screen controls"
   button:
     btnText : "Get on App Store"
     URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
