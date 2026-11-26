@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11317",
-          "marketingVersion": "3.4.0-alpha.20261126.97664c1",
+          "buildVersion": "11327",
+          "marketingVersion": "3.4.0-alpha.20261126.1010660",
           "date": "2026-11-26",
-          "localizedDescription": "Alpha build 97664c1 · 2026-11-26\n\nChanges in this build:\n• [Agent] docs: design for moving CloudKit sync onto PVSyncRules and PVCloudSync (#3835)\n• [Agent] docs: one continuity protocol and package for Provenance, iFly and iCube (#3834)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 1010660 · 2026-11-26\n\nChanges in this build:\n• [Agent] build(deps): update shared packages (#3845)\n• [Agent] fix(jit): no JIT UI on stock TestFlight and App Store installs (#3844)\n• [Agent] ci: open a PR when a shared package has a newer release (#3843)\n• [Agent] feat(cloud-sync): keep replaced files and use the shared retry policy (draft, not for 3.4.0 yet) (#3839)\n• [Agent] fix(cloud-sync): queue save states made during a game for upload (#3842)\n• [Agent] fix(tvos): retry a failed database move on the next launch (#3841)\n• [Agent] docs(release): update the 3.3.1 upgrade test plan and gate 3.4.0 on it (#3840)\n• [Agent] fix(shaders): bound a preset's render targets by a memory budget (#3838)\n• [Agent] ci: run release archives one app at a time on a build machine (#3837)\n• [Agent] refactor(input): synthesized pads come from the shared GamepadKit package (#3836)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 786982896,
+          "size": 787313864,
           "minOSVersion": "17.0"
         }
       ],
@@ -1228,11 +1228,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "614",
-          "date": "2026-11-26T04:31:02.945Z",
+          "buildVersion": "621",
+          "date": "2026-11-26T05:53:14.901Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-614/Non-Jailbroken.ipa",
-          "size": 141439663,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-621/Non-Jailbroken.ipa",
+          "size": 141451748,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
