@@ -51,10 +51,26 @@
 				{{ end }}
 			</div>
 			<div class="col-md-6 text-center order-1 order-md-2">
+				{{ if .skinFan }}
+				<div class="homepage-skin-fan">
+					{{ range .skinFan }}
+					<picture class="homepage-skin-fan-side">
+						<source srcset="{{ .image | absURL }}" type="image/webp">
+						<img src="{{ .fallback | absURL }}" alt="{{ .description }}" decoding="async">
+					</picture>
+					{{ end }}
+				<picture class="homepage-skin-fan-front">
+					<source srcset="{{ .image | absURL }}" type="image/webp">
+					<img src="{{ .imageAlt | absURL }}" class="img-fluid" alt="{{ .imageDescription | default "Provenance on iPhone" }}" fetchpriority="high" width="{{ .imageWidth | default 464 }}" height="{{ .imageHeight | default 960 }}">
+				</picture>
+				</div>
+				<a class="homepage-library-link" href="#library-preview">Explore the library ↓</a>
+				{{ else }}
 				<picture>
 					<source srcset="{{ .image | absURL }}" type="image/webp">
 					<img src="{{ .imageAlt | absURL }}" class="img-fluid" alt="{{ .imageDescription | default "Provenance on iPhone" }}" fetchpriority="high" width="{{ .imageWidth | default 464 }}" height="{{ .imageHeight | default 960 }}">
 				</picture>
+				{{ end }}
 			</div>
 			{{ end }}
 		</div>
@@ -158,12 +174,25 @@
 		<div class="row">
 			<div class="col-lg-6 ml-auto justify-content-center">
 				{{ "<!-- Feature Mockup -->" | safeHTML }}
+				{{ with .captures }}
+				<div class="image-content homepage-library" id="library-preview">
+					{{ range . }}
+					<figure>
+						<a href="{{ .image | absURL }}">
+							<img src="{{ .image | absURL }}" alt="{{ .description }}" width="{{ .width }}" height="{{ .height }}" loading="lazy" decoding="async">
+						</a>
+						<figcaption>{{ .label }}</figcaption>
+					</figure>
+					{{ end }}
+				</div>
+				{{ else }}
 				<div class="image-content" data-aos="fade-right">
 					<picture>
 						{{ partial "feature-webp-source.html" . }}
 						<img class="img-fluid" src="{{ .imageAlt | absURL }}" alt="iphone" loading="lazy" decoding="async" width="1440" height="1823">
 					</picture>
 				</div>
+				{{ end }}
 			</div>
 			<div class="col-lg-6 mr-auto align-self-center">
 				<div class="feature-content">
