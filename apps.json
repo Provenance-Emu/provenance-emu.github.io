@@ -160,6 +160,50 @@
       ],
       "versions": [
         {
+          "version": "1.0.0+1795608327",
+          "buildVersion": "1795608327",
+          "date": "2026-11-25",
+          "localizedDescription": "iFly 1.0.0 (build 1795608327) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795608327/iFly-1.0.0-1795608327.ipa",
+          "size": 100484093,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795601426",
+          "buildVersion": "1795601426",
+          "date": "2026-11-25",
+          "localizedDescription": "iFly 1.0.0 (build 1795601426) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795601426/iFly-1.0.0-1795601426.ipa",
+          "size": 100484071,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795600712",
+          "buildVersion": "1795600712",
+          "date": "2026-11-25",
+          "localizedDescription": "iFly 1.0.0 (build 1795600712) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795600712/iFly-1.0.0-1795600712.ipa",
+          "size": 100483054,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795599756",
+          "buildVersion": "1795599756",
+          "date": "2026-11-25",
+          "localizedDescription": "iFly 1.0.0 (build 1795599756) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795599756/iFly-1.0.0-1795599756.ipa",
+          "size": 100483003,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
           "version": "1.0.0+1795588671",
           "buildVersion": "1795588671",
           "date": "2026-11-25",
