@@ -26,11 +26,18 @@ banner:
   description : "The best free, open-source iOS game emulator. Play retro games from 50+ consoles — SNES, N64, PlayStation, GBA, Dreamcast, and more — with native iOS features, beautiful metadata, and iCloud sync."
   bgImage : "images/home-banner.webp"
   bgImageAlt : "images/home-banner.jpg"
-  image : "images/provenance-homepage-hero.webp"
-  imageAlt : "images/provenance-homepage-hero.png"
-  imageWidth : 1360
-  imageHeight : 2506
-  imageDescription : "Provenance running a retro racing game with on-screen controls"
+  image : "images/homepage/ds.webp"
+  imageAlt : "images/homepage/ds.png"
+  imageWidth : 560
+  imageHeight : 1217
+  imageDescription : "Nintendo DS gameplay with both screens and touch controls in Provenance"
+  skinFan:
+    - image: "images/mockups/iphone-dreamcast.webp"
+      fallback: "images/mockups/iphone-dreamcast.png"
+      description: "Jet Set Radio with a white Dreamcast controller skin"
+    - image: "images/mockups/iphone-n64.webp"
+      fallback: "images/mockups/iphone-n64.png"
+      description: "Ocarina of Time with a blue Nintendo 64 controller skin"
   button:
     btnText : "Get on App Store"
     URL : "https://apps.apple.com/us/app/provenance-app/id1596862805"
@@ -86,11 +93,22 @@ whyProvenance:
 # feature one
 featureOne:
   enable : true
-  image : "images/feature/feature-rom-metadata.webp"
-  # .image-content img is capped at max-height 520px, so this renders at most ~411px wide
-  imageSrcset : "images/feature/feature-rom-metadata-720w.webp 720w, images/feature/feature-rom-metadata-1080w.webp 1080w, images/feature/feature-rom-metadata.webp 1440w"
-  imageSizes : "(max-width: 440px) calc(100vw - 30px), 411px"
-  imageAlt : "images/feature/feature-rom-metadata.png"
+  captures:
+    - label: "iPad"
+      image: "images/homepage/ipad-library.webp"
+      width: 1160
+      height: 835
+      description: "Provenance iPad library showing 12 games and the systems sidebar"
+    - label: "iPhone"
+      image: "images/homepage/phone-library.webp"
+      width: 520
+      height: 1131
+      description: "Provenance iPhone library with game covers and system shortcuts"
+    - label: "Apple TV"
+      image: "images/homepage/tvos-library.webp"
+      width: 1060
+      height: 596
+      description: "Provenance Apple TV library showing eight Game Boy Advance games"
   title : "Your Games, Beautifully Presented"
   content : "Every game gets the treatment it deserves. Automatic artwork downloads, release information, ratings, and even scanned manuals. Edit any detail to make your library truly yours."
   comment : ""
