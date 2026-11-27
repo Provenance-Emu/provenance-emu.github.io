@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-11-27T08:28:07Z",
-  "run_url": "https://github.com/Provenance-Emu/provenance-emu.github.io/actions/runs/45965350543",
+  "last_updated": "2026-11-27T08:30:43Z",
+  "run_url": "https://github.com/Provenance-Emu/provenance-emu.github.io/actions/runs/45965803139",
   "html_check": {
-    "passed": false,
-    "error_count": 91
+    "passed": true,
+    "error_count": 0
   },
   "lighthouse": {
     "performance": 0,
