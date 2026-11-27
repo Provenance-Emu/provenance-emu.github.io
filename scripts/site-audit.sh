@@ -19,7 +19,7 @@ set -euo pipefail
 LIVE_URL="https://provenance-emu.com"
 LOCAL_PORT=1315
 HUGO_PUBLIC="./public"
-HTMLPROOFER_IGNORE_URLS="/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/"
+HTMLPROOFER_IGNORE_URLS="/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/[^/]+\/[^/]+\/blob\//"
 HTMLPROOFER_IGNORE_CODES="0,429,999,403"
 LH_THRESHOLD_PERF=70
 LH_THRESHOLD_A11Y=80
