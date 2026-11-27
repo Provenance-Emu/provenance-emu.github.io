@@ -1,5 +1,17 @@
 {{ define "main" }}
 
+<style>
+/* Systems cards use Bootstrap's white surface unless the dark theme overrides it. */
+html:not([data-theme="light"]) .systems-grid .card {
+  background-color: #15152b;
+  border-color: #30304b;
+}
+
+html:not([data-theme="light"]) .systems-grid .text-muted {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+</style>
+
 {{ "<!-- Systems Hero -->" | safeHTML }}
 <section class="section systems-hero gradient-banner">
   <div class="container">
