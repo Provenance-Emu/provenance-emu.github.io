@@ -2274,3 +2274,12 @@ body {
 
 .home-systems-list dt { font-size: 1.08rem; }
 .home-systems-list dd { margin-top: .25rem; }
+
+.home-systems-intro a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+html:not([data-theme="light"]) .home-systems-intro a {
+  color: #ebb7f1;
+}
