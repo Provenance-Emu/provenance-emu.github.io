@@ -2174,3 +2174,73 @@ body {
 .homepage-media-gallery {
   scroll-margin-top: 4rem;
 }
+
+.tvos-editorial {
+  background: #100c20;
+  color: #f5efff;
+}
+
+.tvos-editorial-layout {
+  display: grid;
+  align-items: center;
+  gap: 1.75rem 3.5rem;
+}
+
+.tvos-editorial h2,
+.tvos-editorial h3 {
+  color: #f5efff;
+}
+
+.tvos-editorial-platform,
+.tvos-editorial .tvos-editorial-link {
+  color: #ebb7f1 !important;
+  font-weight: 700;
+}
+
+.tvos-editorial-description,
+.tvos-editorial-features p {
+  color: #d6cce5;
+  max-width: 42ch;
+}
+
+.tvos-editorial-link {
+  display: inline-block;
+  padding-block: .5rem;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.tvos-editorial-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.tvos-editorial figure { margin: 0; }
+
+.tvos-editorial figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ab8bd855;
+  border-radius: .85rem;
+}
+
+.tvos-editorial-features {
+  display: grid;
+  gap: .75rem 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0;
+}
+
+.tvos-editorial-features li {
+  border-top: 1px solid #ab8bd855;
+  padding-top: 1rem;
+}
+
+.tvos-editorial-features h3 { font-size: 1.05rem; }
+
+@media (min-width: 768px) {
+  .tvos-editorial-layout { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); }
+}

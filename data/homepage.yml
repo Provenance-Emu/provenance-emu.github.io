@@ -147,11 +147,9 @@ featureThree:
 # tvOS showcase
 tvosShowcase:
   enable: true
-  title: "Your Living Room. Your Arcade."
-  subtitle: "The Premier Full-Featured Emulator for Apple TV"
-  description: "While others stop at your phone, Provenance takes retro gaming to the big screen. Native tvOS support means your games look and play exactly as they should on your TV - with all the modern conveniences of Apple's ecosystem."
-  image: "images/console_logos.webp"
-  imageAlt: "images/console_logos.jpg"
+  title: "Play on the big screen"
+  description: "Browse your collection from the couch, then play with a paired controller. Recent games appear in Top Shelf, and iCloud can carry your saves across Apple devices."
+  image: "images/homepage/gallery/appletv-library.webp"
   features:
     - title: "TopShelf Integration"
       description: "Your recently played games appear right on your Apple TV home screen. Jump back in with one click."

@@ -337,25 +337,27 @@
 
 {{ if .Site.Data.homepage.tvosShowcase.enable }}
 {{"<!-- tvOS Showcase -->" | safeHTML}}
-<section class="section tvos-showcase gradient-banner">
+{{ $tv := .Site.Data.homepage.tvosShowcase }}
+<section class="section tvos-showcase tvos-editorial" aria-labelledby="tvos-showcase-heading">
 	<div class="container">
-		<div class="row justify-content-center text-center mb-5">
-			<div class="col-lg-10">
-				<h2 class="text-white font-weight-bold mb-3">{{ .Site.Data.homepage.tvosShowcase.title }}</h2>
-				<h4 class="text-white mb-4" style="opacity: 0.9;">{{ .Site.Data.homepage.tvosShowcase.subtitle }}</h4>
-				<p class="text-white" style="font-size: 1.1rem; opacity: 0.95;">{{ .Site.Data.homepage.tvosShowcase.description }}</p>
+		<div class="tvos-editorial-layout">
+			<div>
+				<p class="tvos-editorial-platform">Apple TV</p>
+				<h2 id="tvos-showcase-heading" class="font-weight-bold">{{ $tv.title }}</h2>
+				<p class="tvos-editorial-description">{{ $tv.description }}</p>
+				<a class="tvos-editorial-link" href="{{ "install/" | relURL }}#app-store">Install on Apple TV <span aria-hidden="true">→</span></a>
 			</div>
-		</div>
-		<div class="row">
-			{{ range .Site.Data.homepage.tvosShowcase.features }}
-			<div class="col-lg-6 mb-4">
-				<div class="tvos-feature-card p-4 rounded" style="background: rgba(255,255,255,0.15);">
-					<h5 class="text-white font-weight-bold mb-2">{{ .title }}</h5>
-					<p class="text-white mb-0" style="opacity: 0.9;">{{ .description }}</p>
-				</div>
-			</div>
+			{{ with $tv.image }}
+			<figure>
+				<img src="{{ . | relURL }}" alt="Provenance Game Boy Advance library on Apple TV with original cover art" width="1920" height="1080" loading="lazy" decoding="async">
+			</figure>
 			{{ end }}
 		</div>
+		<ul class="tvos-editorial-features">
+			{{ range $tv.features }}
+			<li><h3>{{ .title }}</h3><p>{{ .description }}</p></li>
+			{{ end }}
+		</ul>
 	</div>
 </section>
 {{"<!-- /tvOS Showcase -->" | safeHTML}}

@@ -7,14 +7,18 @@
     <div class="shape"></div><div class="shape"></div><div class="shape"></div>
   </div>
   <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-8">
+    <div class="install-intro">
+      <div>
         <h1 class="text-white font-weight-bold mb-3">Install Provenance</h1>
-        <p class="text-white mb-0" style="font-size:1.15rem;opacity:0.9;">Free iOS game emulator for iPhone, iPad, and Apple TV. Choose your install method below.</p>
-        <nav class="install-jump" aria-label="Jump to">
-          <a href="#app-store">App Store</a><a href="#altstore">AltStore</a><a href="#sidestore">SideStore</a><a href="#ipa">IPA / source</a><a href="#downloads" class="install-jump-dl"><i class="fas fa-download" aria-hidden="true"></i> Downloads &amp; release notes</a>
-        </nav>
+        <p class="text-white mb-0 install-summary">Install from the App Store on iPhone, iPad, or Apple TV. For sideloading, choose the method you already use.</p>
       </div>
+      <nav class="install-jump" aria-label="Installation methods">
+        <a href="#app-store">App Store <span aria-hidden="true">↓</span></a>
+        <a href="#altstore">AltStore <span aria-hidden="true">↓</span></a>
+        <a href="#sidestore">SideStore <span aria-hidden="true">↓</span></a>
+        <a href="#ipa">IPA / source <span aria-hidden="true">↓</span></a>
+        <a href="#downloads" class="install-jump-dl">Downloads &amp; release notes <span aria-hidden="true">↓</span></a>
+      </nav>
     </div>
   </div>
 </section>
@@ -22,10 +26,14 @@
 {{/* Light styles are the base; html:not([data-theme="light"]) overrides follow dark-theme.css
      (dark is the site default). No hard-coded light-only colours: they vanish in one theme. */}}
 <style>
-  .install-jump { display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem; margin-top:1.5rem; }
-  .install-jump a { color:#fff !important; font-size:.9rem; font-weight:600; padding:.4rem .85rem; border-radius:999px; border:1px solid rgba(255,255,255,.35); background:rgba(255,255,255,.08); text-decoration:none; }
-  .install-jump a:hover, .install-jump a:focus { background:rgba(255,255,255,.18); border-color:rgba(255,255,255,.6); }
-  .install-jump a.install-jump-dl { background:rgba(250,51,153,.25); border-color:rgba(250,51,153,.6); }
+  .install-intro { display:grid; align-items:center; gap:2rem 4rem; }
+  .install-summary { max-width:36rem; font-size:1.15rem; opacity:.9; }
+  .install-jump { display:grid; gap:.25rem 1rem; grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .install-jump a { display:flex; justify-content:space-between; align-items:center; gap:.5rem; min-height:2.8rem; color:#fff !important; font-size:.95rem; font-weight:600; padding:.45rem .1rem; border-bottom:1px solid rgba(255,255,255,.30); text-decoration:none; }
+  .install-jump a:hover { border-color:#fff; }
+  .install-jump a:focus-visible { outline:2px solid #fff; outline-offset:3px; }
+  .install-jump a.install-jump-dl { grid-column:1/-1; }
+  @media (min-width:768px) { .install-intro { grid-template-columns:minmax(0,1fr) minmax(16rem,.8fr); } }
   [id] { scroll-margin-top:90px; } /* keep anchors clear of the fixed navbar */
 
   .install-card { height:100%; display:flex; flex-direction:column; background:#fff; border:1px solid #e6e8ef; border-radius:12px; padding:1.5rem; box-shadow:0 1px 4px rgba(0,0,0,.06); }
