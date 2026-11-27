@@ -1,0 +1,25 @@
+{{- $gallery := . -}}
+<div class="pv-media-gallery" data-gallery-brand="provenance" data-web-media-gallery>
+  <div class="pv-media-gallery-tabs" role="tablist" aria-label="Screenshot devices" hidden>
+    {{ range .groups }}
+    <button id="{{ $gallery.id }}-tab-{{ .id }}" type="button" role="tab" aria-controls="{{ $gallery.id }}-panel-{{ .id }}" aria-selected="false" tabindex="-1">{{ .label }}</button>
+    {{ end }}
+  </div>
+  {{ range .groups }}
+  <div id="{{ $gallery.id }}-panel-{{ .id }}" class="pv-media-gallery-panel" role="tabpanel" aria-labelledby="{{ $gallery.id }}-tab-{{ .id }}">
+    <h3 class="h5 text-center mb-3" data-gallery-heading>{{ .label }}</h3>
+    <ul class="pv-media-gallery-grid" data-layout="{{ .layout }}">
+      {{ range .images }}
+      <li class="pv-media-gallery-card">
+        <figure>
+          <a href="{{ .href | relURL }}" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: {{ .alt }}">
+            <img src="{{ .src | relURL }}" width="{{ .width }}" height="{{ .height }}" alt="{{ .alt }}" loading="lazy" decoding="async">
+          </a>
+          {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+        </figure>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</div>

@@ -291,7 +291,20 @@
 {{ end }}
 {{ end }}
 
-{{ if .Site.Data.homepage.mockupCarousel.enable }}
+{{ if .Site.Data.homegallery }}
+{{ $gallery := .Site.Data.homegallery }}
+<section id="screenshots" class="section bg-light homepage-media-gallery" aria-labelledby="screenshots-heading">
+	<link rel="stylesheet" href="{{ "web-media/0.2.0/gallery.css" | relURL }}">
+	<div class="container">
+		<div class="text-center mb-4">
+			<h2 id="screenshots-heading" class="font-weight-bold mb-3">{{ $gallery.title }}</h2>
+			<p>{{ $gallery.description }}</p>
+		</div>
+		{{ partial "web-media/gallery.html" (dict "id" "home-screenshots" "groups" $gallery.groups) }}
+	</div>
+	<script type="module" src="{{ "web-media/0.2.0/gallery.js" | relURL }}"></script>
+</section>
+{{ else if .Site.Data.homepage.mockupCarousel.enable }}
 {{"<!-- Mockup Carousel -->" | safeHTML}}
 <section class="section mockup-carousel bg-light">
 	<div class="container">

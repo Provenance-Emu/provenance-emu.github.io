@@ -2170,3 +2170,7 @@ body {
   .homepage-skin-fan-side:first-child { left: 11%; }
   .homepage-skin-fan-side:nth-child(2) { right: 10%; }
 }
+
+.homepage-media-gallery {
+  scroll-margin-top: 4rem;
+}

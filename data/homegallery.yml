@@ -1,0 +1,57 @@
+title: "See it in action"
+description: "Explore gameplay and your game library on iPhone, iPad, and Apple TV."
+groups:
+  - id: iphone
+    label: iPhone
+    layout: phone
+    images:
+      - id: iphone-fzero
+        src: images/homepage/gallery/iphone-fzero-thumb.webp
+        href: images/homepage/gallery/iphone-fzero.webp
+        width: 640
+        height: 1391
+        alt: "F-Zero: Maximum Velocity running on iPhone with touch controls"
+        caption: "F-Zero: Maximum Velocity · On-screen controls"
+      - id: iphone-library
+        src: images/homepage/phone-library-covers.webp
+        href: images/homepage/gallery/iphone-library.webp
+        width: 520
+        height: 1131
+        alt: "Provenance on iPhone showing a library of 12 games with clear cover art"
+        caption: "Your game library and system shortcuts on iPhone"
+  - id: ipad
+    label: iPad
+    layout: tablet
+    images:
+      - id: ipad-castlevania
+        src: images/homepage/gallery/ipad-castlevania-thumb.webp
+        href: images/homepage/gallery/ipad-castlevania.webp
+        width: 1080
+        height: 1440
+        alt: "Castlevania: Circle of the Moon on iPad with on-screen controls"
+        caption: "Castlevania: Circle of the Moon · iPad touch controls"
+      - id: ipad-library
+        src: images/homepage/ipad-library-covers.webp
+        href: images/homepage/gallery/ipad-library.webp
+        width: 1160
+        height: 835
+        alt: "Provenance on iPad showing clear game covers beside the system sidebar"
+        caption: "Browse across systems from the iPad library sidebar"
+  - id: appletv
+    label: Apple TV
+    layout: tv
+    images:
+      - id: appletv-castlevania
+        src: images/homepage/gallery/appletv-castlevania-thumb.webp
+        href: images/homepage/gallery/appletv-castlevania.webp
+        width: 1060
+        height: 596
+        alt: "Castlevania: Circle of the Moon running on Apple TV"
+        caption: "Castlevania: Circle of the Moon · Apple TV gameplay"
+      - id: appletv-library
+        src: images/homepage/tvos-library-covers.webp
+        href: images/homepage/gallery/appletv-library.webp
+        width: 1060
+        height: 596
+        alt: "Provenance on Apple TV showing the Game Boy Advance library with clear cover art"
+        caption: "Game Boy Advance library on Apple TV"
