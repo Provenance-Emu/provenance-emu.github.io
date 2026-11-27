@@ -163,8 +163,8 @@ tvosShowcase:
 # service
 service:
   enable : true
-  title : "50+ Game Systems. One App."
-  description : "From Atari to PlayStation, we've got you covered. The most comprehensive console support of any iOS emulator."
+  title : "Find your system"
+  description : "Browse supported consoles and handhelds, then open the system guides for file formats and setup details."
   image : "images/console_logos.webp"
   imageAlt : "images/console_logos.jpg"
   serviceItem :
