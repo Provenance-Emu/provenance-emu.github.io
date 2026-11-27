@@ -2283,3 +2283,13 @@ body {
 html:not([data-theme="light"]) .home-systems-intro a {
   color: #ebb7f1;
 }
+
+.homepage-gameplay-video {
+    display: block;
+    width: min(100%, 280px);
+    height: auto;
+    aspect-ratio: 886 / 1920;
+    margin-inline: auto;
+    border-radius: 1rem;
+    background: #000;
+}
