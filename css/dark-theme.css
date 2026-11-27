@@ -140,16 +140,6 @@ html:not([data-theme="light"]) .bg-light-gray { background-color: #111128 !impor
 html:not([data-theme="light"]) .bg-blue   { background: linear-gradient(135deg,#0f0020 0%,#1a0033 100%) !important; }
 html:not([data-theme="light"]) .bg-dark   { background: #080814 !important; }
 
-/* Systems cards use Bootstrap's white surface unless the dark theme overrides it. */
-html:not([data-theme="light"]) .systems-grid .card {
-  background-color: #15152b;
-  border-color: #30304b;
-}
-
-html:not([data-theme="light"]) .systems-grid .text-muted {
-  color: rgba(255, 255, 255, 0.72) !important;
-}
-
 /* ── Social Proof ───────────────────────────────────────────────────────────── */
 .social-proof-item {
   padding: 2rem 1rem;
