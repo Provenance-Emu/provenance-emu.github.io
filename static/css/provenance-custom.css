@@ -2170,3 +2170,116 @@ body {
   .homepage-skin-fan-side:first-child { left: 11%; }
   .homepage-skin-fan-side:nth-child(2) { right: 10%; }
 }
+
+.homepage-media-gallery {
+  scroll-margin-top: 4rem;
+}
+
+.tvos-editorial {
+  background: #100c20;
+  color: #f5efff;
+}
+
+.tvos-editorial-layout {
+  display: grid;
+  align-items: center;
+  gap: 1.75rem 3.5rem;
+}
+
+.tvos-editorial h2,
+.tvos-editorial h3 {
+  color: #f5efff;
+}
+
+.tvos-editorial-platform,
+.tvos-editorial .tvos-editorial-link {
+  color: #ebb7f1 !important;
+  font-weight: 700;
+}
+
+.tvos-editorial-description,
+.tvos-editorial-features p {
+  color: #d6cce5;
+  max-width: 42ch;
+}
+
+.tvos-editorial-link {
+  display: inline-block;
+  padding-block: .5rem;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.tvos-editorial-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.tvos-editorial figure { margin: 0; }
+
+.tvos-editorial figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ab8bd855;
+  border-radius: .85rem;
+}
+
+.tvos-editorial-features {
+  display: grid;
+  gap: .75rem 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0;
+}
+
+.tvos-editorial-features li {
+  border-top: 1px solid #ab8bd855;
+  padding-top: 1rem;
+}
+
+.tvos-editorial-features h3 { font-size: 1.05rem; }
+
+@media (min-width: 768px) {
+  .tvos-editorial-layout { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); }
+}
+
+.home-systems-directory { scroll-margin-top: 4rem; }
+
+.home-systems-intro { max-width: 38rem; }
+
+.home-systems-intro a {
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+  min-height: 2.75rem;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  font-weight: 700;
+}
+
+.home-systems-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  gap: 1rem 2rem;
+  margin: 1.75rem 0 0;
+}
+
+.home-systems-list > div {
+  border-top: 1px solid currentColor;
+  border-top-color: color-mix(in srgb, currentColor 20%, transparent);
+  padding-top: .85rem;
+}
+
+.home-systems-list dt { font-size: 1.08rem; }
+.home-systems-list dd { margin-top: .25rem; }
+
+.home-systems-intro a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+html:not([data-theme="light"]) .home-systems-intro a {
+  color: #ebb7f1;
+}

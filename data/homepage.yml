@@ -144,54 +144,12 @@ featureThree:
   clientImage : ""
   clientName : "Community-made skins for every system"
 
-# mockup carousel
-mockupCarousel:
-  enable: true
-  title: "See It In Action"
-  subtitle: "Beautiful gameplay across multiple systems"
-  description: "Experience retro gaming at its finest with system-specific skins and optimized controls."
-  items:
-    - image: "images/mockups/iphone-saturn.webp"
-      imageAlt: "images/mockups/iphone-saturn.png"
-      title: "Sega Saturn"
-    - image: "images/mockups/iphone-dreamcast.webp"
-      imageAlt: "images/mockups/iphone-dreamcast.png"
-      title: "Sega Dreamcast"
-    - image: "images/mockups/iphone-psp.webp"
-      imageAlt: "images/mockups/iphone-psp.png"
-      title: "PlayStation Portable"
-    - image: "images/mockups/iphone-gb.webp"
-      imageAlt: "images/mockups/iphone-gb.png"
-      title: "Nintendo Game Boy"
-    - image: "images/mockups/iphone-gbc.webp"
-      imageAlt: "images/mockups/iphone-gbc.png"
-      title: "Nintendo Game Boy Color"
-    - image: "images/mockups/iphone-gba.webp"
-      imageAlt: "images/mockups/iphone-gba.png"
-      title: "Nintendo Game Boy Advance"
-    - image: "images/mockups/iphone-nes-crt.webp"
-      imageAlt: "images/mockups/iphone-nes-crt.png"
-      title: "Nintendo Entertainment System"
-    - image: "images/mockups/iphone-snes.webp"
-      imageAlt: "images/mockups/iphone-snes.png"
-      title: "Super Nintendo Entertainment System"
-    - image: "images/mockups/iphone-n64.webp"
-      imageAlt: "images/mockups/iphone-n64.png"
-      title: "Nintendo 64"
-    - image: "images/mockups/iphone-psx.webp"
-      imageAlt: "images/mockups/iphone-psx.png"
-      title: "Sony PlayStation"
-    - image: "images/mockups/iphone-32x-doom.webp"
-      imageAlt: "images/mockups/iphone-32x-doom.png"
-      title: "Sega 32X"
 # tvOS showcase
 tvosShowcase:
   enable: true
-  title: "Your Living Room. Your Arcade."
-  subtitle: "The Premier Full-Featured Emulator for Apple TV"
-  description: "While others stop at your phone, Provenance takes retro gaming to the big screen. Native tvOS support means your games look and play exactly as they should on your TV - with all the modern conveniences of Apple's ecosystem."
-  image: "images/console_logos.webp"
-  imageAlt: "images/console_logos.jpg"
+  title: "Play on the big screen"
+  description: "Browse your collection from the couch, then play with a paired controller. Recent games appear in Top Shelf, and iCloud can carry your saves across Apple devices."
+  image: "images/homepage/gallery/appletv-library.webp"
   features:
     - title: "TopShelf Integration"
       description: "Your recently played games appear right on your Apple TV home screen. Jump back in with one click."
@@ -205,8 +163,8 @@ tvosShowcase:
 # service
 service:
   enable : true
-  title : "50+ Game Systems. One App."
-  description : "From Atari to PlayStation, we've got you covered. The most comprehensive console support of any iOS emulator."
+  title : "Find your system"
+  description : "Browse supported consoles and handhelds, then open the system guides for file formats and setup details."
   image : "images/console_logos.webp"
   imageAlt : "images/console_logos.jpg"
   serviceItem :
