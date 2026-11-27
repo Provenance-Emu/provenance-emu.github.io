@@ -1316,11 +1316,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "632",
-          "date": "2026-11-26T22:49:04.540Z",
+          "buildVersion": "634",
+          "date": "2026-11-26T23:33:51.449Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-632/Non-Jailbroken.ipa",
-          "size": 141511121,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-634/Non-Jailbroken.ipa",
+          "size": 141511126,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
