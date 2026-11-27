@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11340",
-          "marketingVersion": "3.4.0-alpha.20261127.09d3f24",
+          "buildVersion": "11345",
+          "marketingVersion": "3.4.0-alpha.20261127.61c4447",
           "date": "2026-11-27",
-          "localizedDescription": "Alpha build 09d3f24 · 2026-11-27\n\nChanges in this build:\n• build(deps): bump iCube submodule to latest develop\n• Serialize manual release signing (#3858)\n• chore(changelog): absorb 1 pending fragment(s) (#3857)\n• [Agent] build(deps): update shared packages (#3856)\n• [Agent] chore: GamepadKit 0.3.2 (#3854)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 61c4447 · 2026-11-27\n\nChanges in this build:\n• chore(changelog): absorb 1 pending fragment(s) (#3862)\n• [Agent] fix(bezels): TVs in portrait below the notch; a changed TV shows without a restart (#3855)\n• [Agent] build(deps): update shared packages (#3861)\n• chore(changelog): absorb 1 pending fragment(s) (#3860)\n• fix(tvos): keep four-player arcade controls visible (#3859)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 787493984,
+          "size": 787414477,
           "minOSVersion": "17.0"
         }
       ],
