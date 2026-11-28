@@ -1,0 +1,6 @@
+{{ if fileExists (printf "static/%s" .icon) }}
+  <img class="system-icon" src="{{ .icon | relURL }}" width="32" height="32" alt="">
+{{ else }}
+  <span class="system-icon" aria-hidden="true">{{ substr .system.name 0 2 | upper }}</span>
+{{ end }}
+<span class="system-label">{{ .system.name }}{{ with .system.note }}<small>{{ . }}</small>{{ end }}</span>

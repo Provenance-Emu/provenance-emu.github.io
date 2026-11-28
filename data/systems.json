@@ -1,0 +1,758 @@
+{
+  "revision": "1ec7584668411a4e3312a90271d501d116ccf218",
+  "groups": [
+    {
+      "name": "Nintendo",
+      "systems": [
+        {
+          "id": "fds",
+          "name": "Famicom Disk System",
+          "guide": "fds",
+          "formats": [
+            "fds"
+          ]
+        },
+        {
+          "id": "gb",
+          "name": "Game Boy",
+          "guide": "gb",
+          "formats": [
+            "gb"
+          ]
+        },
+        {
+          "id": "gba",
+          "name": "Game Boy Advance",
+          "guide": "gba",
+          "formats": [
+            "agb",
+            "bin",
+            "gba"
+          ]
+        },
+        {
+          "id": "gbc",
+          "name": "Game Boy Color",
+          "guide": "gbc",
+          "formats": [
+            "gbc",
+            "sgb"
+          ]
+        },
+        {
+          "id": "gamecube",
+          "name": "GameCube",
+          "guide": "gamecube",
+          "formats": [
+            "ciso",
+            "dol",
+            "elf",
+            "gcm",
+            "gcz",
+            "iso",
+            "rvz",
+            "tgc",
+            "wad",
+            "wbfs"
+          ]
+        },
+        {
+          "id": "nes",
+          "name": "NES / Famicom",
+          "guide": "nes",
+          "formats": [
+            "nes",
+            "unf",
+            "unif"
+          ]
+        },
+        {
+          "id": "3ds",
+          "name": "Nintendo 3DS",
+          "guide": "3ds",
+          "formats": [
+            "3ds",
+            "3dsx",
+            "app",
+            "axf",
+            "cci",
+            "cia",
+            "cxi",
+            "elf"
+          ]
+        },
+        {
+          "id": "n64",
+          "name": "Nintendo 64",
+          "guide": "n64",
+          "formats": [
+            "n64",
+            "z64"
+          ]
+        },
+        {
+          "id": "ds",
+          "name": "Nintendo DS",
+          "guide": "nds",
+          "formats": [
+            "ids",
+            "nds"
+          ]
+        },
+        {
+          "id": "pokemonmini",
+          "name": "Pokémon mini",
+          "guide": "pokemonmini",
+          "formats": [
+            "min"
+          ]
+        },
+        {
+          "id": "snes",
+          "name": "Super Nintendo",
+          "guide": "snes",
+          "formats": [
+            "fig",
+            "sfc",
+            "smc",
+            "snes"
+          ]
+        },
+        {
+          "id": "vb",
+          "name": "Virtual Boy",
+          "guide": "virtualboy",
+          "formats": [
+            "bin",
+            "vb",
+            "vboy"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sega",
+      "systems": [
+        {
+          "id": "dreamcast",
+          "name": "Dreamcast",
+          "guide": "dreamcast",
+          "formats": [
+            "cdi",
+            "chd",
+            "cue",
+            "elf",
+            "gdi",
+            "iso"
+          ]
+        },
+        {
+          "id": "gamegear",
+          "name": "Game Gear",
+          "guide": "gamegear",
+          "formats": [
+            "gg"
+          ]
+        },
+        {
+          "id": "genesis",
+          "name": "Genesis / Mega Drive",
+          "guide": "genesis",
+          "formats": [
+            "68k",
+            "bin",
+            "bms",
+            "chd",
+            "gen",
+            "gg",
+            "m3u",
+            "md",
+            "mdx",
+            "sgd",
+            "smd",
+            "sms"
+          ]
+        },
+        {
+          "id": "mastersystem",
+          "name": "Master System",
+          "guide": "mastersystem",
+          "formats": [
+            "sms"
+          ]
+        },
+        {
+          "id": "32X",
+          "name": "Sega 32X",
+          "guide": "32x",
+          "formats": [
+            "32x"
+          ]
+        },
+        {
+          "id": "segacd",
+          "name": "Sega CD",
+          "guide": "segacd",
+          "formats": [
+            "chd",
+            "cue",
+            "iso"
+          ]
+        },
+        {
+          "id": "saturn",
+          "name": "Sega Saturn",
+          "guide": "saturn",
+          "formats": [
+            "ccd",
+            "chd",
+            "cue",
+            "iso",
+            "m3u",
+            "mds",
+            "toc"
+          ]
+        },
+        {
+          "id": "sg1000",
+          "name": "SG-1000",
+          "guide": "sg1000",
+          "formats": [
+            "sg"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Atari",
+      "systems": [
+        {
+          "id": "2600",
+          "name": "Atari 2600",
+          "guide": "atari2600",
+          "formats": [
+            "a26",
+            "bin"
+          ]
+        },
+        {
+          "id": "5200",
+          "name": "Atari 5200",
+          "guide": "5200",
+          "formats": [
+            "a52",
+            "atr",
+            "atx",
+            "bin",
+            "cas",
+            "cdm",
+            "xex",
+            "xfd"
+          ]
+        },
+        {
+          "id": "7800",
+          "name": "Atari 7800",
+          "guide": "7800",
+          "formats": [
+            "a78",
+            "bin",
+            "cdf"
+          ]
+        },
+        {
+          "id": "atari8bit",
+          "name": "Atari 8-bit Computers",
+          "guide": "atari8bit",
+          "formats": [
+            "a52",
+            "atr",
+            "atx",
+            "bas",
+            "bin",
+            "cas",
+            "cdm",
+            "xex",
+            "xfd"
+          ]
+        },
+        {
+          "id": "jaguar",
+          "name": "Atari Jaguar",
+          "guide": "jaguar",
+          "formats": [
+            "abs",
+            "bin",
+            "cof",
+            "j64",
+            "jag",
+            "prg",
+            "rom"
+          ]
+        },
+        {
+          "id": "jaguarcd",
+          "name": "Atari Jaguar CD",
+          "guide": "jaguarcd",
+          "formats": [
+            "cdi",
+            "cue"
+          ]
+        },
+        {
+          "id": "lynx",
+          "name": "Atari Lynx",
+          "guide": "lynx",
+          "formats": [
+            "lnx",
+            "o"
+          ]
+        },
+        {
+          "id": "atarist",
+          "name": "Atari ST",
+          "guide": "atarist",
+          "formats": [
+            "dim",
+            "ipf",
+            "mas",
+            "msa",
+            "st",
+            "stx"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sony",
+      "systems": [
+        {
+          "id": "psx",
+          "name": "PlayStation",
+          "guide": "psx",
+          "formats": [
+            "ccd",
+            "chd",
+            "cue",
+            "m3u",
+            "pbp",
+            "toc"
+          ]
+        },
+        {
+          "id": "ps2",
+          "name": "PlayStation 2",
+          "guide": "ps2",
+          "note": "Limited availability",
+          "formats": [
+            "ccd",
+            "chd",
+            "ciso",
+            "cso",
+            "cue",
+            "elf",
+            "gz",
+            "img",
+            "iso",
+            "isz",
+            "m3u",
+            "mdf",
+            "nrg",
+            "ps2"
+          ]
+        },
+        {
+          "id": "psp",
+          "name": "PlayStation Portable",
+          "guide": "psp",
+          "formats": [
+            "cso",
+            "cue",
+            "elf",
+            "iso",
+            "pbp"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SNK",
+      "systems": [
+        {
+          "id": "neogeo",
+          "name": "Neo Geo",
+          "guide": "neogeo",
+          "formats": [
+            "cmd",
+            "neo",
+            "ng"
+          ]
+        },
+        {
+          "id": "neogeocd",
+          "name": "Neo Geo CD",
+          "guide": "neogeocd",
+          "formats": [
+            "chd",
+            "cue",
+            "iso",
+            "m3u"
+          ]
+        },
+        {
+          "id": "ngp",
+          "name": "Neo Geo Pocket",
+          "guide": "ngp",
+          "formats": [
+            "ngp"
+          ]
+        },
+        {
+          "id": "ngpc",
+          "name": "Neo Geo Pocket Color",
+          "guide": "ngpc",
+          "formats": [
+            "ngc",
+            "ngpc",
+            "npc"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NEC",
+      "systems": [
+        {
+          "id": "pce",
+          "name": "PC Engine / TurboGrafx-16",
+          "guide": "pce",
+          "formats": [
+            "pce"
+          ]
+        },
+        {
+          "id": "pcecd",
+          "name": "PC Engine CD / TurboGrafx-CD",
+          "guide": "pcecd",
+          "formats": [
+            "ccd",
+            "chd",
+            "cue",
+            "m3u",
+            "toc"
+          ]
+        },
+        {
+          "id": "pcfx",
+          "name": "PC-FX",
+          "guide": "pcfx",
+          "formats": [
+            "ccd",
+            "chd",
+            "cue"
+          ]
+        },
+        {
+          "id": "sgfx",
+          "name": "SuperGrafx",
+          "guide": "sgfx",
+          "formats": [
+            "sgx"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bandai",
+      "systems": [
+        {
+          "id": "ws",
+          "name": "WonderSwan",
+          "guide": "ws",
+          "formats": [
+            "ws"
+          ]
+        },
+        {
+          "id": "wsc",
+          "name": "WonderSwan Color",
+          "guide": "wsc",
+          "formats": [
+            "wsc"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arcade",
+      "systems": [
+        {
+          "id": "cps1",
+          "name": "CPS-1",
+          "guide": "cps1"
+        },
+        {
+          "id": "cps2",
+          "name": "CPS-2",
+          "guide": "cps2"
+        },
+        {
+          "id": "cps3",
+          "name": "CPS-3",
+          "guide": "cps3"
+        },
+        {
+          "id": "mame",
+          "name": "MAME Arcade",
+          "guide": "mame",
+          "formats": [
+            "chd",
+            "cmd"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computers",
+      "systems": [
+        {
+          "id": "appleII",
+          "name": "Apple II",
+          "guide": "appleii",
+          "note": "Outside the App Store",
+          "formats": [
+            "cmd",
+            "dsk"
+          ]
+        },
+        {
+          "id": "ep128",
+          "name": "Enterprise 128",
+          "guide": "ep128",
+          "formats": [
+            "128",
+            "bas",
+            "cdt",
+            "dsk",
+            "dtf",
+            "img",
+            "tap",
+            "trn"
+          ]
+        },
+        {
+          "id": "dos",
+          "name": "MS-DOS",
+          "guide": "dos",
+          "formats": [
+            "bat",
+            "cfg",
+            "com",
+            "conf",
+            "cue",
+            "dosz",
+            "exe",
+            "ima",
+            "img",
+            "ins",
+            "iso",
+            "jrc",
+            "m3u",
+            "m3u8",
+            "tc",
+            "vhd"
+          ]
+        },
+        {
+          "id": "msx",
+          "name": "MSX",
+          "guide": "msx",
+          "formats": [
+            "cas",
+            "dsk",
+            "m3u",
+            "msx",
+            "mx1",
+            "mx2",
+            "rom",
+            "tsx",
+            "wav"
+          ]
+        },
+        {
+          "id": "msx2",
+          "name": "MSX2",
+          "guide": "msx2",
+          "formats": [
+            "cas",
+            "dsk",
+            "m3u",
+            "msx",
+            "mx1",
+            "mx2",
+            "rom",
+            "tsx",
+            "wav"
+          ]
+        },
+        {
+          "id": "pc98",
+          "name": "PC-98",
+          "guide": "pc98",
+          "formats": [
+            "2hd",
+            "88d",
+            "98d",
+            "cmd",
+            "d88",
+            "d98",
+            "dup",
+            "fdd",
+            "fdi",
+            "hdd",
+            "hdi",
+            "hdm",
+            "hdn",
+            "lzh",
+            "nhd",
+            "rar",
+            "tfd",
+            "thd",
+            "xdf"
+          ]
+        },
+        {
+          "id": "zxspectrum",
+          "name": "ZX Spectrum",
+          "guide": "zxspectrum",
+          "formats": [
+            "tzx",
+            "z80"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Other systems",
+      "systems": [
+        {
+          "id": "3DO",
+          "name": "3DO Interactive Multiplayer",
+          "guide": "3do",
+          "formats": [
+            "chd",
+            "cue",
+            "iso",
+            "m3u"
+          ]
+        },
+        {
+          "id": "cdi",
+          "name": "CD-i",
+          "guide": "cdi",
+          "note": "Outside the App Store",
+          "formats": [
+            "chd",
+            "cue",
+            "iso"
+          ]
+        },
+        {
+          "id": "colecovision",
+          "name": "ColecoVision",
+          "guide": "colecovision",
+          "formats": [
+            "col",
+            "cv",
+            "rom"
+          ]
+        },
+        {
+          "id": "intellivision",
+          "name": "Intellivision",
+          "guide": "intellivision",
+          "formats": [
+            "bin",
+            "int",
+            "rom"
+          ]
+        },
+        {
+          "id": "odyssey2",
+          "name": "Odyssey²",
+          "guide": "odyssey2",
+          "formats": [
+            "od2",
+            "ody"
+          ]
+        },
+        {
+          "id": "palmos",
+          "name": "Palm OS",
+          "guide": "palmos",
+          "note": "Outside the App Store",
+          "formats": [
+            "img",
+            "pdb",
+            "pqa",
+            "prc"
+          ]
+        },
+        {
+          "id": "vectrex",
+          "name": "Vectrex",
+          "guide": "vectrex",
+          "formats": [
+            "vec"
+          ]
+        },
+        {
+          "id": "supervision",
+          "name": "Watara Supervision",
+          "guide": "supervision",
+          "formats": [
+            "bin",
+            "sv"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Game engines & media",
+      "systems": [
+        {
+          "id": "music",
+          "name": "Game Music",
+          "guide": "music",
+          "formats": [
+            "ay",
+            "gbs",
+            "gym",
+            "hes",
+            "kss",
+            "nsf",
+            "nsfe",
+            "sap",
+            "spc",
+            "vgm",
+            "vgz"
+          ]
+        },
+        {
+          "id": "wolf3d",
+          "name": "Wolfenstein 3D",
+          "guide": "wolf3d",
+          "note": "Outside the App Store",
+          "formats": [
+            "n3d",
+            "pk3",
+            "sdm",
+            "sod",
+            "wl1",
+            "wl6"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,71 +1,119 @@
 {{ define "main" }}
 
 <style>
-.systems-index { padding-block: 3.5rem; }
+.systems-index { padding-block: 3rem; }
 .systems-index h1 { margin-bottom: .5rem; }
-.systems-index p.systems-intro { margin-bottom: 1.75rem; }
+.systems-index p.systems-intro { margin-bottom: 1.2rem; }
+.systems-jump { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 2rem; }
+.systems-jump a { padding: .25rem .65rem; border: 1px solid #73738f; border-radius: 2rem; }
+.systems-group { scroll-margin-top: 6rem; }
+.systems-group + .systems-group { margin-top: 1.65rem; }
+.systems-group h2 { margin: 0 0 .55rem; font-size: 1.35rem; }
 .systems-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
-  gap: .65rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+  align-items: start;
+  gap: .55rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.systems-list li { display: flex; margin: 0; }
-.systems-list a {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  align-items: center;
-  gap: .7rem;
-  min-height: 3.85rem;
-  padding: .45rem .65rem;
+.systems-list li { margin: 0; }
+.system-tile, .system-details {
   border: 1px solid #363651;
   border-radius: .55rem;
   background: #15152b;
+}
+.system-tile {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  gap: .55rem;
+  min-height: 3.4rem;
+  padding: .4rem .55rem;
   font-weight: 650;
   line-height: 1.3;
 }
-.systems-list a:hover, .systems-list a:focus-visible { border-color: currentColor; }
-.systems-list a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.system-details summary { border: 0; background: transparent; cursor: pointer; }
+.system-details summary::marker { content: ""; }
+.system-details summary::-webkit-details-marker { display: none; }
+.system-details summary::after { content: "+"; margin-inline-start: auto; }
+.system-details[open] summary::after { content: "−"; }
+.system-tile:hover, .system-details:hover { border-color: currentColor; }
+.system-tile:focus-visible, .systems-jump a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.system-label { overflow-wrap: anywhere; }
+.system-label small { display: block; margin-top: .15rem; font-weight: 400; }
 .system-icon {
-  flex: 0 0 2.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: .28rem;
-  border-radius: .35rem;
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  padding: .2rem;
+  border-radius: .32rem;
   background: #262643;
+  color: #fff;
   object-fit: contain;
+  text-align: center;
+  line-height: 1.6rem;
+  font-size: .7rem;
 }
-[data-theme="light"] .systems-list a { background: #fff; border-color: #d4d4e1; }
+.system-formats { margin: 0 .55rem .5rem; padding-top: .5rem; border-top: 1px solid #73738f; font-size: .8rem; line-height: 1.5; }
+.system-formats code { white-space: nowrap; }
+[data-theme="light"] :is(.system-details, a.system-tile) { background: #fff; border-color: #d4d4e1; }
 .systems-credit { margin: 1rem 0 0; font-size: .8rem; }
 @media (max-width: 35rem) {
   .systems-index { padding-block: 2rem; }
-  .systems-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
-  .systems-list a { gap: .4rem; min-height: 3.3rem; padding: .4rem; font-size: .875rem; }
-  .system-icon { flex-basis: 2rem; width: 2rem; height: 2rem; }
+  .systems-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+  .system-tile { gap: .35rem; min-height: 3.15rem; padding: .35rem; font-size: .85rem; }
 }
 </style>
 
+{{ $catalog := hugo.Data.systems }}
 <section class="section systems-index">
   <div class="container">
     <h1>Supported Systems</h1>
-    <p class="systems-intro">Choose a console for setup steps, file formats, and compatibility.</p>
-    {{ $icons := dict "atari2600" "2600" "nds" "ds" "virtualboy" "vb" }}
-    <ul class="systems-list">
-      {{ range .Pages.ByParam "system" }}
-        {{ $slug := .File.ContentBaseName }}
-        {{ $icon := index $icons $slug | default $slug }}
-        <li>
-          <a href="{{ .RelPermalink }}">
-            <img class="system-icon" src="{{ printf "images/systems/%s.png" $icon | relURL }}" width="40" height="40" alt="">
-            <span>{{ .Params.system | default .Title }}</span>
-          </a>
-        </li>
+    <p class="systems-intro">Browse by maker or platform. Select a system for its guide or file formats. Availability depends on your device and Provenance build.</p>
+
+    <nav class="systems-jump" aria-label="Jump to system group">
+      {{ range $catalog.groups }}
+        <a href="#{{ .name | anchorize }}">{{ .name }}</a>
       {{ end }}
-    </ul>
-    <p class="systems-credit"><a href="{{ "images/systems/NOTICE.txt" | relURL }}">Console icon credits</a></p>
+    </nav>
+
+    {{ range $catalog.groups }}
+      {{ $groupId := .name | anchorize }}
+      <div class="systems-group" id="{{ $groupId }}">
+        <h2>{{ .name }}</h2>
+        <ul class="systems-list">
+          {{ range .systems }}
+            {{ $system := . }}
+            {{ $icon := printf "images/systems/%s.png" .id }}
+            {{ $tile := partial "systems/tile-label.html" (dict "icon" $icon "system" $system) }}
+            {{ $guide := $.GetPage (printf "/systems/%s" .guide) }}
+            <li data-system="{{ .id }}">
+              {{ with $guide }}
+                <a class="system-tile" href="{{ .RelPermalink }}">{{ $tile }}</a>
+              {{ else }}
+                <details class="system-details">
+                  <summary class="system-tile">{{ $tile }}</summary>
+                  <p class="system-formats">
+                    {{ with .formats }}
+                      Formats: {{ range $index, $format := . }}{{ if $index }}, {{ end }}<code>.{{ $format }}</code>{{ end }}
+                    {{ else }}
+                      <a href="https://wiki.provenance-emu.com/platforms-and-performance/supported-systems">Check compatibility in the wiki</a>
+                    {{ end }}
+                  </p>
+                </details>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+    <p class="systems-credit">
+      <a href="https://wiki.provenance-emu.com/platforms-and-performance/supported-systems">Compatibility wiki</a> ·
+      <a href="https://github.com/Provenance-Emu/Provenance/blob/{{ $catalog.revision }}/PVLibrary/Sources/PVLibrary/Resources/systems.plist">Provenance system catalog</a> ·
+      <a href="{{ "images/systems/NOTICE.txt" | relURL }}">Console icon credits</a>
+    </p>
   </div>
 </section>
 
