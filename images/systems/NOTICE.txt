@@ -1,0 +1,30 @@
+System icons from the RetroArch "Monochrome" menu theme.
+
+Source:  https://github.com/libretro/retroarch-assets (xmb/monochrome/png)
+Authors: the libretro retroarch-assets contributors
+Licence: Creative Commons Attribution 4.0 International
+         https://creativecommons.org/licenses/by/4.0/
+
+
+2600.png  <-  xmb/monochrome/png/Atari - 2600.png
+3ds.png  <-  xmb/monochrome/png/Nintendo - Nintendo 3DS.png
+dreamcast.png  <-  xmb/monochrome/png/Sega - Dreamcast.png
+ds.png  <-  xmb/monochrome/png/Nintendo - Nintendo DS.png
+gamecube.png  <-  xmb/monochrome/png/Nintendo - GameCube.png
+gb.png  <-  xmb/monochrome/png/Nintendo - Game Boy.png
+gba.png  <-  xmb/monochrome/png/Nintendo - Game Boy Advance.png
+gbc.png  <-  xmb/monochrome/png/Nintendo - Game Boy Color.png
+genesis.png  <-  xmb/monochrome/png/Sega - Mega Drive - Genesis.png
+jaguar.png  <-  xmb/monochrome/png/Atari - Jaguar.png
+lynx.png  <-  xmb/monochrome/png/Atari - Lynx.png
+mastersystem.png  <-  xmb/monochrome/png/Sega - Master System - Mark III.png
+n64.png  <-  xmb/monochrome/png/Nintendo - Nintendo 64.png
+neogeo.png  <-  xmb/monochrome/png/SNK - Neo Geo.png
+nes.png  <-  xmb/monochrome/png/Nintendo - Nintendo Entertainment System.png
+pce.png  <-  xmb/monochrome/png/NEC - PC Engine - TurboGrafx 16.png
+ps2.png  <-  xmb/monochrome/png/Sony - PlayStation 2.png
+psp.png  <-  xmb/monochrome/png/Sony - PlayStation Portable.png
+psx.png  <-  xmb/monochrome/png/Sony - PlayStation.png
+saturn.png  <-  xmb/monochrome/png/Sega - Saturn.png
+snes.png  <-  xmb/monochrome/png/Nintendo - Super Nintendo Entertainment System.png
+vb.png  <-  xmb/monochrome/png/Nintendo - Virtual Boy.png
