@@ -1,0 +1,21 @@
+name = "provenance-friends-and-family"
+main = "index.mjs"
+compatibility_date = "2026-11-28"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+preview_urls = false
+
+routes = [
+  { pattern = "provenance-emu.com/friends-and-family/unlock", zone_name = "provenance-emu.com" }
+]
+
+[observability]
+enabled = true
+
+[observability.traces]
+enabled = true
+
+[[ratelimits]]
+name = "UNLOCK_LIMIT"
+namespace_id = "927013"
+simple = { limit = 8, period = 60 }

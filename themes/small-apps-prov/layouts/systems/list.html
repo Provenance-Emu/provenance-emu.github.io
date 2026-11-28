@@ -1,79 +1,74 @@
 {{ define "main" }}
 
 <style>
-/* Systems cards use Bootstrap's white surface unless the dark theme overrides it. */
-html:not([data-theme="light"]) .systems-grid .card {
-  background-color: #15152b;
-  border-color: #30304b;
+.systems-index { padding-block: 3.5rem; }
+.systems-index h1 { margin-bottom: .5rem; }
+.systems-index p.systems-intro { margin-bottom: 1.75rem; }
+.systems-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: .65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-html:not([data-theme="light"]) .systems-grid .text-muted {
-  color: rgba(255, 255, 255, 0.72) !important;
+.systems-list li { display: flex; margin: 0; }
+.systems-list a {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+  gap: .7rem;
+  min-height: 3.85rem;
+  padding: .45rem .65rem;
+  border: 1px solid #363651;
+  border-radius: .55rem;
+  background: #15152b;
+  font-weight: 650;
+  line-height: 1.3;
+}
+.systems-list a:hover, .systems-list a:focus-visible { border-color: currentColor; }
+.systems-list a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.system-icon {
+  flex: 0 0 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: .28rem;
+  border-radius: .35rem;
+  background: #262643;
+  object-fit: contain;
+}
+[data-theme="light"] .systems-list a { background: #fff; border-color: #d4d4e1; }
+.systems-credit { margin: 1rem 0 0; font-size: .8rem; }
+@media (max-width: 35rem) {
+  .systems-index { padding-block: 2rem; }
+  .systems-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+  .systems-list a { gap: .4rem; min-height: 3.3rem; padding: .4rem; font-size: .875rem; }
+  .system-icon { flex-basis: 2rem; width: 2rem; height: 2rem; }
 }
 </style>
 
-{{ "<!-- Systems Hero -->" | safeHTML }}
-<section class="section systems-hero gradient-banner">
+<section class="section systems-index">
   <div class="container">
-    <div class="row align-items-center justify-content-center">
-      <div class="col-lg-8 text-center">
-        <h1 class="text-white font-weight-bold mb-3" data-aos="fade-up">
-          {{ .Title }}
-        </h1>
-        <p class="text-white mb-5" style="opacity: 0.9; font-size: 1.15rem; max-width: 600px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
-          {{ with .Params.description }}{{ . }}{{ else }}{{ .Description }}{{ end }}
-        </p>
-        <div data-aos="fade-up" data-aos-delay="200">
-          <a href="https://apps.apple.com/us/app/provenance-app/id1596862805" target="_blank" rel="noopener noreferrer" class="btn font-weight-bold btn-main-md btn-lg mr-3 mb-2">
-            <span><i class="fab fa-app-store-ios mr-2" aria-hidden="true"></i>Download Free</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{ "<!-- End Systems Hero -->" | safeHTML }}
-
-{{ "<!-- Systems Grid -->" | safeHTML }}
-<section class="section systems-grid">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center mb-5">
-        <h2 class="font-weight-bold" data-aos="fade-up">Browse by Console</h2>
-        <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
-          Select a system to learn more about playing those games on your iPhone, iPad, or Apple TV.
-        </p>
-      </div>
-    </div>
-    <div class="row">
+    <h1>Supported Systems</h1>
+    <p class="systems-intro">Choose a console for setup steps, file formats, and compatibility.</p>
+    {{ $icons := dict "atari2600" "2600" "nds" "ds" "virtualboy" "vb" }}
+    <ul class="systems-list">
       {{ range .Pages.ByParam "system" }}
-      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-        <div class="card h-100">
-          <div class="card-body d-flex flex-column">
-            <h3 class="h5 card-title">
-              <a href="{{ .RelPermalink }}">{{ with .Params.system }}{{ . }}{{ else }}{{ .Title }}{{ end }}</a>
-            </h3>
-            {{ with .Params.shortName }}
-            <p class="text-muted mb-2">{{ . }}</p>
-            {{ end }}
-            <div class="card-text mb-2">{{ .Summary }}</div>
-            {{ with .Params.supportedFormats }}
-            <p class="card-text mb-0">
-              <small class="text-muted">Formats: <code>{{ . }}</code></small>
-            </p>
-            {{ end }}
-            <a href="{{ .RelPermalink }}" class="btn btn-main-sm mt-auto">Learn More</a>
-          </div>
-        </div>
-      </div>
+        {{ $slug := .File.ContentBaseName }}
+        {{ $icon := index $icons $slug | default $slug }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            <img class="system-icon" src="{{ printf "images/systems/%s.png" $icon | relURL }}" width="40" height="40" alt="">
+            <span>{{ .Params.system | default .Title }}</span>
+          </a>
+        </li>
       {{ end }}
-    </div>
+    </ul>
+    <p class="systems-credit"><a href="{{ "images/systems/NOTICE.txt" | relURL }}">Console icon credits</a></p>
   </div>
 </section>
-{{ "<!-- End Systems Grid -->" | safeHTML }}
 
-{{ "<!-- Systems CTA -->" | safeHTML }}
 {{ partial "cta.html" . }}
-{{ "<!-- End Systems CTA -->" | safeHTML }}
 
 {{ end }}

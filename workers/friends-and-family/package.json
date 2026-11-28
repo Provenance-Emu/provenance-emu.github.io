@@ -1,0 +1,7 @@
+{
+  "name": "provenance-friends-and-family",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test" },
+  "dependencies": { "qrcode": "1.5.4" }
+}

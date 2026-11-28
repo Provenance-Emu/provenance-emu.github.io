@@ -1,0 +1,55 @@
+{{ define "main" }}
+<section class="section beta-portal">
+  <div class="container">
+    <header class="beta-heading">
+      <h1>Friends &amp; Family Betas</h1>
+      <p>Try early versions of Provenance, iFly, iCube, and RasterLab.</p>
+    </header>
+    <ol class="beta-steps">
+      <li><strong>Get TestFlight.</strong> <a href="https://apps.apple.com/app/testflight/id899247664">Install Apple’s free TestFlight app</a> on your iPhone or iPad.</li>
+      <li><strong>Unlock and choose an app.</strong> Open its invite, tap <strong>Accept</strong>, then <strong>Install</strong>.</li>
+      <li><strong>Using Apple TV?</strong> Accept on your iPhone or iPad first. On Apple TV, search the App Store for <strong>TestFlight</strong>, then open it with the same App Store account. Apps with an Apple TV beta will appear there, ready to install.</li>
+    </ol>
+    <form id="beta-unlock" class="beta-panel" data-endpoint="{{ "friends-and-family/unlock" | relURL }}" hidden>
+      <label for="beta-code">Friends &amp; family passcode</label>
+      <div class="beta-unlock-row">
+        <input id="beta-code" type="password" autocomplete="off" spellcheck="false" autocapitalize="characters" maxlength="64" required>
+        <button type="submit" class="beta-button">Unlock invites</button>
+      </div>
+    </form>
+    <noscript><p>Turn on JavaScript to unlock the invites.</p></noscript>
+    <p id="beta-status" class="beta-status" role="status" aria-live="polite"></p>
+    <section id="beta-invites" aria-labelledby="beta-invites-title" hidden>
+      <div class="beta-invites-heading">
+        <h2 id="beta-invites-title" tabindex="-1">Choose an app</h2>
+        <button type="button" class="beta-button beta-secondary" id="beta-lock">Lock invites</button>
+      </div>
+      <p id="beta-device-tip"></p>
+      <div class="beta-grid">
+        {{ range slice (dict "id" "provenance" "name" "Provenance" "description" "Play games from classic consoles.") (dict "id" "ifly" "name" "iFly" "description" "Play Dreamcast games.") (dict "id" "icube" "name" "iCube" "description" "Play GameCube and Wii games.") (dict "id" "rasterlab" "name" "RasterLab" "description" "Edit and develop photos.") }}
+          <article class="beta-panel beta-app" data-beta-app="{{ .id }}">
+            <h3>{{ .name }}</h3>
+            <p>{{ .description }}</p>
+            <p class="beta-platforms"></p>
+            <p class="beta-unavailable" hidden>No invite is available right now.</p>
+            <div class="beta-app-actions" hidden>
+              <a class="beta-button beta-open" referrerpolicy="no-referrer">Open in TestFlight</a>
+              <details class="beta-qr">
+                <summary>Show QR code</summary>
+                <img width="160" height="160" alt="Scan this QR code with the Camera app to open this TestFlight invite">
+              </details>
+              <div class="beta-transfer">
+                <button type="button" class="beta-share" hidden>Share invite</button>
+                <a class="beta-email">Email to myself</a>
+                <button type="button" class="beta-copy">Copy invite link</button>
+              </div>
+              <input class="beta-copy-fallback" type="url" aria-label="TestFlight invite link" readonly hidden>
+              <p class="beta-app-status" role="status"></p>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  </div>
+</section>
+{{ end }}
