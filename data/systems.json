@@ -8,6 +8,11 @@
           "id": "fds",
           "name": "Famicom Disk System",
           "guide": "fds",
+          "aliases": [
+            "Famicom Disk System",
+            "FDS",
+            "fds"
+          ],
           "formats": [
             "fds"
           ]
@@ -16,6 +21,11 @@
           "id": "gb",
           "name": "Game Boy",
           "guide": "gb",
+          "aliases": [
+            "Game Boy",
+            "GB",
+            "gb"
+          ],
           "formats": [
             "gb"
           ]
@@ -24,6 +34,11 @@
           "id": "gba",
           "name": "Game Boy Advance",
           "guide": "gba",
+          "aliases": [
+            "Game Boy Advance",
+            "GBA",
+            "gba"
+          ],
           "formats": [
             "agb",
             "bin",
@@ -34,6 +49,11 @@
           "id": "gbc",
           "name": "Game Boy Color",
           "guide": "gbc",
+          "aliases": [
+            "Game Boy Color",
+            "GBC",
+            "gbc"
+          ],
           "formats": [
             "gbc",
             "sgb"
@@ -43,6 +63,13 @@
           "id": "gamecube",
           "name": "GameCube",
           "guide": "gamecube",
+          "aliases": [
+            "GameCube",
+            "gamecube",
+            "GC",
+            "GCN",
+            "NGC"
+          ],
           "formats": [
             "ciso",
             "dol",
@@ -60,6 +87,14 @@
           "id": "nes",
           "name": "NES / Famicom",
           "guide": "nes",
+          "aliases": [
+            "NES",
+            "nes",
+            "Nintendo",
+            "Nintendo Entertainment System",
+            "Nintendo Entertainment System/Famicom",
+            "Nintendo/Famicom"
+          ],
           "formats": [
             "nes",
             "unf",
@@ -70,6 +105,10 @@
           "id": "3ds",
           "name": "Nintendo 3DS",
           "guide": "3ds",
+          "aliases": [
+            "3DS",
+            "3ds"
+          ],
           "formats": [
             "3ds",
             "3dsx",
@@ -85,6 +124,11 @@
           "id": "n64",
           "name": "Nintendo 64",
           "guide": "n64",
+          "aliases": [
+            "N64",
+            "n64",
+            "Nintendo 64"
+          ],
           "formats": [
             "n64",
             "z64"
@@ -94,6 +138,11 @@
           "id": "ds",
           "name": "Nintendo DS",
           "guide": "nds",
+          "aliases": [
+            "DS",
+            "ds",
+            "NDS"
+          ],
           "formats": [
             "ids",
             "nds"
@@ -103,6 +152,11 @@
           "id": "pokemonmini",
           "name": "Pokémon mini",
           "guide": "pokemonmini",
+          "aliases": [
+            "Pm",
+            "pokemonmini",
+            "Pokémon mini"
+          ],
           "formats": [
             "min"
           ]
@@ -111,6 +165,14 @@
           "id": "snes",
           "name": "Super Nintendo",
           "guide": "snes",
+          "aliases": [
+            "SFC",
+            "SNES",
+            "snes",
+            "Super Famicom",
+            "Super Nintendo",
+            "Super Nintendo Entertainment System"
+          ],
           "formats": [
             "fig",
             "sfc",
@@ -122,6 +184,10 @@
           "id": "vb",
           "name": "Virtual Boy",
           "guide": "virtualboy",
+          "aliases": [
+            "vb",
+            "Virtual Boy"
+          ],
           "formats": [
             "bin",
             "vb",
@@ -137,6 +203,12 @@
           "id": "dreamcast",
           "name": "Dreamcast",
           "guide": "dreamcast",
+          "aliases": [
+            "DC",
+            "Dreamcast",
+            "dreamcast",
+            "Sega Dreamcast"
+          ],
           "formats": [
             "cdi",
             "chd",
@@ -150,6 +222,10 @@
           "id": "gamegear",
           "name": "Game Gear",
           "guide": "gamegear",
+          "aliases": [
+            "Game Gear",
+            "gamegear"
+          ],
           "formats": [
             "gg"
           ]
@@ -158,6 +234,15 @@
           "id": "genesis",
           "name": "Genesis / Mega Drive",
           "guide": "genesis",
+          "aliases": [
+            "Genesis",
+            "genesis",
+            "Genesis/Mega Drive",
+            "MegaDrive",
+            "SG",
+            "SG/SMD",
+            "SMD"
+          ],
           "formats": [
             "68k",
             "bin",
@@ -177,6 +262,11 @@
           "id": "mastersystem",
           "name": "Master System",
           "guide": "mastersystem",
+          "aliases": [
+            "Master System",
+            "mastersystem",
+            "SMS"
+          ],
           "formats": [
             "sms"
           ]
@@ -185,6 +275,9 @@
           "id": "32X",
           "name": "Sega 32X",
           "guide": "32x",
+          "aliases": [
+            "32X"
+          ],
           "formats": [
             "32x"
           ]
@@ -193,6 +286,13 @@
           "id": "segacd",
           "name": "Sega CD",
           "guide": "segacd",
+          "aliases": [
+            "SCD",
+            "SCD/MCD",
+            "Sega CD",
+            "Sega CD/MegaCD",
+            "segacd"
+          ],
           "formats": [
             "chd",
             "cue",
@@ -203,6 +303,10 @@
           "id": "saturn",
           "name": "Sega Saturn",
           "guide": "saturn",
+          "aliases": [
+            "Saturn",
+            "saturn"
+          ],
           "formats": [
             "ccd",
             "chd",
@@ -217,6 +321,10 @@
           "id": "sg1000",
           "name": "SG-1000",
           "guide": "sg1000",
+          "aliases": [
+            "SG-1000",
+            "sg1000"
+          ],
           "formats": [
             "sg"
           ]
@@ -230,6 +338,10 @@
           "id": "2600",
           "name": "Atari 2600",
           "guide": "atari2600",
+          "aliases": [
+            "2600",
+            "Atari 2600"
+          ],
           "formats": [
             "a26",
             "bin"
@@ -239,6 +351,10 @@
           "id": "5200",
           "name": "Atari 5200",
           "guide": "5200",
+          "aliases": [
+            "5200",
+            "Atari 5200"
+          ],
           "formats": [
             "a52",
             "atr",
@@ -254,6 +370,10 @@
           "id": "7800",
           "name": "Atari 7800",
           "guide": "7800",
+          "aliases": [
+            "7800",
+            "Atari 7800"
+          ],
           "formats": [
             "a78",
             "bin",
@@ -264,6 +384,11 @@
           "id": "atari8bit",
           "name": "Atari 8-bit Computers",
           "guide": "atari8bit",
+          "aliases": [
+            "8Bit",
+            "Atari 8bit Computer",
+            "atari8bit"
+          ],
           "formats": [
             "a52",
             "atr",
@@ -280,6 +405,11 @@
           "id": "jaguar",
           "name": "Atari Jaguar",
           "guide": "jaguar",
+          "aliases": [
+            "Atari Jaguar",
+            "Jaguar",
+            "jaguar"
+          ],
           "formats": [
             "abs",
             "bin",
@@ -294,6 +424,11 @@
           "id": "jaguarcd",
           "name": "Atari Jaguar CD",
           "guide": "jaguarcd",
+          "aliases": [
+            "Atari Jaguar CD",
+            "Jaguar CD",
+            "jaguarcd"
+          ],
           "formats": [
             "cdi",
             "cue"
@@ -303,6 +438,11 @@
           "id": "lynx",
           "name": "Atari Lynx",
           "guide": "lynx",
+          "aliases": [
+            "Atari Lynx",
+            "LYNX",
+            "lynx"
+          ],
           "formats": [
             "lnx",
             "o"
@@ -312,6 +452,11 @@
           "id": "atarist",
           "name": "Atari ST",
           "guide": "atarist",
+          "aliases": [
+            "Atari ST",
+            "atarist",
+            "ST"
+          ],
           "formats": [
             "dim",
             "ipf",
@@ -330,6 +475,15 @@
           "id": "psx",
           "name": "PlayStation",
           "guide": "psx",
+          "aliases": [
+            "PlayStation",
+            "PlayStation 1",
+            "PS One",
+            "PS1",
+            "PSone",
+            "PSX",
+            "psx"
+          ],
           "formats": [
             "ccd",
             "chd",
@@ -343,6 +497,11 @@
           "id": "ps2",
           "name": "PlayStation 2",
           "guide": "ps2",
+          "aliases": [
+            "PlayStation 2",
+            "PS2",
+            "ps2"
+          ],
           "note": "Limited availability",
           "formats": [
             "ccd",
@@ -365,6 +524,11 @@
           "id": "psp",
           "name": "PlayStation Portable",
           "guide": "psp",
+          "aliases": [
+            "PlayStation Portable",
+            "PSP",
+            "psp"
+          ],
           "formats": [
             "cso",
             "cue",
@@ -382,6 +546,11 @@
           "id": "neogeo",
           "name": "Neo Geo",
           "guide": "neogeo",
+          "aliases": [
+            "Neo Geo",
+            "NeoGeo",
+            "neogeo"
+          ],
           "formats": [
             "cmd",
             "neo",
@@ -392,6 +561,11 @@
           "id": "neogeocd",
           "name": "Neo Geo CD",
           "guide": "neogeocd",
+          "aliases": [
+            "Neo Geo CD",
+            "NeoGeoCD",
+            "neogeocd"
+          ],
           "formats": [
             "chd",
             "cue",
@@ -403,6 +577,11 @@
           "id": "ngp",
           "name": "Neo Geo Pocket",
           "guide": "ngp",
+          "aliases": [
+            "Neo Geo Pocket",
+            "NGP",
+            "ngp"
+          ],
           "formats": [
             "ngp"
           ]
@@ -411,6 +590,11 @@
           "id": "ngpc",
           "name": "Neo Geo Pocket Color",
           "guide": "ngpc",
+          "aliases": [
+            "Neo Geo Pocket Color",
+            "NeoGeoPocketColor",
+            "ngpc"
+          ],
           "formats": [
             "ngc",
             "ngpc",
@@ -426,6 +610,14 @@
           "id": "pce",
           "name": "PC Engine / TurboGrafx-16",
           "guide": "pce",
+          "aliases": [
+            "PC Engine/TurboGrafx-16",
+            "pce",
+            "PCE/TG16",
+            "TG-16",
+            "TG16",
+            "TurboGrafx-16"
+          ],
           "formats": [
             "pce"
           ]
@@ -434,6 +626,14 @@
           "id": "pcecd",
           "name": "PC Engine CD / TurboGrafx-CD",
           "guide": "pcecd",
+          "aliases": [
+            "PC Engine CD/TurboGrafx-CD",
+            "pcecd",
+            "PCECD/TG16CD",
+            "TG16CD",
+            "TGCD",
+            "TurboGrafx-CD"
+          ],
           "formats": [
             "ccd",
             "chd",
@@ -446,6 +646,10 @@
           "id": "pcfx",
           "name": "PC-FX",
           "guide": "pcfx",
+          "aliases": [
+            "PCFX",
+            "pcfx"
+          ],
           "formats": [
             "ccd",
             "chd",
@@ -456,6 +660,13 @@
           "id": "sgfx",
           "name": "SuperGrafx",
           "guide": "sgfx",
+          "aliases": [
+            "PC Engine SG/SuperGrafx",
+            "PCESG/SGRFX",
+            "sgfx",
+            "SGRFX",
+            "SuperGrafx"
+          ],
           "formats": [
             "sgx"
           ]
@@ -469,6 +680,11 @@
           "id": "ws",
           "name": "WonderSwan",
           "guide": "ws",
+          "aliases": [
+            "WonderSwan",
+            "WS",
+            "ws"
+          ],
           "formats": [
             "ws"
           ]
@@ -477,6 +693,12 @@
           "id": "wsc",
           "name": "WonderSwan Color",
           "guide": "wsc",
+          "aliases": [
+            "WonderSwan",
+            "Wonderswan Color",
+            "WSC",
+            "wsc"
+          ],
           "formats": [
             "wsc"
           ]
@@ -489,22 +711,42 @@
         {
           "id": "cps1",
           "name": "CPS-1",
-          "guide": "cps1"
+          "guide": "cps1",
+          "aliases": [
+            "CPS-1",
+            "CPS1",
+            "cps1"
+          ]
         },
         {
           "id": "cps2",
           "name": "CPS-2",
-          "guide": "cps2"
+          "guide": "cps2",
+          "aliases": [
+            "CPS-2",
+            "CPS2",
+            "cps2"
+          ]
         },
         {
           "id": "cps3",
           "name": "CPS-3",
-          "guide": "cps3"
+          "guide": "cps3",
+          "aliases": [
+            "CPS-3",
+            "CPS3",
+            "cps3"
+          ]
         },
         {
           "id": "mame",
           "name": "MAME Arcade",
           "guide": "mame",
+          "aliases": [
+            "Arcade",
+            "MAME",
+            "mame"
+          ],
           "formats": [
             "chd",
             "cmd"
@@ -519,6 +761,11 @@
           "id": "appleII",
           "name": "Apple II",
           "guide": "appleii",
+          "aliases": [
+            "Apple II",
+            "appleII",
+            "II/IIe/IIgs"
+          ],
           "note": "Outside the App Store",
           "formats": [
             "cmd",
@@ -529,6 +776,10 @@
           "id": "ep128",
           "name": "Enterprise 128",
           "guide": "ep128",
+          "aliases": [
+            "Enterprise 128",
+            "ep128"
+          ],
           "formats": [
             "128",
             "bas",
@@ -544,6 +795,11 @@
           "id": "dos",
           "name": "MS-DOS",
           "guide": "dos",
+          "aliases": [
+            "DOS",
+            "dos",
+            "IBM PC DOS"
+          ],
           "formats": [
             "bat",
             "cfg",
@@ -567,6 +823,10 @@
           "id": "msx",
           "name": "MSX",
           "guide": "msx",
+          "aliases": [
+            "MSX",
+            "msx"
+          ],
           "formats": [
             "cas",
             "dsk",
@@ -583,6 +843,10 @@
           "id": "msx2",
           "name": "MSX2",
           "guide": "msx2",
+          "aliases": [
+            "MSX2",
+            "msx2"
+          ],
           "formats": [
             "cas",
             "dsk",
@@ -599,6 +863,10 @@
           "id": "pc98",
           "name": "PC-98",
           "guide": "pc98",
+          "aliases": [
+            "PC98",
+            "pc98"
+          ],
           "formats": [
             "2hd",
             "88d",
@@ -625,6 +893,11 @@
           "id": "zxspectrum",
           "name": "ZX Spectrum",
           "guide": "zxspectrum",
+          "aliases": [
+            "Z80",
+            "ZX Spectrum",
+            "zxspectrum"
+          ],
           "formats": [
             "tzx",
             "z80"
@@ -639,6 +912,9 @@
           "id": "3DO",
           "name": "3DO Interactive Multiplayer",
           "guide": "3do",
+          "aliases": [
+            "3DO"
+          ],
           "formats": [
             "chd",
             "cue",
@@ -650,6 +926,10 @@
           "id": "cdi",
           "name": "CD-i",
           "guide": "cdi",
+          "aliases": [
+            "CD-i",
+            "cdi"
+          ],
           "note": "Outside the App Store",
           "formats": [
             "chd",
@@ -661,6 +941,11 @@
           "id": "colecovision",
           "name": "ColecoVision",
           "guide": "colecovision",
+          "aliases": [
+            "CBS ColecoVision",
+            "ColecoVision",
+            "colecovision"
+          ],
           "formats": [
             "col",
             "cv",
@@ -671,6 +956,11 @@
           "id": "intellivision",
           "name": "Intellivision",
           "guide": "intellivision",
+          "aliases": [
+            "Intellivision",
+            "intellivision",
+            "Mattel Intellivision"
+          ],
           "formats": [
             "bin",
             "int",
@@ -681,6 +971,11 @@
           "id": "odyssey2",
           "name": "Odyssey²",
           "guide": "odyssey2",
+          "aliases": [
+            "Magnavox Odyssey2",
+            "Odyssey2",
+            "odyssey2"
+          ],
           "formats": [
             "od2",
             "ody"
@@ -690,6 +985,10 @@
           "id": "palmos",
           "name": "Palm OS",
           "guide": "palmos",
+          "aliases": [
+            "PalmOS",
+            "palmos"
+          ],
           "note": "Outside the App Store",
           "formats": [
             "img",
@@ -702,6 +1001,11 @@
           "id": "vectrex",
           "name": "Vectrex",
           "guide": "vectrex",
+          "aliases": [
+            "Smith Engineering Vectrex",
+            "Vectrex",
+            "vectrex"
+          ],
           "formats": [
             "vec"
           ]
@@ -710,6 +1014,10 @@
           "id": "supervision",
           "name": "Watara Supervision",
           "guide": "supervision",
+          "aliases": [
+            "Supervision",
+            "supervision"
+          ],
           "formats": [
             "bin",
             "sv"
@@ -724,6 +1032,12 @@
           "id": "music",
           "name": "Game Music",
           "guide": "music",
+          "aliases": [
+            "Game Music",
+            "Game Music Emulator",
+            "GME",
+            "music"
+          ],
           "formats": [
             "ay",
             "gbs",
@@ -742,6 +1056,11 @@
           "id": "wolf3d",
           "name": "Wolfenstein 3D",
           "guide": "wolf3d",
+          "aliases": [
+            "Wolf3D",
+            "wolf3d",
+            "Wolfenstein 3D"
+          ],
           "note": "Outside the App Store",
           "formats": [
             "n3d",

@@ -13,6 +13,10 @@
     {{ $script := resources.Get "friends/portal.js" | minify | fingerprint }}
     <script data-cfasync="false" defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
   {{ end }}
+  {{ if and .IsSection (eq .Section "systems") }}
+    {{ $search := resources.Get "systems/search.js" | minify | fingerprint }}
+    <script data-cfasync="false" defer src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+  {{ end }}
   {{ hugo.Generator }}
 
   {{ "<!-- DNS preconnects for external origins -->" | safeHTML }}

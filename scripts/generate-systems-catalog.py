@@ -21,6 +21,20 @@ NAMES = {
     "saturn": "Sega Saturn", "supervision": "Watara Supervision", "vectrex": "Vectrex",
     "wsc": "WonderSwan Color",
 }
+ALIASES = {
+    "ds": ("NDS",),
+    "gamecube": ("GCN", "NGC"),
+    "genesis": ("MegaDrive", "SMD"),
+    "nes": ("Nintendo Entertainment System",),
+    "pce": ("TG16", "TG-16"),
+    "pcecd": ("TGCD", "TG16CD"),
+    "psx": ("PlayStation 1", "PS One", "PSone"),
+    "snes": ("Super Nintendo Entertainment System", "Super Famicom", "SFC"),
+}
+ALIAS_FIELDS = (
+    "PVSystemName", "PVSystemNames", "PVSystemLongName", "PVSystemLongNames",
+    "PVSystemShortName", "PVSystemShortNameAlt", "PVSystemShortNames", "PVSystemsShortNames",
+)
 GUIDES = {"2600": "atari2600", "ds": "nds", "vb": "virtualboy"}
 # The original PlayStation 2 guide remains available even when its core is disabled.
 KEEP_GUIDES = {"ps2"}
@@ -48,6 +62,11 @@ def catalog(source, revision):
             "id": system_id,
             "name": NAMES.get(system_id, system["PVSystemName"]),
             "guide": GUIDES.get(system_id, system_id.lower()),
+            "aliases": sorted({
+                system_id,
+                *ALIASES.get(system_id, ()),
+                *(system[field] for field in ALIAS_FIELDS if system.get(field)),
+            }, key=lambda alias: (alias.casefold(), alias)),
         }
         if not enabled:
             entry["note"] = "Limited availability"

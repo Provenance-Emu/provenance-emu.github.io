@@ -4,6 +4,7 @@
 .systems-index { padding-block: 3rem; }
 .systems-index h1 { margin-bottom: .5rem; }
 .systems-index p.systems-intro { margin-bottom: 1.2rem; }
+.systems-index [hidden] { display: none !important; }
 .systems-jump { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 2rem; }
 .systems-jump a { padding: .25rem .65rem; border: 1px solid #73738f; border-radius: 2rem; }
 .systems-group { scroll-margin-top: 6rem; }
@@ -59,6 +60,25 @@
 .system-formats { margin: 0 .55rem .5rem; padding-top: .5rem; border-top: 1px solid #73738f; font-size: .8rem; line-height: 1.5; }
 .system-formats code { white-space: nowrap; }
 [data-theme="light"] :is(.system-details, a.system-tile) { background: #fff; border-color: #d4d4e1; }
+.systems-search { margin-bottom: 1rem; max-width: 34rem; }
+.systems-search label { display: block; margin-bottom: .35rem; font-weight: 650; }
+.systems-search-field { display: flex; flex-wrap: wrap; gap: .45rem; }
+.systems-search input, .systems-search button {
+  padding: .55rem .7rem;
+  border: 1px solid #73738f;
+  border-radius: .4rem;
+  color: inherit;
+  background: #15152b;
+  font: inherit;
+}
+.systems-search input { flex: 1 1 14rem; min-width: 0; }
+.systems-search input::placeholder { color: #b6b5c9; opacity: 1; }
+.systems-search button { cursor: pointer; }
+.systems-search :focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.systems-search p { margin: .4rem 0 0; font-size: .9rem; }
+.systems-search p:empty { margin: 0; }
+[data-theme="light"] .systems-search :is(input, button) { background: #fff; color: #25243b; }
+[data-theme="light"] .systems-search input::placeholder { color: #59586c; }
 .systems-credit { margin: 1rem 0 0; font-size: .8rem; }
 @media (max-width: 35rem) {
   .systems-index { padding-block: 2rem; }
@@ -73,12 +93,21 @@
     <h1>Supported Systems</h1>
     <p class="systems-intro">Browse by maker or platform. Select a system for its guide or file formats. Availability depends on your device and Provenance build.</p>
 
+    <div class="systems-search" role="search" aria-label="Supported systems" hidden>
+      <label for="systems-query">Find a system</label>
+      <div class="systems-search-field">
+        <input id="systems-query" type="search" aria-controls="systems-results" placeholder="Name or abbreviation, e.g. GBA" autocomplete="off" spellcheck="false">
+        <button type="button" id="systems-clear" hidden>Clear</button>
+      </div>
+      <p id="systems-search-status" role="status"></p>
+    </div>
     <nav class="systems-jump" aria-label="Jump to system group">
       {{ range $catalog.groups }}
         <a href="#{{ .name | anchorize }}">{{ .name }}</a>
       {{ end }}
     </nav>
 
+    <div id="systems-results">
     {{ range $catalog.groups }}
       {{ $groupId := .name | anchorize }}
       <div class="systems-group" id="{{ $groupId }}">
@@ -89,7 +118,7 @@
             {{ $icon := printf "images/systems/%s.png" .id }}
             {{ $tile := partial "systems/tile-label.html" (dict "icon" $icon "system" $system) }}
             {{ $guide := $.GetPage (printf "/systems/%s" .guide) }}
-            <li data-system="{{ .id }}">
+            <li data-system="{{ .id }}" data-aliases="{{ delimit .aliases "|" }}">
               {{ with $guide }}
                 <a class="system-tile" href="{{ .RelPermalink }}">{{ $tile }}</a>
               {{ else }}
@@ -109,6 +138,7 @@
         </ul>
       </div>
     {{ end }}
+    </div>
     <p class="systems-credit">
       <a href="https://wiki.provenance-emu.com/platforms-and-performance/supported-systems">Compatibility wiki</a> ·
       <a href="https://github.com/Provenance-Emu/Provenance/blob/{{ $catalog.revision }}/PVLibrary/Sources/PVLibrary/Resources/systems.plist">Provenance system catalog</a> ·
