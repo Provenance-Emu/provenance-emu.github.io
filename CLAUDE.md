@@ -43,6 +43,12 @@ Local dev server runs at http://localhost:1313/
 
 Automated via GitHub Actions (`.github/workflows/gh-pages.yml`). Pushing to `main` triggers a build with Hugo extended (latest) and deploys to the `gh-pages` branch with CNAME `provenance-emu.com`. Pull requests get a build check but no deployment.
 
+### HTML audit fixes
+
+For issues labeled `html-check`, download the linked `htmlproofer-output` artifact and use it to locate the failing pages and URLs. Fix genuine HTML and broken-link errors in their source files. Make checker policy or invocation fixes in `scripts/check-site-html.sh`, which both the Site Audit workflow and the local audit run. Claude can commit and push this script with its existing GitHub App permissions.
+
+Build with `hugo --minify`, then run `bash scripts/check-site-html.sh`. In GitHub Actions, use the branch assigned by Claude Code. Commit and push the fix, then open a PR against `main` that references the audit issue.
+
 ## Architecture
 
 ### Theme System
