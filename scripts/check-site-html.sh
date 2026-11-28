@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Check an existing Hugo build. Used by CI and the local site audit.
 set -euo pipefail
+# Claude HTML audit autofix smoke test.
 
 ignore_urls='/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/'
 ignore_urls+=',/github\.com\/login/,/github\.com\/[^/]+\/[^/]+\/(releases\/download|commit|compare|pull|issues)\//'
