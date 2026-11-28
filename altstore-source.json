@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11348",
-          "marketingVersion": "3.4.0-alpha.20261128.a2623d7",
+          "buildVersion": "11351",
+          "marketingVersion": "3.4.0-alpha.20261128.978f95f",
           "date": "2026-11-28",
-          "localizedDescription": "Alpha build a2623d7 · 2026-11-28\n\nChanges in this build:\n• chore(bezels): SkinKit 0.11.0; the TV switcher offers the Seat (#3865)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 978f95f · 2026-11-28\n\nChanges in this build:\n• [Agent] fix(netplay): develop does not build, Entry.hint(for:) needs the main actor (#3870)\n• chore(changelog): absorb 1 pending fragment(s) (#3869)\n• [Agent] feat(netplay): offer every game with a netplay core; drop supported-games lists (#3867)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 787498221,
+          "size": 787265854,
           "minOSVersion": "17.0"
         }
       ],
@@ -1437,11 +1437,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "661",
-          "date": "2026-11-28T03:40:33.233Z",
+          "buildVersion": "665",
+          "date": "2026-11-28T09:31:19.767Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-661/Non-Jailbroken.ipa",
-          "size": 141950535,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-665/Non-Jailbroken.ipa",
+          "size": 141950580,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
