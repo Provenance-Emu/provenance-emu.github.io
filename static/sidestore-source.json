@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11346",
-          "marketingVersion": "3.4.0-alpha.20261127.2bd75a1",
-          "date": "2026-11-27",
-          "localizedDescription": "Alpha build 2bd75a1 · 2026-11-27\n\nChanges in this build:\n• fix(sentry): drop MetricKit CPU exceptions from emulator-host binaries (#3864)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "11347",
+          "marketingVersion": "3.4.0-alpha.20261128.6c7968e",
+          "date": "2026-11-28",
+          "localizedDescription": "Alpha build 6c7968e · 2026-11-28\n\nChanges in this build:\n• [Agent] fix(sentry): drop expected MetricKit CPU exceptions for iCube and emulating tag (#3863)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 787293445,
+          "size": 787438773,
           "minOSVersion": "17.0"
         }
       ],
