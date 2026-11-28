@@ -106,12 +106,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11351",
-          "marketingVersion": "3.4.0-alpha.20261128.978f95f",
+          "buildVersion": "11352",
+          "marketingVersion": "3.4.0-alpha.20261128.671e5d6",
           "date": "2026-11-28",
-          "localizedDescription": "Alpha build 978f95f · 2026-11-28\n\nChanges in this build:\n• [Agent] fix(netplay): develop does not build, Entry.hint(for:) needs the main actor (#3870)\n• chore(changelog): absorb 1 pending fragment(s) (#3869)\n• [Agent] feat(netplay): offer every game with a netplay core; drop supported-games lists (#3867)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 671e5d6 · 2026-11-28\n\nChanges in this build:\n• [Agent] feat(cheats): cheats menu loads local and online cheats by itself (#3868)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 787265854,
+          "size": 787258077,
           "minOSVersion": "17.0"
         }
       ],
