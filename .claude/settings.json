@@ -10,6 +10,8 @@
       "Bash(gh pr edit:*)",
       "Bash(gh run download:*)",
       "Bash(gh run view:*)",
+      "Bash(hugo --minify)",
+      "Bash(bash scripts/check-site-html.sh)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",

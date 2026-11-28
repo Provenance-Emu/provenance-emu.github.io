@@ -62,13 +62,10 @@ jobs:
         id: htmlproofer
         continue-on-error: true
         run: |
-          htmlproofer ./public \
-            --checks Links,Images,Scripts,OpenGraph \
-            --ignore-urls "/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/,/github\.com\/login/,/github\.com\/[^/]+\/[^/]+\/(releases\/download|commit|compare|pull|issues)\//,/objects\.githubusercontent\.com/,/provenance-emu\.com/,/s3.*amazonaws\.com/" \
-            --ignore-status-codes "0,429,999,403" \
-            --ignore-files "/404\.html/,/release-2\.1\.0/,/\/categories\//,/\/tags\//" \
-            2>&1 | tee htmlproofer-output.txt
-          echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
+          exit_code=0
+          bash scripts/check-site-html.sh > htmlproofer-output.txt 2>&1 || exit_code=$?
+          cat htmlproofer-output.txt
+          echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
 
       - name: Parse results
         id: result
@@ -563,7 +560,12 @@ jobs:
                   `Found **${num('HTML_ERRORS')} error(s)**.`,
                   `Download the \`htmlproofer-output\` artifact from the [audit run](${runUrl}) for the full list of broken links and HTML errors.`,
                   `_Auto-opened by [Site Audit](${runUrl})_`,
-                  `@claude Please fix the HTML check failures shown above.\n\n**Steps:**\n1. Download the error list: \`gh run download ${context.runId} --name htmlproofer-output --repo ${context.repo.owner}/${context.repo.repo} --dir /tmp/htmlproofer\`\n2. Review the errors (common causes: broken internal links, missing alt attributes on images)\n3. Create a working branch: \`git checkout -b claude/fix-html-errors\`\n4. Apply the necessary code fixes\n5. Push the branch: \`git push -u origin HEAD\`\n6. Create a PR: \`gh pr create --title "fix: resolve HTML and link check failures" --base main\`\n7. Enable auto-merge: \`gh pr merge --auto --squash\``,
+                  [
+                    '@claude Please fix the HTML check failures and open a PR.',
+                    `1. Download the error list: \`gh run download ${context.runId} --name htmlproofer-output --repo ${context.repo.owner}/${context.repo.repo} --dir /tmp/htmlproofer\`.`,
+                    '2. Fix confirmed site errors in the relevant source files. If the failures come from link-checker behavior, fix the shared policy in `scripts/check-site-html.sh` and preserve permanent broken-link reporting.',
+                    '3. Verify with `hugo --minify` and `bash scripts/check-site-html.sh`. Commit and push the fix using your assigned branch and git tools, then open a PR against `main` referencing this issue.',
+                  ].join('\n'),
                 ].join('\n\n'),
               },
               {

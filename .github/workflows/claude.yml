@@ -67,6 +67,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+          submodules: ${{ contains(github.event.issue.labels.*.name, 'html-check') && !github.event.issue.pull_request && 'recursive' || 'false' }}
+
+      - name: Setup Hugo for HTML audit fixes
+        if: contains(github.event.issue.labels.*.name, 'html-check') && !github.event.issue.pull_request
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.169.0'
+          extended: true
+
+      - name: Setup Ruby for HTML audit fixes
+        if: contains(github.event.issue.labels.*.name, 'html-check') && !github.event.issue.pull_request
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Install htmlproofer for HTML audit fixes
+        if: contains(github.event.issue.labels.*.name, 'html-check') && !github.event.issue.pull_request
+        run: gem install html-proofer
 
       - name: Run Claude Code
         id: claude

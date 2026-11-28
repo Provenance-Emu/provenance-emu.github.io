@@ -18,9 +18,6 @@ set -euo pipefail
 # ── Config ──────────────────────────────────────────────────────────────────
 LIVE_URL="https://provenance-emu.com"
 LOCAL_PORT=1315
-HUGO_PUBLIC="./public"
-HTMLPROOFER_IGNORE_URLS="/localhost/,/twitter\.com/,/x\.com/,/fonts\.gstatic\.com/,/fonts\.googleapis\.com/,/discord\.gg/,/api\.github\.com/"
-HTMLPROOFER_IGNORE_CODES="0,429,999,403,502,503"
 LH_THRESHOLD_PERF=70
 LH_THRESHOLD_A11Y=80
 LH_THRESHOLD_SEO=90
@@ -95,14 +92,9 @@ if ! has htmlproofer; then
   ((SKIP++))
 else
   if [ "$MODE" = "local" ]; then
-    log "Running htmlproofer on $HUGO_PUBLIC…"
+    log "Running htmlproofer on ./public…"
     HTMLPROOFER_TMP=$(mktemp)
-    if htmlproofer "$HUGO_PUBLIC" \
-        --checks Links,Images,Scripts,OpenGraph \
-        --ignore-urls "$HTMLPROOFER_IGNORE_URLS" \
-        --ignore-status-codes "$HTMLPROOFER_IGNORE_CODES" \
-        --typhoeus-concurrency 5 \
-        2>&1 | tee "$HTMLPROOFER_TMP"; then
+    if bash "$(dirname "${BASH_SOURCE[0]}")/check-site-html.sh" 2>&1 | tee "$HTMLPROOFER_TMP"; then
       ok "htmlproofer passed"
       append "✅ **Passed** — no broken links or missing images found."
       ((PASS++))
